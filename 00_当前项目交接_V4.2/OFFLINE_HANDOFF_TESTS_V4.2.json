@@ -1,0 +1,361 @@
+{
+  "run_at": "2026-08-16T10:55:59.476Z",
+  "total": 44,
+  "passed": 44,
+  "failed": 0,
+  "status": "PASS",
+  "tests": [
+    {
+      "id": "Q01",
+      "question": "来源动作清单共有多少项？",
+      "expected": "688",
+      "actual": "688",
+      "evidence_path": "调研资料归档_V1.1/05_QA与运行记录/registry_closure_V1.1.json",
+      "status": "PASS"
+    },
+    {
+      "id": "Q02",
+      "question": "唯一asset_id有多少个？",
+      "expected": "688",
+      "actual": "688",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q03",
+      "question": "实际本地HTML有多少个？",
+      "expected": "159",
+      "actual": "159",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q04",
+      "question": "全部HTML型来源记录有多少条？",
+      "expected": "196",
+      "actual": "196",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q05",
+      "question": "本地HTML中拦截页有多少个？",
+      "expected": "3",
+      "actual": "3",
+      "evidence_path": "调研资料归档_V1.1/05_QA与运行记录/web_asset_audit_summary_V1.1.json",
+      "status": "PASS"
+    },
+    {
+      "id": "Q06",
+      "question": "空壳HTML有多少个？",
+      "expected": "1",
+      "actual": "1",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q07",
+      "question": "低内容HTML有多少个？",
+      "expected": "1",
+      "actual": "1",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q08",
+      "question": "混合内容HTML有多少个？",
+      "expected": "90",
+      "actual": "90",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q09",
+      "question": "叙述内容HTML有多少个？",
+      "expected": "49",
+      "actual": "49",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q10",
+      "question": "下载入口HTML有多少个？",
+      "expected": "7",
+      "actual": "7",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q11",
+      "question": "结构化HTML有多少个？",
+      "expected": "8",
+      "actual": "8",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q12",
+      "question": "本轮底层资源请求多少次？",
+      "expected": "36",
+      "actual": "36",
+      "evidence_path": "调研资料归档_V1.1/05_QA与运行记录/download_results_V1.1.csv",
+      "status": "PASS"
+    },
+    {
+      "id": "Q13",
+      "question": "底层资源成功取得多少个？",
+      "expected": "26",
+      "actual": "26",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q14",
+      "question": "底层资源失败多少个？",
+      "expected": "10",
+      "actual": "10",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q15",
+      "question": "结构化对象清单有多少行？",
+      "expected": "180",
+      "actual": "180",
+      "evidence_path": "调研资料归档_V1.1/05_QA与运行记录/structured_resource_inventory_V1.1.csv",
+      "status": "PASS"
+    },
+    {
+      "id": "Q16",
+      "question": "XLSX工作表多少个？",
+      "expected": "155",
+      "actual": "155",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q17",
+      "question": "XLSX工作表总行数？",
+      "expected": "124178",
+      "actual": "124178",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q18",
+      "question": "CSV原件多少个？",
+      "expected": "6",
+      "actual": "6",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q19",
+      "question": "CSV识别总行数？",
+      "expected": "1090",
+      "actual": "1090",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q20",
+      "question": "XML对象多少个？",
+      "expected": "8",
+      "actual": "8",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q21",
+      "question": "ZIP归档多少个？",
+      "expected": "7",
+      "actual": "7",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q22",
+      "question": "文本对象多少个？",
+      "expected": "2",
+      "actual": "2",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q23",
+      "question": "需要人工转换的旧XLS多少个？",
+      "expected": "2",
+      "actual": "2",
+      "evidence_path": "调研资料归档_V1.1/05_QA与运行记录/structured_resource_inventory_summary_V1.1.json",
+      "status": "PASS"
+    },
+    {
+      "id": "Q24",
+      "question": "WEB-0335正式用途是什么？",
+      "expected": "REPLACED",
+      "actual": "REPLACED",
+      "evidence_path": "调研资料归档_V1.1/00_交接入口/source_action_registry_V1.1.jsonl",
+      "status": "PASS"
+    },
+    {
+      "id": "Q25",
+      "question": "WEB-0336正式用途是什么？",
+      "expected": "REPLACED",
+      "actual": "REPLACED",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q26",
+      "question": "WEB-0335替代资产是什么？",
+      "expected": "WEB-0115",
+      "actual": "WEB-0115",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q27",
+      "question": "LCL-0156内容状态是什么？",
+      "expected": "EMPTY_SHELL",
+      "actual": "EMPTY_SHELL",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q28",
+      "question": "WEB-0345内容状态是什么？",
+      "expected": "BLOCK_PAGE",
+      "actual": "BLOCK_PAGE",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q29",
+      "question": "评分追踪子项有多少条？",
+      "expected": "17",
+      "actual": "17",
+      "evidence_path": "00_当前项目交接_V4.2/SCORING_TRACEABILITY_V4.2.csv",
+      "status": "PASS"
+    },
+    {
+      "id": "Q30",
+      "question": "评分子项ID是否唯一？",
+      "expected": "17",
+      "actual": "17",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q31",
+      "question": "完整性条款S5.1是否锁定4分钟目标？",
+      "expected": "true",
+      "actual": "true",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q32",
+      "question": "项目状态表有多少个工作项？",
+      "expected": "18",
+      "actual": "18",
+      "evidence_path": "00_当前项目交接_V4.2/PROJECT_STATUS_V4.2.csv",
+      "status": "PASS"
+    },
+    {
+      "id": "Q33",
+      "question": "D0当前状态？",
+      "expected": "PARTIAL_REUSABLE",
+      "actual": "PARTIAL_REUSABLE",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q34",
+      "question": "D1当前状态？",
+      "expected": "NOT_STARTED",
+      "actual": "NOT_STARTED",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q35",
+      "question": "D2A当前状态？",
+      "expected": "COMPLETE_VERIFIED",
+      "actual": "COMPLETE_VERIFIED",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q36",
+      "question": "D2B当前状态？",
+      "expected": "PARTIAL_REUSABLE",
+      "actual": "PARTIAL_REUSABLE",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q37",
+      "question": "D2D当前状态？",
+      "expected": "COMPLETE_VERIFIED",
+      "actual": "COMPLETE_VERIFIED",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q38",
+      "question": "D11当前状态？",
+      "expected": "NOT_STARTED",
+      "actual": "NOT_STARTED",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q39",
+      "question": "飞书Mermaid是否以graph TD开头？",
+      "expected": "true",
+      "actual": "true",
+      "evidence_path": "流程图/V4.2_来源获取至Smartbi交付全流程.mmd",
+      "status": "PASS"
+    },
+    {
+      "id": "Q40",
+      "question": "共享候选文本中是否不存在手机号形态的账号或密码原文？",
+      "expected": "0",
+      "actual": "0",
+      "evidence_path": "00_当前项目交接_V4.2及V4.2计划书通用秘密扫描",
+      "status": "PASS"
+    },
+    {
+      "id": "Q41",
+      "question": "正式130国表是否仍未开始？",
+      "expected": "NOT_STARTED",
+      "actual": "NOT_STARTED",
+      "evidence_path": "00_当前项目交接_V4.2/PROJECT_STATUS_V4.2.csv",
+      "status": "PASS"
+    },
+    {
+      "id": "Q42",
+      "question": "Smartbi看板是否仍未开始？",
+      "expected": "NOT_STARTED",
+      "actual": "NOT_STARTED",
+      "evidence_path": "同上",
+      "status": "PASS"
+    },
+    {
+      "id": "Q43",
+      "question": "归档V1.1是否明确存在显式缺口？",
+      "expected": "CLOSED_WITH_EXPLICIT_GAPS",
+      "actual": "CLOSED_WITH_EXPLICIT_GAPS",
+      "evidence_path": "调研资料归档_V1.1/05_QA与运行记录/registry_closure_V1.1.json",
+      "status": "PASS"
+    },
+    {
+      "id": "Q44",
+      "question": "结构化检查是否无失败对象？",
+      "expected": "0",
+      "actual": "0",
+      "evidence_path": "调研资料归档_V1.1/05_QA与运行记录/structured_resource_inventory_summary_V1.1.json",
+      "status": "PASS"
+    }
+  ]
+}

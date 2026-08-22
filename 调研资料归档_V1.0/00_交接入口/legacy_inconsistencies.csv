@@ -1,0 +1,4 @@
+issue_id,item,old_claim,verified_state,action
+LEGACY-001,Ji_et_al_2026_Entropy_CNN-QRLSTM.pdf,旧README、dataset_manifest和checksums声称已下载,已在V1.0新归档中从官方开放入口恢复PDF；旧清单仍未改动,引用V1.0资产状态，不修改旧清单。
+LEGACY-002,案例库README状态,大量案例标记待新增,45份案例档案实际存在,使用case_index.csv，不修改旧README。
+LEGACY-003,方案整合PDF,根部与build版本页数相同,大小、时间和哈希不同，不是精确重复,两版均作为历史资产登记。

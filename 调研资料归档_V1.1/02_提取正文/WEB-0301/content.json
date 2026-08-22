@@ -1,0 +1,81 @@
+{
+  "source_id": "WEB-0301",
+  "title": "Blocked Funds Drop to $1.8 billion with Major Clearance in Nigeria, Challenges Persist",
+  "publisher": "IATA",
+  "publication_date": "",
+  "source_url": "https://www.iata.org/en/pressroom/2024-releases/2024-06-02-01",
+  "extracted_at": "2026-08-16T09:21:30.052Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 15,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "قطاع الطيران العالمي يقلّص حجم الأموال المجمّدة لدى الحكومات إلى 1.8 مليار دولار أمريكي (pdf)"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Dubai - The International Air Transport Association (IATA) has reported a 28% decrease in the amount of airline funds blocked from repatriation by governments. The total blocked funds at the end of April stood at approximately $1.8 billion, a reduction of $708 million (28%) since December 2023."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "IATA reiterated the call for governments to remove all barriers to airlines repatriating their revenues from ticket sales and other activities in accordance with international agreements and treaty obligations."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "\"The reduction in blocked funds is a positive development. The remaining $1.8 billion, however, is significant and must be urgently addressed. The efficient repatriation of airline revenues is guaranteed in bilateral agreements. Even more importantly, it is a pre-requisite for airlines—who operate on thin margins—to be able to provide economically critical connectivity. No business can operate long-term without access to rightfully earned revenues,” said Willie Walsh, IATA’s Director General."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "The main driver of the reduction was a significant clearance of funds blocked in Nigeria. Egypt also approved the clearance of its significant accumulation of blocked funds. However, in both cases, airlines were adversely affected by the devaluation of the Egyptian Pound and the Nigerian Naira."
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "At its peak in June 2023, Nigeria's blocked funds amounted to $850 million, significantly affecting airline operations and finances in the country. Carriers faced difficulties in repatriating revenues in US dollars, and the high volume of blocked funds led some airlines to reduce their operations and one carrier to temporarily cease operations to Nigeria, which severely impacted the country's aviation industry. However, as of April 2024, 98% of these funds have been cleared. The remaining $19 million is due to the Central Bank’s ongoing verification of outstanding forward claims filed by the commercial banks."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "\"We commend the new Nigerian government and the Central Bank of Nigeria for their efforts to resolve this issue. Individual Nigerians and the economy will all benefit from reliable air connectivity for which access to revenues is critical. We are on the right path and urge the government to clear the residual $19 million and continue prioritizing aviation,\" said Walsh."
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Eight countries are responsible for 87% of blocked funds"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Eight countries account for 87% of the total blocked funds, amounting to $1.6 billion."
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "Pakistan and Bangladesh"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "The situation has become severe in Pakistan and Bangladesh with airlines unable to repatriate $731 million ($411 million in Pakistan and $320 million in Bangladesh) of revenues earned in these markets."
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "\"Pakistan and Bangladesh must release the $731 million in blocked funds immediately to ensure airlines can continue providing essential air connectivity. In Bangladesh, the solution is in the hands of the Central Bank, which must prioritize aviation’s access to foreign exchange in line with international treaty obligations. The solution in Pakistan is finding efficient alternatives to the system of audit and tax exemption certificates, which cause long processing delays,\" said Walsh."
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "For more information, please contact:Corporate CommunicationsTel: +41 22 770 2967Email: corpcomms@iata.org"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "IATA (International Air Transport Association) represents over 370 airlines accounting for some 85% of global air traffic."
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "You can follow us on X for announcements, policy positions, and other useful industry information."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.iata.org/contentassets/ea385fd7df5f4a46a4538da2c988eddd/2024-06-02-01-ar.pdf",
+      "extension": ".pdf",
+      "anchor_text": "قطاع الطيران العالمي يقلّص حجم الأموال المجمّدة لدى الحكومات إلى 1.8 مليار دولار أمريكي",
+      "locator": "anchor"
+    }
+  ]
+}

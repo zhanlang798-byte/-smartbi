@@ -1,0 +1,1509 @@
+                     FEDERAL RESERVE STATISTICAL RELEASE                    
+ 
+ G.17 (419)                                 For release at 9:15 a.m. (EST)
+                                            January 16, 1998
+
+ INDUSTRIAL PRODUCTION AND CAPACITY UTILIZATION
+
+ 
+        Industrial production rose 0.5 percent in December, with
+ widespread increases among most major market and industry groups.  The
+ overall gain in output was held back a bit by a decline in motor
+ vehicle production, which had been quite high in November.  At 128.1
+ percent of its 1992 average, total industrial production in December
+ was 5.9 percent higher than it was in December 1996.  For the fourth
+ quarter as a whole, industrial production grew 7.4 percent at an
+ annual rate after an increase of 6.0 percent in the third quarter.
+ The rate of industrial capacity utilization edged up to 83.4 percent--
+ its highest rate since September 1995.
+ 
+
+ Market Groups
+ -------------
+        The output of consumer goods rose 0.3 percent, although it
+ was held down by a 2.5 percent reduction in the output of automotive
+ products.  The output of other durable consumer goods, especially
+ appliances, grew sharply for a second consecutive month.  The
+ production of nondurable consumer goods increased 0.4 percent, largely
+ as a result of an increase in energy products, mainly automotive
+ gasoline.  The output of nonenergy nondurable consumer goods, which
+ had been flat for most of the year, has picked up somewhat in recent
+ months.
+        The output of business equipment increased 0.4 percent, with
+ the most significant gain occurring in information processing
+ equipment.  Although growth in the output of computers has decelerated
+ recently, sharp gains for instruments and communications equipment
+ resulted in another sizable gain in the production of information
+ processing equipment in December.  Among other major components of
+ business equipment, the output of industrial equipment posted a
+ substantial rise.  The production of transit equipment retreated
+ somewhat from the high level in November, as reduced production of
+ motor vehicles outweighed a continued increase in aircraft production.
+        The production of construction supplies increased further and
+ has risen nearly 4 percent over the past year.  Mainly reflecting
+ another sizable gain in durable materials, the output of materials
+ rose noticeably again in December.  Within this group, the output of
+ parts for high-technology equipment and aircraft continued to increase
+ rapidly.  The production of nondurable goods materials has improved in
+ recent months.  The output of energy materials, retracing most of its
+ decline in November, rose 0.5 percent.
+ 
+
+ Industry Groups
+ ---------------
+        Factory output increased 0.5 percent in December, a slower
+ pace than that of the two previous months.  Excluding motor vehicles
+ and parts, however, growth in manufacturing output was about 0.8
+ percent in each of the past three months.  Within the durable and
+ nondurable groups, most major industries posted gains in December.
+ The main exception was motor vehicles and parts.  The output of
+ durables rose 0.6 percent, with the strongest increases occurring in
+ aircraft, fabricated metal products, and electronic components.
+ During the past twelve months, the output of durables has increased 10
+ percent.  Nondurables, which grew only about a quarter as much as
+ durables over the past year, expanded 0.4 percent in December.
+        Capacity utilization for manufacturing edged up to 82.5
+ percent, its highest level since September 1995.  Utilization in
+ advanced-processing industries remained at 80.6 percent, while
+ utilization in primary-processing industries climbed 0.4 percentage
+ point, to 86.7 percent.  Utilization in advanced-processing industries
+ remained at about its long-run average, while the rate in primary
+ processing industries was 4 percentage points above its long-run
+ average.  Higher operating rates for petroleum refining, primary
+ metals, and fabricated metal products boosted the overall rate among
+ primary processors in December.  The operating rates for mining and
+ utilities increased slightly.
+ 
+ 
+ NOTICE:
+        Capacity utilization and capacity data for the following
+ three industry groups have been added to tables 3 and 4 of this
+ release: semiconductors; computers, communications equipment, and
+ semiconductors; and manufacturing excluding computers, communications
+ equipment, and semiconductors.  The complete historical time series
+ for these industry groups are available through any of the normal
+ channels for getting G.17 data: the Federal Reserve Board's World Wide
+ Web site (http://www.bog.frb.fed.us), the Economic Bulletin Board of
+ the Department of Commerce, and diskettes from Publications Services
+ at the Federal Reserve Board.
+ INDUSTRIAL PRODUCTION AND CAPACITY UTILIZATION:  SUMMARY
+ Seasonally adjusted
+                               |             Index, 1992=100             |                 Percent change
+                               |     1997                                |   1997                          |  Dec. 96 to 
+ Industrial Production         |    Sept.      Oct.      Nov.      Dec.  |  Sept.    Oct.    Nov.    Dec.  |   Dec. 97 
+ ------------------------------------------------------------------------------------------------------------------------
+                               |                                         |                                 |
+  Total index                  |    125.6     126.5     127.5     128.1  |     .3      .7      .8      .5  |         5.9 
+     Previous estimates        |    125.7     126.4     127.3            |     .4      .5      .8          |             
+                               |                                         |                                 |
+ Major market groups:          |                                         |                                 |
+     Products, total           |    119.1     120.0     120.8     121.2  |    -.1      .8      .7      .3  |         4.6 
+        Consumer goods         |    114.5     115.4     116.3     116.6  |    -.1      .8      .8      .3  |         2.6 
+        Business equipment     |    144.4     145.4     147.1     147.8  |    -.1      .7     1.2      .4  |        10.3 
+        Construction supplies  |    120.4     121.3     122.6     123.4  |   -1.8      .7     1.1      .6  |         3.9 
+     Materials                 |    136.1     136.9     138.3     139.3  |     .9      .6     1.0      .7  |         8.0 
+                               |                                         |                                 |
+ Major industry groups:        |                                         |                                 |
+     Manufacturing             |    128.0     128.9     130.5     131.1  |     .1      .7     1.2      .5  |         6.5 
+        Durable                |    144.4     145.4     147.8     148.8  |     .1      .7     1.7      .6  |        10.0 
+        Nondurable             |    111.3     112.0     112.7     113.1  |     .2      .7      .6      .4  |         2.5 
+     Mining                    |    106.5     106.2     105.8     106.1  |     .1     -.3     -.4      .3  |         3.1 
+     Utilities                 |    115.1     116.7     114.5     114.9  |    1.9     1.4    -1.9      .4  |         1.9 
+ ------------------------------------------------------------------------------------------------------------------------
+                               |                                                                           |   Capacity
+                               |                            Percent of Capacity                            |    Growth
+                               |   Average      1982   1988-89     1996  |   1997                          |  Dec. 96 to 
+ Capacity Utilization          |  1967-97        Low      High     Dec.  |  Sept.    Oct.    Nov.    Dec.  |   Dec. 97 
+ ------------------------------------------------------------------------------------------------------------------------
+                               |                                         |                                 |
+  Total industry               |     82.1      71.1      85.4      82.5  |   82.7    83.0    83.3    83.4  |         4.7 
+     Previous estimates        |                                         |   82.8    82.9    83.2          |             
+                               |                                         |                                 |
+     Manufacturing             |     81.1      69.0      85.7      81.5  |   81.6    81.8    82.4    82.5  |         5.3 
+        Advanced processing    |     80.5      70.4      84.2      79.7  |   79.7    80.0    80.6    80.6  |         6.3 
+        Primary processing     |     82.4      66.2      88.9      85.7  |   85.7    85.7    86.3    86.7  |         3.4 
+     Mining                    |     87.5      80.3      88.0      87.6  |   90.1    89.8    89.5    89.7  |          .7 
+     Utilities                 |     87.3      75.9      92.6      89.8  |   90.8    92.0    90.1    90.3  |         1.3 
+ ------------------------------------------------------------------------------------------------------------------------
+ Note:  Estimates for December are preliminary.  Estimates from September to November are revised.
+ 
+ 
+ 
+                      
+ Table 1A
+ INDUSTRIAL PRODUCTION:  MARKET GROUPS
+                                                     |        |                                   Index, 1992=100
+                                                     |  1996  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |      IP|  1997                                    |  1997                                    
+ Item                                                |Proporti|  July   Aug.  Sept.   Oct.   Nov.   Dec. |  July   Aug.  Sept.   Oct.   Nov.   Dec. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |        |                                          |
+  Total index                                        | 100.00 | 124.5  125.2  125.6  126.5  127.5  128.1 | 122.8  128.5  128.8  128.1  126.6  125.7 
+                                                     |        |                                          |
+  Products, total                                    |  59.91 | 118.1  119.2  119.1  120.0  120.8  121.2 | 117.4  123.4  123.6  122.4  119.7  118.7 
+     Final products                                  |  45.26 | 119.2  120.5  120.3  121.1  122.2  122.6 | 117.1  124.2  124.5  123.3  121.0  120.3 
+                                                     |        |                                          |
+        Consumer goods                               |  28.48 | 113.9  114.6  114.5  115.4  116.3  116.6 | 112.3  119.1  118.9  117.3  114.7  114.4 
+           Durable                                   |   5.95 | 128.1  132.1  131.9  131.1  136.1  135.9 | 113.3  132.5  135.4  139.5  136.3  127.8 
+              Automotive products                    |   2.57 | 120.3  131.6  132.8  131.2  138.5  135.0 |  96.2  131.1  136.2  143.4  138.4  120.7 
+                 Autos and trucks                    |   1.60 | 120.2  137.6  140.9  139.7  147.7  142.8 |  80.6  136.1  143.5  158.1  148.9  121.6 
+                    Autos                            |    .70 | 113.0  118.6  119.9  115.2  120.3  113.9 |  75.8  117.5  116.1  128.4  120.3   96.7 
+                    Trucks                           |    .90 | 131.9  161.2  166.5  168.6  179.7  175.9 |  86.5  156.3  172.1  189.1  178.8  147.5 
+                 Auto parts and allied goods         |    .97 | 119.3  121.8  120.1  117.9  124.1  122.6 | 116.8  122.5  124.5  121.3  122.1  117.9 
+              Other durable goods                    |   3.37 | 134.4  132.5  131.1  131.0  134.1  136.6 | 127.0  133.6  134.7  136.4  134.7  133.5 
+                 Appliances and electronics          |    .95 | 174.8  169.8  166.0  167.1  173.3  180.2 | 164.0  170.7  172.8  178.7  172.4  166.9 
+                    Appliances and air cond.         |    .51 | 131.5  122.9  116.9  116.7  124.4  134.4 | 114.7  116.3  117.7  125.0  119.8  119.0 
+                    Home electronics                 |    .44 | 235.0  239.5  241.5  245.5  246.9  245.0 | 240.9  258.0  261.2  262.7  255.3  239.9 
+                 Carpeting and furniture             |    .83 | 116.4  117.7  116.2  116.2  122.1  121.0 | 112.9  122.6  121.6  120.8  117.7  114.8 
+                 Miscellaneous                       |   1.60 | 122.1  119.8  119.4  118.7  119.0  121.6 | 114.0  118.6  120.4  121.6  122.5  124.0 
+           Nondurable                                |  22.53 | 110.3  110.3  110.2  111.4  111.5  111.9 | 111.6  115.6  114.7  111.9  109.4  110.9 
+              Nonenergy                              |  19.14 | 110.0  109.9  109.8  110.9  111.4  111.7 | 112.4  117.4  117.4  114.6  109.5  107.0 
+                 Foods and tobacco                   |   9.81 | 109.6  108.9  108.6  109.1  110.4  110.9 | 110.4  117.2  116.8  114.9  109.2  104.7 
+                 Clothing                            |   1.94 |  95.8   96.0   96.0   96.5   95.4   95.7 |  95.1  100.4  100.2   99.3   94.9   92.7 
+                 Chemical products                   |   4.50 | 117.3  119.4  119.4  121.8  121.6  121.9 | 127.6  131.2  132.2  124.7  116.2  116.0 
+                 Paper products                      |   2.89 | 110.8  109.8  110.1  111.3  111.3  110.9 | 109.9  110.7  110.4  109.6  111.0  112.1 
+              Energy products                        |   3.39 | 112.4  112.8  112.4  115.2  112.6  113.6 | 106.9  105.3   99.4   96.6  109.4  134.0 
+                 Fuels                               |   1.09 | 108.8  111.0  110.8  112.0  107.1  110.9 | 109.8  111.6  112.4  111.6  111.3  115.3 
+                 Utilities                           |   2.29 | 113.7  113.2  112.8  116.2  114.9  114.5 | 105.0  101.8   92.5   88.6  108.0  142.6 
+                                                     |        |                                          |
+        Equipment, total                             |  16.78 | 128.6  130.9  130.6  131.3  132.5  133.1 | 125.6  133.2  134.5  133.9  132.2  130.9 
+           Business equipment                        |  13.59 | 141.6  144.6  144.4  145.4  147.1  147.8 | 138.0  147.7  149.2  148.5  146.3  144.1 
+              Information processing & related       |   5.36 | 169.3  171.1  172.9  174.2  174.7  176.8 | 175.0  176.8  179.6  175.7  174.2  177.6 
+                 Computer and office                 |   1.04 | 391.6  407.1  414.6  419.6  423.0  425.9 | 427.4  426.2  432.9  421.6  412.5  417.8 
+              Industrial                             |   4.50 | 133.7  135.8  133.8  136.0  136.4  137.5 | 132.3  138.8  139.8  137.5  134.5  133.1 
+              Transit                                |   2.39 | 106.9  113.3  114.2  112.8  118.0  117.2 |  91.1  112.7  113.9  118.9  118.3  110.3 
+                 Autos and trucks                    |   1.30 | 111.5  120.3  120.2  117.0  124.6  117.6 |  79.5  121.7  120.9  130.7  124.8  100.1 
+              Other                                  |   1.34 | 136.3  137.9  135.1  137.2  137.7  136.1 | 127.3  140.8  141.1  141.9  136.9  129.8 
+           Defense and space equipment               |   2.20 |  74.9   75.0   74.7   74.7   75.1   75.2 |  73.2   74.0   74.8   74.8   75.9   77.4 
+           Oil and gas well drilling                 |    .77 | 152.1  153.2  153.1  149.7  147.0  147.8 | 155.5  155.3  155.8  152.7  151.0  155.4 
+           Manufactured homes                        |    .22 | 143.5  139.5  137.2  136.9  138.1  137.9 | 128.9  153.1  145.9  152.8  134.6  115.3 
+                                                     |        |                                          |
+     Intermediate products                           |  14.65 | 114.6  115.3  115.2  116.4  116.6  117.2 | 117.9  121.0  120.9  119.6  116.0  114.0 
+        Construction supplies                        |   5.69 | 121.2  122.7  120.4  121.3  122.6  123.4 | 123.8  128.2  127.7  127.3  122.3  117.0 
+        Business supplies                            |   8.96 | 110.6  111.0  112.2  113.5  113.1  113.5 | 114.4  116.8  116.9  115.1  112.3  112.2 
+                                                     |        |                                          |
+  Materials                                          |  40.09 | 134.9  134.9  136.1  136.9  138.3  139.3 | 131.5  136.4  137.0  137.1  137.6  136.9 
+                                                     |        |                                          |
+     Durable                                         |  22.52 | 159.3  160.3  161.3  163.2  166.0  167.4 | 152.6  162.1  164.2  165.2  165.6  163.9 
+        Consumer parts                               |   4.34 | 139.2  140.3  140.7  141.7  145.4  144.9 | 115.1  144.0  142.8  147.6  144.6  129.6 
+        Equipment parts                              |   8.15 | 224.6  227.6  229.6  233.3  238.1  241.8 | 221.5  226.6  231.3  232.8  239.7  247.3 
+        Other                                        |  10.02 | 125.9  126.0  126.6  127.8  129.2  130.3 | 124.8  128.3  130.3  129.7  128.2  127.4 
+           Basic metals                              |   3.26 | 121.1  121.8  121.7  122.5  124.9  125.3 | 117.4  119.6  123.0  122.6  124.2  123.7 
+     Nondurable                                      |   8.91 | 113.5  112.3  113.3  113.2  114.3  114.8 | 111.6  112.7  113.7  114.8  113.5  110.3 
+        Textile                                      |    .93 | 112.3  108.4  111.4  112.0  111.3  112.5 | 105.0  110.8  110.7  114.4  110.8  102.8 
+        Paper                                        |   1.87 | 113.8  114.3  112.7  114.6  115.3  115.3 | 112.9  115.2  112.2  114.2  114.9  112.3 
+        Chemical                                     |   4.20 | 115.1  113.9  115.6  114.7  114.8  116.0 | 113.9  113.4  116.4  114.5  113.5  112.4 
+        Other                                        |   1.91 | 110.1  108.6  109.5  109.0  114.0  112.8 | 108.3  109.8  110.7  116.1  113.5  107.5 
+     Energy                                          |   8.66 | 104.6  103.9  105.5  105.3  104.5  105.0 | 105.7  105.9  103.3  101.0  103.3  106.8 
+        Primary                                      |   5.65 | 102.3  102.4  102.2  101.8  101.0  101.4 | 101.5  102.4  100.3   98.1  100.4  102.8 
+        Converted fuel                               |   3.02 | 109.0  106.8  111.8  111.9  111.2  111.9 | 113.7  112.4  109.3  106.6  108.9  114.6 
+                                                     |        |                                          |
+ SPECIAL AGGREGATES                                  |        |                                          |
+                                                     |        |                                          |
+ Total excluding:                                    |        |                                          |
+     Autos and trucks                                |  97.09 | 124.8  125.1  125.4  126.4  127.2  128.1 | 124.1  128.4  128.7  127.6  126.3  126.1 
+     Motor vehicles and parts                        |  94.85 | 124.3  124.6  124.8  125.8  126.6  127.5 | 124.3  127.8  128.2  126.9  125.6  126.0 
+     Computers                                       |  98.43 | 122.0  122.6  122.9  123.7  124.8  125.4 | 120.1  125.7  126.0  125.3  123.9  123.0 
+     Computers and semiconductors                    |  95.08 | 115.8  116.3  116.6  117.3  118.2  118.6 | 114.0  119.4  119.6  118.9  117.2  116.1 
+                                                     |        |                                          |
+ Consumer goods excluding:                           |        |                                          |
+     Autos and trucks                                |  26.87 | 113.5  113.4  113.0  114.0  114.7  115.2 | 113.7  118.1  117.5  115.2  112.9  113.9 
+     Energy                                          |  25.09 | 114.1  114.9  114.7  115.4  116.8  117.0 | 113.0  120.9  121.5  120.1  115.3  111.6 
+                                                     |        |                                          |
+ Business equipment excluding:                       |        |                                          |
+     Autos and trucks                                |  12.29 | 145.2  147.5  147.3  148.9  149.8  151.4 | 145.3  150.8  152.6  150.5  148.8  149.5 
+     Computer and office equipment                   |  12.55 | 128.6  131.2  130.8  131.7  133.3  133.9 | 124.1  133.5  134.9  134.5  132.6  130.3 
+                                                     |        |                                          |
+ Materials excluding:                                |        |                                          |
+     Energy                                          |  31.43 | 144.6  144.8  145.8  147.0  149.2  150.4 | 139.5  146.1  147.9  148.9  148.7  146.5 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> The IP proportion data are estimates of the industries' relative contributions to overall IP growth in the following year.
+ Note:  Estimates for December are preliminary.  Estimates from September to November are revised.
+ 
+ 
+ 
+ Table 1B
+ INDUSTRIAL PRODUCTION:  MARKET GROUPS
+ Percent change
+                                                 |         |    Seasonally adjusted     |                            |                            |
+                                                 | 1995 Q4 |        annual rate         |    Seasonally adjusted     |  Not seasonally adjusted   |   Dec. 96 
+                                                 |    to   |  1997                      |  1997                      |  1997                      |      to
+ Item                                            | 1996 Q4 |    Q1     Q2  Q3     Q4    | Sept.   Oct.   Nov.   Dec. | Sept.   Oct.   Nov.   Dec. |   Dec. 97 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                 |         |                            |                            |                            |
+  Total index                                    |     4.2 |   5.2    4.6    6.0    7.4 |    .3     .7     .8     .5 |    .3    -.6   -1.2    -.7 |       5.9 
+                                                 |         |                            |                            |                            |
+  Products, total                                |     3.9 |   3.9    3.6    4.4    6.5 |   -.1     .8     .7     .3 |    .2   -1.0   -2.2    -.8 |       4.6 
+     Final products                              |     4.0 |   4.0    3.7    5.6    6.6 |   -.2     .7     .9     .3 |    .2   -1.0   -1.9    -.6 |       4.9 
+                                                 |         |                            |                            |                            |
+        Consumer goods                           |     2.4 |    .9    1.4    2.6    6.4 |   -.1     .8     .8     .3 |   -.2   -1.3   -2.2    -.3 |       2.6 
+           Durable                               |     3.4 |   9.1   -2.1    6.6   11.6 |   -.2    -.6    3.8    -.1 |   2.2    3.0   -2.3   -6.2 |       5.8 
+              Automotive products                |     1.6 |  15.8  -11.3   12.5   22.3 |    .9   -1.2    5.5   -2.5 |   4.0    5.3   -3.5  -12.8 |       7.2 
+                 Autos and trucks                |     1.6 |  20.2  -20.9   18.2   35.6 |   2.4    -.8    5.7   -3.4 |   5.4   10.2   -5.8  -18.3 |       7.2 
+                    Autos                        |    -3.8 |  14.6  -15.8   22.9   -2.3 |   1.0   -3.9    4.5   -5.3 |  -1.2   10.5   -6.3  -19.6 |       1.5 
+                    Trucks                       |     8.0 |  23.6  -24.9   14.6   69.2 |   3.3    1.3    6.6   -2.1 |  10.1    9.9   -5.5  -17.5 |      10.5 
+                 Auto parts and allied goods     |     1.3 |   8.6    6.6    4.2    3.8 |  -1.4   -1.8    5.2   -1.1 |   1.7   -2.6     .7   -3.5 |       7.3 
+              Other durable goods                |     4.8 |   4.2    5.5    2.3    3.7 |  -1.1    -.1    2.4    1.9 |    .8    1.2   -1.2    -.8 |       4.8 
+                 Appliances and electronics      |     8.0 |    .5    6.6   12.2    8.1 |  -2.2     .6    3.7    4.0 |   1.2    3.4   -3.5   -3.2 |       8.6 
+                    Appliances and air cond.     |     1.8 |   1.2   -5.3   -4.8    4.5 |  -4.8    -.2    6.6    8.1 |   1.2    6.1   -4.1    -.7 |       1.4 
+                    Home electronics             |    15.3 |   -.3   21.4   38.8   12.4 |    .9    1.6     .6    -.8 |   1.2     .6   -2.8   -6.0 |      17.9 
+                 Carpeting and furniture         |     5.4 |  -2.2   10.0   -3.5   10.8 |  -1.3     .0    5.1    -.9 |   -.8    -.6   -2.6   -2.5 |       5.7 
+                 Miscellaneous                   |     2.5 |  10.0    2.6     .4   -2.0 |   -.3    -.6     .3    2.2 |   1.5    1.0     .7    1.2 |       2.4 
+           Nondurable                            |     2.1 |  -1.2    2.4    1.6    5.1 |   -.1    1.2     .1     .4 |   -.8   -2.4   -2.2    1.4 |       1.8 
+              Nonenergy                          |     2.0 |    .9    1.1    1.2    5.2 |   -.1     .9     .5     .3 |    .0   -2.4   -4.5   -2.2 |       1.9 
+                 Foods and tobacco               |     1.9 |   3.7   -2.6    1.1    4.2 |   -.2     .5    1.2     .5 |   -.3   -1.6   -5.0   -4.1 |       1.3 
+                 Clothing                        |    -4.1 |  -3.7    -.6     .1    -.3 |    .1     .5   -1.1     .3 |   -.1    -.9   -4.5   -2.3 |       -.2 
+                 Chemical products               |     4.6 |   -.7    6.4    -.6   10.7 |    .0    2.0    -.1     .2 |    .7   -5.6   -6.9    -.2 |       3.3 
+                 Paper products                  |     2.4 |  -2.9    6.9    4.8    3.4 |    .2    1.1     .0    -.4 |   -.3    -.7    1.3     .9 |       2.7 
+              Energy products                    |     2.8 | -12.6   10.5    3.9    4.6 |   -.3    2.4   -2.2     .9 |  -5.7   -2.8   13.3   22.4 |       1.4 
+                 Fuels                           |     3.3 |  -2.3   15.7   -2.2    -.6 |   -.3    1.1   -4.4    3.5 |    .7    -.7    -.3    3.5 |       4.3 
+                 Utilities                       |     2.6 | -17.3    8.0    7.0    7.2 |   -.3    3.1   -1.2    -.4 |  -9.1   -4.1   21.8   32.1 |        .0 
+                                                 |         |                            |                            |                            |
+        Equipment, total                         |     6.7 |   9.4    7.6   10.6    7.0 |   -.2     .5     .9     .4 |    .9    -.4   -1.3   -1.0 |       8.7 
+           Business equipment                    |     8.2 |  10.7    8.3   13.5    9.4 |   -.1     .7    1.2     .4 |   1.1    -.5   -1.5   -1.5 |      10.3 
+              Information processing & related   |    11.8 |  10.5   12.6   16.4   10.1 |   1.0     .8     .3    1.2 |   1.6   -2.2    -.8    1.9 |      12.6 
+                 Computer and office             |    37.4 |  30.9   32.9   48.3   19.4 |   1.8    1.2     .8     .7 |   1.6   -2.6   -2.2    1.3 |      30.9 
+              Industrial                         |      .0 |   2.5    4.5    9.0    6.7 |  -1.4    1.6     .4     .8 |    .7   -1.7   -2.1   -1.1 |       6.3 
+              Transit                            |    19.1 |  21.6    3.0   21.4   17.4 |    .8   -1.2    4.6    -.7 |   1.1    4.4    -.5   -6.7 |      14.9 
+                 Autos and trucks                |      .0 |  19.0  -16.2   14.0    8.4 |   -.1   -2.6    6.5   -5.6 |   -.6    8.1   -4.6  -19.8 |       2.4 
+              Other                              |     4.8 |  20.4   13.6    3.4    1.7 |  -2.0    1.6     .4   -1.2 |    .2     .6   -3.5   -5.2 |       5.6 
+           Defense and space equipment           |    -1.5 |  -4.8     .3   -4.2     .6 |   -.5     .0     .5     .2 |   1.0     .1    1.4    2.1 |      -1.3 
+           Oil and gas well drilling             |     7.0 |  31.5   15.9    4.8  -11.6 |   -.1   -2.2   -1.8     .6 |    .3   -2.0   -1.1    2.9 |       9.8 
+           Manufactured homes                    |     -.9 |   5.4    6.0   -3.5   -6.8 |  -1.7    -.2     .8    -.1 |  -4.7    4.8  -11.9  -14.3 |       7.7 
+                                                 |         |                            |                            |                            |
+     Intermediate products                       |     3.7 |   3.7    3.1    1.0    6.0 |   -.1    1.0     .2     .4 |   -.1   -1.1   -3.0   -1.7 |       3.7 
+        Construction supplies                    |     5.8 |   3.4    3.3   -2.0    3.3 |  -1.8     .7    1.1     .6 |   -.4    -.3   -4.0   -4.3 |       3.9 
+        Business supplies                        |     2.4 |   3.9    2.9    2.9    7.8 |   1.1    1.2    -.3     .3 |    .1   -1.5   -2.4    -.1 |       3.6 
+                                                 |         |                            |                            |                            |
+  Materials                                      |     4.7 |   7.2    6.1    8.4    8.7 |    .9     .6    1.0     .7 |    .4     .1     .3    -.5 |       8.0 
+                                                 |         |                            |                            |                            |
+     Durable                                     |     6.7 |   9.9   10.8   12.1   13.7 |    .6    1.2    1.7     .9 |   1.3     .6     .2   -1.0 |      12.2 
+        Consumer parts                           |      .1 |   5.5    -.4   12.5   11.7 |    .3     .8    2.5    -.3 |   -.9    3.4   -2.0  -10.4 |       7.9 
+        Equipment parts                          |    14.9 |  23.2   23.1   20.9   19.8 |    .9    1.6    2.1    1.5 |   2.1     .6    3.0    3.2 |      21.8 
+        Other                                    |     3.0 |   1.2    5.4    4.8    9.7 |    .5     .9    1.1     .8 |   1.6    -.5   -1.1    -.6 |       6.0 
+           Basic metals                          |     2.6 |    .2    8.0    5.2    9.1 |    .0     .6    1.9     .3 |   2.8    -.2    1.2    -.3 |       6.4 
+     Nondurable                                  |     3.7 |   5.8     .1    2.8    3.9 |    .9    -.1    1.0     .4 |    .9     .9   -1.1   -2.8 |       3.0 
+        Textile                                  |      .9 |  -1.8    2.8   11.0    4.4 |   2.8     .5    -.7    1.1 |   -.1    3.3   -3.1   -7.2 |       6.0 
+        Paper                                    |     2.9 |   8.1    1.5    5.7    5.2 |  -1.4    1.6     .6     .0 |  -2.6    1.8     .6   -2.2 |       4.1 
+        Chemical                                 |     6.1 |   6.5   -1.9    2.0     .9 |   1.5    -.8     .1    1.0 |   2.7   -1.6    -.9   -1.0 |       1.7 
+        Other                                    |      .6 |   5.8    2.1   -1.9    9.4 |    .8    -.5    4.5   -1.0 |    .8    4.8   -2.2   -5.3 |       3.5 
+     Energy                                      |      .4 |   1.6    -.2    4.4    1.0 |   1.5    -.2    -.7     .5 |  -2.4   -2.2    2.2    3.4 |       2.2 
+        Primary                                  |    -1.0 |   4.2   -1.1    2.7   -3.3 |   -.2    -.3    -.8     .3 |  -2.1   -2.1    2.3    2.4 |        .9 
+        Converted fuel                           |     3.0 |  -3.0    1.6    7.5    9.3 |   4.7     .1    -.6     .7 |  -2.8   -2.4    2.1    5.2 |       4.6 
+                                                 |         |                            |                            |                            |
+ SPECIAL AGGREGATES                              |         |                            |                            |                            |
+                                                 |         |                            |                            |                            |
+ Total excluding:                                |         |                            |                            |                            |
+     Autos and trucks                            |     4.3 |   4.8    5.4    5.7    7.0 |    .2     .8     .7     .6 |    .2    -.9   -1.0    -.1 |       6.0 
+     Motor vehicles and parts                    |     4.5 |   4.7    5.4    5.3    6.8 |    .2     .8     .6     .7 |    .3   -1.0   -1.0     .3 |       5.8 
+     Computers                                   |     3.7 |   4.8    4.1    5.4    7.2 |    .2     .7     .8     .5 |    .2    -.5   -1.2    -.7 |       5.5 
+     Computers and semiconductors                |     2.9 |   3.4    2.7    4.2    6.3 |    .2     .6     .7     .4 |    .2    -.6   -1.4    -.9 |       4.3 
+                                                 |         |                            |                            |                            |
+ Consumer goods excluding:                       |         |                            |                            |                            |
+     Autos and trucks                            |     2.4 |   -.2    3.0    1.8    4.9 |   -.3     .9     .5     .5 |   -.5   -2.0   -2.0     .9 |       2.4 
+     Energy                                      |     2.3 |   2.8     .3    2.4    6.6 |   -.1     .6    1.2     .2 |    .5   -1.2   -3.9   -3.2 |       2.8 
+                                                 |         |                            |                            |                            |
+ Business equipment excluding:                   |         |                            |                            |                            |
+     Autos and trucks                            |     9.2 |   9.9   11.2   13.5    9.6 |   -.1    1.1     .6    1.1 |   1.2   -1.4   -1.1     .5 |      11.1 
+     Computer and office equipment               |     5.7 |   9.0    6.2   11.1    8.7 |   -.3     .7    1.2     .4 |   1.0    -.3   -1.4   -1.7 |       8.6 
+                                                 |         |                            |                            |                            |
+ Materials excluding:                            |         |                            |                            |                            |
+     Energy                                      |     5.8 |   8.7    7.8    9.4   10.9 |    .7     .8    1.5     .7 |   1.2     .7    -.2   -1.5 |       9.5 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Notes:  Percent changes shown in the first and last columns are based on seasonally adjusted data.
+         Estimates for December are preliminary.  Estimates from September to November are revised.
+ 
+ 
+ 
+ Table 2A
+ INDUSTRIAL PRODUCTION: INDUSTRY GROUPS
+                                                     |        |                                   Index, 1992=100
+                                                     |  1996  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |      IP|  1997                                    |  1997                                    
+ Item                                                |Proporti|  July   Aug.  Sept.   Oct.   Nov.   Dec. |  July   Aug.  Sept.   Oct.   Nov.   Dec. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |        |                                          |
+  Total index                                        | 100.00 | 124.5  125.2  125.6  126.5  127.5  128.1 | 122.8  128.5  128.8  128.1  126.6  125.7 
+                                                     |        |                                          |
+  Manufacturing                                      |  85.91 | 126.9  127.9  128.0  128.9  130.5  131.1 | 124.7  131.5  132.6  132.1  129.7  127.1 
+                                                     |        |                                          |
+     Primary processing                              |  27.60 | 118.3  118.5  118.6  119.0  120.2  121.0 | 116.6  120.1  121.2  121.1  119.7  117.7 
+     Advanced processing                             |  58.31 | 131.2  132.5  132.7  133.9  135.6  136.2 | 128.8  137.2  138.3  137.6  134.7  131.7 
+                                                     |        |                                          |
+     Durable                                         |  46.12 | 142.4  144.3  144.4  145.4  147.8  148.8 | 136.4  146.3  148.1  148.7  147.5  144.7 
+        Lumber and products   24                     |   2.09 | 116.1  115.4  113.3  112.5  115.2  114.8 | 114.3  119.6  118.7  119.0  113.4  108.6 
+        Furniture and fixtures   25                  |   1.37 | 124.2  121.1  122.0  122.6  124.5  124.7 | 122.4  129.8  129.0  124.0  123.3  122.4 
+        Stone, clay, and glass products   32         |   2.20 | 120.9  120.5  121.2  121.5  123.2  124.1 | 121.8  125.2  125.4  126.0  123.0  118.1 
+                                                     |        |                                          |
+        Primary metals   33                          |   3.40 | 125.2  125.5  125.9  127.4  128.5  129.6 | 119.7  122.7  127.3  127.7  127.7  126.1 
+           Iron and steel   331,2                    |   1.84 | 122.2  121.8  124.5  126.5  127.9  128.8 | 117.7  118.3  125.6  127.0  126.6  124.6 
+              Raw steel                              |    .09 | 115.5  116.1  119.2  117.7  120.9  121.5 | 110.6  112.2  118.1  117.2  119.4  118.7 
+           Nonferrous   333-6,9                      |   1.55 | 128.8  129.9  127.7  128.5  129.3  130.6 | 122.0  128.0  129.3  128.5  129.0  127.8 
+        Fabricated metal products   34               |   5.27 | 122.4  122.8  122.7  124.2  125.4  127.1 | 121.3  126.2  127.7  126.5  126.0  126.7 
+       Industrial machinery                          |        |                                          |
+            and equipment   35                       |   8.66 | 172.2  175.9  173.7  176.3  177.5  179.3 | 171.5  178.5  180.8  178.7  174.4  172.8 
+           Computer and office equip.   357          |   1.57 | 388.5  403.9  412.0  417.5  421.4  424.8 | 424.0  422.9  430.2  419.6  411.0  416.7 
+        Electrical machinery   36                    |   8.42 | 235.5  236.8  237.5  240.8  247.0  251.5 | 231.1  238.8  242.5  243.9  249.3  253.5 
+           Semiconductors   3672-9                   |   3.35 | 499.0  511.3  515.5  527.6  547.1  564.0 | 490.1  507.4  517.0  526.9  552.5  576.7 
+                                                     |        |                                          |
+        Transportation equipment   37                |   8.62 | 112.2  117.0  118.8  118.2  122.2  121.0 |  92.8  117.5  118.8  124.2  122.3  111.9 
+           Motor vehicles and parts   371            |   5.15 | 130.0  138.9  141.2  139.6  146.9  141.6 |  92.0  141.4  141.7  152.5  146.6  120.4 
+              Autos and light trucks                 |   2.62 | 115.0  129.5  132.3  130.4  137.6  132.6 |  77.3  128.4  133.9  147.6  138.9  113.1 
+           Aerospace and misc.   372-6,9             |   3.47 |  94.6   95.5   96.8   97.2   98.0  100.6 |  92.8   94.1   96.3   96.7   98.6  103.0 
+        Instruments   38                             |   4.76 | 108.0  109.2  108.9  109.7  110.2  110.4 | 109.4  111.4  112.1  110.0  109.5  110.7 
+        Miscellaneous   39                           |   1.34 | 127.0  126.7  126.1  126.5  125.2  127.1 | 121.7  127.1  129.0  130.3  129.5  128.3 
+                                                     |        |                                          |
+     Nondurable                                      |  39.79 | 110.9  111.0  111.3  112.0  112.7  113.1 | 112.3  116.2  116.5  115.1  111.6  109.1 
+        Foods   20                                   |   9.41 | 110.0  108.9  108.6  109.3  111.0  111.1 | 112.5  115.8  116.9  114.8  110.8  107.9 
+        Tobacco products   21                        |   1.29 | 110.5  112.5  112.0  113.6  111.9  115.0 |  94.3  123.7  115.0  124.1  110.1   93.4 
+        Textile mill products   22                   |   1.56 | 110.7  110.7  111.4  111.7  112.9  113.1 | 107.6  114.6  114.0  117.3  110.1  101.1 
+        Apparel products   23                        |   1.89 |  99.7   99.1   99.1   99.3   98.8  100.0 |  97.5  102.1  102.2  101.1   99.3  100.1 
+        Paper and products   26                      |   3.48 | 114.2  114.4  113.7  114.0  116.3  116.1 | 113.0  115.4  113.4  115.7  115.1  112.0 
+                                                     |        |                                          |
+        Printing and publishing   27                 |   6.49 | 104.1  104.4  105.1  106.7  107.4  106.8 | 108.3  111.0  111.5  109.4  107.3  104.7 
+        Chemicals and products   28                  |   9.97 | 114.3  114.5  115.6  116.1  115.8  116.6 | 118.6  119.8  121.7  117.6  112.6  111.6 
+        Petroleum products   29                      |   1.83 | 108.9  109.7  110.1  111.2  108.8  110.9 | 113.4  114.4  114.3  111.7  110.3  111.3 
+        Rubber and plastics products   30            |   3.68 | 126.0  127.9  127.6  127.4  129.7  130.2 | 121.8  129.2  129.3  129.4  129.7  129.4 
+        Leather and products   31                    |    .19 |  74.0   71.2   70.9   72.4   70.8   70.3 |  69.8   72.4   72.7   73.5   71.8   70.2 
+                                                     |        |                                          |
+  Mining                                             |   6.41 | 106.5  106.3  106.5  106.2  105.8  106.1 | 106.5  108.0  108.3  107.9  107.0  106.0 
+     Metal mining   10                               |    .44 | 105.2  106.0  105.3  111.1  113.7  111.3 | 106.5  107.8  108.3  109.7  111.9  111.0 
+     Coal mining   12                                |    .87 | 112.1  107.7  109.5  109.6  111.2  115.9 | 104.0  111.3  112.1  111.6  110.0  111.7 
+     Oil and gas extraction   13                     |   4.51 | 103.9  104.1  104.3  103.4  102.4  101.9 | 103.0  103.1  103.7  103.2  104.3  104.7 
+     Stone and earth minerals   14                   |    .60 | 117.8  119.9  117.7  117.5  117.6  119.6 | 135.9  140.3  137.3  137.8  117.7  100.2 
+                                                     |        |                                          |
+  Utilities                                          |   7.68 | 113.8  113.0  115.1  116.7  114.5  114.9 | 114.8  112.6  105.8  101.9  109.1  125.9 
+     Electric   491,3pt                              |   6.08 | 113.8  113.1  115.7  117.2  114.5  114.5 | 128.9  126.5  118.0  107.9  106.0  114.4 
+     Gas         492,3pt                             |   1.60 | 113.5  112.5  112.7  114.9  114.3  116.2 |  62.0   60.0   60.0   79.8  122.1  171.8 
+                                                     |        |                                          |
+ SPECIAL AGGREGATES                                  |        |                                          |
+                                                     |        |                                          |
+ Computers, communications eq, and                   |        |                                          |
+     semiconductors                                  |   6.92 | 357.4  364.0  369.3  374.9  383.7  391.9 | 360.2  366.9  374.8  376.5  387.2  400.9 
+                                                     |        |                                          |
+ Manufacturing excluding:                            |        |                                          |
+     Motor vehicles and parts                        |  80.76 | 126.7  127.2  127.3  128.3  129.5  130.5 | 126.7  131.0  132.0  130.9  128.7  127.5 
+     Computer and office equipment                   |  84.33 | 123.9  124.8  124.9  125.8  127.3  127.9 | 121.5  128.3  129.3  128.9  126.6  123.9 
+     Computers and semiconductors                    |  80.99 | 116.7  117.5  117.5  118.3  119.5  120.0 | 114.5  121.0  121.8  121.4  118.8  116.0 
+    Computers, communications eq, and                |        |                                          |
+        semiconductors                               |  78.99 | 115.6  116.3  116.4  117.1  118.4  118.8 | 113.4  119.9  120.7  120.3  117.6  114.5 
+ Memo:  Motor vehicle assemblies      2              |        |                                          |
+  Total                                              |        |  11.0   12.3   12.5   12.3   13.0   12.5 |   7.8   11.7   12.7   14.6   12.0   11.2 
+     Autos                                           |        |   5.8    6.1    6.1    5.9    6.1    5.8 |   4.1    5.8    6.0    7.0    5.7    5.2 
+     Trucks                                          |        |   5.2    6.2    6.4    6.5    6.9    6.7 |   3.7    5.9    6.7    7.7    6.3    6.0 
+        Light                                        |        |   4.9    5.9    6.1    6.2    6.6    6.4 |   3.4    5.6    6.4    7.4    6.0    5.7 
+        Heavy and medium                             |        |   0.3    0.3    0.3    0.3    0.3    0.3 |   0.3    0.3    0.3    0.3    0.3    0.3 
+                                                     |        |                                          |
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> The IP proportion data are estimates of the industries' relative contributions to overall IP growth in the following year.
+ <2> Millions of units at an annual rate.
+ Notes:  Primary processing manufacturing includes textile mill products, paper and products, industrial chemicals, synthetic materials, and
+         fertilizers, petroleum products, rubber and plastics products, lumber and products, primary metals, fabricated metals, and stone, clay, and
+         glass products.  Advanced processing manufacturing includes foods, tobacco products, apparel products, printing and publishing, chemical
+         products and other agricultural chemicals, leather and products, furniture and fixtures, industrial and commercial machinery and computer
+         equipment, electrical machinery, transportation equipment, instruments, and miscellaneous manufactures.
+         Estimates for the month of December are preliminary.  Estimates from September to November are revised.
+ 
+ 
+ 
+ Table 2B
+ INDUSTRIAL PRODUCTION: INDUSTRY GROUPS
+ Percent change
+                                                |         |    Seasonally adjusted     |                            |                            |
+                                                | 1996 Q4 |        annual rate         |    Seasonally adjusted     |  Not seasonally adjusted   |   Dec. 96 
+                                                |    to   |  1997                      |  1997                      |  1997                      |      to
+ Item                                           | 1997 Q4 |    Q1     Q2  Q3     Q4    | Sept.   Oct.   Nov.   Dec. | Sept.   Oct.   Nov.   Dec. |   Dec. 97 
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                |         |                            |                            |                            |
+  Total index                                   |     5.8 |   5.2    4.6    6.0    7.4 |    .3     .7     .8     .5 |    .3    -.6   -1.2    -.7 |       5.9 
+                                                |         |                            |                            |                            |
+  Manufacturing                                 |     6.4 |   6.2    4.9    6.1    8.3 |    .1     .7    1.2     .5 |    .8    -.3   -1.8   -2.0 |       6.5 
+                                                |         |                            |                            |                            |
+     Primary processing                         |     3.8 |   3.4    3.7    2.6    5.4 |    .1     .3    1.0     .7 |    .9    -.1   -1.2   -1.6 |       4.6 
+     Advanced processing                        |     7.6 |   7.6    5.4    7.8    9.6 |    .1     .9    1.3     .4 |    .7    -.5   -2.1   -2.2 |       7.4 
+                                                |         |                            |                            |                            |
+     Durable                                    |     9.6 |   9.4    8.1   10.1   10.6 |    .1     .7    1.7     .6 |   1.2     .4    -.8   -1.9 |      10.0 
+        Lumber and products   24                |     1.6 |   4.2   10.8   -5.1   -2.7 |  -1.9    -.7    2.4    -.3 |   -.7     .2   -4.7   -4.2 |       4.2 
+        Furniture and fixtures   25             |     3.7 |   2.7   10.7   -3.2    5.0 |    .8     .5    1.5     .2 |   -.6   -3.9    -.6    -.7 |       4.2 
+        Stone, clay, and glass products   32    |     5.3 |   8.8    3.3    2.4    6.9 |    .6     .2    1.4     .8 |    .2     .5   -2.4   -4.0 |       6.7 
+                                                |         |                            |                            |                            |
+        Primary metals   33                     |     6.2 |   -.4    9.9    5.7    9.8 |    .4    1.2     .9     .8 |   3.7     .3     .0   -1.3 |       7.6 
+           Iron and steel   331,2               |     6.7 |   -.8   10.9     .8   17.0 |   2.2    1.6    1.1     .7 |   6.2    1.1    -.3   -1.6 |       9.2 
+              Raw steel                         |     8.0 |   5.8    8.7    6.5   11.0 |   2.6   -1.2    2.7     .5 |   5.2    -.7    1.8    -.6 |       8.1 
+           Nonferrous   333-6,9                 |     5.5 |    .1    8.7   11.8    2.0 |  -1.7     .6     .6    1.0 |   1.1    -.6     .4    -.9 |       5.7 
+        Fabricated metal products   34          |     4.0 |   2.3    2.9    1.0   10.0 |   -.1    1.2    1.0    1.3 |   1.2    -.9    -.4     .5 |       5.4 
+       Industrial machinery                     |         |                            |                            |                            |
+            and equipment   35                  |    11.3 |  11.2   10.8   14.3    8.9 |  -1.3    1.5     .7    1.0 |   1.3   -1.2   -2.4    -.9 |      11.1 
+           Computer and office equip.   357     |    34.4 |  32.7   34.9   50.2   21.2 |   2.0    1.3     .9     .8 |   1.7   -2.5   -2.0    1.4 |      32.8 
+        Electrical machinery   36               |    18.7 |  18.0   20.0   19.0   17.7 |    .3    1.4    2.6    1.8 |   1.6     .6    2.2    1.7 |      19.5 
+           Semiconductors   3672-9              |    40.2 |  46.2   41.4   40.3   33.0 |    .8    2.3    3.7    3.1 |   1.9    1.9    4.9    4.4 |      40.1 
+                                                |         |                            |                            |                            |
+        Transportation equipment   37           |    11.6 |  14.0    -.1   17.2   16.3 |   1.5    -.5    3.4   -1.0 |   1.1    4.5   -1.5   -8.5 |      10.9 
+           Motor vehicles and parts   371       |    10.9 |  15.8   -8.9   20.5   18.8 |   1.6   -1.1    5.3   -3.6 |    .2    7.6   -3.9  -17.9 |       8.8 
+              Autos and light trucks            |     9.6 |  19.0  -20.2   19.0   27.9 |   2.1   -1.4    5.5   -3.7 |   4.2   10.2   -5.9  -18.5 |       6.0 
+           Aerospace and misc.   372-6,9        |    12.7 |  11.5   13.4   12.7   13.1 |   1.4     .4     .8    2.6 |   2.4     .3    2.0    4.5 |      13.8 
+        Instruments   38                        |     3.9 |   2.1    3.2    5.1    5.2 |   -.2     .7     .5     .1 |    .7   -1.9    -.5    1.1 |       3.8 
+        Miscellaneous   39                      |     4.1 |  11.4    3.1    3.3   -1.0 |   -.4     .3   -1.1    1.5 |   1.4    1.0    -.6    -.9 |       3.0 
+                                                |         |                            |                            |                            |
+     Nondurable                                 |     2.7 |   2.5    1.2    1.5    5.6 |    .2     .7     .6     .4 |    .3   -1.2   -3.0   -2.2 |       2.5 
+        Foods   20                              |     2.0 |   4.6   -1.9     .4    5.0 |   -.2     .6    1.6     .1 |   1.0   -1.8   -3.5   -2.6 |       1.9 
+        Tobacco products   21                   |      .6 |    .9   -6.6    1.9    6.8 |   -.4    1.5   -1.5    2.8 |  -7.0    7.9  -11.3  -15.1 |      -1.1 
+        Textile mill products   22              |     5.1 |    .6    4.4    9.3    6.0 |    .6     .3    1.1     .2 |   -.5    2.9   -6.1   -8.2 |       6.8 
+        Apparel products   23                   |    -1.6 |  -3.7   -1.2   -1.8     .3 |    .0     .2    -.6    1.3 |    .2   -1.2   -1.7     .8 |        .0 
+        Paper and products   26                 |     4.9 |   6.1    1.8    6.9    4.9 |   -.6     .3    2.0    -.1 |  -1.7    2.0    -.4   -2.7 |       3.9 
+                                                |         |                            |                            |                            |
+        Printing and publishing   27            |     3.9 |   1.6    3.7     .9    9.6 |    .7    1.5     .7    -.6 |    .5   -1.8   -2.0   -2.4 |       3.5 
+        Chemicals and products   28             |     2.0 |   2.2    1.0     .1    4.8 |    .9     .4    -.2     .7 |   1.6   -3.3   -4.3    -.9 |       1.5 
+        Petroleum products   29                 |     2.6 |    .8   12.7   -5.0    2.9 |    .4    1.0   -2.1    1.9 |    .0   -2.3   -1.2     .9 |       3.9 
+        Rubber and plastics products   30       |     4.1 |   1.9    1.7    6.6    6.4 |   -.3    -.1    1.8     .4 |    .1     .0     .3    -.2 |       4.4 
+        Leather and products   31               |    -7.8 |  -4.4   -6.5  -15.3   -4.8 |   -.3    2.1   -2.2    -.7 |    .4    1.1   -2.4   -2.2 |      -9.5 
+                                                |         |                            |                            |                            |
+  Mining                                        |     2.3 |   7.1    1.9    1.8   -1.5 |    .1    -.3    -.4     .3 |    .3    -.3    -.8    -.9 |       3.1 
+     Metal mining   10                          |     5.2 |  -1.8    3.9   -5.6   27.0 |   -.6    5.5    2.3   -2.1 |    .5    1.3    2.0    -.8 |       3.8 
+     Coal mining   12                           |     4.2 |   2.2    5.0     .6    9.2 |   1.7     .0    1.5    4.2 |    .7    -.5   -1.5    1.6 |       7.1 
+     Oil and gas extraction   13                |     2.0 |   8.7    2.4    3.0   -5.8 |    .2    -.9   -1.0    -.4 |    .6    -.6    1.1     .4 |       2.3 
+     Stone and earth minerals   14              |      .4 |  10.2   -6.6    -.7    -.6 |  -1.9    -.1     .1    1.7 |  -2.1     .3  -14.6  -14.9 |       3.5 
+                                                |         |                            |                            |                            |
+  Utilities                                     |     2.3 |  -6.8    3.3    8.3    5.0 |   1.9    1.4   -1.9     .4 |  -6.0   -3.7    7.0   15.4 |       1.9 
+     Electric   491,3pt                         |     2.6 |  -3.5    -.9   11.1    4.2 |   2.3    1.3   -2.3     .0 |  -6.7   -8.5   -1.8    7.9 |       1.8 
+     Gas         492,3pt                        |     1.1 | -18.7   21.0   -2.0    8.0 |    .2    1.9    -.5    1.7 |   -.1   33.1   52.9   40.7 |       2.3 
+                                                |         |                            |                            |                            |
+ SPECIAL AGGREGATES                             |         |                            |                            |                            |
+                                                |         |                            |                            |                            |
+ Computers, communications eq, and              |         |                            |                            |                            |
+     semiconductors                             |    30.4 |  31.8   31.9   34.2   23.8 |   1.4    1.5    2.4    2.1 |   2.2     .5    2.8    3.5 |      30.2 
+                                                |         |                            |                            |                            |
+ Manufacturing excluding:                       |         |                            |                            |                            |
+     Motor vehicles and parts                   |     6.1 |   5.6    5.8    5.2    7.6 |    .0     .8     .9     .8 |    .8    -.8   -1.7   -1.0 |       6.4 
+     Computer and office equipment              |     5.9 |   5.7    4.3    5.4    8.1 |    .1     .7    1.2     .5 |    .8    -.3   -1.8   -2.1 |       6.0 
+     Computers and semiconductors               |     4.5 |   4.1    2.7    4.0    7.1 |    .1     .6    1.1     .4 |    .7    -.4   -2.1   -2.4 |       4.6 
+    Computers, communications eq, and           |         |                            |                            |                            |
+        semiconductors                          |     4.3 |   4.0    2.4    3.7    7.0 |    .0     .6    1.1     .4 |    .7    -.4   -2.2   -2.6 |       4.4 
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Notes:  Estimates for December are preliminary.  Estimates from September to November are revised.
+         Percent changes shown in the first and last columns are based on seasonally adjusted data.
+ 
+ 
+ 
+ Table 3
+ CAPACITY UTILIZATION: MANUFACTURING, MINING, AND UTILITIES
+ Percent of capacity, seasonally adjusted
+                                                |           |  1967-         1978-         1988-  1990-|       |
+                                                |      1996 |  1996    1973   1980   1982   1989   1991|  1996 |  1997                                    
+ Item                                           | Proportion|  Ave.    High   High    Low   High    Low|  Dec. |  July   Aug.  Sept.   Oct.   Nov.   Dec. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                |           |                                          |       |
+  Total industry                                |    100.00 |  82.1   89.2   87.3   71.1   85.4   78.1 |  82.5 |  82.6   82.8   82.7   83.0   83.3   83.4 
+                                                |           |                                          |       |
+  Manufacturing                                 |     87.25 |  81.1   88.5   86.9   69.0   85.7   76.6 |  81.5 |  81.5   81.8   81.6   81.8   82.4   82.5 
+                                                |           |                                          |       |
+     Primary processing                         |     26.51 |  82.3   91.2   88.1   66.2   88.9   77.7 |  85.7 |  86.0   85.8   85.7   85.7   86.3   86.7 
+     Advanced processing                        |     60.74 |  80.5   87.2   86.7   70.4   84.2   76.1 |  79.7 |  79.6   80.0   79.7   80.0   80.6   80.6 
+                                                |           |                                          |       |
+     Durable                                    |     47.47 |  79.4   89.2   87.7   63.9   84.6   73.1 |  80.4 |  80.8   81.4   81.0   81.0   81.9   81.8 
+        Lumber and products   24                |      2.03 |  82.6   88.7   87.9   60.8   93.6   75.5 |  80.8 |  83.2   82.5   80.7   79.9   81.5   81.0 
+        Furniture and fixtures   25             |      1.39 |  81.6   96.8   85.5   68.9   86.6   72.5 |  80.8 |  81.5   79.2   79.5   79.6   80.5   80.3 
+        Stone, clay, and glass products   32    |      2.22 |  78.1   88.8   88.0   64.3   83.5   69.7 |  80.8 |  82.2   81.7   81.9   81.8   82.7   83.1 
+                                                |           |                                          |       |
+        Primary metals   33                     |      3.07 |  80.8  100.2   94.2   45.1   92.7   73.7 |  90.0 |  91.5   91.4   91.5   92.3   92.8   93.3 
+           Iron and steel   331,2               |      1.68 |  80.7  105.8   95.8   37.0   95.2   71.8 |  88.5 |  89.7   89.1   90.8   92.0   92.8   93.1 
+              Raw steel                         |       .08 |  80.6  102.7   95.8   35.2   92.7   71.5 |  89.5 |  88.9   88.9   90.8   89.2   91.1   91.1 
+           Nonferrous   333-6,9                 |      1.39 |  81.2   90.8   91.1   60.1   89.3   74.2 |  91.9 |  93.8   94.3   92.5   92.8   93.1   93.7 
+              Primary copper   3331             |       .07 |  74.3   93.4   81.5   42.1   86.3   73.5 |  88.7 |  96.4   96.2   92.7   92.1   93.8        
+              Primary aluminum   3334           |       .12 |  88.5   95.7   97.6   58.6  100.4   97.3 |  85.4 |  85.8   85.9   85.6   86.5   86.2   86.4 
+                                                |           |                                          |       |
+        Fabricated metal products   34          |      5.30 |  77.9   87.8   83.9   63.7   82.0   71.9 |  80.2 |  79.1   78.9   78.6   79.2   79.7   80.4 
+        Industrial machinery                    |           |                                          |       |
+            and equipment   35                  |      8.49 |  81.3   96.0   93.2   64.0   85.4   72.3 |  85.0 |  85.0   86.1   84.2   84.7   84.5   84.6 
+           Computer and office equip.   357     |      1.79 |  81.0   90.9   92.6   65.5   86.9   66.9 |  81.9 |  81.4   82.2   81.5   80.3   78.7   77.1 
+        Electrical machinery   36               |      8.71 |  81.0   89.2   89.4   71.6   84.0   75.0 |  82.0 |  82.7   81.9   81.0   80.9   81.8   82.1 
+           Semiconductors   3672-9              |      3.73 |  79.6   95.6   91.7   75.7   81.0   75.5 |  84.3 |  86.8   86.6   85.0   84.7   85.5   85.8 
+                                                |           |                                          |       |
+        Transportation equipment   37           |      9.92 |  75.8   86.1   84.8   57.2   85.8   68.5 |  72.5 |  73.1   76.0   77.0   76.4   78.7   77.7 
+           Motor vehicles and parts   371       |      5.74 |  76.6   93.4   95.0   45.5   89.1   55.9 |  72.6 |  70.7   75.2   76.2   75.0   78.7   75.6 
+              Autos and light trucks <1>        |      2.79 |                94.6   40.6   92.3   53.3 |  78.5 |  71.2   80.1   81.6   80.3   84.6   81.3 
+           Aerospace and misc.   372-6,9        |      4.18 |  75.1   78.4   81.9   66.6   87.3   79.2 |  72.2 |  76.4   76.9   77.9   78.1   78.6   80.5 
+        Instruments   38                        |      4.94 |  81.7   89.9   92.7   78.4   81.4   77.2 |  79.6 |  80.1   80.8   80.5   80.9   81.2   81.2 
+        Miscellaneous   39                      |      1.40 |  75.2   82.9   79.4   65.4   79.0   71.7 |  80.4 |  81.2   80.8   80.2   80.3   79.2   80.2 
+                                                |           |                                          |       |
+     Nondurable                                 |     39.78 |  83.4   87.8   87.5   76.4   87.3   80.7 |  82.9 |  82.3   82.2   82.3   82.7   83.0   83.2 
+        Foods   20                              |      9.51 |  83.0   86.0   84.6   79.1   85.4   82.7 |  81.2 |  80.8   79.8   79.5   79.9   81.0   80.9 
+        Textile mill products   22              |      1.55 |  85.5   91.4   91.2   72.3   90.4   77.7 |  81.4 |  84.2   84.1   84.5   84.6   85.4   85.4 
+        Apparel products   23                   |      1.99 |  81.2   84.2   87.5   77.5   85.1   75.5 |  76.1 |  75.8   75.4   75.4   75.6   75.1   76.1 
+        Paper and products   26                 |      3.36 |  89.3   97.1   96.1   80.6   93.5   85.0 |  89.7 |  90.8   90.8   90.1   90.2   91.8   91.5 
+           Pulp and paper   261-3               |      1.50 |  92.4   97.2   98.3   82.0   98.0   89.9 |  93.3 |  93.8   94.7   94.0   95.3   95.9        
+        Printing and publishing   27            |      6.55 |  85.8   89.7   93.9   82.0   91.7   79.6 |  81.5 |  81.9   82.1   82.6   83.8   84.3   83.8 
+                                                |           |                                          |       |
+        Chemicals and products   28             |     10.44 |  79.5   87.6   84.6   69.9   86.2   79.3 |  80.3 |  78.4   78.3   78.8   78.9   78.5   78.8 
+           Plastics materials   2821            |       .78 |  86.5  102.0   90.9   63.4   97.0   74.8 |  93.9 |  94.4   92.0   93.6   91.2               
+           Synthetic fibers   2823,4            |       .34 |  85.0   93.8   98.6   64.4   99.7   77.6 |  93.1 |  90.9   85.8   89.4   87.9   84.0        
+        Petroleum products   29                 |      1.59 |  86.3   96.7   90.0   66.8   88.5   85.1 |  93.8 |  94.7   95.2   95.4   96.2   94.1   95.7 
+        Rubber and plastics products   30       |      3.42 |  84.8   95.5   91.2   72.7   89.6   77.4 |  88.1 |  86.8   87.9   87.3   87.0   88.2   88.3 
+        Leather and products   31               |       .22 |  81.2   81.3   92.1   75.8   83.3   76.1 |  71.8 |  69.5   67.0   67.0   68.5   67.2   66.8 
+                                                |           |                                          |       |
+  Mining                                        |      5.88 |  87.5   94.3   96.0   80.3   88.0   87.0 |  87.6 |  90.3   90.0   90.1   89.8   89.5   89.7 
+     Metal mining   10                          |       .42 |  78.6   89.6   87.9   44.4   89.4   79.9 |  91.1 |  89.1   89.7   89.1   93.9   95.9   93.8 
+     Coal mining   12                           |       .84 |  86.9   91.0   99.4   76.6   91.5   83.4 |  86.5 |  88.7   85.1   86.5   86.4   87.5   91.1 
+     Oil and gas extraction   13                |      4.06 |  88.5   96.9   97.3   82.3   88.2   88.7 |  87.8 |  91.4   91.6   91.8   91.0   90.1   89.7 
+        Oil and gas well drilling   138         |       .75 |  73.8   93.0  104.3   50.9   69.3   60.0 |  77.4 |  86.9   87.4   87.3   85.2   83.6   84.0 
+     Stone and earth minerals   14              |       .56 |  84.8   95.0   92.7   63.3   89.0   79.4 |  84.9 |  84.5   85.7   83.9   83.5   83.3   84.5 
+                                                |           |                                          |       |
+  Utilities                                     |      6.87 |  87.2   96.2   89.1   75.9   92.6   83.4 |  89.8 |  89.9   89.2   90.8   92.0   90.1   90.3 
+     Electric   491,3pt                         |      5.37 |  89.1   99.0   88.2   78.9   95.0   87.1 |  90.8 |  91.2   90.5   92.5   93.6   91.3   91.3 
+     Gas         492,3pt                        |      1.51 |  82.4   94.1   93.7   69.1   85.0   67.1 |  84.8 |  83.8   83.0   83.0   84.5   83.9   85.2 
+                                                |           |                                          |       |
+ SPECIAL AGGREGATES                             |           |                                          |       |
+                                                |           |                                          |       |
+ Computers, communications eq, and              |           |                                          |       |
+     semiconductors                             |      7.59 |  80.1   84.0   90.9   77.3   81.9   72.4 |  81.3 |  82.5   82.3   81.6   81.1   81.2   81.1 
+                                                |           |                                          |       |
+ Manufacturing ex. computers,                   |           |                                          |       |
+    communications eq., and                     |           |                                          |       |
+     semiconductors                             |     79.66 |  81.1   88.8   87.0   68.0   86.1   76.8 |  81.6 |  81.5   81.8   81.6   81.9   82.6   82.7 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> Series begins in 1977.
+ Notes:  Primary processing manufacturing includes textile mill products, paper and products, industrial chemicals, synthetic materials, and
+         fertilizers, petroleum products, rubber and plastics products, lumber and products, primary metals, fabricated metals, and stone, clay, and
+         glass products.  Advanced processing manufacturing includes foods, tobacco products, apparel products, printing and publishing, chemical
+         products and other agricultural chemicals, leather and products, furniture and fixtures, industrial and commercial machinery and computer
+         equipment, electrical machinery, transportation equipment, instruments, and miscellaneous manufactures.
+         Estimates for December are preliminary.  Estimates from September to November are revised.
+ 
+ 
+ 
+ Table 4
+ INDUSTRIAL CAPACITY: MANUFACTURING, MINING, AND UTILITIES
+                                                                      Percent change
+                                                                                                                            Capacity indexes
+                                                |     Annual rate     |       December to December        |              Percent of 1992 output
+                                                |  1967-  1967-  1975-|                                   |       |
+                                                |  1997    1975  1997 |                                   |  1996 |  1997                                    
+ Item                                           |   Ave.  Ave.   Ave. |  1993   1994   1995   1996   1997 |  Dec. |  July   Aug.  Sept.   Oct.   Nov.   Dec. 
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                |                     |                                   |       |
+  Total industry                                |   3.0    3.8    2.7 |   2.3    3.9    5.0    4.5    4.7 | 146.7 | 150.7  151.3  151.9  152.4  153.0  153.6 
+                                                |                     |                                   |       |
+  Manufacturing                                 |   3.3    4.0    3.0 |   2.5    4.2    5.6    5.1    5.3 | 151.0 | 155.7  156.3  157.0  157.6  158.3  159.0 
+                                                |                     |                                   |       |
+     Primary processing                         |   2.3    4.1    1.5 |   1.4    2.4    3.0    3.4    3.4 | 135.0 | 137.7  138.0  138.4  138.8  139.2  139.6 
+     Advanced processing                        |   3.8    4.0    3.8 |   3.0    5.2    6.9    5.9    6.3 | 159.0 | 164.9  165.7  166.5  167.3  168.1  169.0 
+                                                |                     |                                   |       |
+     Durable                                    |   3.8    3.7    3.8 |   3.1    6.1    8.5    7.4    8.0 | 168.2 | 176.1  177.2  178.3  179.4  180.6  181.8 
+        Lumber and products   24                |   2.0    2.9    1.7 |    .8    3.0    3.9    4.5    4.0 | 136.3 | 139.5  140.0  140.4  140.9  141.3  141.8 
+        Furniture and fixtures   25             |   3.2    4.5    2.6 |   2.3    2.5    4.0    6.0    4.8 | 148.2 | 152.3  152.9  153.5  154.1  154.7  155.3 
+        Stone, clay, and glass products   32    |   1.5    2.5    1.1 |    .0     .9    2.4    3.4    3.7 | 144.0 | 147.1  147.5  148.0  148.4  148.9  149.3 
+                                                |                     |                                   |       |
+        Primary metals   33                     |    .3    1.7    -.2 |   -.3    2.7    2.4    3.7    3.7 | 133.8 | 136.8  137.2  137.6  138.0  138.5  138.9 
+           Iron and steel   331,2               |   -.4     .7    -.8 |   -.8    3.1    1.4    4.5    3.8 | 133.2 | 136.2  136.6  137.0  137.4  137.9  138.3 
+              Raw steel                         |   -.7     .3   -1.2 |  -4.3    1.4    3.3    2.7    6.1 | 125.7 | 130.0  130.7  131.3  132.0  132.7  133.3 
+           Nonferrous   333-6,9                 |   1.7    3.8     .8 |    .4    2.2    3.5    2.8    3.7 | 134.3 | 137.3  137.7  138.1  138.5  138.9  139.3 
+              Primary copper   3331             |    .7    1.8     .2 |   6.3    3.2    8.3   -1.8    1.2 | 142.9 | 143.8  144.0  144.1  144.3  144.5  144.6 
+              Primary aluminum   3334           |   1.2    5.2    -.4 |    .0     .5     .0     .2     .2 | 104.0 | 104.1  104.1  104.1  104.1  104.1  104.2 
+                                                |                     |                                   |       |
+        Fabricated metal products   34          |   1.9    3.1    1.4 |   2.7    2.5    4.1    4.7    5.1 | 150.4 | 154.9  155.5  156.2  156.8  157.5  158.1 
+        Industrial machinery                    |                     |                                   |       |
+            and equipment   35                  |   5.4    4.7    5.7 |   4.9    8.6   11.0   11.4   11.6 | 189.8 | 202.7  204.4  206.2  208.1  210.0  211.9 
+           Computer and office equip.   357     |  20.7   12.0   24.4 |  20.4   21.9   32.0   40.6   41.0 | 390.7 | 477.5  491.3  505.6  520.3  535.4  551.0 
+        Electrical machinery   36               |   8.2    5.9    9.2 |  10.4   19.1   26.5   18.6   19.3 | 256.7 | 284.9  289.0  293.2  297.5  301.8  306.3 
+           Semiconductors   3672-9              |  18.9   13.1   21.4 |  23.1   43.0   57.1   29.6   37.6 | 477.6 | 574.6  590.2  606.2  622.7  639.7  657.1 
+                                                |                     |                                   |       |
+        Transportation equipment   37           |   2.7    3.0    2.5 |    .7    3.4    3.8    2.3    3.5 | 150.5 | 153.5  153.9  154.3  154.8  155.2  155.7 
+           Motor vehicles and parts   371       |   3.4    4.4    3.0 |   2.6    7.5    8.1    4.5    4.6 | 179.2 | 184.0  184.7  185.4  186.0  186.7  187.4 
+              Autos and light trucks <1>        |                     |    .0    5.9    5.7     .8    2.4 | 159.2 | 161.4  161.7  162.1  162.4  162.7  163.0 
+           Aerospace and misc.   372-6,9        |   1.6    1.1    1.7 |  -1.7   -1.1   -1.2    -.7    2.1 | 122.4 | 123.9  124.1  124.3  124.5  124.8  125.0 
+        Instruments   38                        |   4.6    7.6    3.4 |   1.1     .0     .5     .8    1.9 | 133.4 | 134.9  135.1  135.3  135.5  135.7  136.0 
+        Miscellaneous   39                      |   2.3    4.4    1.5 |   1.9    1.9    2.9    3.2    3.2 | 153.4 | 156.3  156.8  157.2  157.6  158.0  158.4 
+                                                |                     |                                   |       |
+     Nondurable                                 |   2.8    4.3    2.2 |   1.8    2.0    2.4    2.4    2.2 | 133.1 | 134.7  135.0  135.2  135.5  135.7  136.0 
+        Foods   20                              |   2.4    3.0    2.2 |   1.8    2.1    2.9    2.5    2.4 | 134.2 | 136.1  136.3  136.6  136.9  137.1  137.4 
+        Textile mill products   22              |   2.2    4.4    1.3 |   2.8    3.9    3.1    2.0    1.8 | 130.1 | 131.5  131.7  131.9  132.1  132.3  132.5 
+        Apparel products   23                   |   1.2    2.3     .7 |    .8    1.6    2.2     .1     .0 | 131.4 | 131.4  131.4  131.4  131.4  131.4  131.4 
+        Paper and products   26                 |   2.8    3.9    2.3 |   1.9    1.3    2.5    2.3    1.8 | 124.6 | 125.8  126.0  126.2  126.5  126.7  126.9 
+           Pulp and paper   261-3               |   2.4    2.9    2.2 |   1.8    2.0    2.9    2.0    1.8 | 119.6 | 120.8  120.9  121.1  121.3  121.5  121.7 
+        Printing and publishing   27            |   2.7    3.0    2.6 |    .0     .8     .7    1.0     .7 | 126.5 | 127.1  127.2  127.2  127.3  127.4  127.5 
+                                                |                     |                                   |       |
+        Chemicals and products   28             |   3.8    6.8    2.6 |   3.1    2.7    2.8    3.6    3.3 | 143.2 | 145.9  146.3  146.7  147.1  147.5  148.0 
+           Plastics materials   2821            |   6.5   12.7    4.1 |    .1    6.2    5.3    6.6    5.5 | 135.0 | 139.4  140.0  140.6  141.2  141.9  142.5 
+           Synthetic fibers   2823,4            |   3.8    9.7    1.5 |    .6     .4     .4    -.4    3.9 | 119.6 | 122.2  122.6  123.1  123.5  123.9  124.3 
+        Petroleum products   29                 |   1.5    4.2     .4 |   -.5    2.1    -.5     .4    1.8 | 113.8 | 115.0  115.2  115.4  115.6  115.7  115.9 
+        Rubber and plastics products   30       |   5.4    8.4    4.1 |   3.4    4.4    5.1    4.4    4.2 | 141.6 | 145.0  145.5  146.0  146.5  147.0  147.5 
+        Leather and products   31               |  -3.2   -1.5   -4.0 |  -2.5   -2.1   -2.6   -2.3   -2.8 | 108.1 | 106.4  106.1  105.9  105.6  105.4  105.1 
+                                                |                     |                                   |       |
+  Mining                                        |    .2    -.1     .3 |    .7    1.1    -.7     .4     .7 | 117.4 | 118.0  118.1  118.1  118.2  118.2  118.3 
+     Metal mining   10                          |   1.3     .5    1.6 |   1.4   -1.8    1.2     .5     .8 | 117.7 | 118.0  118.1  118.2  118.4  118.5  118.6 
+     Coal mining   12                           |   2.4    2.4    2.3 |   1.9    4.3    -.7    1.2    1.7 | 125.1 | 126.3  126.5  126.7  126.9  127.1  127.2 
+     Oil and gas extraction   13                |   -.5   -1.0    -.3 |   -.2     .3   -1.2    -.1     .1 | 113.5 | 113.7  113.7  113.7  113.7  113.6  113.6 
+        Oil and gas well drilling   138         |    .7     .8     .6 |  -1.0    -.6   -1.6   -1.2    1.1 | 174.1 | 175.1  175.2  175.4  175.6  175.7  175.9 
+     Stone and earth minerals   14              |   1.4    2.6     .9 |   4.2    2.3    2.4    3.5    4.0 | 136.2 | 139.4  139.8  140.3  140.7  141.2  141.6 
+                                                |                     |                                   |       |
+  Utilities                                     |   2.8    6.1    1.5 |    .8    1.2    2.1    1.5    1.3 | 125.5 | 126.5  126.7  126.8  126.9  127.1  127.2 
+     Electric   491,3pt                         |   3.8    7.8    2.2 |   1.3    1.0    2.8    1.5    1.3 | 123.9 | 124.8  125.0  125.1  125.2  125.4  125.5 
+     Gas         492,3pt                        |    .4    2.3    -.4 |    .2     .4     .5    2.2    1.9 | 133.9 | 135.3  135.6  135.8  136.0  136.2  136.4 
+                                                |                     |                                   |       |
+ SPECIAL AGGREGATES                             |                     |                                   |       |
+                                                |                     |                                   |       |
+ Computers, communications eq, and              |                     |                                   |       |
+     semiconductors                             |  15.2    9.5   17.6 |  18.4   28.3   38.7   29.3   30.5 | 370.2 | 433.0  442.5  452.3  462.4  472.7  483.2 
+                                                |                     |                                   |       |
+ Manufacturing ex. computers,                   |                     |                                   |       |
+    communications eq., and                     |                     |                                   |       |
+     semiconductors                             |   2.4    3.7    1.9 |   1.4    2.4    3.0    2.9    3.1 | 139.4 | 141.8  142.2  142.6  142.9  143.3  143.7 
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> Series begins in 1977.
+ 
+ 
+ 
+ Table 5A
+ INDUSTRIAL PRODUCTION, CAPACITY AND UTILIZATION FOR TOTAL INDUSTRY:  HISTORICAL DATA
+ 
+ 
+ -------------------------------------------------------------------------------------------------------------------------------------------
+                 |                                                                                    |                            |
+                 |   Jan.   Feb.   Mar.   Apr.    May   June   July   Aug.  Sept.   Oct.   Nov.   Dec.|     Q1     Q2     Q3     Q4|  Annual
+ -------------------------------------------------------------------------------------------------------------------------------------------
+                 |                                                                                    |                            |
+ Industrial      |                                                                                    |                            |
+ Production,     |                                                                                    |                            |
+ Percent         |                                                                                    |                            |
+ Change <1>      |                                                                                    |                            |
+  1985           |    .4     .9     .3     .2     .2    -.2    -.4     .6     .6    -.9     .6     .7 |   3.0    2.8     .3    1.4 |    1.6 
+  1986           |    .6    -.7   -1.0     .8    -.2    -.3     .3     .3    -.1     .9     .5     .9 |   2.0   -1.7     .7    6.5 |    1.1 
+                 |                                                                                    |                            |
+  1987           |   -.6    1.2     .4     .4     .4     .9     .6     .1    -.1    1.4     .3     .6 |   4.2    6.7    5.6    7.1 |    4.6 
+  1988           |    .1     .3     .0     .6     .1     .1     .7     .5    -.4     .3     .8     .5 |   3.2    3.1    3.9    3.6 |    4.5 
+  1989           |    .6    -.8     .9     .2    -.6    -.2   -1.0     .4    -.2    -.5     .4     .5 |   3.8     .5   -4.4    -.1 |    1.8 
+  1990           |   -.5     .5     .5    -.6     .4     .0     .0     .2     .1    -.6   -1.3    -.6 |   2.0     .6    1.0   -5.8 |    -.2 
+  1991           |   -.5    -.8    -.9     .3     .8    1.2     .1     .1    1.0    -.1    -.1    -.6 |  -8.3    1.5    6.2    1.1 |   -2.0 
+                 |                                                                                    |                            |
+  1992           |    .2     .6     .7     .8     .2    -.3     .7    -.3     .5     .8     .5     .1 |   1.4    6.2    1.9    5.5 |    3.1 
+  1993           |    .5     .4     .1     .4    -.6     .2     .4    -.2    1.0     .3     .4     .8 |   4.4    1.1    2.1    5.8 |    3.6 
+  1994           |    .3     .5     .7     .5     .7     .5     .5     .3     .2     .7     .8    1.0 |   6.0    7.1    5.5    7.5 |    5.4 
+  1995           |    .6    -.1     .1     .0     .3     .3     .0    1.0     .4    -.4     .2    -.1 |   5.9    1.6    4.5    1.1 |    4.9 
+  1996           |   -.2    1.2    -.4    1.1     .6     .5     .0     .3     .3     .0     .8     .3 |   2.0    7.5    3.6    3.8 |    3.5 
+  1997           |    .3     .6     .3     .5     .2     .2     .8     .6     .3     .7     .8     .5 |   5.2    4.6    6.0    7.4 |    5.0 
+                 |                                                                                    |                            |
+ Industrial      |                                                                                    |                            |
+ Production <2>  |                                                                                    |                            |
+  1985           |  86.9   87.7   87.9   88.0   88.2   88.0   87.6   88.2   88.7   87.9   88.4   89.0 |  87.5   88.1   88.2   88.5 |   88.0 
+  1986           |  89.6   89.0   88.1   88.7   88.6   88.2   88.5   88.8   88.7   89.5   89.9   90.8 |  88.9   88.5   88.7   90.1 |   89.0 
+                 |                                                                                    |                            |
+  1987           |  90.2   91.2   91.6   92.0   92.4   93.2   93.7   93.8   93.7   95.0   95.3   95.9 |  91.0   92.5   93.8   95.4 |   93.2 
+  1988           |  95.9   96.2   96.3   96.8   96.9   97.0   97.6   98.1   97.8   98.0   98.8   99.3 |  96.1   96.9   97.8   98.7 |   97.4 
+  1989           |  99.8   99.0  100.0  100.2   99.6   99.4   98.4   98.8   98.6   98.2   98.6   99.0 |  99.6   99.7   98.6   98.6 |   99.1 
+  1990           |  98.6   99.1   99.6   99.0   99.4   99.3   99.3   99.5   99.6   99.1   97.7   97.2 |  99.1   99.2   99.5   98.0 |   98.9 
+  1991           |  96.7   95.9   95.0   95.4   96.1   97.2   97.3   97.4   98.4   98.3   98.1   97.5 |  95.9   96.2   97.7   98.0 |   97.0 
+                 |                                                                                    |                            |
+  1992           |  97.7   98.3   99.0   99.8  100.0   99.7  100.3  100.0  100.5  101.2  101.8  101.8 |  98.3   99.8  100.3  101.6 |  100.0 
+  1993           | 102.4  102.8  102.9  103.3  102.7  102.9  103.3  103.1  104.1  104.4  104.9  105.7 | 102.7  103.0  103.5  105.0 |  103.6 
+  1994           | 106.0  106.5  107.2  107.7  108.5  109.0  109.6  109.9  110.1  110.9  111.8  112.9 | 106.6  108.4  109.9  111.9 |  109.2 
+  1995           | 113.5  113.4  113.6  113.6  113.9  114.3  114.3  115.4  115.9  115.4  115.6  115.5 | 113.5  113.9  115.2  115.5 |  114.5 
+  1996           | 115.3  116.7  116.3  117.5  118.3  118.9  118.9  119.3  119.6  119.7  120.6  120.9 | 116.1  118.2  119.3  120.4 |  118.5 
+  1997           | 121.3  122.1  122.5  123.1  123.3  123.5  124.5  125.2  125.6  126.5  127.5  128.1 | 121.9  123.3  125.1  127.4 |  124.5 
+                 |                                                                                    |                            |
+ Capacity        |                                                                                    |                            |
+  1985           | 108.8  109.0  109.3  109.6  109.8  110.1  110.4  110.7  111.0  111.3  111.7  112.0 | 109.0  109.8  110.7  111.7 |  110.3 
+  1986           | 112.2  112.4  112.6  112.7  112.9  113.0  113.2  113.3  113.5  113.6  113.7  113.9 | 112.4  112.9  113.3  113.7 |  113.1 
+                 |                                                                                    |                            |
+  1987           | 114.0  114.1  114.2  114.3  114.4  114.5  114.6  114.7  114.9  115.0  115.1  115.2 | 114.1  114.4  114.7  115.1 |  114.6 
+  1988           | 115.3  115.5  115.6  115.7  115.8  115.9  116.0  116.2  116.3  116.4  116.5  116.7 | 115.5  115.8  116.2  116.5 |  116.0 
+  1989           | 116.8  117.0  117.2  117.4  117.6  117.8  118.0  118.2  118.4  118.6  118.8  119.0 | 117.0  117.6  118.2  118.8 |  117.9 
+  1990           | 119.2  119.3  119.5  119.7  119.9  120.1  120.2  120.4  120.6  120.8  121.0  121.2 | 119.3  119.9  120.4  121.0 |  120.2 
+  1991           | 121.4  121.6  121.7  121.9  122.1  122.2  122.4  122.6  122.7  122.9  123.0  123.2 | 121.6  122.1  122.6  123.0 |  122.3 
+                 |                                                                                    |                            |
+  1992           | 123.4  123.6  123.8  124.1  124.3  124.5  124.8  125.0  125.2  125.4  125.6  125.8 | 123.6  124.3  125.0  125.6 |  124.6 
+  1993           | 126.1  126.3  126.5  126.8  127.0  127.2  127.5  127.7  128.0  128.2  128.5  128.7 | 126.3  127.0  127.7  128.5 |  127.4 
+  1994           | 129.1  129.5  129.9  130.3  130.7  131.2  131.6  132.0  132.4  132.8  133.3  133.7 | 129.5  130.7  132.0  133.3 |  131.4 
+  1995           | 134.2  134.8  135.3  135.9  136.5  137.1  137.6  138.1  138.7  139.2  139.8  140.4 | 134.8  136.5  138.1  139.8 |  137.3 
+  1996           | 140.9  141.4  142.0  142.5  143.0  143.6  144.1  144.6  145.1  145.6  146.1  146.7 | 141.4  143.0  144.6  146.1 |  143.8 
+  1997           | 147.2  147.8  148.4  149.0  149.6  150.2  150.7  151.3  151.9  152.4  153.0  153.6 | 147.8  149.6  151.3  153.0 |  150.4 
+                 |                                                                                    |                            |
+ Utilization     |                                                                                    |                            |
+  1985           |  79.9   80.4   80.4   80.3   80.3   79.9   79.4   79.6   79.9   79.0   79.2   79.5 |  80.2   80.2   79.6   79.2 |   79.8 
+  1986           |  79.8   79.2   78.2   78.7   78.4   78.1   78.2   78.3   78.2   78.8   79.1   79.7 |  79.1   78.4   78.2   79.2 |   78.7 
+                 |                                                                                    |                            |
+  1987           |  79.1   80.0   80.2   80.5   80.7   81.4   81.8   81.8   81.6   82.6   82.8   83.2 |  79.8   80.8   81.7   82.9 |   81.3 
+  1988           |  83.2   83.4   83.3   83.7   83.7   83.6   84.1   84.5   84.1   84.2   84.8   85.1 |  83.3   83.7   84.2   84.7 |   84.0 
+  1989           |  85.4   84.6   85.3   85.3   84.7   84.4   83.4   83.6   83.3   82.8   83.0   83.2 |  85.1   84.8   83.4   83.0 |   84.1 
+  1990           |  82.7   83.0   83.3   82.7   82.9   82.7   82.6   82.6   82.6   82.0   80.8   80.2 |  83.0   82.8   82.6   81.0 |   82.3 
+  1991           |  79.6   78.9   78.1   78.2   78.7   79.6   79.5   79.5   80.2   80.0   79.8   79.2 |  78.9   78.8   79.7   79.6 |   79.3 
+                 |                                                                                    |                            |
+  1992           |  79.2   79.5   79.9   80.4   80.4   80.0   80.4   80.0   80.2   80.7   81.0   80.9 |  79.5   80.3   80.2   80.9 |   80.2 
+  1993           |  81.2   81.4   81.3   81.5   80.9   80.9   81.0   80.7   81.4   81.4   81.6   82.1 |  81.3   81.1   81.0   81.7 |   81.3 
+  1994           |  82.1   82.2   82.5   82.7   83.0   83.1   83.3   83.3   83.2   83.5   83.9   84.4 |  82.3   82.9   83.2   83.9 |   83.1 
+  1995           |  84.6   84.2   83.9   83.6   83.5   83.4   83.1   83.6   83.6   82.9   82.7   82.3 |  84.2   83.5   83.4   82.6 |   83.4 
+  1996           |  81.8   82.5   81.9   82.5   82.7   82.8   82.6   82.5   82.4   82.2   82.5   82.5 |  82.1   82.7   82.5   82.4 |   82.4 
+  1997           |  82.4   82.6   82.5   82.6   82.4   82.3   82.6   82.8   82.7   83.0   83.3   83.4 |  82.5   82.4   82.7   83.2 |   82.7 
+ -------------------------------------------------------------------------------------------------------------------------------------------
+ <1> Quarterly percent changes are at annual rates.  Annual percentage changes are calculated from annual averages.
+ <2> Annual averages of industrial production are calculated from not seasonally adjusted indexes.
+ 
+ 
+ 
+ Table 5B
+ INDUSTRIAL PRODUCTION, CAPACITY AND UTILIZATION FOR MANUFACTURING:  HISTORICAL DATA
+ 
+ 
+ -------------------------------------------------------------------------------------------------------------------------------------------
+                 |                                                                                    |                            |
+                 |   Jan.   Feb.   Mar.   Apr.    May   June   July   Aug.  Sept.   Oct.   Nov.   Dec.|     Q1     Q2     Q3     Q4|  Annual
+ -------------------------------------------------------------------------------------------------------------------------------------------
+                 |                                                                                    |                            |
+ Industrial      |                                                                                    |                            |
+ Production,     |                                                                                    |                            |
+ Percent         |                                                                                    |                            |
+ Change <1>      |                                                                                    |                            |
+  1985           |    .1     .6     .7     .2     .5    -.3    -.4     .9     .4    -.8    1.1    -.1 |   2.1    4.2    1.1    1.6 |    2.3 
+  1986           |   1.5    -.5    -.9    1.4    -.1    -.3     .3     .6     .0     .8     .4    1.2 |   4.5    1.7    1.7    6.7 |    2.8 
+                 |                                                                                    |                            |
+  1987           |   -.8    1.6     .2     .5     .3    1.0     .7    -.2     .1    1.3     .5     .6 |   5.0    7.0    5.5    7.6 |    5.3 
+  1988           |   -.2     .4    -.1    1.0    -.1     .0     .7     .3     .2     .2     .9     .6 |   2.3    4.1    3.7    5.2 |    4.7 
+  1989           |    .9   -1.2     .8     .1    -.7     .0   -1.1     .3    -.3    -.6     .4     .1 |   4.3    -.7   -4.5   -1.4 |    1.9 
+  1990           |   -.2     .9     .3    -.8     .4    -.1     .0     .3    -.1    -.6   -1.3    -.6 |   2.9    -.1     .8   -6.3 |    -.5 
+  1991           |   -.9    -.7   -1.1     .3     .7    1.4     .2     .2    1.1    -.1    -.2    -.5 |  -9.7    1.2    7.8    1.7 |   -2.4 
+                 |                                                                                    |                            |
+  1992           |    .4     .7     .8     .7     .4    -.1     .6    -.3     .4     .7     .6    -.1 |   2.8    7.0    2.4    5.0 |    4.0 
+  1993           |   1.0     .2     .1     .6    -.5     .0     .4    -.3    1.1     .2     .5     .9 |   5.0    1.6    1.6    6.2 |    3.8 
+  1994           |    .1     .6     .8     .8     .8     .2     .7     .4     .3     .9     .9    1.0 |   6.3    8.8    6.2    9.0 |    6.0 
+  1995           |    .6    -.2     .2     .0     .2     .4    -.2     .9     .7    -.4     .0    -.1 |   6.4    1.4    3.9    1.5 |    5.4 
+  1996           |   -.1    1.2    -.6    1.4     .6     .6     .4     .2     .3     .0     .8     .5 |   1.5    8.1    4.9    4.2 |    3.6 
+  1997           |    .3     .7     .4     .4     .2     .3     .6     .7     .1     .7    1.2     .5 |   6.2    4.9    6.1    8.3 |    5.7 
+                 |                                                                                    |                            |
+ Industrial      |                                                                                    |                            |
+ Production <2>  |                                                                                    |                            |
+  1985           |  84.4   84.9   85.4   85.6   86.0   85.7   85.4   86.1   86.4   85.7   86.7   86.6 |  84.9   85.8   86.0   86.3 |   85.7 
+  1986           |  87.9   87.4   86.6   87.8   87.7   87.5   87.7   88.2   88.2   88.9   89.3   90.3 |  87.3   87.7   88.0   89.5 |   88.1 
+                 |                                                                                    |                            |
+  1987           |  89.6   91.0   91.2   91.6   91.9   92.8   93.4   93.3   93.4   94.6   95.1   95.6 |  90.6   92.1   93.4   95.1 |   92.8 
+  1988           |  95.4   95.8   95.7   96.7   96.6   96.6   97.3   97.5   97.7   97.9   98.9   99.4 |  95.6   96.6   97.5   98.7 |   97.1 
+  1989           | 100.3   99.1   99.9  100.0   99.4   99.4   98.3   98.7   98.4   97.8   98.2   98.3 |  99.8   99.6   98.5   98.1 |   99.0 
+  1990           |  98.1   99.0   99.3   98.6   99.0   98.9   98.8   99.1   99.0   98.4   97.2   96.6 |  98.8   98.8   99.0   97.4 |   98.5 
+  1991           |  95.8   95.1   94.1   94.4   95.0   96.3   96.6   96.8   97.8   97.8   97.6   97.1 |  95.0   95.2   97.0   97.5 |   96.2 
+                 |                                                                                    |                            |
+  1992           |  97.4   98.1   98.9   99.6  100.0   99.8  100.5  100.2  100.6  101.3  101.9  101.7 |  98.1   99.8  100.4  101.6 |  100.0 
+  1993           | 102.7  102.9  103.0  103.6  103.1  103.1  103.5  103.2  104.4  104.6  105.2  106.0 | 102.9  103.3  103.7  105.3 |  103.8 
+  1994           | 106.2  106.8  107.7  108.5  109.4  109.6  110.4  110.9  111.2  112.2  113.2  114.3 | 106.9  109.2  110.8  113.2 |  110.0 
+  1995           | 115.1  114.9  115.1  115.1  115.3  115.8  115.5  116.6  117.5  117.0  117.0  116.9 | 115.0  115.4  116.5  116.9 |  116.0 
+  1996           | 116.7  118.1  117.4  119.0  119.7  120.4  120.9  121.1  121.5  121.5  122.5  123.1 | 117.4  119.7  121.1  122.4 |  120.2 
+  1997           | 123.5  124.4  124.9  125.4  125.7  126.1  126.9  127.9  128.0  128.9  130.5  131.1 | 124.2  125.7  127.6  130.2 |  127.0 
+                 |                                                                                    |                            |
+ Capacity        |                                                                                    |                            |
+  1985           | 107.0  107.3  107.6  108.0  108.3  108.7  109.0  109.3  109.7  110.0  110.4  110.7 | 107.3  108.3  109.3  110.4 |  108.8 
+  1986           | 111.0  111.2  111.4  111.6  111.7  111.9  112.1  112.3  112.5  112.7  112.9  113.0 | 111.2  111.7  112.3  112.9 |  112.0 
+                 |                                                                                    |                            |
+  1987           | 113.2  113.4  113.6  113.8  113.9  114.1  114.2  114.4  114.6  114.7  114.9  115.0 | 113.4  113.9  114.4  114.9 |  114.1 
+  1988           | 115.2  115.3  115.4  115.6  115.7  115.8  116.0  116.1  116.3  116.5  116.6  116.8 | 115.3  115.7  116.1  116.6 |  115.9 
+  1989           | 117.0  117.3  117.5  117.8  118.0  118.3  118.5  118.7  119.0  119.2  119.5  119.7 | 117.3  118.0  118.7  119.5 |  118.4 
+  1990           | 119.9  120.1  120.3  120.5  120.7  120.9  121.1  121.3  121.5  121.7  122.0  122.2 | 120.1  120.7  121.3  122.0 |  121.0 
+  1991           | 122.4  122.6  122.8  123.0  123.1  123.3  123.5  123.7  123.8  124.0  124.2  124.3 | 122.6  123.1  123.7  124.2 |  123.4 
+                 |                                                                                    |                            |
+  1992           | 124.6  124.8  125.1  125.3  125.6  125.8  126.1  126.3  126.6  126.8  127.0  127.3 | 124.8  125.6  126.3  127.0 |  125.9 
+  1993           | 127.6  127.8  128.1  128.3  128.6  128.9  129.1  129.4  129.7  129.9  130.2  130.5 | 127.8  128.6  129.4  130.2 |  129.0 
+  1994           | 130.9  131.3  131.8  132.2  132.7  133.2  133.6  134.1  134.6  135.1  135.5  136.0 | 131.3  132.7  134.1  135.5 |  133.4 
+  1995           | 136.6  137.2  137.8  138.5  139.1  139.8  140.4  141.1  141.7  142.4  143.0  143.7 | 137.2  139.2  141.1  143.0 |  140.1 
+  1996           | 144.3  144.9  145.6  146.2  146.8  147.4  148.0  148.6  149.2  149.8  150.4  151.0 | 144.9  146.8  148.6  150.4 |  147.7 
+  1997           | 151.6  152.3  152.9  153.6  154.3  155.0  155.7  156.3  157.0  157.6  158.3  159.0 | 152.3  154.3  156.3  158.3 |  155.3 
+                 |                                                                                    |                            |
+ Utilization     |                                                                                    |                            |
+  1985           |  78.9   79.1   79.3   79.2   79.4   78.9   78.3   78.8   78.8   77.9   78.5   78.2 |  79.1   79.2   78.6   78.2 |   78.8 
+  1986           |  79.1   78.6   77.8   78.7   78.5   78.1   78.2   78.6   78.4   78.9   79.1   79.9 |  78.5   78.5   78.4   79.3 |   78.7 
+                 |                                                                                    |                            |
+  1987           |  79.1   80.2   80.3   80.6   80.7   81.4   81.8   81.5   81.5   82.5   82.8   83.1 |  79.9   80.9   81.6   82.8 |   81.3 
+  1988           |  82.9   83.1   82.9   83.7   83.5   83.4   83.8   84.0   84.0   84.1   84.8   85.1 |  83.0   83.5   83.9   84.7 |   83.8 
+  1989           |  85.7   84.5   85.0   85.0   84.2   84.1   83.0   83.1   82.7   82.1   82.2   82.1 |  85.1   84.4   82.9   82.1 |   83.6 
+  1990           |  81.8   82.5   82.6   81.8   82.0   81.8   81.6   81.7   81.5   80.9   79.7   79.0 |  82.3   81.9   81.6   79.9 |   81.4 
+  1991           |  78.2   77.5   76.6   76.8   77.1   78.1   78.2   78.2   79.0   78.9   78.6   78.1 |  77.5   77.3   78.5   78.5 |   77.9 
+                 |                                                                                    |                            |
+  1992           |  78.2   78.6   79.1   79.5   79.6   79.4   79.7   79.3   79.5   79.9   80.2   79.9 |  78.6   79.5   79.5   80.0 |   79.4 
+  1993           |  80.5   80.5   80.4   80.7   80.2   80.0   80.2   79.8   80.5   80.5   80.8   81.3 |  80.5   80.3   80.1   80.8 |   80.5 
+  1994           |  81.1   81.3   81.7   82.1   82.4   82.3   82.6   82.7   82.6   83.0   83.5   84.1 |  81.4   82.3   82.6   83.5 |   82.5 
+  1995           |  84.3   83.7   83.5   83.1   82.9   82.8   82.3   82.6   82.9   82.2   81.8   81.3 |  83.8   82.9   82.6   81.8 |   82.8 
+  1996           |  80.8   81.5   80.6   81.4   81.6   81.7   81.7   81.5   81.4   81.1   81.5   81.5 |  81.0   81.6   81.5   81.4 |   81.4 
+  1997           |  81.4   81.7   81.6   81.6   81.4   81.3   81.5   81.8   81.6   81.8   82.4   82.5 |  81.6   81.5   81.6   82.2 |   81.7 
+ -------------------------------------------------------------------------------------------------------------------------------------------
+ <1> Quarterly percent changes are at annual rates.  Annual percentage changes are calculated from annual averages.
+ <2> Annual averages of industrial production are calculated from not seasonally adjusted indexes.
+ 
+ 
+ 
+ Table 6
+ INDUSTRIAL PRODUCTION: INDUSTRY SUBTOTALS AND INDIVIDUAL SERIES
+                                                     |        |                                  Index, 1992 = 100
+                                                     |  1996  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |      IP|  1997                                    |  1997                                    
+                                                     |Proporti|  June   July   Aug.  Sept.   Oct.   Nov. |  June   July   Aug.  Sept.   Oct.   Nov. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |        |                                          |
+     Metal mining   10                               |    .44 | 109.9  105.2  106.0  105.3  111.1  113.7 | 113.1  106.5  107.8  108.3  109.7  111.9 
+        Iron ore   101                               |    .06 | 112.4  100.2  111.7  111.5  121.8  113.1 | 116.0  107.8  120.0  120.4  120.4  117.7 
+        Nonferrous ores   102-4,8,9                  |    .38 | 109.5  106.0  105.1  104.4  109.4  113.7 | 112.7  106.4  106.0  106.6  108.2  111.1 
+           Copper   102                              |    .14 | 118.3  112.8  110.8  105.6  108.2  118.6 | 124.1  112.9  112.4  107.6  108.9  115.5 
+                                                     |        |                                          |
+     Coal mining   12                                |    .87 | 107.4  112.1  107.7  109.5  109.6  111.2 | 106.5  104.0  111.3  112.1  111.6  110.0 
+                                                     |        |                                          |
+     Oil and gas extraction   13                     |   4.51 | 102.9  103.9  104.1  104.3  103.4  102.4 | 102.3  103.0  103.1  103.7  103.2  104.3 
+        Crude oil and natural gas   131              |   3.50 |  95.2   96.2   96.3   96.5   96.1   95.1 |  94.4   94.6   94.8   95.3   95.3   96.8 
+           Crude oil, total                          |   1.88 |  87.3   88.4   87.2   87.9   86.9   87.1 |  86.9   86.6   86.0   87.1   87.3   87.8 
+           Natural gas                               |   1.61 | 106.0  107.1  108.8  108.5  108.9        | 104.8  105.6  107.0  106.8  106.3        
+        Natural gas liquids   132                    |    .24 | 109.4  110.3  109.9  110.3  107.6  110.2 | 109.6  110.5  110.2  111.6  109.3  111.5 
+        Oil and gas well drilling   138              |    .77 | 150.9  152.1  153.2  153.1  149.7  147.0 | 151.1  155.5  155.3  155.8  152.7  151.0 
+                                                     |        |                                          |
+     Stone and earth minerals   14                   |    .60 | 120.9  117.8  119.9  117.7  117.5  117.6 | 139.7  135.9  140.3  137.3  137.8  117.7 
+                                                     |        |                                          |
+     Foods   20                                      |   9.41 | 108.8  110.0  108.9  108.6  109.3  111.0 | 111.3  112.5  115.8  116.9  114.8  110.8 
+        Meat products   201                          |   1.34 | 112.6  114.4  114.4  112.1  114.4  115.3 | 116.6  110.9  117.3  114.7  120.1  114.2 
+           Beef                                      |    .45 | 108.1  112.5  113.2  106.6  112.9  112.4 | 116.3  113.2  118.6  111.1  115.5  107.9 
+           Pork                                      |    .28 |  99.3  101.8  100.2  102.7  102.9  102.8 |  95.6   90.7   96.4  104.0  110.8  109.7 
+           Poultry                                   |    .60 | 126.5  126.0  126.5  124.8  125.2  127.8 | 130.8  122.5  130.3  125.6  131.5  124.0 
+           Miscellaneous meats                       |    .02 |  93.8   90.8   89.4   91.9   88.1   89.7 |  91.3   83.4   85.5   90.8   88.7   89.7 
+        Dairy products   202                         |    .81 | 104.0  106.1  105.4  104.9  104.0  104.7 | 113.3  107.1  101.8   98.7   96.9   96.2 
+           Butter   2021                             |    .01 |  84.9   91.1   85.9   86.3   76.0   91.2 |  75.9   69.8   63.8   70.8   70.8   83.4 
+           Cheese   2022                             |    .20 | 114.0  117.7  114.6  114.6  113.6  112.5 | 118.2  112.2  109.6  114.1  113.0  113.0 
+           Concentrated milk   2023                  |    .13 |  90.7   97.6   96.5   96.7   88.1   90.3 | 102.4   93.1   80.4   74.8   73.3   75.6 
+           Frozen desserts   2024                    |    .13 | 110.1  105.3  106.2  106.9  114.1  115.7 | 140.5  130.8  122.6  106.6   98.2   88.9 
+           Milk and misc. dairy products   2026      |    .34 | 104.0  105.2  105.5  103.9  104.2  104.3 | 107.7  104.1  102.2  100.6  100.6  100.7 
+                                                     |        |                                          |
+        Canned and frozen food   203                 |   1.26 | 102.7  104.7   98.2   98.4   96.9   99.8 | 100.2  107.0  115.1  121.4  108.9  100.3 
+        Grain mill products   204                    |   1.42 | 118.2  119.7  117.8  119.1  117.3  119.9 | 117.0  119.2  120.5  124.4  122.2  122.6 
+        Bakery products   205                        |   1.03 | 101.6  105.6  103.1  102.1  104.5  105.7 | 106.4  115.1  114.7  114.5  108.2  103.0 
+        Sugar and confectionery   206                |    .63 | 107.0  102.8  106.0  105.7  107.8  109.1 |  95.7   91.8  103.7  113.4  126.4  127.3 
+        Fats and oils   207                          |    .24 |  98.0   97.7   97.4   98.0  105.3  105.7 |  94.4   88.8   91.5   95.3  109.9  113.1 
+        Beverages   208                              |   1.67 | 110.6  110.3  111.9  112.8  113.4  115.4 | 120.0  120.3  123.3  121.5  117.4  110.8 
+           Beer and ale   2082,3                     |    .55 | 106.4  102.4  102.4   98.3               | 121.2  114.0  108.9   93.3               
+           Soft drinks   2086,7                      |    .92 | 117.2  119.3  122.0  126.4  129.9  129.3 | 125.2  134.2  139.6  145.8  135.6  123.7 
+        Coffee and miscellaneous   209               |   1.02 | 113.1  114.5  113.5  112.7  114.5  115.8 | 115.5  122.3  124.5  123.6  119.0  115.0 
+           Roasted coffee   2095                     |    .13 |  87.2   88.0   85.4   84.0   81.1        |  76.8   81.1   86.0   78.6   86.6        
+                                                     |        |                                          |
+     Tobacco products   21                           |   1.29 | 109.0  110.5  112.5  112.0  113.6  111.9 | 124.0   94.3  123.7  115.0  124.1  110.1 
+                                                     |        |                                          |
+     Textile mill products   22                      |   1.56 | 109.1  110.7  110.7  111.4  111.7  112.9 | 115.2  107.6  114.6  114.0  117.3  110.1 
+        Fabrics   221-4                              |    .39 | 108.3  114.3  108.0  111.8  114.4  111.8 | 109.5  105.9  109.8  109.3  117.2  110.6 
+           Cotton and synthetic   221,2              |    .32 | 106.0  112.6  105.0  109.6  112.7        | 105.9  103.6  108.6  108.6  118.2        
+           Narrow fabrics   224                      |    .04 | 110.1  110.8  109.6  109.2  110.8  111.5 | 113.7  104.9  111.5  111.8  110.5  111.6 
+        Knit goods   225                             |    .42 | 108.8  111.6  112.7  112.4  113.0  111.6 | 122.2  113.4  121.2  121.5  122.2  108.5 
+           Knit garments   2253,4,7-9                |    .31 | 110.3  114.3  114.0  113.0  114.1  112.5 | 121.6  119.2  130.7  127.1  118.8  107.3 
+           Fabric finishing   226                    |    .15 |  90.8   95.3   86.3   87.6   92.2   92.6 |  89.6   86.7   90.9   86.4   95.6   94.9 
+        Carpeting   227                              |    .20 | 114.3  101.0  117.6  108.7  107.2  123.6 | 124.8  107.1  118.0  113.3  120.8  110.5 
+        Yarns and miscellaneous   228,9              |    .40 | 115.3  117.4  118.1  121.2  118.0  118.6 | 119.2  111.8  120.2  122.4  119.5  117.6 
+           Cotton and synthetic yarns   2281,2,4     |    .19 | 110.2  113.5  114.0  120.2  113.6  118.3 | 115.1  105.8  117.1  120.0  115.6  114.2 
+                                                     |        |                                          |
+     Apparel products   23                           |   1.89 |  99.6   99.7   99.1   99.1   99.3   98.8 | 102.2   97.5  102.1  102.2  101.1   99.3 
+                                                     |        |                                          |
+     Lumber and products   24                        |   2.09 | 117.0  116.1  115.4  113.3  112.5  115.2 | 120.7  114.3  119.6  118.7  119.0  113.4 
+        Logging and lumber   241,2                   |    .82 | 110.4  108.3  109.5  106.4  104.2  108.7 | 114.9  107.4  113.8  113.8  112.1  105.5 
+           Logging   241                             |    .29 |  93.4   93.3   91.9   93.0   93.7   95.2 |  96.1   98.1  101.4  102.3  100.7   96.6 
+        Lumber products   243-5,9                    |   1.27 | 122.1  122.0  120.0  118.6  118.8  120.1 | 125.2  119.7  124.2  122.6  124.3  119.3 
+           Millwork and plywood   243                |    .68 | 117.9  118.2  116.0  117.0  117.7  119.4 | 121.2  119.2  120.4  120.5  120.9  120.3 
+              Plywood   2435,6                       |    .16 | 105.9  104.5  100.2  102.6  101.1  101.8 | 108.9  102.2  103.8  105.9  104.7   98.7 
+           Manufactured homes   245                  |    .22 | 139.1  143.5  139.5  137.2  136.9  138.1 | 151.2  128.9  153.1  145.9  152.8  134.6 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> The IP proportion data are estimates of the industries' relative contributions to overall IP growth in the following year.
+ Note:  Estimates for September to November are revised.
+ 
+ 
+ 
+ Table 6 (continued)
+ INDUSTRIAL PRODUCTION: INDUSTRY SUBTOTALS AND INDIVIDUAL SERIES
+                                                     |        |                                  Index, 1992 = 100
+                                                     |  1996  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |      IP|  1997                                    |  1997                                    
+                                                     |Proporti|  June   July   Aug.  Sept.   Oct.   Nov. |  June   July   Aug.  Sept.   Oct.   Nov. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |        |                                          |
+     Furniture and fixtures   25                     |   1.37 | 123.5  124.2  121.1  122.0  122.6  124.5 | 124.5  122.4  129.8  129.0  124.0  123.3 
+        Household furniture   251                    |    .63 | 120.6  121.6  117.7  118.7  119.3  121.7 | 121.3  114.8  124.1  124.3  120.8  120.0 
+                                                     |        |                                          |
+     Paper and products   26                         |   3.48 | 111.7  114.2  114.4  113.7  114.0  116.3 | 113.3  113.0  115.4  113.4  115.7  115.1 
+        Pulp and paper   261-3                       |   1.60 | 110.6  113.3  114.5  113.8  115.6  116.5 | 112.2  112.6  115.1  113.2  115.2  115.9 
+           Wood pulp   261                           |    .14 | 100.2  101.6  104.7  103.3  105.1  106.7 | 101.0  104.2  104.3  102.8  105.3  105.3 
+           Paper   262                               |    .95 | 109.6  111.2  111.1  110.9  112.3  113.1 | 110.2  110.1  112.3  109.7  112.1  113.7 
+           Paperboard   263                          |    .51 | 115.6  120.9  124.0  122.6  125.0  126.1 | 119.3  119.8  123.7  123.0  124.1  123.1 
+        Paper products   265,7                       |   1.88 | 112.4  114.8  114.1  113.4  112.5  115.8 | 113.9  113.0  115.4  113.3  115.8  114.3 
+           Paperboard containers   265               |    .66 | 119.0  117.2  118.9  118.9  112.8  122.9 | 122.3  115.9  120.0  120.2  124.5  116.8 
+           Converted paper products   267            |   1.22 | 109.0  113.4  111.6  110.5  112.2  112.2 | 109.4  111.2  112.7  109.6  111.2  112.7 
+                                                     |        |                                          |
+     Printing and publishing   27                    |   6.49 | 104.1  104.1  104.4  105.1  106.7  107.4 | 105.3  108.3  111.0  111.5  109.4  107.3 
+        Newspapers   271                             |   1.50 |  95.9   95.1   95.5   96.7   98.4   98.5 |  94.3   92.4   90.7   97.3  105.3  105.0 
+        Periodicals, books, and cards   272,3,7      |   2.04 | 111.0  111.5  111.5  112.0  113.3  113.7 | 110.4  111.4  112.5  112.0  111.0  112.7 
+        Job printing   274-6,8,9                     |   2.95 | 103.9  104.1  104.6  105.1  106.8  108.1 | 107.8  115.1  121.1  118.9  110.5  104.7 
+                                                     |        |                                          |
+     Chemicals and products   28                     |   9.97 | 114.6  114.3  114.5  115.6  116.1  115.8 | 117.6  118.6  119.8  121.7  117.6  112.6 
+        Industrial chemicals and                     |        |                                          |
+           synthetic materials   281,2,6             |   3.81 | 111.1  112.2  111.1  113.3  112.0  111.8 | 111.9  111.0  110.5  114.2  112.0  110.7 
+           Basic chemicals   281                     |    .79 |  91.9   90.0   89.2   92.0   90.5   89.5 |  93.4   87.5   89.7   94.1   92.4   91.7 
+              Alkalies and chlorine   2812           |    .07 | 115.5  118.6  117.2  118.9  117.5        | 117.3  118.4  119.4  118.8  117.7        
+              Inorganic pigments   2816              |    .08 |  92.9  104.7   91.4  107.2  103.3   90.0 |  96.2  101.5   90.8  105.5   98.1   88.3 
+              Inorganic chemicals, nec   2819        |    .50 |  85.6   80.4   81.4   83.0   81.4   81.8 |  87.3   77.4   81.6   85.9   85.0   84.8 
+                 Acids and other                     |    .35 | 100.0   99.4   99.2   99.3   99.6   99.7 | 102.7   94.8   99.7  103.8  105.2  104.4 
+                                                     |        |                                          |
+           Synthetic materials   282                 |   1.39 | 119.0  123.9  121.1  125.8  123.4  123.1 | 121.0  121.6  119.6  125.9  124.6  121.1 
+              Plastics materials   2821              |    .90 | 127.6  131.6  128.8  131.5  128.8        | 129.4  128.9  126.5  131.9  130.2        
+              Synthetic fibers   2823,4              |    .36 | 102.7  111.1  105.3  110.0  108.6  104.1 | 104.5  109.4  103.9  110.2  110.8  103.0 
+           Industrial organic chemicals   286        |   1.63 | 116.3  116.2  116.1  116.0  115.8  116.0 | 115.9  116.5  115.8  116.8  113.5  113.8 
+                                                     |        |                                          |
+        Chemical products   283-5,9                  |   5.54 | 118.1  116.8  118.2  118.4  120.2  119.9 | 123.4  126.0  128.7  129.3  123.1  114.4 
+           Drugs and medicines   283                 |   2.96 | 119.2  116.7  120.0  119.3  123.6  123.7 | 125.7  128.2  132.6  133.5  127.2  118.4 
+           Soap and toiletries   284                 |   1.54 | 118.5  118.2  118.0  119.3  117.8  117.4 | 121.0  126.2  128.3  129.5  119.9  111.8 
+           Paints   285                              |    .44 | 104.6  103.9  104.2  104.4  104.7  104.3 | 120.3  109.4  110.5  107.6  109.9   94.8 
+        Agricultural chemicals   287                 |    .62 | 104.7  105.2  103.8  104.4  104.8  105.2 | 102.8  102.2  101.2  103.5  105.6  107.3 
+                                                     |        |                                          |
+     Petroleum products   29                         |   1.83 | 111.3  108.9  109.7  110.1  111.2  108.8 | 115.9  113.4  114.4  114.3  111.7  110.3 
+        Petroleum refining and misc.   291,9         |   1.65 | 110.5  108.0  109.3  109.5  110.7  108.2 | 114.6  111.9  112.9  112.7  109.8  108.8 
+           Miscellaneous petroleum products          |    .36 | 110.6  108.9  108.6  109.5  111.4  112.7 | 124.6  123.4  123.8  119.4  110.7  103.1 
+           Distillate fuel oil                       |    .30 | 118.0  114.4  116.0  112.9  115.5  111.7 | 118.3  113.1  115.3  116.1  118.6  118.7 
+           Residual fuel oil                         |    .06 |  84.2   76.1   71.8   77.5   81.9   86.7 |  81.4   72.3   72.1   77.1   77.1   88.6 
+           Aviation fuel and kerosene                |    .15 | 114.0  114.2  115.0  114.4  111.5  112.8 | 112.6  115.9  114.2  115.1  110.8  115.0 
+           Automotive gasoline                       |    .78 | 109.0  106.6  109.1  109.9  110.7  105.3 | 111.8  108.7  110.3  111.1  109.1  108.6 
+        Paving and roofing materials   295           |    .18 | 116.5  114.6  110.5  112.6  112.6  112.5 | 125.1  124.9  125.6  127.1  126.8  122.6 
+                                                     |        |                                          |
+     Rubber and plastics products   30               |   3.68 | 125.6  126.0  127.9  127.6  127.4  129.7 | 127.7  121.8  129.2  129.3  129.4  129.7 
+        Tires      301                               |    .33 | 123.9  125.5  131.5  125.1  118.7  129.1 | 128.9  107.6  132.3  125.3  127.2  123.9 
+        Other rubber products   302,5,6              |    .64 | 121.8  122.8  123.7  124.4  126.1  127.0 | 125.4  123.6  130.6  129.9  128.7  124.8 
+        Plastics products, nec   308                 |   2.70 | 127.0  127.0  128.7  128.8  129.0  130.6 | 128.3  123.3  128.6  129.8  129.9  131.8 
+                                                     |        |                                          |
+     Leather and products   31                       |    .19 |  74.0   74.0   71.2   70.9   72.4   70.8 |  76.1   69.8   72.4   72.7   73.5   71.8 
+        Shoes   314                                  |    .08 |  71.7   71.3   69.9   69.2   70.0   67.0 |  73.8   67.6   71.7   70.5   71.2   67.7 
+                                                     |        |                                          |
+     Stone, clay, and glass products   32            |   2.20 | 120.0  120.9  120.5  121.2  121.5  123.2 | 124.3  121.8  125.2  125.4  126.0  123.0 
+        Pressed and blown glass   322                |    .30 | 100.3  103.2  101.8  105.7  103.0  107.2 | 104.3  104.8  105.3  106.0  105.9  105.3 
+           Glass containers   3221                   |    .12 |  72.2   74.2   75.7   79.5   74.9   80.4 |  79.0   77.7   78.2   77.0   77.2   76.2 
+        Cement   324                                 |    .18 | 121.6  125.6  121.3  127.0  124.9        | 147.1  143.7  148.7  150.0  151.9        
+                                                     |        |                                          |
+        Structural clay products   325               |    .10 | 133.6  132.6  132.5  131.5  130.5  131.5 | 143.8  125.1  136.1  133.7  133.7  130.0 
+        Concrete and miscellaneous   326-9           |   1.31 | 124.6  124.3  125.1  124.2  124.9  126.3 | 126.5  123.7  127.3  127.2  127.4  127.5 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> The IP proportion data are estimates of the industries' relative contributions to overall IP growth in the following year.
+ Note:  Estimates for September to November are revised.
+ 
+ 
+ 
+ Table 6 (continued)
+ INDUSTRIAL PRODUCTION: INDUSTRY SUBTOTALS AND INDIVIDUAL SERIES
+                                                     |        |                                  Index, 1992 = 100
+                                                     |  1996  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |      IP|  1997                                    |  1997                                    
+                                                     |Proporti|  June   July   Aug.  Sept.   Oct.   Nov. |  June   July   Aug.  Sept.   Oct.   Nov. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |        |                                          |
+     Primary metals   33                             |   3.40 | 124.9  125.2  125.5  125.9  127.4  128.5 | 125.2  119.7  122.7  127.3  127.7  127.7 
+        Iron and steel   331,2                       |   1.84 | 122.6  122.2  121.8  124.5  126.5  127.9 | 122.8  117.7  118.3  125.6  127.0  126.6 
+           Basic steel and mill products   331       |   1.41 | 123.7  124.2  123.5  126.9  130.3  131.5 | 124.3  120.2  120.3  127.3  129.8  128.7 
+              Basic iron and steel                   |    .29 | 106.7  105.9  106.1  111.0  109.6  111.7 | 107.0  103.4  103.8  110.0  108.5  111.8 
+                 Pig iron                            |    .16 | 104.6  102.8  103.3  109.9  108.0  110.1 | 104.9  100.8  101.3  108.5  106.3  111.1 
+                 Raw steel                           |    .09 | 114.9  115.5  116.1  119.2  117.7  120.9 | 115.1  110.6  112.2  118.1  117.2  119.4 
+                                                     |        |                                          |
+              Steel mill products                    |   1.13 | 128.6  129.5  128.6  131.6  136.4  137.3 | 129.4  125.2  125.1  132.4  136.1  133.6 
+                 Consumer durable steel              |    .19 | 127.4  128.4  125.8  135.0  148.7  138.3 | 128.1  102.9  122.5  137.7  149.9  138.3 
+                 Equipment steel                     |    .12 | 134.8  129.2  126.8  127.4  137.9  131.9 | 133.8  122.5  122.3  129.6  131.9  130.6 
+                 Construction steel                  |    .13 | 154.5  148.0  147.9  147.1  162.4  159.4 | 154.2  150.1  148.0  152.9  166.4  163.9 
+                 Can and closure steel               |    .04 | 111.5  101.8  108.0  112.9  121.6  103.9 | 111.7  103.0  109.6  113.8  110.7   97.6 
+                 Miscellaneous steel                 |    .64 | 125.0  129.2  128.2  130.6  129.8  137.0 | 125.8  128.7  123.4  129.3  129.7  130.2 
+           Iron and steel foundries   332            |    .43 | 118.7  115.7  116.0  116.4  114.2  116.3 | 117.6  109.3  111.6  119.7  117.8  119.9 
+                                                     |        |                                          |
+        Nonferrous metals   333-6,9                  |   1.55 | 127.7  128.8  129.9  127.7  128.5  129.3 | 128.0  122.0  128.0  129.3  128.5  129.0 
+           Primary nonferrous metals   333           |    .26 | 108.6  109.5  111.5  105.5  109.1  110.2 | 107.1  106.7  108.5  105.6  109.7  110.7 
+              Copper   3331                          |    .08 | 126.4  138.6  138.4  133.6  132.9  135.5 | 125.1  131.1  137.6  135.9  134.5  137.9 
+              Aluminum   3334                        |    .13 |  89.4   89.3   89.5   89.1   90.0   89.8 |  89.4   89.2   88.8   88.6   89.7   89.8 
+                                                     |        |                                          |
+           Nonferrous products   335,6               |   1.04 | 125.8  127.4  128.7  128.2  128.7  129.0 | 126.9  119.4  127.8  129.9  127.9  127.7 
+              Nonferrous mill products   335         |    .75 | 119.5  122.4  122.3  121.8  122.1  122.5 | 120.8  114.4  122.0  123.6  120.9  120.0 
+                 Aluminum   3353-5                   |    .24 | 110.3  111.4  110.0  109.7  108.5  108.6 | 113.7  104.1  110.2  112.9  106.9  100.0 
+              Nonferrous foundries   336             |    .29 | 146.8  144.5  149.8  149.6  150.5  150.7 | 147.2  136.2  147.2  151.1  151.1  153.1 
+                                                     |        |                                          |
+     Fabricated metal products   34                  |   5.27 | 121.9  122.4  122.8  122.7  124.2  125.4 | 124.0  121.3  126.2  127.7  126.5  126.0 
+        Metal containers   341                       |    .17 |  99.7  105.0   95.1  102.0  102.3  101.7 | 117.8  115.2  112.6  106.5   97.0   90.8 
+        Hardware, tools, and cutlery   342           |    .56 | 118.7  120.9  122.0  121.8  124.0  122.9 | 121.3  122.7  128.5  128.9  125.7  121.9 
+           Hardware and tools   3423,5,9             |    .48 | 117.0  119.6  120.7  120.0  122.7  121.5 | 120.0  122.8  128.2  128.0  124.1  119.3 
+        Structural metal products   344              |   1.40 | 122.0  121.7  122.5  122.8  123.1  123.9 | 123.3  122.4  125.0  126.0  125.2  126.4 
+        Other fabricated metal products   345-9      |   2.92 | 124.6  125.2  126.1  124.8  127.2  129.0 | 126.3  122.1  127.5  128.5  128.4  128.7 
+           Fasteners, stampings, etc.   345-7        |   1.68 | 130.5  131.6  132.3  129.4  133.4  135.2 | 133.5  129.3  135.6  135.5  135.5  133.4 
+                                                     |        |                                          |
+     Industrial machinery                            |        |                                          |
+         and equipment   35                          |   8.66 | 168.8  172.2  175.9  173.7  176.3  177.5 | 174.5  171.5  178.5  180.8  178.7  174.4 
+        Engines and turbines   351                   |    .43 | 117.7  117.5  117.6  119.0  119.3  117.6 | 117.1  114.4  113.3  119.4  119.7  120.5 
+        Farm   352                                   |    .45 | 159.1  160.4  167.7  154.9  155.8  157.1 | 162.1  119.9  151.8  153.9  165.8  153.1 
+        Construction and allied   353                |    .91 | 151.5  148.5  162.5  154.6  156.7  158.5 | 158.3  133.6  152.7  157.9  163.3  157.5 
+        Metalworking   354                           |   1.12 | 127.8  133.5  135.4  132.7  136.2  136.1 | 130.8  138.7  146.0  142.8  136.9  131.2 
+        Special industry machinery   355             |    .91 | 149.3  150.0  150.3  150.7  151.8  152.6 | 149.1  145.2  147.6  150.8  150.8  154.2 
+        General industrial machinery   356           |   1.12 | 119.8  123.2  121.1  121.6  123.4  123.2 | 122.0  124.0  127.0  128.1  123.8  120.9 
+           Bearings and gears   3562,6,8             |    .33 | 117.1  117.1  119.9  119.8  119.9  120.9 | 116.8  112.8  118.1  120.3  120.0  121.4 
+           Equipment   3561,3-5,7,9                  |    .79 | 121.0  126.0  121.7  122.5  125.0  124.2 | 124.2  128.9  130.8  131.6  125.4  120.7 
+        Computer and office equip.   357             |   1.57 | 372.3  388.5  403.9  412.0  417.5  421.4 | 391.2  424.0  422.9  430.2  419.6  411.0 
+        Service industry machines   358              |    .88 | 131.0  129.1  134.3  123.8  124.4  129.3 | 140.1  121.9  123.6  124.0  125.1  124.7 
+           Refrig. and heating equip.   3585         |    .62 | 130.1  126.3  134.3  119.7  118.9  125.9 | 143.0  117.7  117.4  119.1  119.3  117.9 
+        Miscellaneous machinery   359                |   1.27 | 150.5  156.4  155.0  157.7  162.0  162.3 | 155.1  164.1  166.8  169.2  162.6  156.3 
+                                                     |        |                                          |
+     Electrical machinery   36                       |   8.42 | 229.7  235.5  236.8  237.5  240.8  247.0 | 231.1  231.1  238.8  242.5  243.9  249.3 
+        Major electrical and parts   361,2           |   1.02 | 121.3  120.9  119.4  119.4  122.0  123.6 | 124.5  125.9  126.8  126.7  122.5  119.9 
+           Electric distribution equip.   361        |    .35 | 120.9  119.1  117.7  119.4  120.2  120.9 | 123.3  124.8  130.0  130.8  122.4  116.5 
+        Household appliances   363                   |    .47 | 125.8  129.9  119.8  118.6  119.7  124.5 | 129.9  116.4  121.2  122.7  130.0  122.6 
+           Cooking equipment   3631                  |    .09 | 122.7  140.7  129.6  117.8  119.5  120.6 | 124.9  121.1  132.3  123.1  135.3  125.3 
+           Refrigerators and freezers   3632         |    .08 | 121.7  120.3  117.3  112.3  120.2  127.5 | 135.3  118.4  121.5  118.7  127.6  111.3 
+           Laundry   3633                            |    .09 | 138.3  152.2  111.2  115.0  127.1  127.8 | 142.1  121.0  114.1  120.0  141.5  131.1 
+           Miscellaneous   3634,5,9                  |    .22 | 123.3  120.2  119.3  121.8  116.2  123.2 | 124.8  111.6  118.7  124.3  123.9  121.8 
+              Electrical housewares   3634           |    .05 | 110.9  105.5  109.3  104.7  106.8  104.6 | 111.9  101.4  108.0  112.3  116.2  113.4 
+              Appliances, nec   3639                 |    .11 | 151.1  147.8  143.9  152.4  137.8  154.8 | 154.2  126.5  138.5  149.3  153.4  153.5 
+                                                     |        |                                          |
+        Audio and video equipment   365              |    .18 |  91.9  103.5  101.0   98.5   99.9   99.2 |  89.6   89.7  112.2  111.4  118.2  112.6 
+        Communication equipment   366                |   2.00 | 175.4  178.3  177.2  180.8  181.3  183.5 | 173.9  175.1  176.5  181.6  182.2  187.7 
+        Electronic components   367                  |   3.41 | 465.2  483.6  494.6  498.5  510.0  528.7 | 466.3  474.4  493.1  500.9  512.1  535.5 
+           Semiconductors   3672-9                   |   3.35 | 480.5  499.0  511.3  515.5  527.6  547.1 | 482.4  490.1  507.4  517.0  526.9  552.5 
+        Misc. electrical supplies   369              |    .67 | 120.7  120.9  123.4  122.2  119.6  126.5 | 120.9  115.5  123.9  129.3  123.5  130.6 
+           Storage batteries   3691                  |    .11 | 119.8  111.3  121.9  108.3  105.2  128.9 | 118.3  105.3  125.6  145.6  118.6  136.9 
+                                                     |        |                                          |
+     Transportation equipment   37                   |   8.62 | 113.0  112.2  117.0  118.8  118.2  122.2 | 118.4   92.8  117.5  118.8  124.2  122.3 
+        Motor vehicles and parts   371               |   5.15 | 132.5  130.0  138.9  141.2  139.6  146.9 | 142.9   92.0  141.4  141.7  152.5  146.6 
+           Autos                                     |   1.40 | 103.2  105.2  110.4  111.6  107.2  112.0 | 111.1   71.5  110.7  109.4  120.9  113.3 
+           Trucks and truck trailers                 |   1.58 | 147.1  131.5  154.8  156.0  156.6  168.4 | 157.5   93.7  154.1  162.4  174.8  168.1 
+              Trucks and buses                       |   1.51 | 147.3  131.1  154.2  156.3  156.8  168.4 | 158.1   91.9  153.5  162.6  176.0  168.3 
+                 Consumer trucks                     |    .90 | 154.2  131.9  161.2  166.5  168.6  179.7 | 164.1   86.5  156.3  172.1  189.1  178.8 
+                 Business trucks                     |    .61 | 140.0  131.8  146.7  144.7  143.0  155.4 | 149.5   98.9  149.5  149.4  157.6  153.5 
+           Motor vehicle parts   3714                |   2.12 | 147.3  151.1  151.8  155.3  155.3  160.7 | 160.1  107.8  159.1  154.1  163.4  159.7 
+           Motor homes   3716                        |    .06 | 108.2   98.2  113.7  129.9  108.0  136.1 | 105.8   97.9  105.1  124.1  121.8  116.8 
+                                                     |        |                                          |
+           transportation equipment   372-6,9        |   3.47 |  93.8   94.6   95.5   96.8   97.2   98.0 |  94.5   92.8   94.1   96.3   96.7   98.6 
+           Aircraft and parts   372                  |   2.29 |  98.4  100.0  101.5  103.7  104.5  105.9 |  99.3   98.2   99.7  103.0  104.0  106.7 
+           Ships and boats   373                     |    .40 |  87.2   85.4   83.6   83.2   84.7   83.6 |  86.6   83.6   83.2   83.5   83.7   83.5 
+           Railroad and miscellaneous   374-6,9      |    .78 |  82.3   82.0   82.4   82.1   81.0   80.9 |  82.8   80.4   81.5   81.7   80.2   80.7 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> The IP proportion data are estimates of the industries' relative contributions to overall IP growth in the following year.
+ Note:  Estimates for September to November are revised.
+ 
+ 
+ 
+ Table 6 (continued)
+ INDUSTRIAL PRODUCTION: INDUSTRY SUBTOTALS AND INDIVIDUAL SERIES
+                                                     |        |                                  Index, 1992 = 100
+                                                     |  1996  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |      IP|  1997                                    |  1997                                    
+                                                     |Proporti|  June   July   Aug.  Sept.   Oct.   Nov. |  June   July   Aug.  Sept.   Oct.   Nov. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |        |                                          |
+     Instruments   38                                |   4.76 | 107.9  108.0  109.2  108.9  109.7  110.2 | 109.5  109.4  111.4  112.1  110.0  109.5 
+        Scientific and medical   381-4               |   3.89 | 106.5  106.7  107.8  107.4  108.7  109.4 | 108.3  108.6  110.7  111.2  109.0  108.3 
+           Medical instruments   384                 |   1.45 | 109.7  110.5  112.5  111.8  114.8  113.6 | 115.0  120.0  122.9  122.7  116.4  109.4 
+                                                     |        |                                          |
+     Misc. manufactures   39                         |   1.34 | 126.0  127.0  126.7  126.1  126.5  125.2 | 126.3  121.7  127.1  129.0  130.3  129.5 
+        Consumer goods   391,3,4,6                   |    .66 | 122.9  124.4  122.8  122.2  121.8  120.8 | 121.9  116.5  122.1  124.9  126.7  127.0 
+        Business supplies   395,9                    |    .68 | 129.1  129.7  130.6  130.1  131.4  129.6 | 130.6  126.9  132.1  133.0  134.0  132.0 
+                                                     |        |                                          |
+     Electric utilities   491,3pt                    |   6.08 | 110.7  113.8  113.1  115.7  117.2  114.5 | 114.7  128.9  126.5  118.0  107.9  106.0 
+        Generation                                   |   2.43 | 110.8  112.7  112.2  115.4  115.3  113.5 | 117.5  125.8  122.5  113.1  103.7  107.0 
+           Fossil fuel                               |   1.15 | 108.8  113.1  108.7  118.3  118.5        | 114.4  132.1  126.6  120.8  111.6        
+           Hydro and nuclear                         |   1.27 | 113.0  112.5  115.8  113.0  112.5        | 120.7  120.3  119.1  106.2   96.6        
+                                                     |        |                                          |
+        Sales                                        |   3.66 | 110.6  114.7  113.8  116.0  118.6  115.2 | 113.0  131.2  129.5  121.6  111.1  105.5 
+           Residential                               |   1.56 | 108.1  116.0  115.8  116.5  120.1        | 107.0  139.9  136.8  121.3  102.1        
+           Nonresidential                            |   2.10 | 112.4  113.8  112.3  115.8  117.6  113.1 | 117.3  124.9  124.3  121.9  117.5  107.7 
+              Commercial and other                   |   1.30 | 116.1  118.7  116.0  120.4  123.6        | 121.7  135.0  131.7  128.7  122.1        
+              Industrial                             |    .80 | 107.1  106.8  107.1  109.1  108.9        | 110.8  110.0  113.5  111.9  111.0        
+                                                     |        |                                          |
+     Gas utilities   492,3pt                         |   1.60 | 111.9  113.5  112.5  112.7  114.9  114.3 |  63.3   62.0   60.0   60.0   79.8  122.1 
+        Residential                                  |    .73 | 106.5  106.7  105.4  103.0               |  40.9   33.5   30.2   33.5               
+        Commercial and other                         |    .27 | 118.7  113.4  120.1  124.9               |  62.9   58.2   59.1   61.8               
+        Gas transmission                             |    .48 | 110.9  117.6  113.6  115.4               |  86.5   93.3   91.8   87.0               
+ ---------------------------------------------------------------------------------------------------------------------------------------------------
+ <1> The IP proportion data are estimates of the industries' relative contributions to overall IP growth in the following year.
+ Note:  Estimates for September to November are revised.
+ 
+ 
+ 
+ Table 7
+ INDUSTRIAL PRODUCTION:  GROSS VALUE OF PRODUCTS
+ Billions of 1992 dollars at annual rates, seasonally adjusted
+                                      |        |        |   1996            1997                         |   1997                                         
+ Item                                 |    1992|   1997 |     Q3      Q4      Q1      Q2   Q3      Q4    |   July    Aug.   Sept.    Oct.    Nov.    Dec. 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------
+                                      |        |        |                                                |
+  Products, total                     | 2001.9 | 2383.3 | 2304.6  2317.4  2343.8  2361.5  2389.1  2427.3 | 2368.4  2402.0  2396.9  2411.6  2432.5  2437.9 
+                                      |        |        |                                                |
+     Final products                   | 1552.1 | 1862.7 | 1800.0  1805.9  1828.0  1840.7  1868.0  1899.8 | 1849.1  1879.3  1875.6  1885.8  1905.2  1908.4 
+                                      |        |        |                                                |
+        Consumer goods                | 1049.6 | 1201.0 | 1177.9  1182.5  1188.3  1190.7  1199.8  1219.1 | 1191.0  1205.2  1203.3  1211.5  1221.3  1224.5 
+           Durable                    |  238.3 |  314.1 |  308.7   302.2   309.4   305.4   311.8   322.6 |  302.0   316.5   316.9   314.7   327.7   325.4 
+              Automotive products     |  123.8 |  162.6 |  160.7   154.4   160.5   154.7   159.9   169.0 |  148.7   164.2   166.6   164.4   173.6   168.9 
+              Other durable goods     |  114.4 |  151.8 |  148.1   148.2   149.1   151.1   152.2   153.6 |  154.2   152.4   150.1   150.3   153.9   156.7 
+           Nondurable                 |  811.3 |  887.4 |  869.7   880.3   879.3   885.4   888.5   897.5 |  888.6   889.5   887.2   897.2   895.0   900.2 
+                                      |        |        |                                                |
+        Equipment, total              |  502.5 |  661.4 |  621.4   622.7   639.3   649.6   668.0   680.6 |  657.8   674.0   672.3   674.2   683.9   683.8 
+           Business and defense       |  483.9 |  634.1 |  594.9   597.2   612.3   621.8   640.3   654.0 |  629.7   646.3   644.7   647.3   657.4   657.2 
+              Business                |  399.2 |  570.1 |  529.2   531.9   547.9   557.4   576.8   590.5 |  566.2   582.7   581.4   584.0   593.9   593.4 
+              Defense and space       |   84.7 |   64.2 |   65.7    65.2    64.5    64.5    63.7    63.8 |   63.7    63.8    63.6    63.5    63.8    64.0 
+                                      |        |        |                                                |
+     Intermediate products            |  449.9 |  521.3 |  505.2   511.7   516.1   521.1   521.9   528.6 |  519.9   523.7   522.2   526.6   528.5   530.6 
+        Construction supplies         |  177.2 |  215.8 |  210.9   212.4   214.3   216.6   215.3   216.9 |  215.0   217.5   213.4   214.6   217.5   218.4 
+        Business supplies             |  272.7 |  305.2 |  294.0   299.0   301.6   304.2   306.3   311.4 |  304.6   305.8   308.6   311.7   310.7   311.8 
+           Commercial energy products |   70.4 |   81.3 |   79.2    80.8    80.3    81.9    82.2    83.1 |   81.9    81.5    83.2    84.5    82.2    82.5 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------
+ Note:  Estimates for December are preliminary.  Estimates from September to November are revised.
+ 
+ 
+ 
+ Table 8
+ DIFFUSION INDEXES OF INDUSTRIAL PRODUCTION
+ Percent
+ 
+ Year       Jan.    Feb.    Mar.    Apr.     May    June    July    Aug.   Sept.    Oct.    Nov.    Dec.
+ -------------------------------------------------------------------------------------------------------
+ 
+ One Month Earlier
+  1995     58.9    43.8    49.8    44.2    51.7    49.8    49.8    59.6    57.0    43.0    51.3    47.2 
+  1996     38.9    63.8    56.6    57.4    59.6    61.9    54.0    55.5    54.3    50.6    57.0    56.4 
+  1997     50.2    64.9    54.0    54.2    50.2    52.8    57.2    52.3    54.4    59.1    67.4 
+ 
+ Three Months Earlier
+  1995     69.8    58.9    52.1    47.5    47.5    52.5    52.5    56.2    61.5    55.5    49.4    47.9 
+  1996     43.0    53.6    54.0    69.1    66.0    67.5    62.3    60.8    56.6    58.1    55.8    58.9 
+  1997     53.2    63.0    58.9    63.0    54.7    52.8    55.1    59.3    55.9    55.3    67.4 
+ 
+ Six Months Earlier
+  1995     67.9    66.8    62.6    61.1    55.8    50.6    43.8    50.6    55.5    49.4    54.3    52.5 
+  1996     48.7    49.4    55.5    58.9    61.5    69.1    67.5    63.8    66.0    60.4    60.8    57.0 
+  1997     63.0    65.3    64.2    60.8    59.1    61.5    63.9    60.8    60.1    61.2    68.1 
+ -------------------------------------------------------------------------------------------------------
+ Note:  The diffusion indexes are calculated as the percentage of series that increased over the indicated
+        span (one, three, or six months) plus one-half the percentage that were unchanged.
+ 
+ 
+ 
+ Table 9
+ ELECTRIC POWER USE: MANUFACTURING AND MINING
+                                                     |       |                                   Index, 1992=100
+                                                     | 1992  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |Billion|  1997                                    |  1997                                    
+ Item                                                |  KWH  |  June   July   Aug.  Sept.   Oct.   Nov. |  June   July   Aug.  Sept.   Oct.   Nov. 
+ --------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |       |                                          |
+     Total                                           | 934.1 | 105.6  105.6  105.2  105.6  106.2  106.0 | 107.4  106.4  108.9  109.2  107.4  105.0 
+                                                     |       |                                          |
+ MAJOR INDUSTRY GROUPS                               |       |                                          |
+                                                     |       |                                          |
+  Manufacturing                                      | 854.0 | 105.8  105.8  105.3  105.7  106.4  106.1 | 107.8  107.0  109.5  109.7  107.7  105.1 
+     Durable                                         | 365.8 | 104.4  105.6  104.9  105.2  106.6  106.9 | 106.5  105.8  108.2  108.5  107.7  105.6 
+     Nondurable                                      | 488.3 | 107.0  106.1  105.6  106.2  106.3  105.5 | 108.8  107.9  110.5  110.6  107.8  104.7 
+  Mining                                             |  80.1 | 102.4  102.3  103.1  103.1  102.6  104.0 | 101.7   98.5  101.3  102.5  102.5  103.9 
+                                                     |       |                                          |
+ INDUSTRY GROUPS and SERIES                          |       |                                          |
+                                                     |       |                                          |
+  Metal mining   10                                  |  18.6 | 110.6  113.1  117.1  111.6  115.2  114.4 | 109.8  112.9  116.9  112.3  115.7  114.9 
+     Iron ore   101                                  |   7.3 | 112.8  114.6  121.5  108.3  114.1  114.6 | 110.8  115.6  120.2  110.5  118.6  116.9 
+     Copper ore   102                                |   6.6 | 114.0  117.3  119.1  119.0  121.7  120.7 | 114.7  117.0  120.5  120.6  121.1  120.8 
+                                                     |       |                                          |
+  Coal mining   12                                   |  12.7 | 100.4   99.8   98.8  100.8   98.1   97.1 |  94.4   82.4   90.8   94.8   94.7   98.8 
+                                                     |       |                                          |
+  Oil and gas extraction   13                        |  36.0 |  93.7   92.8   92.2   95.2   92.0   97.4 |  95.1   92.6   91.5   94.7   92.0   94.7 
+     Crude oil and natural gas   131                 |  31.0 |  93.2   92.3   90.8   94.8   90.9   97.2 |  94.6   91.8   89.6   94.1   91.2   94.6 
+     Natural gas liquids   132                       |   3.6 |  91.0   89.5   99.6   92.4   91.0   90.8 |  93.0   91.0   97.9   92.1   90.5   89.8 
+                                                     |       |                                          |
+  Stone and earth minerals   14                      |  12.8 | 112.5  111.4  112.5  111.3  114.1  112.6 | 113.9  111.3  113.9  115.5  116.6  115.2 
+     Crushed stone   142                             |   3.5 | 142.1  143.6  147.5  146.1  146.7  148.6 | 149.3  148.8  156.9  156.7  159.6  162.3 
+     Sand and gravel   144                           |   2.7 | 110.0  112.5  109.9  111.2  109.9  111.1 | 116.5  119.3  118.7  120.7  120.3  118.7 
+     Chemical and fertilizer materials   147         |   4.7 | 103.5   98.7  100.5   98.1  103.5   99.5 | 102.4   96.8   98.4   99.9  101.9   98.8 
+                                                     |       |                                          |
+  Foods      20                                      |  58.8 | 110.4  111.2  110.7  110.4  111.7  112.7 | 112.4  116.8  120.2  121.9  116.3  112.2 
+     Meat products   201                             |  10.3 | 113.5  116.2  117.4  116.8  117.6  119.1 | 119.1  126.0  129.1  129.0  120.4  116.6 
+     Dairy products   202                            |   6.8 | 101.2   99.4  101.9  100.6  102.7  102.7 | 108.9  110.1  111.9  109.7  103.4   97.8 
+     Canned and frozen food   203                    |   8.1 | 108.4  110.6  103.9  104.2  101.5  105.6 | 105.6  112.9  121.5  128.3  114.0  105.9 
+     Grain mill products   204                       |  11.4 | 124.7  122.6  124.8  123.0  123.0  121.2 | 121.8  121.2  126.1  127.3  128.7  125.2 
+     Bakery products   205                           |   3.5 | 107.6  112.1  109.6  108.7  111.4  112.9 | 112.7  122.1  121.9  121.8  115.4  110.0 
+     Sugar and confectionery   206                   |   4.0 | 111.1  111.8  109.9  106.8  106.8  104.1 | 102.5  105.6  106.3  106.5  108.8  122.5 
+     Fats and oils   207                             |   3.9 | 104.8  105.9   96.8  100.6  111.8  110.4 | 101.7   97.3   94.1   98.0  108.6  113.5 
+     Beverages   208                                 |   6.1 |  98.9  100.4  102.5  106.0  108.7  109.0 | 105.6  112.9  117.2  122.2  113.5  104.3 
+     Coffee and miscellaneous    209                 |   4.7 | 110.1  111.2  110.3  109.5  111.8  112.3 | 114.5  121.0  122.4  122.4  115.8  110.7 
+                                                     |       |                                          |
+  Tobacco products   21                              |   1.5 |  98.2   97.9   98.4  105.4  104.4  106.5 |  99.9  100.7  108.1  117.2  111.1  105.0 
+                                                     |       |                                          |
+  Textile mill products   22                         |  31.5 | 106.7  112.7  105.7  111.1  107.5  109.6 | 115.6  111.1  120.9  122.3  111.2  107.2 
+     Fabrics   221-4                                 |  11.8 | 101.0  107.4  107.3  108.8  101.5  108.6 | 109.4  107.9  120.9  119.9  105.8  105.3 
+     Knit goods   225                                |   4.1 | 103.0  106.7  106.5  105.6  106.4  104.5 | 113.6  111.4  122.2  119.0  111.0   99.8 
+     Fabric finishing   226                          |   2.5 | 131.1  133.6  123.6  127.0  130.1  126.6 | 137.7  124.3  130.1  135.9  131.0  128.1 
+     Yarn and thread   228                           |   8.3 | 103.6  103.5   96.0  104.0   98.5  100.3 | 113.1  102.9  110.0  115.6  103.6   97.3 
+     Miscellaneous textiles   229                    |   3.4 | 120.6  126.4  117.9  125.0  121.5  124.4 | 128.8  125.2  132.2  134.9  127.6  121.7 
+                                                     |       |                                          |
+  Apparel products   23                              |   8.2 |  91.7   96.3   93.2   93.6   98.0   98.1 |  99.1  105.2  110.4  108.7  100.4   93.3 
+     Men's outerwear   231,2                         |   2.0 |  85.2   88.4   86.7   87.2   89.7   89.1 |  90.8   94.6   99.4   98.3   91.7   85.9 
+     Women's outerwear   233                         |   2.5 | 115.3  120.9  119.0  119.0  122.9  120.3 | 125.8  133.3  144.2  140.1  126.3  114.1 
+                                                     |       |                                          |
+  Lumber and products   24                           |  19.8 | 122.0  123.7  121.8  121.8  120.5  119.1 | 120.9  119.1  121.3  121.3  119.9  120.2 
+     Lumber   242                                    |   7.7 | 119.6  123.3  120.4  121.0  119.7  117.5 | 118.6  115.8  118.3  119.2  118.2  119.5 
+     Millwork and plywood   243                      |   5.6 | 132.6  135.7  135.3  133.3  132.3  128.6 | 131.4  131.0  134.9  133.0  131.9  129.7 
+                                                     |       |                                          |
+  Furniture and fixtures   25                        |   6.0 | 118.0  119.0  115.3  116.4  116.8  119.2 | 118.9  116.7  123.6  123.5  118.2  117.6 
+     Household furniture   251                       |   3.2 | 112.7  113.5  109.7  110.4  110.9  114.0 | 113.3  107.1  115.6  115.7  112.3  112.4 
+                                                     |       |                                          |
+  Paper and products   26                            | 113.3 | 102.8  103.9  101.5  103.2  104.8  102.3 | 103.3  104.7  105.3  104.7  105.0  102.6 
+     Wood pulp   261                                 |   8.8 |  91.9   95.7   86.3   89.0   91.8   84.9 |  91.3   92.9   87.1   85.7   89.0   88.5 
+     Paper      262                                  |  62.3 | 103.8  104.5  101.8  102.6  103.9  102.1 | 103.9  105.1  105.5  103.8  104.1  102.5 
+     Paperboard   263                                |  28.3 | 106.7  107.6  110.4  117.4  119.1  113.0 | 107.8  109.2  113.3  117.7  118.5  112.3 
+     Paperboard containers   265                     |   5.1 | 102.9  105.5  101.8  103.3  105.0  105.7 | 104.2  107.5  108.5  108.8  107.1  105.3 
+     Converted paper products   267                  |   8.9 | 100.0  100.5   99.5  100.3  102.8  100.5 | 102.3  102.6  104.5  104.4  103.9   99.9 
+                                                     |       |                                          |
+  Printing and publishing   27                       |  17.3 | 106.4  110.0  108.9  108.9  112.1  111.4 | 110.5  121.0  124.8  122.4  115.5  107.8 
+     Newspapers   271                                |   3.6 | 101.7  106.2  104.1  103.8  105.2  103.2 | 106.6  116.8  115.6  114.3  106.8   99.6 
+     Commercial printing   275                       |   9.2 | 111.7  114.6  114.5  115.4  118.5  120.4 | 115.7  126.6  132.8  130.3  122.7  116.8 
+                                                     |       |                                          |
+  Chemicals and products   28                        | 171.7 | 106.7  101.4  103.4  103.5  101.3  100.6 | 107.1  102.5  104.7  104.9  102.2   99.9 
+     Basic chemicals   281                           |  78.9 | 100.7   91.7   94.9   96.1   91.7   92.0 | 100.2   91.2   94.2   95.9   92.6   91.5 
+        Alkalies and chlorine   2812                 |  14.9 |  83.1   81.7   80.2   79.4   80.6   80.8 |  82.8   81.9   80.4   76.9   82.1   78.9 
+        Inorganic chemicals, nec   2819              |  38.3 |  96.8   84.0   90.0   91.9   84.9   81.8 |  96.1   81.2   86.2   89.7   85.9   82.1 
+           Acid and fertilizer materials             |  14.0 | 104.8   99.4  103.7  102.0  108.3  105.2 | 102.9  100.4  105.8  102.4  106.6  105.8 
+           Nuclear materials, nondefense             |  24.3 |  92.9   76.3   83.3   86.9   73.3   70.2 |  92.7   71.7   76.5   83.5   75.7   70.3 
+ --------------------------------------------------------------------------------------------------------------------------------------------------
+ Note:  Estimates for November are preliminary.  Estimates from September to October are revised.
+ 
+ 
+ 
+ Table 9 (continued)
+ ELECTRIC POWER USE: MANUFACTURING AND MINING
+                                                     |       |                                   Index, 1992=100
+                                                     | 1992  |           Seasonally adjusted            |         Not seasonally adjusted
+                                                     |Billion|  1997                                    |  1997                                    
+ Item                                                |  KWH  |  June   July   Aug.  Sept.   Oct.   Nov. |  June   July   Aug.  Sept.   Oct.   Nov. 
+ --------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     |       |                                          |
+ Chemicals and Products (cont.)                      |       |                                          |
+     Synthetic materials   282                       |  29.2 | 111.8  112.7  112.1  109.5  109.6  108.5 | 113.6  114.9  114.9  111.6  110.2  107.1 
+        Plastics materials   2821                    |  18.3 | 125.3  128.9  128.3  129.7  132.3  135.6 | 128.0  131.2  131.4  132.5  131.4  132.8 
+     Drugs and medicines   283                       |   6.7 | 130.5  127.9  130.8  127.9  132.5  132.9 | 137.7  140.6  144.6  143.1  136.5  127.4 
+     Soap and toiletries   284                       |   3.0 | 110.7  110.4  110.2  111.4  110.1  109.7 | 113.1  117.9  119.9  121.0  112.0  104.5 
+     Industrial organic chemicals   286              |  39.2 | 116.0  115.0  121.9  119.3  123.9  120.1 | 115.0  114.7  124.4  121.7  125.7  119.2 
+     Agricultural chemicals   287                    |   9.7 | 112.7  112.9  112.7  114.0  114.1  114.0 | 112.4  112.4  112.3  112.6  113.0  114.6 
+                                                     |       |                                          |
+  Petroleum products   29                            |  47.0 | 104.3  106.2  106.2  104.1  110.3  106.5 | 105.8  108.3  109.0  108.3  109.8  106.0 
+                                                     |       |                                          |
+  Rubber and plastics products   30                  |  38.0 | 121.2  123.5  120.9  121.1  121.9  123.0 | 125.4  124.7  126.4  127.2  124.7  122.1 
+     Tires         301                               |   4.3 | 105.4  108.4  104.0  107.3  108.4  107.9 | 108.5  110.4  112.8  115.4  112.0  107.9 
+     Rubber products, nec   306                      |   3.2 | 112.6  113.4  114.8  114.6  115.9  117.1 | 115.8  114.1  121.2  120.0  118.5  114.8 
+     Plastics products, nec   308                    |  28.9 | 126.4  128.7  125.9  125.5  126.1  127.6 | 130.9  129.9  130.5  131.3  128.8  126.7 
+                                                     |       |                                          |
+  Leather and products   31                          |   1.0 |  83.4   86.8   81.3   80.8   86.9   84.6 |  87.6   87.7   88.4   87.9   86.8   82.5 
+     Shoes   314                                     |    .3 |  80.5   83.5   77.7   75.2   81.7   81.3 |  85.1   86.5   87.6   85.3   83.0   78.2 
+                                                     |       |                                          |
+  Stone, clay, & glass products   32                 |  33.8 | 109.4  109.4  108.3  108.7  107.8  108.4 | 112.0  109.8  112.2  112.2  111.5  110.6 
+     Flat glass   321                                |   1.5 | 109.4  107.3   99.7  103.5  104.6  108.8 | 111.4  108.4  102.7  107.4  106.4  108.5 
+     Pressed and blown glass   322                   |   7.3 | 102.7  105.5  101.9  105.7  102.9  107.6 | 103.6  105.2  105.4  108.0  105.6  107.7 
+     Cement   324                                    |   9.6 | 112.6  109.6  113.7  108.7  107.6  104.9 | 118.0  112.6  120.4  114.1  115.3  111.6 
+     Structural clay products   325                  |   1.4 | 105.1  106.1  102.7  104.5   99.5   98.9 | 107.5  106.8  104.8  107.6  100.8   99.7 
+     Concrete products   327                         |   4.7 | 111.0  113.6  111.6  110.7  112.6  112.5 | 113.1  113.4  114.3  114.3  115.2  114.2 
+                                                     |       |                                          |
+  Primary metals   33                                | 150.9 |  96.8   97.4   97.2   97.5   97.7   98.6 |  97.3   94.9   96.4   96.6   98.3   97.7 
+     Basic steel and mill products   331             |  57.0 | 110.7  111.2  110.5  111.3  114.2  114.3 | 111.2  106.2  109.6  109.0  113.4  112.1 
+     Iron and steel foundries   332                  |   9.9 | 112.9  110.1  110.6  111.1  109.2  111.4 | 111.8  104.0  106.4  114.3  112.7  114.9 
+     Primary nonferrous metals   333                 |  66.2 |  75.0   75.5   76.6   77.3   76.1   77.6 |  75.9   76.7   76.8   75.5   76.6   75.8 
+        Aluminum   3334                              |  60.3 |  58.6   59.7   64.6   66.4   64.4   67.5 |  63.4   63.7   63.9   63.6   64.4   63.6 
+     Nonferrous foundries   336                      |   2.7 | 116.9  120.7  126.7  121.8  122.8  125.4 | 116.2  114.6  126.6  124.9  126.0  127.7 
+                                                     |       |                                          |
+  Fabricated metal products   34                     |  31.4 | 112.7  113.8  114.0  112.7  116.0  115.8 | 114.7  114.9  118.0  118.0  116.9  114.3 
+     Metal containers   341                          |   2.9 | 105.5  109.4  108.3  107.1  109.4  106.4 | 108.5  112.5  110.2  111.6  109.5  105.6 
+     Hardware, tools, and cutlery   342              |   2.7 | 106.0  108.3  108.5  107.0  110.9  109.6 | 108.8  111.2  115.2  114.2  112.2  107.6 
+     Structural metal products   344                 |   5.4 | 109.8  112.7  115.3  111.5  114.4  111.8 | 109.4  113.2  117.2  114.5  114.2  110.9 
+     Fasteners   345                                 |   1.7 | 116.5  114.8  110.8  113.3  117.8  116.0 | 118.5  115.8  116.9  119.7  119.5  113.9 
+     Metal stampings   346                           |   6.7 | 117.7  118.3  118.3  117.4  120.8  127.1 | 121.2  114.7  120.2  123.2  123.0  125.4 
+                                                     |       |                                          |
+  Industrial machinery                               |       |                                          |
+     and equipment   35                              |  33.2 | 104.6  108.8  107.6  106.9  109.6  108.8 | 108.0  113.4  114.7  113.9  109.8  106.0 
+     Engines and turbines   351                      |   2.6 | 105.1  110.3  103.6  103.9  106.6  107.1 | 107.2  104.3  109.6  109.0  107.1  107.5 
+     Farm      352                                   |   2.0 | 103.8  114.7  109.7  111.7  111.1  114.1 | 103.4  105.8  106.3  109.2  106.4  113.6 
+     Construction and allied   353                   |   3.8 | 101.6  105.3  105.5  103.2  112.3  108.6 | 105.1  111.2  110.9  111.3  110.3  107.7 
+     Metalworking   354                              |   4.1 | 105.7  110.2  111.7  107.9  113.9  112.1 | 108.1  114.6  120.5  116.2  114.6  108.0 
+     Special industry   355                          |   2.4 | 123.2  125.0  120.3  124.2  120.8  120.8 | 125.9  131.4  130.4  133.8  122.0  115.5 
+     General industrial   356                        |   5.2 | 108.8  113.2  109.2  109.2  112.9  111.4 | 111.7  115.8  117.5  117.3  113.2  108.3 
+     Computer and office equip.   357                |   5.1 |  82.4   85.3   88.2   85.8   84.7   84.1 |  86.7   93.1   92.4   89.6   85.1   82.1 
+     Service industry machines   358                 |   3.5 | 106.1  110.3  107.8  107.0  109.5  109.8 | 111.9  116.1  116.8  115.4  110.2  106.7 
+                                                     |       |                                          |
+  Electrical machinery   36                          |  33.0 | 110.8  113.2  111.0  111.6  114.4  114.7 | 114.6  117.7  119.0  119.7  115.8  112.0 
+     Electrical distribution   361                   |   1.3 |  95.3   93.7   92.5   96.4   94.2   97.2 |  97.3   98.3  102.2  105.6   95.9   93.6 
+     Electrical industrial   362                     |   4.0 |  94.2   94.1   92.7   92.1   94.4   96.6 |  96.9   97.6   96.3   96.0   94.1   94.0 
+     Household appliances   363                      |   2.4 |  96.7   96.4   92.1   96.7   96.1   93.1 |  98.9   98.0   96.7  100.5   97.4   91.0 
+     Lighting and wiring products   364              |   3.0 | 107.5  112.5  115.3  109.9  112.3  110.9 | 112.6  113.5  117.9  115.8  114.2  109.5 
+     TV and radio sets   365                         |    .8 | 122.3  122.8  119.5  122.7  123.7  121.8 | 124.4  125.7  130.3  130.9  127.1  120.1 
+     Communication equipment   366                   |   3.3 | 104.0  106.9  104.8  104.1  109.2  109.6 | 108.7  115.3  115.0  114.9  109.2  105.4 
+     Electronic components   367                     |  14.5 | 122.8  125.8  123.4  124.9  127.8  126.9 | 127.0  131.7  132.6  134.0  128.8  123.9 
+                                                     |       |                                          |
+  Transportation equipment   37                      |  39.6 | 107.0  107.0  107.1  109.3  113.3  112.4 | 111.9  108.4  114.5  116.6  114.5  109.9 
+     Motor vehicles and parts   371                  |  22.8 | 118.6  116.6  117.3  120.3  126.7  124.1 | 124.7  116.7  125.8  129.3  128.2  121.7 
+     Aircraft and parts   372                        |  10.7 |  89.4   93.3   92.6   92.6   93.1   96.0 |  93.1   96.9   99.1   98.5   94.6   93.5 
+     Ships and boats   373                           |   2.2 |  85.2   79.9   82.5   82.1   86.0   87.1 |  85.5   81.3   83.7   83.0   84.1   85.1 
+                                                     |       |                                          |
+  Instruments   38                                   |  13.7 |  95.5   97.5   96.8   95.7   96.8   98.8 |  99.3  104.5  105.3  103.9   98.7   94.9 
+     Photographic equip. & supplies   386            |   1.8 |  90.4   95.3   91.0   91.2   85.3   94.4 |  92.0   98.7   97.8   96.0   88.1   90.2 
+                                                     |       |                                          |
+  Miscellaneous manufactures   39                    |   4.5 | 121.6  127.8  124.5  122.7  129.9  127.7 | 126.1  132.8  134.6  132.1  131.4  124.3 
+                                                     |       |                                          |
+ SUPPLEMENTARY GROUPS                                |       |                                          |
+                                                     |       |                                          |
+  Total, excluding nuclear nondefense                | 909.8 | 106.2  106.9  106.1  106.4  107.7  107.6 | 108.0  108.0  110.4  110.4  108.8  106.6 
+  Utility sales to industry                          | 835.3 | 106.3  106.1  105.7  106.3  106.2  105.8 | 108.0  106.8  109.4  109.9  107.6  105.3 
+  Industrial generation                              |  98.8 | 100.5   99.7  100.2  100.2  103.4  102.1 |  97.9  101.0  101.5   98.4  104.2  101.3 
+ --------------------------------------------------------------------------------------------------------------------------------------------------
+ Note:  Estimates for November are preliminary.  Estimates from September to October are revised.
+ 
+ 
+ 
+ 
+ Explanatory Note
+ 
+ 
+ The statistical release of Industrial Production and Capacity Utilization reports
+ measures of output, capacity, and capacity utilization in manufacturing, mining, and
+ the electric and gas utilities industries. The release also includes monthly indexes on
+ the use of electric power in manufacturing and mining. Data in the release and
+ historical data are available under statistical releases at http://www.bog.frb.fed.us,
+ the Board's World Wide Web site.  These data are also available on line on the day of
+ issue through the Economic Bulletin Board of the Department of Commerce. For
+ information, call (202) 482-1986. Diskettes containing historical data and the data
+ published in this release are available from the Board of Governors of the Federal
+ Reserve System, Publications Services, (202) 452-3245.
+ 
+ Industrial Production
+ 
+ Coverage. The industrial production (IP) index measures output in the
+ manufacturing, mining, and electric and gas utilities industries; the reference period
+ for the index is 1992. For the period since 1992, the total IP index has been
+ constructed from 264 individual series based on the 1987 Standard Industrial
+ Classification (SIC). These individual series are classified  in two ways: (1) market
+ groups (shown in table 1), such as consumer goods, equipment, intermediate
+ products, and materials; and (2) industry groups (shown in tables 2 and 6), such as
+ two-digit SIC industries and major aggregates of these industries-for example,
+ durable and nondurable manufacturing, mining, and utilities.
+ 
+ Market groups. For purposes of analysis, the individual IP series are grouped into
+ final products, intermediate products, and materials. Final products are assumed to be
+ purchased by consumers, businesses, or government for final use. Intermediate
+ products are expected to become inputs in nonindustrial sectors, such as
+ construction, agriculture, and services. Materials are industrial output requiring
+ further processing within the industrial sector. Total products comprise final and
+ intermediate products, and final products are divided into consumer goods and
+ equipment.
+ 
+ Timing. The first estimate of output for a month is published around the 15th of the
+ following month. The estimate is preliminary (denoted by the superscript "p" in
+ tables) and subject to revision in each of the subsequent three months as new source
+ data become available. (Revised estimates are denoted by the superscript "r" in
+ tables.) After the fourth month, indexes are not revised further until the time of an
+ annual revision or a benchmark revision. The last three benchmark revisions were
+ published in 1990, 1985, and 1976.
+ 
+ Source data. In annual or benchmark revisions, the individual IP indexes are
+ constructed from a variety of source data, such as the quinquennial Censuses of
+ Manufactures and Mineral Industries and the Annual Survey of Manufactures,
+ prepared by the Bureau of the Census; the Minerals Yearbook, prepared by the
+ Department of the Interior; and publications of the Department of Energy. On a
+ monthly basis, the individual indexes of industrial production are constructed from
+ two main types of source data: (1) output measured in physical units and (2) data on
+ inputs to the production process, from which output is inferred. Data on physical
+ products, such as tons of steel or barrels of oil, are obtained from private trade
+ associations as well as from government agencies including those listed above; data
+ of this type are used to estimate monthly IP where possible and appropriate. When
+ suitable data on physical product are unavailable, estimates of output are based on
+ either production-worker hours or electric power use by industry. Data on hours
+ worked by production workers are collected in the monthly establishment survey
+ conducted by the Bureau of Labor Statistics. The data on electric power use are
+ described below. The factors used to convert inputs into estimates of production are
+ based on historical relationships between the inputs and the comprehensive data used
+ to benchmark the IP indexes; these factors also may be influenced by technological
+ or cyclical developments. Especially for the first and second estimates for a given
+ month, the available source data are limited and subject to revision.
+ 
+ Weights. In the index, series that measure the output of an individual industry are
+ weighted according to their proportion in the total value-added output of all
+ industries. The industrial production index, which extends back to 1919, is built as an
+ annually weighted chain-type index since 1977.  The components of IP are combined
+ using estimates of value added per unit of output.  For months from January to June,
+ the weights are drawn from the year containing the month being estimated and the
+ preceding year; for months from July to December, the weights are drawn from the
+ current and following year.  The IP proportions shown in column 1 of tables 1A, 2A,
+ and 6 are estimates of the industries' relative contributions to overall growth in the
+ following year.  For example, a 1 percent increase in durable goods manufacturing in
+ 1997 would account for an increase in total IP of nearly 1/2 percent.
+ 
+ Seasonal adjustment. Individual series are seasonally adjusted by the X-11 ARIMA
+ method, developed at Statistics Canada. For series based on production-worker
+ hours, the current seasonal factors were estimated with data through October 1997;
+ for other series, the factors were estimated with data through at least June 1997.  In
+ some cases, series were preadjusted for the effects of holidays or the business cycle
+ before using X-11 ARIMA.  For the data since 1977, all seasonally adjusted
+ aggregate indexes are calculated by aggregating the seasonally adjusted indexes of
+ the individual series.
+ 
+ Reliability.  The average revision to the level of the total IP index, without regard to
+ sign, between the first and the fourth estimates was 0.28 percent during the 1987-96
+ period.  The average revision to the percent change in total IP, without regard to sign,
+ from the first to the fourth estimates was 0.21 percentage point during the 1987-96
+ period.  In most cases (about 81 percent), the direction of change in output indicated
+ by the first estimate for a given month is the same as that shown by the fourth estimate.
+ 
+ Rounding.  The published percent changes are calculated from unrounded indexes,
+ and may not be the same as percent changes calculated from the rounded indexes
+ shown in the release.
+ 
+ Capacity Utilization
+ 
+ Definition.  Capacity utilization is calculated for the manufacturing, mining, and
+ electric and gas utilities industries.  For a given industry, the utilization rate is equal to
+ an output index divided by a capacity index.  Output is measured by seasonally
+ adjusted indexes of industrial production.  The capacity indexes attempt to capture
+ the concept of sustainable practical capacity, which is defined as the greatest level of
+ output that a plant can maintain within the framework of a realistic work schedule,
+ taking account of normal downtime, and assuming sufficient availability of inputs to
+ operate the machinery and equipment in place.  The 76 individual capacity indexes
+ are based on a variety of data, including capacity data measured in physical units
+ compiled by trade associations, surveys of utilization rates and investment, and
+ estimates of growth of the capital input.
+ 
+ Groups.  Estimates of capacity and utilization are available for a variety of groups,
+ including primary and advanced processing industries within manufacturing,
+ durable and nondurable manufacturing, total manufacturing, mining, utilities, and
+ total industry.  Component industries of the primary and advanced processing groups
+ within manufacturing are listed in the note on tables 2 and 3 of the release.
+ 
+ Weights.  Although each utilization rate is the result of dividing an IP series by a
+ corresponding capacity index, aggregate utilization rates are equivalent to
+ combinations of individual utilization rates aggregated with proportions that reflect
+ current capacity levels of output valued in current-period value added per unit of
+ actual output.  The implied proportions of individual industry operating rates in the
+ rate for total industry for the most recent year are shown in the first column of table 3.
+ 
+ Perspective.  The historical highs and lows in capacity utilization shown in the tables
+ above are specific to each series and did not all occur in the same month.  Industrial
+ plants usually operate at capacity utilization rates that are well below 100 percent:
+ none of the broad aggregates has ever reached 100 percent. For total industry and
+ total manufacturing, utilization rates have exceeded 90 percent only in wartime.
+ 
+ Electric Power
+ 
+ Data on electric power (expressed in kilowatt hours) are collected by the Federal
+ Reserve District Banks from electric utilities and also from manufacturing and
+ mining establishments that generate electric power for their own use (cogenerators).
+ The indexes of power use shown in table 9 are sums of kilowatt hours used by an
+ industry or industry group expressed as a percentage of that industry's or group's
+ usage in 1992.  The first column of the table shows, for reference, electric power use
+ in billions of kilowatt hours as reported by manufacturing and mining industries in
+ the 1992 censuses of those industries.  The supplementary group, "Total, less nuclear
+ nondefense," is shown separately because the value-added proportion for the
+ nondefense nuclear material series (part of SIC 2819) in total IP is considerably
+ smaller than its share of total electric power use.  Excluding this component from total
+ power use facilitates comparisons with total IP.
+ 
+ References
+ 
+ The annual revision published on December 9, 1997 will be described more
+ completely in the February 1998 Federal Reserve Bulletin.
+ 
+ A description of the aggregation methods for industrial production and capacity
+ utilization is included in an article in the Federal Reserve Bulletin, vol. 83 (February
+ 1997), pp. 67-92.  Industrial Production-1986 Edition contains a more detailed
+ description of the other methods used to compile the industrial production index, plus
+ a history of its development, a glossary of terms, and a bibliography.  To obtain
+ Industrial Production-1986 Edition ($9.00 per copy), write to Board of Governors
+ of the Federal Reserve System, Publications Services, Washington, DC 20551.  The
+ major  revisions to the IP indexes and capacity utilization since 1990 have been
+ described in the Federal Reserve Bulletin (April 1990, June 1990, June 1993, March
+ 1994, January 1995, and January 1996).  The basic methodology used to estimate
+ capacity and utilization is discussed in the June 1990 Federal Reserve Bulletin.
+ 
+ 
+ 
+ Release Schedule for 1998
+ 
+ At 9:15 a.m. on January 16, February 17, March 17, April 17, May 15, June 16, July
+ 16, August 14, September 16, October 16, November 16, and December 16.

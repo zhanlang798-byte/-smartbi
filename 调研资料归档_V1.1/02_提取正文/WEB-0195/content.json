@@ -1,0 +1,530 @@
+{
+  "source_id": "WEB-0195",
+  "title": "Databases, Tables & Calculators by Subject : U.S. Bureau of Labor Statistics",
+  "publisher": "www.bls.gov",
+  "publication_date": "",
+  "source_url": "https://www.bls.gov/data/",
+  "extracted_at": "2026-08-16T09:21:22.645Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 129,
+  "table_count": 16,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Employment Projections"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Occupational Requirements"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Historical News Release Tables"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "All Urban Consumers (Current Series)"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "(Consumer Price Index - CPI)"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Urban Wage Earners and Clerical Workers (Current Series)"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "(Consumer Price Index - CPI)"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "All Urban Consumers (Chained CPI)"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "(Consumer Price Index - CPI)"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "(Consumer Price Index - CPI)"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "(Producer Price Index - PPI)"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Commodity Data including \"headline\" FD-ID indexes"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "(Producer Price Index - PPI)"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "Prices - International"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "Import/Export Price Indexes"
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "(International Price Program - IPP)"
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "Employment, Hours, and Earnings - National"
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "(Current Employment Statistics - CES)"
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "Employment, Hours, and Earnings - State and Metro Area"
+    },
+    {
+      "locator": "html:paragraph[20]",
+      "text": "(Current Employment Statistics - CES)"
+    },
+    {
+      "locator": "html:paragraph[21]",
+      "text": "Labor Force Statistics"
+    },
+    {
+      "locator": "html:paragraph[22]",
+      "text": "(Current Population Survey - CPS)"
+    },
+    {
+      "locator": "html:paragraph[23]",
+      "text": "Job Openings and Labor Turnover Survey (JOLTS)"
+    },
+    {
+      "locator": "html:paragraph[24]",
+      "text": "State and County Employment and Wages"
+    },
+    {
+      "locator": "html:paragraph[25]",
+      "text": "(Quarterly Census of Employment & Wages - QCEW)"
+    },
+    {
+      "locator": "html:paragraph[26]",
+      "text": "Business Employment Dynamics (BDM)"
+    },
+    {
+      "locator": "html:paragraph[27]",
+      "text": "Occupational Employment and Wage Statistics (OEWS)"
+    },
+    {
+      "locator": "html:paragraph[28]",
+      "text": "Occupational Employment and Wage Statistics (OEWS) Profiles"
+    },
+    {
+      "locator": "html:paragraph[29]",
+      "text": "American Time Use Survey (ATUS)"
+    },
+    {
+      "locator": "html:paragraph[30]",
+      "text": "Union Affiliation Data"
+    },
+    {
+      "locator": "html:paragraph[31]",
+      "text": "(Current Population Survey - CPS)"
+    },
+    {
+      "locator": "html:paragraph[32]",
+      "text": "Marital and family labor force statistics"
+    },
+    {
+      "locator": "html:paragraph[33]",
+      "text": "(Current Population Survey - CPS)"
+    },
+    {
+      "locator": "html:paragraph[34]",
+      "text": "Veterans supplement data"
+    },
+    {
+      "locator": "html:paragraph[35]",
+      "text": "(Current Population Survey - CPS supplement)"
+    },
+    {
+      "locator": "html:paragraph[36]",
+      "text": "Employment Projections"
+    },
+    {
+      "locator": "html:paragraph[37]",
+      "text": "National Longitudinal Surveys (NLS)"
+    },
+    {
+      "locator": "html:paragraph[38]",
+      "text": "(National Longitudinal Survey of Youth 1979 – NLSY79)"
+    },
+    {
+      "locator": "html:paragraph[39]",
+      "text": "(National Longitudinal Survey of Youth 1997 – NLSY97)"
+    },
+    {
+      "locator": "html:paragraph[40]",
+      "text": "Labor Force Statistics including the National Unemployment Rate"
+    },
+    {
+      "locator": "html:paragraph[41]",
+      "text": "(Current Population Survey - CPS)"
+    },
+    {
+      "locator": "html:paragraph[42]",
+      "text": "Local Area Unemployment Statistics (LAUS)"
+    },
+    {
+      "locator": "html:paragraph[43]",
+      "text": "Employment Projections"
+    },
+    {
+      "locator": "html:paragraph[44]",
+      "text": "Occupational Projections Data"
+    },
+    {
+      "locator": "html:paragraph[45]",
+      "text": "2024 and projected 2034 employment, job openings, education, training, and wages"
+    },
+    {
+      "locator": "html:paragraph[46]",
+      "text": "National Employment Matrix - Occupation"
+    },
+    {
+      "locator": "html:paragraph[47]",
+      "text": "Detailed industries where each occupation is employed"
+    },
+    {
+      "locator": "html:paragraph[48]",
+      "text": "National Employment Matrix - Industry"
+    },
+    {
+      "locator": "html:paragraph[49]",
+      "text": "Detailed occupations employed in each industry"
+    },
+    {
+      "locator": "html:paragraph[50]",
+      "text": "Employment Cost Index"
+    },
+    {
+      "locator": "html:paragraph[51]",
+      "text": "NAICS-SOC basis (2001-Present)"
+    },
+    {
+      "locator": "html:paragraph[52]",
+      "text": "Employer Costs for Employee Compensation"
+    },
+    {
+      "locator": "html:paragraph[53]",
+      "text": "NAICS-SOC basis (2004-Present)"
+    },
+    {
+      "locator": "html:paragraph[54]",
+      "text": "Benefit Incidence & Provisions"
+    },
+    {
+      "locator": "html:paragraph[55]",
+      "text": "National Compensation Survey - Benefits"
+    },
+    {
+      "locator": "html:paragraph[56]",
+      "text": "(Beginning with 2010 data)*"
+    },
+    {
+      "locator": "html:paragraph[57]",
+      "text": "*2007 to 2009 benefits data are not available in the National Compensation Survey database."
+    },
+    {
+      "locator": "html:paragraph[58]",
+      "text": "For data during these years, see the Benefits publication archive."
+    },
+    {
+      "locator": "html:paragraph[59]",
+      "text": "Pay (from an Employment Survey)"
+    },
+    {
+      "locator": "html:paragraph[60]",
+      "text": "Weekly & Hourly Earnings"
+    },
+    {
+      "locator": "html:paragraph[61]",
+      "text": "(Current Population Survey - CPS)"
+    },
+    {
+      "locator": "html:paragraph[62]",
+      "text": "Occupational Employment and Wage Statistics (OEWS)"
+    },
+    {
+      "locator": "html:paragraph[63]",
+      "text": "Occupational Employment and Wage Statistics (OEWS) Profiles"
+    },
+    {
+      "locator": "html:paragraph[64]",
+      "text": "(Current Employment Statistics - CES)"
+    },
+    {
+      "locator": "html:paragraph[65]",
+      "text": "State and County Employment and Wages"
+    },
+    {
+      "locator": "html:paragraph[66]",
+      "text": "(Quarterly Census of Employment & Wages - QCEW)"
+    },
+    {
+      "locator": "html:paragraph[67]",
+      "text": "Consumer Expenditure Survey (CE)"
+    },
+    {
+      "locator": "html:paragraph[68]",
+      "text": "American Time Use Survey (ATUS)"
+    },
+    {
+      "locator": "html:paragraph[69]",
+      "text": "Major Sector Quarterly Labor Productivity and Costs"
+    },
+    {
+      "locator": "html:paragraph[70]",
+      "text": "Major Sector and Major Industry Total Factor Productivity"
+    },
+    {
+      "locator": "html:paragraph[71]",
+      "text": "Detailed Industry Productivity (Labor, Total Factor, and State Labor)"
+    },
+    {
+      "locator": "html:paragraph[72]",
+      "text": "Workplace Injuries & Illnesses"
+    },
+    {
+      "locator": "html:paragraph[73]",
+      "text": "Occupational Injuries and Illnesses and Fatal Injuries Profiles"
+    },
+    {
+      "locator": "html:paragraph[74]",
+      "text": "Census of Fatal Occupational Injuries (2023 forward)"
+    },
+    {
+      "locator": "html:paragraph[75]",
+      "text": "Biennial Nonfatal Case and Demographic numbers and rates: selected characteristics (2023-2024 forward)"
+    },
+    {
+      "locator": "html:paragraph[76]",
+      "text": "Occupational Injuries and Illnesses: Industry Data (2014 forward)"
+    },
+    {
+      "locator": "html:paragraph[77]",
+      "text": "Occupational Requirements"
+    },
+    {
+      "locator": "html:paragraph[78]",
+      "text": "Occupational Requirements"
+    },
+    {
+      "locator": "html:paragraph[79]",
+      "text": "Occupational Requirements Survey"
+    },
+    {
+      "locator": "html:paragraph[80]",
+      "text": "Regional Top-Picks, Tables, and Text Files"
+    },
+    {
+      "locator": "html:paragraph[81]",
+      "text": "Northeast Information Office"
+    },
+    {
+      "locator": "html:paragraph[82]",
+      "text": "(Boston, MA-New York, NY)"
+    },
+    {
+      "locator": "html:paragraph[83]",
+      "text": "Mid-Atlantic Information Office"
+    },
+    {
+      "locator": "html:paragraph[84]",
+      "text": "Southeast Information Office"
+    },
+    {
+      "locator": "html:paragraph[85]",
+      "text": "Midwest Information office"
+    },
+    {
+      "locator": "html:paragraph[86]",
+      "text": "Southwest Information Office"
+    },
+    {
+      "locator": "html:paragraph[87]",
+      "text": "Mountain-Plains Information Office"
+    },
+    {
+      "locator": "html:paragraph[88]",
+      "text": "Western Information Office"
+    },
+    {
+      "locator": "html:paragraph[89]",
+      "text": "Prices - International"
+    },
+    {
+      "locator": "html:paragraph[90]",
+      "text": "Import/Export Price Indexes"
+    },
+    {
+      "locator": "html:paragraph[91]",
+      "text": "(International Price Program - IPP)"
+    },
+    {
+      "locator": "html:paragraph[92]",
+      "text": "Series Report Application"
+    },
+    {
+      "locator": "html:paragraph[93]",
+      "text": "Provides experienced users of BLS data with one of the quickest forms of access to BLS time series data on our website. As input, the Series Report application requires a Series ID and date range."
+    },
+    {
+      "locator": "html:paragraph[94]",
+      "text": "Historical News Release Tables"
+    },
+    {
+      "locator": "html:paragraph[95]",
+      "text": "Historical 'A' Tables (Household data): Previous years and months"
+    },
+    {
+      "locator": "html:paragraph[96]",
+      "text": "Employment Situation News Release (monthly)"
+    },
+    {
+      "locator": "html:paragraph[97]",
+      "text": "Current Population Survey (CPS)"
+    },
+    {
+      "locator": "html:paragraph[98]",
+      "text": "Historical 'B' Tables (Establishment data): Previous years and months"
+    },
+    {
+      "locator": "html:paragraph[99]",
+      "text": "Employment Situation News Release (monthly)"
+    },
+    {
+      "locator": "html:paragraph[100]",
+      "text": "Current Employment Statistics (CES)"
+    },
+    {
+      "locator": "html:paragraph[101]",
+      "text": "Weekly Earnings Tables: Previous quarters"
+    },
+    {
+      "locator": "html:paragraph[102]",
+      "text": "Usual Weekly Earnings of Wage and Salary Workers News Release (quarterly)"
+    },
+    {
+      "locator": "html:paragraph[103]",
+      "text": "Current Population Survey (CPS)"
+    },
+    {
+      "locator": "html:paragraph[104]",
+      "text": "Union Affiliation Tables: Previous years"
+    },
+    {
+      "locator": "html:paragraph[105]",
+      "text": "Union Members News Release (annual)"
+    },
+    {
+      "locator": "html:paragraph[106]",
+      "text": "Current Population Survey (CPS)"
+    },
+    {
+      "locator": "html:paragraph[107]",
+      "text": "Access to Historical Data Series by Subject: Previous years and months"
+    },
+    {
+      "locator": "html:paragraph[108]",
+      "text": "Browse labor force, employment, unemployment, and other data by subject"
+    },
+    {
+      "locator": "html:paragraph[109]",
+      "text": "Current Population Survey (CPS)"
+    },
+    {
+      "locator": "html:paragraph[110]",
+      "text": "American Time Use Survey (ATUS) Historical News Release Tables"
+    },
+    {
+      "locator": "html:paragraph[111]",
+      "text": "American Time Use Survey (ATUS) Results"
+    },
+    {
+      "locator": "html:paragraph[112]",
+      "text": "Historical 'A-1' Tables"
+    },
+    {
+      "locator": "html:paragraph[113]",
+      "text": "Time spent in detailed primary activities, and percent of the civilian population engaging in each activity, averages per day"
+    },
+    {
+      "locator": "html:paragraph[114]",
+      "text": "American Time Use Survey (ATUS)"
+    },
+    {
+      "locator": "html:paragraph[115]",
+      "text": "Historical 'A-2' Tables"
+    },
+    {
+      "locator": "html:paragraph[116]",
+      "text": "Time spent in detailed primary activities, and percent of the civilian population engaging in each activity, averages per day on weekdays and weekend days"
+    },
+    {
+      "locator": "html:paragraph[117]",
+      "text": "American Time Use Survey (ATUS)"
+    },
+    {
+      "locator": "html:paragraph[118]",
+      "text": "Create Customized Maps"
+    },
+    {
+      "locator": "html:paragraph[119]",
+      "text": "Create Customized Maps"
+    },
+    {
+      "locator": "html:paragraph[120]",
+      "text": "Mapping Unemployment Rates (States and Counties)"
+    },
+    {
+      "locator": "html:paragraph[121]",
+      "text": "QCEW State and County Maps"
+    },
+    {
+      "locator": "html:paragraph[122]",
+      "text": "Occupational Employment and Wage Statistics (OEWS) Maps"
+    },
+    {
+      "locator": "html:paragraph[123]",
+      "text": "Easily find out how the buying power of the dollar has changed over the years using the inflation calculator."
+    },
+    {
+      "locator": "html:paragraph[124]",
+      "text": "Allows users to calculate injury and illness incidence rates for their specific establishment or firm and to compare them with the averages for the Nation, for States, and for the industry in which the establishment is found."
+    },
+    {
+      "locator": "html:paragraph[125]",
+      "text": "Public Data Application Programming Interface (API)"
+    },
+    {
+      "locator": "html:paragraph[126]",
+      "text": "The BLS Public Data API gives the public access to raw economic data from all BLS programs"
+    },
+    {
+      "locator": "html:paragraph[127]",
+      "text": "Data Retrieval Tools"
+    },
+    {
+      "locator": "html:paragraph[128]",
+      "text": "Charts and Applications"
+    },
+    {
+      "locator": "html:paragraph[129]",
+      "text": "More Sources of Data"
+    }
+  ],
+  "outgoing_data_links": []
+}

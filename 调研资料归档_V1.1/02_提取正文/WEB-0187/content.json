@@ -1,0 +1,90 @@
+{
+  "source_id": "WEB-0187",
+  "title": "Bank for International Settlements",
+  "publisher": "Bank for International Settlements",
+  "publication_date": "",
+  "source_url": "https://www.bis.org/",
+  "extracted_at": "2026-08-16T09:21:22.196Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 19,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Welcome to the Bank for International Settlements"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Promoting global monetary and financial stability through international cooperation"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "See more on BIS research"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Basel Committee on Banking Supervision"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "aims to enhance understanding of the key supervisory issues and improve the quality of banking supervision worldwide. The"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "page summarises the Committee's post-crisis reforms."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "More from the Basel Committee"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Other BIS committees"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "More from the other committees"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "develops public goods in the technology space to support central banks and improve the functioning of the financial system. We have centres around the world and a global network of central bank experts on innovation."
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "Latest project updates"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Publications & Speeches"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "More from Publications"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "You may be interested in"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "Learn about what it's like to work for the BIS"
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "Financial Stability Institute"
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "Assisting supervisors worldwide in strengthening their financial systems"
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "The BIS Innovation Hub"
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "Designed to support central bank collaboration on new technology"
+    }
+  ],
+  "outgoing_data_links": []
+}

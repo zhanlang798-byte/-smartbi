@@ -1,0 +1,25 @@
+﻿column_1
+Algorithm 2. Online News Sentiment Mining Model pseudo-code.
+Online News Sentiment Mining Model
+"Parameters:
+L: Maximum sequence length
+E: Word embedding dimension
+K: Number of sentiment classes (e.g., 3 for [negative, neutral, positive])
+α: Learning rate
+Input:
+Raw news text D = {d1,…,dN}
+Corresponding labels Y = {y1,…,yN} where yi∈{0,1,2} yi∈{0,1,2}
+1:/Text Preprocessing/ 2: FOR each document di∈D DO
+3: Remove non-alphabetic characters
+4: Convert to lowercase
+5: Tokenize using NLTK/Spacy →tokens = [w1,…,wm]
+6: Lemmatize tokens
+7: Remove stopwords
+8: Pad/truncate to length L
+9: END FOR
+10:/Feature Extraction/11: Initialize pretrained embedding matrix W∈ℝ∣V∣ ×E (GloVe/BERT)
+12: FOR each token sequence tokensi DO
+13: Xi←LookupEmbedding(W,tokensi)Xi←LookupEmbedding(W,tokensi)/* Shape: (L, E) */
+14: END FOR
+15:/Hybrid Neural Network/
+16: Define model architecture: 17: Input layer: input←(None,L,E) 18:/* Parallel Feature Extractors */ 19: CNN Branch: 20: conv1←Conv1D(filters = 128,kernel_size = 3,activation = ‘relu’)(input) 21: pool1←MaxPooling1D(pool_size = 2)(conv1) 22: drop1←Dropout(0.5)(pool1) 23: LSTM Branch: 24: lstm1←Bidirectional(LSTM(units = 64,return_sequences = True))(input) 25: att←AttentionLayer()(lstm1)/* Self-attention mechanism */ 26:/* Feature Fusion */ 27: merged←Concatenate()([drop1,att]) 28: dense1←Dense(128,activation = ‘relu’)(merged) 29: output←Dense(K,activation = ‘softmax’)(dense1)30:/Model Training/ 31: Compile with: 32: loss←‘categorical_crossentropy’ 33: optimizer←Adam(α) 34: metrics←[‘accuracy’,F1_score]35: Train using mini-batches: 36: FOR epoch = 1 TO max_epochs DO 37: Xbatch,Ybatch←SampleBatch(X,Y,batch_size = 32)Xbatch,Ybatch←SampleBatch(X,Y,batch_size = 32) 38: grads←Backpropagate(loss,output) 39: UpdateWeights(optimizer,grads) 40: IF EarlyStopping(val_loss,patience = 3) THEN BREAK 41: END FOR"

@@ -1,0 +1,81 @@
+{
+  "source_id": "WEB-0261",
+  "title": "Federal Reserve Board announces it will make available additional funding to eligible depository institutions to help assure banks have the ability to meet the needs of all their depositors",
+  "publisher": "Federal Reserve Board",
+  "publication_date": "",
+  "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230312a.htm",
+  "extracted_at": "2026-08-16T09:21:24.557Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 12,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Federal Reserve Board announces it will make available additional funding to eligible depository institutions to help assure banks have the ability to meet the needs of all their depositors"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "For release at 6:15 p.m. EDT"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "To support American businesses and households, the Federal Reserve Board on Sunday announced it will make available additional funding to eligible depository institutions to help assure banks have the ability to meet the needs of all their depositors. This action will bolster the capacity of the banking system to safeguard deposits and ensure the ongoing provision of money and credit to the economy."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "The Federal Reserve is prepared to address any liquidity pressures that may arise."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "The additional funding will be made available through the creation of a new Bank Term Funding Program (BTFP), offering loans of up to one year in length to banks, savings associations, credit unions, and other eligible depository institutions pledging U.S. Treasuries, agency debt and mortgage-backed securities, and other qualifying assets as collateral. These assets will be valued at par. The BTFP will be an additional source of liquidity against high-quality securities, eliminating an institution's need to quickly sell those securities in times of stress."
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "With approval of the Treasury Secretary, the Department of the Treasury will make available up to $25 billion from the Exchange Stabilization Fund as a backstop for the BTFP. The Federal Reserve does not anticipate that it will be necessary to draw on these backstop funds."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "After receiving a recommendation from the boards of the Federal Deposit Insurance Corporation (FDIC) and the Federal Reserve, Treasury Secretary Yellen, after consultation with the President, approved actions to enable the FDIC to complete its resolutions of Silicon Valley Bank and Signature Bank in a manner that fully protects all depositors, both insured and uninsured. These actions will reduce stress across the financial system, support financial stability and minimize any impact on businesses, households, taxpayers, and the broader economy."
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "The Board is carefully monitoring developments in financial markets. The capital and liquidity positions of the U.S. banking system are strong and the U.S. financial system is resilient."
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Depository institutions may obtain liquidity against a wide range of collateral through the discount window, which remains open and available. In addition, the discount window will apply the same margins used for the securities eligible for the BTFP, further increasing lendable value at the window."
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "The Board is closely monitoring conditions across the financial system and is prepared to use its full range of tools to support households and businesses, and will take additional steps as appropriate."
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "For media inquiries, please email [email protected] or call 202-452-2955."
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Term Sheet: Bank Term Funding Program (PDF)"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.federalreserve.gov/datadownload",
+      "extension": "",
+      "anchor_text": "Data Download Program",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/files/monetary20230312a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Term Sheet: Bank Term Funding Program (PDF)",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/bank-term-funding-program-faqs.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Bank Term Funding Program: Frequently Asked Questions (PDF)",
+      "locator": "anchor"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_GVIP" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_GVIP" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_GVIP_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_GVIP_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="T50030">
+    <xs:annotation>
+     <xs:documentation>Final products and nonindustrial supplies--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T50002">
+    <xs:annotation>
+     <xs:documentation>  Final products--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T51000">
+    <xs:annotation>
+     <xs:documentation>    Consumer goods--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T51100">
+    <xs:annotation>
+     <xs:documentation>      Durable consumer goods--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T51110">
+    <xs:annotation>
+     <xs:documentation>        Automotive products--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T51120">
+    <xs:annotation>
+     <xs:documentation>        Other durable goods--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T51200">
+    <xs:annotation>
+     <xs:documentation>      Nondurable consumer goods--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T52000">
+    <xs:annotation>
+     <xs:documentation>    Equipment, total--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T521A3">
+    <xs:annotation>
+     <xs:documentation>      Business equipment and defense and space equipment--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T52100">
+    <xs:annotation>
+     <xs:documentation>        Business equipment--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T52300">
+    <xs:annotation>
+     <xs:documentation>        Defense and space equipment--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T54000">
+    <xs:annotation>
+     <xs:documentation>  Nonindustrial supplies--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T54100">
+    <xs:annotation>
+     <xs:documentation>    Construction supplies--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T54200">
+    <xs:annotation>
+     <xs:documentation>    Business supplies--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="T54220">
+    <xs:annotation>
+     <xs:documentation>      Commercial energy products--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

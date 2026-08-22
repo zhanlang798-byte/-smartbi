@@ -1,0 +1,12 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7,column_8,column_9,column_10,column_11,column_12,column_13
+,,"Years Ended December 31,",,,,,,,,,,
+,,2005,,,2004,,,2003,,,,
+"Net income, as reported",,$,322,,,$,443,,,$,476,
+"Less: Compensation expense determined under the fair value method, net of tax",,,(19,),,,(15,),,,(15,)
+Pro forma net income,,$,303,,,$,428,,,$,461,
+"Net income per common share, basic:",,,,,,,,,,,,
+As reported,,$,0.72,,,$,1.00,,,$,1.16,
+Pro forma net income,,$,0.68,,,$,0.97,,,$,1.12,
+"Net income per common share, diluted:",,,,,,,,,,,,
+As reported,,$,0.72,,,$,0.99,,,$,1.15,
+Pro forma net income,,$,0.68,,,$,0.96,,,$,1.11,

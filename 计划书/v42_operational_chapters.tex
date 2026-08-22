@@ -1,0 +1,314 @@
+% V4.2 新增操作化章节；V4.1正文保留为历史基线。
+
+\part{V4.2 网页数据可用化与赛题逐条落地}
+
+\chapter{V4.2 当前真实状态与权威顺序}
+
+\begin{decisionbox}[当前状态替代规则]
+本章替代前文 V4.1 时点状态，前文章节保留用于证明方案演进。当前权威顺序为：\texttt{00\_}当前项目交接\texttt{\_V4.2/README\_}先读我\texttt{.md}，V4.2 计划书，调研资料归档\texttt{\_V1.1/00\_}交接入口\texttt{/source\_action\_registry\_V1.1.jsonl}，V1.0 原始归档，V4.1 及更早历史文件。V1.1 是增量可用化层，不重写 V1.0 的原件、终态或哈希。
+\end{decisionbox}
+
+截至 2026 年 8 月 16 日，本轮已经完成 688 项来源的四态动作闭包。清单中共有 196 条扩展名为 HTML 的来源记录，其中 159 条存在本地 HTML 文件，37 条从未取得本地网页。本轮只对有合法本地原件的 159 条执行内容提取：154 条完成正文或表格提取，1 条因内容过少标记为部分提取，3 条为拦截页，1 条为空壳页面。\Field{WEB-0335} 与 \Field{WEB-0336} 不再作为可用论文页面，统一由已恢复的官方开放 PDF \Field{WEB-0115} 替代；\Field{WEB-0345} 是无正文的访问阻断页；\Field{LCL-0156} 是动态空壳。
+
+补取阶段从 1,909 个页面链接中按“结构化数据优先、替代来源优先、每个父资产最多三个”收敛到 36 个公开 GET 请求；26 个实际取得并通过文件头检查，10 个明确失败。取得资源展开后形成 155 个 XLSX 工作表、8 个 XML 对象、6 个 CSV、7 个 ZIP 归档和 2 个文本对象；XLSX 共转出 124,178 行，CSV 原件共识别 1,090 行。另有 2 个旧式 XLS 原件已保存并校验，但为避免引入带高危漏洞的解析依赖，暂列人工转换。
+
+\begin{longtable}{p{4.2cm}p{2.5cm}p{7.5cm}}
+\caption{V4.2 数据可用化结果}\label{tab:v42-usability-result}\\
+\toprule
+\textbf{验收对象} & \textbf{实测结果} & \textbf{准确含义}\\
+\midrule
+\endfirsthead
+\toprule \textbf{验收对象} & \textbf{实测结果} & \textbf{准确含义}\\ \midrule
+\endhead
+688 项来源 & 688 个唯一 \Field{asset_id} & 每项都有获取、内容、提取、正式用途和下一动作；不代表全部全文可合法下载。\\
+本地 HTML & 159 项 & 90 项混合内容、49 项叙述内容、8 项结构化表格、7 项下载入口、1 项低内容、3 项拦截页、1 项空壳。\\
+HTML 自动提取 & 154 完成、1 部分、4 失败 & 自动结果是人工复核候选；关键数字仍需页码、单位、期间和双人复核。\\
+底层资源补取 & 26 成功、10 失败 & 失败包括 HTTP 403、请求结构化文件却返回 HTML、SEC 文件超过 50 MB 上限；均保留 URL、状态和失败原因。\\
+结构化展开 & 180 条对象清单 & 155 个 XLSX 工作表、8 个 XML、7 个 ZIP、6 个 CSV、2 个文本和2个待人工转换 XLS。\\
+正式项目数据 & 尚未建设 & 130 国、40 国、20 家企业、模型、Smartbi 写入、AIChat 与 XML 恢复仍为后续阶段。\\
+\bottomrule
+\end{longtable}
+
+\section{四态接口}
+
+以后任何来源不得只使用“已下载”一个状态。\Field{source_registry} 和动作清单必须同时保存：
+
+\begin{longtable}{p{3.5cm}p{4.1cm}p{6.6cm}}
+\toprule
+\textbf{状态轴} & \textbf{允许值} & \textbf{判定规则}\\
+\midrule
+获取状态 & \Field{ACQUIRED / NOT_ACQUIRED / NOT_APPLICABLE} & 取得合法原件或底层响应才是 ACQUIRED；许可禁止、需认证或仅元数据时为 NOT\_APPLICABLE。\\
+内容状态 & \Field{STRUCTURED_DATA / NARRATIVE_CONTENT / DOWNLOAD_LANDING / BLOCK_PAGE / EMPTY_SHELL} 等 & HTTP 200、非空HTML和文件存在均不能代替内容判断。\\
+提取状态 & \Field{EXTRACTED / PARTIAL / FAILED / NOT_REQUIRED} & 表格、正文或数据对象必须实际落到提取路径；失败保留原因。\\
+正式用途 & CORE、SUPPLEMENT、REPLACED、EXCLUDED & A级可用原件可进入核心候选；B/C级通常为补充；受限、拦截、重复和秘密来源不得直接进入正式数据。\\
+\bottomrule
+\end{longtable}
+
+机器权威字段除上述四态外还包括：\Field{required_fields}、\Field{data_usage}、\Field{preferred_endpoint}、\Field{request_parameters}、\Field{extraction_method}、\Field{raw_local_path}、\Field{extracted_local_path}、\Field{target_table}、\Field{smartbi_page}、\Field{acceptance_rule}、\Field{replacement_source}、\Field{failure_reason}、\Field{owner} 和 \Field{next_action}。
+
+\chapter{赛题评选标准原文与执行解释}
+
+\begin{warningbox}[原文保留说明]
+下列“原文”根据项目本地赛题文件 \texttt{XH-202612\_Smartbi AI}驱动的数据创新平台研究\texttt{.pdf} 第 6—8 页转录，不改变原意。每段原文后另列执行解释；执行解释不是对原文的替换。机器追踪表为 \texttt{00\_}当前项目交接\texttt{\_V4.2/SCORING\_TRACEABILITY\_V4.2.csv}。
+\end{warningbox}
+
+\section{一、问题价值与现实意义（20 分）}
+
+\subsection*{S1.1 原文}
+（1）选题是否紧扣社会、经济、民生或行业中的真实痛点，需引用至少 1 份权威资料（如国家统计局报告、行业白皮书、主流媒体报道等）证明问题存在，以及明确界定问题影响范围（如“涉及全国超 3000 万灵活就业人员”或“导致某省年医保支出增加 5 亿元”）；
+
+\begin{decisionbox}[S1.1 怎么做]
+从商务部公报提取境外企业覆盖、投资流量和存量，从国别事件表提取货币危机、通胀、资本限制和冻结事件，从企业年报提取海外收入与汇兑损失。问题规模页必须同时展示权威数字、来源ID、表号或页码、发布日期和当前数据完整度。任何“130国、40国、20家企业”在正式表未完成前只能写作计划范围。
+\end{decisionbox}
+
+\subsection*{S1.2 原文}
+（2）是否具有明确的应用场景和潜在推广价值，明确指出目标用户或应用主体（如“适用于县级疾控中心”“可部署于连锁商超运营系统”），提出至少 1 条可行的落地路径（如试点合作机制、政策对接建议、SaaS 化方案）；
+
+\begin{decisionbox}[S1.2 怎么做]
+目标用户固定为企业总部财资部门、区域财资中心、境外子公司财务负责人和风险管理人员。试点路径固定为：一家公司或一个行业填写企业敞口模板，导入 Smartbi 小样，完成国别预警、周期判断、配置实验和管理层简报，再扩展到区域模板。验收不是“写出应用场景”，而是陌生成员在十分钟内完成一次指定风险决策任务。
+\end{decisionbox}
+
+\subsection*{S1.3 原文}
+（3）是否体现数据驱动决策的必要性与可行性，对比说明传统经验决策与数据驱动方式的差异（如预测准确率提升$\geq 10\%$、响应效率提高$\geq 20\%$），同时数据来源合法、稳定且可获取（提供数据接口、公开链接或授权证明）。
+
+\begin{decisionbox}[S1.3 怎么做]
+建立30项固定任务：人工查找汇率、通胀、资本限制、企业披露和历史类比，与平台输出比较完成时长、数值正确率、来源追溯率和预警提前量。提升比例必须实测，不能预填。合法性由 \Field{source_registry} 的许可、原URL、获取方式、哈希和再分发范围证明；稳定性由发布时间、抓取时间、替代源和重跑记录证明。
+\end{decisionbox}
+
+\section{二、数据分析方法与技术应用（25 分）}
+
+\subsection*{S2.1 原文}
+（1）数据处理流程是否规范（包括数据获取、清洗、整合等），提供完整的数据处理流程说明（含 ETL 流程图或步骤清单）、清洗规则（如：异常值剔除比例$\leq 10\%$）、多源数据整合逻辑（如：主外键关联说明），创建分析主题的数据模型；
+
+\begin{decisionbox}[S2.1 怎么做]
+V1.1先完成来源层四态闭包；正式Python管线再按 raw、staging、curated、smartbi、qa 五层运行。国家以ISO3、月份以月末、企业以稳定企业ID、事件以 \Field{event_id} 关联。极端贬值和通胀不删除，只加异常标记；清洗剔除比例单列，超过10\%必须失败并解释。事实表之间不得直接多对多连接。
+\end{decisionbox}
+
+\subsection*{S2.2 原文}
+（2）分析方法是否科学合理（如统计分析、归因分析、RAG知识增强等），提供每类分析方法的使用背景与结果说明；
+
+\begin{decisionbox}[S2.2 怎么做]
+国别层使用等权主模型、熵权和PCA挑战模型；事件层使用事件窗口；跨国层使用国家和时间固定效应及按国家聚类稳健误差；资产层使用周期状态、压力测试和美元—黄金对称剔除；证据问答使用带 \Field{asset_id}、\Field{source_locator} 和证据等级的RAG。所有结果限定为历史相关性和情景结果。
+\end{decisionbox}
+
+\subsection*{S2.3 原文}
+（3）是否有效运用 Smartbi 平台的核心功能（如可视化仪表板、智能问数、智能报告、数据洞察分析等），提供每类功能实现的效果数量（如：通过可视化仪表板开发了 3 张决策分析看板）；
+
+\begin{decisionbox}[S2.3 怎么做]
+数量合同固定为六页决策看板、25个AIChat测试问题、1套管理层智能报告和数据洞察结果。每项功能保存资源名、截图、操作日志、输入表、指标口径、正确答案和验收状态；仅有页面设计不计作已实现。
+\end{decisionbox}
+
+\subsection*{S2.4 原文}
+（4）技术实现是否体现创新性或对现有方法的优化，在性能优化$\geq 5\%$，数据获取由 T+1 提升至小时或分钟级。
+
+\begin{decisionbox}[S2.4 怎么做]
+把“数据发布频率”和“发布后入库延迟”分开。月度、季度和年度指标不得伪造成实时数据；支持增量获取的来源以官方发布到 raw 层落盘不超过60分钟为目标。性能比较使用同一机器、同一输入，分别运行全量和增量管线；增量总耗时至少减少5\%，并保存命令、起止时间、CPU/内存和行数。
+\end{decisionbox}
+
+\section{三、可视化呈现与交互体验（25 分）}
+
+\subsection*{S3.1 原文}
+（1）仪表板/报告是否逻辑清晰、重点突出（标题和结论加粗）、美观易读，使用对比色/放大字体等方式突出核心结论（如KPI、预警信号）；
+
+\begin{decisionbox}[S3.1 怎么做]
+六页统一使用深蓝主色、金色风险提示和红色禁止状态；每页只设置一个主结论区、三至六个KPI和一个“数据可信度/限制”区。视觉QA逐页检查标题、数字层级、色盲可读性、中文换行和来源脚注。
+\end{decisionbox}
+
+\subsection*{S3.2 原文}
+（2）可视化形式是否契合数据特征与分析目标，如：类别数据用柱状图/条形图，趋势用折线图，占比用环形图/堆叠图，地理分布用热力地图；
+
+\begin{decisionbox}[S3.2 怎么做]
+国别分布用地图和四象限，时间变化用折线和周期状态带，行业和企业比较用条形图，资产权重用堆叠图，危机用事件时间轴，风险与投资关系用散点图。每张图必须在图表绑定表中登记来源表、字段、公式、筛选、下钻、预期结论和核对值。
+\end{decisionbox}
+
+\subsection*{S3.3 原文}
+（3）是否支持良好的用户交互（如下钻、联动、筛选、动态更新等），交互响应时间$\leq 10$ 秒；
+
+\begin{decisionbox}[S3.3 怎么做]
+固定测试地区、国家、行业、企业、风险类型、周期、事件、资产、期限和计价口径筛选。使用冷缓存、热缓存和连续联动三组测试，记录至少30次操作；P95响应不超过10秒，且联动前后行数与Python基准一致。
+\end{decisionbox}
+
+\subsection*{S3.4 原文}
+（4）是否通过 Smartbi 实现“讲好数据故事”的能力，包含完整叙事逻辑：问题背景→数据洞察→根因分析→行动建议，让听众可在 10 分钟内掌握核心结论。
+
+\begin{decisionbox}[S3.4 怎么做]
+六页顺序固定为：出海版图与痛点，国别危机，企业敞口，多币种与黄金实验，决策与约束，全球周期类比。由未参与制作的人观看一次后复述问题、洞察、原因、边界和行动；缺一项即重写故事线。视频按用户冻结口径制作3—5分钟，目标4分钟。
+\end{decisionbox}
+
+\section{四、创新性与原创性（20 分）}
+
+\subsection*{S4.1 原文}
+（1）在选题、方法、模型或应用场景上是否有独到见解，如选题在近 3 年主流数据分析竞赛或核心期刊中出现频率$\leq 2$次或将成熟方法创新应用于新领域（如用 NLP 情感分析优化政务服务满意度评估）；
+
+\begin{decisionbox}[S4.1 怎么做]
+创新性不得只写“黄金配置”。需分别证明全球周期—国别风险—企业披露三层联动、周期协同、制度可比性和Smartbi决策闭环相对已有研究新增了什么。每项创新登记检索范围、已有方法、项目新增接口和可核验产物。
+\end{decisionbox}
+
+\subsection*{S4.2 原文}
+（2）是否提出新颖的分析视角或解决方案，提供可验证的假设并用数据验证；
+
+\begin{decisionbox}[S4.2 怎么做]
+固定检验H1—H5、0\%黄金反事实、2.5\%条件底仓、去黄金和去美元对称实验。报告必须保留至少三个黄金不占优、三个美元短债不占优和两个两者都不能完全覆盖损失的窗口，禁止只展示支持性案例。
+\end{decisionbox}
+
+\subsection*{S4.3 原文}
+（3）作品是否为团队独立完成，无抄袭或不当引用，提供含团队成员基于 Smartbi 平台的操作日志或账号信息。
+
+\begin{decisionbox}[S4.3 怎么做]
+所有成员在Smartbi使用独立可追踪操作记录，代码、配置、图表和文字均进入提交清单。引用必须回到 \Field{asset_id} 和原始定位；账号通过私有交付单提供，密码、Cookie和令牌不得进入PDF、ZIP、截图或版本文件。
+\end{decisionbox}
+
+\section{五、完整性与可复现性（10 分）}
+
+\subsection*{S5.1 原文}
+（1）提交材料是否齐全（报告、基于 Smartbi 实现的资源、视频、示例数据及数据说明等）。缺失任一材料扣 2 分：分析报告、Smartbi 实现的资源（xml 文件或导出包）、演示视频（3–5 分钟，包含关键功能操作与核心结论展示）、示例数据语文档、数据字典/字段说明；
+
+\begin{decisionbox}[S5.1 怎么做]
+提交清单逐项登记分析报告、XML或导出包、4分钟视频、示例数据、数据说明、字段字典、来源说明、合规声明、操作指南和哈希。赛题其他位置存在“3分钟以内”表述，当前按用户冻结的3—5分钟口径执行，并在提交前再次核对主办方书面通知。
+\end{decisionbox}
+
+\subsection*{S5.2 原文}
+（2）分析过程是否可追溯、结果是否可复现，基于 Smartbi 导入 Smartbi 实现的资源（xml 文件或导出包）可完整成功恢复资源；
+
+\begin{decisionbox}[S5.2 怎么做]
+在无项目缓存、无原资源的干净环境中导入XML，核对数据源、主题模型、六页看板、25问配置、行数、主外键和关键指标。Python QA与Smartbi关键结果误差不超过1\%；恢复全过程录屏并保存日志。
+\end{decisionbox}
+
+\subsection*{S5.3 原文}
+（3）是否提供清晰的操作说明或部署指南，便于评审验证，提供 Smartbi 登录地址和账号信息，同时提供启动成功窗口界面和登录成功界面图。
+
+\begin{decisionbox}[S5.3 怎么做]
+操作指南从登录、导入、模型、筛选、下钻、AIChat到XML恢复逐步列出菜单、输入、预期画面和失败处理。共享材料只放登录地址和脱敏截图；账号密码通过私有渠道交付。由非原制作成员按指南独立完成一次验收。
+\end{decisionbox}
+
+\chapter{D0 第一天操作表与D2数据可用化步骤卡}
+
+\section{D0 第一天逐时操作}
+
+\begin{longtable}{p{2.0cm}p{5.3cm}p{6.7cm}}
+\toprule
+\textbf{时间} & \textbf{必须执行} & \textbf{必须留下的文件和门槛}\\
+\midrule
+09:00 & 逐条登记赛题原文，分配 S1.1—S5.3 & \File{SCORING_TRACEABILITY_V4.2.csv}；原文和解释分栏。\\
+09:30 & 冻结问题、用户、应用场景和禁止误述 & \File{D0_scope_signoff.xlsx}；A、B、C签字。\\
+10:30 & 冻结传统人工决策基线和30项对照任务 & \File{traditional_vs_data_benchmark.xlsx}；不得预填提升比例。\\
+11:30 & 冻结11表、6维表、桥表、主键、频率和计价口径 & \File{data_contract_V4.2.xlsx}；年度数据禁止复制成月度观测。\\
+13:30 & 导入688项动作清单，按哈希、规范URL和许可复用 & \File{archive_to_source_registry_crosswalk.xlsx}；只补缺口。\\
+14:30 & 冻结指标—来源—字段合同 & 每个字段有主源、替代源、提取位置、单位和验收阈值。\\
+15:30 & 冻结危机、周期、收益和组合公式 & \File{formula_contract_V4.2.xlsx}；美元与黄金对称实验。\\
+16:30 & 映射六页、25问和17条评分项 & 每项评分可定位到数据、脚本、Smartbi资源和验收证据。\\
+17:30 & G0签署与配置哈希 & 未签署不得进入130国和40国正式采集。\\
+\bottomrule
+\end{longtable}
+
+\section{D2A：688项内容审计}
+
+\StepTitle{D2A}{来源取得状态与内容可用性审计}{负责人：B；复核：D}
+\CardRow{输入}{V1.0 研究资料总清单\texttt{.csv}、本地原件和许可矩阵。}
+\CardRow{命令}{进入调研资料归档\texttt{\_V1.1/05\_QA}与运行记录\texttt{/scripts}，运行 \Field{npm ci}，再运行 \Field{node 02_audit_web_assets.mjs}。}
+\CardRow{操作}{验证本地路径和哈希；解析标题、可见字符、表格数、下载链接、iframe和表单；同时检测拦截页、动态空壳和低内容页。}
+\CardRow{输出}{\File{web_asset_audit_V1.1.csv}、审计摘要和两个HTML动作矩阵。}
+\CardRow{验收}{688项清单主键唯一；159个本地HTML全部得到内容状态；拦截和空壳不得标为可用。}
+\CardRow{失败处理}{读取错误保留错误信息；原件不修改；编码无法识别时保留字节并进入人工复核。}
+\CardRow{下一接收人}{D2B使用候选链接和许可状态决定补取。}
+
+\section{D2B：公开原件和底层数据补取}
+
+\StepTitle{D2B}{合法开放底层资源补取}{负责人：B；许可复核：A/D}
+\CardRow{输入}{页面下载链接、V1.0替代来源、许可和再分发范围。}
+\CardRow{命令}{\Field{node 03_discover_official_resources.mjs}；复核 \File{selected_resource_fetch_plan_V1.1.csv} 后运行 \Field{node 04_fetch_registered_resources.mjs}。}
+\CardRow{操作}{替代源优先；CSV、XLSX、JSON、XML、ZIP优先；每父资产最多3个；同域限速；30秒超时；单文件上限50MB；只使用无认证公开GET。}
+\CardRow{输出}{新增原件、替代原件、请求时间、最终URL、安全响应头、MIME、大小、SHA-256和失败原因。}
+\CardRow{验收}{文件扩展名、MIME和文件头一致；请求结构化资源却返回HTML必须失败；不保存Cookie、令牌或认证头。}
+\CardRow{失败处理}{403、登录、付费、验证码、超限或条款限制全部转为人工任务或权威替代；不得绕过。}
+\CardRow{下一接收人}{D2C展开和提取实际内容。}
+
+\section{D2C：HTML、PDF和表格内容提取}
+
+\StepTitle{D2C}{正文、表格和结构化对象提取}{负责人：B；关键数字复核：D}
+\CardRow{命令}{\Field{node 05_extract_html_tables.mjs}、\Field{node 06_extract_narrative_content.mjs}、\Field{node 10_inspect_structured_resources.mjs}。}
+\CardRow{HTML表格}{每张表输出独立CSV；记录表序号、行号、字段、原始值、输出路径。}
+\CardRow{HTML正文}{Readability提取主文，输出JSON和Markdown；每段保存 \Field{html:paragraph[n]} 定位。}
+\CardRow{ZIP/XLSX}{ZIP先检查路径并展开；XLSX按工作表转CSV并保留Excel行号；XML、CSV和JSON生成结构清单。}
+\CardRow{PDF}{正式数据工程使用 \Field{pdftotext -layout}；无文本层则生成OCR候选；关键数字必须双人复核页码。}
+\CardRow{验收}{提取结果包含 \Field{source_id}、\Field{source_locator}、原值、解析值、单位、期间、地区、发布时间、方法、置信度和复核状态。}
+\CardRow{失败处理}{旧XLS不使用带高危漏洞的库，保存原件后采用受控转换；无法读取时不得猜测。}
+\CardRow{下一接收人}{D2D建立正式来源表映射。}
+
+\section{D2D：来源到业务表、看板和评分的映射}
+
+\StepTitle{D2D}{来源用途闭包}{负责人：A/B；模型复核：C}
+\CardRow{命令}{\Field{node 08_build_source_action_registry.mjs} 和 \Field{node 11_build_v42_plan_artifacts.mjs}。}
+\CardRow{输出}{688项CSV/JSONL动作清单、159项HTML矩阵、评分追踪矩阵、受限待办、PDF全量附录。}
+\CardRow{验收}{每个 \Field{asset_id} 有唯一四态、目标字段、目标表、Smartbi页面、验收、替代和下一动作；总数严格为688。}
+\CardRow{失败处理}{目标字段缺少合法可用来源时，先启用登记替代源；仍失败则删除字段承诺和相关评分目标，不用零值填补。}
+\CardRow{下一接收人}{D1/D3—D6只从正式 \Field{source_registry} 读取已批准来源。}
+
+\chapter{按来源类别提取哪些数据、如何处理、输出到哪里}
+
+\clearpage
+\begin{landscape}
+\begingroup
+\setlength{\tabcolsep}{2pt}
+\scriptsize
+\begin{longtable}{p{3.2cm}p{5.2cm}p{5.4cm}p{4.5cm}p{4.8cm}}
+\toprule
+\textbf{来源} & \textbf{必须提取字段} & \textbf{具体操作} & \textbf{进入何处及用途} & \textbf{验收与失败处理}\\
+\midrule
+\endfirsthead
+\toprule \textbf{来源} & \textbf{必须提取字段} & \textbf{具体操作} & \textbf{进入何处及用途} & \textbf{验收与失败处理}\\ \midrule
+\endhead
+商务部公报 & ISO3、国家、年份、投资流量、存量、企业存在、表号、页码、发布日期 & 下载PDF/XLSX；PDF按页转文本；定位“分国家/地区”附表；国家名映射ISO3；缺失保持空值 & \Field{country_exposure}；DB01问题规模、130国版图和40国筛选 & 唯一ISO3；数字须有表号页码；通道经济体单列；\Field{WEB-0344}现为入口资料，正式附表仍需复核。\\
+世界银行WDI/GEM & 汇率、CPI、储备、进口、贸易、GDP、频率、版本、发布日期 & WDI使用官方API并保存查询URL与JSON；GEM使用已取得批量包 \Field{WEB-0048}；解压后按序列元数据和国家代码整理 & \Field{country_monthly_risk}、\Field{global_cycle_month}；DB01/DB02/DB06 & 汇率和CPI月度完整率分别至少80\%；WDI年度值不得冒充月度；失败用央行/IMF替代。\\
+IMF WEO/IFS/AREAER & 年度宏观、月度金融序列、汇率制度、兑换与汇出限制、原文编码 & WEO工作簿已补取并按工作表转CSV；IFS使用登记API；AREAER保留年度频率和原文定位 & \Field{country_policy_year}、\Field{country_event}、\Field{global_cycle_month} & 年度数据用有效期关联，不复制12次；登录或条款限制进入人工任务。\\
+BIS、央行和财政部门 & 政策利率、期限利差、信用、房地产、储备、原始频率与发布日期 & 优先SDMX/CSV/XLSX；季度房地产记录真实观察期和可用期；已补取表格按工作表转CSV & \Field{global_cycle_month}；DB06周期识别 & 核心序列完整率至少90\%；季度值不得伪造月度观测；无覆盖时为空。\\
+美联储与美国财政部 & 工业生产、H.10汇率、3月短债、实际利率、发布时间 & 已取得美联储G.17与H.10 XML ZIP并展开；财政部CSV请求本轮403，保留失败，后续使用公开XML接口或人工下载 & \Field{global_cycle_month}、\Field{asset_monthly_return}；DB04/DB06 & XML根节点、日期、数值和单位可解析；财政部未取得前不得声称短债正式序列完成。\\
+上海黄金交易所 & 日期、合约、开高低收、加权均价、成交量、金额、持仓、币种 & 159项HTML中的SGE静态表格已转CSV；后续登记公开查询参数，按日去重并聚合月度 & \Field{asset_monthly_return}；DB04 & 日期与合约复合主键唯一；价格单位统一；无可靠接口时使用人工导出而非页面猜取。\\
+企业年报与交易所 & 企业、财年、海外收入、地区、汇兑损益、外币资产负债、套保、现金、授信、页码 & PDF文本+页码候选；表格和XBRL优先；人工双录关键数字；仅地区披露不得推断国家 & \Field{company_overseas_exposure}；DB03 & 20家基础画像；量化样本需同时满足收入与外汇风险披露；SEC超50MB文件使用官方分件或人工下载。\\
+案例、法规和历史资料 & 事件、机制、起止期、制度环境、政策响应、企业损失、证据等级、页码 & 45案例链接导入；按 \Field{event_cluster_id} 去重；17宏观案例字段化；A级或双B级复核 & \Field{case_evidence}、\Field{historical_crisis_event}；DB05/DB06 & 不把45文档当45独立事件；广场协议为政策节点；关键数字不得只引机构主页。\\
+Smartbi官方资料和实例 & 版本、许可、菜单、导入、ETL、模型、AIChat、XML、限制、操作证据 & 只读盘点复用；写入、导入和恢复另经P0授权；截图脱敏；不记录凭据 & 平台操作手册、评分证据和D10—D12 & 能力盘点不等于功能已实现；六页、25问和XML须分别验收。\\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{landscape}
+
+\chapter{V1.1到正式Python数据工程的交接接口}
+
+V1.1使用当前可运行且依赖审计为零漏洞的Node.js 24工具链。正式数据工程继续使用Python；双方只通过原始文件、CSV、JSONL和哈希衔接。Node侧不得直接写入11张正式业务表，Python侧不得重新盲目抓取已取得原件。
+
+\begin{verbatim}
+cd 调研资料归档_V1.1/05_QA与运行记录/scripts
+npm ci
+node run_archive_v11.mjs
+
+python scripts/run_pipeline.py \
+  --as-of 2025-12-31 \
+  --run-id 20260831_v42_formal
+\end{verbatim}
+
+正式 \Field{source_registry} 新增并强制保留：\Field{archive_asset_id}、\Field{archive_run_id}、\Field{reuse_status}、\Field{acquisition_state}、\Field{content_state}、\Field{extraction_state}、\Field{formal_use_state}、\Field{source_locator}、\Field{redistribution_scope} 和 \Field{revalidation_required}。V1.1自动提取段落与表格在人工复核前只能进入 staging，不能直接进入 curated 或Smartbi。
+
+\chapter{赛题得分证据、Smartbi产品和交接验收}
+
+\section{评分证据闭环}
+
+17条评分子项全部进入 \File{SCORING_TRACEABILITY_V4.2.csv}。每条必须同时存在原文、项目响应、所需数据、来源ID、输出表或交付物、处理脚本、Smartbi功能、页面、量化验收、负责人和当前状态。评分状态只有 \Field{COMPLETE_VERIFIED}、\Field{PARTIAL_REUSABLE}、\Field{NOT_STARTED} 和 \Field{EXTERNAL_ACTION}；“写入计划书”不得提升实现分数。
+
+\section{六页和25问保持不变}
+
+六页仍为亚非拉风险全景、国别与危机下钻、中国企业海外风险、多币种—黄金周期实验室、决策约束与证据中心、全球周期与历史危机。25问必须覆盖事实查询、资产比较、周期识别、历史类比、来源追溯和约束路由。企业仅披露地区时，AIChat不得回答到具体国家；历史制度问题必须展示可比性限制。
+
+\section{V4.2交接验收}
+
+\begin{enumerate}
+  \item 688项动作清单行数和唯一ID均为688；本地HTML矩阵严格为159项；
+  \item 26个新取得资源逐一校验MIME、文件头、SHA-256和结构；10个失败请求有原因和影响；
+  \item 155个XLSX工作表、8个XML、6个CSV和7个ZIP均能从资源ID定位；
+  \item 旧V4.1、V1.0及旧流程图前后哈希相同；
+  \item V4.2 PDF包含赛题原文、操作卡、688项总表和159项HTML矩阵；
+  \item 交接包不含密码、Cookie、令牌、认证头、Office锁文件或 \File{node_modules}；
+  \item 在新目录解压后重新计算清单哈希，并以相对路径完成不少于40项离线定位测试；
+  \item PDF逐页渲染检查，无乱码、裁切、重叠、异常空白页，最后一页显示V4.2。
+\end{enumerate}
+
+\input{v42_generated_appendices.tex}

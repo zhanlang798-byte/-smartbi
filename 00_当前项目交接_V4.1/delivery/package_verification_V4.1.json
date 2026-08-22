@@ -1,0 +1,25 @@
+﻿{
+    "verified_at":  "2026-08-16T07:04:39.2998944Z",
+    "package_name":  "XH-202612_计划与调研交接包_V4.1",
+    "version":  "V4.1",
+    "zip_file":  "XH-202612_计划与调研交接包_V4.1.zip",
+    "zip_size":  32114947,
+    "zip_sha256":  "a3948241190a01ad290de4f321f834f3ca7679fa57a9959f254ceb86417996fe",
+    "source_shared_archive_sha256":  "a6723afd6aac99cb5606b7fed1cdd1892707ad2a873eff71ea508c3216422ee5",
+    "file_count":  1032,
+    "roundtrip_file_count":  1032,
+    "roundtrip_differences":  [
+
+                              ],
+    "protected_files_unchanged":  true,
+    "protected_file_count":  1082,
+    "status_evidence_paths_resolved":  "24/24",
+    "shared_local_assets_resolved":  "306/306",
+    "private_only_original_path_hits":  0,
+    "secret_scan_hits":  0,
+    "current_handoff_absolute_path_hits":  0,
+    "offline_handoff_tests":  "32/32",
+    "package_root_relative_paths":  true,
+    "private_cold_backup_included":  false,
+    "overall_status":  "PASS"
+}

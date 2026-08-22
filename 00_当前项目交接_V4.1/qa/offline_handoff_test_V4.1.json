@@ -1,0 +1,201 @@
+{
+  "tested_at": "2026-08-16T07:04:12.852Z",
+  "test_count": 32,
+  "passed": 32,
+  "failed": 0,
+  "overall": "PASS",
+  "tests": [
+    {
+      "test_id": "HO-01",
+      "question": "当前权威计划书是什么？",
+      "pass": true,
+      "answer": "计划书/06_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.1.pdf"
+    },
+    {
+      "test_id": "HO-02",
+      "question": "状态截止日期是什么？",
+      "pass": true,
+      "answer": "2026-08-16"
+    },
+    {
+      "test_id": "HO-03",
+      "question": "归档资产总数是多少？",
+      "pass": true,
+      "answer": "688"
+    },
+    {
+      "test_id": "HO-04",
+      "question": "本地资产数是多少？",
+      "pass": true,
+      "answer": "180"
+    },
+    {
+      "test_id": "HO-05",
+      "question": "外部来源数是多少？",
+      "pass": true,
+      "answer": "508"
+    },
+    {
+      "test_id": "HO-06",
+      "question": "URL或DOI来源数是多少？",
+      "pass": true,
+      "answer": "507"
+    },
+    {
+      "test_id": "HO-07",
+      "question": "无URL题录数是多少？",
+      "pass": true,
+      "answer": "1"
+    },
+    {
+      "test_id": "HO-08",
+      "question": "引用关系数是多少？",
+      "pass": true,
+      "answer": "1478"
+    },
+    {
+      "test_id": "HO-09",
+      "question": "案例文件数是多少？",
+      "pass": true,
+      "answer": "45"
+    },
+    {
+      "test_id": "HO-10",
+      "question": "来源终态是否闭包？",
+      "pass": true,
+      "answer": "ARCHIVE_COMPLETE_WITH_EXPLICIT_GAPS"
+    },
+    {
+      "test_id": "HO-11",
+      "question": "归档工作状态是什么？",
+      "pass": true,
+      "answer": "COMPLETE_VERIFIED"
+    },
+    {
+      "test_id": "HO-12",
+      "question": "D0状态是什么？",
+      "pass": true,
+      "answer": "PARTIAL_REUSABLE"
+    },
+    {
+      "test_id": "HO-13",
+      "question": "D1状态是什么？",
+      "pass": true,
+      "answer": "NOT_STARTED"
+    },
+    {
+      "test_id": "HO-14",
+      "question": "D2状态是什么？",
+      "pass": true,
+      "answer": "PARTIAL_REUSABLE"
+    },
+    {
+      "test_id": "HO-15",
+      "question": "D6C状态是什么？",
+      "pass": true,
+      "answer": "PARTIAL_REUSABLE"
+    },
+    {
+      "test_id": "HO-16",
+      "question": "D6E状态是什么？",
+      "pass": true,
+      "answer": "PARTIAL_REUSABLE"
+    },
+    {
+      "test_id": "HO-17",
+      "question": "D12状态是什么？",
+      "pass": true,
+      "answer": "NOT_STARTED"
+    },
+    {
+      "test_id": "HO-18",
+      "question": "130国正式表完成了吗？",
+      "pass": true,
+      "answer": "未完成"
+    },
+    {
+      "test_id": "HO-19",
+      "question": "40国月度面板完成了吗？",
+      "pass": true,
+      "answer": "未完成"
+    },
+    {
+      "test_id": "HO-20",
+      "question": "20家企业年报库完成了吗？",
+      "pass": true,
+      "answer": "未完成"
+    },
+    {
+      "test_id": "HO-21",
+      "question": "Smartbi完成了什么？",
+      "pass": true,
+      "answer": "只读盘点完成，P0未开始"
+    },
+    {
+      "test_id": "HO-22",
+      "question": "Ji论文是否恢复？",
+      "pass": true,
+      "answer": "WEB-0115"
+    },
+    {
+      "test_id": "HO-23",
+      "question": "失效或失败来源是否有替代？",
+      "pass": true,
+      "answer": "11/11"
+    },
+    {
+      "test_id": "HO-24",
+      "question": "人工处理来源数是多少？",
+      "pass": true,
+      "answer": "16"
+    },
+    {
+      "test_id": "HO-25",
+      "question": "登录或付费限制数是多少？",
+      "pass": true,
+      "answer": "15"
+    },
+    {
+      "test_id": "HO-26",
+      "question": "秘密排除数是多少？",
+      "pass": true,
+      "answer": "4"
+    },
+    {
+      "test_id": "HO-27",
+      "question": "复用交叉表是否覆盖全部资产？",
+      "pass": true,
+      "answer": "688"
+    },
+    {
+      "test_id": "HO-28",
+      "question": "案例能否声称全部核验？",
+      "pass": true,
+      "answer": "不能，仅来源链接已索引"
+    },
+    {
+      "test_id": "HO-29",
+      "question": "下一步第一项是什么？",
+      "pass": true,
+      "answer": "D0：签署G0并冻结V4.1配置和新run_id"
+    },
+    {
+      "test_id": "HO-30",
+      "question": "旧V4.0和归档是否保持不变？",
+      "pass": true,
+      "answer": "1082/1082"
+    },
+    {
+      "test_id": "HO-31",
+      "question": "是否允许把metadata_only写成已下载？",
+      "pass": true,
+      "answer": "不允许"
+    },
+    {
+      "test_id": "HO-32",
+      "question": "后续是否从已有清单复用？",
+      "pass": true,
+      "answer": "688项均有复用路由"
+    }
+  ]
+}

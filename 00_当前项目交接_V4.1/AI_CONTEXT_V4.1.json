@@ -1,0 +1,110 @@
+{
+  "context_version": "V4.1",
+  "as_of": "2026-08-16",
+  "project_name": "面向中国出海企业的国别风险与应急储备智能决策平台",
+  "competition_code": "XH-202612",
+  "document_status": "调研成果同步与执行交接稿",
+  "current_authoritative_plan": "计划书/06_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.1.pdf",
+  "current_authoritative_plan_source": "计划书/06_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.1.tex",
+  "plan_pdf_sha256": "eda76000cefa492303d267e73e6a39a901aee75920e393494ed7538601d880c6",
+  "plan_tex_sha256": "bf1efe5a6006b4fbebdc91027f5cb26132c64b0f969619e539b9443d3dc3de92",
+  "authority_order": [
+    "00_当前项目交接_V4.1/README_先读我.md",
+    "计划书/06_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.1.pdf",
+    "调研资料归档_V1.0/00_交接入口/研究资料总清单.jsonl",
+    "计划书/05_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书.pdf",
+    "V1.1-V3.1历史计划书"
+  ],
+  "supersedes_for_current_status": "调研资料归档_V1.0/00_交接入口/AI_CONTEXT.json（保留为V4.0归档快照，不修改）",
+  "current_direction": "亚非拉国别风险、全球经济周期、多币种流动性与黄金战略储备的周期协同决策；美元与黄金对称检验，不预设单一胜者。",
+  "archive_snapshot": {
+    "run_id": "20260816_research_archive_v1",
+    "overall_state": "ARCHIVE_COMPLETE_WITH_EXPLICIT_GAPS",
+    "registry_sha256": "5c4fdd189e32160f4e06494f3390467196e23f99f1b5603fbdc2248befc658ac",
+    "total_asset_count": 688,
+    "local_asset_count": 180,
+    "external_source_count": 508,
+    "external_url_source_count": 507,
+    "no_url_reference_count": 1,
+    "citation_relation_count": 1478,
+    "case_count": 45,
+    "status_counts": {
+      "EXCLUDED_SECRET": 4,
+      "ALREADY_LOCAL_VERIFIED": 168,
+      "DUPLICATE_CONTENT": 11,
+      "METADATA_ONLY_LICENSE": 274,
+      "DOWNLOADED_VERIFIED": 189,
+      "MANUAL_ACTION_REQUIRED": 16,
+      "BROKEN_OR_UNREACHABLE": 5,
+      "FETCH_FAILED": 6,
+      "PAYWALL_OR_AUTH": 15
+    },
+    "redistribution_scope_counts": {
+      "metadata_only": 297,
+      "shared": 314,
+      "private_only": 77
+    },
+    "historical_files_unchanged": 201,
+    "report_pdf_pages": 96,
+    "report_visual_qa": "PASS",
+    "failed_or_broken_with_replacement": 11,
+    "shared_package_roundtrip": "PASS",
+    "shared_package_offline_test": "PASS",
+    "recovered_paper": {
+      "asset_id": "WEB-0115",
+      "file_name": "Ji_et_al_2026_Entropy_CNN-QRLSTM.pdf",
+      "sha256": "696a7249e4992eaa6a94f61f66daae76184226e42b9bda0015d6b33da9b8e4eb"
+    }
+  },
+  "status_enum": [
+    "COMPLETE_VERIFIED",
+    "PARTIAL_REUSABLE",
+    "NOT_STARTED",
+    "EXTERNAL_ACTION"
+  ],
+  "completed_verified": [
+    "调研资料归档与688项终态闭包",
+    "1478条引用关系索引",
+    "45份案例来源链接索引",
+    "Smartbi认证后只读能力盘点",
+    "共享归档包回环、秘密扫描和25问离线交接测试"
+  ],
+  "partially_reusable": [
+    "D0研究口径已有V4.0/V4.1文字合同，但尚未签署配置",
+    "D2已有来源发现、原件、许可和哈希快照，但尚未生成正式项目source_registry",
+    "D6C已有案例链接和部分资产工作簿，但尚未完成字段化与证据复核",
+    "D6E已有17份宏观案例种子，但尚未形成historical_crisis_event权威表"
+  ],
+  "not_completed": [
+    "130国正式覆盖表",
+    "40国月度量化面板",
+    "20家企业全量年报库",
+    "1971-2025全球周期正式数据",
+    "危机事件与组合模型",
+    "Smartbi数据写入和六页看板",
+    "AIChat数值验收",
+    "XML恢复与最终提交包"
+  ],
+  "do_not_claim": [
+    "调研归档完成等同于正式数据工程完成",
+    "45份案例已经全部核验",
+    "130国、40国或20家企业数据库已经完成",
+    "模型、看板、AIChat或XML恢复已经完成",
+    "metadata_only资料已下载全文",
+    "美元或黄金被预设为单一胜者"
+  ],
+  "next_action_order": [
+    "D0：签署G0并冻结V4.1配置和新run_id",
+    "D2：导入SOURCE_REUSE_CROSSWALK_V4.1.csv，建立正式source_registry种子",
+    "D1：建立130国唯一ISO3主表",
+    "D3-D7：按门槛推进正式数据工程",
+    "P0：取得写入批准后执行Smartbi四表小样"
+  ],
+  "machine_files": {
+    "status_csv": "00_当前项目交接_V4.1/PROJECT_STATUS_V4.1.csv",
+    "status_jsonl": "00_当前项目交接_V4.1/PROJECT_STATUS_V4.1.jsonl",
+    "source_crosswalk": "00_当前项目交接_V4.1/SOURCE_REUSE_CROSSWALK_V4.1.csv",
+    "archive_registry": "调研资料归档_V1.0/00_交接入口/研究资料总清单.jsonl",
+    "archive_gaps": "调研资料归档_V1.0/00_交接入口/缺失受限与待办清单.csv"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-08-16T10:56:41.335Z",
+  "status": "PASS",
+  "zip_path": "XH-202612_计划调研与数据可用化交接包_V4.2.zip",
+  "zip_size": 80356860,
+  "zip_sha256": "dee8b552000fb1a4ca9b44b561ac10809c953597aeb4a34724a78d9356b65262",
+  "staged_file_count": 1105,
+  "extracted_file_count": 1105,
+  "checksum_rows_verified": 1104,
+  "secret_scan_findings": 0,
+  "v10_shared_archive_hash_verified": true,
+  "redistribution_filter": "only V1.1 originals/extractions with redistribution_scope=shared",
+  "excluded_scopes": {
+    "private_only": 77,
+    "metadata_only": 297
+  }
+}

@@ -1,0 +1,15 @@
+﻿Author,Predictive_Model,Research_Methodology,Conclusion
+Ismail (2009) [18],Multiple Megression Model,"Influencing factors such as inflation, exchange rates, and money supply",Forecast the future movement of the gold price based on the influencing factors.
+Amina (2015) [19],Bivariate vector autoregression-VAR-GARCH,Dynamic Returns and Forecasts of China’s Gold and Stock Markets,Assessed the diversification and hedging effectiveness of gold in China.
+Li (2024) [20],Combining BP neural networks and ensemble empirical modal decomposition to build a new model,-,The effect of white noise is reduced compared to the original BP neural network to improve the robustness of the model.
+Hadavandi (2010) [21],Particle swarm optimization (PSO),Parameter estimation using PSO algorithm,It is able to cope with the volatility of the gold price time series and has good prediction accuracy.
+You (2025) [22],CNN and LSTM,-,Extracting data features to improve prediction accuracy.
+Poor (2024) [4],Introducing unstructured data to construct a CNN-based gold price prediction model,-,A highly accurate decision support tool for investors and financial institutions.
+Solikhun (2025) [23],Quantum computer,-,"Multiple computations can be performed simultaneously, enabling the solution of problems that are difficult to solve with classical computers."
+Nallamothul (2024) [24],SKGARCH and LSTM for skewness and Kurtosis,-,The problem of under-consideration of volatility information and non-normal distribution characteristics in traditional methods is addressed.
+Guo (2025) [25],The VMD-RES.-CEEMDAN-WOA-XGBoost model,Variable selection using a traditional LASSO model followed by prediction using QRNN,CEEMDAN is employed to decompose a residual term containing complex information following the VMD and XGBoost optimized by the WOA
+Bhavana (2025) [26],A multi-objective optimization framework,Utilizes Pareto alpha cutting techniques to evaluate and enhance gold price forecasting models,"ARDL achieves excellent accuracy and goodness-of-fit, while the stochastic model exhibits robust stability."
+Gijy (2025) [27],MWFKTS-RPWO,-,It provides an optimal balance between computational efficiency and accuracy compared to existing methods.
+Wu (2025) [28],An improved brain-inspired neural network,The GELU function and residual connections,"By utilizing residual connections to transmit information between shallow and deep layers, the network fully leverages information to mine deep hidden features."
+Chen (2025) [29],DROI framework,Coupled with an econometric breakpoint test,Effectively addressed the inherent complexities of electricity prices.
+Che (2025) [30],CEEMDAN-GAFSF-DBiGRU-OLSSA,-,It employs multi-temporal and spatial characteristics for wind speed modeling to enhance information acquisition and complex pattern analysis.

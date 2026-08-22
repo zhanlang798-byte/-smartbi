@@ -1,0 +1,12 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7
+,,"At December 31,",,,,
+,,2005,,2004,,
+Assets:,,,,,,
+Current,,$,78,,$,44
+Long-term,,,100,,,80
+,,,178,,,124
+Liabilities:,,,,,,
+Current (Note 12),,,14,,,2
+Long-term (Note 12),,,93,,,103
+,,,107,,,105
+"Deferred stripping, net",,$,71,,$,19

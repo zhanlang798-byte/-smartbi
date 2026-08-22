@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_KW" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_KW" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_KW_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_KW_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="B00001">
+    <xs:annotation>
+     <xs:documentation>Total Manufacturing (SIC) and Mining</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B00004">
+    <xs:annotation>
+     <xs:documentation>Total Manufacturing (SIC)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMFD">
+    <xs:annotation>
+     <xs:documentation>Durable Goods (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMFN">
+    <xs:annotation>
+     <xs:documentation>Non-Durable Goods (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G21">
+    <xs:annotation>
+     <xs:documentation>Mining</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B00002">
+    <xs:annotation>
+     <xs:documentation>Total Less Nuclear Non-defense</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B0000S">
+    <xs:annotation>
+     <xs:documentation>Utility Sales to Industry</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B0000G">
+    <xs:annotation>
+     <xs:documentation>Industrial Generation</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMF">
+    <xs:annotation>
+     <xs:documentation>Total Manufacturing (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMFO">
+    <xs:annotation>
+     <xs:documentation>Other Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G211">
+    <xs:annotation>
+     <xs:documentation>Oil and Gas Extraction</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G212">
+    <xs:annotation>
+     <xs:documentation>Mining (except Oil and Gas)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G213">
+    <xs:annotation>
+     <xs:documentation>Support Activities for Mining</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G311">
+    <xs:annotation>
+     <xs:documentation>Food Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G312">
+    <xs:annotation>
+     <xs:documentation>Beverage and Tobacco Product Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G313">
+    <xs:annotation>
+     <xs:documentation>Textile Mills</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G314">
+    <xs:annotation>
+     <xs:documentation>Textile Product Mills</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G315">
+    <xs:annotation>
+     <xs:documentation>Apparel Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G316">
+    <xs:annotation>
+     <xs:documentation>Leather and Allied Product Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G321">
+    <xs:annotation>
+     <xs:documentation>Wood Product Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G322">
+    <xs:annotation>
+     <xs:documentation>Paper Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G323">
+    <xs:annotation>
+     <xs:documentation>Printing and Related Support Activities</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G324">
+    <xs:annotation>
+     <xs:documentation>Petroleum and Coal Products Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G325">
+    <xs:annotation>
+     <xs:documentation>Chemical Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G326">
+    <xs:annotation>
+     <xs:documentation>Plastics and Rubber Products Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G327">
+    <xs:annotation>
+     <xs:documentation>Nonmetallic Mineral Product Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G331">
+    <xs:annotation>
+     <xs:documentation>Primary Metal Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G332">
+    <xs:annotation>
+     <xs:documentation>Fabricated Metal Product Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G333">
+    <xs:annotation>
+     <xs:documentation>Machinery Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G334">
+    <xs:annotation>
+     <xs:documentation>Computer and Electronic Product Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G335">
+    <xs:annotation>
+     <xs:documentation>Electrical Equipment, Appliance, and Component Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G336">
+    <xs:annotation>
+     <xs:documentation>Transportation Equipment Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G337">
+    <xs:annotation>
+     <xs:documentation>Furniture and Related Product Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G339">
+    <xs:annotation>
+     <xs:documentation>Miscellaneous Manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N1133">
+    <xs:annotation>
+     <xs:documentation>Logging</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G5111">
+    <xs:annotation>
+     <xs:documentation>Newspaper, Periodical, Book, and Database Publishers</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,57 @@
+{
+  "source_id": "WEB-0498",
+  "title": "Commodity Markets",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://www.worldbank.org/en/research/commodity-markets",
+  "extracted_at": "2026-08-16T09:22:19.566Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 3,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Latest Commodity Prices Published"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "(08/04/2026). The energy price index eased 1.1% in July, weighed down by declines in coal (-4.8%) and crude oil (-2.2%), partly offset by a 19.1% surge in European natural gas prices. The non-energy index remained broadly stable (+0.3%). Food prices changed little (-0.3%), fertilizers declined 4.3%, beverage prices rose 17.4%, while raw materials slipped 0.5%. Metals fell 2.8%, and precious metals retreated 5.2%."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Next update: September 2, 2026."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-July-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Latest Commodity Prices Published",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-August-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Commodity prices",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "Monthly prices",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "Annual prices",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Price forecasts",
+      "locator": "table-link"
+    }
+  ]
+}

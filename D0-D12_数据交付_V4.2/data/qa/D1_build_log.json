@@ -1,0 +1,23 @@
+{
+  "run_id": "20260817_v42",
+  "step": "D1",
+  "built_at": "2026-08-17T11:44:42",
+  "outputs": [
+    {
+      "path": "data\\staging\\country_master.csv",
+      "sha256": "22c11e87463748fdbc91ad88a378a07389fee1a914e04388f243b4251a98f652"
+    },
+    {
+      "path": "config\\currency_reform_table.xlsx",
+      "sha256": "7393de17c86c03e2492685de573d85f83c4e7c22a62b612b180942abe84706b8"
+    },
+    {
+      "path": "data\\qa\\unmapped_country_names.xlsx",
+      "sha256": "2676b297b7f572226d53c8d4a7e7850b68b47b16951eb1d12e7774d39f17e615"
+    },
+    {
+      "path": "data\\qa\\D1_country_master_qa.xlsx",
+      "sha256": "5bf57cae37c5f22047bc1bfc0d588906dd9211e3d26fdda9fabbe6df60158e6f"
+    }
+  ]
+}

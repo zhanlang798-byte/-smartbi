@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-08-16T07:04:12.852Z",
+  "registry_rows": 688,
+  "citation_rows": 1478,
+  "case_rows": 45,
+  "status_rows": 24,
+  "crosswalk_rows": 688,
+  "mandatory_status_fields_complete": true,
+  "failed_broken_replacements": "11/11",
+  "protected_files_unchanged": true,
+  "offline_handoff_tests": "32/32",
+  "pass": true
+}

@@ -1,0 +1,47 @@
+{
+  "source_id": "WEB-0049",
+  "title": "World Bank Data Help Desk",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://datahelpdesk.worldbank.org/",
+  "extracted_at": "2026-08-16T09:21:18.091Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 5,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "countries, staff from more than 170 countries, and offices"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "in over 130 locations, the World Bank Group is a unique"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "global partnership: five institutions working for"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "sustainable solutions that reduce poverty and build shared"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "prosperity in developing countries."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://datahelpdesk.worldbank.org/forums/170263-website-improvements/suggestions/9069739-fix-jsonp-prefix-capitalization-bug",
+      "extension": "",
+      "anchor_text": "Fix JSONP prefix capitalization bug.",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/1986166-how-can-i-download-data-from-the-gender-data-porta",
+      "extension": "",
+      "anchor_text": "How can I download data from the Gender Data Portal?",
+      "locator": "anchor"
+    }
+  ]
+}

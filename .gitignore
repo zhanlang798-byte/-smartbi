@@ -1,0 +1,34 @@
+# 大文件压缩包（本机保留，不上传）
+*.zip
+
+# Python虚拟环境与缓存
+.venv/
+__pycache__/
+*.pyc
+
+# Node依赖
+node_modules/
+
+# macOS垃圾文件
+__MACOSX/
+.DS_Store
+._*
+
+# Office临时文件
+~$*
+
+# LaTeX构建产物
+$build/
+$out/
+tmp/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.run.xml

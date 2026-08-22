@@ -1,0 +1,33 @@
+﻿column_1,column_2
+Algorithm 1. The EEMD model pseudo-code.,
+EEMD (Ensemble Empirical Mode Decomposition),
+"Parameters:
+N: Number of ensemble trials (typical range: 100–500)
+ϵ: Noise amplitude ratio (usually 0.1–0.3 of data STD)
+IMFmax: Maximum number of Intrinsic Mode Functions to extract
+Input:
+x(t): Original time series signal (length T)
+wn(t): White noise series for n-th trial
+1: /* Initialize IMF storage and parameters */
+2: IMFlist←∅, n←1
+3: Normalize x(t) to zero mean
+4: WHILE (n≤ N) DO5: /* Add controlled noise */6: xn(t)←x(t) + ϵ·wn(t)7: /*EMD Decomposition */8: r(t)←xn(t)/* Initialize residue */9:k←1/* IMF counter */10: WHILE (k≤IMFmax AND r(t) not monotonic) DO11: h(t)←r(t)/* Working signal */12: /*Extract k-th IMF */13: REPEAT14: Identify all local extrema of h(t)15: Interpolate upper envelope eup(t) (cubic spline)16: Interpolate lower envelope elo(t) (cubic spline)17: m(t)←eupt+elot2/* Meanenvelope */ 18: h(t)←h(t) − m(t)
+19: UNTIL (SD < 0.3)/* Stopping criterion */
+20: Store IMFkn←h(t)
+21: r(t)←r(t) − IMFkn
+22: k←k + 1
+23: END WHILE
+24: Store residue Rn(t)←r(t)
+25: /*Calculate the sample entropy or Shannon entropy for each IMF order*/
+26: FOR each IMF index k DO
+27: Compute SampEn(IMF_kn)
+28: END FOR
+29: *n←n + 1*
+30: END WHILE
+31: n←n + 1
+32: END WHILE
+33: /* Ensemble Averaging*/34: FOR each IMF index k DO35: IMF————kt←1N∑n=1NIMFknt
+36: Append IMF————kt to IMFlist
+37: END FOR
+38: R¯t←1N∑n=1NRnt/* Final residue */
+39: RETURN IMFlist, R¯t",

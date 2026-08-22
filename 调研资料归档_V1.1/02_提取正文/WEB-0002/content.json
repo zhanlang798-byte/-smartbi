@@ -1,0 +1,18 @@
+{
+  "source_id": "WEB-0002",
+  "title": "shanghai gold exchange",
+  "publisher": "上海黄金交易所",
+  "publication_date": "",
+  "source_url": "https://en.sge.com.cn/",
+  "extracted_at": "2026-08-16T09:21:15.757Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "These Rules are made pursuant to the Regulatory Rules for the SGE's Business of the PBC。"
+    }
+  ],
+  "outgoing_data_links": []
+}

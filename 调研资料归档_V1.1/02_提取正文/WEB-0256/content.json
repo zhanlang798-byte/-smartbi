@@ -1,0 +1,33 @@
+{
+  "source_id": "WEB-0256",
+  "title": "2020 FOMC Press Releases",
+  "publisher": "Federal Reserve Board",
+  "publication_date": "",
+  "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/2020-press-fomc.htm",
+  "extracted_at": "2026-08-16T09:21:24.231Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 3,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Board of Governors of the Federal Reserve System"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "The Federal Reserve, the central bank of the United States, provides"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "the nation with a safe, flexible, and stable monetary and financial"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.federalreserve.gov/datadownload",
+      "extension": "",
+      "anchor_text": "Data Download Program",
+      "locator": "anchor"
+    }
+  ]
+}

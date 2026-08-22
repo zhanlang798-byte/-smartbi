@@ -1,0 +1,9 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7,column_8,column_9,column_10,column_11,column_12,column_13
+,,Options Outstanding,,,,Options Exercisable,,,,,,
+Range of Exercise Prices,,NumberOutstanding,,Weighted-averageRemainingContractualLife(in years),,Weighted-averageExercisePrice,,NumberExercisable,,WeightedAverageExercisePrice,,
+$0 to $20,,"1,617,656",,3.4,,$,18.58,,"1,617,656",,$,18.58
+$20 to $30,,"2,319,789",,5.9,,$,25.98,,"2,000,581",,$,25.80
+$30 to $40,,"1,252,885",,7.9,,$,37.47,,"226,732",,$,34.87
+$40 to $50,,"3,758,594",,8.7,,$,45.47,,"1,590,466",,$,46.76
+$50+,,"484,745",,0.8,,$,60.77,,"484,745",,$,60.77
+,,"9,433,669",,6.6,,$,35.90,,"5,920,180",,$,32.58

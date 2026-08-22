@@ -1,0 +1,18 @@
+{
+  "source_id": "LCL-0160",
+  "title": "每日行情",
+  "publisher": "项目已有资料",
+  "publication_date": "2026-07-13",
+  "source_url": "",
+  "extracted_at": "2026-08-16T09:21:15.590Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "注意：支持查询2024年1月1日后的数据，若要查询更早数据，请点击历史数据查询"
+    }
+  ],
+  "outgoing_data_links": []
+}

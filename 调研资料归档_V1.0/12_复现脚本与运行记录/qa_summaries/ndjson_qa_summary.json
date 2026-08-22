@@ -1,0 +1,72 @@
+[
+  {
+    "asset_id": "LCL-0083",
+    "original_project_path": "最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/黄金价格传导链因素与时序数据_20260724.xlsx.inspect.ndjson",
+    "size_bytes": 30557280,
+    "sha256": "19079124b4bf9620aaaa826251d336fb2f6bc88b23a112934c8d5bc1c0c3a717",
+    "line_count": 80607,
+    "non_empty_lines": 80607,
+    "invalid_json_lines": 0,
+    "qa_result": "PASS"
+  },
+  {
+    "asset_id": "LCL-0085",
+    "original_project_path": "最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/金银价格波动影响因素与时序数据_20260726.xlsx.inspect.ndjson",
+    "size_bytes": 34974640,
+    "sha256": "207ab603f76ec588066120b57d2265c823c38c1b0b467fbc734e11dc3b37ca65",
+    "line_count": 91654,
+    "non_empty_lines": 91654,
+    "invalid_json_lines": 0,
+    "qa_result": "PASS"
+  },
+  {
+    "asset_id": "LCL-0087",
+    "original_project_path": "最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/金银价格波动影响因素与时序数据_中文字段版_20260726.xlsx.inspect.ndjson",
+    "size_bytes": 35103966,
+    "sha256": "65e698de0ccddf71f4ec460e3125c80599abcb306e9a699c7dd5fcb51df74eaa",
+    "line_count": 91946,
+    "non_empty_lines": 91946,
+    "invalid_json_lines": 0,
+    "qa_result": "PASS"
+  },
+  {
+    "asset_id": "LCL-0089",
+    "original_project_path": "最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/金银价格预测_官方数据与因素台账_20260713.xlsx.inspect.ndjson",
+    "size_bytes": 33120505,
+    "sha256": "48964f401365f9a00bb2988bff50b9dc8d19f0b6cb55eea312a71ed3cf81ddfd",
+    "line_count": 61422,
+    "non_empty_lines": 61422,
+    "invalid_json_lines": 0,
+    "qa_result": "PASS"
+  },
+  {
+    "asset_id": "LCL-0165",
+    "original_project_path": "最终数据/最终数据/research/media_sentiment_gold_paper/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/论文数据来源与复现清单.xlsx.inspect.ndjson",
+    "size_bytes": 4156109,
+    "sha256": "3f3960de6bf79f0fdbedd13be0eb34444d13838dd1df9b7c18930753c20d5b75",
+    "line_count": 13149,
+    "non_empty_lines": 13149,
+    "invalid_json_lines": 0,
+    "qa_result": "PASS"
+  },
+  {
+    "asset_id": "LCL-0166",
+    "original_project_path": "最终数据/最终数据/research/media_sentiment_gold_paper/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/formula_error_scan.ndjson",
+    "size_bytes": 60,
+    "sha256": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146",
+    "line_count": 1,
+    "non_empty_lines": 1,
+    "invalid_json_lines": 0,
+    "qa_result": "PASS"
+  },
+  {
+    "asset_id": "LCL-0176",
+    "original_project_path": "最终数据/最终数据/research/media_sentiment_gold_paper/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/workbook_inspect.ndjson",
+    "size_bytes": 15877,
+    "sha256": "0b6ae80ef747fff19c464db237e165e78ab63611686614db7def0cf6320c6353",
+    "line_count": 11,
+    "non_empty_lines": 11,
+    "invalid_json_lines": 0,
+    "qa_result": "PASS"
+  }
+]

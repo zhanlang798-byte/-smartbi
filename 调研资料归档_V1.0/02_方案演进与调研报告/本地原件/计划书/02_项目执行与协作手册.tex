@@ -1,0 +1,678 @@
+% !TEX program = xelatex
+\documentclass[UTF8,12pt,openany]{ctexbook}
+\newcommand{\BookShortTitle}{项目执行与协作手册}
+\input{planbook-style.tex}
+
+\begin{document}
+\PlanTitlePage
+  {项目执行与协作手册}
+  {V1.1：3--4 人团队的阶段门槛、九表接口与验收标准}
+  {本册面向执行团队，把第一册的研究判断转化为可分工、可交接、可暂停、可验收的工作制度。未经 G1、G2、G3 依次批准，不得提前采集正式数据、运行模型或发布资产配置结论。}
+  {项目与 Smartbi 架构、区域数据、风险模型、企业与交付负责人}
+
+\frontmatter
+\chapter*{Executive Summary / 执行摘要}
+\addcontentsline{toc}{chapter}{Executive Summary / 执行摘要}
+
+\begin{decisionbox}[执行总则]
+团队按“R0 案例治理 -- R1 事实核验 -- G1 方向复审 -- R2 数据可得性 -- G2 样本冻结 -- R3 方法设计 -- G3 可证伪性审查 -- E1 正式执行 -- E2 看板实现 -- E3 提交验收”推进。任何人不得用后续工作替代前置门槛，也不得因为截止日期临近而删除美元基准、反例或不确定性。
+\end{decisionbox}
+
+\begin{itemize}
+  \item \textbf{3 人与 4 人均可运行。}A 负责项目与 Smartbi 架构，B 统筹亚洲、非洲和拉丁美洲三个数据包，C 负责风险评分、事件研究与组合模型，D 负责企业年报、AIChat、报告、合规、视频与最终 QA；只有 3 人时 A 兼任 D。B 和 C 不合并，避免同一人同时生产并验证数据与模型。
+  \item \textbf{七条工作流不是七人团队。}项目、亚洲、非洲、拉丁美洲、企业披露、风险模型、AI 与交付七条工作流由实际 3--4 名成员兼任，工作流负责人不等于新增编制。
+  \item \textbf{交付物通过接口而非口头传递。}团队统一维护九张逻辑表、数据字典、来源台账、变更记录和门槛记录；所有模拟记录强制标记\Field{is_simulated=1}。
+  \item \textbf{门槛有否决权。}G1 未通过不得进入数据建设；G2 未通过不得建模；G3 未通过不得给配置建议。门槛失败不是“拖延”，而是控制错误结论进入作品。
+  \item \textbf{本阶段先评阅计划。}两册计划书经用户评阅并冻结后，团队才进入 R0。当前手册的日期是目标排程，不表示相应任务已经完成。
+\end{itemize}
+
+\chapter*{手册适用范围}
+\addcontentsline{toc}{chapter}{手册适用范围}
+本手册约束从案例整理到最终提交的协作方式。它不替代 Smartbi 产品文档，不提供黄金交易、制裁规避、外汇管制绕行、会计处理或法律意见。赛题规则以本地 12 页原始比赛方案为唯一来源\autocite{competition2026}。
+
+\tableofcontents
+
+\mainmatter
+\part{团队如何协作}
+
+\chapter{角色、职责与授权边界}
+
+\section{四名角色与七条工作流}
+\begin{longtable}{p{1.1cm}p{3.2cm}p{5.3cm}p{4.4cm}}
+\toprule
+\textbf{角色} & \textbf{名称} & \textbf{主要职责} & \textbf{不得单独决定}\\
+\midrule
+A & 项目负责人兼 Smartbi 架构 & 项目治理、赛题映射、门槛会议、版本冻结、五页架构与恢复路线 & 不得替 B 修改正式数据；不得替 C 改模型结果\\
+B & 区域数据负责人 & 130 国覆盖、40 国筛选；统筹亚洲、非洲、拉丁美洲三个工作包；九表数据发布 & 不得独自确认模型合理；不得覆盖原始数据\\
+C & 风险与组合模型负责人 & 风险评分、事件识别、收益拆分、面板与事件研究、压力测试、最多六家企业情景 & 不得删除不利结果；不得混合真实与模拟\\
+D & 企业与最终交付负责人 & 企业年报与案例、AIChat、报告、合规、视频、图表 QA 和提交包 & 不得在页面中重定义指标；不得以视觉效果修改事实\\
+\bottomrule
+\end{longtable}
+
+\section{3 人配置}
+若团队只有 3 人，A 兼任 D；B 和 C 保持独立。A/D 的时间先用于证据冻结和交付验收，视觉精修排在最后。任何情况下，C 对 B 发布的数据做抽样复算，B 对 C 的模型输入做字段与版本复核。
+
+\section{七条工作流映射}
+\begin{longtable}{p{1.4cm}p{4.4cm}p{2.1cm}p{5.5cm}}
+\toprule
+\textbf{流} & \textbf{工作流} & \textbf{牵头} & \textbf{边界与交接}\\
+\midrule
+W1 & 项目治理与 Smartbi 架构 & A & 冻结口径、页面与恢复合同；不制造数据或模型结果\\
+W2 & 亚洲数据包 & B & 按统一字典执行，不能单独改变国家资格规则\\
+W3 & 非洲数据包 & B & 与 W2 同源同口径，特殊汇率制度单独留痕\\
+W4 & 拉丁美洲数据包 & B & 官方/平行汇率分列，币制更替禁止静默拼接\\
+W5 & 中国企业年报与外部案例 & D & 保留真实披露粒度，地区信息不得推断到国家\\
+W6 & 风险评分、事件研究与组合模型 & C & 等权主模型、挑战模型、最佳非黄金基准与负结果\\
+W7 & AIChat、报告、合规、视频与 QA & D & 只消费冻结结果；A 负责 Smartbi 结构与恢复会签\\
+\bottomrule
+\end{longtable}
+
+\section{项目负责人不是“万能审批人”}
+A 可以召集会议、维护任务状态和冻结文档，但不能越过专业复核。合规问题需要指导老师或适用法域专业人士确认；Smartbi 技术问题需要平台负责人验证；关键数据需要原始来源。没有证据时，A 的口头判断不能升级事实状态。
+
+\section{RACI 总原则}
+R 表示执行，A 表示最终负责，C 表示必须会签，I 表示知会。每项任务只能有一个 A，但可以有多个 R/C。生产者和验证者必须不同；若人手不足，由下一道门槛主持人承担验证，不得自验自过。
+
+\begin{longtable}{p{4.6cm}ccccp{3.7cm}}
+\toprule
+\textbf{工作包} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{独立验证}\\
+\midrule
+R0 案例治理 & A/R & C & C & I & B 抽样关联\\
+R1 关键事实回源 & A/R & C & C & I & 指导老师抽查\\
+R2 数据可得性 & A & B/R & C & I & C 复核覆盖\\
+R3 指标与情景 & A & C & C/R & I & B 检查可计算性\\
+E1 正式数据 & A & B/R & C & I & C 抽样复算\\
+E1 正式模型 & A & C & C/R & I & B 核对输入版本\\
+E2 看板 & A & C & C & D/R & A/C 联合验收\\
+E3 报告与视频 & A/R & I & C & D/R & 全员交叉审阅\\
+E3 恢复与提交 & A & C & C & D/R & 非开发成员复现\\
+\bottomrule
+\end{longtable}
+
+\chapter{协作纪律与单一事实源}
+
+\section{权威文件层级}
+\begin{enumerate}
+  \item \textbf{比赛规则：}《XH-202612 Smartbi AI 驱动的数据创新平台研究比赛方案》；
+  \item \textbf{研究口径：}第一册《项目可行性研究与参赛方案书》冻结版；
+  \item \textbf{执行口径：}本手册冻结版；
+  \item \textbf{数据口径：}数据字典、来源台账和已发布数据版本；
+  \item \textbf{结论口径：}由冻结数据、冻结代码和门槛记录生成的结果；
+  \item \textbf{展示口径：}Smartbi、报告和视频只能消费上述结果，不得自行创造数字。
+\end{enumerate}
+
+历史《方案整合与实施路径》保留不动，只作为方向演变记录，不再拥有权威状态。
+
+\section{目录与版本约定}
+后续执行期建议使用以下逻辑目录；实际建立目录须在 G1 通过后进行：
+
+\begin{verbatim}
+project/
+  00_governance/     # 冻结口径、会议记录、变更单
+  01_sources/        # 来源目录与许可，不直接改原始文件
+  02_raw/            # 只读原始快照
+  03_processed/      # 清洗结果和质量报告
+  04_models/         # 冻结代码、参数、运行记录
+  05_results/        # 可交接的九张逻辑表与结果
+  06_smartbi/        # XML、截图、恢复记录
+  07_deliverables/   # 报告、视频、合规声明、提交包
+\end{verbatim}
+
+版本采用\Field{major.minor.patch}：样本、字段或方法改变提升 major；新增兼容字段提升 minor；修正文案或不改结果的缺陷提升 patch。任何输出记录\Field{data_version}、\Field{model_version}、\Field{generated_at}和负责人。
+
+\section{状态词只允许五种}
+任务状态统一为“未开始、进行中、待复核、通过、阻塞”。“差不多”“应该完成”“待优化”不能作为门槛状态。数据状态统一为“已确认、待复核、冲突、模拟、不适用”。
+
+\section{会议节奏}
+\begin{itemize}
+  \item 每日 15 分钟站会：昨天完成、今天计划、阻塞、需要谁处理；
+  \item 每晚发布一次状态快照：任务、输出路径、版本、验证人、遗留问题；
+  \item 门槛前 4 小时停止新增范围，只修阻塞缺陷；
+  \item 门槛会议必须产生“通过/有条件通过/不通过”记录及签字人；
+  \item 重要口径不得只存在聊天记录，必须进入变更单或冻结文档。
+\end{itemize}
+
+\part{阶段和门槛}
+
+\chapter{全流程状态机}
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=0.8cm and 0.55cm,
+  task/.style={draw=DeepNavy,rounded corners=2pt,fill=PaleBlue,text width=1.55cm,minimum height=1.05cm,align=center,font=\small},
+  gate/.style={draw=GoldAccent,diamond,aspect=1.7,fill=WarmGold,text width=1.25cm,align=center,font=\small\bfseries},
+  exec/.style={draw=SafeGreen,rounded corners=2pt,fill=SafeGreen!10,text width=1.55cm,minimum height=1.05cm,align=center,font=\small},
+  arr/.style={-{Latex[length=2.5mm]},thick,DeepNavy}
+]
+\node[task] (r0) {R0\\案例治理};
+\node[task,right=of r0] (r1) {R1\\事实核验};
+\node[gate,right=of r1] (g1) {G1};
+\node[task,right=of g1] (r2) {R2\\可得性};
+\node[gate,right=of r2] (g2) {G2};
+\node[task,right=of g2] (r3) {R3\\方法设计};
+\node[gate,right=of r3] (g3) {G3};
+\node[exec,below=1.2cm of r2] (e1) {E1\\数据模型};
+\node[exec,right=of e1] (e2) {E2\\看板解释};
+\node[exec,right=of e2] (e3) {E3\\提交验收};
+\draw[arr] (r0)--(r1); \draw[arr] (r1)--(g1); \draw[arr] (g1)--(r2);
+\draw[arr] (r2)--(g2); \draw[arr] (g2)--(r3); \draw[arr] (r3)--(g3);
+\draw[arr] (g3) |- (e1); \draw[arr] (e1)--(e2); \draw[arr] (e2)--(e3);
+\end{tikzpicture}
+}
+\caption{阶段状态机；G1、G2、G3 均为停止点，不允许跳过}
+\end{figure}
+
+\section{阶段总表}
+\begin{longtable}{p{1.3cm}p{3.6cm}p{4.7cm}p{4.5cm}}
+\toprule
+\textbf{阶段} & \textbf{目的} & \textbf{主交付物} & \textbf{退出条件}\\
+\midrule
+R0 & 清点、编号、去重 45 份案例 & 案例索引、事件簇、治理问题清单 & 45 份均入表，无孤立文件\\
+R1 & 回源关键事实 & 来源目录、页码、证据等级、冲突记录 & 核心命题满足证据门槛\\
+G1 & 复审方向是否值得继续 & 可行性决议 & 用户/指导老师批准或缩小范围\\
+R2 & 验证样本与字段可得性 & 130 国、40 国候选池、20 家企业与事件可得性表 & 缺失、频率和替代口径可解释\\
+G2 & 按规则冻结样本和字段 & 冻结清单 V1.1 & 40 国、最多六家企业、事件资格和九表契约明确\\
+R3 & 固定假设、基准、成本与情景 & 方法卡、测试用例、图表合同 & 结果允许推翻黄金假设\\
+G3 & 审查可证伪性和可实施性 & 方法决议 & 可计算、无预设结论、合规边界明确\\
+E1 & 正式数据和模型执行 & 九张逻辑表、结果、质量报告 & 复算通过，负结果保留\\
+E2 & 看板实现和结果解释 & 五页 Smartbi、问数测试、图表 QA & 故事、交互、来源、性能通过\\
+E3 & 报告、视频、恢复和提交 & 完整提交包 & 干净环境恢复和终检通过\\
+\bottomrule
+\end{longtable}
+
+\chapter{R0--R1：案例治理与关键事实核验}
+
+\section{R0 工作包}
+\begin{longtable}{p{1.8cm}p{4.5cm}p{4.4cm}p{3.2cm}}
+\toprule
+\textbf{任务} & \textbf{动作} & \textbf{产出} & \textbf{验收人}\\
+\midrule
+R0.1 & 枚举四类 45 份案例，记录原路径和标题 & \Field{case_inventory} & A\\
+R0.2 & 建稳定\Field{case_id}，不依赖历史文件编号 & ID 对照表 & B\\
+R0.3 & 为俄罗斯、伊朗、尼日利亚、阿根廷等建立事件簇 & \Field{event_cluster_id}表 & A+C\\
+R0.4 & 修复 README 状态、44/45 数量和宏观编号问题 & 治理变更清单 & A\\
+R0.5 & 标注支持、反驳、限定、冲突四种证据角色 & 初始证据矩阵 & C\\
+\bottomrule
+\end{longtable}
+
+R0 只治理元数据，不修改案例里的历史原文。若需改写案例，应保留原始版本与变更记录。
+
+\section{R1 回源顺序}
+优先核验会改变可行性判断的事实：企业损失、被困资金、持金行为、黄金冻结、制裁限制、会计分类、美元基准和重大反例。宏观背景性数字排在其后。
+
+\begin{enumerate}
+  \item A 先定位原始来源、文档日期、表名和页码；
+  \item C 检查数字是否能支持现有结论，特别区分损失与对冲效果；
+  \item B 检查时间、币种、单位和可计算性；
+  \item A 更新\Field{verification_status}和\Field{conflict_note}；
+  \item 证据冲突不得平均处理，必须记录两个口径并说明选择规则。
+\end{enumerate}
+
+\section{来源模板}
+每个关键数字使用以下记录：
+
+\begin{longtable}{p{3.4cm}p{10.5cm}}
+\toprule
+\textbf{字段} & \textbf{填写要求}\\
+\midrule
+\Field{claim_text} & 只写一个可核验主张，不把原因和结论混在一起\\
+\Field{value/unit/currency} & 原始单位与换算后单位均保留\\
+\Field{source_title} & 文档正式标题，不写“官网”\\
+\Field{publisher/date} & 发布机构和文档日期\\
+\Field{url/page/table} & 具体链接、页码、表名或段落\\
+\Field{source_tier} & A/B/C/D\\
+\Field{verification_status} & 已确认/待复核/冲突/不适用\\
+\Field{analyst_note} & 换算、限制、是否只是推断\\
+\bottomrule
+\end{longtable}
+
+\section{G1 通过标准}
+G1 同时满足以下条件才通过：
+
+\begin{itemize}
+  \item 项目问题价值至少有商务部等权威规模证据\autocite{mofcom2024ofdi}；
+  \item 关键损失机制至少各有一项 A 级或两项独立 B 级证据；
+  \item 企业案例明确承认证据缺口，不声称黄金已经减少损失；
+  \item 美元、套保、自然对冲和授信纳入比较；
+  \item 用户、指导老师和团队接受最优黄金权重为 0\%；
+  \item 合规边界不包含规避制裁或外汇管制的内容。
+\end{itemize}
+
+若 G1 不通过，记录“补证后重审”或“删除黄金子命题并保留国别风险平台”。
+
+\chapter{R2--G2：样本、字段和可得性冻结}
+
+\section{R2 只做可得性，不做正式数据建设}
+R2 的目标是证明每个字段在哪里、以什么频率、什么许可、什么缺失模式获得。可以读取少量样例或接口元数据，但不得把预审快照当成正式数据集。GEM 同时包含月度、季度和年度序列\autocite{worldbankgem}，WEO 属于年度数据库\autocite{imfweo}，AREAER 与 Chinn--Ito 主要作为年度政策变量\autocite{imfareaer,chinnito2023}；任何来源都必须按真实频率登记，不得复制成年内十二条“月度观测”。国别 GPR 只有在来源确有对应经济体月度序列时使用，不能默认覆盖全部 40 国\autocite{bdegpr2025}。
+
+\section{三层样本与事件衍生层}
+130 国是覆盖和投资版图母体，40 国是按规则筛选的量化层，20 家中国企业是公开披露画像层，危机事件从 40 国数据与权威资料中衍生。第一册附录中的 40 国只是候选池，不是冻结名单；最多六家深度企业也不预先指定。
+
+40 国必须满足项目定义的亚非拉实体经营国、有中国投资或企业存在证据、2010--2025 年汇率和 CPI 月度完整率分别达到 80\%。香港、澳门、开曼、英属维尔京、百慕大等资金通道不参与实体经营风险排名。区域配额固定为亚洲及中东 15、非洲 14、拉丁美洲 11；每区先按规则保留 3 个低风险对照国，其余按“中国投资暴露百分位乘以预审风险百分位”排序，并列时依次按数据完整度、投资暴露、ISO 代码确定。
+
+20 家企业名单与第一册一致：ICT 与电子为华为、中兴通讯、传音控股、联想集团；家电与消费制造为海尔智家、美的集团、海信家电、TCL 科技；汽车与新能源为比亚迪、上汽集团、吉利汽车、长城汽车；工程机械与装备为三一重工、徐工机械；基建与轨道交通为中国中车、中国交建；资源与能源为紫金矿业、洛阳钼业、中国海油、中国石油。MTN Nigeria、雀巢尼日利亚和 AB InBev 只作外部验证，不计入 20 家中国企业。
+
+\section{字段可得性登记}
+\begin{longtable}{p{3.1cm}p{3.8cm}p{3.5cm}p{3.6cm}}
+\toprule
+\textbf{检查项} & \textbf{记录} & \textbf{通过阈值} & \textbf{失败处置}\\
+\midrule
+国家覆盖 & 130 国投资或覆盖状态、渠道标签 & 每国有状态和来源；不承诺逐年企业数 & 缺失标记，不伪造完整年度序列\\
+核心月度 & 2010--2025 汇率、CPI 月份数 & 最终 40 国两项分别达到 80\% & 更换候选；仍不足 40 则 G2 不通过\\
+年度政策 & WEO、AREAER、Chinn--Ito 等年份 & 原频率、版本和可得年度明确 & 保留缺口，不向月度表填充\\
+危机事件 & 触发、合并、结束、窗口和证据 & 每区至少 5 个、总计不少于 20 个独立事件 & 不降阈值；不足则删除普遍性结论\\
+企业披露 & 海外/地区收入且有汇兑损益或外汇风险说明 & 20 家有基础记录；符合者进入量化画像 & 不足者降为基础案例\\
+深度企业 & 披露完整度、海外敞口、经营模式覆盖 & G2 自动选择最多六家 & 不预先保留指定公司\\
+许可与访问 & 公开、授权、条款、下载时间 & 每项均有明确状态 & 受限源只登记，不下载\\
+\bottomrule
+\end{longtable}
+
+\section{G2 冻结包}
+G2 会议输入必须包括：
+
+\begin{enumerate}
+  \item 130 国覆盖名录及地区归属；
+  \item 最终 40 国名单、资格证明、区域配额、排序分数与未入选原因；
+  \item 不少于 20 个合格独立事件的候选结果、证据和合并记录；不足时提交失败状态；
+  \item 20 家企业基础记录及自动选出的最多六家深度企业；
+  \item 九张逻辑表的主键、粒度、字段字典、频率和来源；
+  \item 缺失、替代、代理、许可和更新频率报告；
+  \item 预计数据量、Smartbi 接口形式和版本号。
+\end{enumerate}
+
+G2 通过后，任何主键、粒度、样本或主要指标变化都提升 major 版本，并重新评估下游模型和看板。
+
+\chapter{R3--G3：指标、基准和可证伪性}
+
+\section{方法卡必须先于建模}
+每个指标或模型先填写方法卡：业务问题、假设、观察单位、时间窗口、基准、输入字段、缺失处理、成本、输出、失败条件、敏感性和合规限制。没有方法卡不得编码。
+
+\section{五个假设与责任人}
+\begin{longtable}{p{1.2cm}p{7.4cm}p{2.2cm}p{2.2cm}}
+\toprule
+\textbf{假设} & \textbf{内容} & \textbf{负责人} & \textbf{验证人}\\
+\midrule
+H1 & 本币收入与美元成本/债务错配放大企业损失 & C & B\\
+H2 & 黄金可能优于本币，但未必优于美元短债 & C & A\\
+H3 & 黄金相对美元的增量价值集中于美元获得/托管/支付受限 & C & A\\
+H4 & 托管、折价、会计和合规成本可能抵消价值 & A+C & B\\
+H5 & 最优黄金比例随情景变化，允许为 0\% & C & B+A\\
+\bottomrule
+\end{longtable}
+
+\section{危机识别与统计合同}
+候选事件由以下任一条件触发：12 个月本币对美元贬值不低于 20\%；CPI 同比不低于 15\%；官方汇率与可信平行市场汇率差不低于 20\%；资本管制明显收紧；出现资金冻结、汇出限制或银行中断。同国同类触发连续出现或间隔不超过 2 个月时合并；所有定量指标连续 3 个月退出阈值，或正式限制解除后，事件才结束。窗口固定为开始前 12 个月至结束后 24 个月，事件性质须由一项 A 级或两项独立 B 级证据确认。
+
+跨国模型使用国家固定效应与日历时间固定效应，按国家聚类稳健误差，并报告小簇稳健敏感性；三大区域分别估计或使用交互项。等权风险指数是透明主模型，熵权与 PCA 是挑战模型。所有结果只描述历史相关性和情景结果，不宣称因果关系。
+
+\section{策略与成本矩阵}
+\begin{longtable}{p{3.2cm}p{4.5cm}p{5.4cm}}
+\toprule
+\textbf{策略} & \textbf{必须计入} & \textbf{可用性检查}\\
+\midrule
+本币现金 & 通胀、贬值、存款风险 & 支付可用、汇出限制\\
+美元现金/3 月短债 & 汇差、票息、账户与托管 & 获取额度、银行可用性、制裁\\
+远期/NDF & 点差、保证金、展期、违约 & 市场是否存在、结算币种\\
+自然对冲 & 业务调整成本、期限错配 & 收入与成本是否真实匹配\\
+承诺授信 & 承诺费、利率、提款条件 & 压力时能否提款\\
+账户型/ETF 黄金 & 管理费、点差、跟踪误差 & 发行人、托管人、赎回权\\
+实物黄金 & 保管、保险、运输、鉴定、折价 & 所有权、法域、合法交易对手\\
+混合组合 & 再平衡与各项成本 & 资产间是否同时受限\\
+\bottomrule
+\end{longtable}
+
+所有含黄金策略必须和同一信息集、同一现金约束下表现最好的非黄金基准比较，不能只与纯本币现金比较。自然对冲和承诺授信没有统一的月度市场回报，保留在压力情景模型中，不得伪造成\Field{asset_monthly_return}中的价格收益序列。
+
+\section{收益拆分单元测试}
+任何本币黄金收益必须满足：
+\[
+1+r_{\text{本币黄金}}=(1+r_{\text{美元黄金}})(1+r_{\text{美元兑本币}}).
+\]
+单元测试至少包含：美元金价不变但本币贬值；汇率不变但美元金价变化；两者同时变化；缺失汇率；官方与平行汇率并存。结果页同时展示美元金价贡献、汇率贡献和交互项。
+
+\section{G3 否决清单}
+出现任一情况，G3 不通过：
+
+\begin{itemize}
+  \item 没有美元资产基准或把美元基准设置成不合理高成本；
+  \item 含黄金结果没有与表现最好的非黄金基准比较；
+  \item 默认黄金必为正权重，或报告模板无法显示 0\%；
+  \item 用危机结束后数据决定危机开始时的策略；
+  \item 成本、折价、可用性或合规约束没有进入模型；
+  \item 官方和平行汇率混合却不标记；
+  \item 模拟企业数据未标\Field{is_simulated=1}；
+  \item 风险排名在等权、熵权和 PCA 下不稳定，却仍输出确定性建议。
+\end{itemize}
+
+\part{正式执行与交付接口}
+
+\chapter{E1：正式数据和模型执行}
+
+\section{数据发布顺序}
+B 按“原始快照 -- 结构验证 -- 清洗 -- 逻辑表 -- 质量报告 -- 发布”的顺序工作。原始快照只追加，不覆盖；所有转换均能从原始快照重建。正式数据从 G2 冻结版本开始，不沿用 R2 预审文件。
+
+\section{清洗规则}
+\begin{longtable}{p{3.3cm}p{5.4cm}p{4.7cm}}
+\toprule
+\textbf{问题} & \textbf{处理} & \textbf{质量证据}\\
+\midrule
+国家名称不一致 & 用稳定 ISO/内部 ID 映射，保留原名 & 未匹配清单为 0 或有解释\\
+频率不同 & 年度用于排名，月度用于事件窗口，不盲目升频 & 频率字段与聚合规则\\
+官方/平行汇率 & 分列为不同指标，不互相覆盖 & \Field{rate_type}与来源\\
+缺失值 & 保留缺失；必要替代需\Field{is_proxy=1} & 缺失率和替代率\\
+异常值 & 先查事件和单位，禁止机械删除危机值 & 规则、保留/修正理由\\
+单位与币种 & 原值、原单位、换算值、汇率版本均保留 & 可逆换算抽查\\
+发布日期 & 保存观测期与发布日期，防止前视 & \Field{observation_date}/\Field{release_date}\\
+\bottomrule
+\end{longtable}
+
+赛题示例提到“异常值剔除比例不超过 10\%”，这不是要求团队删除异常值，而是要求说明规则\autocite[6--7]{competition2026}。在本项目中，极端值可能正是危机事实，优先保留并标注。
+
+\section{质量闸门}
+每次数据发布必须通过：主键唯一、必填字段完整、单位合法、时间范围正确、来源可访问、换算可复算、模拟标记正确、行数变化可解释、公式错误为零、抽样数字与原始来源一致。
+
+\section{模型运行记录}
+C 每次运行记录数据版本、代码版本、参数、随机种子（如适用）、开始/结束时间、运行环境、输出路径和摘要哈希。不得只保存最终 Excel 或图片而丢失运行配置。
+
+\section{负结果处理}
+若黄金不优于美元短债，结果照常发布；若某些企业最优权重为 0\%，不得删除这些行；若模型对成本极敏感，页面显示区间；若某国资料不足，输出“证据不足”，不使用相邻国家填补。
+
+\chapter{九张逻辑表的数据契约}
+
+\begin{landscape}
+\footnotesize
+\begin{longtable}{p{3.8cm}p{4.1cm}p{7.6cm}p{5.5cm}}
+\caption{V1.1 九表接口与主键}\label{tab:nine-table-contract}\\
+\toprule
+\textbf{逻辑表} & \textbf{主键} & \textbf{核心内容} & \textbf{关键质量约束}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{逻辑表} & \textbf{主键} & \textbf{核心内容} & \textbf{关键质量约束}\\
+\midrule
+\endhead
+\Field{country_exposure} & \Field{country_id+year} & 投资流量、存量、企业覆盖状态、区域、实体经营/资金通道标签 & 流量、存量和覆盖快照按实际披露分别展示，不补造逐年企业数\\
+\Field{country_monthly_risk} & \Field{country_id+month} & 真实月频汇率、CPI、外储、可得的国别 GPR、完整率与质量字段 & 汇率与 CPI 各达到 80\%；年度值不得填入月度列\\
+\Field{country_policy_year} & \Field{country_id+year+policy_id} & AREAER、Chinn--Ito 等年度资本与汇出政策变量 & 保存原始年度和版本；不得复制为十二个月\\
+\Field{country_event} & \Field{event_id} & 触发条件、开始/结束、窗口、严重度、证据、事件簇与全球冲击簇 & 合并、结束和证据门槛可复算；不足 20 不降阈值\\
+\Field{company_overseas_exposure} & \Field{company_id+fiscal_year+disclosed_region_id} & 海外/地区收入、汇兑损益、境外子公司、风险说明和披露质量 & 只有地区披露时禁止推断到国家；量化画像满足双条件\\
+\Field{asset_monthly_return} & \Field{country_id+month+asset_id+currency_basis} & 本币、美元短债、黄金、可计算套保代理的收益、成本和可用性 & 同一计价、同一时点；自然对冲/授信不伪造成收益序列\\
+\Field{portfolio_scenario} & \Field{scenario_id+strategy_id+run_version} & 配置输入、运营现金约束、合规状态、覆盖、CVaR、回撤、折价与建议 & 无前视；含黄金结果必须带最佳非黄金基准\\
+\Field{case_evidence} & \Field{case_id+claim_id+source_id} & 45 份案例、事件簇、支持/反驳/限定/冲突、等级、页码和状态 & 核心结论一项 A 或双 B；重复事件不重复计数\\
+\Field{source_registry} & \Field{source_id+data_version} & URL、许可、抓取日期、数据版本、校验值和原始/代理/模拟标签 & 同一来源单点维护；快照、许可和哈希可审计\\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{landscape}
+
+\section{共享追溯字段与口径}
+结果与派生记录按适用性携带\Field{currency_basis}、\Field{source_id}、\Field{vintage_date}、\Field{is_proxy}、\Field{is_simulated}、\Field{data_version}和\Field{run_version}。本币、美元和人民币口径通过新增明确记录或字段输出，禁止覆盖原始值。模拟记录还必须有\Field{assumption_source}、\Field{generation_logic}和\Field{replaceable_field}。
+
+\section{旧接口迁移对照}
+\begin{longtable}{p{4.1cm}p{5.2cm}p{4.5cm}}
+\toprule
+\textbf{V1.0} & \textbf{V1.1 去向} & \textbf{迁移验收}\\
+\midrule
+\Field{country_year} & \Field{country_exposure}、\Field{country_monthly_risk}、\Field{country_policy_year} & 按原始频率拆分，月度与年度不混频\\
+\Field{country_event_month} & \Field{country_event}、\Field{country_monthly_risk}、\Field{asset_monthly_return} & 事件元数据与观测值分离\\
+\Field{company_country_exposure} & \Field{company_overseas_exposure} & 保留公司原始披露粒度\\
+\Field{case_evidence} & \Field{case_evidence} & 主键扩展来源维度，事件簇延续\\
+\Field{reserve_strategy_result} & \Field{portfolio_scenario} & 加入运行版本、合规状态与最佳非黄金基准\\
+\bottomrule
+\end{longtable}
+
+\chapter{E2：Smartbi 看板和解释交接}
+
+\section{交给 D 的不是“做个好看的看板”}
+D 只接收冻结的九张逻辑表、指标字典、页面定义、图表合同和验收用例。Smartbi 内不得重新计算一个与 C 结果不同的风险分数；如平台必须计算，公式需进入指标字典并由 B/C 双签。
+
+\section{五页交接包}
+\begin{longtable}{p{2.5cm}p{4.3cm}p{4.2cm}p{3.0cm}}
+\toprule
+\textbf{页面} & \textbf{数据输入} & \textbf{最小交互} & \textbf{验收结论}\\
+\midrule
+风险全景 & \Field{country_exposure} + \Field{country_monthly_risk} & 地区、国家、时间；地图到排名联动 & 能定位优先关注国且看到不确定性\\
+单国下钻 & 月度风险 + 年度政策 + \Field{country_event} & 国家、事件、汇率口径 & 能解释风险何时发生且不混频\\
+企业敞口 & \Field{company_overseas_exposure} & 行业、企业、地区、真实/模拟 & 不把地区披露推断到国家\\
+策略比较 & \Field{asset_monthly_return} + \Field{portfolio_scenario} & 情景、策略、成本、黄金权重 & 显示最佳非黄金基准及黄金为 0\\
+决策、合规与证据 & \Field{case_evidence} + \Field{source_registry} & 状态、风险、等级、核验与来源 & 停机优先，建议能回到原始证据\\
+\bottomrule
+\end{longtable}
+
+\section{图表选择合同}
+趋势图至少有 8--12 个有效时间点；长国家名用水平条形图；跨策略精确比较优先使用点区间图或分组条形图；证据使用表格而不是饼图；地图只表达地理分布，不替代排名。每个图表必须有中性标题、单位、时间范围、数据源和邻近解释。
+
+\section{AIChat 二十题测试集}
+AIChat 只作为已冻结指标的自然语言入口，不是事实生成器。20 个固定问题与第一册编号一致：Q01--Q05 为投资与风险、区域事件频率、评分变化、完整率和资金通道；Q06--Q10 为美元优于黄金、0\%到 5\%黄金变化、最佳非黄金基准、零权重场景和成本影响；Q11--Q14 为等权/熵权/PCA 敏感性、事件触发、币种错配和参数敏感性；Q15--Q18 为来源版本、企业披露粒度、案例证据与代理/模拟追溯；Q19--Q20 为合规停机和管理层简报。
+
+每题记录当前筛选、期望答案、实际答案、关键字段、来源引用、是否幻觉、延迟和回退提示。数值题正确率不低于 90\%，关键数值误差不超过 1\%；“企业与高风险国家重合”只能按企业真实披露粒度作答，只有地区披露时必须拒绝下钻到具体国家。涉及制裁、会计或专业意见时，期望答案必须包含停止与人工复核。
+
+\section{性能与交互验收}
+赛题要求交互响应不超过 10 秒\autocite[7--8]{competition2026}。D 在固定演示环境记录每页首次加载、筛选、下钻和跨页跳转时间，至少重复三次并保存中位数与最慢值。若不达标，先减少查询量、预聚合或调整模型，不删除业务解释。
+
+\chapter{E3：报告、视频、恢复与提交}
+
+\section{最终报告}
+最终数据分析报告与本计划书不同。它必须使用正式结果，按“问题--数据--方法--结果--反例--建议--限制--Smartbi 实现”展开。任何占位符、XX\%、未经核验数字或待办不得进入提交稿。
+
+\section{视频}
+赛题原文存在“3 分钟以内”和“3--5 分钟”冲突，本项目按不超过 3 分钟执行\autocite[5--8]{competition2026}。脚本建议：
+
+\begin{longtable}{p{2.2cm}p{4.5cm}p{7.0cm}}
+\toprule
+\textbf{时长} & \textbf{段落} & \textbf{必须展示}\\
+\midrule
+0:00--0:25 & 痛点与中国视角 & 权威规模、用户、核心问题\\
+0:25--1:05 & 风险全景与单国下钻 & 地图、排名、汇率/通胀/事件联动\\
+1:05--1:40 & 企业敞口 & 20 家画像、最多六家情景、模拟标记\\
+1:40--2:25 & 策略比较 & 美元与黄金同台、成本、可用性、负结果\\
+2:25--2:45 & AI 与证据 & 问数、来源回溯、反例\\
+2:45--3:00 & 建议与边界 & 行动建议、合规停止、项目价值\\
+\bottomrule
+\end{longtable}
+
+\section{Smartbi 资源恢复}
+恢复测试由未参与看板搭建的成员执行：在干净环境导入 XML 或导出包，连接示例数据，检查五页、筛选、下钻、指标、AI 功能和账号权限。记录环境、操作步骤、开始/完成时间、错误、修复和截图。只有“从零恢复成功”才算可复现；开发环境能打开不算。
+
+\section{提交包清单}
+\begin{enumerate}[label=\ensuremath{\square}]
+  \item 审核通过的报名表，信息与系统一致；
+  \item 正式数据分析报告；
+  \item Smartbi XML/导出包或在线环境与账号；
+  \item 不超过 3 分钟的演示视频；
+  \item 示例数据、数据字典和字段说明；
+  \item 原始数据来源、许可和合规声明；
+  \item 操作/部署指南、启动与登录截图；
+  \item 恢复测试记录和文件校验和；
+  \item 团队 Smartbi 操作日志或账号信息；
+  \item 按赛题要求命名并邮件提交，留存已发送与附件清单。
+\end{enumerate}
+
+提交邮箱和命名以截止前复核的赛题原文为准，不在本手册中复制个人联系方式，避免版本漂移。
+
+\part{排程、风险和质量控制}
+
+\chapter{时间安排与任务依赖}
+
+\section{倒排计划}
+\begin{longtable}{p{2.8cm}p{5.2cm}p{3.4cm}p{2.7cm}}
+\toprule
+\textbf{日期} & \textbf{目标} & \textbf{负责人} & \textbf{门槛/输出}\\
+\midrule
+8 月 15--17 日 & 两册 V1.1 评阅、国家选择规则、来源与案例问题清单 & A，B/C/D 会签 & 口径冻结与 G1\\
+8 月 17--21 日 & 130 国覆盖预审、40 国筛选、20 家企业初表与案例核验 & B+D，A/C 复核 & R0/R1/R2 与 G2\\
+8 月 20--24 日 & 合格事件识别、风险评分、资产比较与跨国统计 & C，B 验证 & R3/G3 后进入 E1\\
+8 月 22--26 日 & 五页 Smartbi、企业--地区联动与九表交接 & A，B/C/D 会签 & E2 数据与页面验收\\
+8 月 25--28 日 & AIChat 二十题、正式报告、合规说明和视频脚本 & D，A/C 复核 & E2/E3 初验\\
+8 月 28--30 日 & 反例检查、性能测试、XML 恢复和材料互审 & 全员交叉验证 & E3 恢复记录\\
+8 月 31 日 & 内容冻结、提交包终检、正式提交并留存发送证据 & A+D，全员会签 & E3 完成\\
+\bottomrule
+\end{longtable}
+
+这是 3--4 人条件下的高风险目标排程，表中重叠只表示可并行准备，不授权跳过 G1、G2、G3。赛题要求 9 月 1 日前提交，因此 8 月 31 日既是终检日也是正式提交日；门槛延期时必须压缩非核心范围、降低结论强度或明确验收失败，不能把未通过事项伪造成完整交付。
+
+\section{关键路径}
+关键路径为 R1 关键证据 -- G1 -- R2/G2 -- R3/G3 -- E1 结果 -- E2 看板 -- E3 恢复。案例长尾补证、视觉精修和扩展 AI 问句不在关键路径上。Smartbi 账号与最小恢复验证虽属于 E2/E3，但环境可得性应尽早做只读/最小验证，避免最后才发现门槛不可达。
+
+\section{延期时的保留优先级}
+按顺序保留：证据质量；40 国主干数据；自动选出的最多六家深度企业；最佳非黄金基准与反例；五页故事线；恢复与合规材料。可缩减的是非核心案例的文字长度、装饰性图表和企业画像的非必填字段；20 个固定 AIChat 问题属于验收合同，不得静默删减。不得通过伪造完整性、删除负结果或把模拟写成真实来赶进度。
+
+\chapter{风险登记与升级机制}
+
+\begin{longtable}{p{1.2cm}p{4.2cm}p{3.7cm}p{4.5cm}}
+\toprule
+\textbf{ID} & \textbf{风险} & \textbf{预警信号} & \textbf{应对与负责人}\\
+\midrule
+K01 & 企业级证据不足 & 关键损失只有媒体转述 & A 回源；G1 缩小结论\\
+K02 & 40 国可比性不足 & 汇率或 CPI 月度完整率合格者不足区域配额或 40 国 & B 按候选池换入；仍不足则 G2 不通过\\
+K03 & 黄金被模型预设为正 & 所有情景权重都非零 & C 检查目标函数；A 否决 G3\\
+K04 & 模拟与真实混淆 & 页面无法筛选\Field{is_simulated} & B/D 阻止发布\\
+K05 & Smartbi 环境不可用 & 账号、模块或 XML 权限缺失 & D 立即升级，评估参赛终止条件\\
+K06 & 合规内容越界 & 出现规避制裁/管制操作建议 & A 删除并专业复核\\
+K07 & 恢复失败 & XML 在干净环境缺资源或字段 & D 回滚到冻结版本并重测\\
+K08 & 截止期压缩 & 关键路径延误超过 1 天 & A 启用保留优先级，不降证据标准\\
+K09 & 引用漂移 & 链接更新、页面无具体数字 & A 保存文档日期/页码/快照元数据\\
+K10 & 结论不稳定 & 等权、熵权、PCA 排名差异大 & C 报告区间，不给确定建议\\
+K11 & 独立事件不足 & 三大区域任一区少于 5 个或合计少于 20 个 & 不降阈值；G2 记录未通过并删除普遍性结论\\
+\bottomrule
+\end{longtable}
+
+阻塞先由任务负责人在当日站会提出；影响门槛、合规、截止或权威口径时立即升级给 A 和指导老师，不等到次日。
+
+\chapter{质量保证与最终验收}
+
+\section{四层验证}
+\begin{enumerate}
+  \item \textbf{结构验证：}文件、字段、主键、类型、范围；
+  \item \textbf{数值验证：}抽样回源、换算、公式、单元测试；
+  \item \textbf{分析验证：}基准、公平窗口、成本、敏感性、负结果；
+  \item \textbf{呈现验证：}图表可读、来源可见、交互、恢复、视频和 PDF。
+\end{enumerate}
+
+\section{Definition of Done}
+一项任务只有同时满足“输出存在、格式正确、来源完整、验证人签字、遗留问题登记、下游可消费”才完成。代码运行成功、LaTeX 编译成功、Smartbi 页面能打开或文件已上传都不是单独的完成证明。
+
+\section{跨册一致性}
+两册和后续作品必须一致使用：项目名称；130 国覆盖、规则筛选的 40 国、20 家企业与事件衍生层；五个假设；六项指标；九张逻辑表；五页看板；20 个 AIChat 问题；R0--E3 阶段；A--D 角色和 8 月 31 日提交日期。任何改变先更新权威口径，再更新下游，禁止只改演示稿。
+
+\section{最终终检问题}
+\begin{enumerate}[label=\ensuremath{\square}]
+  \item 忙碌评审能否在摘要和前两页知道项目有条件可行？
+  \item 每个重要数字是否能回到文档页码而不是机构首页？
+  \item 45 份案例是否全入矩阵且重复事件没有重复计数？
+  \item 40 国、最多六家深度企业和危机事件是否都在 G2 后按规则冻结？
+  \item 月度、年度和事件数据是否分表管理，九表接口是否一致？
+  \item 每个含黄金结果是否与最佳非黄金基准比较？
+  \item 结果是否允许黄金权重为 0\%？
+  \item 2008 初期同跌、2013 暴跌、1980--2000 熊市等反例是否可见？
+  \item 模拟数据是否全有\Field{is_simulated=1}和假设来源？
+  \item 受限场景是否先停止建议并升级合规？
+  \item Smartbi 是否在干净环境恢复，五页和指标是否一致？
+  \item 20 个 AIChat 固定问题是否达到正确率、误差和停机要求？
+  \item 视频是否不超过 3 分钟，8 月 31 日提交材料是否逐项可打开？
+\end{enumerate}
+
+\appendix
+\part{可直接使用的协作模板}
+
+\chapter{门槛会议记录模板}
+\begin{longtable}{p{3.4cm}p{10.5cm}}
+\toprule
+\textbf{字段} & \textbf{填写内容}\\
+\midrule
+门槛编号/日期 & G1/G2/G3，会议开始和结束时间\\
+输入版本 & 文档、数据、方法卡、代码和结果版本\\
+参会与角色 & 主持、汇报、验证、决策、记录\\
+必须条件 & 每条通过/不通过及证据路径\\
+重大反例 & 是否保留、是否改变结论\\
+未决问题 & 负责人、截止时间、是否阻断下游\\
+决议 & 通过/有条件通过/不通过\\
+允许启动的下游 & 精确到任务 ID，不写“继续推进”\\
+签字/确认 & A、验证人、用户或指导老师\\
+\bottomrule
+\end{longtable}
+
+\chapter{变更单模板}
+\begin{longtable}{p{3.4cm}p{10.5cm}}
+\toprule
+\textbf{字段} & \textbf{填写内容}\\
+\midrule
+变更 ID & CHG-日期-序号\\
+提出人/日期 & 姓名、角色、时间\\
+变更对象 & 样本、字段、方法、指标、看板、排程或结论\\
+原口径/新口径 & 可逐字比较\\
+原因和证据 & 数据缺失、错误修复、用户决策或合规要求\\
+影响分析 & 九张表、模型、图表、报告、视频、恢复包\\
+版本变化 & major/minor/patch\\
+验证与回滚 & 谁验证、失败如何恢复\\
+批准人 & 对应权威文件的 A 和会签人\\
+\bottomrule
+\end{longtable}
+
+\chapter{数据发布清单}
+\begin{enumerate}[label=\ensuremath{\square}]
+  \item 发布目录只包含冻结输出，不混入临时文件或 Office 锁文件；
+  \item 行数、列数、主键重复数、缺失率和代理率已记录；
+  \item 所有货币、百分数和日期格式统一；
+  \item 官方/平行汇率未混列；
+  \item 模拟记录均为\Field{is_simulated=1}；
+  \item 关键数值抽样回源，转换可逆；
+  \item 数据版本和字典版本一致；
+  \item 文件校验和已生成；
+  \item C 已复核模型所需字段；
+  \item D 已用接口样例完成导入验证。
+\end{enumerate}
+
+\chapter{图表验收记录模板}
+\begin{longtable}{p{3.2cm}p{4.0cm}p{6.5cm}}
+\toprule
+\textbf{字段} & \textbf{示例} & \textbf{规则}\\
+\midrule
+页面/图表 ID & P4-C03 & 稳定 ID，可回到需求\\
+分析问题 & 哪种策略改善尾部损失 & 一张图只回答一个主要问题\\
+图表家族 & 点区间图 & 与比较关系匹配\\
+数据表/字段 & \Field{portfolio_scenario} & 使用冻结字段\\
+标题/副标题 & 策略尾部损失；某情景、单位 & 标题中性，副标题说明范围\\
+来源与版本 & data V1.2 / model V1.0 & 可追溯\\
+邻近解释 & 美元优于黄金时如实写出 & 不把洞察藏在标题里\\
+视觉检查 & 标签、单位、图例、颜色、溢出 & 不只靠红绿，不缩小到不可读\\
+验收结果 & 通过/修复后通过/不通过 & 记录验证人和时间\\
+\bottomrule
+\end{longtable}
+
+\chapter{任务交接模板}
+\begin{longtable}{p{3.3cm}p{10.6cm}}
+\toprule
+\textbf{字段} & \textbf{填写要求}\\
+\midrule
+任务 ID/名称 & 与 R0--E3 工作包一致\\
+输出路径与版本 & 精确文件、表或 Smartbi 资源 ID\\
+输入依赖 & 上游冻结版本\\
+已完成验证 & 测试项、结果、验证人\\
+已知限制 & 缺失、代理、合规、性能、视觉问题\\
+下游使用方式 & 主键、筛选、指标、禁止用法\\
+回滚方式 & 上一个稳定版本和恢复步骤\\
+接收确认 & 接收人、时间、是否接受\\
+\bottomrule
+\end{longtable}
+
+\chapter{两册评阅后的启动清单}
+只有用户完成评阅并明确批准后，才执行：
+
+\begin{enumerate}[label=\ensuremath{\square}]
+  \item 冻结项目正式名称和资产中立立场；
+  \item 确认 130 国覆盖、40 国规则、20 家企业和事件衍生层；
+  \item 确认 A--D 人员姓名与 3/4 人配置；
+  \item 建立项目治理目录和版本控制；
+  \item 启动 R0 案例治理，不提前进入 E1；
+  \item 预约 G1 会议和指导老师抽查；
+  \item 记录 Smartbi 环境可得性，但不建设正式看板；
+  \item 将用户批注意见转为变更单并关闭。
+\end{enumerate}
+
+\backmatter
+\printbibliography[title={参考文献与规则来源}]
+
+\end{document}

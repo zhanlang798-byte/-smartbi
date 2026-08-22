@@ -1,0 +1,22 @@
+{
+  "source_id": "WEB-0358",
+  "title": "国家金融监督管理总局",
+  "publisher": "www.nfra.gov.cn",
+  "publication_date": "",
+  "source_url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1198136&itemId=915",
+  "extracted_at": "2026-08-16T09:21:31.645Z",
+  "content_state": "STRUCTURED_DATA",
+  "paragraph_count": 2,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "1.凡本站及其子站注明“文章类型：原创”的所有作品，其版权属于国家金融监督管理总局网站及其子站所有。其他媒体、网站或个人转载使用时必须注明：“文章来源：国家金融监督管理总局网站”。"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "2.凡本站及其子站注明“文章类型：转载”、“文章类型：编译”、“文章类型：摘编”的所有作品，均转载、编译或摘编自其他媒体，转载、编译或摘编的目的在于传递更多信息，并不代表本站及子站赞同其观点和对其真实性负责。其他媒体、网站或个人转载使用时必须注明文章来源，并自负法律责任。"
+    }
+  ],
+  "outgoing_data_links": []
+}

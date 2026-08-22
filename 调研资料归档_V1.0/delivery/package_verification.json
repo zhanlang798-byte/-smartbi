@@ -1,0 +1,19 @@
+[
+  {
+    "package": "XH-202612_调研资料AI交接包_V1.0.zip",
+    "sha256": "a6723afd6aac99cb5606b7fed1cdd1892707ad2a873eff71ea508c3216422ee5",
+    "size_bytes": 30416463,
+    "files": 1011,
+    "roundtrip": "PASS",
+    "secret_scan": "PASS",
+    "offline_handoff_test": "PASS"
+  },
+  {
+    "package": "XH-202612_调研资料本机冷备份_V1.0.zip",
+    "sha256": "40a9d2519ef60c0c8455b44c4fe011477b5004702333956cf0a6e3a57eb0aa42",
+    "size_bytes": 114836791,
+    "files": 1074,
+    "roundtrip": "PASS",
+    "secret_scan": "NAMES_AND_KNOWN_TOKEN_PATTERNS_PASS"
+  }
+]

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_IP_MINING_AND_UTILITY_DETAIL" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_IP_MINING_AND_UTILITY_DETAIL" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_IP_MINING_AND_UTILITY_DETAIL_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_IP_MINING_AND_UTILITY_DETAIL_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="G211">
+    <xs:annotation>
+     <xs:documentation>Oil and gas extraction  NAICS=211</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G21112">
+    <xs:annotation>
+     <xs:documentation>  Crude oil  NAICS=21112</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G21113">
+    <xs:annotation>
+     <xs:documentation>  Natural gas and natural gas liquids  NAICS=21113</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N21113G">
+    <xs:annotation>
+     <xs:documentation>    Natural gas  NAICS=211130pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G21113PQ">
+    <xs:annotation>
+     <xs:documentation>    Natural gas liquid extraction  NAICS=211130pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G212">
+    <xs:annotation>
+     <xs:documentation>Mining (except oil and gas)  NAICS=212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N2121">
+    <xs:annotation>
+     <xs:documentation>  Coal mining  NAICS=2121</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G2122">
+    <xs:annotation>
+     <xs:documentation>  Metal ore mining  NAICS=2122</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N21221">
+    <xs:annotation>
+     <xs:documentation>    Iron ore mining  NAICS=21221</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G21222">
+    <xs:annotation>
+     <xs:documentation>    Gold ore and silver ore mining  NAICS=21222</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G21223">
+    <xs:annotation>
+     <xs:documentation>    Copper, nickel, lead, and zinc mining  NAICS=21223</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G2123">
+    <xs:annotation>
+     <xs:documentation>  Nonmetallic mineral mining and quarrying  NAICS=2123</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G213">
+    <xs:annotation>
+     <xs:documentation>Support activities for mining  NAICS=213</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N213111">
+    <xs:annotation>
+     <xs:documentation>  Drilling oil and gas wells  NAICS=213111</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G2211">
+    <xs:annotation>
+     <xs:documentation>Electric power generation, transmission, and distribution  NAICS=2211</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G22111">
+    <xs:annotation>
+     <xs:documentation>  Electric power generation  NAICS=22111</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G221111A4T8">
+    <xs:annotation>
+     <xs:documentation>    Hydroelectric, renewables, and other  NAICS=221111,4-8</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N221111">
+    <xs:annotation>
+     <xs:documentation>      Hydroelectric power generation  NAICS=221111</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N221114T8">
+    <xs:annotation>
+     <xs:documentation>      Renewables and other electric power generation  NAICS=221114-8</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N221112">
+    <xs:annotation>
+     <xs:documentation>    Fossil Fuel electric power generation  NAICS=221112</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N221113">
+    <xs:annotation>
+     <xs:documentation>    Nuclear electric power generation  NAICS=221113</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G22112">
+    <xs:annotation>
+     <xs:documentation>  Electric power transmission, control, and distribution  NAICS=22112</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N22112C">
+    <xs:annotation>
+     <xs:documentation>    Commercial and other electricity sales  NAICS=22112pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N22112M">
+    <xs:annotation>
+     <xs:documentation>    Industrial electricity sales  NAICS=22112pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N22112R">
+    <xs:annotation>
+     <xs:documentation>    Residential electricity sales  NAICS=22112pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G2212">
+    <xs:annotation>
+     <xs:documentation>Natural gas distribution  NAICS=2212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N2212C">
+    <xs:annotation>
+     <xs:documentation>  Commercial and other gas sales  NAICS=2212pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N2212M">
+    <xs:annotation>
+     <xs:documentation>  Industrial gas sales  NAICS=2212pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N2212R">
+    <xs:annotation>
+     <xs:documentation>  Residential gas sales  NAICS=2212pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N2212T">
+    <xs:annotation>
+     <xs:documentation>  Gas transmission  NAICS=2212pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

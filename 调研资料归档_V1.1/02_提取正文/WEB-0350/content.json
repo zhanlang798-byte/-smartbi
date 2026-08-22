@@ -1,0 +1,18 @@
+{
+  "source_id": "WEB-0350",
+  "title": "Public Use Data Archive",
+  "publisher": "National Bureau of Economic Research",
+  "publication_date": "",
+  "source_url": "https://www.nber.org/research/data",
+  "extracted_at": "2026-08-16T09:21:31.298Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "The NBER Public Use Data Archive is an eclectic mix of public-use economic, demographic, and enterprise data obtained over the years to satisfy the specific requests of NBER-affiliated researchers for particular projects. Files here are often in more convenient formats than the original data source. However, files that receive updates at the source may not be updated here. The Public Use Data Archive also serves as a repository of the outputs, be they data or code, of NBER projects that, when allowed by the sources, are intended for wider use or replication efforts.To request that the NBER create a Public Use Data Archive webpage to host data, code, and/or associated documentation that is the result of an NBER-associated research paper, project, or grant, please navigate to the Public Use Data Hosting Request page. Economic Indicators and Releases"
+    }
+  ],
+  "outgoing_data_links": []
+}

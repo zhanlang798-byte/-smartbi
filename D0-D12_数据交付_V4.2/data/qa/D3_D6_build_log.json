@@ -1,0 +1,62 @@
+{
+  "run_id": "20260817_v42",
+  "step": "D3-D6-seeds",
+  "built_at": "2026-08-17T16:09:17",
+  "outputs": [
+    {
+      "path": "data\\staging\\country_exposure_standardized.parquet",
+      "rows": 1170,
+      "sha256": "1a4e4c22d4b36942afc3ccb274b273510601e34e137a6c3ed589df8559e66a4c"
+    },
+    {
+      "path": "data\\curated\\country_exposure.xlsx",
+      "rows": 1170,
+      "sha256": "4e9c391c633c9b6e26569853a2c7b4eff986a18e38298ccb684461559d32987a"
+    },
+    {
+      "path": "data\\qa\\country_exposure_qa.xlsx",
+      "rows": 4,
+      "sha256": "22defb8ab8899281cc6dec4955989db5f580152139ba1f61da593d72954e20d0"
+    },
+    {
+      "path": "templates\\policy_event_manual_entry_v41.xlsx",
+      "rows": 0,
+      "sha256": "ab93ce86661f98a77105c6dc35183b0c8aae1e98dad3a11efe0c9e9e830fd157"
+    },
+    {
+      "path": "templates\\company_disclosure_v41.xlsx",
+      "rows": 0,
+      "sha256": "ee0dbe125cc0eac6155ab0b5445962742b434cda014d5cd1f28140c22519ebc9"
+    },
+    {
+      "path": "templates\\case_evidence_v41.xlsx",
+      "rows": 0,
+      "sha256": "4355322945e54c2f4cf3fea2e90309fc10d38b07233be8346e2da8b5bf6c6c76"
+    },
+    {
+      "path": "templates\\event_evidence_v41.xlsx",
+      "rows": 0,
+      "sha256": "a63f8a102f0ab60f463bb4abbe9f116d375c497339d0739836b3e876e51cead2"
+    },
+    {
+      "path": "templates\\historical_crisis_event_v41.xlsx",
+      "rows": 0,
+      "sha256": "88fc52a009ef64a0ddca8e56229074a3c1f8cdcfd672f1f70f396a62638e482d"
+    },
+    {
+      "path": "data\\curated\\case_evidence.xlsx",
+      "rows": 45,
+      "sha256": "3c5312595d4a169b972a16ba40e3e6892eb0f93b2a69c0246f0abe4ac27d3c26"
+    },
+    {
+      "path": "data\\curated\\historical_crisis_event.xlsx",
+      "rows": 18,
+      "sha256": "e63bc2dd2e145ae41bdd0ef78f2f0e713bd29789155127be8553f275b5c95657"
+    },
+    {
+      "path": "data\\qa\\historical_event_evidence_audit.xlsx",
+      "rows": 4,
+      "sha256": "eab798f569902cc3c5c8a854f358392662a51bde5fa6fd7b8ee6c5993f1e9427"
+    }
+  ]
+}

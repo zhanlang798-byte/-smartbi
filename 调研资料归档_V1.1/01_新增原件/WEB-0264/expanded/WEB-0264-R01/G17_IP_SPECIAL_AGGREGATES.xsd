@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_IP_SPECIAL_AGGREGATES" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_IP_SPECIAL_AGGREGATES" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_IP_SPECIAL_AGGREGATES_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_IP_SPECIAL_AGGREGATES_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="B50001">
+    <xs:annotation>
+     <xs:documentation>Total index</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B50089">
+    <xs:annotation>
+     <xs:documentation>  Energy, total</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51220">
+    <xs:annotation>
+     <xs:documentation>    Consumer energy products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B54220">
+    <xs:annotation>
+     <xs:documentation>    Commercial energy products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N213111">
+    <xs:annotation>
+     <xs:documentation>    Drilling oil and gas wells  NAICS=213111</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53320">
+    <xs:annotation>
+     <xs:documentation>    Converted fuel</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53310">
+    <xs:annotation>
+     <xs:documentation>    Primary energy</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X5001E">
+    <xs:annotation>
+     <xs:documentation>  Non-energy, total</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="HITEK2">
+    <xs:annotation>
+     <xs:documentation>    Computers, communications eq., and semiconductors  NAICS=3341,3342,3344</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3341">
+    <xs:annotation>
+     <xs:documentation>      Computer and peripheral equipment  NAICS=3341</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3342">
+    <xs:annotation>
+     <xs:documentation>      Communications equipment  NAICS=3342</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3344">
+    <xs:annotation>
+     <xs:documentation>      Semiconductor and other electronic component  NAICS=3344</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X5EHTK">
+    <xs:annotation>
+     <xs:documentation>    Non-energy ex. computers, communications eq., and semiconductors</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3361T3">
+    <xs:annotation>
+     <xs:documentation>      Motor vehicles and parts  NAICS=3361-3</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3361">
+    <xs:annotation>
+     <xs:documentation>        Motor vehicle  NAICS=3361</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3363">
+    <xs:annotation>
+     <xs:documentation>        Motor vehicle parts  NAICS=3363</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X50EHV">
+    <xs:annotation>
+     <xs:documentation>      Non-energy ex. motor vehicles and pts., computers, communications eq., and semiconductors</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X51HVE">
+    <xs:annotation>
+     <xs:documentation>        Consumer goods ex. hi-tech, motor vehicles and pts., and energy</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X52HTV">
+    <xs:annotation>
+     <xs:documentation>        Business equipment ex. hi-tech and motor vehicles and parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X5410H">
+    <xs:annotation>
+     <xs:documentation>        Construction supplies ex. hi-tech</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X5421T">
+    <xs:annotation>
+     <xs:documentation>        Business supplies ex. energy, motor vehicles and parts, and selected high-tech industries</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X53EHV">
+    <xs:annotation>
+     <xs:documentation>        Materials ex. energy, motor vehicles and pts., computers, communications eq., and semiconductors</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X50HTK">
+    <xs:annotation>
+     <xs:documentation>  Total ex. computers, communications eq., and semiconductors</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X4HTK2">
+    <xs:annotation>
+     <xs:documentation>    Manufacturing ex. computers, communications eq., and semiconductors</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X5HTK2">
+    <xs:annotation>
+     <xs:documentation>      Durable mfg. ex. computers, communications eq., and semiconductors</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X50001">
+    <xs:annotation>
+     <xs:documentation>  Total ex. motor vehicles and parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="XXX001">
+    <xs:annotation>
+     <xs:documentation>    Manufacturing ex. motor vehicles and parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X005MV">
+    <xs:annotation>
+     <xs:documentation>      Durable manufacturing ex. motor vehicles and parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X5VHT2">
+    <xs:annotation>
+     <xs:documentation>    Total ex. selected high-tech. and motor vehicles and pts.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="X4HTMV">
+    <xs:annotation>
+     <xs:documentation>      Manufacturing ex. hi-tech and motor vehicles and pts.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53810">
+    <xs:annotation>
+     <xs:documentation>  Non-energy materials for finished goods producers</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53820">
+    <xs:annotation>
+     <xs:documentation>  Non-energy materials for intermediate goods producers</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

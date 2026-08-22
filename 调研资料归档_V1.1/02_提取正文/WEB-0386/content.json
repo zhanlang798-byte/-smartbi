@@ -1,0 +1,1030 @@
+{
+  "source_id": "WEB-0386",
+  "title": "FWP",
+  "publisher": "U.S. SEC",
+  "publication_date": "",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1222333/000095012309004884/y01039ffwp.htm",
+  "extracted_at": "2026-08-16T09:21:54.595Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 254,
+  "table_count": 23,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "FREE WRITING PROSPECTUS"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Filed Pursuant To Rule 433"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Registration No. 333-153150"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Vodcast “The Changing Economic & Financial Landscape and Gold” Transcript and Power Point"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Presentation posted on www.spdrgoldshares.com"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "WGC Vodcast Transcript"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "The Changing Economic & Financial Landscape and Gold"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Voiceover: Welcome to the World Gold Council’s latest vodcast, part of a series of educational"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "presentations on the gold market. In our latest vodcast, we look at gold’s price performance"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "throughout the credit crisis and consider what impact the US recession might have on the gold"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "market. We also highlight some of the aftershocks that are likely to follow the financial crisis,"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "and again ask what they might mean for gold."
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "Let’s begin by reviewing gold’s price performance since the credit crisis began in the summer of"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "2007. The progressive deterioration in financial sector balance sheets from mid 2007 onwards,"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "prompted a steady increase in investor demand for gold and a corresponding sharp increase in the"
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "gold price. Gold’s appeal during such times arises amongst other things, from its inherit lack of"
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "count-party risk. By March 17th, 2008 when the financial crisis claimed its first major"
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "victim, in the shape of Bear Sterns Investment Bank, the gold price had reached a new all-time"
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "record of $1,011 dollars an ounce, a rise of over 50% in just nine months. This took the gold price"
+    },
+    {
+      "locator": "html:paragraph[20]",
+      "text": "through its previous long-standing record of $850 an ounce set back in January 1980."
+    },
+    {
+      "locator": "html:paragraph[21]",
+      "text": "In the two months that followed, the gold price gave back some of those gains. By May of 2008, gold"
+    },
+    {
+      "locator": "html:paragraph[22]",
+      "text": "was trading back around the $850 an ounce level. However, when the next major financial shock came,"
+    },
+    {
+      "locator": "html:paragraph[23]",
+      "text": "which was arguably news that mortgage giants Fannie Mae and Freddy Mac would require a federal"
+    },
+    {
+      "locator": "html:paragraph[24]",
+      "text": "bailout, the gold price rallied again, although this time it stopped just short of the $1,000 an"
+    },
+    {
+      "locator": "html:paragraph[25]",
+      "text": "ounce mark. However, in Q3 and Q4, when the financial crisis really started to become systemic,"
+    },
+    {
+      "locator": "html:paragraph[26]",
+      "text": "gold traded in a lower range, mainly between $700 and $900 an ounce. The fact that gold traded in"
+    },
+    {
+      "locator": "html:paragraph[27]",
+      "text": "the lower range in the second half of the year compared with the first confused some investors —"
+    },
+    {
+      "locator": "html:paragraph[28]",
+      "text": "after all, the second half of the year was characterized by record inflows into gold exchange"
+    },
+    {
+      "locator": "html:paragraph[29]",
+      "text": "traded funds and a remarkable increase in retail investment in gold."
+    },
+    {
+      "locator": "html:paragraph[30]",
+      "text": "Net inflows into all of the gold ETFs that we monitor rose by 240 tons in H2 to 1,190 tons worth 33"
+    },
+    {
+      "locator": "html:paragraph[31]",
+      "text": "billion U.S. dollars. While retail investment in bars and coins rose by a staggering 400% in Q4,"
+    },
+    {
+      "locator": "html:paragraph[32]",
+      "text": "following a 120% increase in Q3. The strength of retail demand was such that widespread shortages"
+    },
+    {
+      "locator": "html:paragraph[33]",
+      "text": "of coins and small bars emerged around the world. The US mint, unable to purchase enough blanks,"
+    },
+    {
+      "locator": "html:paragraph[34]",
+      "text": "was temporarily forced to suspend styles of American Eagle coins. The apparent dichotomy between"
+    },
+    {
+      "locator": "html:paragraph[35]",
+      "text": "record ETF and retail demand and the lower gold price during H2, is explained by the behavior of"
+    },
+    {
+      "locator": "html:paragraph[36]",
+      "text": "investors elsewhere in the gold market. GFMS, an independent economic consultancy, who compile gold"
+    },
+    {
+      "locator": "html:paragraph[37]",
+      "text": "demand and supply statistics, tried to capture this element of investment in their statistics under"
+    },
+    {
+      "locator": "html:paragraph[38]",
+      "text": "a category called “inferred investment.” A word of warning however, as this is the residual of all"
+    },
+    {
+      "locator": "html:paragraph[39]",
+      "text": "the other elements of demand and supply, it can also include any errors and any changes in stocks."
+    },
+    {
+      "locator": "html:paragraph[40]",
+      "text": "GFMS estimate that during Q3 inferred investment declined by 350 tons, and in Q4 recorded only a"
+    },
+    {
+      "locator": "html:paragraph[41]",
+      "text": "five ton increase. The significant outflow during Q3 reflected several key factors: the rise in the"
+    },
+    {
+      "locator": "html:paragraph[42]",
+      "text": "US dollar and the unwinding of long-gold short-dollar positions, the decline in commodity indices"
+    },
+    {
+      "locator": "html:paragraph[43]",
+      "text": "and the liquidation of commodity index-tracking vehicles and the effect of hedge fund selling, as"
+    },
+    {
+      "locator": "html:paragraph[44]",
+      "text": "they were forced to raise cash in the face of margin calls and massive redemptions. Gold provided"
+    },
+    {
+      "locator": "html:paragraph[45]",
+      "text": "access to much needed funds during that period."
+    },
+    {
+      "locator": "html:paragraph[46]",
+      "text": "1 | Cubitt Jacobs & Prosek Communications"
+    },
+    {
+      "locator": "html:paragraph[47]",
+      "text": "While these liquidations continued into the early part of Q4, they abated during November. In fact,"
+    },
+    {
+      "locator": "html:paragraph[48]",
+      "text": "the second half of Q4 was characterized by the return of net-buying from this side of the market."
+    },
+    {
+      "locator": "html:paragraph[49]",
+      "text": "The distress selling of gold that took place in Q3 and early Q4 capped last year’s rise in the gold"
+    },
+    {
+      "locator": "html:paragraph[50]",
+      "text": "price to 6% — lower than the return’s taxical investors in gold have become accustomed to over the"
+    },
+    {
+      "locator": "html:paragraph[51]",
+      "text": "past few years. Indeed between 2002 and 2007, the average annual return on gold has been an"
+    },
+    {
+      "locator": "html:paragraph[52]",
+      "text": "impressive 20%. But gold’s performance last year must be viewed in the context of what was"
+    },
+    {
+      "locator": "html:paragraph[53]",
+      "text": "happening elsewhere in financial markets. This slide shows the performance of gold, vis-à-vis US"
+    },
+    {
+      "locator": "html:paragraph[54]",
+      "text": "and German Government Bonds, the S&P 500, international equities, a general commodity basket and"
+    },
+    {
+      "locator": "html:paragraph[55]",
+      "text": "oil prices. Government bonds in gold were the only assets to rise in price last year. While the"
+    },
+    {
+      "locator": "html:paragraph[56]",
+      "text": "gold price increased by 6%, domestic and international equities both fell by 40%, as did the"
+    },
+    {
+      "locator": "html:paragraph[57]",
+      "text": "Goldman Sach’s Commodity Basket. Oil prices fell by almost 60%."
+    },
+    {
+      "locator": "html:paragraph[58]",
+      "text": "It is worth dwelling on this point for a moment. Although many investors think of gold in terms of"
+    },
+    {
+      "locator": "html:paragraph[59]",
+      "text": "a commodity, it is important to highlight that gold moves independently from most other"
+    },
+    {
+      "locator": "html:paragraph[60]",
+      "text": "commodities. Indeed, of the sixteen commodities that we regularly monitor, gold was the only one to"
+    },
+    {
+      "locator": "html:paragraph[61]",
+      "text": "increase in price last year."
+    },
+    {
+      "locator": "html:paragraph[62]",
+      "text": "Nowhere was the difference more pronounced than with oil. Oil prices fell from $94 a barrel last"
+    },
+    {
+      "locator": "html:paragraph[63]",
+      "text": "year to forty-one, while the gold price rose from $834 to $882. Last year serves as a poignant"
+    },
+    {
+      "locator": "html:paragraph[64]",
+      "text": "reminder that there is no stable relationship between changes in the price of gold and changes in"
+    },
+    {
+      "locator": "html:paragraph[65]",
+      "text": "the price of oil, contrary to popular belief. Indeed over the past twenty years, gold and oil have"
+    },
+    {
+      "locator": "html:paragraph[66]",
+      "text": "moved in the same direction in eleven years, but in a different direction in nine. But gold doesn’t"
+    },
+    {
+      "locator": "html:paragraph[67]",
+      "text": "just have a role to play during times of financial duress. It makes sense to have an allocation to"
+    },
+    {
+      "locator": "html:paragraph[68]",
+      "text": "gold regardless of the health of the financial sector or the broader economy. This is because"
+    },
+    {
+      "locator": "html:paragraph[69]",
+      "text": "changes in the price of gold do not correlate either positively or negatively with changes in the"
+    },
+    {
+      "locator": "html:paragraph[70]",
+      "text": "price of other financial assets, thus making gold an effective portfolio diversifier."
+    },
+    {
+      "locator": "html:paragraph[71]",
+      "text": "This is clear from the matrix in slide eleven, which shows the correlation of gold and a range of"
+    },
+    {
+      "locator": "html:paragraph[72]",
+      "text": "assets over the past five years. The numbers in red indicate that the correlation coefficient"
+    },
+    {
+      "locator": "html:paragraph[73]",
+      "text": "between the two assets is not statistically significant. As you can see, this is in case the fact"
+    },
+    {
+      "locator": "html:paragraph[74]",
+      "text": "for gold and most of the bond and equity series shown. Hence, if you hold any of these assets in"
+    },
+    {
+      "locator": "html:paragraph[75]",
+      "text": "your portfolio, adding an allocation to gold will help to diversify you."
+    },
+    {
+      "locator": "html:paragraph[76]",
+      "text": "The yellow metal’s lack of correlation with other financial assets is underpinned by the unique"
+    },
+    {
+      "locator": "html:paragraph[77]",
+      "text": "drivers of gold demand and supply. These pie charts show average demand and supply in the gold"
+    },
+    {
+      "locator": "html:paragraph[78]",
+      "text": "market over the past five years. On the demand side, the single largest element by a wide margin is"
+    },
+    {
+      "locator": "html:paragraph[79]",
+      "text": "jewelry, having accounted for 68% of total demand between 2002 and 2007. Investment has accounted"
+    },
+    {
+      "locator": "html:paragraph[80]",
+      "text": "for a further 19%, and the balances come from the industrial sector. On the supply side, it won’t"
+    },
+    {
+      "locator": "html:paragraph[81]",
+      "text": "come as a surprise to hear that the largest source of supply is mining. This has accounted for 60%"
+    },
+    {
+      "locator": "html:paragraph[82]",
+      "text": "of the total supply of gold over the past five years net of producer de-hedging. A further 25% of"
+    },
+    {
+      "locator": "html:paragraph[83]",
+      "text": "supply has come from recycled gold and the balances come from the official sector."
+    },
+    {
+      "locator": "html:paragraph[84]",
+      "text": "2 | Cubitt Jacobs & Prosek Communications"
+    },
+    {
+      "locator": "html:paragraph[85]",
+      "text": "These three sources of demand and three sources of supply are in turn affected by a whole host of"
+    },
+    {
+      "locator": "html:paragraph[86]",
+      "text": "factors. Some, though by no means all, are listed on Slide 13. For instance, jewelry demand is"
+    },
+    {
+      "locator": "html:paragraph[87]",
+      "text": "affected by everything from fashion trends, to marketing, to changing income levels in our key"
+    },
+    {
+      "locator": "html:paragraph[88]",
+      "text": "jewelry buying markets, to religious festivals and the wedding season in India, a major gold-buying"
+    },
+    {
+      "locator": "html:paragraph[89]",
+      "text": "country. It’s worth pausing and considering just how important the emerging market and Middle East"
+    },
+    {
+      "locator": "html:paragraph[90]",
+      "text": "countries are to jewelry demands. Together, India, China, Saudi Arabia, Turkey and Russia make up"
+    },
+    {
+      "locator": "html:paragraph[91]",
+      "text": "55% of total jewelry demand. These countries have enjoyed strong economic growth for several years,"
+    },
+    {
+      "locator": "html:paragraph[92]",
+      "text": "which has boosted household’s disposable incomes and discretionary spending. This has helped to put"
+    },
+    {
+      "locator": "html:paragraph[93]",
+      "text": "a higher floor underneath the gold price from the jewelry sector. Because some emerging market"
+    },
+    {
+      "locator": "html:paragraph[94]",
+      "text": "countries have not suffered as much from the financial crisis as the likes of the United States and"
+    },
+    {
+      "locator": "html:paragraph[95]",
+      "text": "Europe, they’re helping to offset the sharp decline in gold jewelry demands seen in the Western"
+    },
+    {
+      "locator": "html:paragraph[96]",
+      "text": "Worlds. In 2008, US and UK demand for gold jewelry fell by 31% and 28% respectively for example,"
+    },
+    {
+      "locator": "html:paragraph[97]",
+      "text": "whereas demand from China and Russia rose by 8% and 12%, helping to limit the overall decline in"
+    },
+    {
+      "locator": "html:paragraph[98]",
+      "text": "worldwide demand for jewelry to 11%. Similarly, supply is affected by a whole host of factors"
+    },
+    {
+      "locator": "html:paragraph[99]",
+      "text": "including exploration spending, the success or otherwise in discovering new gold deposits, the cost"
+    },
+    {
+      "locator": "html:paragraph[100]",
+      "text": "of extracting gold, industry lead times and the location of the deposit. The investment element of"
+    },
+    {
+      "locator": "html:paragraph[101]",
+      "text": "demand is of course impacted by some of the same factors that drive other asset prices such as"
+    },
+    {
+      "locator": "html:paragraph[102]",
+      "text": "inflation and currency movements. But these are nowhere near the whole story. Moreover, different"
+    },
+    {
+      "locator": "html:paragraph[103]",
+      "text": "factors will become more or less important at different times. Back in the late 1990’s for example,"
+    },
+    {
+      "locator": "html:paragraph[104]",
+      "text": "two big drivers of the gold price were producer hedging, and fears about central bank sales. Over"
+    },
+    {
+      "locator": "html:paragraph[105]",
+      "text": "the past five years, rising income levels in key jewelry-buying markets and the sharp increase in"
+    },
+    {
+      "locator": "html:paragraph[106]",
+      "text": "mining costs have been the key influences driving up the price. At the moment, it is the financial"
+    },
+    {
+      "locator": "html:paragraph[107]",
+      "text": "crisis. The bottom line is that the gold price is driven by a very diverse range of factors, many"
+    },
+    {
+      "locator": "html:paragraph[108]",
+      "text": "of which are unrelated to financial market developments and something which firmly underpins gold’s"
+    },
+    {
+      "locator": "html:paragraph[109]",
+      "text": "role as a diversifying asset. A further consequence of this is that, as well as not correlating"
+    },
+    {
+      "locator": "html:paragraph[110]",
+      "text": "with other financial assets, changes in the gold price do not correlate with changes in the"
+    },
+    {
+      "locator": "html:paragraph[111]",
+      "text": "Slide fourteen shows quarterly US GDP growth versus the average quarterly gold price. There is no"
+    },
+    {
+      "locator": "html:paragraph[112]",
+      "text": "clear pattern between the two. This is also supported by rigorous statistical analysis. If you look"
+    },
+    {
+      "locator": "html:paragraph[113]",
+      "text": "at the correlation coefficient between changes in the gold price and changes in US GDP or if you"
+    },
+    {
+      "locator": "html:paragraph[114]",
+      "text": "regress the two against each other, neither technique will show you a statistically significant"
+    },
+    {
+      "locator": "html:paragraph[115]",
+      "text": "relationship. At times the gold price has fallen as the economy has slowed, but at other times the"
+    },
+    {
+      "locator": "html:paragraph[116]",
+      "text": "reverse has been true."
+    },
+    {
+      "locator": "html:paragraph[117]",
+      "text": "All of this has important implications for today’s economic environment. Recessions have clear"
+    },
+    {
+      "locator": "html:paragraph[118]",
+      "text": "negative implications for some commodities like oil, but they do not have negative implications for"
+    },
+    {
+      "locator": "html:paragraph[119]",
+      "text": "gold. This assertion is backed up by historical experience. There have been five official US"
+    },
+    {
+      "locator": "html:paragraph[120]",
+      "text": "recessions once the gold price was fully freed in 1971 and as you can see from this slide, there"
+    },
+    {
+      "locator": "html:paragraph[121]",
+      "text": "has been no uniform response in the gold price. It rallied strongly in one, fell slightly in two,"
+    },
+    {
+      "locator": "html:paragraph[122]",
+      "text": "and increased moderately in two."
+    },
+    {
+      "locator": "html:paragraph[123]",
+      "text": "Looking beyond the recession, there are likely to be several after-shocks to the crisis. I want to"
+    },
+    {
+      "locator": "html:paragraph[124]",
+      "text": "highlight four that I believe will be important to the gold market. First, renewed vigor in the"
+    },
+    {
+      "locator": "html:paragraph[125]",
+      "text": "search for alterative assets that can provide investors with effective"
+    },
+    {
+      "locator": "html:paragraph[126]",
+      "text": "3 | Cubitt Jacobs & Prosek Communications"
+    },
+    {
+      "locator": "html:paragraph[127]",
+      "text": "diversification. If the financial crisis has taught us anything it is that we are not good at"
+    },
+    {
+      "locator": "html:paragraph[128]",
+      "text": "forecasting. Most of us did not see this financial shock coming, at least not in the scale that it"
+    },
+    {
+      "locator": "html:paragraph[129]",
+      "text": "turned out to be, and most of us probably won’t see the next shock coming either. As investors the"
+    },
+    {
+      "locator": "html:paragraph[130]",
+      "text": "best we can do is to structure our portfolios in such a manner, that when negative economic shocks"
+    },
+    {
+      "locator": "html:paragraph[131]",
+      "text": "do occur, the assets that we have in our portfolio don’t all move in the same direction. Gold’s"
+    },
+    {
+      "locator": "html:paragraph[132]",
+      "text": "performance throughout the credit crisis has put it firmly in the spotlight of assets that can"
+    },
+    {
+      "locator": "html:paragraph[133]",
+      "text": "achieve this. And there is certainly ample scope for growth. Our best estimate is that the global"
+    },
+    {
+      "locator": "html:paragraph[134]",
+      "text": "pension fund, private wealth, mutual fund, insurance, hedge fund, and sovereign wealth fund"
+    },
+    {
+      "locator": "html:paragraph[135]",
+      "text": "community held less than 1% of their total assets in gold in 2007. Though that percentage is likely"
+    },
+    {
+      "locator": "html:paragraph[136]",
+      "text": "to have increased today, due to the sharp fallen equity valuations, in general, worldwide"
+    },
+    {
+      "locator": "html:paragraph[137]",
+      "text": "allocations to gold from the broad investment community remain very low, meaning there exists"
+    },
+    {
+      "locator": "html:paragraph[138]",
+      "text": "significant scope for growth."
+    },
+    {
+      "locator": "html:paragraph[139]",
+      "text": "Second, the crisis will undoubtedly result in a tightening in regulatory and reporting standards."
+    },
+    {
+      "locator": "html:paragraph[140]",
+      "text": "It may also see investors shift from more opaque assets like fund of funds, where the underlying"
+    },
+    {
+      "locator": "html:paragraph[141]",
+      "text": "assets are not clear, to more transparent assets. Residual concerns about counterparty risk are"
+    },
+    {
+      "locator": "html:paragraph[142]",
+      "text": "likely to linger for some time. Assets like gold stand to benefit — gold is a simple asset to"
+    },
+    {
+      "locator": "html:paragraph[143]",
+      "text": "understand, it has intrinsic value beyond that of an investment product and it carries no"
+    },
+    {
+      "locator": "html:paragraph[144]",
+      "text": "Third, inflation. The final quarter of last year ushered in a new era in monetary policy; the move"
+    },
+    {
+      "locator": "html:paragraph[145]",
+      "text": "to zero interest rates and the introduction of quantitative easing measures. This comes on the back"
+    },
+    {
+      "locator": "html:paragraph[146]",
+      "text": "of the billions and billions of dollars, sterling, Euro and Yen that have already been pumped into"
+    },
+    {
+      "locator": "html:paragraph[147]",
+      "text": "the financial system and ahead of the massive fiscal expansions that are still to come. There are"
+    },
+    {
+      "locator": "html:paragraph[148]",
+      "text": "two main schools of thoughts on this: One, we are on a liquidity track, fiscal stimulus will not"
+    },
+    {
+      "locator": "html:paragraph[149]",
+      "text": "work either and we are going to move from disinflation into deflation. Or two, all of these"
+    },
+    {
+      "locator": "html:paragraph[150]",
+      "text": "measures are going to come together and create a perfect storm for the reemergence of inflation"
+    },
+    {
+      "locator": "html:paragraph[151]",
+      "text": "later down the line, which may or may not be accompanied by our return to economic growth."
+    },
+    {
+      "locator": "html:paragraph[152]",
+      "text": "Investors in the latter school might want to consider adding gold to their portfolio. Most"
+    },
+    {
+      "locator": "html:paragraph[153]",
+      "text": "traditional assets such as equities and bonds are a pure hedge against inflation. By contrast, gold"
+    },
+    {
+      "locator": "html:paragraph[154]",
+      "text": "often performs at its best during periods of high inflation."
+    },
+    {
+      "locator": "html:paragraph[155]",
+      "text": "Since the gold price was fully freed in 1971, there have been nine years when the US CPI has"
+    },
+    {
+      "locator": "html:paragraph[156]",
+      "text": "averaged over 5%. Domestic and international equities each fell in five years, rose in four and"
+    },
+    {
+      "locator": "html:paragraph[157]",
+      "text": "posted an average decline of 0.5% over the nine years. Longer dated treasuries did not fair much"
+    },
+    {
+      "locator": "html:paragraph[158]",
+      "text": "better, they also fell in five and rose in four, although managed to post an increase averaging"
+    },
+    {
+      "locator": "html:paragraph[159]",
+      "text": "1.5%. Commodities rose by 8.7% on average, but gold was the star performer, rising in seven out of"
+    },
+    {
+      "locator": "html:paragraph[160]",
+      "text": "the nine years and posting an average return of 31%."
+    },
+    {
+      "locator": "html:paragraph[161]",
+      "text": "The final after shock I want to highlight, is the emergence of a much larger government sector. The"
+    },
+    {
+      "locator": "html:paragraph[162]",
+      "text": "Congressional Budget Office estimates that the US budget deficit will top a trillion dollars next"
+    },
+    {
+      "locator": "html:paragraph[163]",
+      "text": "year. However that estimate did not take account of the new fiscal stimulus plan, so in reality the"
+    },
+    {
+      "locator": "html:paragraph[164]",
+      "text": "US budget deficit is likely to be much much higher. To date, foreign investors have been happy to"
+    },
+    {
+      "locator": "html:paragraph[165]",
+      "text": "finance the US budget deficit, but there is a distinct risk that they will not be prepared to do so"
+    },
+    {
+      "locator": "html:paragraph[166]",
+      "text": "in the future, which could see a sharp depreciation in the dollar. Although not all investors are"
+    },
+    {
+      "locator": "html:paragraph[167]",
+      "text": "of this view, those that are, again,"
+    },
+    {
+      "locator": "html:paragraph[168]",
+      "text": "4 | Cubitt Jacobs & Prosek Communications"
+    },
+    {
+      "locator": "html:paragraph[169]",
+      "text": "may wish to consider adding gold to their portfolio, as it has a long history as a dollar hedge."
+    },
+    {
+      "locator": "html:paragraph[170]",
+      "text": "Slide 21 shows the close relationship exhibited between the gold price and the trade-weighted"
+    },
+    {
+      "locator": "html:paragraph[171]",
+      "text": "dollar over the past year."
+    },
+    {
+      "locator": "html:paragraph[172]",
+      "text": "To summarize, gold’s performance relative to other assets during the financial crisis, highlights"
+    },
+    {
+      "locator": "html:paragraph[173]",
+      "text": "the role it can play as a safe-haven asset during times of financial distress. But gold’s role in a"
+    },
+    {
+      "locator": "html:paragraph[174]",
+      "text": "portfolio goes beyond that. Its lack of correlation with other financial assets makes it an"
+    },
+    {
+      "locator": "html:paragraph[175]",
+      "text": "effective portfolio diversifier, regardless of the stage of the economic cycle. It has also proved"
+    },
+    {
+      "locator": "html:paragraph[176]",
+      "text": "to be an effective hedge against dollar depreciation and inflation, two additional burgeoning"
+    },
+    {
+      "locator": "html:paragraph[177]",
+      "text": "concerns among the investment community. For more information, please visit www.spdrgoldshares.com."
+    },
+    {
+      "locator": "html:paragraph[178]",
+      "text": "5 | Cubitt Jacobs & Prosek Communications"
+    },
+    {
+      "locator": "html:paragraph[179]",
+      "text": "Vodcast: The Changing Economic and"
+    },
+    {
+      "locator": "html:paragraph[180]",
+      "text": "Financial Landscape and Gold"
+    },
+    {
+      "locator": "html:paragraph[181]",
+      "text": "Head of Investment, Americas"
+    },
+    {
+      "locator": "html:paragraph[182]",
+      "text": "The information and opinions contained in this presentation have been"
+    },
+    {
+      "locator": "html:paragraph[183]",
+      "text": "obtained from sources believed to be reliable, but no representation or"
+    },
+    {
+      "locator": "html:paragraph[184]",
+      "text": "warranty, express or implied, is made that such information is accurate"
+    },
+    {
+      "locator": "html:paragraph[185]",
+      "text": "or complete and it should not be relied upon as such. This presentation"
+    },
+    {
+      "locator": "html:paragraph[186]",
+      "text": "does not purport to make any recommendation or provide investment"
+    },
+    {
+      "locator": "html:paragraph[187]",
+      "text": "advice to the effect that any gold related transaction is appropriate for"
+    },
+    {
+      "locator": "html:paragraph[188]",
+      "text": "all investment objectives, financial situations or particular needs. Prior"
+    },
+    {
+      "locator": "html:paragraph[189]",
+      "text": "to making any investment decisions investors should seek advice from"
+    },
+    {
+      "locator": "html:paragraph[190]",
+      "text": "their advisers on whether any part of this presentation is appropriate to"
+    },
+    {
+      "locator": "html:paragraph[191]",
+      "text": "their specific circumstances. This presentation is not, and should not"
+    },
+    {
+      "locator": "html:paragraph[192]",
+      "text": "be construed as, an offer or solicitation to buy or sell gold or any gold"
+    },
+    {
+      "locator": "html:paragraph[193]",
+      "text": "related products. Expressions of opinion are those of the World Gold"
+    },
+    {
+      "locator": "html:paragraph[194]",
+      "text": "Council only and are subject to change without notice."
+    },
+    {
+      "locator": "html:paragraph[195]",
+      "text": "Presentation outline"
+    },
+    {
+      "locator": "html:paragraph[196]",
+      "text": "Gold and the 2007/2008 financial crisis"
+    },
+    {
+      "locator": "html:paragraph[197]",
+      "text": "Gold relative to other assets"
+    },
+    {
+      "locator": "html:paragraph[198]",
+      "text": "What does the US recession imply for the gold"
+    },
+    {
+      "locator": "html:paragraph[199]",
+      "text": "The \"after shocks\" and gold"
+    },
+    {
+      "locator": "html:paragraph[200]",
+      "text": "Gold and the 2007/2008 financial crisis"
+    },
+    {
+      "locator": "html:paragraph[201]",
+      "text": "Gold Price (US$) since credit crisis began"
+    },
+    {
+      "locator": "html:paragraph[202]",
+      "text": "Source: Global Insight, WGC"
+    },
+    {
+      "locator": "html:paragraph[203]",
+      "text": "Six major central banks make"
+    },
+    {
+      "locator": "html:paragraph[204]",
+      "text": "emergency interest rate cuts"
+    },
+    {
+      "locator": "html:paragraph[205]",
+      "text": "Demand for gold ETFs reaches record levels"
+    },
+    {
+      "locator": "html:paragraph[206]",
+      "text": "Retail Investment in Q4"
+    },
+    {
+      "locator": "html:paragraph[207]",
+      "text": "Net retail investment by country, Q4 2008 (tonnes)"
+    },
+    {
+      "locator": "html:paragraph[208]",
+      "text": "Eighth consecutive annual increase in the gold price"
+    },
+    {
+      "locator": "html:paragraph[209]",
+      "text": "Price performance in relative terms in 2008"
+    },
+    {
+      "locator": "html:paragraph[210]",
+      "text": "Gold moves independently from other commodities"
+    },
+    {
+      "locator": "html:paragraph[211]",
+      "text": "Gold does not just have a role to play during times of crisis"
+    },
+    {
+      "locator": "html:paragraph[212]",
+      "text": "Unique price drivers underpin diversification role"
+    },
+    {
+      "locator": "html:paragraph[213]",
+      "text": "The structure of the gold market"
+    },
+    {
+      "locator": "html:paragraph[214]",
+      "text": "Factors affecting demand and supply"
+    },
+    {
+      "locator": "html:paragraph[215]",
+      "text": "Producer hedging/de-"
+    },
+    {
+      "locator": "html:paragraph[216]",
+      "text": "There is no correlation between US GDP growth and the gold price"
+    },
+    {
+      "locator": "html:paragraph[217]",
+      "text": "Quarterly GDP growth and Gold Price (US$/oz)"
+    },
+    {
+      "locator": "html:paragraph[218]",
+      "text": "Gold (LHS) End-of-period"
+    },
+    {
+      "locator": "html:paragraph[219]",
+      "text": "Source: Bloomberg, BEA"
+    },
+    {
+      "locator": "html:paragraph[220]",
+      "text": "Gold price performance during recessionary periods"
+    },
+    {
+      "locator": "html:paragraph[221]",
+      "text": "After shock (1): Diversification"
+    },
+    {
+      "locator": "html:paragraph[222]",
+      "text": "The after shocks: (2) From opaque to transparent"
+    },
+    {
+      "locator": "html:paragraph[223]",
+      "text": "Investable assets might change"
+    },
+    {
+      "locator": "html:paragraph[224]",
+      "text": "Complex derivative products, exotic structured products no"
+    },
+    {
+      "locator": "html:paragraph[225]",
+      "text": "Or fund of funds, where the underlying investments are not"
+    },
+    {
+      "locator": "html:paragraph[226]",
+      "text": "Residual concerns about counterparty risk likely to"
+    },
+    {
+      "locator": "html:paragraph[227]",
+      "text": "Gold is simple to understand, it has intrinsic value beyond that"
+    },
+    {
+      "locator": "html:paragraph[228]",
+      "text": "of an investment product and it has no counterparty risk."
+    },
+    {
+      "locator": "html:paragraph[229]",
+      "text": "The after shocks (3): The re-emergence of inflation"
+    },
+    {
+      "locator": "html:paragraph[230]",
+      "text": "Fed Funds Target Rate of \"0 to 1/4 %\""
+    },
+    {
+      "locator": "html:paragraph[231]",
+      "text": "Massive injections of liquidity into the banking system"
+    },
+    {
+      "locator": "html:paragraph[232]",
+      "text": "Quantitative easing measures"
+    },
+    {
+      "locator": "html:paragraph[233]",
+      "text": "A large fiscal stimulus package"
+    },
+    {
+      "locator": "html:paragraph[234]",
+      "text": "= Future Inflation (?)"
+    },
+    {
+      "locator": "html:paragraph[235]",
+      "text": "Gold performs well in a high inflation environment"
+    },
+    {
+      "locator": "html:paragraph[236]",
+      "text": "The after shocks (4): The trillion dollar deficit"
+    },
+    {
+      "locator": "html:paragraph[237]",
+      "text": "Gold as a dollar hedge"
+    },
+    {
+      "locator": "html:paragraph[238]",
+      "text": "Gold (US$) and Trade-weighted Dollar (Index, Inverted Scale)"
+    },
+    {
+      "locator": "html:paragraph[239]",
+      "text": "Gold's performance during the financial crisis highlights"
+    },
+    {
+      "locator": "html:paragraph[240]",
+      "text": "the role it can play as a safe-haven asset"
+    },
+    {
+      "locator": "html:paragraph[241]",
+      "text": "But gold does not just have a role to play during times of"
+    },
+    {
+      "locator": "html:paragraph[242]",
+      "text": "Gold is an effective portfolio diversifier regardless of the"
+    },
+    {
+      "locator": "html:paragraph[243]",
+      "text": "stage of the economic cycle"
+    },
+    {
+      "locator": "html:paragraph[244]",
+      "text": "Gold can help to protect the value of a portfolio against"
+    },
+    {
+      "locator": "html:paragraph[245]",
+      "text": "dollar depreciation and inflation"
+    },
+    {
+      "locator": "html:paragraph[246]",
+      "text": "www.spdrgoldshares.com"
+    },
+    {
+      "locator": "html:paragraph[247]",
+      "text": "\\GOLD TRUST has filed a registration statement (including a prospectus)"
+    },
+    {
+      "locator": "html:paragraph[248]",
+      "text": "with the SEC for the offering to which this communication relates. Before you invest, you should"
+    },
+    {
+      "locator": "html:paragraph[249]",
+      "text": "read the prospectus in that registration statement and other documents the issuer has filed with"
+    },
+    {
+      "locator": "html:paragraph[250]",
+      "text": "the SEC for more complete information about the Trust and this offering. You may get these"
+    },
+    {
+      "locator": "html:paragraph[251]",
+      "text": "documents for free by visiting EDGAR on the SEC Web site at www.sec.gov. Alternatively, the Trust"
+    },
+    {
+      "locator": "html:paragraph[252]",
+      "text": "or any Authorized Participant will arrange to send you the prospectus if you request it by calling"
+    },
+    {
+      "locator": "html:paragraph[253]",
+      "text": "toll free at 1-866-320-4053 or contacting State Street Global Markets, LLC, One Lincoln Street,"
+    },
+    {
+      "locator": "html:paragraph[254]",
+      "text": "Attn: SPDR® Gold, 30th Floor, Boston, MA 02111."
+    }
+  ],
+  "outgoing_data_links": []
+}

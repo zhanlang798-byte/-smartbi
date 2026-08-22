@@ -1,0 +1,69 @@
+{
+  "source_id": "WEB-0258",
+  "title": "Implementation Note issued March 15, 2020",
+  "publisher": "Federal Reserve Board",
+  "publication_date": "",
+  "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a1.htm",
+  "extracted_at": "2026-08-16T09:21:24.359Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 12,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Implementation Note issued March 15, 2020"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Decisions Regarding Monetary Policy Implementation"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "The Federal Reserve has made the following decisions to implement the monetary policy stance announced by the Federal Open Market Committee in its statement on March 15, 2020:"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "The Board of Governors of the Federal Reserve System voted unanimously to set the interest rate paid on required and excess reserve balances at 0.10 percent, effective March 16, 2020."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "As part of its policy decision, the Federal Open Market Committee voted to authorize and direct the Open Market Desk at the Federal Reserve Bank of New York, until instructed otherwise, to execute transactions in the System Open Market Account in accordance with the following domestic policy directive:"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "\"Effective March 16, 2020, the Federal Open Market Committee directs the Desk to undertake open market operations as necessary to maintain the federal funds rate in a target range of 0 to 1/4 percent. The Committee directs the Desk to increase over coming months the System Open Market Account holdings of Treasury securities and agency mortgage-backed securities (MBS) by at least $500 billion and by at least $200 billion, respectively. The Committee instructs the Desk to conduct these purchases at a pace appropriate to support the smooth functioning of markets for Treasury securities and agency MBS."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "The Committee also directs the Desk to continue conducting term and overnight repurchase agreement operations to ensure that the supply of reserves remains ample and to support the smooth functioning of short-term U.S. dollar funding markets. In addition, the Committee directs the Desk to conduct overnight reverse repurchase operations (and reverse repurchase operations with maturities of more than one day when necessary to accommodate weekend, holiday, or similar trading conventions) at an offering rate of 0.00 percent, in amounts limited only by the value of Treasury securities held outright in the System Open Market Account that are available for such operations and by a per-counterparty limit of $30 billion per day."
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "The Committee directs the Desk to continue rolling over at auction all principal payments from the Federal Reserve's holdings of Treasury securities and to reinvest all principal payments from the Federal Reserve's holdings of agency debt and agency mortgage-backed securities received during each calendar month in agency mortgage-backed securities. Small deviations from these amounts for operational reasons are acceptable."
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "The Committee also directs the Desk to engage in dollar roll and coupon swap transactions as necessary to facilitate settlement of the Federal Reserve's agency mortgage-backed securities transactions."
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "In a related action, the Board of Governors of the Federal Reserve System voted unanimously to approve a 1-1/2 percentage point decrease in the primary credit rate to 0.25 percent, effective March 16, 2020. In taking this action, the Board approved requests to establish that rate submitted by the Boards of Directors of the Federal Reserve Banks of Minneapolis and New York."
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "This information will be updated as appropriate to reflect decisions of the Federal Open Market Committee or the Board of Governors regarding details of the Federal Reserve's operational tools and approach used to implement monetary policy."
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "More information regarding open market operations and reinvestments may be found on the Federal Reserve Bank of New York's website."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.federalreserve.gov/datadownload",
+      "extension": "",
+      "anchor_text": "Data Download Program",
+      "locator": "anchor"
+    }
+  ]
+}

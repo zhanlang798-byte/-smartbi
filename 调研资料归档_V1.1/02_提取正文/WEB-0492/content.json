@@ -1,0 +1,333 @@
+{
+  "source_id": "WEB-0492",
+  "title": "World Bank Group - International Development, Poverty and Sustainability",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://www.worldbank.org/ext/en/home",
+  "extracted_at": "2026-08-16T09:22:18.444Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 78,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "AI Offers Lifeline to Developing Economies"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Artificial Intelligence Offers Lifeline to Developing Economies"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "The 2026 World Development Report shows how AI could boost growth—if countries act now"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Turning Creativity into Jobs and Investment"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Turning Creativity into Jobs and Investment"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Digital Access is Transforming the Pacific Islands"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Digital Access is Transforming the Pacific Islands"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Investing in Youth Across East Asia and Pacific"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Investing in Youth Across East Asia and Pacific"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "section-padding-between"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "sec-inside-container"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "lp-heading-bottom-xlarge"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "Why jobs? Because they’re the surest path out of poverty for individuals and communities."
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "Mission 300 is connecting homes, communities, and businesses in Africa to electricity , powering growth and expanding opportunity."
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "Health Works is reaching 1.5 billion people with quality, affordable health services by 2030 — creating jobs and driving economic growth."
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "AgriConnect helps 300 million small-scale farmers build thriving agribusinesses — boosting incomes, feeding more people, and strengthening economies."
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "Unlocking economic opportunity for millions of women through digital access, finance, and jobs."
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "Water forward is securing reliable water for over a billion people by 2030, protecting jobs, health and economies that depend on it."
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "section-padding-between"
+    },
+    {
+      "locator": "html:paragraph[20]",
+      "text": "Data for Development"
+    },
+    {
+      "locator": "html:paragraph[21]",
+      "text": "Essential data to guide decisions, monitor progress, and evaluate impact."
+    },
+    {
+      "locator": "html:paragraph[22]",
+      "text": "additional jobs are created in related industries for every job in the health sector."
+    },
+    {
+      "locator": "html:paragraph[23]",
+      "text": "Source: World Bank Health Works"
+    },
+    {
+      "locator": "html:paragraph[24]",
+      "text": "Think this information from World Bank Group is useful"
+    },
+    {
+      "locator": "html:paragraph[25]",
+      "text": "of global gross domestic product in 2024 came from travel and tourism."
+    },
+    {
+      "locator": "html:paragraph[26]",
+      "text": "Source: World Travel & Tourism Council"
+    },
+    {
+      "locator": "html:paragraph[27]",
+      "text": "Think this information from World Bank Group is useful"
+    },
+    {
+      "locator": "html:paragraph[28]",
+      "text": "people without electricity today live in Sub-Saharan Africa."
+    },
+    {
+      "locator": "html:paragraph[29]",
+      "text": "Source: 2026 Atlas of Global Development"
+    },
+    {
+      "locator": "html:paragraph[30]",
+      "text": "Think this information from World Bank Group is useful"
+    },
+    {
+      "locator": "html:paragraph[31]",
+      "text": "section-padding-between"
+    },
+    {
+      "locator": "html:paragraph[32]",
+      "text": "bg-image, lp-download-btn, lp-3column-card"
+    },
+    {
+      "locator": "html:paragraph[33]",
+      "text": "sec-inside-container"
+    },
+    {
+      "locator": "html:paragraph[34]",
+      "text": "STAY CURRENT WITH OUR LATEST"
+    },
+    {
+      "locator": "html:paragraph[35]",
+      "text": "WBG External Corporate English Newsletter|wbg-svc-ext-corp-eng-nl"
+    },
+    {
+      "locator": "html:paragraph[36]",
+      "text": "sec-inside-container"
+    },
+    {
+      "locator": "html:paragraph[37]",
+      "text": "RESEARCH & PUBLICATIONS"
+    },
+    {
+      "locator": "html:paragraph[38]",
+      "text": "More Research & Publications"
+    },
+    {
+      "locator": "html:paragraph[39]",
+      "text": "Regional Economic Updates"
+    },
+    {
+      "locator": "html:paragraph[40]",
+      "text": "Regional Economic Updates - April 2026"
+    },
+    {
+      "locator": "html:paragraph[41]",
+      "text": "Key macroeconomic trends and developments across six regions."
+    },
+    {
+      "locator": "html:paragraph[42]",
+      "text": "Global Economic Prospects Report - June 2026"
+    },
+    {
+      "locator": "html:paragraph[43]",
+      "text": "Global Economic Prospects Report - June 2026"
+    },
+    {
+      "locator": "html:paragraph[44]",
+      "text": "As the Middle East conflict drives sharp energy price increases, global growth is projected to slow to 2.5 percent in 2026."
+    },
+    {
+      "locator": "html:paragraph[45]",
+      "text": "THE POWER OF PURPOSE"
+    },
+    {
+      "locator": "html:paragraph[46]",
+      "text": "The world’s challenges are bigger than one project, one country, or even one World Bank Group. That’s why we’re pairing 80 years of experience with renewed focus. To move faster. Work smarter. With more partners. And to create jobs that empower people and grow economies."
+    },
+    {
+      "locator": "html:paragraph[47]",
+      "text": "Reduced project approval time"
+    },
+    {
+      "locator": "html:paragraph[48]",
+      "text": "Each $1 from shareholders translates into $10 in development finance over 10 years"
+    },
+    {
+      "locator": "html:paragraph[49]",
+      "text": "Capital invested since 1946"
+    },
+    {
+      "locator": "html:paragraph[50]",
+      "text": "grid, related-1-cols, data-list-container, heading-vertical, image-1by1, border-radius-medium"
+    },
+    {
+      "locator": "html:paragraph[51]",
+      "text": "section-padding-between"
+    },
+    {
+      "locator": "html:paragraph[52]",
+      "text": "col-lg-6 col-md-6 col-sm-12 col-xs-12"
+    },
+    {
+      "locator": "html:paragraph[53]",
+      "text": "col-lg-1 col-md-1 col-sm-12 col-xs-12"
+    },
+    {
+      "locator": "html:paragraph[54]",
+      "text": "col-lg-5 col-md-5 col-sm-12 col-xs-12"
+    },
+    {
+      "locator": "html:paragraph[55]",
+      "text": "TRANSFORMING KNOWLEDGE TRANSFORMING LIVES"
+    },
+    {
+      "locator": "html:paragraph[56]",
+      "text": "Trusted data, insights, and education to help organizations, practitioners, and global leaders deliver impactful policies and projects at scale."
+    },
+    {
+      "locator": "html:paragraph[57]",
+      "text": "lp-heading-bottom-xlarge"
+    },
+    {
+      "locator": "html:paragraph[58]",
+      "text": "World Bank Group Academy"
+    },
+    {
+      "locator": "html:paragraph[59]",
+      "text": "One-of-a-kind capacity development and training for next-generation leaders."
+    },
+    {
+      "locator": "html:paragraph[60]",
+      "text": "World Bank Group Scorecard"
+    },
+    {
+      "locator": "html:paragraph[61]",
+      "text": "Easy-to-understand indicators and data that measure progress and impact."
+    },
+    {
+      "locator": "html:paragraph[62]",
+      "text": "grid, bg-primary-blue-90, heading-vertical, transform-teaser-container"
+    },
+    {
+      "locator": "html:paragraph[63]",
+      "text": "col-lg-7 col-md-7 col-sm-8 col-xs-12 lp-two-column-card"
+    },
+    {
+      "locator": "html:paragraph[64]",
+      "text": "col-lg-5 col-md-5 col-sm-4 col-xs-12"
+    },
+    {
+      "locator": "html:paragraph[65]",
+      "text": "col-lg-5 col-md-5 col-sm-12 col-xs-12"
+    },
+    {
+      "locator": "html:paragraph[66]",
+      "text": "EMPOWERING PEOPLE & COUNTRIES TO MAKE PROGRESS"
+    },
+    {
+      "locator": "html:paragraph[67]",
+      "text": "Growing Jobs, Protecting Forests: A Decade of Transformational Change in the Amazon"
+    },
+    {
+      "locator": "html:paragraph[68]",
+      "text": "From Classrooms to Careers: Guyana’s Youth Gain Skills for Real Jobs in Growing Industries"
+    },
+    {
+      "locator": "html:paragraph[69]",
+      "text": "Guyana’s Youth Gain Skills for Real Job"
+    },
+    {
+      "locator": "html:paragraph[70]",
+      "text": "Artificial Intelligence in Action in Latin America’s Schools"
+    },
+    {
+      "locator": "html:paragraph[71]",
+      "text": "Artificial Intelligence in Action in Latin America’s Schools"
+    },
+    {
+      "locator": "html:paragraph[72]",
+      "text": "PARTNER WITH THE WORLD BANK GROUP"
+    },
+    {
+      "locator": "html:paragraph[73]",
+      "text": "We work with local partners and global partners. Because with more resources, we can accomplish more."
+    },
+    {
+      "locator": "html:paragraph[74]",
+      "text": "lp-heading-bottom-none"
+    },
+    {
+      "locator": "html:paragraph[75]",
+      "text": "Combining knowledge, experience, and innovative thinking to deliver meaningful results and improve lives."
+    },
+    {
+      "locator": "html:paragraph[76]",
+      "text": "Connecting borrowers and suppliers to opportunities that move communities and countries forward."
+    },
+    {
+      "locator": "html:paragraph[77]",
+      "text": "overlay-carousel-card-container"
+    },
+    {
+      "locator": "html:paragraph[78]",
+      "text": "sec-inside-container"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://openknowledge.worldbank.org/bitstreams/8e6bcf71-89a1-443b-bbe9-6c39a496d7ab/download",
+      "extension": "",
+      "anchor_text": "https://openknowledge.worldbank.org/bitstreams/8e6bcf71-89a1-443b-bbe9-6c39a496d7ab/download",
+      "locator": "anchor"
+    }
+  ]
+}

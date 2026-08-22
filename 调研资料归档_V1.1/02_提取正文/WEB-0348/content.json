@@ -1,0 +1,42 @@
+{
+  "source_id": "WEB-0348",
+  "title": "The Golden Dilemma",
+  "publisher": "National Bureau of Economic Research",
+  "publication_date": "",
+  "source_url": "https://www.nber.org/papers/w18706",
+  "extracted_at": "2026-08-16T09:21:31.106Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 7,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Issue Date January 2013"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "While gold objects have existed for thousands of years, gold's role in diversified portfolios is not well understood. We critically examine popular stories such as 'gold is an inflation hedge'. We show that gold may be an effective hedge if the investment horizon is measured in centuries. Over practical investment horizons, gold is an unreliable inflation hedge. We also explore valuation. The real price of gold is currently high compared to history. In the past, when the real price of gold was above average, subsequent real gold returns have been below average consistent with mean reversion. On the demand side, we focus on the official gold holdings of many countries. If prominent emerging markets increase their gold holdings to average per capita or per GDP holdings of developed countries, the real price of gold may rise even further from today's elevated levels. In the end, investors face a golden dilemma: 1) embrace a view that 'those who cannot remember the past are condemned to repeat it' and the purchasing power of gold is likely to revert to its mean or 2) embrace a view that the emergence of new markets represent a structural change and 'this time is different'."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Claude B. Erb and Campbell R. Harvey, \"The Golden Dilemma,\" NBER Working Paper 18706 (2013), https://doi.org/10.3386/w18706."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "The Golden Dilemma Claude B. Erb, CFA, and Campbell R. Harvey Financial Analysts Journal, July/August 2013, Vol. 69, No. 4: 10–42."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Mentioned in the News"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Mark Duggan, who is currently the Wayne and Jodi Cooperman Professor of Economics at Stanford University and will soon..."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Research Associate Melissa Dell of Harvard University and Ashesh Rambachan of MIT delivered the 2026 Methods..."
+    }
+  ],
+  "outgoing_data_links": []
+}

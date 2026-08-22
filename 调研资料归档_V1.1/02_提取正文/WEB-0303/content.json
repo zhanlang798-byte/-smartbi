@@ -1,0 +1,59 @@
+{
+  "source_id": "WEB-0303",
+  "title": "IFRS - IFRS Foundation",
+  "publisher": "IFRS Foundation",
+  "publication_date": "",
+  "source_url": "https://www.ifrs.org/",
+  "extracted_at": "2026-08-16T09:21:30.451Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 8,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "The IFRS Foundation's logo and the IFRS for SMEs® logo, the IASB® logo, the ‘Hexagon Device’, IAS®, IASB®, ISSB™, IFRIC®, IFRS®, IFRS for SMEs®, IFRS Foundation®, International Accounting Standards®, International Financial Reporting Standards®, NIIF® and SIC® are registered trade marks of the IFRS Foundation, further details of which are available from the IFRS Foundation on request."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "The International Financial Reporting Standards Foundation is a not-for-profit corporation incorporated in the State of Delaware, United States of America, with the Delaware Division of Companies (file no: 3353113), and is registered as an overseas company in England and Wales (reg no: FC023235). Head office: Columbus Building, 7 Westferry Circus, Canary Wharf, London E14 4HD, UK."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "© IFRS Foundation 2026"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Modern slavery statement"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Privacy and cookies policy"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Terms and conditions"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Trade mark guidelines"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Make a data protection complaint"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.ifrs.org/content/dam/ifrs/about-us/legal-and-governance/legal-docs/modern-slavery-statement.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Modern slavery statement",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.ifrs.org/content/dam/ifrs/about-us/legal-and-governance/legal-docs/trade-mark-guidelines.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Trade mark guidelines",
+      "locator": "anchor"
+    }
+  ]
+}

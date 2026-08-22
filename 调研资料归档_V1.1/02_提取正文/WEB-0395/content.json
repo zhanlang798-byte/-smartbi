@@ -1,0 +1,31 @@
+{
+  "source_id": "WEB-0395",
+  "title": "每日行情",
+  "publisher": "上海黄金交易所",
+  "publication_date": "",
+  "source_url": "https://www.sge.com.cn/sjzx/quotation_daily_new",
+  "extracted_at": "2026-08-16T09:22:06.826Z",
+  "content_state": "DOWNLOAD_LANDING",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "注意：支持查询2024年1月1日后的数据，若要查询更早数据，请点击历史数据查询"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.sge.com.cn/hyzq/xzzq",
+      "extension": "",
+      "anchor_text": "下载专区",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sge.com.cn/tzzjy/shzrbg",
+      "extension": "",
+      "anchor_text": "社会责任报告",
+      "locator": "anchor"
+    }
+  ]
+}

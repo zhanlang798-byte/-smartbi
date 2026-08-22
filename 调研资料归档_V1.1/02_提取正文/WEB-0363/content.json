@@ -1,0 +1,18 @@
+{
+  "source_id": "WEB-0363",
+  "title": "Economic Policy Uncertainty Index",
+  "publisher": "www.policyuncertainty.com",
+  "publication_date": "",
+  "source_url": "https://www.policyuncertainty.com/",
+  "extracted_at": "2026-08-16T09:21:31.870Z",
+  "content_state": "STRUCTURED_DATA",
+  "paragraph_count": 1,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "We develop indices of economic policy uncertainty for countries around the world."
+    }
+  ],
+  "outgoing_data_links": []
+}

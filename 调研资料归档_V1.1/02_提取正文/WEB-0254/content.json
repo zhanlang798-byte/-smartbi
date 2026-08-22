@@ -1,0 +1,883 @@
+{
+  "source_id": "WEB-0254",
+  "title": "Meeting calendars and information",
+  "publisher": "Federal Reserve Board",
+  "publication_date": "",
+  "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+  "extracted_at": "2026-08-16T09:21:23.967Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 49,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Meeting calendars, statements, and minutes (2021-2027)"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "The FOMC holds eight regularly scheduled meetings during the year and other meetings as needed. Links to policy statements and minutes are in the calendars below. The minutes of regularly scheduled meetings are released three weeks after the date of the policy decision. Committee membership changes at the first regularly scheduled meeting of the year."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "The FOMC makes an annual report pursuant to the Freedom of Information Act. The FOMC FOIA Service Center provides information about the status of FOIA requests and the FOIA process."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "2026 | 2025 | 2024 | 2023 | 2022 | 2021"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "(Released February 18, 2026)"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "(Released April 08, 2026)"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "(Released May 20, 2026)"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "(Released July 08, 2026)"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "(Released February 19, 2025)"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "(Released April 09, 2025)"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "(Released May 28, 2025)"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "(Released July 09, 2025)"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "(Released August 20, 2025)"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "(Released October 08, 2025)"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "(Released November 19, 2025)"
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "(Released December 30, 2025)"
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "(Released February 21, 2024)"
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "(Released April 10, 2024)"
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "(Released May 22, 2024)"
+    },
+    {
+      "locator": "html:paragraph[20]",
+      "text": "(Released July 03, 2024)"
+    },
+    {
+      "locator": "html:paragraph[21]",
+      "text": "(Released August 21, 2024)"
+    },
+    {
+      "locator": "html:paragraph[22]",
+      "text": "(Released October 09, 2024)"
+    },
+    {
+      "locator": "html:paragraph[23]",
+      "text": "(Released November 26, 2024)"
+    },
+    {
+      "locator": "html:paragraph[24]",
+      "text": "(Released January 08, 2025)"
+    },
+    {
+      "locator": "html:paragraph[25]",
+      "text": "(Released February 22, 2023)"
+    },
+    {
+      "locator": "html:paragraph[26]",
+      "text": "(Released April 12, 2023)"
+    },
+    {
+      "locator": "html:paragraph[27]",
+      "text": "(Released May 24, 2023)"
+    },
+    {
+      "locator": "html:paragraph[28]",
+      "text": "(Released July 05, 2023)"
+    },
+    {
+      "locator": "html:paragraph[29]",
+      "text": "(Released August 16, 2023)"
+    },
+    {
+      "locator": "html:paragraph[30]",
+      "text": "(Released October 11, 2023)"
+    },
+    {
+      "locator": "html:paragraph[31]",
+      "text": "(Released November 21, 2023)"
+    },
+    {
+      "locator": "html:paragraph[32]",
+      "text": "(Released January 03, 2024)"
+    },
+    {
+      "locator": "html:paragraph[33]",
+      "text": "(Released February 16, 2022)"
+    },
+    {
+      "locator": "html:paragraph[34]",
+      "text": "(Released April 06, 2022)"
+    },
+    {
+      "locator": "html:paragraph[35]",
+      "text": "(Released May 25, 2022)"
+    },
+    {
+      "locator": "html:paragraph[36]",
+      "text": "(Released July 06, 2022)"
+    },
+    {
+      "locator": "html:paragraph[37]",
+      "text": "(Released August 17, 2022)"
+    },
+    {
+      "locator": "html:paragraph[38]",
+      "text": "(Released October 12, 2022)"
+    },
+    {
+      "locator": "html:paragraph[39]",
+      "text": "(Released November 23, 2022)"
+    },
+    {
+      "locator": "html:paragraph[40]",
+      "text": "(Released January 04, 2023)"
+    },
+    {
+      "locator": "html:paragraph[41]",
+      "text": "(Released February 17, 2021)"
+    },
+    {
+      "locator": "html:paragraph[42]",
+      "text": "(Released April 07, 2021)"
+    },
+    {
+      "locator": "html:paragraph[43]",
+      "text": "(Released May 19, 2021)"
+    },
+    {
+      "locator": "html:paragraph[44]",
+      "text": "(Released July 07, 2021)"
+    },
+    {
+      "locator": "html:paragraph[45]",
+      "text": "(Released August 18, 2021)"
+    },
+    {
+      "locator": "html:paragraph[46]",
+      "text": "(Released October 13, 2021)"
+    },
+    {
+      "locator": "html:paragraph[47]",
+      "text": "(Released November 24, 2021)"
+    },
+    {
+      "locator": "html:paragraph[48]",
+      "text": "(Released January 05, 2022)"
+    },
+    {
+      "locator": "html:paragraph[49]",
+      "text": "Note: A two-day meeting is scheduled for January 25-26, 2028. Each meeting date is tentative until confirmed at the meeting immediately preceding it."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.federalreserve.gov/datadownload",
+      "extension": "",
+      "anchor_text": "Data Download Program",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260128a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260128.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260318a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260318.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260318.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260429a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260429.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260617a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260617.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260617.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260729a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250129a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250129.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250319a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20250319.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250319.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250507a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250507.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250618a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20250618.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250618.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250730a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250730.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250917a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20250917.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250917.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20251029a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20251029.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20251210a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20251210.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20251210.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240131a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240131.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240320a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20240320.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240320.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240501a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240501.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240612a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20240612.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240612.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240731a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240731.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240918a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20240918.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240918.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20241107a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20241107.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20241218a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20241218.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20241218.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230201a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230201.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230322a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20230322.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230322.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230503a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230503.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230614a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20230614.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230614.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230726a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230726.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230920a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20230920.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230920.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20231101a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20231101.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20231213a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20231213.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20231213.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220126a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220126.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220316a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20220316.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220316.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220504a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220504.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220615a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20220615.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220615.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220727a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220727.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220921a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20220921.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220921.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20221102a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20221102.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20221214a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20221214.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20221214.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210127a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210127.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210317a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20210317.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210317.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210428a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210428.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210616a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20210616.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210616.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210728a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210728.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210922a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20210922.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210922.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20211103a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20211103.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20211215a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20211215.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20211215.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    }
+  ]
+}

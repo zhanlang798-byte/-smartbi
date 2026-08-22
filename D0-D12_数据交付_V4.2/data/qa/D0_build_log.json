@@ -1,0 +1,32 @@
+{
+  "run_id": "20260817_v42",
+  "built_at": "2026-08-17T10:14:12",
+  "step": "D0",
+  "outputs": [
+    {
+      "path": "config\\indicator_catalog_v41.xlsx",
+      "rows": 59,
+      "sha256": "7c5943397e5eb8ab0cdb848f5f7fc25e2fbc00fddf7b1860c7a1ac7266917d8a"
+    },
+    {
+      "path": "config\\company_master_v41.xlsx",
+      "rows": 20,
+      "sha256": "bd4a25a0a846a0cbd78f5d08fcb1b76059b5c2a8b374fa268aa1d8cc2ddf7305"
+    },
+    {
+      "path": "config\\historical_event_master_v41.xlsx",
+      "rows": 18,
+      "sha256": "de9527ac901fd27722049cb68cdac820788f8700d45a9240e85a98ddffcfbe6a"
+    },
+    {
+      "path": "config\\source_priority_v41.xlsx",
+      "rows": 15,
+      "sha256": "fef0b7bdb3f33d7d7609868cf9e0dd04264a3179237e974e2e058b6a07d6b144"
+    },
+    {
+      "path": "data\\qa\\D0_scope_signoff_20260817.xlsx",
+      "rows": 12,
+      "sha256": "89885b03590e7ab856e4cefc94c2176f80edbb971cdbeee6bf846464011ebde7"
+    }
+  ]
+}

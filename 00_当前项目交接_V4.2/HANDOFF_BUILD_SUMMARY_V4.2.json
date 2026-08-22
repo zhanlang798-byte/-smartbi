@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-08-16T10:43:11.999Z",
+  "source_count": 688,
+  "html_local_count": 159,
+  "status_rows": 18,
+  "scoring_rows": 17,
+  "evidence_paths": {
+    "registry": {
+      "relative": "调研资料归档_V1.1/00_交接入口/source_action_registry_V1.1.jsonl",
+      "sha256": "9b9113ef183f8c85158eb88212237d5659c21a579c16a6451d3d840187d28738"
+    },
+    "html": {
+      "relative": "调研资料归档_V1.1/00_交接入口/HTML本地文件逐项处理矩阵_159项_V1.1.csv",
+      "sha256": "b64713fc9ac702e4d8ec41e3eafe9bc79a6f2098e26a63bce171f4fdf219af78"
+    },
+    "downloads": {
+      "relative": "调研资料归档_V1.1/05_QA与运行记录/download_results_V1.1.csv",
+      "sha256": "af6704222d31d5782e90988de69b83266bb5e853c42e2ce6e604e26c4f29ea6c"
+    },
+    "structured": {
+      "relative": "调研资料归档_V1.1/05_QA与运行记录/structured_resource_inventory_V1.1.csv",
+      "sha256": "7268e76945befc10834c0c3b50ef63a90872b24e7a952330371d681d7bd70516"
+    },
+    "scoring": {
+      "relative": "00_当前项目交接_V4.2/SCORING_TRACEABILITY_V4.2.csv",
+      "sha256": "be39fcd648aa52e18b531a3b9d16c33be4b5338109d1c553b0ccbaceed6607c0"
+    },
+    "flow": {
+      "relative": "流程图/V4.2_来源获取至Smartbi交付全流程.mmd",
+      "sha256": "1a052e562363abfa5f881ad2cd2bca3bf4fcb86f845af44b1db01b2ae6963e22"
+    },
+    "plan_pdf": {
+      "relative": "计划书/07_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.2.pdf",
+      "sha256": "936d2f8d778b07a7c47928dde7dce1d7ac91c2692139e5debcb06d8d7b47407b"
+    },
+    "plan_source": {
+      "relative": "计划书/07_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.2.tex",
+      "sha256": "d82ffcfdd4dabdb015e9c7c8e36578ae994318446124a36c0589113a1ee5dc7a"
+    },
+    "pdf_qa": {
+      "relative": "调研资料归档_V1.1/05_QA与运行记录/PDF逐页渲染QA_V4.2.json",
+      "sha256": "3063277e86dcb5bdfb766a765e28447f66afa0f5efe8984bed27388d8a824820"
+    }
+  }
+}

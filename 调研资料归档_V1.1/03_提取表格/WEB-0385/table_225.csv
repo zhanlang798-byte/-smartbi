@@ -1,0 +1,12 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7,column_8,column_9,column_10,column_11,column_12,column_13,column_14,column_15,column_16
+,,Payments Due by Period,,,,,,,,,,,,,
+Contractual Obligations,,Total,,Less than1 Year,,1-3Years,,3-5Years,,More than5 Years,,,,,
+Debt(1),,$,"2,974",,$,282,,$,680,,$,475,,$,"1,537"
+Capital lease obligations(1),,,362,,,37,,,106,,,68,,,151
+Remediation and reclamation obligations(2),,,788,,,66,,,133,,,70,,,519
+Employee-related benefits(3),,,386,,,76,,,126,,,35,,,149
+Operating leases,,,21,,,4,,,11,,,5,,,1
+Minimum royalty payments,,,134,,,6,,,54,,,22,,,52
+Purchase obligations(4),,,429,,,150,,,211,,,52,,,16
+Other(5),,,344,,,163,,,149,,,14,,,18
+,,$,"5,438",,$,784,,$,"1,470",,$,741,,$,"2,443"

@@ -1,0 +1,723 @@
+{
+  "source_id": "WEB-0200",
+  "title": "Flow of Funds  : 日本銀行 Bank of Japan",
+  "publisher": "Bank of Japan",
+  "publication_date": "",
+  "source_url": "https://www.boj.or.jp/en/statistics/sj/index.htm",
+  "extracted_at": "2026-08-16T09:21:22.957Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 123,
+  "table_count": 7,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "BOJ Time-Series Data Search"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Notices of Changes and Corrections"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Guide to Japan's Flow of Funds Accounts"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Compilation Method of Japan's Flow of Funds Accounts"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "The Table of Comparison of \"Deposits\" and \"Loans\" in Statistics Prepared by the Bank of Japan [PDF 57KB]"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Table : Quarterly Data"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Full Version (1st Quarter 2026)"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Preliminary Figures (1st Quarter 2026)"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Time Series Table (1st Quarter 2026)"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "Basic Figures of the Flow of Funds (1st Quarter 2026)"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "Note: Full Version consists of Preliminary Figures and Time Series Table of Quarterly Data.Annual Data (Fiscal Year)"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Table : Annual Data (Fiscal Year)"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "Note: Annual Data (Fiscal Year) is renewed once a year in September.Others"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "Overview of Japan, US, and the Euro area"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "Table : Overview of Japan, US, and the Euro area"
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "Note: The overview is renewed once a year after the Flow of Funds Accounts is released in June.Amounts Outstanding of Securitized Products"
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "Components of Securitized Products [PDF 20KB]Loans, Debt Securities, and Deposits by Maturity"
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "Table : Loans, Debt Securities, and Deposits by Maturity"
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "End of September 2025"
+    },
+    {
+      "locator": "html:paragraph[20]",
+      "text": "Note: Data for \"Loans, Debt Securities, and Deposits by Maturity\" are renewed accordingly.Reference Figures for Corporate Pensions (Defined Benefit Schemes)"
+    },
+    {
+      "locator": "html:paragraph[21]",
+      "text": "Table : Reference Figures for Corporate Pensions (Defined Benefit Schemes)"
+    },
+    {
+      "locator": "html:paragraph[22]",
+      "text": "From Fiscal 1993 to 2003"
+    },
+    {
+      "locator": "html:paragraph[23]",
+      "text": "(Reference) Data Based on the Special Data Dissemination Standard Plus (SDDS Plus)"
+    },
+    {
+      "locator": "html:paragraph[24]",
+      "text": "Table : Debt Securities"
+    },
+    {
+      "locator": "html:paragraph[25]",
+      "text": "Other Financial Corporations Survey"
+    },
+    {
+      "locator": "html:paragraph[26]",
+      "text": "Table : Other Financial Corporations Survey"
+    },
+    {
+      "locator": "html:paragraph[27]",
+      "text": "The Bank has started releasing data on \"Debt Securities\" since September 2015, and on \"Other Financial Corporations Survey\" since January 2018 based on the International Monetary Fund (IMF)'s SDDS Plus on a quarterly basis. For further information, please see \"Special Data Dissemination Standard Plus\" (Link to an external website) on the IMF's website."
+    },
+    {
+      "locator": "html:paragraph[28]",
+      "text": "Notices of Changes and Corrections"
+    },
+    {
+      "locator": "html:paragraph[29]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 121KB]June 25, 2026"
+    },
+    {
+      "locator": "html:paragraph[30]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts May 25, 2026"
+    },
+    {
+      "locator": "html:paragraph[31]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 258KB]Sept. 18, 2025"
+    },
+    {
+      "locator": "html:paragraph[32]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts June 27, 2025"
+    },
+    {
+      "locator": "html:paragraph[33]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 76KB]June 27, 2025"
+    },
+    {
+      "locator": "html:paragraph[34]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts May 27, 2025"
+    },
+    {
+      "locator": "html:paragraph[35]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 183KB]Sept. 19, 2024"
+    },
+    {
+      "locator": "html:paragraph[36]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts June 27, 2024"
+    },
+    {
+      "locator": "html:paragraph[37]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts June 27, 2024"
+    },
+    {
+      "locator": "html:paragraph[38]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 66KB]May 27, 2024"
+    },
+    {
+      "locator": "html:paragraph[39]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 182KB]Sept. 20, 2023"
+    },
+    {
+      "locator": "html:paragraph[40]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts June 27, 2023"
+    },
+    {
+      "locator": "html:paragraph[41]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts June 27, 2023"
+    },
+    {
+      "locator": "html:paragraph[42]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 74KB]May 26, 2023"
+    },
+    {
+      "locator": "html:paragraph[43]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 175KB]Sept. 20, 2022"
+    },
+    {
+      "locator": "html:paragraph[44]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts June 27, 2022"
+    },
+    {
+      "locator": "html:paragraph[45]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 74KB]May 27, 2022"
+    },
+    {
+      "locator": "html:paragraph[46]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 170KB]Sept. 17, 2021"
+    },
+    {
+      "locator": "html:paragraph[47]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts June 25, 2021"
+    },
+    {
+      "locator": "html:paragraph[48]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 112KB]June 25, 2021"
+    },
+    {
+      "locator": "html:paragraph[49]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts [PDF 189KB]May 28, 2021"
+    },
+    {
+      "locator": "html:paragraph[50]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 193KB]Sept. 18, 2020"
+    },
+    {
+      "locator": "html:paragraph[51]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 75KB]Sept. 18, 2020"
+    },
+    {
+      "locator": "html:paragraph[52]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts [PDF 210KB]July 29, 2020"
+    },
+    {
+      "locator": "html:paragraph[53]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 209KB]Mar. 18, 2020"
+    },
+    {
+      "locator": "html:paragraph[54]",
+      "text": "Revision to Reference Figures for Corporate Pensions (Defined Benefit Schemes) Sept. 20, 2019"
+    },
+    {
+      "locator": "html:paragraph[55]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 37KB]Sept. 20, 2019"
+    },
+    {
+      "locator": "html:paragraph[56]",
+      "text": "Retroactive Revision to the Flow of Funds Accounts [PDF 218KB]Sept. 12, 2019"
+    },
+    {
+      "locator": "html:paragraph[57]",
+      "text": "Revision to Reference Data Series in the Flow of Funds Accounts [PDF 34KB]Aug. 13, 2019"
+    },
+    {
+      "locator": "html:paragraph[58]",
+      "text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 195KB]June 27, 2019"
+    },
+    {
+      "locator": "html:paragraph[59]",
+      "text": "Data Revisions to the Flow of Funds Accounts Sept. 20, 2018"
+    },
+    {
+      "locator": "html:paragraph[60]",
+      "text": "Data Revisions to the Flow of Funds Accounts June 27, 2018"
+    },
+    {
+      "locator": "html:paragraph[61]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 37KB]June 27, 2018"
+    },
+    {
+      "locator": "html:paragraph[62]",
+      "text": "Data Revisions to the Flow of Funds Accounts Mar. 28, 2018"
+    },
+    {
+      "locator": "html:paragraph[63]",
+      "text": "Updates of the Guides to Flow of Funds Accounts Sept. 20, 2017"
+    },
+    {
+      "locator": "html:paragraph[64]",
+      "text": "Data Revisions to the Flow of Funds Accounts June 27, 2017"
+    },
+    {
+      "locator": "html:paragraph[65]",
+      "text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 37KB]June 27, 2017"
+    },
+    {
+      "locator": "html:paragraph[66]",
+      "text": "Data Revisions to the Flow of Funds Accounts Mar. 10, 2017"
+    },
+    {
+      "locator": "html:paragraph[67]",
+      "text": "Revision of Supplementary Tables and Charts of the Flow of Funds Accounts Jan. 13, 2017"
+    },
+    {
+      "locator": "html:paragraph[68]",
+      "text": "Updates of the Guides to Flow of Funds Accounts Sept. 26, 2016"
+    },
+    {
+      "locator": "html:paragraph[69]",
+      "text": "Data Revisions to the Flow of Funds Accounts May 25, 2016"
+    },
+    {
+      "locator": "html:paragraph[70]",
+      "text": "Highlights of Enhanced Japan's Flow of Funds Accounts Based on 2008SNA Mar. 31, 2016"
+    },
+    {
+      "locator": "html:paragraph[71]",
+      "text": "Results of Revision to the Flow of Funds Accounts Based on 2008SNA Mar. 25, 2016"
+    },
+    {
+      "locator": "html:paragraph[72]",
+      "text": "Release of the Revised Flow of Funds Accounts Statistics Based on the 2008SNA Dec. 17, 2015"
+    },
+    {
+      "locator": "html:paragraph[73]",
+      "text": "Release Schedule for the Revised Flow of Funds Accounts Statistics Based on the 2008SNA June 29, 2015"
+    },
+    {
+      "locator": "html:paragraph[74]",
+      "text": "Data Revisions to the Flow of Funds Accounts Mar. 18, 2015"
+    },
+    {
+      "locator": "html:paragraph[75]",
+      "text": "Release of Time Series Data of \"Loans, Debt Securities, and Deposits by Maturity\" Jan. 9, 2015"
+    },
+    {
+      "locator": "html:paragraph[76]",
+      "text": "Enhancement and Expansion of Japan's Flow of Funds Accounts in Response to International Recommendations after the Financial Crisis Aug. 29, 2014"
+    },
+    {
+      "locator": "html:paragraph[77]",
+      "text": "Updates of the Guides to Flow of Funds Accounts July 18, 2014"
+    },
+    {
+      "locator": "html:paragraph[78]",
+      "text": "The Implementation of 2008SNA Recommendations in Japan's Flow of Funds Accounts June 18, 2014"
+    },
+    {
+      "locator": "html:paragraph[79]",
+      "text": "Data Revisions of the Flow of Funds Accounts Mar. 25, 2014"
+    },
+    {
+      "locator": "html:paragraph[80]",
+      "text": "Data Revisions of the Flow of Funds Accounts Mar. 25, 2014"
+    },
+    {
+      "locator": "html:paragraph[81]",
+      "text": "Release of New Data Series in \"Amounts Outstanding of Securitized Products\" Mar. 25, 2014"
+    },
+    {
+      "locator": "html:paragraph[82]",
+      "text": "Discontinuation of \"Channels of Fund-raising by the Nonfinancial Sector\" Feb. 21, 2014"
+    },
+    {
+      "locator": "html:paragraph[83]",
+      "text": "Release of \"Loans, Debt Securities, and Deposits by Maturity\" and \"From-whom-to-whom of Loans\" [PDF 40KB]Nov. 29, 2013"
+    },
+    {
+      "locator": "html:paragraph[84]",
+      "text": "Updates of the Guides to Flow of Funds Accounts Mar. 25, 2013"
+    },
+    {
+      "locator": "html:paragraph[85]",
+      "text": "Release of New Data Series in \"Amounts Outstanding of Securitized Products\" Mar. 25, 2013"
+    },
+    {
+      "locator": "html:paragraph[86]",
+      "text": "Data Revisions of the Flow of Funds Accounts Dec. 28, 2012"
+    },
+    {
+      "locator": "html:paragraph[87]",
+      "text": "Updates of the Guides to Flow of Funds Accounts June 19, 2012"
+    },
+    {
+      "locator": "html:paragraph[88]",
+      "text": "Data Revision of the Flow of Funds Accounts Apr. 23, 2012"
+    },
+    {
+      "locator": "html:paragraph[89]",
+      "text": "Japan's Flow of Funds Accounts: Main Characteristics and Measures for Enhancement Apr. 11, 2012"
+    },
+    {
+      "locator": "html:paragraph[90]",
+      "text": "Release of Basic Figures of the Flow of Funds Mar. 23, 2012"
+    },
+    {
+      "locator": "html:paragraph[91]",
+      "text": "Data Revision of the Flow of Funds Accounts Dec. 21, 2011"
+    },
+    {
+      "locator": "html:paragraph[92]",
+      "text": "Release of the \"Amounts Outstanding of Securitized Products\" [PDF 67KB]Mar. 23, 2011"
+    },
+    {
+      "locator": "html:paragraph[93]",
+      "text": "Data Revisions of the Flow of Funds Accounts July 14, 2010"
+    },
+    {
+      "locator": "html:paragraph[94]",
+      "text": "Updates of the Guides to Flow of Funds Accounts Mar. 23, 2010"
+    },
+    {
+      "locator": "html:paragraph[95]",
+      "text": "Data Revisions of the Flow of Funds Accounts June 3, 2009"
+    },
+    {
+      "locator": "html:paragraph[96]",
+      "text": "Statistical Treatment of Treasury Discount Bills in the Flow of Funds Accounts Mar. 24, 2009"
+    },
+    {
+      "locator": "html:paragraph[97]",
+      "text": "Data Revisions and Change in the Release Schedule of the Flow of Funds Accounts Mar. 9, 2009"
+    },
+    {
+      "locator": "html:paragraph[98]",
+      "text": "Statistical Treatment of Treasury Discount Bills Mar. 21, 2008"
+    },
+    {
+      "locator": "html:paragraph[99]",
+      "text": "Treatment of the Japan Post Bank, etc. in the Flow of Funds Accounts and revision of the Flow of Funds Accounts Mar. 14, 2008"
+    },
+    {
+      "locator": "html:paragraph[100]",
+      "text": "Treatment of the Japan Post Bank, etc. in the Flow of Funds Accounts Sept. 21, 2007"
+    },
+    {
+      "locator": "html:paragraph[101]",
+      "text": "Statistical Treatment of the Japan Post Bank, etc. June 15, 2007"
+    },
+    {
+      "locator": "html:paragraph[102]",
+      "text": "Revision of \"Channels of Fund-raising by the Nonfinancial Sector of the Flow of Funds Accounts\" Mar. 23, 2007"
+    },
+    {
+      "locator": "html:paragraph[103]",
+      "text": "Revision of a sectoral classification in the Flow of Funds Accounts and revision of the Flow of Funds Accounts Mar. 19, 2007"
+    },
+    {
+      "locator": "html:paragraph[104]",
+      "text": "Revision of a sectoral classification in the Flow of Funds Accounts Sept. 15, 2006"
+    },
+    {
+      "locator": "html:paragraph[105]",
+      "text": "Treatment of expressway companies etc. in the Flow of Funds Accounts and revision of the Flow of Funds Accounts June 23, 2006"
+    },
+    {
+      "locator": "html:paragraph[106]",
+      "text": "Treatment of Funds-Supplying Operations against Pooled Collateral in the Bank's Statistics June 15, 2006"
+    },
+    {
+      "locator": "html:paragraph[107]",
+      "text": "Release of \"Private nonfinancial corporation Financial liabilities (book value / face value basis)\" of the Flow of Funds Accounts Mar. 24, 2006"
+    },
+    {
+      "locator": "html:paragraph[108]",
+      "text": "Revision of Flow of Funds Accounts Mar. 15, 2005"
+    },
+    {
+      "locator": "html:paragraph[109]",
+      "text": "Change in the annual revision schedule of the Flow of Funds Accounts Sept. 30, 2003"
+    },
+    {
+      "locator": "html:paragraph[110]",
+      "text": "Revision of Flow of Funds Accounts Sept. 5, 2002"
+    },
+    {
+      "locator": "html:paragraph[111]",
+      "text": "Revision of Flow of Funds Accounts Sept. 5, 2002"
+    },
+    {
+      "locator": "html:paragraph[112]",
+      "text": "Major change for 2001FY of the Channels of Fund-raising by the Nonfinancial Sector June 6, 2002"
+    },
+    {
+      "locator": "html:paragraph[113]",
+      "text": "Main change for 4th quarter 2001 of the Flow of Funds Accounts Mar. 15, 2002"
+    },
+    {
+      "locator": "html:paragraph[114]",
+      "text": "Release of the Reference Table, \"Channels of Fund-raising by the Nonfinancial Sector\" of the Flow of Funds Accounts Feb. 15, 2002"
+    },
+    {
+      "locator": "html:paragraph[115]",
+      "text": "Changing in the releasing schedules of \"Flow of Funds Accounts\" Sept. 28, 2001"
+    },
+    {
+      "locator": "html:paragraph[116]",
+      "text": "Notice for the second quarter 2001, Flow of Funds Accounts June 18, 1999"
+    },
+    {
+      "locator": "html:paragraph[117]",
+      "text": "Revision of Japan's Flow of Funds Accounts Statistics Dec. 4, 1998"
+    },
+    {
+      "locator": "html:paragraph[118]",
+      "text": "Responses to Comments on the Proposed Revision of the Flow of Funds Accounts: The Bank of Japan's Final Decisions on the Revision Aug. 29, 1997"
+    },
+    {
+      "locator": "html:paragraph[119]",
+      "text": "Revision of Japan's Flow of Funds Accounts"
+    },
+    {
+      "locator": "html:paragraph[120]",
+      "text": "Notices of Corrections and Revisions"
+    },
+    {
+      "locator": "html:paragraph[121]",
+      "text": "Revisions to Descriptions in \"Results of Revision to the Flow of Funds Accounts Based on 2008SNA,\" etc. Sept. 14, 2018"
+    },
+    {
+      "locator": "html:paragraph[122]",
+      "text": "Data Revisions to the Flow of Funds Accounts Oct. 7, 2016"
+    },
+    {
+      "locator": "html:paragraph[123]",
+      "text": "Data Revision of \"Flow of Funds - Overview of Japan, US, and the Euro area -\""
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/exp/compare1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "The Table of Comparison of \"Deposits\" and \"Loans\" in Statistics Prepared by the Bank of Japan [PDF 57KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjall.pdf",
+      "extension": ".pdf",
+      "anchor_text": "[PDF 672KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjpre.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "[XLSX 216KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjlong.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "[XLSX 315KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjexp.pdf",
+      "extension": ".pdf",
+      "anchor_text": "[PDF 439KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjfy.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "[XLSX 217KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjhiq.pdf",
+      "extension": ".pdf",
+      "anchor_text": "[PDF 213KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjteigi.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Components of Securitized Products [PDF 20KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjmatu.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "[XLSX 36KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjpen.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "[XLSX 12KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjds.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "[XLSX 29KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/sj/sjfs.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "[XLSX 23KB]",
+      "locator": "table-link"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2026/not260625b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 121KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2026/not260525a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 258KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2025/not250627b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 76KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2025/not250527a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 183KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2024/not240627a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 66KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2024/not240527a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 182KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2023/not230627a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 74KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2023/not230526a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 175KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2022/not220627a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 74KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2022/not220527a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 170KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2021/not210625a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 112KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2021/not210625b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Retroactive Revision to the Flow of Funds Accounts [PDF 189KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2021/not210528a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 193KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2020/not200918a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 75KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2020/not200918b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Retroactive Revision to the Flow of Funds Accounts [PDF 210KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2020/not200729a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 209KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2019/not190920a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 37KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2019/not190920b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Retroactive Revision to the Flow of Funds Accounts [PDF 218KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2019/not190912b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Revision to Reference Data Series in the Flow of Funds Accounts [PDF 34KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2019/not190813a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Planned Retroactive Revision to the Flow of Funds Accounts [PDF 195KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2018/not180627b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 37KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2017/not170627b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Seasonal Adjustment for the Flow of Funds Accounts Data [PDF 37KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2014/not140221a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Release of \"Loans, Debt Securities, and Deposits by Maturity\" and \"From-whom-to-whom of Loans\" [PDF 40KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/outline/notice_2011/not111221a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Release of the \"Amounts Outstanding of Securitized Products\" [PDF 67KB]",
+      "locator": "anchor"
+    }
+  ]
+}

@@ -1,0 +1,6910 @@
+{
+  "generated_at": "2026-08-16T10:32:43.884Z",
+  "source_pdf": "计划书/07_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.2.pdf",
+  "rendered_page_count": 287,
+  "expected_page_count": 287,
+  "consistent_a4_dimensions": true,
+  "allowed_page_dimensions": [
+    "662x936",
+    "936x662"
+  ],
+  "portrait_page_count": 160,
+  "landscape_page_count": 127,
+  "blank_page_count": 0,
+  "edge_touch_page_count": 0,
+  "low_size_page_count": 0,
+  "anomaly_count": 0,
+  "anomaly_pages": [],
+  "machine_result": "PASS",
+  "interpretation": "机器检查用于发现空白页、尺寸不一致、图像损坏和贴边裁切风险；不能替代抽样人工视觉检查。",
+  "pages": [
+    {
+      "page": 1,
+      "file_name": "page-001.png",
+      "file_size": 67464,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.038733,
+      "dark_ink_ratio": 0.035776,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 96,
+        "min_y": 161,
+        "max_x": 570,
+        "max_y": 862
+      },
+      "margins": {
+        "left": 96,
+        "top": 161,
+        "right": 91,
+        "bottom": 73
+      }
+    },
+    {
+      "page": 2,
+      "file_name": "page-002.png",
+      "file_size": 244925,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.119188,
+      "dark_ink_ratio": 0.10482,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 592,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 69,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 3,
+      "file_name": "page-003.png",
+      "file_size": 150716,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.074002,
+      "dark_ink_ratio": 0.066038,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 111,
+        "right": 74,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 4,
+      "file_name": "page-004.png",
+      "file_size": 121480,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.056834,
+      "dark_ink_ratio": 0.050929,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 5,
+      "file_name": "page-005.png",
+      "file_size": 139772,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.06693,
+      "dark_ink_ratio": 0.059453,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 6,
+      "file_name": "page-006.png",
+      "file_size": 161073,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.076316,
+      "dark_ink_ratio": 0.067932,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 7,
+      "file_name": "page-007.png",
+      "file_size": 155788,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.073768,
+      "dark_ink_ratio": 0.064717,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 8,
+      "file_name": "page-008.png",
+      "file_size": 139278,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.067167,
+      "dark_ink_ratio": 0.059484,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 9,
+      "file_name": "page-009.png",
+      "file_size": 107914,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.047577,
+      "dark_ink_ratio": 0.042094,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 112,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 112,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 10,
+      "file_name": "page-010.png",
+      "file_size": 115304,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.052521,
+      "dark_ink_ratio": 0.047552,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 11,
+      "file_name": "page-011.png",
+      "file_size": 126746,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.057729,
+      "dark_ink_ratio": 0.051205,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 12,
+      "file_name": "page-012.png",
+      "file_size": 141665,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.063969,
+      "dark_ink_ratio": 0.05665,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 13,
+      "file_name": "page-013.png",
+      "file_size": 113106,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.053127,
+      "dark_ink_ratio": 0.048689,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 14,
+      "file_name": "page-014.png",
+      "file_size": 103504,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.046131,
+      "dark_ink_ratio": 0.041581,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 15,
+      "file_name": "page-015.png",
+      "file_size": 97654,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.042248,
+      "dark_ink_ratio": 0.036841,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 16,
+      "file_name": "page-016.png",
+      "file_size": 103135,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.045788,
+      "dark_ink_ratio": 0.039583,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 17,
+      "file_name": "page-017.png",
+      "file_size": 46930,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.019928,
+      "dark_ink_ratio": 0.017375,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 18,
+      "file_name": "page-018.png",
+      "file_size": 18582,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.01024,
+      "dark_ink_ratio": 0.009594,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 104,
+        "min_y": 331,
+        "max_x": 561,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 104,
+        "top": 331,
+        "right": 100,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 19,
+      "file_name": "page-019.png",
+      "file_size": 199583,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.098229,
+      "dark_ink_ratio": 0.086735,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 74,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 20,
+      "file_name": "page-020.png",
+      "file_size": 134449,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.068069,
+      "dark_ink_ratio": 0.06063,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 592,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 69,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 21,
+      "file_name": "page-021.png",
+      "file_size": 183380,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.092432,
+      "dark_ink_ratio": 0.082452,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 111,
+        "right": 74,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 22,
+      "file_name": "page-022.png",
+      "file_size": 193503,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.09561,
+      "dark_ink_ratio": 0.084833,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 23,
+      "file_name": "page-023.png",
+      "file_size": 157765,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.076292,
+      "dark_ink_ratio": 0.067766,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 24,
+      "file_name": "page-024.png",
+      "file_size": 146229,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.073695,
+      "dark_ink_ratio": 0.065437,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 25,
+      "file_name": "page-025.png",
+      "file_size": 162311,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.080141,
+      "dark_ink_ratio": 0.071207,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 26,
+      "file_name": "page-026.png",
+      "file_size": 136321,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.067061,
+      "dark_ink_ratio": 0.059622,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 27,
+      "file_name": "page-027.png",
+      "file_size": 141532,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.083424,
+      "dark_ink_ratio": 0.076507,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 111,
+        "max_x": 583,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 111,
+        "right": 78,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 28,
+      "file_name": "page-028.png",
+      "file_size": 192300,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.121819,
+      "dark_ink_ratio": 0.111384,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 29,
+      "file_name": "page-029.png",
+      "file_size": 136971,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.081277,
+      "dark_ink_ratio": 0.073879,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 30,
+      "file_name": "page-030.png",
+      "file_size": 23558,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.013573,
+      "dark_ink_ratio": 0.012756,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 590,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 71,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 31,
+      "file_name": "page-031.png",
+      "file_size": 193791,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.094719,
+      "dark_ink_ratio": 0.081971,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 32,
+      "file_name": "page-032.png",
+      "file_size": 82871,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.041864,
+      "dark_ink_ratio": 0.037167,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 33,
+      "file_name": "page-033.png",
+      "file_size": 160962,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.077333,
+      "dark_ink_ratio": 0.068629,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 34,
+      "file_name": "page-034.png",
+      "file_size": 16493,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.008553,
+      "dark_ink_ratio": 0.00804,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 145,
+        "min_y": 331,
+        "max_x": 519,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 145,
+        "top": 331,
+        "right": 142,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 35,
+      "file_name": "page-035.png",
+      "file_size": 37678,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.016742,
+      "dark_ink_ratio": 0.015077,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 111,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 36,
+      "file_name": "page-036.png",
+      "file_size": 150483,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.073092,
+      "dark_ink_ratio": 0.062111,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 37,
+      "file_name": "page-037.png",
+      "file_size": 153331,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074405,
+      "dark_ink_ratio": 0.063279,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 38,
+      "file_name": "page-038.png",
+      "file_size": 152708,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.07446,
+      "dark_ink_ratio": 0.063313,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 39,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 39,
+      "file_name": "page-039.png",
+      "file_size": 153034,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074472,
+      "dark_ink_ratio": 0.063323,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 40,
+      "file_name": "page-040.png",
+      "file_size": 151967,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.073794,
+      "dark_ink_ratio": 0.062663,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 41,
+      "file_name": "page-041.png",
+      "file_size": 152768,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074284,
+      "dark_ink_ratio": 0.06302,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 42,
+      "file_name": "page-042.png",
+      "file_size": 149167,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.072256,
+      "dark_ink_ratio": 0.061359,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 43,
+      "file_name": "page-043.png",
+      "file_size": 133757,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.064387,
+      "dark_ink_ratio": 0.054587,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 44,
+      "file_name": "page-044.png",
+      "file_size": 129498,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.061196,
+      "dark_ink_ratio": 0.05185,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 45,
+      "file_name": "page-045.png",
+      "file_size": 127398,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.060392,
+      "dark_ink_ratio": 0.051122,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 46,
+      "file_name": "page-046.png",
+      "file_size": 123854,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.058929,
+      "dark_ink_ratio": 0.049973,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 47,
+      "file_name": "page-047.png",
+      "file_size": 120534,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.056835,
+      "dark_ink_ratio": 0.048283,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 48,
+      "file_name": "page-048.png",
+      "file_size": 127815,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.060644,
+      "dark_ink_ratio": 0.05134,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 49,
+      "file_name": "page-049.png",
+      "file_size": 130837,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.062495,
+      "dark_ink_ratio": 0.052828,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 50,
+      "file_name": "page-050.png",
+      "file_size": 133409,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.063748,
+      "dark_ink_ratio": 0.053985,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 51,
+      "file_name": "page-051.png",
+      "file_size": 128354,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.060886,
+      "dark_ink_ratio": 0.05156,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 52,
+      "file_name": "page-052.png",
+      "file_size": 144567,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.069698,
+      "dark_ink_ratio": 0.059019,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 53,
+      "file_name": "page-053.png",
+      "file_size": 157562,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.07624,
+      "dark_ink_ratio": 0.064729,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 54,
+      "file_name": "page-054.png",
+      "file_size": 158711,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.0764,
+      "dark_ink_ratio": 0.064809,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 55,
+      "file_name": "page-055.png",
+      "file_size": 151396,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.07326,
+      "dark_ink_ratio": 0.062063,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 56,
+      "file_name": "page-056.png",
+      "file_size": 150706,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.07298,
+      "dark_ink_ratio": 0.061959,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 57,
+      "file_name": "page-057.png",
+      "file_size": 154101,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074598,
+      "dark_ink_ratio": 0.063262,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 58,
+      "file_name": "page-058.png",
+      "file_size": 162429,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.078271,
+      "dark_ink_ratio": 0.06642,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 39,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 59,
+      "file_name": "page-059.png",
+      "file_size": 158805,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.07703,
+      "dark_ink_ratio": 0.065344,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 60,
+      "file_name": "page-060.png",
+      "file_size": 157044,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075916,
+      "dark_ink_ratio": 0.064296,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 61,
+      "file_name": "page-061.png",
+      "file_size": 156100,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075484,
+      "dark_ink_ratio": 0.063927,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 62,
+      "file_name": "page-062.png",
+      "file_size": 160539,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.077546,
+      "dark_ink_ratio": 0.065684,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 63,
+      "file_name": "page-063.png",
+      "file_size": 154720,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074817,
+      "dark_ink_ratio": 0.063292,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 64,
+      "file_name": "page-064.png",
+      "file_size": 159745,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.077509,
+      "dark_ink_ratio": 0.065652,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 65,
+      "file_name": "page-065.png",
+      "file_size": 152336,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.07436,
+      "dark_ink_ratio": 0.063037,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 66,
+      "file_name": "page-066.png",
+      "file_size": 147802,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.070869,
+      "dark_ink_ratio": 0.060141,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 67,
+      "file_name": "page-067.png",
+      "file_size": 158060,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.076587,
+      "dark_ink_ratio": 0.064859,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 68,
+      "file_name": "page-068.png",
+      "file_size": 156649,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075563,
+      "dark_ink_ratio": 0.063977,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 69,
+      "file_name": "page-069.png",
+      "file_size": 151829,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.073513,
+      "dark_ink_ratio": 0.062227,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 70,
+      "file_name": "page-070.png",
+      "file_size": 152480,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.0739,
+      "dark_ink_ratio": 0.062468,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 71,
+      "file_name": "page-071.png",
+      "file_size": 156223,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075634,
+      "dark_ink_ratio": 0.06413,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 72,
+      "file_name": "page-072.png",
+      "file_size": 160369,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.077105,
+      "dark_ink_ratio": 0.065352,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 73,
+      "file_name": "page-073.png",
+      "file_size": 150920,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.072348,
+      "dark_ink_ratio": 0.061194,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 74,
+      "file_name": "page-074.png",
+      "file_size": 157745,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.076024,
+      "dark_ink_ratio": 0.064632,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 75,
+      "file_name": "page-075.png",
+      "file_size": 152631,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074141,
+      "dark_ink_ratio": 0.062882,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 76,
+      "file_name": "page-076.png",
+      "file_size": 153635,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074725,
+      "dark_ink_ratio": 0.063341,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 77,
+      "file_name": "page-077.png",
+      "file_size": 155372,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074888,
+      "dark_ink_ratio": 0.063284,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 78,
+      "file_name": "page-078.png",
+      "file_size": 157174,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075792,
+      "dark_ink_ratio": 0.06422,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 79,
+      "file_name": "page-079.png",
+      "file_size": 151358,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.072798,
+      "dark_ink_ratio": 0.061827,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 80,
+      "file_name": "page-080.png",
+      "file_size": 147871,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.071613,
+      "dark_ink_ratio": 0.060881,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 81,
+      "file_name": "page-081.png",
+      "file_size": 156910,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.076076,
+      "dark_ink_ratio": 0.064517,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 82,
+      "file_name": "page-082.png",
+      "file_size": 146804,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.070787,
+      "dark_ink_ratio": 0.059842,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 83,
+      "file_name": "page-083.png",
+      "file_size": 155034,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.074944,
+      "dark_ink_ratio": 0.063662,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 84,
+      "file_name": "page-084.png",
+      "file_size": 156399,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075837,
+      "dark_ink_ratio": 0.064435,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 85,
+      "file_name": "page-085.png",
+      "file_size": 158953,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.076836,
+      "dark_ink_ratio": 0.065155,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 86,
+      "file_name": "page-086.png",
+      "file_size": 160948,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.077291,
+      "dark_ink_ratio": 0.065531,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 87,
+      "file_name": "page-087.png",
+      "file_size": 161923,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.078106,
+      "dark_ink_ratio": 0.066307,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 88,
+      "file_name": "page-088.png",
+      "file_size": 144762,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.068873,
+      "dark_ink_ratio": 0.058314,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 89,
+      "file_name": "page-089.png",
+      "file_size": 141932,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.067656,
+      "dark_ink_ratio": 0.057269,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 90,
+      "file_name": "page-090.png",
+      "file_size": 142385,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.067666,
+      "dark_ink_ratio": 0.057289,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 91,
+      "file_name": "page-091.png",
+      "file_size": 142281,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.067727,
+      "dark_ink_ratio": 0.057329,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 92,
+      "file_name": "page-092.png",
+      "file_size": 142362,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.067713,
+      "dark_ink_ratio": 0.057313,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 93,
+      "file_name": "page-093.png",
+      "file_size": 144710,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.069043,
+      "dark_ink_ratio": 0.058441,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 94,
+      "file_name": "page-094.png",
+      "file_size": 153804,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.073763,
+      "dark_ink_ratio": 0.062481,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 95,
+      "file_name": "page-095.png",
+      "file_size": 159968,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.077496,
+      "dark_ink_ratio": 0.065681,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 96,
+      "file_name": "page-096.png",
+      "file_size": 149247,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.072199,
+      "dark_ink_ratio": 0.061085,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 97,
+      "file_name": "page-097.png",
+      "file_size": 155015,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075106,
+      "dark_ink_ratio": 0.063652,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 587
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 74
+      }
+    },
+    {
+      "page": 98,
+      "file_name": "page-098.png",
+      "file_size": 92202,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.045299,
+      "dark_ink_ratio": 0.038817,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 99,
+      "file_name": "page-099.png",
+      "file_size": 34983,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.01639,
+      "dark_ink_ratio": 0.014885,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 100,
+      "file_name": "page-100.png",
+      "file_size": 145126,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.072938,
+      "dark_ink_ratio": 0.062105,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 101,
+      "file_name": "page-101.png",
+      "file_size": 143332,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.070695,
+      "dark_ink_ratio": 0.060437,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 102,
+      "file_name": "page-102.png",
+      "file_size": 131804,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.064498,
+      "dark_ink_ratio": 0.055034,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 103,
+      "file_name": "page-103.png",
+      "file_size": 133829,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.066614,
+      "dark_ink_ratio": 0.05673,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 104,
+      "file_name": "page-104.png",
+      "file_size": 142922,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.071352,
+      "dark_ink_ratio": 0.060868,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 105,
+      "file_name": "page-105.png",
+      "file_size": 124050,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.061616,
+      "dark_ink_ratio": 0.052378,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 106,
+      "file_name": "page-106.png",
+      "file_size": 130390,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.063778,
+      "dark_ink_ratio": 0.054497,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 107,
+      "file_name": "page-107.png",
+      "file_size": 137210,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.066793,
+      "dark_ink_ratio": 0.056856,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 108,
+      "file_name": "page-108.png",
+      "file_size": 133328,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.065876,
+      "dark_ink_ratio": 0.056093,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 109,
+      "file_name": "page-109.png",
+      "file_size": 133788,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.065962,
+      "dark_ink_ratio": 0.056175,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 110,
+      "file_name": "page-110.png",
+      "file_size": 133559,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.065938,
+      "dark_ink_ratio": 0.056222,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 111,
+      "file_name": "page-111.png",
+      "file_size": 135184,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.066264,
+      "dark_ink_ratio": 0.056422,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 112,
+      "file_name": "page-112.png",
+      "file_size": 92803,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.048369,
+      "dark_ink_ratio": 0.041812,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 113,
+      "file_name": "page-113.png",
+      "file_size": 28059,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.012729,
+      "dark_ink_ratio": 0.011494,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 114,
+      "file_name": "page-114.png",
+      "file_size": 141823,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.075655,
+      "dark_ink_ratio": 0.064006,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 115,
+      "file_name": "page-115.png",
+      "file_size": 139329,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.07477,
+      "dark_ink_ratio": 0.064191,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 116,
+      "file_name": "page-116.png",
+      "file_size": 116972,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.06445,
+      "dark_ink_ratio": 0.054264,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 117,
+      "file_name": "page-117.png",
+      "file_size": 28527,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.013786,
+      "dark_ink_ratio": 0.012393,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 111,
+        "max_x": 585,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 111,
+        "right": 76,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 118,
+      "file_name": "page-118.png",
+      "file_size": 110792,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.057189,
+      "dark_ink_ratio": 0.047949,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 119,
+      "file_name": "page-119.png",
+      "file_size": 124189,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.064098,
+      "dark_ink_ratio": 0.053997,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 120,
+      "file_name": "page-120.png",
+      "file_size": 123043,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.063367,
+      "dark_ink_ratio": 0.05388,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 121,
+      "file_name": "page-121.png",
+      "file_size": 122330,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.063259,
+      "dark_ink_ratio": 0.053677,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 122,
+      "file_name": "page-122.png",
+      "file_size": 122192,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.063207,
+      "dark_ink_ratio": 0.053538,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 123,
+      "file_name": "page-123.png",
+      "file_size": 124339,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.063585,
+      "dark_ink_ratio": 0.053817,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 124,
+      "file_name": "page-124.png",
+      "file_size": 123196,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.06316,
+      "dark_ink_ratio": 0.053541,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 125,
+      "file_name": "page-125.png",
+      "file_size": 126148,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.064711,
+      "dark_ink_ratio": 0.054674,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 126,
+      "file_name": "page-126.png",
+      "file_size": 112794,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.058312,
+      "dark_ink_ratio": 0.049245,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 127,
+      "file_name": "page-127.png",
+      "file_size": 102730,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.054068,
+      "dark_ink_ratio": 0.045777,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 128,
+      "file_name": "page-128.png",
+      "file_size": 112024,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.059301,
+      "dark_ink_ratio": 0.049986,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 39,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 129,
+      "file_name": "page-129.png",
+      "file_size": 105731,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.054176,
+      "dark_ink_ratio": 0.045861,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 130,
+      "file_name": "page-130.png",
+      "file_size": 60871,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.0327,
+      "dark_ink_ratio": 0.028173,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 131,
+      "file_name": "page-131.png",
+      "file_size": 15009,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007309,
+      "dark_ink_ratio": 0.006844,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 192,
+        "min_y": 331,
+        "max_x": 461,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 192,
+        "top": 331,
+        "right": 200,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 132,
+      "file_name": "page-132.png",
+      "file_size": 148842,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.074113,
+      "dark_ink_ratio": 0.066188,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 133,
+      "file_name": "page-133.png",
+      "file_size": 134788,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.066493,
+      "dark_ink_ratio": 0.059513,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 134,
+      "file_name": "page-134.png",
+      "file_size": 167782,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.081952,
+      "dark_ink_ratio": 0.073374,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 135,
+      "file_name": "page-135.png",
+      "file_size": 174376,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.085935,
+      "dark_ink_ratio": 0.076579,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 136,
+      "file_name": "page-136.png",
+      "file_size": 178559,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.088506,
+      "dark_ink_ratio": 0.07889,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 137,
+      "file_name": "page-137.png",
+      "file_size": 155777,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.075584,
+      "dark_ink_ratio": 0.067366,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 138,
+      "file_name": "page-138.png",
+      "file_size": 184776,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.090886,
+      "dark_ink_ratio": 0.080803,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 139,
+      "file_name": "page-139.png",
+      "file_size": 163118,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.080691,
+      "dark_ink_ratio": 0.071494,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 140,
+      "file_name": "page-140.png",
+      "file_size": 16285,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.008292,
+      "dark_ink_ratio": 0.007937,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 169,
+        "min_y": 331,
+        "max_x": 495,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 169,
+        "top": 331,
+        "right": 166,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 141,
+      "file_name": "page-141.png",
+      "file_size": 119126,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.05465,
+      "dark_ink_ratio": 0.048537,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 573,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 88,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 142,
+      "file_name": "page-142.png",
+      "file_size": 132202,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.061851,
+      "dark_ink_ratio": 0.054684,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 143,
+      "file_name": "page-143.png",
+      "file_size": 14957,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.00759,
+      "dark_ink_ratio": 0.007065,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 585,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 76,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 144,
+      "file_name": "page-144.png",
+      "file_size": 109411,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.04971,
+      "dark_ink_ratio": 0.043881,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 145,
+      "file_name": "page-145.png",
+      "file_size": 100350,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.045495,
+      "dark_ink_ratio": 0.040324,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 146,
+      "file_name": "page-146.png",
+      "file_size": 51484,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.023888,
+      "dark_ink_ratio": 0.021421,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 147,
+      "file_name": "page-147.png",
+      "file_size": 30808,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.014722,
+      "dark_ink_ratio": 0.013056,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 148,
+      "file_name": "page-148.png",
+      "file_size": 95745,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.044181,
+      "dark_ink_ratio": 0.039514,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 590,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 71,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 149,
+      "file_name": "page-149.png",
+      "file_size": 109722,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.051731,
+      "dark_ink_ratio": 0.045488,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 150,
+      "file_name": "page-150.png",
+      "file_size": 15143,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007605,
+      "dark_ink_ratio": 0.007141,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 169,
+        "min_y": 331,
+        "max_x": 495,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 169,
+        "top": 331,
+        "right": 166,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 151,
+      "file_name": "page-151.png",
+      "file_size": 148129,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.074501,
+      "dark_ink_ratio": 0.066285,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 152,
+      "file_name": "page-152.png",
+      "file_size": 157758,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.075041,
+      "dark_ink_ratio": 0.06656,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 153,
+      "file_name": "page-153.png",
+      "file_size": 39642,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.017059,
+      "dark_ink_ratio": 0.015064,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 154,
+      "file_name": "page-154.png",
+      "file_size": 145137,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.071258,
+      "dark_ink_ratio": 0.063631,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 155,
+      "file_name": "page-155.png",
+      "file_size": 155280,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.073747,
+      "dark_ink_ratio": 0.06501,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 156,
+      "file_name": "page-156.png",
+      "file_size": 65579,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.032213,
+      "dark_ink_ratio": 0.028961,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 157,
+      "file_name": "page-157.png",
+      "file_size": 169036,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.079499,
+      "dark_ink_ratio": 0.070169,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 158,
+      "file_name": "page-158.png",
+      "file_size": 199706,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.097666,
+      "dark_ink_ratio": 0.086729,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 159,
+      "file_name": "page-159.png",
+      "file_size": 35107,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.015491,
+      "dark_ink_ratio": 0.013698,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 160,
+      "file_name": "page-160.png",
+      "file_size": 142810,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.071005,
+      "dark_ink_ratio": 0.06352,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 161,
+      "file_name": "page-161.png",
+      "file_size": 148951,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.071425,
+      "dark_ink_ratio": 0.063525,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 162,
+      "file_name": "page-162.png",
+      "file_size": 50071,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.022387,
+      "dark_ink_ratio": 0.019839,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 163,
+      "file_name": "page-163.png",
+      "file_size": 173777,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.083829,
+      "dark_ink_ratio": 0.074372,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 164,
+      "file_name": "page-164.png",
+      "file_size": 154175,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.07204,
+      "dark_ink_ratio": 0.064164,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 165,
+      "file_name": "page-165.png",
+      "file_size": 209476,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.101313,
+      "dark_ink_ratio": 0.089576,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 588,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 73,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 166,
+      "file_name": "page-166.png",
+      "file_size": 171457,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.081403,
+      "dark_ink_ratio": 0.071634,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 167,
+      "file_name": "page-167.png",
+      "file_size": 13855,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.006807,
+      "dark_ink_ratio": 0.00633,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 180,
+        "min_y": 331,
+        "max_x": 475,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 180,
+        "top": 331,
+        "right": 186,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 168,
+      "file_name": "page-168.png",
+      "file_size": 205471,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.121333,
+      "dark_ink_ratio": 0.109376,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 169,
+      "file_name": "page-169.png",
+      "file_size": 155405,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.093283,
+      "dark_ink_ratio": 0.084534,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 170,
+      "file_name": "page-170.png",
+      "file_size": 226126,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.12414,
+      "dark_ink_ratio": 0.111169,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 592,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 69,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 171,
+      "file_name": "page-171.png",
+      "file_size": 144903,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.065224,
+      "dark_ink_ratio": 0.056624,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 172,
+      "file_name": "page-172.png",
+      "file_size": 49406,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.02199,
+      "dark_ink_ratio": 0.019433,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 173,
+      "file_name": "page-173.png",
+      "file_size": 151880,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.091391,
+      "dark_ink_ratio": 0.082857,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 174,
+      "file_name": "page-174.png",
+      "file_size": 181325,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.106047,
+      "dark_ink_ratio": 0.095844,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 175,
+      "file_name": "page-175.png",
+      "file_size": 55380,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.02487,
+      "dark_ink_ratio": 0.021961,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 176,
+      "file_name": "page-176.png",
+      "file_size": 164422,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.09379,
+      "dark_ink_ratio": 0.084854,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 592,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 69,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 177,
+      "file_name": "page-177.png",
+      "file_size": 228558,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.158268,
+      "dark_ink_ratio": 0.145268,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 178,
+      "file_name": "page-178.png",
+      "file_size": 133447,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.064036,
+      "dark_ink_ratio": 0.056784,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 179,
+      "file_name": "page-179.png",
+      "file_size": 159756,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.09259,
+      "dark_ink_ratio": 0.083703,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 180,
+      "file_name": "page-180.png",
+      "file_size": 242623,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.178449,
+      "dark_ink_ratio": 0.164656,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 181,
+      "file_name": "page-181.png",
+      "file_size": 80840,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.038586,
+      "dark_ink_ratio": 0.033875,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 182,
+      "file_name": "page-182.png",
+      "file_size": 219460,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.122203,
+      "dark_ink_ratio": 0.109701,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 592,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 69,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 183,
+      "file_name": "page-183.png",
+      "file_size": 50902,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.022757,
+      "dark_ink_ratio": 0.020068,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 184,
+      "file_name": "page-184.png",
+      "file_size": 172420,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.100369,
+      "dark_ink_ratio": 0.090241,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 185,
+      "file_name": "page-185.png",
+      "file_size": 36872,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.016179,
+      "dark_ink_ratio": 0.014305,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 186,
+      "file_name": "page-186.png",
+      "file_size": 165874,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.09556,
+      "dark_ink_ratio": 0.086212,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 592,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 69,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 187,
+      "file_name": "page-187.png",
+      "file_size": 146636,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.084923,
+      "dark_ink_ratio": 0.076679,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 188,
+      "file_name": "page-188.png",
+      "file_size": 211418,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.115835,
+      "dark_ink_ratio": 0.104501,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 189,
+      "file_name": "page-189.png",
+      "file_size": 69339,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.031514,
+      "dark_ink_ratio": 0.027691,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 190,
+      "file_name": "page-190.png",
+      "file_size": 180950,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.104096,
+      "dark_ink_ratio": 0.094232,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 592,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 69,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 191,
+      "file_name": "page-191.png",
+      "file_size": 87309,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.039509,
+      "dark_ink_ratio": 0.034976,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 192,
+      "file_name": "page-192.png",
+      "file_size": 202018,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.12766,
+      "dark_ink_ratio": 0.116734,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 193,
+      "file_name": "page-193.png",
+      "file_size": 62054,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.028549,
+      "dark_ink_ratio": 0.025165,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 194,
+      "file_name": "page-194.png",
+      "file_size": 204353,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.115817,
+      "dark_ink_ratio": 0.104494,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 195,
+      "file_name": "page-195.png",
+      "file_size": 142300,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.067731,
+      "dark_ink_ratio": 0.060483,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 558,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 103,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 196,
+      "file_name": "page-196.png",
+      "file_size": 167762,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.080394,
+      "dark_ink_ratio": 0.071154,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 197,
+      "file_name": "page-197.png",
+      "file_size": 88400,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.041073,
+      "dark_ink_ratio": 0.036556,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 198,
+      "file_name": "page-198.png",
+      "file_size": 15862,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.008319,
+      "dark_ink_ratio": 0.007827,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 155,
+        "min_y": 331,
+        "max_x": 510,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 155,
+        "top": 331,
+        "right": 151,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 199,
+      "file_name": "page-199.png",
+      "file_size": 112495,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.054202,
+      "dark_ink_ratio": 0.048179,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 200,
+      "file_name": "page-200.png",
+      "file_size": 112104,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.051322,
+      "dark_ink_ratio": 0.045621,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 567,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 94,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 201,
+      "file_name": "page-201.png",
+      "file_size": 134615,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.060192,
+      "dark_ink_ratio": 0.053044,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 202,
+      "file_name": "page-202.png",
+      "file_size": 32237,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.015227,
+      "dark_ink_ratio": 0.013615,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 203,
+      "file_name": "page-203.png",
+      "file_size": 15076,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007743,
+      "dark_ink_ratio": 0.007295,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 535,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 126,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 204,
+      "file_name": "page-204.png",
+      "file_size": 98383,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.044318,
+      "dark_ink_ratio": 0.039541,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 205,
+      "file_name": "page-205.png",
+      "file_size": 96005,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.043271,
+      "dark_ink_ratio": 0.038481,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 206,
+      "file_name": "page-206.png",
+      "file_size": 87157,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.039164,
+      "dark_ink_ratio": 0.034932,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 207,
+      "file_name": "page-207.png",
+      "file_size": 36062,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.016875,
+      "dark_ink_ratio": 0.015177,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 208,
+      "file_name": "page-208.png",
+      "file_size": 110177,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.050375,
+      "dark_ink_ratio": 0.044878,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 590,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 71,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 209,
+      "file_name": "page-209.png",
+      "file_size": 106631,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.049629,
+      "dark_ink_ratio": 0.044073,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 210,
+      "file_name": "page-210.png",
+      "file_size": 14981,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007111,
+      "dark_ink_ratio": 0.006668,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 590,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 71,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 211,
+      "file_name": "page-211.png",
+      "file_size": 96411,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.043473,
+      "dark_ink_ratio": 0.038597,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 212,
+      "file_name": "page-212.png",
+      "file_size": 114266,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.051466,
+      "dark_ink_ratio": 0.045745,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 213,
+      "file_name": "page-213.png",
+      "file_size": 94896,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.042157,
+      "dark_ink_ratio": 0.03748,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 214,
+      "file_name": "page-214.png",
+      "file_size": 94683,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.042545,
+      "dark_ink_ratio": 0.037747,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 215,
+      "file_name": "page-215.png",
+      "file_size": 23463,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.012964,
+      "dark_ink_ratio": 0.012052,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 216,
+      "file_name": "page-216.png",
+      "file_size": 39792,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.018771,
+      "dark_ink_ratio": 0.016825,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 217,
+      "file_name": "page-217.png",
+      "file_size": 113249,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.051247,
+      "dark_ink_ratio": 0.045317,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 562,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 99,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 218,
+      "file_name": "page-218.png",
+      "file_size": 116039,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.054542,
+      "dark_ink_ratio": 0.048332,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 219,
+      "file_name": "page-219.png",
+      "file_size": 118305,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.053625,
+      "dark_ink_ratio": 0.047661,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 562,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 99,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 220,
+      "file_name": "page-220.png",
+      "file_size": 133169,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.059305,
+      "dark_ink_ratio": 0.052559,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 221,
+      "file_name": "page-221.png",
+      "file_size": 45857,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.022344,
+      "dark_ink_ratio": 0.019865,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 222,
+      "file_name": "page-222.png",
+      "file_size": 14860,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007414,
+      "dark_ink_ratio": 0.006867,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 590,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 71,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 223,
+      "file_name": "page-223.png",
+      "file_size": 104382,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.048313,
+      "dark_ink_ratio": 0.043024,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 224,
+      "file_name": "page-224.png",
+      "file_size": 111845,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.051029,
+      "dark_ink_ratio": 0.045293,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 225,
+      "file_name": "page-225.png",
+      "file_size": 96716,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.043284,
+      "dark_ink_ratio": 0.038583,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 226,
+      "file_name": "page-226.png",
+      "file_size": 97985,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.045312,
+      "dark_ink_ratio": 0.04023,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 227,
+      "file_name": "page-227.png",
+      "file_size": 43987,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.021666,
+      "dark_ink_ratio": 0.01919,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 228,
+      "file_name": "page-228.png",
+      "file_size": 15004,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007717,
+      "dark_ink_ratio": 0.007232,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 590,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 71,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 229,
+      "file_name": "page-229.png",
+      "file_size": 97596,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.043332,
+      "dark_ink_ratio": 0.038431,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 230,
+      "file_name": "page-230.png",
+      "file_size": 108100,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.048866,
+      "dark_ink_ratio": 0.043106,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 231,
+      "file_name": "page-231.png",
+      "file_size": 70842,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.03255,
+      "dark_ink_ratio": 0.029017,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 39,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 232,
+      "file_name": "page-232.png",
+      "file_size": 40934,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.020018,
+      "dark_ink_ratio": 0.017949,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 233,
+      "file_name": "page-233.png",
+      "file_size": 16047,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007964,
+      "dark_ink_ratio": 0.007467,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 104,
+        "min_y": 331,
+        "max_x": 551,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 104,
+        "top": 331,
+        "right": 110,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 234,
+      "file_name": "page-234.png",
+      "file_size": 41455,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.020683,
+      "dark_ink_ratio": 0.01858,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 590,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 71,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 235,
+      "file_name": "page-235.png",
+      "file_size": 120194,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.057767,
+      "dark_ink_ratio": 0.051529,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 236,
+      "file_name": "page-236.png",
+      "file_size": 39036,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.017109,
+      "dark_ink_ratio": 0.015186,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 237,
+      "file_name": "page-237.png",
+      "file_size": 37181,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.019008,
+      "dark_ink_ratio": 0.017117,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 111,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 238,
+      "file_name": "page-238.png",
+      "file_size": 113368,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.053945,
+      "dark_ink_ratio": 0.047782,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 39,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 39,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 239,
+      "file_name": "page-239.png",
+      "file_size": 45238,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.022949,
+      "dark_ink_ratio": 0.020661,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 240,
+      "file_name": "page-240.png",
+      "file_size": 116735,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.056408,
+      "dark_ink_ratio": 0.050177,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 241,
+      "file_name": "page-241.png",
+      "file_size": 46098,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.023115,
+      "dark_ink_ratio": 0.021064,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 74,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 242,
+      "file_name": "page-242.png",
+      "file_size": 112158,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.052547,
+      "dark_ink_ratio": 0.046608,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 243,
+      "file_name": "page-243.png",
+      "file_size": 41563,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.020401,
+      "dark_ink_ratio": 0.018306,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 244,
+      "file_name": "page-244.png",
+      "file_size": 111305,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.053054,
+      "dark_ink_ratio": 0.047031,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 245,
+      "file_name": "page-245.png",
+      "file_size": 53198,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.026036,
+      "dark_ink_ratio": 0.02334,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 246,
+      "file_name": "page-246.png",
+      "file_size": 133203,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.063807,
+      "dark_ink_ratio": 0.056245,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 247,
+      "file_name": "page-247.png",
+      "file_size": 36859,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.018288,
+      "dark_ink_ratio": 0.016552,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 248,
+      "file_name": "page-248.png",
+      "file_size": 41906,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.01971,
+      "dark_ink_ratio": 0.017528,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 249,
+      "file_name": "page-249.png",
+      "file_size": 118476,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.055683,
+      "dark_ink_ratio": 0.049153,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 574,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 87,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 250,
+      "file_name": "page-250.png",
+      "file_size": 53498,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.024327,
+      "dark_ink_ratio": 0.021532,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 251,
+      "file_name": "page-251.png",
+      "file_size": 15282,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007224,
+      "dark_ink_ratio": 0.006652,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 192,
+        "min_y": 331,
+        "max_x": 464,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 192,
+        "top": 331,
+        "right": 197,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 252,
+      "file_name": "page-252.png",
+      "file_size": 15854,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.007335,
+      "dark_ink_ratio": 0.006901,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 457,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 204,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 253,
+      "file_name": "page-253.png",
+      "file_size": 105389,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.048603,
+      "dark_ink_ratio": 0.042877,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 254,
+      "file_name": "page-254.png",
+      "file_size": 114078,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.053057,
+      "dark_ink_ratio": 0.046587,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 255,
+      "file_name": "page-255.png",
+      "file_size": 107453,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.048737,
+      "dark_ink_ratio": 0.043055,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 256,
+      "file_name": "page-256.png",
+      "file_size": 66410,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.031517,
+      "dark_ink_ratio": 0.028162,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 257,
+      "file_name": "page-257.png",
+      "file_size": 39902,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.017672,
+      "dark_ink_ratio": 0.015617,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 258,
+      "file_name": "page-258.png",
+      "file_size": 168007,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.080927,
+      "dark_ink_ratio": 0.071559,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 259,
+      "file_name": "page-259.png",
+      "file_size": 141267,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.071055,
+      "dark_ink_ratio": 0.06312,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 260,
+      "file_name": "page-260.png",
+      "file_size": 128832,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.060023,
+      "dark_ink_ratio": 0.05287,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 261,
+      "file_name": "page-261.png",
+      "file_size": 143473,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.069648,
+      "dark_ink_ratio": 0.061808,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 111,
+        "max_x": 587,
+        "max_y": 895
+      },
+      "margins": {
+        "left": 69,
+        "top": 111,
+        "right": 74,
+        "bottom": 40
+      }
+    },
+    {
+      "page": 262,
+      "file_name": "page-262.png",
+      "file_size": 77087,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.034663,
+      "dark_ink_ratio": 0.030584,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 263,
+      "file_name": "page-263.png",
+      "file_size": 13511,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.006752,
+      "dark_ink_ratio": 0.00638,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 533,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 128,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 264,
+      "file_name": "page-264.png",
+      "file_size": 139567,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.065147,
+      "dark_ink_ratio": 0.057247,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 265,
+      "file_name": "page-265.png",
+      "file_size": 131774,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.06046,
+      "dark_ink_ratio": 0.053106,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 69,
+        "max_x": 897,
+        "max_y": 586
+      },
+      "margins": {
+        "left": 38,
+        "top": 69,
+        "right": 38,
+        "bottom": 75
+      }
+    },
+    {
+      "page": 266,
+      "file_name": "page-266.png",
+      "file_size": 29622,
+      "width": 936,
+      "height": 662,
+      "ink_ratio": 0.015164,
+      "dark_ink_ratio": 0.013881,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 38,
+        "min_y": 74,
+        "max_x": 897,
+        "max_y": 591
+      },
+      "margins": {
+        "left": 38,
+        "top": 74,
+        "right": 38,
+        "bottom": 70
+      }
+    },
+    {
+      "page": 267,
+      "file_name": "page-267.png",
+      "file_size": 47089,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.021447,
+      "dark_ink_ratio": 0.018881,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 587,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 74,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 268,
+      "file_name": "page-268.png",
+      "file_size": 110265,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.053006,
+      "dark_ink_ratio": 0.047386,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 269,
+      "file_name": "page-269.png",
+      "file_size": 143541,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.063735,
+      "dark_ink_ratio": 0.056627,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 270,
+      "file_name": "page-270.png",
+      "file_size": 107608,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.050388,
+      "dark_ink_ratio": 0.044757,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 582,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 79,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 271,
+      "file_name": "page-271.png",
+      "file_size": 16197,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.00785,
+      "dark_ink_ratio": 0.007362,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 164,
+        "min_y": 331,
+        "max_x": 490,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 164,
+        "top": 331,
+        "right": 171,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 272,
+      "file_name": "page-272.png",
+      "file_size": 105213,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.048154,
+      "dark_ink_ratio": 0.04257,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 273,
+      "file_name": "page-273.png",
+      "file_size": 114774,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.052807,
+      "dark_ink_ratio": 0.046486,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 274,
+      "file_name": "page-274.png",
+      "file_size": 144637,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.069888,
+      "dark_ink_ratio": 0.062008,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 275,
+      "file_name": "page-275.png",
+      "file_size": 24273,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.011579,
+      "dark_ink_ratio": 0.010356,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 276,
+      "file_name": "page-276.png",
+      "file_size": 152883,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.072703,
+      "dark_ink_ratio": 0.06388,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 572,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 89,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 277,
+      "file_name": "page-277.png",
+      "file_size": 97683,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.044501,
+      "dark_ink_ratio": 0.039151,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 278,
+      "file_name": "page-278.png",
+      "file_size": 132774,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.061693,
+      "dark_ink_ratio": 0.054547,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 76,
+        "min_y": 111,
+        "max_x": 570,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 76,
+        "top": 111,
+        "right": 91,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 279,
+      "file_name": "page-279.png",
+      "file_size": 41936,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.018892,
+      "dark_ink_ratio": 0.01667,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 280,
+      "file_name": "page-280.png",
+      "file_size": 95475,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.045006,
+      "dark_ink_ratio": 0.040025,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 76,
+        "min_y": 111,
+        "max_x": 576,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 76,
+        "top": 111,
+        "right": 85,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 281,
+      "file_name": "page-281.png",
+      "file_size": 97496,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.045022,
+      "dark_ink_ratio": 0.039924,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 70,
+        "min_y": 111,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 70,
+        "top": 111,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 282,
+      "file_name": "page-282.png",
+      "file_size": 152146,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.069136,
+      "dark_ink_ratio": 0.061052,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 76,
+        "min_y": 111,
+        "max_x": 581,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 76,
+        "top": 111,
+        "right": 80,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 283,
+      "file_name": "page-283.png",
+      "file_size": 106852,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.047151,
+      "dark_ink_ratio": 0.041368,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 284,
+      "file_name": "page-284.png",
+      "file_size": 162789,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.075926,
+      "dark_ink_ratio": 0.066144,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 75,
+        "min_y": 111,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 75,
+        "top": 111,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 285,
+      "file_name": "page-285.png",
+      "file_size": 171922,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.088147,
+      "dark_ink_ratio": 0.076357,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 69,
+        "min_y": 37,
+        "max_x": 586,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 69,
+        "top": 37,
+        "right": 75,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 286,
+      "file_name": "page-286.png",
+      "file_size": 132042,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.063094,
+      "dark_ink_ratio": 0.055113,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 74,
+        "min_y": 37,
+        "max_x": 591,
+        "max_y": 896
+      },
+      "margins": {
+        "left": 74,
+        "top": 37,
+        "right": 70,
+        "bottom": 39
+      }
+    },
+    {
+      "page": 287,
+      "file_name": "page-287.png",
+      "file_size": 54049,
+      "width": 662,
+      "height": 936,
+      "ink_ratio": 0.026864,
+      "dark_ink_ratio": 0.02421,
+      "blank": false,
+      "edge_touch": false,
+      "edge_ink_pixels": 0,
+      "bbox": {
+        "min_x": 116,
+        "min_y": 212,
+        "max_x": 540,
+        "max_y": 848
+      },
+      "margins": {
+        "left": 116,
+        "top": 212,
+        "right": 121,
+        "bottom": 87
+      }
+    }
+  ]
+}

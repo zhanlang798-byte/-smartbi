@@ -1,0 +1,70 @@
+{
+  "source_id": "WEB-0300",
+  "title": "Pressroom",
+  "publisher": "IATA",
+  "publication_date": "",
+  "source_url": "https://www.iata.org/en/pressroom",
+  "extracted_at": "2026-08-16T09:21:29.834Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 14,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Passenger Experience & Policy"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Distribution, Payment & Taxation"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Operations & Infrastructure"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "IATA at ICAO Assembly 2025"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Manuals, Standards & Regulations"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Sustainability & Economics"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Publications Resellers"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Sign up for IATA News"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Travel Agency Program"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "Cargo Agency Program"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "Compliance Solutions"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Annual General Meeting"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "Press Releases & Speeches"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "Sign up for Press Updates"
+    }
+  ],
+  "outgoing_data_links": []
+}

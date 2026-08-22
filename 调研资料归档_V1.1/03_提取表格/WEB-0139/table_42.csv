@@ -1,0 +1,14 @@
+﻿column_1,column_2
+Algorithm 3. The pseudo-code of CNN-QRLSTM.,
+CNN-QRLSTM for Multi-Quantile Time Series Forecasting,
+"Parameters:
+δ—Convergence tolerance for early stopping
+K—Number of target quantiles (e.g., [0.05, 0.25, 0.5, 0.75, 0.95])
+w—Window size (lookback period)
+f—Number of input features
+Hyperparameters:
+nepochs—Maximum training epochs
+batch_size—Mini-batch size
+η—Learning rate
+1: /* Initialize model and training parameters */ 2: Set epoch←0, converged←False 3: Initialize network weights θ randomly 4: Normalize input data X∈ℝN× w × f and targets y5: WHILE (epoch<max_epochs AND NOT converged) DO6: /* Mini-batch processing */7: FOR each batch Xb∈ℝbatch_size × w × f DO8: /* Forward Pass */9: /* CNN Feature Extraction */10: C1 = ReLU(Conv1D128(Xb))11: C2 = Dropout(MaxPool1D(ReLU(Conv1D64(C1))))12: /* LSTM Sequence Processing */13: L1 = LSTM256(Reshape(C2))14: H =Dropout(LSTM128(L1))15: /* Multi-Quantile Output */16: y^k = Dense(H) for each k∈K
+17: /* Loss Computation */18: FOR each quantile k∈K DO19:ℒk = 1batch∑max[k(y − y^k),(k − 1)(y − y^k)] 20: END FOR 21: total_loss = ∑k∈Kℒk 22: /* Backpropagation */ 23: Compute gradients ∇θtotal_loss 24: Update parameters θ←θ − η∇θ 25: END FOR 26: /*Epoch Evaluation*/ 27: IF (∣total_lossepoch − total_lossepoch − 1∣ < δ) THEN 28: converged←True 29: END IF 30: epoch←epoch + 1 31: END WHILE32: /* Model Output */33: Return trained weights θ and quantile predictions {y^k}k∈K",

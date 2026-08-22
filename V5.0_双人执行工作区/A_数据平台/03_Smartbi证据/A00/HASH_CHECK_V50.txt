@@ -1,0 +1,95 @@
+A00 哈希核对记录 V5.0
+==================================================
+核对时间：2026-08-22 20:20:56 +0800
+工具：sha256sum（Git Bash）+ Python 3.12.10 hashlib/zipfile（读取时自动CRC校验）
+总体结果：全部匹配
+
+1. 内层ZIP
+   实际路径：C:\Users\33625\Desktop\数据创新平台-张奥.zip
+   （位置说明：文件位于桌面根级，未嵌套在同名目录内；身份以大小+SHA-256判定，与计划书“真正内层ZIP”完全一致）
+   大小：2,394,409,968 字节（期望2,394,409,968）→ 匹配
+   修改时间：2026-08-21 20:27:43 +0800
+   实际SHA-256：06a5dd4fcb623074334e06a470677ec27c0cc9a64f6f8708c99d46eb77fea03c
+   期望SHA-256：06A5DD4FCB623074334E06A470677EC27C0CC9A64F6F8708C99D46EB77FEA03C → 匹配
+
+2. 18张正式表逐表SHA-256（实际值来自镜像提取文件，与控制清单期望值比对）
+   [ 1] dim_country.xlsx
+       期望 da2d031bb6d99ca6759ca91ee1e425395bed491b8b47388f4ebc7639fe4ddf5e
+       实际 da2d031bb6d99ca6759ca91ee1e425395bed491b8b47388f4ebc7639fe4ddf5e
+       比对 匹配
+   [ 2] dim_date.xlsx
+       期望 d9cddd7223eda5687064b71e078ee27d7f144e91548e2267a69b6e98bd79fa0a
+       实际 d9cddd7223eda5687064b71e078ee27d7f144e91548e2267a69b6e98bd79fa0a
+       比对 匹配
+   [ 3] dim_year.xlsx
+       期望 c5e52389428ca3cce4cf10f20627dfeede9db7a413071ff0fbc2d2b88c709ffd
+       实际 c5e52389428ca3cce4cf10f20627dfeede9db7a413071ff0fbc2d2b88c709ffd
+       比对 匹配
+   [ 4] dim_company.xlsx
+       期望 8d39b2f9b48c352a9e7b6e60bd86c17510cfb43c2649318524e42e4151d21904
+       实际 8d39b2f9b48c352a9e7b6e60bd86c17510cfb43c2649318524e42e4151d21904
+       比对 匹配
+   [ 5] dim_asset.xlsx
+       期望 e73a7d660238cb69bcba1dcf83699d787a0b011a5b8bb7086d5b926a168c8646
+       实际 e73a7d660238cb69bcba1dcf83699d787a0b011a5b8bb7086d5b926a168c8646
+       比对 匹配
+   [ 6] dim_event.xlsx
+       期望 7a725f650419e4eee2e039968c8ad1eaba8ce7ae09978f7a9b03731aaba07199
+       实际 7a725f650419e4eee2e039968c8ad1eaba8ce7ae09978f7a9b03731aaba07199
+       比对 匹配
+   [ 7] country_exposure.xlsx
+       期望 b92a66d3e539a4763aa7807ea8d9c9aa9cadb7536393ec2948714bce69f5aca4
+       实际 b92a66d3e539a4763aa7807ea8d9c9aa9cadb7536393ec2948714bce69f5aca4
+       比对 匹配
+   [ 8] country_monthly_risk.xlsx
+       期望 0d83e648b5e142661e4f3726a164887c5c8bbf25c24d5e04e6a1449265879b0e
+       实际 0d83e648b5e142661e4f3726a164887c5c8bbf25c24d5e04e6a1449265879b0e
+       比对 匹配
+   [ 9] country_policy_year.xlsx
+       期望 b2b773d363967ecec470c57e111e27cd4d835dcb2f9d6dbd4fa752a86cabedfd
+       实际 b2b773d363967ecec470c57e111e27cd4d835dcb2f9d6dbd4fa752a86cabedfd
+       比对 匹配
+   [10] country_event.xlsx
+       期望 1a016b428968ad7a91f121b0a7a3569763a208cfffd35ff212724e128b87828a
+       实际 1a016b428968ad7a91f121b0a7a3569763a208cfffd35ff212724e128b87828a
+       比对 匹配
+   [11] global_cycle_month.xlsx
+       期望 ce4923fa6210148279dc2ccf2daea1073ef57ddff05c5573be7aba1e9795f64c
+       实际 ce4923fa6210148279dc2ccf2daea1073ef57ddff05c5573be7aba1e9795f64c
+       比对 匹配
+   [12] historical_crisis_event.xlsx
+       期望 f2842eb59d47d41955a76fb21135f7f26d38c996ea0795ac8f72a67186a2df2d
+       实际 f2842eb59d47d41955a76fb21135f7f26d38c996ea0795ac8f72a67186a2df2d
+       比对 匹配
+   [13] company_overseas_exposure.xlsx
+       期望 bd660364e2a23715ffde1ca66ad121cf32dec662c0f50bd136abd95e0dacca56
+       实际 bd660364e2a23715ffde1ca66ad121cf32dec662c0f50bd136abd95e0dacca56
+       比对 匹配
+   [14] bridge_company_geography.xlsx
+       期望 87b2c75347edef1e8e484fb64f37b4a3ec4d489501c3808ad85de350244bcd68
+       实际 87b2c75347edef1e8e484fb64f37b4a3ec4d489501c3808ad85de350244bcd68
+       比对 匹配
+   [15] asset_monthly_return.xlsx
+       期望 0cebd558c77c10624613d834737e09b8c416b58bc3400612a5f29a54eb9efe74
+       实际 0cebd558c77c10624613d834737e09b8c416b58bc3400612a5f29a54eb9efe74
+       比对 匹配
+   [16] portfolio_scenario.xlsx
+       期望 2d0967bb1509fdb47fcadf1c58139c1ef1d3ab23faf3500b037235c5f26c397a
+       实际 2d0967bb1509fdb47fcadf1c58139c1ef1d3ab23faf3500b037235c5f26c397a
+       比对 匹配
+   [17] case_evidence.xlsx
+       期望 3b0b9b477d516879039e41ce991c221b80e7513d2c882bbe392702fdfd36e3d7
+       实际 3b0b9b477d516879039e41ce991c221b80e7513d2c882bbe392702fdfd36e3d7
+       比对 匹配
+   [18] source_registry.xlsx
+       期望 cf5d0cda83a8ecd27dda3088201b6101e935eb6092af0fd6554a787f23f46a51
+       实际 cf5d0cda83a8ecd27dda3088201b6101e935eb6092af0fd6554a787f23f46a51
+       比对 匹配
+
+3. 3张控制簿（清单未给期望哈希，仅记录实际值备查）
+   数据字典_V4.1.xlsx  行数369  SHA-256 183f7b1364f789d5c95cc2077174c08bf25624270579c9d5f389d9fab95b46c7
+   Smartbi模型映射_V4.1.xlsx  行数18  SHA-256 f84b81925581d5882ff21e410f942e2b3893edf0b23c1ce239c6295e2b55ec0f
+   Smartbi导入行数与哈希清单.xlsx  行数18  SHA-256 c26fb8f93cd34dac4423df3fc8f15dbdd0e7cc93c7df0abe64f64d06089a871d
+
+4. 原ZIP未变动核查
+   本次会话对原ZIP仅有只读列举、哈希计算与解压读取；修改时间保持 2026-08-21 20:27:43 +0800 未变。

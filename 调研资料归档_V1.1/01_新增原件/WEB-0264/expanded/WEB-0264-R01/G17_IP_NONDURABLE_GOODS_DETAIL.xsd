@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_IP_NONDURABLE_GOODS_DETAIL" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_IP_NONDURABLE_GOODS_DETAIL" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_IP_NONDURABLE_GOODS_DETAIL_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_IP_NONDURABLE_GOODS_DETAIL_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="GMFN">
+    <xs:annotation>
+     <xs:documentation>Nondurable manufacturing (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G311">
+    <xs:annotation>
+     <xs:documentation>  Food  NAICS=311</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3111">
+    <xs:annotation>
+     <xs:documentation>    Animal food  NAICS=3111</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3112">
+    <xs:annotation>
+     <xs:documentation>    Grain and oilseed milling  NAICS=3112</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3113">
+    <xs:annotation>
+     <xs:documentation>    Sugar and confectionery product  NAICS=3113</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3114">
+    <xs:annotation>
+     <xs:documentation>    Fruit and vegetable preserving and specialty food  NAICS=3114</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3115">
+    <xs:annotation>
+     <xs:documentation>    Dairy product  NAICS=3115</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G31151">
+    <xs:annotation>
+     <xs:documentation>      Dairy product (except frozen)  NAICS=31151</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311511">
+    <xs:annotation>
+     <xs:documentation>        Fluid milk  NAICS=311511</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311512">
+    <xs:annotation>
+     <xs:documentation>        Creamery butter  NAICS=311512</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311513">
+    <xs:annotation>
+     <xs:documentation>        Cheese  NAICS=311513</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311514">
+    <xs:annotation>
+     <xs:documentation>        Dry, condensed, and evaporated dairy product  NAICS=311514</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N31152">
+    <xs:annotation>
+     <xs:documentation>      Ice cream and frozen dessert  NAICS=31152</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3116">
+    <xs:annotation>
+     <xs:documentation>    Animal slaughtering and processing  NAICS=3116</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G311611T3">
+    <xs:annotation>
+     <xs:documentation>      Animal (except poultry) slaughtering and meat processing  NAICS=311611-3</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311611T3B">
+    <xs:annotation>
+     <xs:documentation>        Beef  NAICS=311611-3pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311611T3P">
+    <xs:annotation>
+     <xs:documentation>        Pork  NAICS=311611-3pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311611T3Z">
+    <xs:annotation>
+     <xs:documentation>        Miscellaneous meats  NAICS=311611-3pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N311615">
+    <xs:annotation>
+     <xs:documentation>      Poultry processing  NAICS=311615</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3118">
+    <xs:annotation>
+     <xs:documentation>    Bakeries and tortilla  NAICS=3118</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3119">
+    <xs:annotation>
+     <xs:documentation>    Other food  NAICS=3119</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G31192">
+    <xs:annotation>
+     <xs:documentation>      Coffee and tea  NAICS=31192</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G312">
+    <xs:annotation>
+     <xs:documentation>  Beverage and tobacco product  NAICS=312</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3121">
+    <xs:annotation>
+     <xs:documentation>    Beverage  NAICS=3121</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N31211">
+    <xs:annotation>
+     <xs:documentation>      Soft drink and ice  NAICS=31211</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N31212">
+    <xs:annotation>
+     <xs:documentation>      Breweries  NAICS=31212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3122">
+    <xs:annotation>
+     <xs:documentation>    Tobacco  NAICS=3122</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G313">
+    <xs:annotation>
+     <xs:documentation>  Textile mills  NAICS=313</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3131">
+    <xs:annotation>
+     <xs:documentation>    Fiber, yarn, and thread mills  NAICS=3131</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3132">
+    <xs:annotation>
+     <xs:documentation>    Fabric mills  NAICS=3132</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3133">
+    <xs:annotation>
+     <xs:documentation>    Textile and fabric finishing and fabric coating mills  NAICS=3133</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G314">
+    <xs:annotation>
+     <xs:documentation>  Textile product mills  NAICS=314</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3141">
+    <xs:annotation>
+     <xs:documentation>    Textile furnishings mills  NAICS=3141</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G31411">
+    <xs:annotation>
+     <xs:documentation>      Carpet and rug mills  NAICS=31411</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3149">
+    <xs:annotation>
+     <xs:documentation>    Other textile product mills  NAICS=3149</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G315">
+    <xs:annotation>
+     <xs:documentation>  Apparel  NAICS=315</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G316">
+    <xs:annotation>
+     <xs:documentation>  Leather and allied product  NAICS=316</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G322">
+    <xs:annotation>
+     <xs:documentation>  Paper  NAICS=322</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3221">
+    <xs:annotation>
+     <xs:documentation>    Pulp, paper, and paperboard mills  NAICS=3221</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32211">
+    <xs:annotation>
+     <xs:documentation>      Pulp mills  NAICS=32211</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32212">
+    <xs:annotation>
+     <xs:documentation>      Paper mills  NAICS=32212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32212P">
+    <xs:annotation>
+     <xs:documentation>        Paper (except newsprint) mills  NAICS=322120pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32213">
+    <xs:annotation>
+     <xs:documentation>      Paperboard mills  NAICS=32213</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3222">
+    <xs:annotation>
+     <xs:documentation>    Converted paper product  NAICS=3222</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32221">
+    <xs:annotation>
+     <xs:documentation>      Paperboard container  NAICS=32221</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32222">
+    <xs:annotation>
+     <xs:documentation>      Paper bag and coated and treated paper  NAICS=32222</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32223A9">
+    <xs:annotation>
+     <xs:documentation>      Other converted paper products  NAICS=32223,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G323">
+    <xs:annotation>
+     <xs:documentation>  Printing and related support activities  NAICS=323</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G324">
+    <xs:annotation>
+     <xs:documentation>  Petroleum and coal products  NAICS=324</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32411">
+    <xs:annotation>
+     <xs:documentation>    Petroleum refineries  NAICS=32411</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32411A">
+    <xs:annotation>
+     <xs:documentation>      Aviation fuel and kerosene  NAICS=32411pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32411D">
+    <xs:annotation>
+     <xs:documentation>      Distillate fuel oil  NAICS=32411pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32411G">
+    <xs:annotation>
+     <xs:documentation>      Automotive gasoline  NAICS=32411pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32411R">
+    <xs:annotation>
+     <xs:documentation>      Residual fuel oil  NAICS=32411pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32411X">
+    <xs:annotation>
+     <xs:documentation>      Other refinery output  NAICS=32411pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32412A9">
+    <xs:annotation>
+     <xs:documentation>    Paving, roofing, and other petroleum and coal products  NAICS=32412,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G325">
+    <xs:annotation>
+     <xs:documentation>  Chemical  NAICS=325</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3254">
+    <xs:annotation>
+     <xs:documentation>    Pharmaceutical and medicine  NAICS=3254</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G325@4">
+    <xs:annotation>
+     <xs:documentation>    Chemicals except pharmaceuticals and medicines  NAICS=3251-3,5-9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3251">
+    <xs:annotation>
+     <xs:documentation>      Basic chemical  NAICS=3251</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32511A9">
+    <xs:annotation>
+     <xs:documentation>        Organic chemicals  NAICS=32511,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32512T8">
+    <xs:annotation>
+     <xs:documentation>        Basic inorganic chemicals  NAICS=32512-8</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32512">
+    <xs:annotation>
+     <xs:documentation>          Industrial gas  NAICS=32512</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32513">
+    <xs:annotation>
+     <xs:documentation>          Synthetic dye and pigment  NAICS=32513</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32518">
+    <xs:annotation>
+     <xs:documentation>          Other basic inorganic chemical  NAICS=32518pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32518C">
+    <xs:annotation>
+     <xs:documentation>            Alkalies and chlorine  NAICS=32518pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3252">
+    <xs:annotation>
+     <xs:documentation>      Resin, synthetic rubber, and artificial and synthetic fibers and filaments  NAICS=3252</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32521">
+    <xs:annotation>
+     <xs:documentation>        Resin and synthetic rubber  NAICS=32521</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N325211">
+    <xs:annotation>
+     <xs:documentation>          Plastics material and resin  NAICS=325211</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G325212">
+    <xs:annotation>
+     <xs:documentation>          Synthetic rubber  NAICS=325212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32522">
+    <xs:annotation>
+     <xs:documentation>        Artificial and synthetic fibers and filaments  NAICS=32522</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3253">
+    <xs:annotation>
+     <xs:documentation>      Pesticide, fertilizer, and other agricultural chemical  NAICS=3253</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3255T9">
+    <xs:annotation>
+     <xs:documentation>      Paints, soaps and toiletries, and other chemical products  NAICS=3255-9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3255A9">
+    <xs:annotation>
+     <xs:documentation>        Paints and other chemical products  NAICS=3255,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3255">
+    <xs:annotation>
+     <xs:documentation>          Paint, coating, and adhesive  NAICS=3255</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32551">
+    <xs:annotation>
+     <xs:documentation>            Paint and coating  NAICS=32551</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3256">
+    <xs:annotation>
+     <xs:documentation>        Soap, cleaning compound, and toilet preparation  NAICS=3256</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G326">
+    <xs:annotation>
+     <xs:documentation>  Plastics and rubber products  NAICS=326</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3261">
+    <xs:annotation>
+     <xs:documentation>    Plastics product  NAICS=3261</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3262">
+    <xs:annotation>
+     <xs:documentation>    Rubber product  NAICS=3262</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32621">
+    <xs:annotation>
+     <xs:documentation>      Tire  NAICS=32621</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32622A9">
+    <xs:annotation>
+     <xs:documentation>      Rubber products ex. tires  NAICS=32622,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G5131P">
+    <xs:annotation>
+     <xs:documentation>Newspaper, periodical, book, and directory publishers  NAICS=5131pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G51311P">
+    <xs:annotation>
+     <xs:documentation>  Newspaper publishers  NAICS=51311pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G51312T9P">
+    <xs:annotation>
+     <xs:documentation>  Periodical, book, and other publishers  NAICS=51312-9pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

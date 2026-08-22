@@ -1,0 +1,18 @@
+{
+  "run_id": "20260820_v42_ai_review_closed",
+  "ts": "2026-08-20T06:11:16.400231+00:00",
+  "approved_by": "用户（当前 Codex 对话确认）",
+  "approved_at": "2026-08-20T12:10:06+08:00",
+  "event_workbook_sha256": "d9c67c1aadbf9eafec40d4043dbfb6ba53f50732ac20fc4ec6c7e9fad4a53438",
+  "events": 23,
+  "pass_count": 23,
+  "by_region": {
+    "Africa": 9,
+    "Asia": 9,
+    "LatinAmerica": 5
+  },
+  "withheld_count": 0,
+  "withheld_clusters": [],
+  "known_at_decision_time_true": 0,
+  "note": "23簇AI证据终审结果经用户总体确认后写入；0簇暂缓未进入curated"
+}

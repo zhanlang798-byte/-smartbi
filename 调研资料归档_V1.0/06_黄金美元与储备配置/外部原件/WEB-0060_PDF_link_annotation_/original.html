@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>shanghai gold exchange</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  
+  
+  <script>
+  function downloadPDF(path){
+		window.open(window.location.origin+ "/portal/download/download?path="+encodeURI(encodeURI(path)));
+	}
+  </script> <link rel="stylesheet" type="text/css" href="/static_h5/css/bootstrap_datepicker.css">
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/ie.css">
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/style.css">
+
+    <script src="/static_h5/js/hm.js"></script>
+    <script type="text/javascript" src="/static_h5/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/static_h5/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/static_h5/js/tools.js"></script>
+    <script type="text/javascript" src="/static_h5/js/main.js"></script>
+    <script type="text/javascript" src="/static_h5/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/static_h5/js/style.js"></script>
+    <script type="text/javascript" src="/static_h5/js/echarts.min.js"></script>
+    <script type="text/javascript" src="/static_h5/js/highstock.js"></script>
+    <script type="text/javascript" src="/static_h5/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/animation.css">
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="/static_h5/css/jquery.mCustomScrollbar.css">
+
+    <!--十五周年专题样式引入     S-->
+    <link rel="stylesheet" href="/static_h5/css/index.css">
+    <script src="/static_h5/js/cookie.js"></script>
+    <!--十五周年专题样式引入     E-->
+    
+   	<link rel="stylesheet" href="/static_h5/stylesheets/swiper.min.css">
+    <link rel="stylesheet" href="/static_h5/stylesheets/rem.css">
+    <link rel="stylesheet" href="/static_h5/stylesheets/mediaCss.css">
+    <link rel="stylesheet" href="/static_h5/stylesheets/menustyle.css">
+    	<script type="text/javascript" src="/static_h5/js/laydate.js"></script>
+    <script src="/static_h5/js/menuSlide.js"></script>
+     <script src="/static_h5/js/swiper.min.js"></script>
+    
+    
+	<script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?62fa33f77aa3ca59592c24364d3c42eb";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>	
+	<link rel="stylesheet" href="/static_h5/css/layer.css">
+    <script src="/static_h5/js/layer.js"></script>
+     <script src="/static_h5/js/common.js"></script>
+</head>
+<style>
+.highcharts-input-group{display:none;}
+</style>
+<body>
+
+<div id="top1" style="">
+<!-- 黑白 -->
+<!--
+<style>
+     html {
+         filter: grayscale(100%);
+         -webkit-filter: grayscale(100%);
+         -moz-filter: grayscale(100%);
+         -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+         filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+         -webkit-filter: grayscale(1);
+         filter: gray
+     }
+
+     img,* {
+         filter: gray; /* just for IE6-9 */
+}
+</style>    
+-->
+<!--header begin-->
+    <div class="header">
+        <!--wapMobileHeader begin 20161028-->
+        <div class="wapMobileHeader hidden">
+            <div class="top"><a href="/h5_index">
+            <img src="/static_h5/img/logo(1).png" class="logo"></a>
+                <i class="pull-right navBtn" onclick="$('.wapSubNav').slideToggle('slow')"><img src="/static_h5/images/webapp/menu_icon.png" height="46" width="50"/></i>
+            </div>
+            <div class="searchBar">
+                <input id="focus" name="focus" type="text" placeholder="Please enter keywords" class="border_ea" value="" >
+                <i class="searchBtn" onclick="searchHead3()" >SEARCH</i>
+            </div>
+            <div class="goto-c">
+                <a href="http://www.sge.com.cn/h5_index">中文版</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--wapMobileHeader end 20161028-->
+    </div>
+    <!--header end-->
+    <!-- wapSubNav begin 20161028-->
+    <div class="wapSubNav" style="display: none">
+        <!-- level1 begin -->
+        <div class="subNav level1 clearfix">
+            <div class="btnList">
+                <ul>
+                    <li><a href="/h5_index" class="block">index</a></li>
+                    <li><a href="/h5_news" class="block">News & Announcement</a></li>
+                    <li><a href="/h5_trading_ProductsIntroduce" class="block">Trading</a></li>
+                    <li><a href="/h5_rules" class="block">Rules</a></li>
+                    <li><a href="/h5_data_DelayedQuotes" class="block">Data</a></li>
+                    <li><a href="/h5_education_GettingStarted" class="block">Education</a></li>
+                    <li><a href="/h5_membership" class="block">Membership</a></li>
+                    <li><a href="/h5_about_Overview" class="block">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- level1 end -->
+    </div>
+    
+    <script>
+    $(function(){
+$('[href]').each(function() {
+$(this).attr('href', $(this).attr('href').replaceAll('://',':////').replaceAll('//','/'))
+})
+$('[onclick]').each(function() {
+$(this).attr('onclick', $(this).attr('onclick').replaceAll('://',':////').replaceAll('//','/'))
+})
+   	 var url = window.location.href;  
+    	if(url.indexOf('index')>0){
+    		$('.btnList').find('li').eq(0).addClass('on');
+    	}else if(url.indexOf('news')>0){
+    		$('.btnList').find('li').eq(1).addClass('on');
+    	}else if(url.indexOf('trading')>0){
+    		$('.btnList').find('li').eq(2).addClass('on');
+    	}else if(url.indexOf('rules')>0){
+    		$('.btnList').find('li').eq(3).addClass('on');
+    	}else if(url.indexOf('data')>0){
+    		$('.btnList').find('li').eq(4).addClass('on');
+    	}else if(url.indexOf('education')>0){
+    		$('.btnList').find('li').eq(5).addClass('on');
+    	}else if(url.indexOf('membership')>0){
+    		$('.btnList').find('li').eq(6).addClass('on');
+    	}else if(url.indexOf('about')>0){
+    		$('.btnList').find('li').eq(7).addClass('on');
+    	}
+    	/* $('.btnList').find('li').bind('click',function(){
+    		$(this).addClass('on').siblings().removeClass('on');
+    	}) */
+    })
+    function searchHead3(){
+		var focus=$("#focus").val();
+		if(focus==""||focus=="Please enter the keywords"){
+			$(".success").css("display","none");
+			$(".error").css("display","block");
+			$("#tcc").css("display","block");
+			openPopup(".alertPanel",true,".blackMask","Please enter the keywords");
+			return;
+		}else{		
+			var aaa=encodeURI(encodeURI(focus));
+			window.location.href = "/h5_search?p=1&focus="+focus;	
+		}
+	}
+    setTimeout(function(){
+    	/*底部固定*/
+    	$(function () {
+    	  var h1=$('#top1').height()-$('.copy').height();
+    	  var h2=$(window).height();
+    	 // console.log(h1+"\n"+h2);
+    	  if(h1<=h2){
+    	    $('.copy').css({
+    	      'cssText':'position: fixed;left: 0;right: 0;bottom: 0;'
+    	    });
+    	    $('.warp2:after').css({
+    	      'cssText':'content:""; display:block; height: 4.44444rem;'
+    	    });
+    	  }
+    	})
+
+    },700)
+
+	$('.wapSubNav').click(function() {
+		$(this).hide();
+	})
+	$("#focus").on('keypress',function(e) {  
+    var keycode = e.keyCode;  
+    var searchName = $(this).val();
+    if(keycode=='13') {  
+    	e.preventDefault();  
+    	searchHead3();    
+    }  
+});
+</script>    <!-- wapSubNav end 20161028-->
+    <div class="pading-top88">
+        <div class="" style="background-color: #4b698c;margin-top: 20px;">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" onclick="window.location.href='/h5_data_DelayedQuotes';">Delayed Quotes</div>
+<!--
+                    <div class="swiper-slide" onclick="window.location.href='/h5_data_PriceChart';">Price Chart</div>
+-->
+                    <div class="swiper-slide" onclick="window.location.href='/h5_data_DailyReport';">Report</div>
+                    <div class="swiper-slide on" onclick="window.location.href='/h5_data_BenchmarkPrice';">Shanghai Gold Benchmark Price</div>
+                    <div class="swiper-slide" onclick="window.location.href='/h5_data_SilverBenchmarkPrice';">Shanghai Silver Benchmark Price</div>
+                    <div class="swiper-slide" onclick="window.location.href='/h5_data_Licensed';">Licensed Marked Data Distributors</div>
+                </div>
+            </div>
+        </div>
+        <div class="dataCon ylchart3">
+            <h2 class="fs18 c-00a0d7">Shanghai Gold Benchmark Price Chart</h2>
+            <div class="trading_content">
+
+                <div class="memberName tc pt30 pb30 border_ea mt20">
+
+                    <div style=" width: 100%;height:20rem" id="container">
+
+                    </div>
+                    <p class="fs12 color333 mt10">Tip: use IE10 and above or other same level browser .</p>
+
+                </div>
+                <div class="new_searchBar">
+                <h2 class="fs18 c-00a0d7">Shanghai Gold Benchmark Price</h2>
+                    <table>
+                        <tbody><tr>
+                            <td class="tr txt pr20">Search by keywords</td>
+                            <td class="input"><input id="datePicker3" name="keywords" type="text" placeholder="Y/M/D" class="searchInput laydate" value=""></td>
+                            <td><a href="javascript:;" onclick="myclick()" class="searchBtn">Search</a></td>
+                        </tr>
+                        </tbody></table>
+                </div>
+                <div class="trading_table mt20">
+                    <table class=" table text-center  " id="mytablejjj">
+                    <thead>
+                    <tr>
+                        <th>Trade Date</th>
+                        <th>Contract</th>
+                        <th>Benchmark Price AM</th>
+                        <th>Benchmark Price PM</th>
+                    </tr>
+                    </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class=" clearfix">
+                    <div class="monthList">
+                        <div class="title border_ea_b pb10">
+                            <table width="100%" border="0" style="background:#fff;">
+                                <tr>
+                                    <td class="fs16 colorBlue b" colspan="3">Monthly Average Price</td>
+
+                                </tr>
+                                <tr class="bg-f8f8f8">
+                                    <td width="45%"><input type="text" id="datePicker5" class="zk_datepicker datepicker laydate" placeholder="Y/M"/></td>
+                                    <td width="10%"><span class="pl5 pr5">~</span></td>
+                                    <td><input type="text" id="datePicker6" class="zk_datepicker datepicker laydate" placeholder="Y/M"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="content">
+                            <div class="border_ea tc pt10 pb10 mt20"><div  id="ydjjqx" style="weight:370px;height:180px"></div></div>
+                            <div class="trading_table mt20">
+                                <table class="table text-center" id="mymjzj"><thead>
+                                <tr>
+                                    <th width="29%">Trade Date</th>
+                                    <th width="19%">Contract</th>
+                                    <th width="27%">Benchmark Price AM</th>
+                                    <th width="25%">Benchmark Price PM</th>
+                                </tr>
+                                </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthList">
+                        <div class="title border_ea_b pb10">
+                            <table width="100%" border="0" style="background:#fff;">
+                                <tr>
+                                    <td class="fs16 colorBlue b">Year Average Price</td>
+
+                                </tr>
+                                <tr class="bg-f8f8f8">
+                                    <td width="45%"><input type="text" id="datePicker7" class="zk_datepicker datepicker laydate" placeholder="Y"/></td>
+                                    <td width="10%"><span class="pl5 pr5">~</span></td>
+                                    <td><input type="text" id="datePicker8" class="zk_datepicker datepicker laydate" placeholder="Y"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="content">
+                            <div class="border_ea tc pt10 pb10 mt20"><div  id="ndjjqx" style="weight:370px;height:180px"></div></div>
+                            <div class="trading_table mt20">
+                                <table class=" table text-center" id="myyjzj"><thead>
+                                <tr>
+                                    <th width="29%">Trade Date</th>
+                                    <th width="19%">Contract</th>
+                                    <th width="27%">Benchmark Price AM</th>
+                                    <th width="25%">Benchmark Price PM</th>
+                                </tr>
+                                </thead>
+                                    <tbody>
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="articleList border_ea_b bgfff ">
+                            <div class="title clearfix">
+                                <h2 class="b fs18 colorBlue">Trading Rules <a href="/h5_rules?codetype=eng_rules_Trading" class=" "><i class="fs24 color999"><img class="goto pull-right" src="/static_h5/images/webapp/goto.png" alt=""/></i></a></h2>
+                            </div>
+                            <div class="articleList  border_ea">
+                    <ul>
+						<li class="lh45 border_ea_b">
+							<a href="/eng_rules_Trading/542402" class="title fs14 clearfix color333">
+						   <i class="colorYellow pull-left"></i>
+						   <span class="txt pull-left ml10">Detailed Rules of the Shanghai Gold Exchange on Benchmark Price Trading (Amended)</span>
+						  
+						   <span class="pull-right">16-05-01</span>
+						   </a>
+						</li>
+                    </ul>
+                   </div>
+
+                            <div class="title clearfix">
+                                <h2 class="b fs18 colorBlue">Q & A <a href="/h5_education_FAQs" class=""><i class="fs24 color999"><img class="goto pull-right" src="/static_h5/images/webapp/goto.png" alt=""/></i></a></h2>
+                            </div>
+                            <ul>
+                   	    	<li class="lh45 border_ea_b bgColor_tr">
+                   	    <a href="/membership_downloads/542374" class="title fs14 clearfix color333">
+	                   <i class="colorYellow pull-left"></i>
+	                   <span class="txt pull-left ml10">Shanghai Gold Benchmark Price- White Paper</span>
+	                
+	                   <span class="pull-right">16-04-30</span>
+	                   </a>
+	                    </li>
+                  	</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer beging-->
+<div class="copy fs12 nofooter"  id="footer">
+	<p style="height: 70px;line-height: 2.44444rem;font-size: 0.71111rem;">
+   Copyright &copy; 2016 Shanghai Gold Exchange All rights reserved
+    <br><span>IPV6 Enabled</span>
+</p>
+</div>        <!--footer end--></div>
+    </div>
+</body>
+<script>
+var seriesOptions = [];
+
+
+$.ajax({
+	 type:'post',
+	 url:'/graph/DayilyJzj',
+	 dataType:"json",
+	 data:{"start":$("#datePicker5").val(),"end":$("#datePicker6").val()},
+	 async : false,
+	 success:function(data){ 
+		 seriesOptions= [{
+				name:  '早盘价',
+				color:'red',
+				data: data.zp
+			},
+{
+				name:  '午盘价',
+				color:'blue',
+				data: data.wp
+			}];
+			
+	 }
+});
+				
+createChart();
+				
+				
+function createChart() {
+	Highcharts.setOptions({
+			global:{
+				useUTC: false
+			},
+			lang:{
+				rangeSelectorZoom: '时间周期：'
+			}
+	});
+	
+	$('#container').highcharts('StockChart', {
+	    chart: {
+			animation: false
+	    },
+
+	    rangeSelector: {
+	        selected: 0,
+	        inputDateFormat: "%Y-%m-%d",
+	        buttons: [{
+	        	type: 'month',
+	        	count: 1,
+	        	text: '1m'
+	        }, {
+	        	type: 'month',
+	        	count: 3,
+	        	text: '3m'
+	        }, {
+	        	type: 'month',
+	        	count: 6,
+	        	text: '6m'
+	        }, {
+	        	type: 'year',
+	        	count: 1,
+	        	text: '1y'
+	        }, {
+	        	type: 'all',
+	        	text: 'All'
+	        }]
+	    },
+	    credits: {
+	    	enabled: false
+	    },
+	    yAxis: {
+	    	labels: {
+		    	align: 'right',
+	    		x: -8,
+	    		format: '{value:.2f}'
+    		},
+    		title: {
+	            text: '定价值',
+	            align: 'high',
+	            offset: 8,
+      			rotation: 0,
+      			y: -15,
+      			useHTML: true
+	        },
+	        lineWidth: 4,
+	        offset:0,
+	        tickPixelInterval: 25,
+	        startOnTick: false,
+				endOnTick: false,
+				showLastLabel: true,
+	    	plotLines: [{
+	    		value: 0,
+	    		width: 2,
+	    		color: 'silver'
+	    	}]
+	    },
+
+	    xAxis: [{
+	    	title: {
+	            text: '日期',
+	            align: 'high'
+	        },
+	        dateTimeLabelFormats: {
+	        	second: '%Y<br/>%m-%d',
+				minute: '%Y<br/>%m-%d',
+				hour: '%Y<br/>%m-%d',
+				day: '%Y<br/>%m-%d',
+				week: '%Y<br/>%m-%d',
+				month: '%Y/%m',
+				year: '%Y'
+	        },
+	        showEmpty: false,
+	        endOnTick: false,
+	        gridLineWidth: 0,
+	        tickPixelInterval: 100,
+	        minTickInterval:1000*60*60*24,
+	        minRange: 1000*3600*24*3
+	    }],
+	    
+	    plotOptions: {
+	    	series: {
+                lineWidth: 0.5,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineWidth: 0.5
+                    }
+                },
+                color:'blue'
+        	},
+            column: {
+                pointWidth: 0.01,
+                borderWidth: 1
+            }
+	    },
+	    
+	    tooltip: {
+	    	//数据提示框的格式化
+		    formatter:function(){
+		    	var timeLong=this.points[0].point.x;
+		    	var tradeDate=Highcharts.dateFormat("%Y-%m-%d",timeLong,false);
+			    var tip = "";
+			    tip += '交易时间 ：'+tradeDate+'<br/>';
+			    tip += '<span style="color:'+this.points[0].series.color+'">'+this.points[0].series.name+'</span> : '+Highcharts.numberFormat(this.points[0].point.y,2)+'<br/>';
+			    if(this.points[1]){
+			    	tip += '<span style="color:'+this.points[1].series.color+'">'+this.points[1].series.name+'</span> : '+Highcharts.numberFormat(this.points[1].point.y,2)+'<br/>';
+				}
+			    return tip;
+		    },
+		    useHTML:true,
+	    	enabled: true
+	    },
+	    
+	    series: seriesOptions
+	});
+}
+</script>
+<script type="text/javascript">
+$(function(){
+	$('#datePicker3').datetimepicker({  //年月日
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayBtn: true,
+        startView: 'month',
+        minView:'month',
+        maxView:'decade',
+		language:  'zh-CN'
+    }).on('changeDate', function(ev){
+		//日期选择后触发事件
+	});
+	
+	$('#datePicker5,#datePicker6').datetimepicker({    //年月
+        format: 'yyyy-mm',
+        autoclose: true,
+        todayBtn: true,
+        startView: 'year',
+        minView:'year',
+        maxView:'decade',
+		language:  'zh-CN'
+    }).on('changeDate', function(ev){
+		//日期选择后触发事件
+    	if($('#datePicker5').val()!=""&& $('#datePicker6').val()!=""){
+			 ht1();
+		 }
+	});
+
+	$('#datePicker7,#datePicker8').datetimepicker({   //年
+        format: 'yyyy',
+        autoclose: true,
+        todayBtn: true,
+        startView: 'decade',
+        minView:'decade',
+        maxView:'decade',
+		language:  'zh-CN'
+    }).on('changeDate', function(ev){
+		//日期选择后触发事件
+    	if($('#datePicker7').val()!=""&& $('#datePicker8').val()!=""){
+			 ht2();
+		 }
+	});
+	$("#mytablejjj").load("/data_BenchmarkPrice_Daily");
+})
+</script>
+<script type="text/javascript">
+var dom = document.getElementById("ydjjqx");
+var myChart = echarts.init(dom);
+var app = {};
+option1 = null;
+ht1();
+function ht1(){
+	$.ajax({
+		 type:'post',
+		 url:'/graph/monthjzjqx',
+		 dataType:"json",
+		 data:{"start":$("#datePicker5").val(),"end":$("#datePicker6").val()},
+		 async : false,
+		 success:function(data){
+			 option1 = {
+
+					    tooltip: {
+					        trigger: 'axis'
+					    },
+					    legend: {
+					        data:['早盘价','午盘价']
+					    },
+					    grid: {
+					        left: '3%',
+					        right: '9%',
+					        bottom: '3%',
+					        containLabel: true
+					    },
+					    toolbox: {
+					        feature: {
+					            saveAsImage: {}
+					        }
+					    },
+					    xAxis: {
+					        type: 'category',
+					        boundaryGap: false,
+					        data: data.time
+					    },
+					    yAxis: {
+					        type: 'value'
+					    },
+					    series: [
+					        {
+					            name:'早盘价',
+					            type:'line',
+					            data:data.zp
+					        },
+					        {
+					            name:'午盘价',
+					            type:'line',
+					            data:data.wp
+					        }
+					    ]
+					};
+					;
+					if (option1 && typeof option1 === "object") {
+					    myChart.setOption(option1, true);
+					}
+			 $("#mymjzj").load("/data_MonthlyAveragePrice",{"start":$("#datePicker5").val(),"end":$("#datePicker6").val()});
+			 
+			 
+		 }
+	});
+}
+</script>
+<script type="text/javascript">
+var dom2 = document.getElementById("ndjjqx");
+var myChart2 = echarts.init(dom2);
+var app2 = {};
+option2 = null;
+ht2();
+function ht2(){
+	$.ajax({
+		 type:'post',
+		 url:'/graph/yearjzjqx',
+		 dataType:"json",
+		 data:{"start":$("#datePicker7").val(),"end":$("#datePicker8").val()},
+		 async : false,
+		 success:function(data){ 
+			 option2 = {
+
+					    tooltip: {
+					        trigger: 'axis'
+					    },
+					    legend: {
+					        data:['早盘价','午盘价']
+					    },
+					    grid: {
+					        left: '3%',
+					        right: '9%',
+					        bottom: '3%',
+					        containLabel: true
+					    },
+					    toolbox: {
+					        feature: {
+					            saveAsImage: {}
+					        }
+					    },
+					    xAxis: {
+					        type: 'category',
+					        boundaryGap: false,
+					        data: data.time
+					    },
+					    yAxis: {
+					        type: 'value'
+					    },
+					    series: [
+					        {
+					            name:'早盘价',
+					            type:'line',
+					            data:data.zp
+					        },
+					        {
+					            name:'午盘价',
+					            type:'line',
+					            data:data.wp
+					        }
+					    ]
+					};
+					;
+					if (option2 && typeof option2 === "object") {
+					    myChart2.setOption(option2, true);
+					}
+					$("#myyjzj").load("/data_YearAveragePrice",{"start":$("#datePicker7").val(),"end":$("#datePicker8").val()});
+		 }
+	});
+}
+</script>
+<script>
+function myclick(){
+	var start=$("#datePicker3").val();
+	var end=$("#datePicker3").val();
+    
+	if(start==""){
+		$(".success").css("display","none");
+		$(".error").css("display","block");
+		$("#tcc").css("display","block");
+		//openPopup(".alertPanel",true,".blackMask","Please enter the time");
+	 	tipMsg("Please enter the time");
+		return;
+	}
+ 	$("#mytablejjj").load("/data_BenchmarkPrice_Daily",{"start":start,"end":end});
+}
+</script>
+</html>

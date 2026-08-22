@@ -1,0 +1,9 @@
+﻿column_1,column_2,column_3,column_4,column_5
+Troy ounces,×,31.10348,=,Grams
+Troy ounces per short ton,×,34.28600,=,Grams per tonne
+Pounds,×,0.00045,=,Tonnes
+Tons,×,0.90718,=,Tonnes
+Feet,×,0.30480,=,Meters
+Miles,×,1.60930,=,Kilometers
+Acres,×,0.40468,=,Hectares
+Fahrenheit,(°F-32) × 5 ¸ 9,=,Celsius,

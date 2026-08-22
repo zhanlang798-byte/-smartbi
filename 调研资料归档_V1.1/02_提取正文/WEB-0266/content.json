@@ -1,0 +1,57 @@
+{
+  "source_id": "WEB-0266",
+  "title": "Federal Reserve Board - Foreign Exchange Rates - H.10",
+  "publisher": "Federal Reserve Board",
+  "publication_date": "",
+  "source_url": "https://www.federalreserve.gov/releases/h10/summary/jrxwtfb_nb.htm",
+  "extracted_at": "2026-08-16T09:21:28.505Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 6,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Nominal/Real Indexes"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Release Date: Wednesday, August 12, 2026"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Nominal Broad Dollar Index - Daily Index"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "(Higher levels indicate"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "U.S. dollar appreciation)"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Last Update: August 12, 2026"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.federalreserve.gov/datadownload",
+      "extension": "",
+      "anchor_text": "Data Download Program",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/datadownload/Choose.aspx?rel=H10",
+      "extension": ".aspx",
+      "anchor_text": "Data Download",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/releases/h10/data/FRB_h10_xml.zip",
+      "extension": ".zip",
+      "anchor_text": "XML",
+      "locator": "anchor"
+    }
+  ]
+}

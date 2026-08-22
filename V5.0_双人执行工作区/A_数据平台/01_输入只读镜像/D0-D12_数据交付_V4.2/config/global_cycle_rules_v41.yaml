@@ -1,0 +1,122 @@
+# =============================================================================
+# 全球周期多标签与主状态触发规则（D0 冻结 / D8B 执行）
+# 依据：总计划书 V4.2 表「全球周期状态触发合同」
+# 约束：只使用决策月当时已发布信息（扩展窗口）；主状态不删除次级标签。
+# =============================================================================
+
+run_id: "20260817_v42"
+ruleset_version: global_cycle_rules_v41
+
+states:
+  credit_systemic:
+    name_zh: 信用与系统性金融危机
+    crisis_class: true
+    trigger_any:
+      - "hy_oas_12m_change_bps >= 300          # 高收益信用利差 12 个月扩大（挑战指标，许可受限）"
+      - "nfci_expanding_percentile >= 0.90     # NFCI 扩展窗口 90% 分位（公开复核主指标）"
+      - "grade_A_banking_event == true         # 存在 A 级银行体系事件"
+    confirm_exit: "利差、金融条件和银行事件分别保留触发；事件解除或指标连续 3 个月退出阈值后结束"
+    key_limit: "受许可限制的高收益利差只作挑战指标，未经许可不随提交包再分发原始值"
+
+  asset_bust:
+    name_zh: 资产泡沫破裂
+    crisis_class: true
+    trigger_any:
+      - "equity_drawdown <= -0.20              # 股指相对当时已见历史峰值回撤 ≥ 20%"
+      - "property_peak_to_trough <= -0.15      # 实际房地产价格峰谷跌幅 ≥ 15%"
+    confirm_exit: "记录峰值日期、触发日、谷值和恢复日；股票与房地产标签可并存"
+    key_limit: "房地产按真实季度观测及已发布值关联（property_asof_carried=1），不复制成虚假月度观测"
+
+  recession:
+    name_zh: 衰退
+    crisis_class: true
+    group: recession_deflation
+    trigger_any:
+      - "sahm_realtime_value >= 0.50 and industrial_production_yoy < 0"
+      - "official_recession_flag == true       # NBER 等权威机构确认"
+    confirm_exit: "实时规则与事后权威日期同时保存；看板标识实时/追认"
+    key_limit: "NBER 日期用于美国冲击源，不替代亚非拉本国增长数据"
+
+  deflation:
+    name_zh: 通缩
+    crisis_class: true
+    group: recession_deflation
+    trigger_all:
+      - "cpi_yoy < 0 for 3 consecutive months"
+      - "industrial_production_yoy < 0 for 3 consecutive months"
+    confirm_exit: "连续 3 个月任一指标退出负值后解除"
+    key_limit: "缺失值不能当作 0，也不能靠插值凑满连续月"
+
+  stagflation:
+    name_zh: 滞胀
+    crisis_class: true
+    trigger_all:
+      - "cpi_yoy >= 0.05"
+      - "industrial_production_yoy < 0 for 3 consecutive months"
+    confirm_exit: "两项触发值和连续窗口均可追溯"
+    key_limit: "只在指标实际覆盖期判断"
+
+  aggressive_tightening:
+    name_zh: 激进紧缩
+    crisis_class: false
+    trigger_any:
+      - "policy_rate_12m_change_bps >= 300"
+      - "real_policy_rate_12m_change_bps >= 200"
+    confirm_exit: "记录起点、终点、变化和数据可得日"
+    key_limit: "实际利率公式与通胀口径固定：real_policy_rate = policy_rate - cpi_yoy"
+
+  inflation_overheating:
+    name_zh: 通胀过热
+    crisis_class: false
+    trigger_all:
+      - "cpi_yoy >= 0.03                       # G0 冻结分位阈值"
+      - "industrial_production_yoy > 0"
+    confirm_exit: "等权规则为主，挑战模型不得静默改变阈值"
+    key_limit: "不是危机的同义词"
+
+  recovery_reflation:
+    name_zh: 复苏再通胀
+    crisis_class: false
+    trigger_all:
+      - "previous_primary_state in [credit_systemic, asset_bust, recession, deflation]"
+      - "industrial_production_yoy > 0"
+      - "0 < cpi_yoy < 0.03"
+    confirm_exit: "标记前一主状态和首次确认月；确认窗口以本配置为准"
+    key_limit: "不使用未来峰谷回填实时起点"
+
+  normal_expansion:
+    name_zh: 正常扩张
+    crisis_class: false
+    trigger_all:
+      - "上述状态均未触发且增长、就业和金融条件处于正常区间"
+    confirm_exit: "每月重算"
+    key_limit: "是剩余状态，不代表无国别风险"
+
+primary_state_priority:   # 主状态选择优先级（高 → 低），不覆盖次级标签
+  - credit_systemic
+  - asset_bust
+  - recession          # recession_deflation 组内：recession 优先于 deflation
+  - deflation
+  - stagflation
+  - aggressive_tightening
+  - inflation_overheating
+  - recovery_reflation
+  - normal_expansion
+
+compound_global_crisis: "两类及以上 crisis_class=true 标签同时成立时置 1"
+
+computation_rules:
+  nfci_percentile_window: expanding     # 只用当时及此前观测
+  equity_drawdown_reference: peak_seen_up_to_t   # 只相对当时已见历史峰值
+  property_series:
+    frequency: quarterly
+    asof_rule: "当月使用截至当月最新已发布季度值，property_asof_carried=1"
+    keep_fields: [ property_observation_date, property_release_date ]
+
+expected_period_unit_tests:   # DQ41：预期历史阶段分类必须全部命中
+  - { period: "1973-1980", expect: stagflation }
+  - { period: "1990",      expect: asset_bust, note: 日本资产泡沫破裂 }
+  - { period: "2000-2002", expect: asset_bust, note: 互联网泡沫 }
+  - { period: "2008-2009", expect: credit_systemic, compound: true }
+  - { period: "2020-03/04", expect: credit_systemic, labels_include: [ asset_bust, recession ], note: 复合外生冲击 }
+  - { period: "2022",      expect: aggressive_tightening }

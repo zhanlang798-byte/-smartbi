@@ -1,0 +1,6 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7,column_8,column_9,column_10,column_11,column_12,column_13
+Asset Class,,Actual Mix,,,Target Mix,,,ExpectedRate ofReturn,,,StandardDeviation orVolatility,
+U.S. equity investments,,44,%,,45,%,,9.5,%,,18.5,%
+International equity investments,,22,%,,20,%,,9.6,%,,18.4,%
+Fixed income investments,,34,%,,35,%,,10.8,%,,22.1,%
+,,,,,,,,8.5,%,,12.5,%

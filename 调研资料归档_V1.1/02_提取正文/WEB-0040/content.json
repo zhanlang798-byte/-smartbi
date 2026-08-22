@@ -1,0 +1,53 @@
+{
+  "source_id": "WEB-0040",
+  "title": "WEO",
+  "publisher": "International Monetary Fund",
+  "publication_date": "",
+  "source_url": "https://data.imf.org/Datasets/WEO",
+  "extracted_at": "2026-08-16T09:21:16.489Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 2,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "April 2026 World Economic Outlook."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "The World Economic Outlook (WEO) database is published twice a year in April and October in conjunction with the biannual flagship World Economic Outlook report. The database includes selected data on national accounts, inflation, unemployment rates, balance of payments, fiscal indicators, trade for countries and country groups (aggregates), and commodity prices whose data are reported by the IMF. Data are available from 1980 to the present, and projections for most data series are provided for the next five years. For some countries, country groups, and indicators, data are incomplete or unavailable for certain years."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://data.imf.org/-/media/iData/External-Storage/Documents/2F78EE59F79143A7921E5E203D3AAA80/en/WEOApr2026all.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "DOCUMENTApril 2026 WEO Entire Dataset in ExcelThis data file includes the data published in the World Economic Outlook Database in spreadsheet format. The data are presented in three datasheets (Countries, Country Groups, and Commodity Prices).",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://data.imf.org/-/media/iData/External-Storage/Documents/4AA1F4D0624C46E98F95988F1F83E770/en/April-2026-WEO-Database-Appendix.pdf",
+      "extension": ".pdf",
+      "anchor_text": "DOCUMENTApril 2026 WEO Database AppendixA vintage-specific appendix to the World Economic Outlook (WEO) database, compiled as a downloadable PDF. It consolidates assumptions and data conventions, documents changes and corrections to the database (with the current vintage highlighted and past vintages archived for reference), details country groups and aggregates, and provides country-specific information. Each vintage appendix is preserved to ensure users can access both current and historical documentation.",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://data.imf.org/-/media/iData/External-Storage/Documents/2C2B2F3E671A4B11ABE756E2441FD6F0/en/WEO-Database-Transition-Guide.pdf",
+      "extension": ".pdf",
+      "anchor_text": "DOCUMENTWEO Database Transition GuideA short guide explaining the changes to the World Economic Outlook (WEO) Database in the new IMF Data Portal compared to the previous format.",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://data.imf.org/-/media/iData/External-Storage/Documents/977574FA66914EAD900D3FEC55C7316A/en/WEOhistorical.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "DOCUMENTWEO Historical Forecasts Database A comprehensive archive of the IMF’s World Economic Outlook historical forecasts, providing past projections for key macroeconomic indicators across countries and regions.",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://data.imf.org/en/Resource-Pages/Download-Excel-Add-in",
+      "extension": "",
+      "anchor_text": "Excel Add-in",
+      "locator": "anchor"
+    }
+  ]
+}

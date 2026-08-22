@@ -1,0 +1,55 @@
+{
+  "source_id": "WEB-0310",
+  "title": "IAS 29 Financial Reporting in Hyperinflationary Economies",
+  "publisher": "IFRS Foundation",
+  "publication_date": "",
+  "source_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-29-financial-reporting-in-hyperinflationary-economies/",
+  "extracted_at": "2026-08-16T09:21:30.730Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 7,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "IAS 29 applies to any entity whose functional currency is the currency of a hyperinflationary economy."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Hyperinflation is indicated by factors such as prices, interest and wages linked to a price index, and cumulative inflation over three years of around 100 per cent or more."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "In a hyperinflationary environment, financial statements, including comparative information, must be expressed in units of the functional currency current as at the end of the reporting period. Restatement to current units of currency is made using the change in a general price index. The gain or loss on the net monetary position must be included in profit or loss for the period and must be separately disclosed."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "An entity must disclose the fact that the financial statements have been restated, the price index used for restatement, and whether the financial statements are prepared on the basis of historical costs or current costs."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "An entity must measure its results and financial position in its functional currency. However, after restatement, the financial statements may be presented in any currency by translating the results and financial position in accordance with IAS 21."
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "In April 2001 the International Accounting Standards Board adopted IAS 29 Financial Reporting in Hyperinflationary Economies, which had originally been issued by the International Accounting Standards Committee in July 1989."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Other Standards have made minor consequential amendments to IAS 29. They include IFRS 18 Presentation and Disclosure in Financial Statements (issued April 2024)."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.ifrs.org/content/dam/ifrs/about-us/legal-and-governance/legal-docs/modern-slavery-statement.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Modern slavery statement",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.ifrs.org/content/dam/ifrs/about-us/legal-and-governance/legal-docs/trade-mark-guidelines.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Trade mark guidelines",
+      "locator": "anchor"
+    }
+  ]
+}

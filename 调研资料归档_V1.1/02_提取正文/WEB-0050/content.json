@@ -1,0 +1,81 @@
+{
+  "source_id": "WEB-0050",
+  "title": "About the Indicators API Documentation – World Bank Data Help Desk",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+  "extracted_at": "2026-08-16T09:21:18.250Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 15,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Note:﻿ version 2 of the Indicators API was released several years ago, and version 1 was officially retired in November , 2018. Version 1 was discontinued entirely on June 19, 2020 (see link). If you access the older endpoints you will receive a \"Resource not found\" error. Use the information here to update your code.The World Bank Indicators API provides access to nearly 16,000 time series indicators."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Most of these indicators are available online through tools such as Databank and"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "the Open Data website. The API provides programmatic access to this same data."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Many data series date back over 50 years, and can be used to create interesting applications."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "The Indicators API provides access to over 45 databases, including:"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "World Development Indicators"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "International Debt Statistics"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "The Indicators API documentation, the contents of which you can see to the right side of the page under “Developer Information”, explains the different types of call that can be made to the V2 API. It also explains each call’s purpose, how to structure a specific call, what the response looks like, and provides example URL endpoints for API calls."
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Get started by reading about the Basic Call Structure."
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "How to use the V2 Indicators API"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "Version 2 (V2) of the Indicators API has been released and replaces V1 of the API. V1 API calls will no longer be supported. To use the V2 API, you must place v2 in the call. For example: https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL."
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Besides making calls to the API using an application or custom program, you can also put any of the example API URL endpoints given in the documentation, or your own custom calls, into a web browser and view the results. If you choose to receive the result in JSON format you can use the JSON View Firefox plugin for easily viewing JSON results directly in Firefox."
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "There are also third party applications and libraries that can make using the API easier depending on your objectives. See Application Showcase for more details."
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "API Access / Authentication"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "API keys and other authentication methods are no longer necessary to access the API."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/10869/",
+      "extension": "",
+      "anchor_text": "JSON View",
+      "locator": "anchor"
+    }
+  ]
+}

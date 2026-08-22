@@ -1,0 +1,20 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7,column_8,column_9,column_10,column_11,column_12,column_13,column_14
+,,Toronto Stock Exchange,,New York Stock Exchange,,,,,,,,,
+,,Share Price Trading
+Range,,,,Share Price Trading
+Range,,,,,,,
+,,High,,Low,,Share Volume,,High,,Low,,Share Volume,
+,,(C$ per share),,(millions),,($ per share),,(millions),,,,,
+2009,,,,,,,,,,,,,
+January,,49.87,,36.85,,102.6,,40.90,,30.79,,122.7,
+February,,49.66,,37.31,,100.1,,39.63,,29.38,,111.2,
+March,,42.09,,32.69,,127.8,,34.24,,25.54,,127.1,
+April,,42.87,,33.01,,91.7,,34.03,,27.09,,88.9,
+May,,43.24,,34.25,,84.4,,38.96,,28.77,,78.5,
+June,,41.89,,36.61,,75.4,,38.50,,31.63,,78.5,
+July,,39.99,,35.50,,58.6,,35.96,,30.67,,54,
+August,,39.33,,35.70,,50.3,,36.71,,32.17,,56.1,
+September,,43.97,,37.99,,127.9,,41.98,,34.42,,148,
+October,,42.29,,37.04,,81.3,,40.39,,34.50,,114.5,
+November,,48.33,,38.41,,83.4,,45.82,,35.50,,99.9,
+December,,50.53,,40.62,,94.5,,48.02,,38.14,,123.7,

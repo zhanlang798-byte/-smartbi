@@ -1,0 +1,12 @@
+{
+  "run_id": "20260820_v42_ai_review_user_confirmed",
+  "ts": "2026-08-20T06:11:16.801213+00:00",
+  "approved_by": "用户（当前 Codex 对话确认）",
+  "approved_at": "2026-08-20T12:10:06+08:00",
+  "company_workbook_sha256": "b8f88b0b4335b2fdb6de2b206d8a7a8769f9ab1abc5eec6f135e1b25fe8c9311",
+  "rows": 168,
+  "global_rows": 160,
+  "region_rows": 8,
+  "companies": 20,
+  "note": "20家×8财年基础行全覆盖；AI核证标量/地区值合并；多币种套保保留QA原子明细，不跨币种相加"
+}

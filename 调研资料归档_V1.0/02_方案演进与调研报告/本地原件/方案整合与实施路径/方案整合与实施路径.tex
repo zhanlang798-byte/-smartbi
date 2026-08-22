@@ -1,0 +1,324 @@
+% !TEX program = xelatex
+\documentclass[UTF8,12pt]{ctexart}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue!60!black}
+\definecolor{navy}{HTML}{17365D}
+\definecolor{lightg}{HTML}{F3F6F9}
+\definecolor{amber}{HTML}{FFF2CC}
+\usepackage{colortbl}
+\setlist{nosep,leftmargin=1.6em}
+\renewcommand{\arraystretch}{1.3}
+\pagestyle{fancy}
+\fancyhead[L]{\small XH-202612 参赛方案整合稿}
+\fancyhead[R]{\small 内部文档 · 2026-08}
+\fancyfoot[C]{\small\thepage}
+
+\title{\textbf{XH-202612 参赛方案整合与实施路径}\\
+\large ——跨国公司国别货币风险与"灾难保险型"黄金储备的数据创新平台方案\\[4pt]
+\small （内部整合稿，供逐条路径审阅与修改）}
+\author{上海海洋大学参赛团队（负责人：张奥）\quad 指导老师：张洪进}
+\date{2026 年 8 月}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent 本文档整合本项目迄今的全部方案成果：比赛要求与评分标准、服务对象定位论证、两轮调研结论、题意符合性评估，并将后续工作拆解为 P0--P7 共八条实施路径，逐条叙述目标、现状、动作、产出、对应评分项与待决问题，供团队逐条审阅修改。文档依据：赛题原文（XH-202612，12 页）、\texttt{企业资产配置调研报告.md}、\texttt{跨国公司黄金硬通货需求调研报告.md}、\texttt{题意符合性评估报告.md} 及已完成的数据底座。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{项目全景}
+
+\subsection{比赛背景}
+
+\begin{itemize}
+\item \textbf{赛事}：2026 年中国青年科技创新"揭榜挂帅"擂台赛（学生赛道），榜题编号 \textbf{XH-202612}《Smartbi AI 驱动的数据创新平台研究》。
+\item \textbf{发榜单位}：广州思迈特软件有限公司、河北智领云际信息技术有限公司。
+\item \textbf{申报作品}：《AI 赋能轻量化 BI 服务：依托 Smartbi 搭建普惠型企业数据智能创新平台》（作品编码 592915）。
+\item \textbf{赛程节点}：研发 2026 年 5--9 月；\textbf{作品提交截止 9 月 1 日}；9 月 30 日前初审；11 月底前终审决赛（现场擂台赛）。
+\item \textbf{平台要求}：作品必须基于 Smartbi BI 平台或 Smartbi AI 平台（白泽 AIChat）完成，思迈特提供免费试用账号与技术文档。
+\end{itemize}
+
+\subsection{评分标准与硬性门槛}
+
+\begin{longtable}{p{4.6cm}p{1.4cm}p{8.6cm}}
+\toprule
+\rowcolor{navy}\textcolor{white}{\textbf{评分维度}} & \textcolor{white}{\textbf{分值}} & \textcolor{white}{\textbf{评分关键词}} \\
+\midrule
+问题价值与现实意义 & 20 & 引用至少 1 份权威资料；量化影响范围（如"涉及全国超 3000 万灵活就业人员"） \\
+\rowcolor{amber}\textbf{数据分析方法与技术应用} & \textbf{25} & ETL 流程与清洗规则（异常值剔除 $\le$10\%）、星型/雪花建模、归因分析、RAG 知识增强、性能优化（$\ge$5\%，时效 T+1 $\to$ 小时/分钟级） \\
+\rowcolor{amber}\textbf{可视化呈现与交互体验} & \textbf{25} & 交互响应 $\le$10 秒；"用可视化讲清楚一个问题"，避免堆砌图表；下钻/上卷/动态筛选 \\
+创新性与原创性 & 20 & 如"用 NLP 情感分析优化政务服务满意度评估"式的差异化创新 \\
+完整性与可复现性 & 10 & 基于 Smartbi 导入 xml 资源可完整恢复；材料齐全 \\
+\bottomrule
+\end{longtable}
+
+\noindent\textbf{硬性门槛（不计分，不满足则作品无效）}：基于 Smartbi 平台完成；四项提交材料齐全（数据分析报告、Smartbi 效果资源或在线演示环境及账号密码、$\le$3 分钟演示视频、原始数据来源说明及合规声明）；数据来源合法稳定可获取（提供接口/链接/授权证明）；团队 $\le$10 人、指导教师 $\le$3 名。
+
+\subsection{当前状态总评（题意符合性评估结论）}
+
+按现状交卷预估 \textbf{52--62 分}；执行完本路径图后目标区间 \textbf{80--88 分}。失分集中于 Smartbi 平台零实操牵连的三块：可视化（25）、技术（25）、可复现（10），共 60 分中仅拿到约 20 分。"跨国公司 + 境外子公司"的服务定位\textbf{与题意无矛盾}（属赛题"企业运营"类真实场景），是差异化优势而非风险点。
+
+% ============================================================
+\section{方案主线}
+
+\subsection{服务对象与核心命题}
+
+\begin{itemize}
+\item \textbf{服务对象}：跨国公司——具体落地主体为其在\textbf{高风险国别（高通胀、外汇管制、地缘制裁风险）的境外子公司}。
+\item \textbf{核心命题}：将黄金作为\textbf{"灾难保险型"应急流动性储备}（建议占流动性储备 5\%--10\% 的小额配置），对冲"本币暴跌 + 外汇管制 + 资产冻结"三重尾部风险。\emph{明确不是}以黄金替代美元存款作为流动性储备主体。
+\item \textbf{一句话定位}：用 BI+AI 把央行级的储备多元化逻辑，降维成跨国企业子公司可执行的尾部风险保险方案。
+\end{itemize}
+
+\subsection{痛点论据（量化）}
+
+\begin{itemize}
+\item \textbf{汇兑巨亏}：尼日利亚奈拉 2023--2024 年贬值约 70\%，MTN Nigeria 两年汇兑损失约 11 亿美元（2024 年 9{,}254 亿奈拉）；雀巢尼日利亚股东权益由 +302 亿转为 $-780$ 亿奈拉（资不抵债）；7 家头部公司 2024 财年汇兑损失合计 2.06 万亿奈拉。AB InBev 因阿根廷贬值 + IAS 29 重述，2023 年利润负面冲击 3.03 亿美元。
+\item \textbf{资金被困}：全球航司被困资金（blocked funds）2023 年 4 月峰值 22.7 亿美元；尼日利亚单国曾达 8.5 亿美元；阿根廷"cepo"管制下股息近 15 年无法自由汇出。
+\item \textbf{资产冻结/贱卖}：西方企业退出俄罗斯损失 2024 年 3 月已超 1{,}070 亿美元；强制 5 折出售 + 10\% 退出税；雷诺 13 亿美元投入以 1 卢布出售；达能、嘉士伯资产被"临时国家管理"。
+\item \textbf{传统工具失效}：奈拉对冲隐含成本约 25\%--30\%/年；IMF 确认危机期 NDF 对冲极其昂贵；管制货币无对冲市场深度。
+\end{itemize}
+
+\subsection{反面证据与边界声明（答辩防御要点）}
+
+\begin{itemize}
+\item 高通胀国家正常企业的首选是\textbf{美元化与结构性撤资}，黄金只在"美元通道被切断"的极端情景登场；72\% 家族办公室黄金配置为零（UBS/Campden 2024--2025）。
+\item 黄金的"抗冻结"属性\textbf{仅在实物存放于自己控制的辖区时成立}（委内瑞拉存伦敦的 31 吨黄金被冻结为反例）。
+\item 会计上不友好：IFRS 下多按 IAS 2 存货"成本与可变现净值孰低"，\textbf{涨不确认收益、跌要计提减值}；中国案例（中国黄金 600916）计量错配致 2025 年公允价值变动损失约 $-10.4$ 亿元。
+\item 中国监管硬约束：黄金进出口资质限五类机构，一般企业\textbf{境内主体持境外黄金无可行通道}；可行路径为\textbf{境外子公司在境外购金}（受当地法约束），或经 SGEI 国际板/香港离岸仓。
+\item 机会成本：黄金零息、年化波动率 15\%--20\%、持有与变现成本（保管 0.1\%--0.5\%/年、回购折价 1\%--5\%）——故定位必须是小额保险仓位。
+\item 涉制裁案例（土伊黄金换天然气、俄罗斯）仅作学术论据，表述保持中性，不构成为任何主体规避制裁的建议。
+\end{itemize}
+
+% ============================================================
+\section{路径总览}
+
+\begin{longtable}{p{1.2cm}p{4.2cm}p{2.0cm}p{3.4cm}p{3.8cm}}
+\toprule
+\rowcolor{navy}\textcolor{white}{\textbf{编号}} & \textcolor{white}{\textbf{路径}} & \textcolor{white}{\textbf{状态}} & \textcolor{white}{\textbf{依赖}} & \textcolor{white}{\textbf{对应评分项}} \\
+\midrule
+P0 & 金银数据底座 & 已完成 & --- & 技术 25 \\
+P1 & 需求与可行性调研 & 已完成 & --- & 价值 20 / 创新 20 \\
+P2 & 国别货币风险数据集 & 待启动 & P1 & 技术 25 \\
+P3 & 黄金储备回测模型 & 待启动 & P0、P2 & 技术 25 / 创新 20 \\
+P4 & Smartbi 平台实操与 Dashboard & 待启动（门槛项） & P0--P3 & 可视化 25 / 复现 10 \\
+P5 & AI 增强分析（问数/归因/RAG） & 待启动 & P4 & 技术 25 / 创新 20 \\
+P6 & 可视化叙事与演示材料 & 待启动 & P4、P5 & 可视化 25 \\
+P7 & 提交与可复现 & 待启动 & 全部 & 复现 10 / 门槛 \\
+\bottomrule
+\end{longtable}
+
+\noindent 依赖关系简图：\quad P0、P1（已完成）$\to$ P2 $\to$ P3 $\to$ P4 $\to$ P5 $\to$ P6 $\to$ P7。\quad P4 是一票否决门槛项，应尽量提前。
+
+% ============================================================
+\section{分路径详述}
+
+% ---------- P0 ----------
+\subsection{P0：金银数据底座（已完成）}
+
+\begin{description}[style=nextline]
+\item[目标] 构建可建模、可追溯、防前视的金银价格与影响因素数据集。
+\item[现状] 已完成。4 个迭代版 Excel 工作簿（最新：\texttt{金银价格波动影响因素与时序数据\_中文字段版\_20260726.xlsx}，14 表）+ 逐格 inspect.ndjson + PNG 预览 + SHA-256 校验。
+\item[已有内容] SGE 日行情（2024-01 至 2026-07，594 交易日，含 source\_url）；FRED 利率/TIPS/美元/VIX（2016-01 起）；CFTC 金银周度持仓（含发布日假设）；GPR 地缘风险月度；世界银行商品月价；白银年度供需；C1--C9 价格传导链假设；月度建模主表（2016-01 至 2026-06，126 个月，全 lag1 防前视）。
+\item[产出物] 数据底座工作簿组 + 论文复现准备包（THUOCL 词表、EPU/利率/美元代理、"精确源/未公开/代理"三分法台账）。
+\item[对应评分项] 数据分析方法与技术应用（ETL、清洗规则、口径文档的证据链）。
+\item[风险与待决问题] ① 数据截至 2026-07，提交前是否需要滚动更新到最新月份？② 论文复现线（CNN-QRLSTM）是否保留为创新点素材，还是完全移出主线？
+\end{description}
+
+% ---------- P1 ----------
+\subsection{P1：需求与可行性调研（已完成）}
+
+\begin{description}[style=nextline]
+\item[目标] 验证"企业配置黄金作为流动性储备"的需求真实性、合理性与可行性，确定服务对象。
+\item[现状] 已完成两轮调研：中小企业方向（贷款条例、流动性征兆、金融同业配置）与跨国公司方向（案例、痛点、合规、数据可得性），并产出题意符合性评估。
+\item[关键结论] 服务对象定为跨国公司境外子公司；黄金定位为灾难保险型小额储备；痛点论据充分；数据可得性约 80\%；中国境内主体持境外黄金法规不可行，须走境外子公司路径。
+\item[产出物] \texttt{企业资产配置调研报告.md}（降级为附录素材）、\texttt{跨国公司黄金硬通货需求调研报告.md}（主线依据）、\texttt{题意符合性评估报告.md}。
+\item[对应评分项] 问题价值（权威引用与量化影响）、创新性（差异化论证）。
+\item[风险与待决问题] ① 是否补充中国出海企业案例（传音/华为/海尔汇兑损益）把影响范围落到中国视角？② 涉制裁叙事的措辞边界需团队确认。
+\end{description}
+
+% ---------- P2 ----------
+\subsection{P2：国别货币风险数据集建设（待启动）}
+
+\begin{description}[style=nextline]
+\item[目标] 把"国别风险"从论据变成可计算的数据资产：覆盖汇率、通胀、资本管制、制裁事件、企业案例五个维度。
+\item[现状] 未启动；来源与可得性已勘察完毕（约 80\% 免费机器可读）。
+\item[具体动作]
+\begin{enumerate}
+\item 汇率主干：FRED H.10 日度（主要货币，与现有 FRED 管道同构）+ IMF IFS 月度（NGN/ARS/TRY/EGP/IRR/LBP 官方汇率，经 DBnomics）。
+\item 黑市/平行汇率：阿根廷 Bluelytics API（完整免费）；伊朗/尼日利亚/黎巴嫩做 2--3 国案例面板（网页数据整理）。
+\item 通胀：IMF WEO 年度 + 重点国统计局月度 CPI。
+\item 制度维度：Chinn-Ito KAOPEN 指数（1970--2023）；IMF AREAER 关键事件摘录成时间轴。
+\item 制裁事件：OFAC SDN（CSV/XML 日更）+ EU Consolidated List + Yale 撤离名单（Kaggle 快照）。
+\item 企业案例库：5--10 家公司（传音、华为、海尔、MTN Nigeria、雀巢尼日利亚、AB InBev 等）的汇兑损益 + 分地区收入，手工整理约 30--50 行。
+\end{enumerate}
+\item[产出物] \texttt{国别货币风险数据集.xlsx}（沿用 P0 的"说明—主表—原始—口径—质检"固定结构）。
+\item[对应评分项] 数据分析方法与技术应用（ETL 与清洗规则的核心证据）。
+\item[风险与待决问题] ① 案例公司库选哪几家？（建议至少 2 家中国出海企业）② 黑市汇率面板做哪几国？③ 是否需要月度频率，还是年度足够支撑演示？
+\end{description}
+
+% ---------- P3 ----------
+\subsection{P3：黄金储备回测模型（待启动）}
+
+\begin{description}[style=nextline]
+\item[目标] 用历史数据量化回答："高风险国别子公司若将 5\%--10\% 流动性储备配置为黄金，在货币危机中能减少多少损失？"
+\item[现状] 未启动；方法论（防前视、asof 对齐）在 P0 已成熟，可直接复用。
+\item[具体动作]
+\begin{enumerate}
+\item 选定 2--3 个回测货币（建议 NGN 2023--2024、ARS 2018--2024、TRY 2018--2023 三个贬值周期）。
+\item 设定组合：基准 A 纯本币现金；基准 B 美元存款；基准 C NDF 对冲（按利差推算成本）；实验组 D "90\%--95\% 现金 + 5\%--10\% 黄金"。
+\item 回测规则：月度再平衡；金价用 SGE/LBMA 与当币汇率折算；计入持有成本（0.1\%--0.5\%/年）与变现折价（1\%--5\%）；输出美元计价的购买力保全率、最大回撤、危机期变现能力对比。
+\item 情景压力测试：模拟"管制冻结 12 个月""官方汇率一次性贬值 40\%"两种尾部情景。
+\end{enumerate}
+\item[产出物] 回测结果表 + 对比图 + 量化结论（直接转化为作品的"落地建议"）。
+\item[对应评分项] 技术 25（建模方法）、创新 20（回测框架原创性）、价值 20（量化结论）。
+\item[风险与待决问题] ① 回测窗口与货币组合需确认；② NDF 成本只有"按利差推算"的间接证据，措辞要标注；③ 模拟数据部分须按赛题要求写明假设逻辑与依据。
+\end{description}
+
+% ---------- P4 ----------
+\subsection{P4：Smartbi 平台实操与交互式 Dashboard（待启动，门槛项）}
+
+\begin{description}[style=nextline]
+\item[目标] 把 P0--P3 的数据全部迁入 Smartbi，建成可交互的演示环境。\textbf{这是一票否决门槛项 + 25 分大项，优先级最高。}
+\item[现状] 未启动。需先申请思迈特免费试用账号。
+\item[具体动作]
+\begin{enumerate}
+\item 开通 Smartbi 试用账号，跑通"Excel/CSV 导入 $\to$ 数据模型（星型：事实表=国别月度风险主表，维表=国别/时间/案例公司）$\to$ 出图"最小闭环。
+\item 建指标语义层：国别风险评分、贬值幅度、黄金保全率等指标统一定义（为 P5 的 AI 问数打基础）。
+\item 搭建 Dashboard 叙事主线（呼应"用可视化讲清楚一个问题"）：
+\begin{itemize}
+\item 世界地图：国别货币风险评分总览；
+\item 单国下钻：汇率 vs 金价（本币计价）vs 通胀联动走势；
+\item 案例页：MTN/传音汇兑损益归因拆解；
+\item 回测页：持金组合 vs 三个基准的购买力对比；
+\item 结论页：配置建议与触发条件。
+\end{itemize}
+\item 性能与交互验证：响应 $\le$10 秒、下钻/上卷/动态筛选可用。
+\end{enumerate}
+\item[产出物] Smartbi 在线演示环境（含账号密码）+ xml 资源导出。
+\item[对应评分项] 可视化 25、复现 10、平台门槛。
+\item[风险与待决问题] ① 账号申请的时间与权限范围；② 团队谁负责平台实操（需要 1--2 人专门投入）；③ 演示环境到期时间与初审/终审时间的匹配。
+\end{description}
+
+% ---------- P5 ----------
+\subsection{P5：AI 增强分析（待启动）}
+
+\begin{description}[style=nextline]
+\item[目标] 落地赛题"关键亮点"：AI 问数、归因分析、智能报告、RAG 知识增强。
+\item[现状] 未启动，依赖 P4 的指标语义层。
+\item[具体动作]
+\begin{enumerate}
+\item AIChat 智能问数：准备 5--8 个演示问句（如"显示 2024 年尼日利亚奈拉贬值幅度与金价对比""雀巢尼日利亚 2023 年汇兑损失占收入比重"）。
+\item 归因分析：对"该公司为什么在该国亏损"做维度归因（贬值/管制/通胀贡献分解）。
+\item RAG 知识增强：把两份调研报告、赛题要点、数据字典导入知识库，验证问数准确率提升。
+\item 智能报告：一键生成"国别货币风险周报"样式的结构化报告。
+\end{enumerate}
+\item[产出物] 问数/归因/报告的录屏素材（供 P6 视频使用）+ 准确率对比记录。
+\item[对应评分项] 技术 25（RAG、归因关键词）、创新 20。
+\item[风险与待决问题] ① AIChat 对自建数据集的问数准确率需实测，准备 fallback 问句；② RAG 知识库范围需裁剪，避免涉制裁敏感内容进入演示。
+\end{description}
+
+% ---------- P6 ----------
+\subsection{P6：可视化叙事与演示材料（待启动）}
+
+\begin{description}[style=nextline]
+\item[目标] 产出参赛三件套中的两件：数据分析报告 + $\le$3 分钟演示视频。
+\item[现状] 未启动，依赖 P4、P5。
+\item[具体动作]
+\begin{enumerate}
+\item 数据分析报告：按"痛点（量化）$\to$ 数据与方法 $\to$ 回测结论 $\to$ 配置建议 $\to$ 平台实现"结构撰写，引用权威来源（IMF/WGC/IATA/财报）。
+\item 演示视频（$\le$3 分钟）：脚本 = 30 秒痛点（奈拉/被困资金数字）+ 90 秒 Dashboard 操作 + 45 秒 AI 问数与归因 + 15 秒结论建议。
+\item 落地建议量化表述：如"建议高风险国别子公司将流动性储备的 5\%--10\% 配置为实物黄金，回测显示 2023--2024 奈拉危机中可减少美元计价损失约 XX\%"（XX 由 P3 产出）。
+\end{enumerate}
+\item[产出物] 数据分析报告（PDF）+ 演示视频（MP4）。
+\item[对应评分项] 可视化 25、价值 20。
+\item[风险与待决问题] ① 视频由谁出镜/配音；② 报告篇幅与模板（是否用 LaTeX 排版）。
+\end{description}
+
+% ---------- P7 ----------
+\subsection{P7：提交与可复现（待启动）}
+
+\begin{description}[style=nextline]
+\item[目标] 满足全部硬性提交要求，确保可复现性 10 分拿满。
+\item[现状] 未启动，依赖全部前置路径。
+\item[具体动作]
+\begin{enumerate}
+\item Smartbi xml 资源导出 + 干净环境恢复验证（留恢复过程截图/录屏）。
+\item 材料齐套：数据分析报告、演示环境及账号密码、$\le$3 分钟视频、数据来源说明及合规声明（含数据字典/字段说明、示例数据文档）。
+\item 合规声明：列明全部数据来源与许可（SGE/FRED/CFTC/IMF/WGC/OFAC/THUOCL MIT/EPU CC BY 4.0），模拟数据部分说明假设逻辑。
+\item 9 月 1 日前提交至 contest@smartbi.com.cn（抄送 743554914@qq.com），命名"揭榜挂帅-思迈特-题目名称-参赛者（参赛团队名）"。
+\end{enumerate}
+\item[产出物] 完整参赛作品包。
+\item[对应评分项] 复现 10、全部硬性门槛。
+\item[风险与待决问题] ① 提交前预留至少一周缓冲；② 演示账号有效期需覆盖初审（9 月 30 日）与终审（11 月底）。
+\end{description}
+
+% ============================================================
+\section{评分映射与里程碑}
+
+\subsection{路径 $\to$ 评分映射}
+
+\begin{longtable}{p{3.4cm}p{1.6cm}p{9.2cm}}
+\toprule
+\rowcolor{navy}\textcolor{white}{\textbf{评分项}} & \textcolor{white}{\textbf{分值}} & \textcolor{white}{\textbf{贡献路径}} \\
+\midrule
+问题价值 & 20 & P1（痛点论据）、P3（量化结论）、P6（报告呈现） \\
+数据分析方法与技术 & 25 & P0（ETL 证据）、P2（国别数据集）、P3（回测模型）、P5（AI 技术） \\
+可视化与交互 & 25 & P4（Dashboard）、P6（叙事与视频） \\
+创新性 & 20 & P1（差异化定位）、P3（回测框架）、P5（AI+RAG） \\
+完整性与可复现 & 10 & P4（xml 导出）、P7（恢复验证与材料齐套） \\
+硬性门槛 & --- & P4（平台）、P7（提交材料） \\
+\bottomrule
+\end{longtable}
+
+\subsection{倒排工期（2026 年 8 月 $\to$ 9 月 1 日提交）}
+
+\begin{longtable}{p{3.0cm}p{11.6cm}}
+\toprule
+\rowcolor{navy}\textcolor{white}{\textbf{时间}} & \textcolor{white}{\textbf{里程碑}} \\
+\midrule
+8 月上 & P2 国别数据集采集（1 周）；同步申请 Smartbi 试用账号 \\
+8 月中 & P3 回测模型跑通；P4 最小闭环（导入数据出图） \\
+8 月下 & P4 Dashboard 五页叙事完成；P5 AI 问数/归因配置 \\
+8 月 25 日前 & P6 报告初稿 + 视频脚本；P7 xml 恢复验证 \\
+8 月 28 日前 & 视频录制剪辑完成；材料齐套互审 \\
+8 月 30--31 日 & 最终检查并提交（留 1--2 天缓冲） \\
+9--11 月 & 初审答辩准备；终审现场擂台赛演练 \\
+\bottomrule
+\end{longtable}
+
+\noindent\textbf{注}：9 月 1 日截止是硬约束，当前（8 月中）距截止约 2.5 周，P2/P3/P4 必须并行推进。若时间不足，优先级为：P4 门槛 $>$ P2/P3 最小可用版 $>$ P5 $>$ P6 精修。
+
+% ============================================================
+\appendix
+\section{附录 A：关键数据速查}
+
+\begin{itemize}
+\item 奈拉贬值：N461/\$（2023 初）$\to$ N1{,}535/\$（2024 末），约 $-70\%$；MTN Nigeria 2024 汇兑损失 9{,}254 亿奈拉。
+\item 全球航司被困资金峰值：22.7 亿美元（2023-04，IATA）。
+\item 西方企业退出俄罗斯损失：$>$1{,}070 亿美元（2024-03，Reuters 统计）。
+\item 央行购金：2022--2024 连续三年净购金 $>$1{,}000 吨/年；2026 年 45\% 央行计划增持（WGC 调查，历史新高）。
+\item 人民币金价 20 年复合年化约 9\%；黄金年化波动率 15\%--20\%。
+\item 保险资金投资黄金试点（2025-02）：10 家机构、上限总资产 1\%（约 1{,}990 亿元）。
+\item 家办黄金配置：72\% 为零、平均约 1\%--2\%（UBS/Campden 2024--2025）。
+\end{itemize}
+
+\section{附录 B：主要信息来源}
+
+\begin{itemize}
+\item 赛题原文：\texttt{XH-202612\_Smartbi AI驱动的数据创新平台研究.pdf}；报名表：\texttt{02数据创新平台.pdf}。
+\item 调研报告：\texttt{跨国公司黄金硬通货需求调研报告.md}（案例/痛点/合规/数据可得性，全部附 URL）、\texttt{企业资产配置调研报告.md}（贷款条例/流动性征兆/金融同业配置）。
+\item 评估报告：\texttt{题意符合性评估报告.md}（百分制逐项评分与修改清单）。
+\item 评分标准整理：\texttt{XH-202612比赛硬性要求与评分标准\_含技术方案.xlsx}。
+\item 数据底座：\texttt{最终数据/最终数据/outputs/}（4 个工作簿 + 检查文件 + 预览）。
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,32 @@
+{
+  "run_id": "20260820_v42_sanctions",
+  "ts": "2026-08-20T01:08:51.385872+00:00",
+  "rows": 40,
+  "with_program": {
+    "IRN": [
+      "CAATSA - IRAN",
+      "HRIT-IR",
+      "IFSR",
+      "IRAN",
+      "IRAN-CON-ARMS-EO",
+      "IRAN-EO13846",
+      "IRAN-EO13871",
+      "IRAN-EO13876",
+      "IRAN-EO13902",
+      "IRAN-HR",
+      "IRAN-TRA",
+      "IRGC"
+    ],
+    "SDN": [
+      "DARFUR",
+      "SOUTH SUDAN",
+      "SUDAN-EO14098"
+    ]
+  },
+  "sdn_sha256": "d2a5d111269e6264a698861511141528e6e7f86cb2cae0a25b9ec77eae7ce097",
+  "not_fetched": {
+    "UN_consolidated": "scsanctions.un.org 旧 XML 路径 404(结构变动),转人工",
+    "EU_FSD": "本轮未取,转人工"
+  },
+  "note": "只作合规/事件标记,不提供规避路径;生效日待人工确认"
+}

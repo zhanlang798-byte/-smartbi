@@ -1,0 +1,2659 @@
+% !TEX program = xelatex
+\documentclass[UTF8,fontset=windows,12pt,openany]{ctexbook}
+
+\usepackage[a4paper,top=2.35cm,bottom=2.30cm,left=2.35cm,right=2.20cm,headheight=17pt]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{array,booktabs,longtable,tabularx,multirow}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{lscape}
+\usepackage{caption}
+
+% 路径、字段名和 verbatim 中可能同时包含英文、下划线与中文。
+% 为等宽环境指定中文回退，避免中文文件名被 Latin Modern Mono 丢字。
+\setCJKmonofont{Microsoft YaHei}
+
+% MiKTeX 当前环境未安装 pdflscape；为 lscape 页面补充 PDF 旋转元数据，
+% 使横向长表在查看器中自动正向显示。XeLaTeX 使用 dvipdfmx special。
+\AddToHook{env/landscape/begin}{%
+  \AddToHook{shipout/foreground}[vthree-landscape-rotate]{%
+    \special{pdf: put @thispage << /Rotate 90 >>}%
+  }%
+}
+\AddToHook{env/landscape/after}{%
+  \RemoveFromHook{shipout/foreground}[vthree-landscape-rotate]%
+}
+
+\definecolor{DeepNavy}{HTML}{17365D}
+\definecolor{OceanBlue}{HTML}{2F75B5}
+\definecolor{PaleBlue}{HTML}{EAF2F8}
+\definecolor{PaleGreen}{HTML}{E2F0D9}
+\definecolor{PaleGold}{HTML}{FFF2CC}
+\definecolor{PaleRed}{HTML}{FCE4D6}
+\definecolor{GoldLine}{HTML}{C69C2D}
+\definecolor{TextGray}{HTML}{4A5568}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=DeepNavy,
+  citecolor=OceanBlue,
+  urlcolor=OceanBlue,
+  pdftitle={全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书 V4.2},
+  pdfsubject={网页数据可用化、赛题逐条落地、全球周期、国别风险与Smartbi执行交接},
+  pdfauthor={数据创新平台项目组}
+}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.32em}
+\setlength{\emergencystretch}{3em}
+\let\cleardoublepage\clearpage
+\setlist[itemize]{leftmargin=2em,itemsep=0.28em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=2.4em,itemsep=0.30em,topsep=0.35em}
+\renewcommand{\arraystretch}{1.28}
+\setlength{\LTpre}{0.6em}
+\setlength{\LTpost}{0.8em}
+\Urlmuskip=0mu plus 1mu
+
+\ctexset{
+  chapter={format=\Huge\bfseries\color{DeepNavy},number=\chinese{chapter},beforeskip=0pt,afterskip=18pt},
+  section={format=\Large\bfseries\color{DeepNavy}},
+  subsection={format=\large\bfseries\color{OceanBlue}}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 全球经济周期与亚非拉国别风险多币种储备智能决策平台}
+\fancyhead[R]{\small V4.2}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newenvironment{decisionbox}[1][]{%
+  \par\medskip\noindent\begin{center}\begin{minipage}{0.93\textwidth}%
+  \color{OceanBlue}\hrule height 0.9pt\vspace{0.45em}%
+  \textbf{#1}\par\smallskip\color{black}%
+}{%
+  \par\vspace{0.35em}\color{OceanBlue}\hrule height 0.9pt%
+  \end{minipage}\end{center}\medskip%
+}
+\newenvironment{gatebox}[1][]{%
+  \par\medskip\noindent\begin{center}\begin{minipage}{0.93\textwidth}%
+  \color{GoldLine}\hrule height 0.9pt\vspace{0.45em}%
+  \textbf{#1}\par\smallskip\color{black}%
+}{%
+  \par\vspace{0.35em}\color{GoldLine}\hrule height 0.9pt%
+  \end{minipage}\end{center}\medskip%
+}
+\newenvironment{warningbox}[1][]{%
+  \par\medskip\noindent\begin{center}\begin{minipage}{0.93\textwidth}%
+  \color{TextGray}\hrule height 0.9pt\vspace{0.45em}%
+  \textbf{#1}\par\smallskip\color{black}%
+}{%
+  \par\vspace{0.35em}\color{TextGray}\hrule height 0.9pt%
+  \end{minipage}\end{center}\medskip%
+}
+\newcommand{\Field}[1]{{\small\nolinkurl{#1}}}
+\newcommand{\File}[1]{{\small\begingroup\urlstyle{same}\nolinkurl{#1}\endgroup}}
+\newcommand{\CFile}[1]{{\small\texttt{\detokenize{#1}}}}
+\newcommand{\Role}[1]{\textbf{#1}}
+\newcommand{\StepTitle}[3]{%
+  \noindent\colorbox{DeepNavy}{\parbox{0.965\textwidth}{\color{white}\Large\bfseries #1\quad #2\hfill\normalsize #3}}\par\medskip
+}
+\newcommand{\CardRow}[2]{\noindent\textbf{#1：}#2\par}
+\newcommand{\Pass}{\textcolor{DeepNavy}{\textbf{通过}}}
+\newcommand{\Fail}{\textcolor{TextGray}{\textbf{不通过}}}
+
+\begin{document}
+
+\begin{titlepage}
+  \pagecolor{PaleBlue}
+  \centering
+  \vspace*{1.6cm}
+  {\color{OceanBlue}\rule{0.88\textwidth}{1.5pt}}\\[1.05cm]
+  {\Huge\bfseries\color{DeepNavy}全球经济周期与亚非拉国别风险\\[0.35cm]多币种储备智能决策平台总计划书\par}
+  \vspace{0.7cm}
+  {\LARGE\color{OceanBlue}网页数据可用化、赛题逐条落地与 Smartbi 执行\par}
+  \vspace{0.35cm}
+  {\Large\bfseries\color{GoldLine}V4.2 数据可用化与评分执行版\par}
+  \vspace{1.0cm}
+  \begin{minipage}{0.86\textwidth}
+    \color{GoldLine}\rule{\textwidth}{0.9pt}\par\vspace{0.45cm}
+    \color{black}\centering
+    130 国覆盖层｜40 国月度量化层｜20 家中国企业层\\[0.25cm]
+    全球周期 1971—2025｜历史危机与制度压力 1929—2025\\[0.25cm]
+    11 张权威表｜Smartbi 六页看板｜25 个 AIChat 测试卡
+    \vspace{0.45cm}\par\color{GoldLine}\rule{\textwidth}{0.9pt}
+  \end{minipage}
+  \vfill
+  {\large 数据创新平台项目组\par}
+  \vspace{0.25cm}
+  {\large 2026 年 8 月 16 日\par}
+  \vspace{0.75cm}
+  {\color{OceanBlue}\rule{0.88\textwidth}{1.5pt}}
+  \nopagecolor
+\end{titlepage}
+
+\frontmatter
+
+\chapter*{执行摘要}
+\addcontentsline{toc}{chapter}{执行摘要}
+
+\begin{decisionbox}[本册用途]
+本册是在 V4.1 交接基线上新建的 V4.2 数据可用化与评分执行版。它保留 130 国、40 国、20 家企业、全球周期、历史危机、多币种储备和 Smartbi 六页产品的主体设计，同时把旧归档中“文件已下载”与“内容可使用”分开：688 项来源均取得获取、内容、提取和正式用途四态；159 个本地 HTML 逐项审计；开放底层资源按许可补取并转成可追溯表格或正文。赛题五类评分原文保持不动，另以操作卡绑定所需字段、脚本、交付物、Smartbi 页面和验收证据。每一步的输入、命令、输出文件、质量阈值、失败处理和下一接收人均固化为团队合同。
+\end{decisionbox}
+
+项目研究对象既包括中国出海企业在亚洲、非洲和拉丁美洲经营时面临的汇率贬值、通胀、外汇储备下降、资本与利润汇出限制、支付渠道中断、制裁与托管约束，也包括全球衰退、通缩、滞胀、激进紧缩、资产泡沫破裂、信用紧缩和系统性金融危机向国别与企业资产负债表的传导。产品不预设美元或黄金为单一胜者，而是把经营现金、流动性储备和战略储备分层，在人民币、经营国本币与合同货币三种计价口径下，对人民币短期资产、美元现金、美元短债、黄金、套保、自然对冲和授信进行周期协同与对称剔除实验。
+
+数据结构由六个相互关联但不混频的层次组成：项目定义的亚非拉 130 国用于展示覆盖广度和投资版图；按明确规则筛选的 40 国承担 2010—2025 年共 192 个月的国别量化分析；20 家中国企业承担公开披露画像；不少于 20 个独立国别危机事件由 40 国面板与权威事件证据共同识别；\Field{global_cycle_month} 建立 1971—2025 年全球月度周期序列；\Field{historical_crisis_event} 管理 1929—2025 年历史危机、政策节点和制度可比性。历史 45 份案例全部转入证据矩阵，其中 17 份宏观案例进入历史危机核心证据链，重复事件通过 \Field{event_cluster_id} 合并，不把文档数量当作独立事件数量。
+
+端到端流程固定为：D0 研究口径冻结，D1 建立 130 国主数据，D2 登记来源并下载原始文件，D3 构建投资覆盖表，D4 采集候选国别宏观数据，D5 筛选并冻结 40 国，D6 同步采集年度政策、企业、资产、全球周期和历史危机数据，D7 标准化、清洗与质量检查，D8 识别国别事件、全球周期多标签与复合危机，D9 构建资产收益和组合情景，D10 导出 Smartbi 数据包，D11 建模、六页看板与 25 个 AIChat 测试卡，D12 完成 XML 恢复、报告、视频和提交。任何门槛失败都不得通过填零、降低阈值、拆分事件、混用频率或伪造数据完整性来绕过。
+
+\chapter*{截至 2026-08-16 的真实项目状态}
+\addcontentsline{toc}{chapter}{截至 2026-08-16 的真实项目状态}
+
+\begin{decisionbox}[状态总判定]
+调研证据归档已经完成并通过哈希、许可、回环解压和离线交接验证；正式的 130 国覆盖表、40 国月度面板、20 家企业年报库、1971—2025 全球周期序列、模型、Smartbi 产品和 XML 恢复尚未完成。\textbf{“调研归档完成”不是“项目数据工程完成”}，任何接手者必须按本章状态继续，不能从头重复下载，也不能把可复用资料写成最终权威表。
+\end{decisionbox}
+
+本章数据来自不可变快照 \Field{20260816_research_archive_v1}。机器权威入口为 \CFile{../调研资料归档_V1.0/00_交接入口/研究资料总清单.jsonl}、\CFile{引用与结论关系.csv}、\CFile{缺失受限与待办清单.csv} 和本轮新增的 \CFile{../00_当前项目交接_V4.1/AI_CONTEXT_V4.1.json}。归档内部旧 \File{AI_CONTEXT.json} 保留 V4.0 时点语义，不修改；当前状态以 V4.1 交接入口为准\cite{archivev10,archiveqa}。
+
+\begin{longtable}{p{4.3cm}p{2.2cm}p{7.1cm}}
+\caption{已核验调研归档基线}\label{tab:v41-archive-baseline}\\
+\toprule
+\textbf{核验项} & \textbf{结果} & \textbf{准确含义}\\
+\midrule
+\endfirsthead
+\toprule \textbf{核验项} & \textbf{结果} & \textbf{准确含义}\\ \midrule
+\endhead
+总资产记录 & 688 项 & 180 项本地资产加 508 项外部来源；每项都有唯一终态。\\
+外部来源构成 & 507+1 & 507 项 URL/DOI 来源与 1 项无 URL 题录。\\
+引用关系 & 1,478 条 & 可从引用位置追到 \Field{asset_id}；不是 1,478 个独立来源。\\
+案例档案 & 45 份 & 全部完成来源链接索引；当前状态为 \Field{SOURCE_LINKS_INDEXED}，不是事实和页码全部核验。\\
+历史文件保护 & 201 个不变 & 归档实施前后旧人工文件 SHA-256 一致。\\
+失效来源修复路由 & 11/11 & 5 项失效链接与 6 项抓取失败均登记替代资产；正式使用仍须复核替代来源适用性。\\
+缺失论文恢复 & \Field{WEB-0115} & \File{Ji_et_al_2026_Entropy_CNN-QRLSTM.pdf} 已从官方开放入口恢复，SHA-256 为\newline\Field{696a7249e4992eaa}\newline\Field{6a94f61f66daae76}\newline\Field{184226e42b9bda00}\newline\Field{15d6b33da9b8e4eb}。\\
+归档说明书 & 96 页 & 完整编译和逐页视觉 QA 通过。\\
+共享包验证 & 通过 & 解压回环、秘密扫描和原 25 问离线交接测试通过；V4.1 另执行不少于 30 问状态交接测试。\\
+总体状态 & \Field{ARCHIVE_COMPLETE_WITH_EXPLICIT_GAPS} & 完成的是来源终态闭包；受限和未完成事项保持显式。\\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{4.2cm}p{2.0cm}p{7.4cm}}
+\caption{688 项资料的唯一终态}\label{tab:v41-terminal-status}\\
+\toprule
+\textbf{终态} & \textbf{数量} & \textbf{接手规则}\\
+\midrule
+\endfirsthead
+\toprule \textbf{终态} & \textbf{数量} & \textbf{接手规则}\\ \midrule
+\endhead
+\Field{ALREADY_LOCAL_VERIFIED} & 168 & 先按哈希定位已有原件，再执行字段和结论复核。\\
+\Field{DOWNLOADED_VERIFIED} & 189 & 原件已下载并校验；是否可共享仍取决于 \Field{redistribution_scope}。\\
+\Field{DUPLICATE_CONTENT} & 11 & 使用 \Field{duplicate_of_asset_id} 指向的规范资产，不重复保存。\\
+\Field{METADATA_ONLY_LICENSE} & 274 & 只能复用题录、链接和资料卡，不声称拥有或再分发正文。\\
+\Field{MANUAL_ACTION_REQUIRED} & 16 & 由用户人工接受条款或下载后登记哈希和许可。\\
+\Field{PAYWALL_OR_AUTH} & 15 & 未获合法授权前不得下载、绕过登录或写成已取得。\\
+\Field{BROKEN_OR_UNREACHABLE} & 5 & 使用登记的替代资产并复核适用范围。\\
+\Field{FETCH_FAILED} & 6 & 不反复盲抓；使用登记替代资产或升级人工处理。\\
+\Field{EXCLUDED_SECRET} & 4 & Cookie、Office 锁文件等永不进入共享包和正式数据层。\\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{4.6cm}p{1.8cm}p{8.0cm}}
+\caption{调研资产主题分布及对项目的作用}\label{tab:v41-category-counts}\\
+\toprule
+\textbf{主题} & \textbf{数量} & \textbf{后续使用边界}\\
+\midrule
+\endfirsthead
+\toprule \textbf{主题} & \textbf{数量} & \textbf{后续使用边界}\\ \midrule
+\endhead
+黄金、美元与储备配置 & 187 & 为 \Field{asset_monthly_return}、组合假设和反例提供来源种子；不能直接替代正式收益表。\\
+企业案例与公开披露 & 133 & 为 20 家企业候选和外部验证提供线索；关键数字仍须回到年报页码双复核。\\
+数据集原件与说明 & 97 & 为正式采集提供原件、代理和说明；原始、代理、派生必须分层。\\
+全球周期与历史危机 & 97 & 为 \Field{global_cycle_month} 和 \Field{historical_crisis_event} 提供种子；不代表 1971—2025 面板已建成。\\
+会计、合规与制裁 & 52 & 支持约束字段和风险提示；不得输出规避路径。\\
+案例库与证据 & 47 & 包含 45 份案例及总览资料，按事件簇去重。\\
+国别货币与中国出海 & 34 & 支持国家候选与指标来源发现；130 国主表仍须执行 D1。\\
+方案演进与调研报告 & 28 & 用于理解命题演进，不作为正式量化结果。\\
+比赛与项目基线 & 8 & 用于赛题约束、评分和项目边界。\\
+Smartbi 与比赛平台 & 5 & 支持能力边界和实例盘点，不等同平台产品验收。\\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{2.4cm}p{3.4cm}p{3.2cm}p{5.5cm}}
+\caption{当前完成度台账}\label{tab:v41-progress-ledger}\\
+\toprule
+\textbf{阶段} & \textbf{状态} & \textbf{已经具备} & \textbf{仍需完成}\\
+\midrule
+\endfirsthead
+\toprule \textbf{阶段} & \textbf{状态} & \textbf{已经具备} & \textbf{仍需完成}\\ \midrule
+\endhead
+归档 R0—R2 & \Field{COMPLETE_VERIFIED} & 688 项终态、1,478 条关系、45 案例链接、双包和 QA & 正式使用某项结论时仍按证据等级复核。\\
+Smartbi S0 & \Field{COMPLETE_VERIFIED} & 认证后只读版本、菜单、许可和资源树盘点 & P0 上传、建模、问数、XML 和隔离恢复。\\
+D0 & \Field{PARTIAL_REUSABLE} & V4.1 研究合同和历史方案 & 正式配置、签字、变更单和新运行号。\\
+D2 & \Field{PARTIAL_REUSABLE} & 来源发现、原件、哈希、许可、缺口和替代关系 & 导入交叉表并形成正式 \Field{source_registry} 种子。\\
+D6C & \Field{PARTIAL_REUSABLE} & 案例链接、黄金相关工作簿和资产来源 & 证据页码、成本、标准收益序列与字段化复核。\\
+D6E & \Field{PARTIAL_REUSABLE} & 17 份宏观危机案例种子 & 历史事件字段化、制度环境、页码和可比性验收。\\
+D1、D3—D5、D6A/B/D、D7—D12 & \Field{NOT_STARTED} & 只有计划、候选来源或模板 & 必须按门槛执行，不能由归档数量推定完成。\\
+受限来源 & \Field{EXTERNAL_ACTION} & 元数据、条款或待办已经登记 & 需要用户授权、接受条款、登录或合法采购。\\
+\bottomrule
+\end{longtable}
+
+\section*{权威顺序与 30 分钟接手路线}
+\addcontentsline{toc}{section}{权威顺序与 30 分钟接手路线}
+
+权威顺序固定为：\CFile{../00_当前项目交接_V4.1/README_先读我.md}，本 V4.1 计划书，调研归档 V1.0 机器清单与原件，V4.0 及更早历史版本。接手者前 30 分钟必须执行：
+
+\begin{enumerate}
+  \item 前 10 分钟读取 \File{AI_CONTEXT_V4.1.json} 和 \File{PROJECT_STATUS_V4.1.csv}，确认完成、部分可复用、未开始和外部动作；
+  \item 第 10—20 分钟读取 \File{SOURCE_REUSE_CROSSWALK_V4.1.csv}，以 \Field{archive_asset_id}、许可和复用路由判断已有资料，不重新盲搜；
+  \item 第 20—30 分钟领取 D0：签署 G0、建立 V4.1 配置与新 \Field{run_id}，随后把 688 项交叉表导入正式 \Field{source_registry} 种子；
+  \item D0 未通过前不得启动正式采集；D2 映射未完成前不得重复下载已有原件。
+\end{enumerate}
+
+\section*{禁止重复劳动、已知缺口与升级责任}
+\addcontentsline{toc}{section}{禁止重复劳动、已知缺口与升级责任}
+
+\begin{itemize}
+  \item 不修改或重跑归档 V1.0；正式数据工程使用新的运行号和目录。若来源更新，新增版本记录，不覆盖旧快照。
+  \item 不把 45 份案例的 \Field{SOURCE_LINKS_INDEXED} 状态写成全部事实、数字和页码已经核验；D 负责字段化，B 或 A 复核关键数字。
+  \item 不把 274 项 \Field{METADATA_ONLY_LICENSE}、16 项人工处理或 15 项登录/付费资料写成已取得全文；A/B 负责许可升级。
+  \item 旧案例库 README 状态过期，以 \File{case_index.csv} 的 45 份实际文件为准；旧文件保持不动。
+  \item 旧清单曾声称 Ji 等人论文存在但磁盘缺失；V1.0 已以 \Field{WEB-0115} 恢复，新表引用恢复资产，旧清单不改。
+  \item 两份历史方案 PDF 页数相同但哈希不同，均保留为历史资产，不能擅自删除或认定重复。
+  \item 若正式字段需要的核心 A/B 级来源仍受限，启用登记替代源；无合法替代时缩小承诺并记录 \Field{SOURCE_LICENSE_BLOCK}。
+\end{itemize}
+
+\section*{V4.0 到 V4.1 的变更记录}
+\addcontentsline{toc}{section}{V4.0 到 V4.1 的变更记录}
+
+V4.1 不改变研究命题、11 张权威表、六页看板、25 个 AIChat 问题、美元与黄金对称实验及反例规则。新增的是：真实进度快照、不可变调研归档引用、来源复用交叉表、机器状态台账、当前权威顺序、D0/D2/D6C/D6E/D7/D12 接口修订、实际与计划排期区分，以及可离线转交的 V4.1 交接包。
+
+\chapter*{阅读说明与证据边界}
+\addcontentsline{toc}{chapter}{阅读说明与证据边界}
+
+\begin{longtable}{p{3.0cm}p{10.5cm}}
+\toprule
+\textbf{标记或概念} & \textbf{解释}\\
+\midrule
+计划事项 & 本册规定未来要执行的任务，不代表数据、模型或看板已经完成。\\
+真实数据 & 能够回到原始机构、原始文件、发布日期、抓取日期与 SHA-256 的公开或获授权数据。\\
+代理数据 & 因目标变量不可直接获得而使用的替代指标，必须保留 \Field{is_proxy=1} 与替代理由。\\
+模拟数据 & 企业未披露的现金需求、权重或成本情景，必须保留 \Field{is_simulated=1}，不得与真实披露聚合为同一指标。\\
+插值数据 & 仅允许进入挑战模型，必须保留 \Field{is_imputed=1}；核心危机期汇率与 CPI 主结果不插值。\\
+可执行建议 & 仅指数据、模型和约束均通过时的情景化候选方案，不构成交易、法律、会计或税务意见。\\
+禁止状态 & 不输出受限路径的执行步骤，但仍输出风险诊断、证据、替代方案类别和人工复核事项。\\
+\bottomrule
+\end{longtable}
+
+本册独立维护参考文献，不调用也不修改历史 \File{references.bib}。历史 V1.1、V2.0、V3.1、V4.0 与旧 Mermaid 保持原状，仅作为项目演进记录；调研归档 V1.0 作为不可变证据快照，不因 V4.1 同步而改写。2025 年数据若在执行时尚无正式值，则保持为空并报告最新完整期，不得用预测值冒充实际值。1929—1970 年只进入历史制度与压力测试层，不伪造统一月度序列；美国、日本和欧洲只作为全球冲击源和历史对照，不进入亚非拉国别风险排名。
+
+\tableofcontents
+\listoftables
+
+\mainmatter
+\input{v42_operational_chapters.tex}
+
+\part{最终产品快速验收索引}
+
+\chapter{AIChat 二十五个固定测试卡}
+
+AIChat 只读取统一指标模型和经批准的业务知识说明。每次测试保存问题、筛选上下文、生成 SQL/查询、返回值、Python 基准值、误差、引用 source ID、合规提示、截图/录屏路径和通过状态。事实查询、资产比较、模型解释、来源追溯和约束路由五类各不少于 4 问。
+
+\section{事实查询与样本范围}
+
+\begin{decisionbox}[AI-01：亚非拉哪些国家同时具有较高中国投资和汇率风险？]
+\CardRow{模型}{国家维度、country\_exposure、country\_monthly\_risk。}
+\CardRow{口径}{用户指定月份；投资用该月之前最新可得年份；投资和等权风险均高于区域第 75 百分位；排除资金通道。}
+\CardRow{标准答案}{由 Python 同运行号生成国家清单、两项分位、数据截止期；AI 返回行集合必须一致。}
+\CardRow{来源}{每行携带投资和风险 source ID；回答明确两个不同截止期。}
+\CardRow{限制}{无投资数值的国家不进入“较高投资”集合，不能把缺失当 0。}
+\CardRow{容差}{国家集合完全一致；数值误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-02：40 国样本是如何选出的？]
+\CardRow{模型}{选择评分卡、国家维度与覆盖率 QA。}
+\CardRow{口径}{说明实体国、中国存在证据、FX/CPI 80\%、15/14/11、每区 3 个对照、乘积分数和并列规则。}
+\CardRow{标准答案}{必须能列出指定国家的入选/排除原因，不只复述“自动选择”。}
+\CardRow{来源}{指向选择配置哈希和运行号。}
+\CardRow{限制}{不得声称 40 国早已永久固定。}
+\CardRow{容差}{规则项遗漏为失败；国家数必须为 40。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-03：哪个区域的独立危机事件频率最高？]
+\CardRow{模型}{country\_event、事件维度、日期维度。}
+\CardRow{口径}{按 event ID/cluster 去重，以区域国家数和有效观察年数标准化，同时展示原始数与频率。}
+\CardRow{标准答案}{Python 输出区域事件数、国家—年和标准化频率。}
+\CardRow{来源}{事件触发与证据 source ID。}
+\CardRow{限制}{不按 45 份案例文档计数；截尾窗口标注。}
+\CardRow{容差}{计数完全一致；频率误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-04：某国最新汇率、通胀和储备数据是什么？]
+\CardRow{模型}{country\_monthly\_risk、source\_registry。}
+\CardRow{口径}{三个指标分别取最新非空月，不强制同月，并逐项显示观测期、发布日期、单位和质量。}
+\CardRow{标准答案}{Python 按指标末个非空观测生成。}
+\CardRow{来源}{逐指标 source ID。}
+\CardRow{限制}{不同截止期不得合并成“截至同一月份”。}
+\CardRow{容差}{日期完全一致；数值误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-05：哪些国家的数据完整度未达到 80\%？]
+\CardRow{模型}{D4 覆盖矩阵、国家维度。}
+\CardRow{口径}{汇率和 CPI 分别统计 192 月非空数；阈值 154。}
+\CardRow{标准答案}{候选池不合格清单及具体缺口；正式 40 国应返回 0。}
+\CardRow{来源}{质量报告和来源登记。}
+\CardRow{限制}{年度值和插值值不计入真实月度完整率。}
+\CardRow{容差}{非空月数完全一致。}
+\end{decisionbox}
+
+\section{企业、地理与披露质量}
+
+\begin{decisionbox}[AI-06：哪些中国企业海外收入占比较高？]
+\CardRow{模型}{company\_overseas\_exposure、企业维度。}
+\CardRow{口径}{指定财年；只比较口径可比且质量不是 reject 的企业；同时显示报告币种和披露定义。}
+\CardRow{标准答案}{Python 排名及合格企业数。}
+\CardRow{来源}{年报 source ID 和页码。}
+\CardRow{限制}{不同财年不得混为同一排名；缺失不填 0。}
+\CardRow{容差}{前五企业集合一致；占比误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-07：哪些企业的海外收入与高风险国家重合？]
+\CardRow{模型}{企业披露、地理桥表、国家风险。}
+\CardRow{口径}{只有 geography level=country 才判断国家重合；地区披露另报“只能判断区域”。}
+\CardRow{标准答案}{明确国家重合集合与仅地区披露集合分开。}
+\CardRow{来源}{年报页码和风险 source ID。}
+\CardRow{限制}{绝不把亚洲或非洲收入按国家权重拆分。}
+\CardRow{容差}{不得出现虚构国家；集合完全一致。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-08：哪六家企业最适合深度模拟，为什么？]
+\CardRow{模型}{企业披露与深度候选评分。}
+\CardRow{口径}{完整度 40\%、海外敞口 35\%、经营模式代表性 25\%。}
+\CardRow{标准答案}{最多六家、分项分数、总分、披露缺口和经营模式。}
+\CardRow{来源}{企业表和评分配置。}
+\CardRow{限制}{不以知名度或主观偏好替代评分。}
+\CardRow{容差}{总分误差不超过 1\%；入选集合与 Python 一致。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-09：某企业最近一期汇兑损益是多少？]
+\CardRow{模型}{企业披露、来源登记。}
+\CardRow{口径}{取最新正式财年，说明收益/损失符号、币种、单位、合并范围和页码。}
+\CardRow{标准答案}{原披露数与统一符号数并列。}
+\CardRow{来源}{年报直接来源和页码。}
+\CardRow{限制}{不得将外币报表折算差额、汇兑损益和衍生品公允价值混为同一项。}
+\CardRow{容差}{原值完全一致；换算误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-10：企业披露不足时平台还能回答什么？]
+\CardRow{模型}{企业质量、地理桥、情景表。}
+\CardRow{口径}{区分真实披露、地区画像、国别通用情景和模拟企业原型。}
+\CardRow{标准答案}{列出可回答和不可回答项，并显示缺失字段。}
+\CardRow{来源}{数据字典和企业质量报告。}
+\CardRow{限制}{不得把模拟值表述为该企业真实持仓或真实现金需求。}
+\CardRow{容差}{遗漏模拟标记或越级推断即失败。}
+\end{decisionbox}
+
+\section{资产比较与周期实验}
+
+\begin{decisionbox}[AI-11：在哪些历史事件中美元短债明显优于黄金？]
+\CardRow{模型}{asset\_monthly\_return、portfolio\_scenario、事件维度。}
+\CardRow{口径}{同国家、同窗口、同计价、同成本；以预注册差异阈值判定。}
+\CardRow{标准答案}{事件、期限、两策略净指标差、周期状态和样本数。}
+\CardRow{来源}{资产和事件 source ID。}
+\CardRow{限制}{不能只比较美元毛收益与黄金成本后收益。}
+\CardRow{容差}{至少 3 个合格窗口；数值误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-12：在哪些历史事件中黄金明显优于美元短债？]
+\CardRow{模型}{同 AI-11。}
+\CardRow{口径}{完全对称的窗口、计价、成本和阈值。}
+\CardRow{标准答案}{事件、期限、净指标差、周期和约束状态。}
+\CardRow{来源}{资产、事件和成本来源。}
+\CardRow{限制}{本币金价上涨必须拆分金价、汇率和交互贡献。}
+\CardRow{容差}{至少 3 个合格窗口；分解误差不超过 \(10^{-10}\)。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-13：黄金从 0\% 提高到 2.5\% 或 5\% 后发生了什么？]
+\CardRow{模型}{组合情景。}
+\CardRow{口径}{指定层级、期限、国家、事件、周期和计价；比较回撤、CVaR、覆盖率、成本与恢复时间。}
+\CardRow{标准答案}{完整指标表而不是只报收益；2.5\% 是否满足条件资格。}
+\CardRow{来源}{情景运行号、假设 ID、资产来源。}
+\CardRow{限制}{经营现金层不强制黄金底仓。}
+\CardRow{容差}{权重和、指标值与 Python 误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-14：去掉黄金与去掉美元后，组合风险分别变化多少？]
+\CardRow{模型}{组合情景对称剔除组。}
+\CardRow{口径}{完整、no gold、no usd 三条 strategy ID 使用同一约束、成本和再配置规则。}
+\CardRow{标准答案}{两类边际贡献并列，不预设单一胜者。}
+\CardRow{来源}{情景版本和复算报告。}
+\CardRow{限制}{不能只展示更支持预期立场的一侧。}
+\CardRow{容差}{策略组必须完整；差值误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-15：为什么某一周期下配置发生变化？]
+\CardRow{模型}{周期标签、组合情景、资产收益。}
+\CardRow{口径}{解释实际利率、美元趋势、通胀、本币压力、资本限制和渠道状态的规则贡献。}
+\CardRow{标准答案}{展示规则主模型、挑战模型差异和是否模型敏感。}
+\CardRow{来源}{周期配置与当期数据 source ID。}
+\CardRow{限制}{不得将历史周期分类表述为确定的未来预测。}
+\CardRow{容差}{状态和规则触发完全一致；解释遗漏主要触发项为失败。}
+\end{decisionbox}
+
+\section{模型解释、来源与约束路由}
+
+\begin{decisionbox}[AI-16：为什么某国风险评分本期上升？]
+\CardRow{模型}{月度风险及等权贡献。}
+\CardRow{口径}{比较本月与上月的汇率、通胀、储备、地缘和有效政策状态。}
+\CardRow{标准答案}{按贡献排序，列出数据变化、标准化贡献与来源。}
+\CardRow{来源}{逐指标 source ID、发布日期。}
+\CardRow{限制}{模型敏感时同时报告熵权/PCA 方向差异。}
+\CardRow{容差}{贡献和与总分变化误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-17：这个数字来自哪里，何时可被当时的决策者知道？]
+\CardRow{模型}{任一事实表与 source\_registry。}
+\CardRow{口径}{返回来源机构、数据集、URL、版本、观测期、发布日期、抓取日、最早回测日和哈希。}
+\CardRow{标准答案}{source ID 一跳追溯。}
+\CardRow{来源}{来源登记自身。}
+\CardRow{限制}{若 vintage reconstructed=1，必须明确是重建版本。}
+\CardRow{容差}{关键追溯字段完整率 100\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-18：如果存在托管、兑换或制裁限制，平台输出什么？]
+\CardRow{模型}{组合约束、年度政策、事件和证据。}
+\CardRow{口径}{按可行、条件可行、禁止、人工复核路由。}
+\CardRow{标准答案}{继续输出风险诊断、缺失条件和合法替代类别；禁止路径权重为 0。}
+\CardRow{来源}{政策/监管 source ID。}
+\CardRow{限制}{不提供规避制裁、外汇管制或转移受限资产的方法。}
+\CardRow{容差}{禁止状态出现受限执行步骤即失败。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-19：生成管理层风险简报]
+\CardRow{模型}{六页统一指标与来源模型。}
+\CardRow{口径}{固定为风险变化、企业敞口、三层候选配置、反例、约束、数据质量和待办七段。}
+\CardRow{标准答案}{数字来自当前筛选上下文并附 source ID；事实、模拟、假设和待验证分别标记。}
+\CardRow{来源}{所有引用数值的来源清单。}
+\CardRow{限制}{不使用“保证收益”“制裁免疫”“黄金稳定年增 10\%”等表述。}
+\CardRow{容差}{数值误差不超过 1\%；来源遗漏率 0。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-20：本次建议为什么不能直接执行？]
+\CardRow{模型}{组合情景、约束、数据质量、企业披露。}
+\CardRow{口径}{列出模拟输入、代理数据、待复核法律/会计/税务事项、过期数据和缺失企业字段。}
+\CardRow{标准答案}{形成“执行前条件清单”和责任人，不给操作绕行步骤。}
+\CardRow{来源}{假设 ID、质量报告、政策与来源登记。}
+\CardRow{限制}{情景化决策支持不是投资承诺或统一比例建议。}
+\CardRow{容差}{若存在任何禁止/人工复核项却回答“可直接执行”，测试失败。}
+\end{decisionbox}
+
+\section{全球周期、历史类比与制度可比性}
+
+\begin{decisionbox}[AI-21：当前全球周期的主状态和并行标签是什么？]
+\CardRow{模型}{global\_cycle\_month、日期维度与统一周期指标。}
+\CardRow{口径}{按信用与系统性危机、资产泡沫破裂、衰退或通缩、滞胀、激进紧缩、通胀过热、复苏再通胀、正常扩张的优先级输出主状态，同时保留全部已触发标签。}
+\CardRow{标准答案}{Python 返回观测月、可用发布日期、主状态、多标签、触发值、阈值和 compound 标志。}
+\CardRow{来源}{逐指标 source ID、vintage date 与发布日期。}
+\CardRow{限制}{只使用决策月当时已发布信息；不得把未来修订值当作实时判断。}
+\CardRow{容差}{主状态和全部标签精确一致；触发数值误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-22：2000 年互联网泡沫与 2008 年全球金融危机有何不同？]
+\CardRow{模型}{historical\_crisis\_event、global\_cycle\_month、case\_evidence。}
+\CardRow{口径}{对比触发资产、信用与银行系统、实体经济传导、政策响应、美元短债与黄金表现，不只比较股指跌幅。}
+\CardRow{标准答案}{2000 年以资产估值泡沫破裂为主；2008 年以信用与系统性金融危机为主，并列出复合标签和证据。}
+\CardRow{来源}{事件级 A/B 证据、数据来源和页码。}
+\CardRow{限制}{不得把两段历史简化成同一种“股市下跌”。}
+\CardRow{容差}{危机主类型、关键传导渠道和制度差异全部命中。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-23：《广场协议》如何连接日本泡沫与“失去的三十年”？]
+\CardRow{模型}{historical\_crisis\_event、事件维度与日本事件簇。}
+\CardRow{口径}{将 1985 年《广场协议》标为政策冲击节点，关联日元升值、后续宽松、资产价格上升、1990 年前后泡沫破裂、资产负债表调整和长期停滞。}
+\CardRow{标准答案}{显示同一 event cluster 内的节点时序、机制与证据，但《广场协议》本身不计为危机。}
+\CardRow{来源}{日本银行等权威资料及案例页码。}
+\CardRow{限制}{不得宣称单一协议机械导致三十年停滞；必须列出中间政策和金融机制。}
+\CardRow{容差}{政策节点、危机节点与长期阶段不重复计数。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-24：不同全球周期下黄金与美元短债各自贡献多少？]
+\CardRow{模型}{portfolio\_scenario、asset\_monthly\_return、global\_cycle\_month。}
+\CardRow{口径}{按扩张、滞胀、紧缩、泡沫破裂、信用危机、衰退和复苏分组，比较完整组合、去黄金与去美元资产三组的边际变化。}
+\CardRow{标准答案}{并列报告人民币购买力保全、最大回撤、CVaR、流动性覆盖和成本，不预设某项资产在所有阶段获胜。}
+\CardRow{来源}{同一运行号、状态规则、收益来源和复算报告。}
+\CardRow{限制}{股票、房地产、原油、VIX 和信用利差仅作状态识别或对照，其储备权重必须为 0。}
+\CardRow{容差}{分组、策略组和差值与 Python 完全一致，数值误差不超过 1\%。}
+\end{decisionbox}
+
+\begin{decisionbox}[AI-25：为什么 1929—1933 年不能直接套用现代 ETF 与短债组合？]
+\CardRow{模型}{historical\_crisis\_event、case\_evidence、source\_registry。}
+\CardRow{口径}{说明金本位与黄金政策、资本管制、合法持有状态、市场可交易性、工具不存在和数据频率差异。}
+\CardRow{标准答案}{输出可比较机制、不可比较工具、comparability grade 和 modern backtest allowed 标志。}
+\CardRow{来源}{历史法规、政策文件、学术或官方历史资料。}
+\CardRow{限制}{1929—1970 年只进入历史压力层，不伪造统一月度收益或现代可执行组合。}
+\CardRow{容差}{任何把现代 ETF、自由金价或现代短债代理直接回填到该阶段的回答均失败。}
+\end{decisionbox}
+
+\begin{gatebox}[AIChat 总体验收]
+25 个问题必须全部执行并留存录屏。数值题正确率不低于 90\%，关键数值误差不超过 1\%；集合题按精确匹配验收；任何企业国家粒度越级推断、来源缺失、模拟冒充真实、历史制度越级类比或禁止路径输出，均属于硬失败而非普通文字瑕疵。
+\end{gatebox}
+
+\part{三个核心数据表的前置合同}
+
+\chapter{country\_exposure 字段字典}
+
+\begin{longtable}{p{3.5cm}p{2.3cm}p{2.2cm}p{5.3cm}}
+\caption{country\_exposure 最低字段合同}\label{tab:dict-exposure}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{iso3} & 文本(3) & 是 & 国家 ISO3；与年份组成主键；130 国唯一映射。\\
+\Field{year} & 整数 & 是 & 投资或覆盖观测年份；静态快照使用对应披露年。\\
+\Field{country_name_zh} & 文本 & 是 & 中文标准名，来自国家主表。\\
+\Field{country_name_en} & 文本 & 是 & 英文标准名，来自国家主表。\\
+\Field{region} & 枚举 & 是 & Asia/Africa/LatinAmerica；区域计数 45/51/34。\\
+\Field{subregion} & 文本 & 是 & 次区域，用于地图和分组，不用于替代国家。\\
+\Field{currency_name} & 文本 & 是 & 当年有效本币名称。\\
+\Field{currency_code} & 文本(3) & 是 & ISO 4217；币制变更按有效期取值。\\
+\Field{country_role} & 枚举 & 是 & operating/channel；资金通道不得进入实体风险排名。\\
+\Field{chinese_enterprise_presence} & 布尔/空 & 条件必填 & 是否有中国企业存在证据；未知与否定分开。\\
+\Field{presence_evidence_type} & 枚举 & 条件必填 & 公报、企业清单、官方公告等证据类型。\\
+\Field{odi_flow_usd} & 小数 & 否 & 当年中国对外直接投资流量；缺失为空，不填 0。\\
+\Field{odi_stock_usd} & 小数 & 否 & 年末投资存量；与流量不可混用。\\
+\Field{odi_original_value} & 小数 & 否 & 原表数值，转换前保留。\\
+\Field{odi_original_unit} & 文本 & 否 & 美元、万美元、亿美元等原始单位。\\
+\Field{latest_stock_year} & 整数 & 否 & 国家最新可得投资存量年份。\\
+\Field{latest_stock_usd} & 小数 & 否 & 与上一字段匹配的存量。\\
+\Field{enterprise_count} & 整数 & 否 & 仅在公报明确披露时填写，不按区域分摊。\\
+\Field{fx_change_latest_year} & 小数 & 否 & 最新年度汇率变化，仅用于 40 国预筛。\\
+\Field{inflation_latest_year} & 小数 & 否 & 最新年度通胀，仅用于预筛。\\
+\Field{reserve_latest_usd} & 小数 & 否 & 最新储备快照，仅用于预筛。\\
+\Field{historical_crisis_flag} & 布尔 & 是 & 历史危机预筛标志，不替代正式事件识别。\\
+\Field{missing_reason} & 文本 & 条件必填 & 投资值为空时说明未披露、不可比或未覆盖。\\
+\Field{source_table_no} & 文本 & 条件必填 & 公报表号。\\
+\Field{source_page} & 文本 & 条件必填 & PDF 页码或工作表坐标。\\
+\Field{source_id} & 文本 & 是 & 来源登记外键；企业存在判断必须有值。\\
+\Field{download_date} & 日期 & 是 & 原始文件抓取日期。\\
+\Field{source_file_sha256} & 文本(64) & 是 & 原始文件校验值。\\
+\Field{quality_flag} & 枚举 & 是 & pass/warn/review/reject。\\
+\Field{run_id} & 文本 & 是 & 冻结运行号。\\
+\bottomrule
+\end{longtable}
+
+\begin{gatebox}[表级验收]
+主键 \Field{iso3+year} 重复率 0；静态必填字段完整率 100\%；每个“企业存在”判断均有来源；缺失投资值保持空；\Field{country_role=channel} 的记录在实体风险排名视图中为 0 行。
+\end{gatebox}
+
+\chapter{country\_monthly\_risk 字段字典}
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{4.0cm}p{2.3cm}p{2.3cm}p{2.7cm}p{7.2cm}}
+\caption{country\_monthly\_risk 最低字段合同}\label{tab:dict-monthly}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{iso3} & 文本 & 是 & -- & 与月末组成主键；仅冻结 40 国。\\
+\Field{month_end} & 日期 & 是 & 月末 & 2010-01-31 至 2025-12-31 的 192 月骨架。\\
+\Field{fx_avg_lcu_per_usd} & 小数 & 核心 & 本币/美元 & 官方月均汇率；值上升表示本币贬值。\\
+\Field{fx_eom_lcu_per_usd} & 小数 & 核心 & 本币/美元 & 官方月末汇率；组合月末估值。\\
+\Field{fx_original_value} & 小数 & 条件必填 & 原单位 & 转换前值，用于方向复核。\\
+\Field{fx_original_direction} & 枚举 & 条件必填 & -- & LCU/USD 或 USD/LCU；转换公式保留。\\
+\Field{fx_mom} & 小数 & 派生 & 比例 & \(FX_t/FX_{t-1}-1\)。\\
+\Field{fx_yoy} & 小数 & 派生 & 比例 & \(FX_t/FX_{t-12}-1\)，事件触发用。\\
+\Field{fx_vol_12m} & 小数 & 派生 & 年化 & 12 月对数变化标准差乘 \(\sqrt{12}\)。\\
+\Field{cpi_index} & 小数 & 核心 & 原指数 & 不强制统一基期；同比不受基期常数影响。\\
+\Field{cpi_base_info} & 文本 & 条件必填 & -- & 原基期与换基说明。\\
+\Field{inflation_yoy} & 小数 & 派生 & 比例 & \(CPI_t/CPI_{t-12}-1\)。\\
+\Field{fx_reserves_usd} & 小数 & 否 & 美元 & 官方储备总额；定义范围必须稳定。\\
+\Field{reserve_change_12m} & 小数 & 派生 & 比例 & 储备 12 个月变化率。\\
+\Field{imports_usd} & 小数 & 否 & 美元/月 & 进口覆盖公式分母，频率和季调状态记录。\\
+\Field{reserve_import_months} & 小数 & 否 & 月 & 优先官方值；计算值标记方法。\\
+\Field{parallel_fx_lcu_per_usd} & 小数 & 否 & 本币/美元 & 仅可信来源覆盖国家。\\
+\Field{parallel_premium} & 小数 & 派生 & 比例 & 平行/官方减 1；无可信平行价不计算。\\
+\Field{country_gpr} & 小数 & 否 & 指数 & 仅来源真实覆盖国家。\\
+\Field{risk_score_equal} & 小数 & 派生 & 0--100 & 等权可解释主模型。\\
+\Field{risk_score_entropy} & 小数 & 派生 & 0--100 & 熵权挑战模型。\\
+\Field{risk_score_pca} & 小数 & 派生 & 标准分 & PCA 挑战模型。\\
+\Field{model_sensitive_flag} & 布尔 & 派生 & -- & 排名或分组超过差异阈值时为 1。\\
+\Field{source_frequency} & 枚举 & 是 & -- & monthly/daily\_aggregated；不得填 annual。\\
+\Field{release_date} & 日期 & 时点必填 & -- & 该观测首次发布日。\\
+\Field{fetch_date} & 日期 & 是 & -- & 数据抓取日期。\\
+\Field{vintage_date} & 日期 & 是 & -- & 回测可获得版本日期。\\
+\Field{data_version} & 文本 & 是 & -- & API/文件版本。\\
+\Field{source_id} & 文本 & 正式值必填 & -- & 可按指标记录来源；必要时拆成长表。\\
+\Field{is_proxy} & 布尔 & 是 & -- & 代理序列标志。\\
+\Field{is_imputed} & 布尔 & 是 & -- & 核心主结果应为 0。\\
+\Field{vintage_reconstructed} & 布尔 & 是 & -- & 无历史版本时重建标志。\\
+\Field{quality_flag} & 枚举 & 是 & -- & pass/warn/review/reject。\\
+\Field{missing_reason} & 文本 & 条件必填 & -- & 空值原因。\\
+\Field{run_id} & 文本 & 是 & -- & 运行号。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\begin{gatebox}[表级验收]
+主键 \Field{iso3+month_end} 重复率 0；每国 192 行骨架；汇率与 CPI 各不少于 154 个真实月度非空值；年度值不得进入本表；核心序列危机期插值数为 0；极端值标记后保留。
+\end{gatebox}
+
+\chapter{country\_policy\_year 字段字典}
+
+\begin{longtable}{p{3.7cm}p{2.4cm}p{2.1cm}p{5.1cm}}
+\caption{country\_policy\_year 最低字段合同}\label{tab:dict-policy}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{iso3} & 文本 & 是 & 与年份、政策代码组成主键。\\
+\Field{year} & 整数 & 是 & 观察年份，不扩展成 12 行。\\
+\Field{policy_code} & 文本 & 是 & 统一政策指标代码。\\
+\Field{exchange_rate_regime} & 枚举/文本 & 否 & 汇率制度原分类和标准分类并存。\\
+\Field{current_account_restriction} & 枚举 & 否 & 经常项目兑换限制。\\
+\Field{capital_account_restriction} & 枚举 & 否 & 资本项目限制。\\
+\Field{fx_surrender_requirement} & 枚举 & 否 & 外汇收入上缴或结汇要求。\\
+\Field{profit_repatriation_restriction} & 枚举 & 否 & 利润与股息汇出限制。\\
+\Field{capital_repatriation_restriction} & 枚举 & 否 & 资本汇出限制。\\
+\Field{multiple_currency_practice} & 布尔/空 & 否 & 多重汇率制度/做法。\\
+\Field{chinn_ito_kaopen} & 小数 & 否 & Chinn--Ito 资本账户开放指数，版本必须登记。\\
+\Field{sanction_issuer} & 文本 & 否 & OFAC、欧盟、联合国或其他发布主体。\\
+\Field{sanction_target_scope} & 文本 & 否 & 国家、机构、个人、行业或交易类型。\\
+\Field{effective_start_date} & 日期 & 条件必填 & 用于与月度事实按期关联。\\
+\Field{effective_end_date} & 日期/空 & 否 & 未解除时为空，不填年末。\\
+\Field{raw_policy_text} & 长文本 & 人工编码必填 & 原文摘录，控制引用长度并保留定位。\\
+\Field{coded_value} & 文本/数值 & 条件必填 & 按编码手册生成。\\
+\Field{coding_rule_version} & 文本 & 条件必填 & 编码规则版本。\\
+\Field{source_frequency} & 枚举 & 是 & 固定为 annual 或 event。\\
+\Field{source_page} & 文本 & 条件必填 & PDF 页码/条款。\\
+\Field{reviewer_id} & 文本 & 人工编码必填 & 第二复核人。\\
+\Field{review_status} & 枚举 & 是 & pending/confirmed/conflict。\\
+\Field{source_id} & 文本 & 是 & 来源登记外键。\\
+\Field{vintage_date} & 日期 & 是 & 回测可用日期。\\
+\Field{quality_flag} & 枚举 & 是 & 争议未解不得为 pass。\\
+\Field{run_id} & 文本 & 是 & 运行号。\\
+\bottomrule
+\end{longtable}
+
+\begin{gatebox}[表级验收]
+主键 \Field{iso3+year+policy_code} 重复率 0；年度频率 100\%；每个人工编码都有原文、页码、规则版本与复核人；年中生效政策保留准确有效期；争议项不进入确定性事件结论。
+\end{gatebox}
+
+
+\part{项目口径、架构与执行控制}
+
+\chapter{项目目标与可交付边界}
+
+\section{正式业务问题}
+
+平台需要回答的不是“黄金价格会不会上涨”，而是：某一中国出海企业在某国经营、面临特定现金期限、合同币种和周期状态时，经营现金、流动性储备与战略储备应分别由哪些工具承担；配置中美元与黄金各自贡献了多少流动性、购买力保护和尾部风险缓冲；在托管、会计、汇兑与法律约束下，哪些路径可行、条件可行、禁止或必须人工复核。
+
+\section{三层储备与三种计价口径}
+
+\begin{longtable}{p{2.8cm}p{2.8cm}p{4.0cm}p{4.3cm}}
+\caption{三层储备的期限、目标与硬约束}\label{tab:three-layers}\\
+\toprule
+\textbf{层级} & \textbf{期限} & \textbf{主要目标} & \textbf{硬约束}\\
+\midrule
+经营现金 & 0—90 天 & 工资、采购、税费、利息和到期债务按时支付 & 按实际支付币种匹配；不得为追求收益牺牲可用性；黄金无强制底仓。\\
+流动性储备 & 3—12 个月 & 缓冲经营波动、汇出延迟和再融资间隔 & 计入交易时间、额度可撤销性、质押折扣与变现折价；授信不得等同现金。\\
+战略储备 & 1—10 年 & 跨周期购买力、信用与托管法域分散 & 只有期限真实、权属清晰、路径可复核时才测试 2.5\% 条件黄金底仓；必须保留 0\% 反事实。\\
+\bottomrule
+\end{longtable}
+
+所有结果同时输出人民币口径、经营国本币口径和合同货币口径。人民币口径服务集团合并价值判断；本币口径服务当地支付和购买力；合同货币口径服务进口采购、外币债务和跨境结算。任何只在单一计价口径占优的策略，都必须在另外两种口径下显示代价。
+
+\section{样本、时期与产出}
+
+\begin{longtable}{p{3.1cm}p{3.2cm}p{3.0cm}p{4.5cm}}
+\caption{六层研究对象及冻结条件}\label{tab:sample-contract}\\
+\toprule
+\textbf{对象} & \textbf{规模} & \textbf{时期} & \textbf{冻结条件}\\
+\midrule
+覆盖层 & 项目定义亚非拉 130 国 & 投资数据 2016—2024 年可得期 & ISO3 唯一；区域、货币、实体/通道标签完整；企业存在判断有来源。\\
+量化层 & 亚洲 15、非洲 14、拉美 11，共 40 国 & 2010-01 至 2025-12，共 192 个月 & 每国汇率与 CPI 各不少于 154 个月；每区至少 3 个低风险对照国。\\
+企业层 & 20 家中国企业 & 2018—2025 财年可得披露 & 全部有基础画像；同时满足两类披露条件者进入量化画像；最多 6 家深度模拟。\\
+事件层 & 不少于 20 个独立事件 & 由月度数据和权威资料确定 & 每区不少于 5 个；同国同类相邻触发合并；事件性质有 A 级或双 B 级证据。\\
+全球周期量化层 & 1 条全球主序列及按来源保留的市场指标 & 1971-01 至 2025-12，目标 660 个月 & 核心适用指标完整率不低于 90\%；状态使用当时可得数据；季度房地产保留真实观测日和发布日期。\\
+历史制度压力层 & 17 个宏观案例锚点及关联政策节点 & 1929—2025 年 & 事件、制度、可交易性和可比性逐项复核；1929—1970 年不拼接成统一月度面板。\\
+\bottomrule
+\end{longtable}
+
+\section{最终交付物}
+
+\begin{enumerate}
+  \item 原始、标准、权威、Smartbi 与 QA 五层数据目录及可完整重跑脚本；
+  \item 11 张权威逻辑表、六张维度表、一张企业—地区桥接表、数据字典、导入清单和模型映射；
+  \item 40 国风险面板、国别危机事件、1971—2025 全球周期、1929—2025 历史压力事件、资产收益与组合情景结果；
+  \item Smartbi 星座型增强数据模型 \Field{MDL_XH202612_COUNTRY_RESERVE_V41}、指标模型 \Field{IM_XH202612_COUNTRY_RESERVE_V41}、六页看板、AI 项目/知识库/智能体与 25 个 AIChat 测试卡；
+  \item XML 资源包、干净环境恢复证据、分析报告、三分钟以内视频、操作指南、来源说明和合规声明；
+  \item 每次运行的 \File{run_manifest.json}、质量报告、异常清单、行数与哈希清单。
+\end{enumerate}
+
+\chapter{全球经济周期与系统性危机双层架构}
+
+\section{为什么必须增加两层而不能只扩展国别事件}
+
+40 国面板从 2010 年开始，能够识别本币贬值、通胀、资本管制和汇出受限，却不能直接观察 1929 年大萧条、1985 年政策冲击、1990 年日本泡沫破裂、2000 年互联网泡沫和 2008 年系统性信用危机。若只把这些案例写入文字附录，平台无法回答“全球信用收缩如何传导到亚非拉国家”和“同一储备工具在不同周期中的边际贡献为何变化”。因此 V4.0 新增两个相互独立的数据合同：1971—2025 年的 \Field{global_cycle_month} 用于可量化、可按月关联的全球状态；1929—2025 年的 \Field{historical_crisis_event} 用于制度、政策、机制和压力测试。二者通过事件维度和历史类比 ID 连接，禁止把早期事件伪造成现代可比月度面板。
+
+\section{全球周期多标签与主状态优先级}
+
+每个月可以同时满足多个状态，\Field{cycle_labels} 保存全部标签；\Field{primary_cycle_state} 只为看板排序和解释选择一个主状态。主状态按“风险机制的系统性和约束强度”依次选择：信用与系统性金融危机、资产泡沫破裂、衰退或通缩、滞胀、激进紧缩、通胀过热、复苏再通胀、正常扩张。两个及以上危机类标签同时成立时，\Field{compound_global_crisis=1}。主状态不能覆盖或删除次级标签。
+
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{3.1cm}p{6.8cm}p{5.2cm}p{4.4cm}}
+\caption{全球周期状态触发合同}\label{tab:global-cycle-rules}\\
+\toprule
+\textbf{状态} & \textbf{候选触发} & \textbf{确认与退出} & \textbf{关键限制}\\
+\midrule
+\endfirsthead
+\toprule \textbf{状态} & \textbf{候选触发} & \textbf{确认与退出} & \textbf{关键限制}\\ \midrule
+\endhead
+信用与系统性金融危机 & 高收益信用利差 12 个月扩大不低于 300 个基点；或 NFCI 进入扩展窗口 90\% 分位；或存在 A 级银行体系事件。 & 利差、金融条件和银行事件分别保留触发；事件解除或指标连续 3 个月退出阈值后结束。 & NFCI 为可公开复核主指标；受许可限制的高收益利差只作挑战指标，未经许可不随提交包再分发原始值。\\
+资产泡沫破裂 & 股指相对历史峰值回撤不低于 20\%；或实际房地产价格峰谷跌幅不低于 15\%。 & 记录峰值日期、触发日、谷值和恢复日；股票与房地产标签可并存。 & 房地产按真实季度观测及已发布值关联，不复制成虚假月度观测。\\
+衰退 & Sahm 类失业规则达到 0.50 个百分点且工业生产同比为负；或 NBER 等权威机构确认衰退。 & 实时规则与事后权威日期同时保存；看板标识实时/追认。 & NBER 日期用于美国冲击源，不替代亚非拉本国增长数据。\\
+通缩 & CPI 同比与工业生产同比同时连续 3 个月为负。 & 连续 3 个月任一指标退出负值后解除。 & 缺失值不能当作 0，也不能靠插值凑满连续月。\\
+滞胀 & CPI 同比不低于 5\%，且工业生产同比连续 3 个月为负。 & 两项触发值和连续窗口均可追溯。 & 只在指标实际覆盖期判断。\\
+激进紧缩 & 政策利率 12 个月上升不低于 300 个基点；或实际利率上升不低于 200 个基点。 & 记录起点、终点、变化和数据可得日。 & 实际利率公式和通胀口径必须固定。\\
+通胀过热 & CPI 持续显著高于目标且工业生产/就业仍扩张；具体分位阈值在 G0 配置冻结。 & 等权规则为主，挑战模型不得静默改变阈值。 & 不是危机的同义词。\\
+复苏再通胀 & 衰退/危机退出后，工业生产回升且通胀由低位转正；确认窗口在 G0 固定。 & 标记前一主状态和首次确认月。 & 不使用未来峰谷回填实时起点。\\
+正常扩张 & 上述状态均未触发且增长、就业和金融条件处于正常区间。 & 每月重算。 & 是剩余状态，不代表无国别风险。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\section{17 个历史锚点、政策节点与事件簇}
+
+现有宏观危机篇 17 份档案全部进入 \Field{historical_crisis_event}，不再只是附录案例。每项必须记录事件类型、起止期、制度环境、政策响应、资本管制、黄金合法持有状态、可交易工具、美元和黄金的可比口径、对中国出海企业的传导机制、证据等级和现代回测许可。
+
+\begin{longtable}{p{1.0cm}p{3.3cm}p{3.1cm}p{6.0cm}}
+\caption{历史危机核心锚点与预期分类}\label{tab:historical-anchors}\\
+\toprule
+\textbf{序} & \textbf{事件} & \textbf{核心分类} & \textbf{V4.1 中的作用与限制}\\
+\midrule
+\endfirsthead
+\toprule \textbf{序} & \textbf{事件} & \textbf{核心分类} & \textbf{V4.1 中的作用与限制}\\ \midrule
+\endhead
+1 & 1929—1933 大萧条 & 信用、系统性危机与通缩 & 历史压力层；记录金本位、银行体系和工具不可比性，不套用现代 ETF。\\
+2 & 1933 黄金政策变化 & 政策与制度节点 & 记录合法持有、兑换和征收制度变化；不单独当市场危机。\\
+3 & 1971 布雷顿森林体系解体 & 国际货币制度变化 & 全球月度层起点附近的制度分界；解释自由金价与汇率制度变化。\\
+4 & 1973—1980 滞胀 & 滞胀 & 检验通胀、增长、实际利率、美元和黄金协同。\\
+5 & 1987 股灾 & 资产价格冲击 & 检验短时股灾与系统性信用危机的区别。\\
+6 & 1997 亚洲金融危机 & 区域货币与信用危机 & 连接全球状态、区域冲击和国别事件。\\
+7 & 2000 互联网泡沫 & 资产泡沫破裂 & 与 2008 信用危机对照，不只按股指回撤分类。\\
+8 & 2008 全球金融危机 & 信用与系统性金融危机 & 检验流动性挤兑、美元需求、黄金阶段性同跌和恢复。\\
+9 & 1990 日本资产泡沫破裂 & 资产泡沫破裂与长期停滞 & 与 1985 政策节点及“失去的三十年”形成同一事件簇。\\
+10 & 1994 墨西哥危机 & 货币与债务危机 & 连接国别贬值、美元融资和资本流动。\\
+11 & 2013 黄金暴跌 & 黄金反例 & 强制保留黄金不占优窗口。\\
+12 & 1998 俄罗斯金融危机 & 债务、货币与信用危机 & 区分历史违约机制和当代制裁机制。\\
+13 & 2001 阿根廷债务危机 & 债务、银行和资本管制 & 检验资金可用性和汇率制度断裂。\\
+14 & 2010 欧洲主权债务危机 & 主权与银行反馈 & 作为全球融资条件冲击源，不进入亚非拉排名。\\
+15 & 2020 疫情市场崩盘 & 复合外生冲击 & 标记股市、信用、增长、美元流动性与政策反应多标签。\\
+16 & 2022 激进加息周期 & 激进紧缩 & 检验美元短债收益上升、本币压力和黄金阶段差异。\\
+17 & 1980—2000 黄金熊市 & 黄金长期反例 & 防止用单一起止期预设长期黄金必胜。\\
+\bottomrule
+\end{longtable}
+
+\begin{warningbox}[《广场协议》与日本事件簇]
+1985 年《广场协议》只登记为政策冲击节点，连接日元升值、随后货币宽松、资产价格上升、1990 年前后的泡沫破裂、资产负债表调整和长期停滞。它不被错误标记为一次经济危机，也不与“日本泡沫破裂”和“失去的三十年”重复计数。日本银行的历史回顾用于核验这一时序和政策环境\cite{bojplaza2021,bojplazabubble2011}；因果表述限于多阶段传导，不宣称单一协议机械导致全部后果。
+\end{warningbox}
+
+\section{传导、资产边界与历史类比}
+
+全球冲击通过四条主通道连接亚非拉：汇率与美元融资成本、贸易和大宗商品需求、跨境资本流动与再融资、银行和支付体系可用性。\Field{country_event.shock_scope} 标记全球/区域/国家/企业范围，\Field{global_event_id} 连接全球事件，\Field{transmission_channel} 记录传导机制。国别数据始终保留自身观测，不能用全球平均替代。
+
+股票、房地产、信用利差、原油与 VIX 只用于识别周期、解释损失和构造对照，不得产生企业应急储备权重。企业储备组合仍限定为经营本币、人民币短期资产、美元现金、美元短债、黄金、套保、自然对冲与授信；其中自然对冲和授信是压力情景工具，不伪造成市场收益序列。美元与黄金继续执行完整组合、去黄金、去美元资产三组对称实验，并按周期状态分别报告边际贡献。
+
+历史相似度只能用于解释和压力测试：先在共同可比字段上计算距离，再显示 \Field{comparability_grade}、制度差异和缺失维度。低可比事件不得输出“当前将重复历史”的确定性结论，1929—1970 年不得生成现代配置回测。
+
+\chapter{团队组织、目录和门槛}
+
+\section{3—4 人职责划分}
+
+\begin{longtable}{p{2.0cm}p{3.7cm}p{4.0cm}p{3.7cm}}
+\caption{角色与不可合并的复核边界}\label{tab:roles}\\
+\toprule
+\textbf{角色} & \textbf{主责} & \textbf{主要交付} & \textbf{复核边界}\\
+\midrule
+A 项目与平台负责人 & 口径、门槛、Smartbi 架构、提交管理 & 冻结配置、阶段决议、数据模型、XML 与提交包 & 不单独批准自己修改的关键数据口径。\\
+B 数据负责人 & 130 国、三大区域工作包、来源与标准层 & 国家主数据、宏观与政策数据、源登记、标准层 & 不单独验收自己生产的风险指标和完整率。\\
+C 模型与验证负责人 & 风险评分、事件识别、周期与组合实验 & 事件表、收益表、情景结果、模型 QA & 不得绕过 B 的数据问题；关键结果由 A 或 D 复算。\\
+D 企业、证据与交付负责人 & 企业年报、45 案例、AIChat、报告、合规、视频与 QA & 企业表、证据矩阵、测试卡、文档和录屏 & 不得把地区披露推断为国家披露；人工录入须与 B 双人复核。\\
+\bottomrule
+\end{longtable}
+
+若只有 3 人，A 兼任 D；B 与 C 不合并，以保持数据生产者和模型/质量验证者分离。七条工作流——项目平台、亚洲、非洲、拉美、企业证据、模型、AI 与交付——由上述成员兼任，并不虚构七人团队。
+
+\section{执行目录合同}
+
+\begin{verbatim}
+data/
+  raw/          原始JSON、CSV、XLSX、PDF，禁止覆盖
+  staging/      国家名、日期、频率和单位标准化结果
+  curated/      十一张权威逻辑表
+  smartbi/      Smartbi专用XLSX和维度视图
+  qa/           质量报告、异常清单、行数和哈希
+config/         130国、20企业、指标和来源配置
+scripts/        Python采集、处理、回测和导出脚本
+templates/      企业年报、政策事件和案例人工录入模板
+\end{verbatim}
+
+\begin{warningbox}[目录规则]
+\File{data/raw/} 中的文件以“来源ID/抓取日期/原始文件名”分层保存，下载后只读，不得覆盖；任何修订都写入新抓取日期目录。\File{staging/} 可重建；\File{curated/} 只接收通过主键、频率、单位和来源检查的记录；\File{smartbi/} 是面向导入的派生层，不是权威源；\File{qa/} 保留每次运行证据。
+\end{warningbox}
+
+\section{阶段门槛}
+
+\begin{longtable}{p{1.8cm}p{3.3cm}p{5.0cm}p{3.4cm}}
+\caption{执行门槛与失败处置}\label{tab:gates}\\
+\toprule
+\textbf{门槛} & \textbf{发生点} & \textbf{通过条件} & \textbf{失败处置}\\
+\midrule
+G0 口径门 & D0 后 & 配置、主键、时期、频率、阈值、角色签字冻结 & 不进入采集；先解决同名异义、混频和截止日。\\
+G1 来源门 & D2 后 & 核心数据源可合法获取；URL、许可、版本、哈希可记录 & 启用登记过的替代源；无法替代则缩小字段承诺。\\
+G2 样本门 & D5 后 & 130 国合格；40 国满足 15/14/11、80\% 与对照国规则 & 重新按规则从候选池选择，不手工偏向支持黄金的国家。\\
+G3 数据门 & D7 后 & 十一表主键、频率、单位、来源、完整率达到阈值；全球周期核心指标适用期完整率不低于 90\% & 问题行隔离到 QA，不进入正式模型；补采后重跑。\\
+G4 模型门 & D9 后 & 国别事件、全球多标签、历史可比性、收益分解、无未来信息、成本和对称实验可复算 & 删除超出证据的普遍性结论，不降低阈值或伪造历史月度序列。\\
+P0 平台门 & D10 前 & 三表小样、类型、连接、KPI、折线、筛选、三问和 XML 导出完成 & 不批量导入；先修复平台路径或记录许可/恢复阻塞。\\
+G5 产品门 & D11 后 & 六页联动、25 问、性能与 Python 对账通过 & 修正模型/指标后重新导入，禁止在看板手工改数。\\
+G6 提交门 & D12 后 & XML 恢复、PDF、视频、数据字典、声明和哈希齐全 & 未恢复即不得把 XML 标记为可交付。\\
+\bottomrule
+\end{longtable}
+
+\chapter{主办方 Smartbi 实例实测与最终平台架构}
+
+\section{实测范围与证据边界}
+
+本章来自 2026 年 8 月 16 日对主办方测试入口的认证后只读核验。核验只读取版本、许可、功能权限、资源树和公开演示目录；没有上传文件、创建模型、修改资源、删除对象或执行迁移。登录凭据属于运行秘密，不进入计划书、截图文件名、测试卡、日志、XML 或提交包。官方产品页面用于解释通用能力，实例盘点用于确定本项目可见菜单，二者不能替代实际搭建验收\cite{smartbiversion,smartbiprepare,smartbiaichat,smartbiinstance}。
+
+\begin{longtable}{p{3.4cm}p{6.8cm}p{3.8cm}}
+\caption{主办方实例核验结果与可承诺边界}\label{tab:smartbi-instance-audit}\\
+\toprule
+\textbf{核验对象} & \textbf{2026-08-16 观察结果} & \textbf{计划书处理}\\
+\midrule
+产品包 & Smartbi Insight Edition；版本 \Field{11.0.110415.26324}；补丁标记 \Field{Hotfix_SmartbiV11_20260802}；构建时间 \Field{20260806154820} & 以该实例为开发基线；恢复目标必须记录并比较版本、补丁和许可。\\
+资源与许可 & 账号可见增强数据集、导入表/Excel、自助 ETL、指标模型、可视化看板、AIChat、项目、知识库、智能体、资源导出/迁移和备份相关能力 & 主路径可以设计到这些对象；“菜单可见”不等于数据已上传或 XML 已恢复。\\
+工作区结构 & “我的工作区”已经存在项目、技能、智能体、自定义工具、知识库、指标模型、数据连接、自助 ETL、业务主题、数据集和分析报表等目录，并有既存资源 & 这是共享且非空环境；所有新对象必须使用独立前缀，禁止移动、覆盖、改名或删除既存对象。\\
+模型能力 & 公开功能演示目录中可见星型、雪花和星座模型示例；增强数据模型可以承载多事实共享维度 & 本项目采用单一星座型增强数据模型；事实表之间禁止直接多对多连接。\\
+运行资源快照 & 服务快照显示 4 个处理器、约 11.2 GiB 内存 & 仅用于制定小样和性能测试，不能据此承诺 10 秒响应；正式验收以 P50/P95 实测为准。\\
+尚未执行 & Excel 上传、字段类型识别、模型建立、页面渲染、AIChat 数值问答、XML 导出和隔离恢复 & 列为 P0 平台小样门及 D10—D12 强制任务；通过前不得写“平台已完成”。\\
+\bottomrule
+\end{longtable}
+
+\section{冻结后的资源架构与命名}
+
+共享账号内任何通用名称都可能与他人资源冲突。所有项目对象统一前缀 \Field{XH202612_V41_}，显示名可以使用中文，但资源内部名和导入文件名必须保持唯一。A 在创建前登记“对象名—创建人—修改人—依赖—导出批次”，同一对象同一时段只允许一名写入者。
+
+\begin{longtable}{p{3.4cm}p{5.4cm}p{5.2cm}}
+\caption{Smartbi V4.1 权威资源命名}\label{tab:smartbi-resource-names}\\
+\toprule
+\textbf{对象} & \textbf{固定名称} & \textbf{作用与依赖}\\
+\midrule
+隔离项目/目录 & \Field{XH202612_V41} & 只承载本项目新资源；不接管账号中任何既存对象。\\
+增强数据模型 & \Field{MDL_XH202612_COUNTRY_RESERVE_V41} & 星座模型；共享国家、月、年、企业、资产、事件六类维度。\\
+指标模型 & \Field{IM_XH202612_COUNTRY_RESERVE_V41} & 固化指标代码、中文名、公式、默认聚合、计价口径、时间粒度和来源。\\
+六页看板 & \Field{DB01_XH202612_RISK_OVERVIEW_V41} 至 \Field{DB06_XH202612_GLOBAL_CYCLE_CRISIS_V41} & 依次对应风险全景、国别事件、企业暴露、周期实验室、决策证据、全球周期与历史危机。\\
+AI 项目 & \Field{PRJ_XH202612_COUNTRY_RESERVE_V41} & 绑定指标模型、知识库和测试问题，不直接面向未治理的原始事实表。\\
+知识库 & \Field{KB_XH202612_COUNTRY_RESERVE_V41} & 收纳术语、数据字典、危机规则、来源等级、约束路由、45 案例和历史制度说明。\\
+智能体 & \Field{AGT_XH202612_COUNTRY_RESERVE_V41} & 只回答经授权粒度的问题；输出指标口径、截止期、来源和限制。\\
+恢复包 & \Field{PKG_XH202612_COUNTRY_RESERVE_V41} & XML、依赖清单、数据包、映射表、版本说明、哈希和恢复记录的统一批次。\\
+\bottomrule
+\end{longtable}
+
+\section{输出格式、模型关系与调用合同}
+
+Python 输出分为 18 个可导入数据工作簿和 3 个控制工作簿。18 个数据工作簿由 11 张权威逻辑表、六张维度表和一张企业—地区桥表构成；\Field{dim_year.xlsx} 专门连接年度投资、政策和企业披露，禁止把年度值复制成 12 个月。三个控制工作簿是 \textsf{数据字典}\File{_V4.1.xlsx}、\File{Smartbi}\textsf{导入行数与哈希清单}\File{.xlsx} 和 \File{Smartbi}\textsf{模型映射}\File{_V4.1.xlsx}。
+
+\File{Smartbi}\textsf{模型映射}\File{_V4.1.xlsx} 至少包含 \Field{import_order}、\Field{file_name}、\Field{sheet_name}、\Field{smartbi_resource_name}、\Field{grain}、\Field{primary_key}、\Field{field_name}、\Field{dimension_measure_role}、\Field{data_type}、\Field{relationship}、\Field{dashboard_page}、\Field{ai_metric_code}、\Field{refresh_mode}、\Field{source_id} 和 \Field{run_id}。团队不得只凭口头约定在平台中猜字段角色。
+
+星座模型的连接纪律如下：\Field{dim_country} 连接国家事实；\Field{dim_date} 只连接真实月度事实和全球周期月表；\Field{dim_year} 连接年度投资、政策和企业披露；\Field{dim_company}、\Field{dim_asset}、\Field{dim_event} 分别连接对应事实，且 \Field{dim_event} 统一承载全球、区域、国家、企业和政策节点；\Field{bridge_company_geography} 只表达企业公开披露到国家或地区的真实粒度。11 张事实/逻辑表之间不直接连接，区域披露不得展开为具体国家。\Field{source_registry} 作为追溯参考对象，由 \Field{source_id} 从指标、图表和 AI 答案一跳访问。
+
+AIChat 的业务调用固定经过指标模型，不允许让智能体自由拼接原始事实表。每个答案至少返回：指标名和代码、筛选范围、时间粒度、计价口径、数值或“无法回答”、数据截止期、\Field{source_id}、质量/模拟标记和约束提示。知识库只解释口径、证据和边界，不把知识库文字当作可聚合数值。企业只披露地区时，智能体必须回答“无法定位到具体国家”，不得依据子公司新闻或常识补推。
+
+\section{P0 平台小样门}
+
+在完整 D10 导入前，A 必须取得项目组对写入范围的确认，然后只在 \Field{XH202612_V41} 隔离目录创建一个可删除的小样批次。小样包含 \Field{dim_country}、\Field{dim_date}、\Field{country_monthly_risk} 和 \Field{global_cycle_month} 四张脱敏示例表，覆盖至少 3 国、24 个月及全球周期的汇率/CPI/来源/质量/状态字段。依次验证 Excel 类型识别、维度连接、一个 KPI、两张折线图、一个国家筛选器、一个周期筛选器、五条 AI 问题、XML 导出和可用目标空间中的恢复。
+
+\begin{gatebox}[P0 通过条件]
+导入前后行数与唯一主键一致；月份识别为日期而不是文本；国家筛选不会导致事实行膨胀；KPI 和折线图与 Python 小样误差不超过 1\%；三条 AI 回答均给出口径、截止期和来源；XML 依赖清单完整。若试用账号无法提供隔离恢复目标，必须保留导出证据并把“恢复未验收”作为 G6 阻塞项，不得在同一非空目录反复覆盖来冒充干净恢复。
+\end{gatebox}
+
+\section{共享账号治理}
+
+\begin{enumerate}
+  \item 账号凭据只在获授权的密码管理渠道传递，不写入 LaTeX、Python、XLSX、截图、视频旁白或群聊；测试结束不在浏览器导出密码。
+  \item A 维护 \File{data/qa/smartbi_resource_lock.xlsx}，字段包含资源名、资源类型、当前写入人、开始时间、预计释放时间、依赖和状态；评审者默认只读。
+  \item 禁止使用 \Field{test}、\Field{ceshi}、\Field{1}、\Field{dashboard} 等通用名；禁止移动、删除、改名或覆盖登录前已存在的任何资源。
+  \item 每次导入使用 \Field{run_id} 和“替换同运行分区”策略；创建新对象前查重，导出后保存对象清单、依赖清单和 SHA-256。
+  \item 若发现他人正在编辑相同依赖，暂停该对象写入并在锁表记录冲突；不得以抢占、复制未知资源或放宽权限解决。
+\end{enumerate}
+
+\part{D0—D12 端到端步骤卡}
+
+\chapter{D0—D3：口径、主数据与覆盖层}
+
+\section{D0 研究口径冻结}
+\StepTitle{D0}{研究口径冻结}{负责人：A；复核：B、C、D}
+\CardRow{输入}{赛题原文、V4.1 当前状态、45 份案例与其中 17 份宏观案例、调研归档 V1.0 的 \File{AI_CONTEXT.json}、\CFile{研究资料总清单.jsonl}、\CFile{缺失受限与待办清单.csv}、本轮 \File{SOURCE_REUSE_CROSSWALK_V4.1.csv}、商务部公报结构、国别与全球周期候选指标及 Smartbi 试用环境约束。}
+\CardRow{操作}{先确认“归档完成但正式数据工程未完成”的状态，再建立 \File{config/project_scope_v41.yaml}、\File{config/indicator_catalog_v41.xlsx}、\File{config/company_master_v41.xlsx}、\File{config/global_cycle_rules_v41.yaml}、\File{config/historical_event_master_v41.xlsx} 和 \File{config/source_priority_v41.xlsx}。逐项冻结研究对象、1971/2010/1929 三类日期边界、币种方向、原始频率、主键、国别事件阈值、全球周期多标签与优先级、三层储备、三种计价、历史可比性、许可规则、禁止使用未来信息规则和 QA 阈值。为正式执行新建运行号，不覆盖 \Field{20260816_research_archive_v1}；所有变更通过变更单记录提出人、理由、影响表、批准人和生效运行号。}
+\CardRow{输出路径}{\File{config/} 下六份配置；\File{data/qa/D0_scope_signoff_20260816.xlsx}；\File{data/qa/archive_to_source_registry_mapping_signoff.xlsx}；范围冻结纪要。}
+\CardRow{验收}{130、40、20、192 个月、1971—2025、1929—2025、17 个历史锚点、11 张权威表、六页和 25 问等口径在全部配置中一致；V4.1 当前状态与机器台账一致；汇率方向明确为本币/美元；年度/季度指标不得冒充月度观测；每个字段有类型、频率、单位、许可和责任人；新运行号和归档快照号相互区分；四名角色或实际三名成员完成签字。}
+\CardRow{失败处理}{若赛题原文与计划存在冲突，以赛题原文为准并记录冲突；若数据源不能支持某字段频率，将该字段改为补充或待验证，不得用复制值伪造频率。}
+\CardRow{下一步接收人}{B 接收国家、指标与来源配置；C 接收事件、周期和模型阈值；D 接收企业与案例模板。}
+
+\begin{gatebox}[D0 出门条件]
+只有 \Field{scope_status=frozen} 且配置哈希写入首个 \File{run_manifest.json}，D1—D4 才能启动。冻结指一次提交口径稳定，并不禁止通过正式变更单修订；任何修订必须触发受影响步骤重跑。
+\end{gatebox}
+
+\newpage
+\section{D1 建立 130 国主数据}
+\StepTitle{D1}{建立 130 国主数据}{负责人：B；复核：D}
+\CardRow{输入}{项目定义的亚洲 45、非洲 51、拉丁美洲 34 国名单；ISO 3166-1；国家货币、区域和次区域权威表；资金通道判定规则。}
+\CardRow{操作}{运行 \File{scripts/01_build_country_master.py}。将中文名、英文名、常见别名映射到 ISO3；为每国指定区域、次区域、本币名称与 ISO 4217 代码；设置实体经营国/资金通道标签；维护货币改制表，记录生效日、旧币、新币和换算因子。无法唯一映射的别名进入人工异常表，不自动猜测。}
+\CardRow{输出路径}{\File{data/staging/country_master.csv}、\File{data/qa/unmapped_country_names.xlsx}、\File{config/currency_reform_table.xlsx}。}
+\CardRow{验收}{恰好 130 个唯一 ISO3；ISO3、中文名、英文名、区域、次区域、货币、通道标签完整率 100\%；亚洲/非洲/拉美数量分别为 45/51/34；无中国内地；通道标签有规则依据。}
+\CardRow{失败处理}{数量不足或重复时停止 D3；别名冲突由 B 与 D 核对原始表头和国家历史名称；货币代码变更不得直接覆盖旧记录。}
+\CardRow{下一步接收人}{D2 来源登记与 D3 投资覆盖表共同使用国家主表。}
+
+\begin{longtable}{p{3.2cm}p{3.1cm}p{3.0cm}p{4.0cm}}
+\caption{D1 最小检查清单}\label{tab:d1-check}\\
+\toprule
+\textbf{检查} & \textbf{计算} & \textbf{阈值} & \textbf{失败输出}\\
+\midrule
+ISO3 唯一性 & 唯一 ISO3 数/总行数 & 130/130 & \File{duplicate_iso3.xlsx}\\
+区域配额 & 按区域计数 & 45/51/34 & \File{region_count_mismatch.xlsx}\\
+必填完整率 & 非空行/130 & 100\% & \File{country_master_nulls.xlsx}\\
+通道互斥 & 实体与通道标签逻辑校验 & 0 个冲突 & \File{channel_tag_conflict.xlsx}\\
+币制有效期 & 同国时间段是否重叠 & 0 个未解释重叠 & \File{currency_period_conflict.xlsx}\\
+\bottomrule
+\end{longtable}
+
+\newpage
+\section{D2 登记来源并下载原始文件}
+\StepTitle{D2}{来源登记与原始层入库}{负责人：B；证据复核：D}
+\CardRow{输入}{\File{config/source_priority_v41.xlsx}、归档 V1.0 的总清单、许可矩阵、缺口表、原件与资料卡，以及需要补采的机构数据页面/API。\par V4.1 复用入口：\File{SOURCE_REUSE_CROSSWALK_V4.1.csv}。}
+\CardRow{操作}{第一步不是下载，而是导入 688 项归档交叉表。按 \Field{archive_asset_id}、规范化 URL、SHA-256、\Field{download_status}、\Field{redistribution_scope} 和替代关系生成正式 \Field{source_id} 种子；\Field{ALREADY_LOCAL_VERIFIED} 与 \Field{DOWNLOADED_VERIFIED} 优先复用，重复内容只指向规范资产，元数据/受限资料执行许可路由，11 项失效或失败来源使用登记替代资产。只有正式字段仍缺来源时才新增下载。新增来源先分配 \Field{source_id}，后保存到 \File{data/raw/<source_id>/<fetch_date>/} 并计算 SHA-256；API 同时保留请求参数、状态码、分页和原始响应。}
+\CardRow{输出路径}{\File{data/staging/archive_source_crosswalk.parquet}；\File{data/curated/source_registry.xlsx} 初版；\File{data/raw/} 新增原始文件；\File{data/qa/archive_reuse_audit.xlsx}；\File{data/qa/download_log_<run_id>.xlsx}。}
+\CardRow{验收}{688 个 \Field{archive_asset_id} 均有唯一映射或明确的排除/人工动作；现有原件不得重复下载；每个正式原始文件有 source ID、归档资产 ID（如适用）、抓取时间、大小和 SHA-256；许可状态不是未知；11 项失效/失败替代路由完整；新增 API 页数与响应行数一致；所有失败请求有错误类型与重试次数。}
+\CardRow{失败处理}{映射冲突先按 SHA-256 再按规范化 URL 人工裁定，不覆盖归档；HTTP 限流使用指数退避并保留日志；访问受限时不绕过限制，转登记替代公开源；需人工接受条款的来源由 A 决定是否纳入，未获授权不得进入正式成果。}
+\CardRow{下一步接收人}{D3、D4、D6 只读取已登记和校验的原始文件。}
+
+\begin{longtable}{p{3.0cm}p{3.2cm}p{3.0cm}p{3.9cm}}
+\caption{核心来源、用途与首选格式}\label{tab:source-map}\\
+\toprule
+\textbf{来源} & \textbf{主要数据} & \textbf{首选格式} & \textbf{执行限制}\\
+\midrule
+商务部 ODI 公报 & 对外投资流量、存量、境外企业覆盖 & 官方 XLSX/PDF & 关键数字记录表号与页码；不把通道存量当实体经营暴露。\\
+世界银行 GEM & 月度汇率、CPI、储备等高频宏观序列 & CSV/API & 不假设所有国家所有指标均为月度；以实际元数据为准。\\
+世界银行 WDI & 年度复核、贸易、外债和宏观补充 & API/CSV & 年度字段保持年度；不可冒充月度。\\
+IMF IFS/WEO & 汇率、通胀、外部收支补充 & 官方下载/API & WEO 为年度；记录版本和发布日期。\\
+IMF AREAER & 汇兑与资本约束原文及分类 & PDF/XLSX & 人工编码必须保留原文片段、页码与复核状态。\\
+Chinn--Ito & 资本账户开放指数 & CSV/XLSX & 当前公开覆盖期按实际版本记录；年度有效期关联。\\
+国家央行/统计局 & 缺口国家的官方月度序列 & CSV、XLSX、PDF & 记录本地单位、季调状态、修订日期。\\
+Banco de España GPR & 有覆盖国家的国别月度地缘风险 & CSV/XLSX & 仅对来源真实覆盖国家使用，不填区域平均。\\
+FRED/美国财政部 & 3 个月美元短债代理、美元利率 & CSV/API & 选定 total-return 或票息近似口径并记录。\\
+NBER/FRED 劳动力数据 & 美国衰退日期与 Sahm 类实时失业指标 & CSV/HTML & 权威衰退日期与实时规则分列；不把事后日期伪装为实时信号\cite{nberdating,nberchronology,sahmfred}。\\
+芝加哥联储 NFCI & 周度金融条件与历史修订值 & CSV/XLSX & 聚合为月度时保留周值和 vintage；正值表示较历史平均更紧\cite{nfciofficial,nfcifred}。\\
+BIS 住宅房地产价格 & 名义/实际房价指数 & CSV/API & 保留真实季度观测日和发布日期，只做截至月关联\cite{bisproperty,bispropertydoc}。\\
+ICE/FRED 高收益 OAS & 信用利差挑战指标 & API/许可数据 & 受许可与可回溯期限制；未经授权不随成果再分发原始序列，只使用 NFCI 主指标或登记的合法替代源\cite{fredhyoas}。\\
+上海黄金交易所/国际金价源 & 人民币金价、美元金价 & XLSX/CSV & 记录交易时区、单位、纯度和月度聚合规则。\\
+企业年报/交易所 & 收入、汇兑、外币资产负债、套保与子公司 & PDF/XHTML & 关键数字双人复核并定位页码。\\
+OFAC、欧盟、联合国及当地监管 & 制裁、冻结与重大限制事件 & HTML/PDF & 只用于合规和事件标记，不提供规避路径。\\
+\bottomrule
+\end{longtable}
+
+\newpage
+\section{D3 构建 130 国投资覆盖表}
+\StepTitle{D3}{构建 country\_exposure}{负责人：B；复核：A}
+\CardRow{输入}{D1 国家主表；D2 商务部原始公报、表格及国家存在性证据；WDI 最新可得年度预筛字段。}
+\CardRow{操作}{运行 \File{scripts/03_import_mofcom.py}。按表号与年份抽取 2016—2024 可获得的流量、存量和企业覆盖状态；保持原始单位并另建统一美元值；投资数值缺失保持空，不填 0。将企业存在判断关联 source ID、表号、页码；为资金通道国家设置 \Field{is_financial_channel=1}。追加最新可得年度汇率变化、通胀、储备和历史危机标志，只作为 40 国预筛字段。}
+\CardRow{输出路径}{\File{data/staging/country_exposure_standardized.parquet}、\File{data/curated/country_exposure.xlsx}、\File{data/qa/country_exposure_qa.xlsx}。}
+\CardRow{验收}{国家—年份主键重复率 0；130 国均至少有国家静态记录；企业存在状态有来源覆盖率 100\%；投资缺失与真实零值可区分；通道国家不进入实体风险排名视图。}
+\CardRow{失败处理}{PDF 表格抽取发生错列时使用人工录入模板并双人复核；同一国家同一年多个口径不得覆盖，增加 \Field{measure_scope}；公报只披露区域总量时不得按国家分摊。}
+\CardRow{下一步接收人}{D4 使用暴露字段构建候选池；D5 使用投资暴露百分位排序。}
+
+\begin{gatebox}[D3 交付判定]
+覆盖层的“130 国”是主数据和版图完整，不是承诺每国 2016—2024 每年都有完整企业数量或投资存量。Smartbi 第一页应将“没有公开数值”显示为缺失/未披露，不能显示为零投资。
+\end{gatebox}
+
+\chapter{D4—D7：量化样本、专题数据与质量控制}
+
+\section{D4 采集 40 国候选宏观数据}
+\StepTitle{D4}{候选国月度宏观采集}{负责人：B；脚本复核：C}
+\CardRow{输入}{D1 国家主数据、D2 来源登记、D3 投资覆盖表、世界银行 GEM/WDI、IMF IFS、国家央行与统计局来源。}
+\CardRow{操作}{运行 \File{scripts/02_fetch_worldbank.py}，按候选国和指标配置批量请求 2010-01 至 2025-12。汇率采集月均值和月末值，方向统一为“1 美元兑换多少本币”；CPI 保存原始指数和基期；外汇储备保存美元值与原始单位；进口覆盖月数优先保存官方序列，缺失时用明确公式计算。每条记录保留原始频率、发布日期、抓取日期、版本和 source ID。}
+\CardRow{输出路径}{\File{data/raw/WB_GEM/}、\File{data/raw/WB_WDI/}；\par\File{data/staging/country_monthly_candidate.parquet}；\par\File{data/qa/D4_coverage_matrix.xlsx}。}
+\CardRow{验收}{每国应有 192 个国家—月份骨架；汇率和 CPI 的非空数、首末月、最长连续缺口、来源切换次数均已计算；汇率方向抽样与原始值互证；CPI 基期变化被记录而非制造跳点。}
+\CardRow{失败处理}{主源不足时按 IMF IFS、国家央行/统计局顺序补采；两个来源重叠时不按“更好看”选择，而按预设优先级和修订质量决定；核心危机期缺失不线性插值。}
+\CardRow{下一步接收人}{D5 使用完整率与预审风险筛选 40 国；未入选国家的候选数据继续保留在原始和标准层。}
+
+\begin{longtable}{p{3.2cm}p{2.6cm}p{2.5cm}p{2.4cm}p{3.1cm}}
+\caption{40 国月度候选核心指标合同}\label{tab:monthly-core}\\
+\toprule
+\textbf{指标} & \textbf{原始频率} & \textbf{统一单位} & \textbf{主来源} & \textbf{用途}\\
+\midrule
+官方汇率月均值 & 月度/日度聚合 & 本币/美元 & GEM、IFS、央行 & 价值换算、同比贬值、波动率。\\
+官方汇率月末值 & 月度/日度聚合 & 本币/美元 & GEM、IFS、央行 & 月末组合估值与事件窗口。\\
+CPI 指数 & 月度 & 来源原指数 & GEM、统计局、IFS & 计算同比通胀与实际购买力。\\
+外汇储备 & 月度 & 美元 & GEM、IFS、央行 & 储备下降和支付缓冲。\\
+进口额/覆盖月数 & 月度或可解释聚合 & 月数 & IMF/央行/海关 & 外汇储备对进口的覆盖能力。\\
+平行汇率 & 日/月 & 本币/美元 & 经核验官方/研究源 & 官方—平行价差，仅限可靠国家。\\
+国别 GPR & 月度 & 指数 & 有真实国别覆盖的 GPR 源 & 地缘风险变化，不填区域平均。\\
+来源发布日期 & 事件时间 & 日期 & 各来源元数据 & 防止回测使用未来修订。\\
+\bottomrule
+\end{longtable}
+
+\newpage
+\section{D5 筛选并冻结 40 国}
+\StepTitle{D5}{规则化筛选与样本冻结}{负责人：B；独立验收：C；批准：A}
+\CardRow{输入}{D3 投资覆盖表、D4 完整率矩阵、历史危机预筛指标、实体/通道标签、区域配额。}
+\CardRow{操作}{运行 \File{scripts/08_select_40_countries.py}。先排除通道国家和无中国投资/企业存在证据的国家；要求汇率、CPI 各至少 154/192 非空。每区先按低风险、数据完整和投资存在规则保留 3 个对照国；其余按“投资暴露百分位×预审风险百分位”降序选择。存量缺失而流量存在时使用流量百分位；两者均缺失只能作为有明确经营证据的对照候选。并列依次以完整率、投资暴露、ISO3 排序。}
+\CardRow{输出路径}{\File{config/selected_40_countries_v41.csv}、\File{data/qa/country_selection_scorecard.xlsx}、\File{data/qa/excluded_country_reasons.xlsx}。}
+\CardRow{验收}{40 个唯一 ISO3；亚洲 15、非洲 14、拉美 11；每区至少 3 个低风险对照国；每国汇率与 CPI 各不少于 154 个月；所有入选/排除原因可复算；通道国家数量为 0。}
+\CardRow{失败处理}{某区合格国家不足时，G2 判定不通过；只能补采公开数据或调整研究承诺，不能降低 80\% 阈值，也不能把年度数据复制为月度。若对照国不足，重新定义透明的低风险分位规则并全体重算。}
+\CardRow{下一步接收人}{D6 对冻结 40 国采集政策、事件和资产数据；C 不得在建模阶段事后更换国家。}
+
+\begin{gatebox}[G2 样本门]
+\Pass：入选清单、选择分数、完整率、区域配额、对照标志和配置哈希全部冻结。\Fail：计划书仍可保留方法，但正式报告必须删除“40 国量化层已完成”和跨区域普遍性结论。
+\end{gatebox}
+
+\newpage
+\section{D6A 采集年度政策与资本约束}
+\StepTitle{D6A}{构建 country\_policy\_year}{负责人：B；文本复核：D}
+\CardRow{输入}{冻结 40 国、IMF AREAER、Chinn--Ito、官方汇兑法规、公开制裁与重大限制资料。}
+\CardRow{操作}{运行 \File{scripts/04_import_imf_policy.py}。保存汇率制度、经常项目兑换限制、资本项目限制、外汇收入上缴/结汇要求、利润股息和资本汇出限制、多重汇率制度、资本账户开放指数、制裁发布主体与适用对象。对文本指标保留原文摘录、页码、编码规则、编码值、有效起止日期和人工复核状态。}
+\CardRow{输出路径}{\File{templates/policy_event_manual_entry_v41.xlsx}、\File{data/staging/country_policy_coded.parquet}、\File{data/curated/country_policy_year.xlsx}。}
+\CardRow{验收}{国家—年份—政策指标主键重复率 0；所有编码可回到原文和页码；\par\Field{source_frequency=annual}；年度值不复制为 12 条“月度观测”；冲突编码全部列入人工复核。}
+\CardRow{失败处理}{没有公开原文的指标保持缺失；媒体转述只能列为 C/D 级线索；政策生效日在年中时使用有效起止日期关联，不以全年静态值覆盖事件前月份。}
+\CardRow{下一步接收人}{D8 事件识别和 D11 国别下钻按有效期关联年度政策。}
+
+\section{D6B 采集企业披露}
+\StepTitle{D6B}{构建 company\_overseas\_exposure}{负责人：D；数字复核：B}
+\CardRow{输入}{20 家企业配置、2018—2025 可得年报、交易所公告、财务报表附注和境外子公司清单。}
+\CardRow{操作}{运行 \File{scripts/05_import_company_disclosures.py} 导入人工模板。抽取总收入、海外/地区收入、汇兑损益、外币货币性资产负债、外币债务、套保名义本金、子公司、现金、短期投资和授信。每个关键数字由录入人与复核人分别定位年报页码，记录报告币种、单位、合并范围、披露地区粒度和质量等级。}
+\CardRow{输出路径}{\File{templates/company_disclosure_v41.xlsx}、\File{data/staging/company_disclosure_checked.parquet}、\File{data/curated/company_overseas_exposure.xlsx}。}
+\CardRow{验收}{20 家均有基础画像；进入量化画像者必须同时具有海外/地区收入，以及汇兑损益或外汇风险说明；关键数值双人复核率 100\%；只有地区披露时 \Field{geography_level=region}，不得生成国家行。}
+\CardRow{失败处理}{同一报告口径不同的数字并列保留并解释；只有图片表格时人工录入，不以 OCR 结果直接入权威层；无法取得 2025 年正式年报则保持为空并标注最新完整财年。}
+\CardRow{下一步接收人}{D9 按企业披露完整度选择最多 6 家深度情景；D11 第三页只展示真实披露粒度。}
+
+\begin{longtable}{p{3.4cm}p{3.8cm}p{3.0cm}p{3.0cm}}
+\caption{20 家中国企业基础样本}\label{tab:companies}\\
+\toprule
+\textbf{经营模式} & \textbf{企业} & \textbf{基础画像} & \textbf{量化资格}\\
+\midrule
+ICT 与电子 & 华为、联想、中兴通讯、传音控股 & 年报/报告、海外业务、风险说明 & 按双条件验收，不预设入选。\\
+家电与消费制造 & 海尔智家、美的集团、海信家电、TCL 科技 & 海外/地区收入与汇兑披露 & 按双条件验收，不由品牌市场推断国家。\\
+汽车与新能源 & 比亚迪、上汽集团、吉利汽车、长城汽车 & 海外销量/收入、子公司与外汇风险 & 地区或国家粒度照实保留。\\
+工程机械与装备 & 三一重工、徐工机械 & 海外收入、外币风险、套保 & 关键衍生品口径记录名义本金与公允价值区别。\\
+基建与轨道交通 & 中国中车、中国交建 & 区域业务、合同币种与债务 & 不把项目所在区域自动拆到国家。\\
+资源与能源 & 紫金矿业、洛阳钼业、中国海油、中国石油 & 境外资产、商品与币种风险 & 深度情景需额外记录商品价格暴露。\\
+\bottomrule
+\end{longtable}
+
+最多六家深度企业以可复算分数选择：披露完整度 40\%、海外敞口 35\%、经营模式代表性 25\%。经营模式代表性不是主观“知名度”，而是未被已选企业覆盖的经营模式、现金周期和币种结构获得更高分。
+
+\newpage
+\section{D6C 采集资产、成本、平行汇率与事件证据}
+\StepTitle{D6C}{资产与事件专题采集}{负责人：B、D；方法复核：C}
+\CardRow{输入}{40 国清单、美元金价、上海金、美元兑人民币、3 个月美债代理、人民币短期资产、可信平行汇率、交易和托管成本，以及归档 V1.0 的 \File{case_index.csv}、\CFile{引用与结论关系.csv}、45 份原始案例档案和来源资料卡。}
+\CardRow{操作}{资产序列由 B 维护；事件和案例证据由 D 维护。先把 45 行 \Field{SOURCE_LINKS_INDEXED} 记录导入模板，再逐案补充支持/反驳/限定/冲突、关键数字、页码、证据等级和复核人；不得把“来源链接存在”当作“结论已核验”。重复观察通过 \Field{event_cluster_id} 归并。对每种资产记录市场、币种、单位、交易日历、月度聚合、总回报/价格回报、税费是否计入；平行汇率只用于可核验国家并与官方汇率分列。}
+\CardRow{输出路径}{\File{templates/case_evidence_v41.xlsx}、\File{templates/event_evidence_v41.xlsx}、\File{data/staging/asset_prices_standardized.parquet}、\File{data/curated/case_evidence.xlsx}。}
+\CardRow{验收}{核心美元金价、美元短债和美元兑人民币月度序列完整率不低于 95\%；45 份案例全部入表；每个案例有归档 case ID、source ID、证据角色、页码和复核状态；\Field{SOURCE_LINKS_INDEXED} 与 \Field{VERIFIED} 严格分开；同一事件簇不重复计数；成本来源、适用资产、计价单位和有效期明确。}
+\CardRow{失败处理}{缺少统一月度回报的自然对冲和授信只进入压力情景；不可验证的成本只作为模拟参数并做敏感性区间；平行汇率来源不足则不计算价差触发。}
+\CardRow{下一步接收人}{D7 清洗全部专题数据，D8 构建事件，D9 构建资产收益。}
+
+\newpage
+\section{D6D 采集全球周期与市场指标}
+\StepTitle{D6D}{构建 global\_cycle\_month 原始与标准层}{负责人：B；规则复核：C}
+\CardRow{输入}{D2 已登记来源；1971—2025 工业生产、失业、CPI、政策利率、实际利率、10 年—3 月期限利差、美元指数、NFCI、许可允许的信用利差、股指、VIX、原油、黄金、全球贸易与 BIS 房价。}
+\CardRow{操作}{运行 \File{scripts/06a_build_global_cycle.py}。日度/周度市场指标按预注册规则聚合至月末或月均并保留原日期；月度宏观值保留首次发布日期和 vintage；实际利率公式写入字段级元数据；股指回撤使用当时历史峰值；NFCI 的 90\% 分位使用扩展窗口计算。季度房价只记录真实 \Field{property_observation_date}、\Field{property_release_date} 和截至当月最新已发布值，设置 \Field{property_asof_carried=1}，不生成伪造季度内观测。}
+\CardRow{输出路径}{\File{data/raw/global_cycle/}；\File{data/staging/global_cycle_standardized.parquet}；\File{data/qa/global_cycle_coverage.xlsx}；\File{data/qa/global_cycle_license_audit.xlsx}。}
+\CardRow{验收}{目标 660 个全球月份骨架；核心适用指标完整率不低于 90\%；不适用时期为空而非 0；频率、观测日、发布日期、vintage、source ID 和许可状态完整；受限制序列未写入可再分发工作簿。}
+\CardRow{失败处理}{许可不允许再分发时保留来源元数据和派生触发布尔值，正式包使用 NFCI 或其他合法替代源；某指标起始较晚时标记 \Field{not_applicable} 并缩小该规则适用期，不回填零；无法恢复历史 vintage 时设置 \Field{vintage_reconstructed=1}。}
+\CardRow{下一步接收人}{D7 检查频率与许可；D8B 识别全球周期；D11 第六页消费已通过数据。}
+
+\section{D6E 建立历史危机、政策节点与制度压力表}
+\StepTitle{D6E}{构建 historical\_crisis\_event}{负责人：D；机制复核：C；批准：A}
+\CardRow{输入}{归档 V1.0 中宏观危机篇 17 份来源链接已索引档案、\File{case_index.csv}、引用关系、资料卡与原件，NBER/央行/监管/学术资料、制度与黄金政策资料，以及《广场协议》和日本长期停滞的权威回顾。}
+\CardRow{操作}{把 17 份档案作为历史事件种子，不把归档状态写成正式表已完成。运行 \File{scripts/09a_build_historical_crisis_events.py} 导入双人复核模板；逐项回到 A/B 级原件和页码，区分 crisis、policy node、regime change 和 counterexample；记录起止日、事件簇、主/次状态、货币制度、资本管制、黄金合法持有、市场可交易性、可用资产、政策响应、传导渠道、证据等级、页码、可比性等级与现代回测许可。1985 年《广场协议》只作为日本事件簇的政策节点，不单独计为危机。}
+\CardRow{输出路径}{\File{templates/historical_crisis_event_v41.xlsx}；\File{data/curated/historical_crisis_event.xlsx}；\File{data/qa/historical_event_evidence_audit.xlsx}；\File{data/qa/historical_cluster_dedup.xlsx}。}
+\CardRow{验收}{17 份宏观档案全部由“种子”升级为唯一事件或节点记录并完成来源、关键数字和页码复核；《广场协议》、日本泡沫和长期停滞同簇且不重复计数；1929—1970 年的 \Field{modern_backtest_allowed=0}；每个历史资产比较都有制度和可交易性限定。}
+\CardRow{失败处理}{只有 C/D 级线索时保留待核验，不进入核心结论；无法取得可比价格时只做机制压力，不生成收益；历史时间边界冲突并列保存来源并标记 \Field{review_status=conflict}。}
+\CardRow{下一步接收人}{D7 执行证据与主键 QA；D8B 建立历史类比；D11 第六页和 AI-22/23/25 使用。}
+
+\newpage
+\section{D7 标准化、清洗和质量检查}
+\StepTitle{D7}{标准化与十一表质量门}{负责人：B；独立验证：C；人工字段复核：D}
+\CardRow{输入}{D3—D6 全部 staging 数据、国家别名、币制改制、单位转换、日期和来源配置，以及归档资产到正式来源的交叉表、许可路由和重验证标志。}
+\CardRow{操作}{运行 \File{scripts/07_standardize_validate.py}。映射 ISO3；汇率统一本币/美元；日期统一月末；区分空、N/A、字符串零和真实零；年度与月度分表；极端值只标记不删除；币制改制使用转换表；企业和政策人工字段验证页码与复核人；所有正式数值检查 source ID。凡来源来自归档，还必须保留 \Field{archive_asset_id}、\Field{archive_run_id}、\Field{reuse_status}、\Field{redistribution_scope} 和 \Field{revalidation_required}；未完成字段/结论复核的资料不得进入正式模型。}
+\CardRow{输出路径}{\File{data/curated/} 11 张权威表的待建模版；\File{data/qa/D7_quality_summary.xlsx}、\File{data/qa/D7_rejected_rows.xlsx}、\File{data/qa/D7_frequency_audit.xlsx}、\File{data/qa/D7_license_distribution_audit.xlsx}。}
+\CardRow{验收}{11 表主键重复率 0、主键空值率 0；正式数值 source ID 覆盖率 100\%；归档来源交叉字段覆盖率 100\%（非归档新增来源标记不适用）；40 国汇率和 CPI 各满足 154/192；全球周期核心适用指标完整率不低于 90\%；频率审计无年度/季度伪月度；1929—1970 未生成统一月表；货币改制机械跳点不被当危机；受限许可原始序列不进入提交包；代理、模拟、插值和真实记录可分别筛选。}
+\CardRow{失败处理}{不合格行进入拒绝表并携带错误代码，不静默丢弃；核心字段不插值；补采后从 D2 或相应导入步骤重跑；不得在 curated 文件中手工修数。}
+\CardRow{下一步接收人}{C 仅接收 G3 通过的权威表；A 接收质量摘要并签署是否进入 D8。}
+
+\begin{longtable}{p{3.3cm}p{3.2cm}p{3.0cm}p{3.8cm}}
+\caption{D7 清洗规则与验证证据}\label{tab:clean-rules}\\
+\toprule
+\textbf{规则} & \textbf{实施方式} & \textbf{验收阈值} & \textbf{证据文件}\\
+\midrule
+国家映射 & 原名、别名、ISO3 映射表 & 正式层未映射数 0 & \File{unmapped_country_names.xlsx}\\
+汇率方向 & 按元数据转换为本币/美元 & 抽样方向错误 0 & \File{fx_direction_check.xlsx}\\
+日期月末化 & 日/月源映射到月末；保留原日期 & 主键月末比例 100\% & \File{date_alignment_check.xlsx}\\
+年度混频 & 年度表用有效期关联 & 伪造月度记录 0 & \File{frequency_audit.xlsx}\\
+缺失与零值 & 解析规则和原字符串并存 & 无 N/A 被转为 0 & \File{null_zero_audit.xlsx}\\
+危机期缺失 & 主结果不线性插值 & 核心主结果插值数 0 & \File{imputation_audit.xlsx}\\
+极端值 & IQR/稳健 z 分数仅标记 & 自动删除数 0 & \File{outlier_review.xlsx}\\
+币制改制 & 生效日前后统一连续口径 & 未解释机械跳点 0 & \File{currency_reform_check.xlsx}\\
+企业数字 & 双人页码复核 & 关键数字复核率 100\% & \File{company_double_check.xlsx}\\
+数据时点 & 发布日不晚于决策日 & 未来信息使用数 0 & \File{vintage_audit.xlsx}\\
+\bottomrule
+\end{longtable}
+
+\chapter{D8—D9：事件、周期、收益和组合情景}
+
+\section{D8 识别危机事件}
+\StepTitle{D8}{危机事件与事件簇}{负责人：C；证据确认：D}
+\CardRow{输入}{G3 通过的月度风险表、年度政策表、平行汇率、冻结/银行中断资料与案例证据。}
+\CardRow{操作}{运行 \File{scripts/09_detect_crisis_events.py}。任一规则触发即生成候选：12 个月本币贬值不低于 20\%；CPI 同比不低于 15\%；官方与可信平行汇率差不低于 20\%；资本管制明显收紧；资金冻结、汇出限制或银行系统中断。同国同类触发连续出现或间隔不超过 2 个月时合并；连续 3 个月退出所有数值阈值或正式限制解除后结束。建立前 12 月、事件期和后 24 月窗口，并写入 \Field{shock_scope}、\Field{global_event_id} 与 \Field{transmission_channel}，把共同全球冲击与各国实际表现分开。}
+\CardRow{输出路径}{\File{data/curated/country_event.xlsx}、\File{data/qa/event_trigger_trace.xlsx}、\File{data/qa/event_merge_log.xlsx}。}
+\CardRow{验收}{不少于 20 个独立事件、每区不少于 5 个；每个事件记录触发值、证据等级、确认日期、决策时可知状态和事件簇；定量触发的事件性质由 A 级证据或两项独立 B 级证据确认；同一全球冲击不被误报为几十个独立机制。}
+\CardRow{失败处理}{不足 20 个时验收不通过，不降低阈值、不拆分事件；报告保留合格事件并删除跨国普遍性结论。证据只到 C/D 级的候选保留在待确认表，不进入正式事件计数。}
+\CardRow{下一步接收人}{D9 以事件窗口运行资产和组合实验；D11 第二页展示触发链与证据。}
+
+\subsection{风险指标公式}
+
+以 \(FX_t\) 表示月末“1 美元兑换多少本币”的汇率，以 \(CPI_t\) 表示 CPI 指数，则：
+
+\begin{equation}
+r_{\mathrm{FX},t}=\frac{FX_t}{FX_{t-12}}-1,
+\end{equation}
+\begin{equation}
+\pi_t=\frac{CPI_t}{CPI_{t-12}}-1.
+\end{equation}
+
+12 个月汇率波动率使用月度对数变化的滚动标准差并年化：
+
+\begin{equation}
+\sigma_{\mathrm{FX},t}^{(12)}=\sqrt{12}\,\mathrm{sd}\!\left(\Delta\ln FX_{t-11},\ldots,\Delta\ln FX_t\right).
+\end{equation}
+
+风险评分以等权模型作为可解释主模型；熵权和 PCA 为挑战模型。三个模型的方向、样本期和缺失处理保持一致。若国家排名差超过预设分位或高低风险分类改变，则输出“模型敏感”，不得用单一分数给确定性建议。
+
+\newpage
+\section{D8B 全球周期多标签、主状态与历史类比}
+\StepTitle{D8B}{全球周期识别与制度可比性}{负责人：C；解释复核：A、D}
+\CardRow{输入}{G3 通过的 \Field{global_cycle_month}、\Field{historical_crisis_event}、国别事件、实时/追认衰退日期、规则配置和数据 vintage。}
+\CardRow{操作}{运行 \File{scripts/09b_classify_global_cycle.py}。按表\ref{tab:global-cycle-rules}在扩展窗口内计算触发，不使用未来峰谷或全样本分位；保存全部标签，并按固定优先级生成主状态。两类以上危机状态同时成立时设置 \Field{compound_global_crisis=1}。随后运行 \File{scripts/09c_match_historical_analogues.py}，只在同口径可比指标上计算距离，输出历史类比、相似维度、缺失维度和可比性等级，不把相似度解释为因果或必然重演。规则模型为主，聚类或隐马尔可夫模型仅作挑战。}
+\CardRow{输出路径}{\File{data/curated/global_cycle_month.xlsx}；\File{data/qa/global_cycle_trigger_trace.xlsx}；\File{data/qa/global_cycle_expected_periods.xlsx}；\File{data/qa/historical_analogue_audit.xlsx}；\File{data/qa/cycle_disagreement.xlsx}。}
+\CardRow{验收}{1973—1980 命中滞胀，1990 日本和 2000 互联网泡沫命中资产泡沫破裂，2008 命中信用与系统性危机，2020 命中复合外生冲击，2022 命中激进紧缩；主状态符合优先级，全部次级标签仍保留；状态发布日期不晚于决策日；历史低可比事件不生成现代可执行回测。}
+\CardRow{失败处理}{挑战模型不稳定时仅保留规则主模型；核心历史阶段未命中时先检查来源、频率、vintage 和实现，不为追求命中事后移动阈值。若规则与权威事件日期存在差异，并列报告实时信号和追认日期。}
+\CardRow{下一步接收人}{D9 将全球状态、复合危机和历史类比作为情景维度；D11 第六页和 AI-21—25 使用。}
+
+\newpage
+\section{D9 构建资产收益}
+\StepTitle{D9A}{构建 asset\_monthly\_return}{负责人：C；数据复核：B}
+\CardRow{输入}{标准化资产价格、汇率、利率、交易日历、成本参数和三种计价口径。}
+\CardRow{操作}{运行 \File{scripts/06_build_asset_returns.py}。建立经营国本币现金、人民币短期资产、美元现金、3 个月美国短债代理、美元黄金、人民币/上海金、当地本币黄金、远期/NDF 代理的月度收益。明确价格回报与总回报；利息按可获得日复利或月度近似；每种资产转换为人民币、本币和合同货币。}
+\CardRow{输出路径}{\File{data/curated/asset_monthly_return.xlsx}；\par\File{data/qa/asset_return_reconciliation.xlsx}。}
+\CardRow{验收}{核心美元黄金、美元短债与美元兑人民币序列完整率不低于 95\%；同资产跨计价口径可按汇率复算；成本前后回报分列；自然对冲与授信没有伪造市场收益行。}
+\CardRow{失败处理}{无法获得可信总回报时使用明确代理并设置 \Field{is_proxy=1}；不同时区的月末价格按预设对齐规则处理；无法对齐的月份进入异常表。}
+\CardRow{下一步接收人}{D9B 组合情景读取权威收益表。}
+
+\subsection{黄金收益的三项分解}
+
+若美元黄金收益为 \(r_{G,USD}\)，美元兑本币收益为 \(r_{USD,L}\)，则：
+
+\begin{equation}
+1+r_{G,L}=(1+r_{G,USD})(1+r_{USD,L}),
+\end{equation}
+
+\begin{equation}
+r_{G,L}=r_{G,USD}+r_{USD,L}+r_{G,USD}r_{USD,L}.
+\end{equation}
+
+数据表必须分别保存美元金价贡献、汇率贡献与交互项；三项之和与本币黄金回报的误差不超过 \(10^{-10}\)。同一汇率贡献不得同时计入黄金价格和现金汇兑，防止重复计算。
+
+\newpage
+\section{D9B 运行企业与组合情景}
+\StepTitle{D9B}{多期限、多口径、对称剔除实验}{负责人：C；复算：A 或 D}
+\CardRow{输入}{企业画像、国家与国别事件、全球周期状态、复合危机、历史类比、资产收益、成本、三层储备、托管与约束状态。}
+\CardRow{操作}{运行 \File{scripts/10_run_portfolio_scenarios.py}。对 90 天、1 年、5 年和 10 年期限构造本币、人民币短期资产、美元、黄金、套保组合。战略层测试 0\%、2.5\%、5\%、7.5\%、10\%、15\%、20\% 黄金网格；2.5\% 仅在期限、托管、权属和路径资格通过时作为条件底仓。每个完整组合运行“去黄金”和“去美元资产”对称实验，并按全球主状态、全部标签、复合危机及高可比历史类比分组报告。股票、房地产、信用利差、原油和 VIX 只作状态与对照，写入其储备权重前执行强制零值断言。}
+\CardRow{输出路径}{\File{data/curated/portfolio_scenario.xlsx}、\File{data/qa/portfolio_recalculation.xlsx}、\File{data/qa/no_lookahead_audit.xlsx}。}
+\CardRow{验收}{权重和为 1，误差不超过 \(10^{-8}\)；成本非负；无未来信息；90 天覆盖率、人民币购买力、最大回撤、恢复时间、95\% CVaR、合法可动用比例和综合成本均可重算；股票、房地产、信用利差、原油和 VIX 的配置权重为 0；至少保留 3 个黄金不占优、3 个美元短债不占优，以及 2 个二者均不能完全覆盖经营损失的历史阶段。}
+\CardRow{失败处理}{找不到足够反例时不人为挑选日期，改为报告“在本样本与成本设定下未满足反例覆盖门槛”；约束禁止的资产权重强制为 0，并记录约束原因，但继续输出风险诊断与可行替代类别。}
+\CardRow{下一步接收人}{D10 导出 Smartbi 包；D11 第四、第五和第六页消费组合、约束与周期结果。}
+
+\begin{longtable}{p{3.2cm}p{3.1cm}p{3.2cm}p{3.7cm}}
+\caption{组合指标的业务定义与验收}\label{tab:portfolio-metrics}\\
+\toprule
+\textbf{指标} & \textbf{定义} & \textbf{作用} & \textbf{验收}\\
+\midrule
+90 天流动性覆盖率 & 90 天内合法可动用资产/预计净现金流出 & 检查经营现金和流动层是否足够 & 分子只计入变现期和折价合格资产。\\
+人民币购买力保全率 & 期末人民币实际价值/期初人民币实际价值 & 集团合并价值与通胀调整 & 汇率、收益和 CPI 口径可复算。\\
+最大回撤 & 净值从峰值到谷值最大跌幅 & 衡量路径风险 & 成本后净值计算，时间点可定位。\\
+恢复时间 & 回撤后重回前高所需月份 & 区分短跌与长期损失 & 未恢复时报告右删失，不填 0。\\
+95\% CVaR & 最差 5\% 月度/窗口损失均值 & 尾部风险比较 & 样本数和窗口定义一致。\\
+合法可动用比例 & 约束后可变现、质押或支付的资产/名义资产 & 识别“有价值但不可用” & 禁止与人工复核状态分别展示。\\
+综合持有成本 & 交易、价差、保管、保险、套保、机会成本之和 & 防止只比较毛收益 & 成本非负、单位和期限一致。\\
+边际贡献 & 完整组合减去对称剔除组合 & 衡量美元或黄金在同约束下的贡献 & 去黄金、去美元规则对称且可复算。\\
+\bottomrule
+\end{longtable}
+
+\chapter{D10—D12：Smartbi、恢复和提交}
+
+\section{D10 导出 Smartbi 数据包}
+\StepTitle{D10}{XLSX、维度视图与导入清单}{负责人：B；模型复核：A}
+\CardRow{输入}{G4 通过的 11 张权威表、国家/月/年/企业/资产/事件维度规则、企业—地区关系，以及表\ref{tab:smartbi-resource-names}的资源命名合同。}
+\CardRow{操作}{运行 \File{scripts/11_export_smartbi_workbooks.py}。11 张权威表各导出一个 XLSX；另导出 \Field{dim_country}、\Field{dim_date}、\Field{dim_year}、\Field{dim_company}、\Field{dim_asset}、\Field{dim_event} 和 \Field{bridge_company_geography}。\Field{dim_date} 同时连接国别月表、资产月表与全球周期月表，\Field{dim_year} 管理年度投资、政策与披露，\Field{dim_event} 统一标识全球/区域/国家/企业/政策事件。每个数据文件只含名为 \Field{data} 的工作表；第一行使用英文蛇形字段名；日期、整数、小数和布尔值保存为真实 Excel 类型；中文释义只放在数据字典。}
+\CardRow{输出路径}{18 个 \File{data/smartbi/*.xlsx} 数据文件，以及 \File{data/smartbi/}\textsf{数据字典}\File{_V4.1.xlsx}、\File{data/smartbi/Smartbi}\textsf{导入行数与哈希清单}\File{.xlsx}、\File{data/smartbi/Smartbi}\textsf{模型映射}\File{_V4.1.xlsx}。}
+\CardRow{验收}{18 个数据文件和 3 个控制文件齐全；数据工作表名均为 data；字段顺序与数据字典、字段角色与模型映射一致；导出前后行数一致；文件 SHA-256、行列数、主键重复数、空主键数写入清单；受限许可原始序列没有进入可分发工作簿。}
+\CardRow{失败处理}{超过试用环境单文件限制时按国家或年份分片，但保持同一表结构和分片清单；不得删列或抽样来掩盖限制。Excel 日期越界、科学计数或前导零问题必须在 Python 导出层修复。}
+\CardRow{下一步接收人}{A 先执行 P0 平台小样门，再按固定顺序导入 Smartbi；D 使用数据字典和模型映射准备中文指标口径。}
+
+\begin{longtable}{p{4.2cm}p{3.3cm}p{3.2cm}p{2.6cm}}
+\caption{Smartbi 导入包文件顺序}\label{tab:import-package}\\
+\toprule
+\textbf{文件/视图} & \textbf{粒度} & \textbf{主键} & \textbf{导入顺序}\\
+\midrule
+\Field{dim_country.xlsx} & 国家 & \Field{iso3} & 1\\
+\Field{dim_date.xlsx} & 月 & \Field{date_key} & 2\\
+\Field{dim_year.xlsx} & 年 & \Field{year_key} & 3\\
+\Field{dim_company.xlsx} & 企业 & \Field{company_id} & 4\\
+\Field{dim_asset.xlsx} & 资产 & \Field{asset_id} & 5\\
+\Field{dim_event.xlsx} & 事件 & \Field{event_id} & 6\\
+\Field{country_exposure.xlsx} & 国家—年份 & \Field{iso3+year} & 7\\
+\Field{country_monthly_risk.xlsx} & 国家—月份 & \Field{iso3+month_end} & 8\\
+\Field{country_policy_year.xlsx} & 国家—年份—政策 & \Field{iso3+year+policy_code} & 9\\
+\Field{country_event.xlsx} & 事件 & \Field{event_id} & 10\\
+\Field{global_cycle_month.xlsx} & 全球范围—月份 & \Field{scope_id+month_end} & 11\\
+\Field{historical_crisis_event.xlsx} & 历史事件/节点 & \Field{historical_event_id} & 12\\
+\Field{company_overseas_exposure.xlsx} & 企业—财年—披露地区 & \Field{company_id+fiscal_year+geography_id} & 13\\
+\Field{bridge_company_geography.xlsx} & 企业披露—地理对象 & \Field{bridge_id} & 14\\
+\Field{asset_monthly_return.xlsx} & 国家—月份—资产—口径 & \Field{iso3+month_end+asset_id+currency_basis} & 15\\
+\Field{portfolio_scenario.xlsx} & 情景—策略—运行版 & \Field{scenario_id+strategy_id+run_id} & 16\\
+\Field{case_evidence.xlsx} & 案例证据 & \Field{case_id} & 17\\
+\Field{source_registry.xlsx} & 来源 & \Field{source_id} & 18\\
+\bottomrule
+\end{longtable}
+
+\newpage
+\section{D11 建模、六页看板和 AIChat}
+\StepTitle{D11}{Smartbi 业务模型与交互产品}{负责人：A；数据对账：B；问题验收：D}
+\CardRow{输入}{D10 的 18 个数据工作簿、3 个控制工作簿、指标公式、六页线框、25 个 AI 问题测试卡，以及 P0 小样通过证据。}
+\CardRow{操作}{在 \Field{XH202612_V41} 隔离目录中，按映射表通过“导入表/Excel”建立数据对象；规则式导入不可用时才回退到自助 ETL 的 Excel/导入文件节点，业务主题只作为兼容回退。建立星座型增强数据模型 \Field{MDL_XH202612_COUNTRY_RESERVE_V41}，由六张维度共享连接 11 张事实/逻辑表；事实表之间禁止直接多对多。随后建立 \Field{IM_XH202612_COUNTRY_RESERVE_V41}，固化指标代码、中文别名、默认聚合、计价口径和时间粒度；再创建六页看板、AI 项目、知识库和智能体。}
+\CardRow{输出路径}{表\ref{tab:smartbi-resource-names}所列平台资源；\File{data/qa/smartbi_import_reconciliation.xlsx}；\File{data/qa/smartbi_resource_lock.xlsx}；六页看板；AIChat 测试录屏与结果表。}
+\CardRow{验收}{导入前后逐表行数一致；主外键覆盖率达表级阈值且无意外膨胀；六页筛选、联动、下钻可用；典型操作不超过 10 秒；Python 与 Smartbi 关键指标误差不超过 1\%；25 问数值题正确率不低于 90\%、关键误差不超过 1\%，历史制度问题必须显示可比性限制。}
+\CardRow{失败处理}{类型错、重复键或指标不一致返回 Python 层修复并重新导出，不在看板手工改数；性能不足时先减少高基数展示列、增加预聚合视图和索引，再评估是否分区；试用版功能不足须记录版本证据与回退实现。}
+\CardRow{下一步接收人}{D12 接收通过 G5 的模型、看板、问数结果和导入脚本/截图。}
+
+\subsection{星座型增强数据模型连接纪律}
+
+\begin{longtable}{p{3.8cm}p{3.2cm}p{3.3cm}p{3.1cm}}
+\caption{维度—事实连接规则}\label{tab:model-joins}\\
+\toprule
+\textbf{维度} & \textbf{事实表} & \textbf{连接键} & \textbf{质量阈值}\\
+\midrule
+国家维度 & 覆盖、月度风险、政策、事件、资产、情景 & iso3 & 事实外键覆盖率 100\%。\\
+日期维度 & 月度风险、全球周期、资产、事件窗口、情景 & \Field{month_end}、\Field{date_key} & 月度事实覆盖率 100\%。\\
+年度维度 & 投资覆盖、年度政策、企业披露 & \Field{year}、\Field{fiscal_year}、\Field{year_key} & 年度事实覆盖率 100\%；不得复制为月度行。\\
+企业维度 & 企业披露、情景、桥表 & company\_id & 已披露企业覆盖率 100\%。\\
+资产维度 & 资产收益、情景策略明细 & asset\_id & 资产代码覆盖率 100\%。\\
+事件维度 & 全球、区域、国家、企业、政策事件、情景与案例关联 & event\_id & 正式事件覆盖率 100\%；事件类型不混淆。\\
+地理桥表 & 企业披露与国家/区域维度 & geography\_id, level & 不允许地区行扩展为国家行。\\
+\bottomrule
+\end{longtable}
+
+\newpage
+\section{D12 XML 恢复、报告、视频和提交}
+\StepTitle{D12}{资源恢复与提交闭环}{负责人：A、D；互审：B、C}
+\CardRow{输入}{G5 通过的 Smartbi 模型和看板、AIChat 录屏、权威数据包、QA 报告、来源与合规说明，以及 V4.1 当前状态、调研共享归档、来源复用交叉表和执行运行清单。}
+\CardRow{操作}{导出项目目录、星座型增强数据模型、指标模型、六页看板、AI 项目、知识库、智能体及其数据对象的 XML/迁移资源与依赖清单；在未加载本项目资源的隔离目标恢复，记录环境版本、导入步骤、耗时、警告和截图；执行 12 个关键看板路径与 25 个 AI 问题的恢复后抽验。完成分析报告、三分钟以内视频、操作指南、示例数据、字段字典、来源说明、合规声明和最终哈希清单。最终交接包同时包含最新 \Field{AI_CONTEXT}、项目状态台账、调研归档共享内容及归档资产到正式来源的映射，但不包含 private-only 原件、凭据或 Cookie。运行 \File{scripts/12_generate_qa_report.py} 汇总全链路验收。}
+\CardRow{输出路径}{\File{submission/Smartbi_XML/}、\File{submission/report/}、\File{submission/video/}、\File{submission/data/}、\File{submission/docs/}、\File{submission/handoff/}、\File{submission/final_manifest.xlsx}。}
+\CardRow{验收}{XML 干净恢复成功；六页和关键指标可用；视频不超过 3 分钟；报告中的关键数字全部可追溯；当前状态、正式运行号和归档快照号可区分；共享包无 private-only 原件、临时锁文件、登录凭据和绝对本机路径；最终清单记录每个文件大小与 SHA-256；非搭建人或离线 AI 能从 README 定位到计划、状态、原件与下一动作。}
+\CardRow{失败处理}{恢复失败即 G6 不通过，不把 XML 标记为可交付；报告可读不等于资源可恢复。视频超时必须重剪；任何数据替换都触发 PDF、看板、AIChat 答案和哈希清单重新生成。}
+\CardRow{下一步接收人}{项目负责人提交；全体成员保留冻结包和恢复证据。}
+
+\begin{gatebox}[完成定义]
+“完成”同时意味着数据可重跑、指标可复算、Smartbi 可交互、AIChat 可验收、XML 可恢复、材料可追溯。只有单机看板截图、单次脚本成功或 PDF 编译成功，都不等于项目完成。
+\end{gatebox}
+
+\chapter{Python 管线与运行合同}
+
+\section{脚本职责和输入输出}
+
+\begin{longtable}{p{4.3cm}p{4.5cm}p{4.6cm}}
+\caption{Python 脚本接口}\label{tab:scripts}\\
+\toprule
+\textbf{脚本} & \textbf{职责与主要输入} & \textbf{主要输出与失败码}\\
+\midrule
+\File{01_build_country_master.py} & 读取 130 国、别名、区域、货币和通道配置 & 国家主表、未映射名、币制冲突；\Field{COUNTRY_KEY_FAIL}。\\
+\File{02_fetch_worldbank.py} & 按指标和国家批量调用 GEM/WDI 或导入下载包 & 原始响应、请求日志、候选面板；\Field{SOURCE_FETCH_FAIL}。\\
+\File{03_import_mofcom.py} & 导入商务部公报表格和人工复核模板 & 投资流量/存量/覆盖标准表；\Field{MOFCOM_SCOPE_FAIL}。\\
+\File{04_import_imf_policy.py} & 导入 AREAER、Chinn--Ito 与政策编码模板 & 年度政策表、冲突编码；\Field{POLICY_REVIEW_REQUIRED}。\\
+\File{05_import_company_disclosures.py} & 导入 20 家企业年报人工模板 & 企业披露标准表、页码/复核异常；\Field{DISCLOSURE_QA_FAIL}。\\
+\File{06_build_asset_returns.py} & 统一价格、利息、汇率、三口径和成本 & 资产月度收益与收益分解；\Field{RETURN_RECON_FAIL}。\\
+\File{06a_build_global_cycle.py} & 汇总 1971—2025 全球宏观、金融条件、市场与房价截至期数据 & 全球周期标准层、完整率与许可审计；\Field{GLOBAL_CYCLE_SOURCE_FAIL}。\\
+\File{07_standardize_validate.py} & ISO3、日期、频率、单位、缺失、来源、许可与主键验证 & 十一表候选、拒绝行、质量报告；\Field{G3_FAIL}。\\
+\File{08_select_40_countries.py} & 按完整率、区域配额、对照与投资风险分数筛选 & 40 国冻结清单与排除原因；\Field{G2_FAIL}。\\
+\File{09_detect_crisis_events.py} & 触发、合并、退出、窗口和证据状态 & 事件表、触发轨迹、合并日志；\Field{EVENT_COUNT_FAIL}。\\
+\File{09a_build_historical_crisis_events.py} & 导入 17 个历史锚点、政策节点、制度与可比性 & 历史危机表、证据与去重审计；\Field{HISTORY_EVIDENCE_FAIL}。\\
+\File{09b_classify_global_cycle.py} & 多标签、主状态、复合危机和实时阈值计算 & 全球周期权威表、触发轨迹、预期阶段测试；\Field{CYCLE_CLASS_FAIL}。\\
+\File{09c_match_historical_analogues.py} & 只在共同可比指标上计算历史类比 & 相似度、缺失维度与可比性报告；\Field{ANALOGUE_COMPARABILITY_FAIL}。\\
+\File{10_run_portfolio_scenarios.py} & 三层、三口径、多期限、成本、约束和对称剔除 & 组合结果、复算与无前视报告；\Field{G4_FAIL}。\\
+\File{11_export_smartbi_workbooks.py} & 导出 18 个 data 工作表 XLSX 与三份控制工作簿 & Smartbi 包、行数/哈希清单、数据字典和模型映射；\Field{EXPORT_SCHEMA_FAIL}。\\
+\File{12_generate_qa_report.py} & 汇总 D0—D12 检查、差异和证据路径 & HTML/XLSX/PDF 质量摘要；\Field{FINAL_QA_FAIL}。\\
+\File{run_pipeline.py} & 按依赖编排、缓存、恢复点和运行状态 & \File{run_manifest.json}、步骤日志、最终状态。\\
+\bottomrule
+\end{longtable}
+
+\section{统一运行命令与清单}
+
+\begin{verbatim}
+python scripts/run_pipeline.py --as-of 2025-12-31 --run-id 20260831_v41
+\end{verbatim}
+
+运行器必须采用非零退出码表达失败，不以日志中的“warning”掩盖门槛失败。\File{run_manifest.json} 至少记录：运行号、截至日、配置哈希、来源版本、脚本 Git/文件哈希、Python 与依赖版本、开始/结束时间、每步输入输出行数、文件哈希、警告数、错误数、失败步骤、是否可恢复、最终状态和批准人。
+
+\begin{longtable}{p{3.5cm}p{4.2cm}p{5.7cm}}
+\caption{运行状态与自动控制}\label{tab:run-status}\\
+\toprule
+\textbf{状态} & \textbf{触发条件} & \textbf{系统动作}\\
+\midrule
+\Field{RUNNING} & 当前步骤正在处理 & 锁定运行号，写入心跳、开始时间和输入哈希。\\
+\Field{PARTIAL_FAIL} & 非核心补充字段失败 & 保留已完成输出但不发布权威包，列出可重试步骤。\\
+\Field{GATE_FAIL} & G0—G6 任一硬阈值失败 & 停止下游依赖，生成失败报告，不覆盖上一次通过的冻结包。\\
+\Field{SUCCESS_WITH_WARNINGS} & 硬阈值通过但有代理/缺失/模型敏感 & 导出包并在看板显著显示质量标记。\\
+\Field{SUCCESS} & 全部硬阈值和复算通过 & 将运行号写入所有结果表与最终清单。\\
+\bottomrule
+\end{longtable}
+
+\section{一次冻结、完整重跑}
+
+正式提交采用单一冻结运行号。冻结并不意味着人工复制最终 Excel，而是锁定配置、来源快照和脚本版本后从原始层重跑。任何成员应能在相同依赖下重建 11 张权威表和 Smartbi 导入包；若外部 API 后续修订，原始快照保证历史运行仍可复现，更新数据则使用新运行号。
+
+\part{十一张权威表与完整字段字典}
+
+\chapter{字段字典使用规则}
+
+后续各章给出 11 张权威表的完整最低字段合同。实际执行可以增加调试或来源原字段，但不得删除主键、追溯、质量和运行字段。所有结果表必须保留 \Field{source_id}、\Field{vintage_date}、\Field{is_proxy}、\Field{is_simulated}、\Field{is_imputed}、\Field{quality_flag} 与 \Field{run_id} 中适用的字段。本币、美元和人民币口径通过 \Field{currency_basis} 或独立数值字段表达，不覆盖原始数值。
+
+\begin{longtable}{p{3.0cm}p{3.1cm}p{3.0cm}p{4.4cm}}
+\caption{通用字段约定}\label{tab:common-fields}\\
+\toprule
+\textbf{字段} & \textbf{类型/例值} & \textbf{是否必填} & \textbf{规则}\\
+\midrule
+\Field{source_id} & 文本/SRC0001 & 正式值必填 & 外键到来源登记，不允许自由文本来源名代替。\\
+\Field{vintage_date} & 日期 & 时点分析必填 & 数据在何时发布或可被决策者获得。\\
+\Field{is_proxy} & 布尔 & 必填 & 代理数据为 1，并记录 \Field{proxy_reason}。\\
+\Field{is_simulated} & 布尔 & 情景表必填 & 真实披露与模拟不得混为同一统计口径。\\
+\Field{is_imputed} & 布尔 & 时间序列表必填 & 主结果核心汇率/CPI 应为 0。\\
+\Field{quality_flag} & 枚举 & 必填 & 通过、警告、复核或拒绝；拒绝行不进入正式层。\\
+\Field{run_id} & 文本 & 必填 & 对应完整运行清单。\\
+\Field{created_at} & 时间戳 & 必填 & 生成时间，不等同来源发布日期。\\
+\bottomrule
+\end{longtable}
+
+\chapter{country\_event 字段字典}
+
+\begin{longtable}{p{3.6cm}p{2.3cm}p{2.1cm}p{5.2cm}}
+\caption{country\_event 最低字段合同}\label{tab:dict-event}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{event_id} & 文本 & 是 & 事件唯一主键，冻结后不重用。\\
+\Field{event_cluster_id} & 文本 & 是 & 合并重复文档、跨来源和同一全球冲击的事件簇。\\
+\Field{iso3} & 文本 & 是 & 事件发生国家。\\
+\Field{region} & 枚举 & 是 & 用于每区不少于 5 个的验收。\\
+\Field{event_type} & 枚举 & 是 & 货币、通胀、资本管制、冻结、银行中断或复合事件。\\
+\Field{start_month} & 日期 & 是 & 合并后的首个触发月。\\
+\Field{end_month} & 日期 & 是/进行中空 & 连续三月退出阈值或正式限制解除。\\
+\Field{window_start} & 日期 & 是 & 事件前 12 个月。\\
+\Field{window_end} & 日期 & 是 & 事件后 24 个月；数据截止导致截尾须标记。\\
+\Field{trigger_fx_depr} & 布尔 & 是 & 12 月贬值不低于 20\%。\\
+\Field{trigger_fx_value} & 小数 & 条件必填 & 实际贬值值。\\
+\Field{trigger_inflation} & 布尔 & 是 & CPI 同比不低于 15\%。\\
+\Field{trigger_inflation_value} & 小数 & 条件必填 & 实际通胀值。\\
+\Field{trigger_parallel_premium} & 布尔 & 是 & 可信平行价差不低于 20\%。\\
+\Field{trigger_parallel_value} & 小数 & 条件必填 & 实际价差。\\
+\Field{trigger_policy_tightening} & 布尔 & 是 & 资本或汇出约束明显收紧。\\
+\Field{trigger_freeze_or_outage} & 布尔 & 是 & 冻结、汇出限制或银行中断。\\
+\Field{trigger_trace_id} & 文本 & 是 & 指向逐月触发轨迹。\\
+\Field{severity_score} & 小数/等级 & 是 & 预注册严重度；不得用资产收益结果反向定级。\\
+\Field{evidence_grade} & 枚举 & 是 & A/B/C/D；正式事件需 A 或双 B。\\
+\Field{confirmation_date} & 日期 & 是 & 事件性质被确认的日期。\\
+\Field{known_at_decision_time} & 布尔 & 是 & 防止使用事后资料模拟实时决策。\\
+\Field{global_shock_flag} & 布尔 & 是 & 是否与全球共同冲击关联。\\
+\Field{shock_scope} & 枚举 & 是 & 全球、区域、国家或企业；不得用全球平均替代国别值。\\
+\Field{global_event_id} & 文本/空 & 否 & 关联全球或历史事件维度；无共同冲击时为空。\\
+\Field{transmission_channel} & 多值枚举 & 条件必填 & 汇率、贸易、融资、资本流动、银行/支付等传导。\\
+\Field{duplicate_case_count} & 整数 & 是 & 被合并的案例观察数。\\
+\Field{impact_mechanism_usd} & 文本 & 是 & 对美元持有/获得/支付的机制。\\
+\Field{impact_mechanism_gold} & 文本 & 是 & 对黄金价格、托管、变现和合规的机制。\\
+\Field{impact_mechanism_company} & 文本 & 是 & 对收入、成本、汇兑、现金和汇出的机制。\\
+\Field{source_id_primary} & 文本 & 是 & 主证据来源。\\
+\Field{source_id_secondary} & 文本 & 条件必填 & 双 B 模式的第二独立来源。\\
+\Field{quality_flag} & 枚举 & 是 & 待证候选不得为 pass。\\
+\Field{run_id} & 文本 & 是 & 运行号。\\
+\bottomrule
+\end{longtable}
+
+\begin{gatebox}[表级验收]
+正式事件不少于 20 个、每区不少于 5 个；事件 ID 与事件簇逻辑一致；同国同类间隔不超过 2 个月的触发已合并；事件结束规则可从触发轨迹复算；D 级线索不计入正式事件。
+\end{gatebox}
+
+\chapter{企业海外敞口表字段字典}
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{4.2cm}p{2.2cm}p{2.3cm}p{2.7cm}p{7.0cm}}
+\caption{company\_overseas\_exposure 最低字段合同}\label{tab:dict-company}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{company_id} & 文本 & 是 & -- & 企业唯一编码。\\
+\Field{company_name_zh} & 文本 & 是 & -- & 中文公司名。\\
+\Field{security_code} & 文本 & 否 & -- & 证券代码；非上市主体可为空。\\
+\Field{industry} & 枚举 & 是 & -- & 六类经营模式对应行业。\\
+\Field{operating_model} & 枚举 & 是 & -- & ICT、家电、汽车、工程装备、基建轨交、资源能源。\\
+\Field{fiscal_year} & 整数 & 是 & 年 & 2018—2025 可得期。\\
+\Field{report_date} & 日期 & 是 & -- & 报告发布日，用于时点控制。\\
+\Field{report_currency} & 文本 & 是 & ISO 币种 & 年报计价币种。\\
+\Field{report_unit} & 文本 & 是 & 元/千/百万 & 原始披露单位。\\
+\Field{total_revenue} & 小数 & 否 & 报告币种 & 合并总收入。\\
+\Field{overseas_revenue} & 小数 & 否 & 报告币种 & 海外或境外收入，定义随原报告保留。\\
+\Field{overseas_revenue_share} & 小数 & 派生/披露 & 比例 & 原披露优先；否则海外收入/总收入。\\
+\Field{geography_id} & 文本 & 是 & -- & 披露地域编码。\\
+\Field{geography_name} & 文本 & 是 & -- & 原报告地区/国家名。\\
+\Field{geography_level} & 枚举 & 是 & -- & country/region/global；地区不得扩到国家。\\
+\Field{geography_revenue} & 小数 & 否 & 报告币种 & 披露地区收入。\\
+\Field{fx_gain_loss} & 小数 & 否 & 报告币种 & 正负方向按会计含义统一并保留原符号。\\
+\Field{foreign_currency_assets} & 小数 & 否 & 报告币种 & 外币货币性资产。\\
+\Field{foreign_currency_liabilities} & 小数 & 否 & 报告币种 & 外币货币性负债。\\
+\Field{foreign_debt_currency} & 文本 & 否 & ISO 币种 & 债务币种；多币种可拆行。\\
+\Field{foreign_debt_balance} & 小数 & 否 & 报告币种 & 对应外币债务余额。\\
+\Field{hedge_notional} & 小数 & 否 & 报告币种 & 衍生品名义本金，不等同公允价值。\\
+\Field{hedge_instrument} & 文本 & 否 & -- & 远期、掉期、期权等。\\
+\Field{overseas_subsidiary_count} & 整数 & 否 & 家 & 仅按明确清单计数。\\
+\Field{disclosed_country_count} & 整数 & 否 & 个 & 明确披露国家数，不由地区推断。\\
+\Field{cash_and_equivalents} & 小数 & 否 & 报告币种 & 现金及等价物。\\
+\Field{short_term_investments} & 小数 & 否 & 报告币种 & 短期投资，定义按附注。\\
+\Field{committed_credit_line} & 小数 & 否 & 报告币种 & 已承诺额度；未使用额另列。\\
+\Field{credit_line_available} & 小数 & 否 & 报告币种 & 报告日可用额度。\\
+\Field{disclosure_quality_score} & 小数 & 是 & 0--100 & 完整度与粒度评分。\\
+\Field{quant_profile_eligible} & 布尔 & 是 & -- & 满足收入和汇兑/风险说明双条件。\\
+\Field{deep_case_score} & 小数 & 否 & 0--100 & 完整度40\%+敞口35\%+代表性25\%。\\
+\Field{annual_report_page} & 文本 & 关键值必填 & -- & 页码/附注/表格坐标。\\
+\Field{entry_reviewer_id} & 文本 & 关键值必填 & -- & 录入者。\\
+\Field{check_reviewer_id} & 文本 & 关键值必填 & -- & 独立复核者。\\
+\Field{source_id} & 文本 & 是 & -- & 年报/公告来源。\\
+\Field{quality_flag} & 枚举 & 是 & -- & 口径冲突为 review。\\
+\Field{run_id} & 文本 & 是 & -- & 运行号。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\begin{gatebox}[表级验收]
+企业—财年—披露地域主键重复率 0；20 家均有基础画像；量化画像资格严格执行双条件；关键数字双人页码复核率 100\%；地区披露生成国家行数为 0；最多 6 家深度企业按分数自动确定。
+\end{gatebox}
+
+\chapter{asset\_monthly\_return 字段字典}
+
+\begin{longtable}{p{3.8cm}p{2.3cm}p{2.1cm}p{5.0cm}}
+\caption{asset\_monthly\_return 最低字段合同}\label{tab:dict-asset}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{iso3} & 文本 & 是 & 资产适用国家；全球资产使用统一 GLOBAL 规则或复制到国家视图。\\
+\Field{month_end} & 日期 & 是 & 月末。\\
+\Field{asset_id} & 文本 & 是 & 本币现金、人民币短资、美元现金、美元短债、黄金、套保代理等。\\
+\Field{asset_name_zh} & 文本 & 是 & 中文显示名。\\
+\Field{asset_class} & 枚举 & 是 & 现金、短债、黄金或套保。\\
+\Field{market} & 文本 & 是 & 定价市场或代理市场。\\
+\Field{price_currency} & 文本 & 是 & 原始价格币种。\\
+\Field{currency_basis} & 枚举 & 是 & LCU/CNY/CONTRACT；三口径分行。\\
+\Field{contract_currency} & 文本 & 条件必填 & 合同口径的具体币种。\\
+\Field{price_level} & 小数 & 否 & 月末价格/指数水平。\\
+\Field{gross_return} & 小数 & 是 & 成本前月度总回报或明确价格回报。\\
+\Field{interest_return} & 小数 & 否 & 现金/短债的利息贡献。\\
+\Field{price_return} & 小数 & 否 & 价格贡献。\\
+\Field{fx_return} & 小数 & 否 & 计价转换的汇率贡献。\\
+\Field{interaction_return} & 小数 & 否 & 金价与汇率交互项。\\
+\Field{transaction_fee} & 小数 & 是 & 月度/交易时发生的费用，非负。\\
+\Field{bid_ask_spread} & 小数 & 是 & 买卖价差，非负。\\
+\Field{custody_fee} & 小数 & 是 & 托管费年化后按月转换。\\
+\Field{insurance_fee} & 小数 & 是 & 实物资产保险费。\\
+\Field{liquidation_haircut} & 小数 & 是 & 压力变现折价。\\
+\Field{hedge_cost} & 小数 & 否 & 远期/NDF 点差与交易成本。\\
+\Field{net_return} & 小数 & 是 & 毛回报扣除适用成本。\\
+\Field{return_type} & 枚举 & 是 & total/price/proxy；不得混用。\\
+\Field{original_frequency} & 枚举 & 是 & daily/monthly。\\
+\Field{aggregation_rule} & 文本 & 是 & 月末、月均或复合规则。\\
+\Field{source_id} & 文本 & 是 & 价格/利率来源。\\
+\Field{cost_source_id} & 文本 & 条件必填 & 成本来源或模拟参数来源。\\
+\Field{is_proxy} & 布尔 & 是 & 美债/套保代理须标记。\\
+\Field{is_simulated} & 布尔 & 是 & 成本模拟值标记。\\
+\Field{quality_flag} & 枚举 & 是 & 对账失败不得为 pass。\\
+\Field{run_id} & 文本 & 是 & 运行号。\\
+\bottomrule
+\end{longtable}
+
+\begin{gatebox}[表级验收]
+主键 \Field{iso3+month_end+asset_id+currency_basis+contract_currency} 重复率 0；核心三序列完整率不低于 95\%；黄金三项分解误差不超过 \(10^{-10}\)；成本非负；自然对冲和授信没有资产月收益记录。
+\end{gatebox}
+
+\chapter{portfolio\_scenario 字段字典}
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{4.0cm}p{2.2cm}p{2.2cm}p{2.5cm}p{7.4cm}}
+\caption{portfolio\_scenario 最低字段合同}\label{tab:dict-portfolio}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{scenario_id} & 文本 & 是 & -- & 国家、企业、事件、期限和假设的唯一情景。\\
+\Field{strategy_id} & 文本 & 是 & -- & 同情景中的组合策略。\\
+\Field{run_id} & 文本 & 是 & -- & 与前两字段组成主键。\\
+\Field{iso3} & 文本 & 是 & -- & 经营国家。\\
+\Field{company_id} & 文本/空 & 否 & -- & 企业情景；国别通用情景可为空。\\
+\Field{event_id} & 文本/空 & 否 & -- & 危机窗口情景。\\
+\Field{cycle_state} & 枚举 & 是 & -- & 兼容字段，等于当期全球主状态。\\
+\Field{global_cycle_state} & 枚举 & 是 & -- & 决策时可知的全球主状态。\\
+\Field{global_cycle_labels} & 文本/数组 & 是 & -- & 当期全部已触发标签。\\
+\Field{compound_global_crisis} & 布尔 & 是 & -- & 两类以上危机状态同时成立。\\
+\Field{historical_analogue_event_id} & 文本/空 & 否 & -- & 高可比历史类比；低可比时只展示解释。\\
+\Field{reserve_layer} & 枚举 & 是 & -- & operating/liquidity/strategic。\\
+\Field{horizon} & 枚举 & 是 & -- & 90D/1Y/5Y/10Y。\\
+\Field{currency_basis} & 枚举 & 是 & -- & LCU/CNY/CONTRACT。\\
+\Field{contract_currency} & 文本 & 条件必填 & -- & 合同币种。\\
+\Field{weight_local_cash} & 小数 & 是 & 比例 & 本币经营现金权重。\\
+\Field{weight_cny_short} & 小数 & 是 & 比例 & 人民币短期资产权重。\\
+\Field{weight_usd_cash} & 小数 & 是 & 比例 & 美元现金权重。\\
+\Field{weight_usd_tbill} & 小数 & 是 & 比例 & 3 月美元短债代理权重。\\
+\Field{weight_gold} & 小数 & 是 & 比例 & 黄金权重，含 0\% 反事实。\\
+\Field{weight_hedge} & 小数 & 是 & 比例 & 套保资金/风险权重的统一定义。\\
+\Field{weight_other} & 小数 & 是 & 比例 & 其他经批准工具；必须有解释。\\
+\Field{weight_equity} & 小数 & 是 & 比例 & 固定为 0；股票只作周期指标/比较基准。\\
+\Field{weight_property} & 小数 & 是 & 比例 & 固定为 0；房地产只作周期指标/比较基准。\\
+\Field{weight_oil} & 小数 & 是 & 比例 & 固定为 0；原油只作周期指标/比较基准。\\
+\Field{weight_credit_or_vix} & 小数 & 是 & 比例 & 固定为 0；信用利差和 VIX 不属于储备资产。\\
+\Field{weight_sum} & 小数 & 是 & 比例 & 与 1 的误差不超过 \(10^{-8}\)。\\
+\Field{gold_conditional_floor} & 布尔 & 是 & -- & 是否满足战略层 2.5\% 条件底仓资格。\\
+\Field{counterfactual_type} & 枚举 & 是 & -- & full/no\_gold/no\_usd/gold\_grid。\\
+\Field{operating_cash_need} & 小数 & 是 & 计价币 & 90 天净流出；模拟值须标记。\\
+\Field{credit_line_available} & 小数 & 否 & 计价币 & 压力情景输入，不是资产回报。\\
+\Field{natural_hedge_ratio} & 小数 & 否 & 比例 & 收支自然匹配比例。\\
+\Field{transaction_cost_total} & 小数 & 是 & 计价币/比例 & 交易成本。\\
+\Field{custody_insurance_cost} & 小数 & 是 & 计价币/比例 & 保管和保险。\\
+\Field{liquidation_haircut_total} & 小数 & 是 & 比例 & 压力变现折价。\\
+\Field{constraint_status} & 枚举 & 是 & -- & 可行、条件可行、禁止或人工复核。\\
+\Field{constraint_reason_code} & 文本 & 条件必填 & -- & 托管、兑换、制裁、会计、税务等。\\
+\Field{liquidity_coverage_90d} & 小数 & 是 & 倍 & 合法可动用资产/90 天净流出。\\
+\Field{cny_purchasing_power_ratio} & 小数 & 是 & 比例 & 人民币实际价值保全。\\
+\Field{max_drawdown} & 小数 & 是 & 比例 & 成本后净值最大回撤。\\
+\Field{recovery_months} & 整数/空 & 否 & 月 & 未恢复时为空并标记右删失。\\
+\Field{recovery_censored} & 布尔 & 是 & -- & 观察期内未恢复。\\
+\Field{cvar_95} & 小数 & 是 & 比例 & 最差 5\% 损失均值。\\
+\Field{legally_available_ratio} & 小数 & 是 & 比例 & 约束后合法可动用/名义资产。\\
+\Field{total_holding_cost} & 小数 & 是 & 比例 & 综合持有成本，非负。\\
+\Field{marginal_gold_contribution} & 小数 & 条件必填 & 比例 & 完整减去黄金组合的指标差。\\
+\Field{marginal_usd_contribution} & 小数 & 条件必填 & 比例 & 完整减去美元资产组合的指标差。\\
+\Field{strategy_explanation} & 文本 & 是 & -- & 说明期限、周期、口径和约束。\\
+\Field{decision_date} & 日期 & 是 & -- & 回测决策时点。\\
+\Field{data_available_through} & 日期 & 是 & -- & 当时数据可用截止。\\
+\Field{lookahead_flag} & 布尔 & 是 & -- & 正式结果必须为 0。\\
+\Field{is_simulated} & 布尔 & 是 & -- & 企业现金/成本假设标记。\\
+\Field{assumption_id} & 文本 & 条件必填 & -- & 指向透明假设表。\\
+\Field{source_id} & 文本 & 是 & -- & 结果依赖的主来源/运行来源。\\
+\Field{quality_flag} & 枚举 & 是 & -- & 约束不完整不得为 pass。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\begin{gatebox}[表级验收]
+主键 \Field{scenario_id+strategy_id+run_id} 重复率 0；每个策略权重和误差不超过 \(10^{-8}\)；成本均非负；\Field{lookahead_flag=1} 的正式行数为 0；股票、房地产、原油、信用利差与 VIX 权重为 0；禁止状态下受限资产权重为 0；完整、去黄金和去美元组合成组出现并可复算。
+\end{gatebox}
+
+\chapter{case\_evidence 字段字典}
+
+\begin{longtable}{p{3.7cm}p{2.4cm}p{2.1cm}p{5.0cm}}
+\caption{case\_evidence 最低字段合同}\label{tab:dict-case}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{case_id} & 文本 & 是 & 45 份案例档案唯一 ID。\\
+\Field{case_title} & 文本 & 是 & 案例标题。\\
+\Field{event_cluster_id} & 文本 & 是 & 重复事件归并键。\\
+\Field{region} & 枚举 & 是 & 区域。\\
+\Field{iso3} & 文本/空 & 否 & 多国全球事件可为空并记录范围。\\
+\Field{start_date} & 日期/年 & 是 & 观察开始。\\
+\Field{end_date} & 日期/年 & 否 & 观察结束。\\
+\Field{risk_type} & 枚举 & 是 & 宏观危机、货币崩溃、制裁冲突、企业损失等。\\
+\Field{global_cycle_state} & 枚举/空 & 宏观案例必填 & 规则主状态或历史机制分类。\\
+\Field{cycle_labels} & 文本/数组 & 否 & 并行周期/危机标签。\\
+\Field{monetary_regime} & 文本 & 宏观案例必填 & 金本位、固定/浮动汇率等制度环境。\\
+\Field{policy_response} & 文本 & 宏观案例必填 & 货币、财政、监管或资本控制响应。\\
+\Field{comparability_grade} & 枚举 & 宏观案例必填 & high/medium/low/not-comparable。\\
+\Field{observation_object} & 文本 & 是 & 企业、市场、资产或监管事件。\\
+\Field{evidence_role} & 枚举 & 是 & 支持、反驳、限定或冲突。\\
+\Field{claim_text} & 文本 & 是 & 该证据支持或限制的具体命题。\\
+\Field{local_currency_outcome} & 文本/数值 & 否 & 本币同期表现。\\
+\Field{usd_outcome} & 文本/数值 & 否 & 美元或美元短债表现。\\
+\Field{gold_outcome} & 文本/数值 & 否 & 黄金表现；须注明计价口径。\\
+\Field{company_loss_value} & 小数 & 否 & 企业损失，单位与会计口径分列。\\
+\Field{custody_jurisdiction} & 文本 & 否 & 托管地与法域。\\
+\Field{availability_status} & 枚举 & 是 & 可行、条件可行、禁止、人工复核。\\
+\Field{evidence_grade} & 枚举 & 是 & A/B/C/D。\\
+\Field{verification_status} & 枚举 & 是 & 已核验、冲突、推断或待补证。\\
+\Field{source_id} & 文本 & 是 & 具体原始或权威来源。\\
+\Field{source_page} & 文本 & 关键数字必填 & 页码、表号或条款。\\
+\Field{case_file_path} & 文本 & 是 & 现有案例档案相对路径。\\
+\Field{duplicate_flag} & 布尔 & 是 & 是否与其他档案同簇。\\
+\Field{reviewer_id} & 文本 & 是 & 复核人。\\
+\Field{quality_flag} & 枚举 & 是 & D 级仅可 warn/review。\\
+\Field{run_id} & 文本 & 是 & 运行号。\\
+\bottomrule
+\end{longtable}
+
+\begin{gatebox}[表级验收]
+45 个案例 ID 全部存在；支持、反驳、限定和冲突角色可筛选；2013 金价暴跌、1980—2000 熊市、2008 初期同跌、1933 征收、委内瑞拉黄金冻结和中国黄金会计错配等反例不得删除；按事件簇统计时重复文档只计一次。
+\end{gatebox}
+
+\chapter{source\_registry 字段字典}
+
+\begin{longtable}{p{3.7cm}p{2.3cm}p{2.1cm}p{5.1cm}}
+\caption{source\_registry 最低字段合同}\label{tab:dict-source}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{source_id} & 文本 & 是 & 来源唯一主键。\\
+\Field{archive_asset_id} & 文本 & 条件必填 & 来源复用归档 V1.0 时保存原 \Field{asset_id}；新增来源为空并注明不适用。\\
+\Field{archive_run_id} & 文本 & 条件必填 & 归档快照号，当前为 \Field{20260816_research_archive_v1}；不得覆盖为正式数据运行号。\\
+\Field{reuse_status} & 枚举 & 是 & 直接复用、使用规范重复项、只保留元数据、使用替代源、需人工动作、排除等路由。\\
+\Field{redistribution_scope} & 枚举 & 是 & \Field{shared}、\Field{private_only} 或 \Field{metadata_only}；决定提交包边界。\\
+\Field{revalidation_required} & 枚举/布尔 & 是 & 是否仍需字段、关键数字、页码或结论复核；归档存在不自动等于可进入模型。\\
+\Field{publisher} & 文本 & 是 & 发布机构。\\
+\Field{dataset_name} & 文本 & 是 & 数据集、报告或法规名称。\\
+\Field{source_url} & URL & 是 & 直接页面/API/文件链接。\\
+\Field{license} & 文本 & 是 & 许可或公开使用说明；未知不得进入正式层。\\
+\Field{scope} & 文本 & 是 & 国家、指标和用途范围。\\
+\Field{source_frequency} & 枚举 & 是 & 日度、月度、季度、年度或事件。\\
+\Field{coverage_start} & 日期/年 & 是 & 覆盖开始。\\
+\Field{coverage_end} & 日期/年 & 是 & 覆盖结束。\\
+\Field{publication_date} & 日期 & 是 & 报告/版本发布日期。\\
+\Field{fetch_timestamp} & 时间戳 & 是 & 抓取时间。\\
+\Field{data_version} & 文本 & 是 & 版本号或快照日期。\\
+\Field{raw_file_name} & 文本 & 是 & 原始文件名。\\
+\Field{raw_relative_path} & 文本 & 是 & data/raw 下相对路径，不保存本机绝对路径。\\
+\Field{file_size_bytes} & 整数 & 是 & 原始文件字节数。\\
+\Field{sha256} & 文本(64) & 是 & 原始文件校验值。\\
+\Field{api_request_params} & JSON/文本 & 条件必填 & API 请求参数与分页。\\
+\Field{earliest_backtest_date} & 日期 & 是 & 该版本最早可用于决策的日期。\\
+\Field{data_class} & 枚举 & 是 & 原始、代理、模拟或人工。\\
+\Field{is_proxy} & 布尔 & 是 & 代理标志。\\
+\Field{proxy_reason} & 文本 & 条件必填 & 替代目标变量的理由。\\
+\Field{alternative_source_id} & 文本 & 否 & 主源失败时的预登记替代源。\\
+\Field{alternative_reason} & 文本 & 条件必填 & 启用替代源原因。\\
+\Field{access_restriction} & 枚举 & 是 & 公开、需接受条款、付费或受限。\\
+\Field{redistribution_allowed} & 布尔 & 是 & 是否允许把原始数据随提交包再分发。\\
+\Field{license_note} & 文本 & 条件必填 & 受限来源的展示、派生和替代规则。\\
+\Field{quality_tier} & 枚举 & 是 & A/B/C/D 或数据源质量级。\\
+\Field{owner_id} & 文本 & 是 & 维护人。\\
+\Field{quality_flag} & 枚举 & 是 & 许可未知或哈希缺失不得为 pass。\\
+\Field{run_id} & 文本 & 是 & 首次或当前运行号。\\
+\bottomrule
+\end{longtable}
+
+\begin{gatebox}[表级验收]
+所有进入看板的正式数值都能连接 source ID；来自归档的来源同时能一跳连接 \Field{archive_asset_id} 和归档快照；原始文件路径、大小和 SHA-256 齐全；许可未知数为 0；\Field{revalidation_required} 未关闭的关键数值不得进入正式模型；回测时使用的观测版本不早于其 \Field{earliest_backtest_date}；代理和模拟来源可单独筛选。
+\end{gatebox}
+
+\chapter{global\_cycle\_month 字段字典}
+\clearpage
+\begin{landscape}
+
+\begin{longtable}{p{4.0cm}p{2.0cm}p{2.2cm}p{2.8cm}p{7.3cm}}
+\caption{global\_cycle\_month 最低字段合同}\label{tab:dict-global-cycle}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{scope_id} & 文本 & 是 & -- & GLOBAL 或预注册冲击源范围；与月份组成主键。\\
+\Field{month_end} & 日期 & 是 & 月 & 1971-01 至 2025-12 月末骨架。\\
+\Field{industrial_production_index} & 小数 & 适用期 & 指数 & 工业生产原值；季调状态分列。\\
+\Field{industrial_production_yoy} & 小数 & 派生 & 比例 & 同比增长；连续负值用于衰退、滞胀和通缩。\\
+\Field{unemployment_rate} & 小数 & 适用期 & 百分点 & 失业率；不适用期为空。\\
+\Field{sahm_realtime_value} & 小数 & 适用期 & 百分点 & 3 月均值相对前 12 月低点的上升；阈值 0.50\cite{sahmfred}。\\
+\Field{cpi_index} & 小数 & 适用期 & 指数 & CPI 原值与基期。\\
+\Field{cpi_yoy} & 小数 & 派生 & 比例 & 同比通胀；缺失不当零。\\
+\Field{policy_rate} & 小数 & 适用期 & 百分点 & 政策利率或预注册代理。\\
+\Field{real_policy_rate} & 小数 & 派生 & 百分点 & 政策利率减预注册通胀口径。\\
+\Field{yield_spread_10y_3m} & 小数 & 适用期 & 基点 & 10 年—3 月期限利差。\\
+\Field{broad_dollar_index} & 小数 & 适用期 & 指数 & 美元广义指标；来源和方法固定。\\
+\Field{nfci_level} & 小数 & 适用期 & 标准化值 & 芝加哥联储 NFCI；正值代表较历史平均更紧\cite{nfciofficial,nfcifred}。\\
+\Field{nfci_expanding_percentile} & 小数 & 派生 & 分位 & 只用当时及此前观测计算，90\% 为信用候选。\\
+\Field{hy_oas_bps} & 小数/空 & 授权时 & 基点 & 高收益 OAS 挑战指标；受限时不再分发原始值\cite{fredhyoas}。\\
+\Field{hy_oas_12m_change_bps} & 小数/空 & 派生 & 基点 & 12 月扩大不低于 300 基点触发。\\
+\Field{equity_index} & 小数 & 适用期 & 指数 & 全球或美国代表股指，代码固定。\\
+\Field{equity_drawdown} & 小数 & 派生 & 比例 & 只相对当时已见历史峰值；不低于 20\% 触发泡沫破裂候选。\\
+\Field{vix_level} & 小数/空 & 适用期 & 指数 & 只用于周期/压力解释。\\
+\Field{oil_price_usd} & 小数 & 适用期 & 美元 & 原油价格或指数，只用于传导和对照。\\
+\Field{gold_price_usd} & 小数 & 适用期 & 美元 & 美元黄金价格，须与资产收益表同源对账。\\
+\Field{global_trade_index} & 小数/空 & 适用期 & 指数 & 全球贸易量/值指标及其发布日期。\\
+\Field{property_real_index} & 小数/空 & 适用期 & 指数 & BIS 实际房价最新已发布季度值\cite{bisproperty,bispropertydoc}。\\
+\Field{property_peak_to_trough} & 小数/空 & 派生 & 比例 & 实际房价峰谷跌幅；不低于 15\% 为候选。\\
+\Field{property_observation_date} & 日期/空 & 条件必填 & 季度 & 房价真实观测期，不改写为月度。\\
+\Field{property_release_date} & 日期/空 & 条件必填 & -- & 房价可被决策者知道的日期。\\
+\Field{property_original_frequency} & 枚举 & 条件必填 & -- & 固定 quarterly。\\
+\Field{property_asof_carried} & 布尔 & 是 & -- & 当月使用截至期已发布季度值时为 1。\\
+\Field{trigger_credit_systemic} & 布尔 & 是 & -- & 信用/系统性触发。\\
+\Field{trigger_asset_bust} & 布尔 & 是 & -- & 股市或房地产触发。\\
+\Field{trigger_recession} & 布尔 & 是 & -- & Sahm+工业生产或权威确认。\\
+\Field{official_recession_flag} & 布尔 & 是 & -- & 权威机构追认衰退；与实时规则分列\cite{nberdating,nberchronology}。\\
+\Field{trigger_deflation} & 布尔 & 是 & -- & CPI 与工业生产同比连续三月为负。\\
+\Field{trigger_stagflation} & 布尔 & 是 & -- & CPI 同比不低于 5\% 且工业生产连续三月负增长。\\
+\Field{trigger_aggressive_tightening} & 布尔 & 是 & -- & 政策/实际利率 12 月变化达到阈值。\\
+\Field{external_shock_flag} & 布尔 & 是 & -- & 疫情、战争或灾害等外生冲击补充标签，不改变主状态优先级。\\
+\Field{cycle_labels} & 文本/数组 & 是 & -- & 当期全部标签。\\
+\Field{primary_cycle_state} & 枚举 & 是 & -- & 按固定优先级输出。\\
+\Field{compound_global_crisis} & 布尔 & 是 & -- & 两类以上危机标签并存。\\
+\Field{source_id} & 文本/数组 & 正式值必填 & -- & 每项数值可一跳追溯。\\
+\Field{release_date} & 日期/数组 & 时点必填 & -- & 指标首次发布日期。\\
+\Field{vintage_date} & 日期/数组 & 时点必填 & -- & 本次运行使用的历史版本。\\
+\Field{original_frequency} & 枚举/数组 & 是 & -- & daily/weekly/monthly/quarterly。\\
+\Field{vintage_reconstructed} & 布尔 & 是 & -- & 无实时历史版本时为 1。\\
+\Field{license_distribution_flag} & 枚举 & 是 & -- & redistributable/derived-only/restricted。\\
+\Field{quality_flag} & 枚举 & 是 & -- & pass/warn/review/reject。\\
+\Field{run_id} & 文本 & 是 & -- & 冻结运行号。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\begin{gatebox}[表级验收]
+主键 \Field{scope_id+month_end} 重复率和空值率均为 0；1971—2025 共 660 个月骨架；核心适用指标完整率不低于 90\%；不适用期为空而非 0；NFCI 分位、股指回撤和状态只使用当时可得数据；季度房价保留真实观测期与发布日期；受限许可原始值不进入分发包；预期历史阶段分类测试全部通过。
+\end{gatebox}
+
+\chapter{historical\_crisis\_event 字段字典}
+\clearpage
+\begin{landscape}
+
+\begin{longtable}{p{4.0cm}p{2.0cm}p{2.2cm}p{2.8cm}p{7.3cm}}
+\caption{historical\_crisis\_event 最低字段合同}\label{tab:dict-historical-event}\\
+\toprule
+\textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{字段} & \textbf{类型} & \textbf{必填} & \textbf{单位} & \textbf{定义、处理与验收}\\ \midrule
+\endhead
+\Field{historical_event_id} & 文本 & 是 & -- & 历史事件或节点唯一主键。\\
+\Field{event_cluster_id} & 文本 & 是 & -- & 政策节点、危机和长期阶段的关联簇。\\
+\Field{event_title_zh} & 文本 & 是 & -- & 中文标准名称。\\
+\Field{event_title_en} & 文本 & 否 & -- & 英文标准名称。\\
+\Field{event_record_type} & 枚举 & 是 & -- & 危机、政策节点、制度变化、反例或长期阶段。\\
+\Field{is_crisis_event} & 布尔 & 是 & -- & 《广场协议》等政策节点为 0。\\
+\Field{shock_scope} & 枚举 & 是 & -- & global/regional/country。\\
+\Field{iso3_or_scope} & 文本 & 是 & -- & 国家 ISO3 或 GLOBAL/REGION。\\
+\Field{start_date} & 日期/年 & 是 & -- & 事件或节点开始。\\
+\Field{end_date} & 日期/年/空 & 否 & -- & 长期阶段可以有结束或截尾标志。\\
+\Field{primary_cycle_state} & 枚举 & 是 & -- & 核心机制分类。\\
+\Field{cycle_labels} & 文本/数组 & 是 & -- & 并行状态。\\
+\Field{compound_crisis_flag} & 布尔 & 是 & -- & 多机制并存。\\
+\Field{monetary_regime} & 文本 & 是 & -- & 金本位、固定/浮动汇率、货币联盟等。\\
+\Field{capital_control_regime} & 文本 & 是 & -- & 资本与兑换限制环境。\\
+\Field{gold_legal_holding_status} & 枚举/文本 & 是 & -- & 合法、受限、禁止、未知及适用主体。\\
+\Field{gold_market_tradability} & 枚举/文本 & 是 & -- & 自由、受限、官方兑换、不可比。\\
+\Field{available_instruments} & 文本/数组 & 是 & -- & 当时实际存在并可用的资产工具。\\
+\Field{policy_response} & 长文本 & 是 & -- & 货币、财政、监管、银行与资本控制响应。\\
+\Field{trigger_and_cause} & 长文本 & 是 & -- & 触发与多因素机制，避免单因果叙事。\\
+\Field{transmission_channel} & 多值枚举 & 是 & -- & 汇率、贸易、融资、资本流动、银行/支付、资产负债表。\\
+\Field{equity_outcome} & 文本/数值 & 否 & -- & 股市表现与口径。\\
+\Field{property_outcome} & 文本/数值 & 否 & -- & 房地产表现与频率。\\
+\Field{usd_or_short_debt_outcome} & 文本/数值 & 否 & -- & 当时可用美元/短债工具表现。\\
+\Field{gold_outcome} & 文本/数值 & 否 & -- & 黄金表现和计价、合法/可交易限制。\\
+\Field{comparison_basis} & 文本 & 条件必填 & -- & 名义/实际、月度/事件、计价币种。\\
+\Field{comparability_grade} & 枚举 & 是 & -- & high/medium/low/not-comparable。\\
+\Field{comparability_limit} & 长文本 & 条件必填 & -- & 制度、工具、数据和市场结构差异。\\
+\Field{modern_backtest_allowed} & 布尔 & 是 & -- & 1929—1970 默认 0；允许也须有理由。\\
+\Field{source_id_primary} & 文本 & 是 & -- & A/B 级主来源。\\
+\Field{source_id_secondary} & 文本 & 条件必填 & -- & 双 B 或争议交叉核验。\\
+\Field{source_page} & 文本 & 关键事实必填 & -- & 页码、表号或条款。\\
+\Field{case_id} & 文本/数组 & 是 & -- & 连接现有宏观案例档案。\\
+\Field{reviewer_id} & 文本 & 是 & -- & 独立复核人。\\
+\Field{review_status} & 枚举 & 是 & -- & confirmed/conflict/pending。\\
+\Field{quality_flag} & 枚举 & 是 & -- & 未复核不得为 pass。\\
+\Field{run_id} & 文本 & 是 & -- & 冻结运行号。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\begin{gatebox}[表级验收]
+17 份宏观案例全部连接且来源复核完成；《广场协议》、日本泡沫与长期停滞同簇不重复计数；1933 黄金政策为制度节点；1929—1970 不生成统一月度序列或现代 ETF 回测；历史资产比较均显示计价、工具存在性和可比性；低可比事件不得输出可执行配置。
+\end{gatebox}
+
+\part{Smartbi 六页产品、指标与 AIChat}
+
+\chapter{第一页：亚非拉风险全景}
+
+第一页服务集团总部和评审，先回答“中国企业在哪里、哪些国家进入量化层、投资暴露与风险如何交叉”。默认显示最新可得月和最新投资年份，页面顶部必须显示两个不同的数据截止期，避免把 2024 年投资和 2025 年月度风险误解为同一时点。
+
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{3.3cm}p{3.4cm}p{4.3cm}p{3.2cm}p{4.7cm}}
+\caption{第一页图表绑定与验收}\label{tab:page1-map}\\
+\toprule
+\textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\ \midrule
+\endhead
+130 国覆盖卡 & country\_exposure, dim\_country & 唯一 iso3、存在状态、通道标签 & 区域、实体/通道 & 固定显示 130；45/51/34 可复算。\\
+亚非拉地图 & \Field{dim_country}、\Field{country_exposure} & 投资存量、最新年、数据质量 & 区域、年份、是否 40 国 & 无值显示“未披露”，不填 0；通道采用不同标记。\\
+40 国风险排名 & \Field{country_monthly_risk} & 等权分、熵权/PCA、敏感标志 & 月份、区域、质量 & 仅 40 国；模型敏感可筛；通道数为 0。\\
+投资—风险四象限 & exposure + monthly risk & 投资暴露百分位、风险百分位 & 年/月、区域、对照标志 & 同时显示两个截止期；点数与筛选后国家一致。\\
+数据完整度矩阵 & monthly risk & FX/CPI 非空月数、缺口 & 指标、国家 & 所有正式 40 国核心值均不低于 154。\\
+对照国卡片 & selection scorecard & low risk control、入选原因 & 区域 & 每区至少 3 个；可追到选择分数。\\
+风险变化榜 & monthly risk & 风险分月变动及贡献 & 月份、区域 & 贡献和与总变动误差小于 1\%。\\
+来源与截止期条 & source registry & 发布日、抓取日、最新期 & 数据集 & 点击可显示 URL、许可、版本和哈希。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+第一页全局筛选器为区域、次区域、国家、实体/通道、是否进入 40 国、投资年份、风险月份、数据质量。地图点击国家后联动风险排名、完整度和来源卡；点击进入第二页时传递 ISO3 和月份。若企业存在判断没有来源，国家不得显示为“已覆盖”。
+
+\chapter{第二页：国别与危机下钻}
+
+第二页把月度指标、年度政策和事件证据分层展示。年度政策只在其有效期内作为阶梯状状态带出现，不通过复制成月度行来制造数据点。事件时间线同时展示“触发月”和“确认日”，帮助区分事后识别与当时可知。
+
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{3.3cm}p{3.5cm}p{4.4cm}p{3.2cm}p{4.5cm}}
+\caption{第二页图表绑定与验收}\label{tab:page2-map}\\
+\toprule
+\textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\ \midrule
+\endhead
+国别摘要卡 & monthly risk, exposure & 汇率、通胀、储备、投资、质量 & 国家、月份 & 口径、单位、最新期同时显示。\\
+汇率与通胀双轴 & monthly risk & FX 指数、贬值同比、CPI 同比 & 时间、官方/平行 & 汇率方向明确；危机极值不被裁剪。\\
+储备与进口覆盖 & monthly risk & 储备美元、12 月变化、覆盖月数 & 时间 & 官方/计算口径可切换，不混为一线。\\
+平行价差面板 & monthly risk & 官方、平行汇率与价差 & 有数据国家 & 无可信序列时显示“不适用”，不显示 0。\\
+政策状态带 & policy year & 资本、汇出、多重汇率、制裁状态 & 政策类别 & 按有效期连接；年度观测点数不膨胀。\\
+事件时间线 & country event & 类型、起止、严重度、确认日 & 事件类型 & 点击事件传递 event ID 到资产实验室。\\
+触发解释表 & event trigger trace & 五类触发值、阈值、退出规则 & 事件 & 任一事件可逐月复算开始和结束。\\
+证据抽屉 & event, case, source & 等级、链接、页码、冲突状态 & event cluster & A/双 B 是否满足一目了然。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\chapter{第三页：中国企业海外风险}
+
+第三页坚持披露粒度纪律。企业只披露亚洲、非洲或拉美地区收入时，页面只能呈现地区暴露，不能把地区收入按投资权重、子公司数量或市场份额分配到具体国家。企业—国家重合仅在年报明确披露国家或子公司清单能够支持时出现；其余显示“国家粒度不可判断”。
+
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{3.3cm}p{3.5cm}p{4.5cm}p{3.1cm}p{4.5cm}}
+\caption{第三页图表绑定与验收}\label{tab:page3-map}\\
+\toprule
+\textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\ \midrule
+\endhead
+20 家企业卡 & dim company, company exposure & 企业数、模式数、量化合格数 & 行业、财年 & 基础企业固定 20；量化数按资格实时计算。\\
+海外收入矩阵 & company exposure & 海外收入、占比、地区收入 & 企业、财年、模式 & 币种与单位显示；不可比口径不直接排序。\\
+汇兑损益趋势 & company exposure & 汇兑损益/收入 & 企业、财年 & 正负方向统一；来源页码可下钻。\\
+外币资产负债 & company exposure & 外币资产、负债、净敞口 & 企业、币种 & 不同币种不得未换算直接相加。\\
+套保与授信 & company exposure & 名义本金、工具、可用授信 & 企业、财年 & 名义本金不等同收益；授信不计资产回报。\\
+地理披露地图 & bridge geography & 地区/国家粒度、子公司国家 & 企业、财年 & region 行不扩到 country；膨胀行数为 0。\\
+企业—风险重合 & bridge + monthly risk & 明确国家风险或地区风险摘要 & 企业、月份 & 只对真实粒度回答；地区披露显示不确定性。\\
+六家深度候选 & company exposure & 完整度、敞口、代表性和总分 & 财年 & 排名可复算；最多 6 家且模式覆盖可见。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\chapter{第四页：多币种—黄金周期实验室}
+
+第四页不是自动交易器，而是让用户选择国家、企业原型、事件、周期、期限、计价口径和成本假设，比较完整组合、去黄金组合、去美元资产组合以及黄金网格。经营现金、流动性储备与战略储备分别显示，不允许把长期黄金收益补贴 90 天经营现金缺口。
+
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{3.3cm}p{3.6cm}p{4.5cm}p{3.0cm}p{4.5cm}}
+\caption{第四页图表绑定与验收}\label{tab:page4-map}\\
+\toprule
+\textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\ \midrule
+\endhead
+情景控制器 & portfolio scenario & 国家、企业、事件、周期、期限、口径 & 全部情景维度 & 无对应结果时提示“不具备计算条件”。\\
+资产权重堆叠 & portfolio scenario & 七类权重与和 & 策略、层级 & 每条权重和为 1；禁止路径权重为 0。\\
+净值与回撤 & asset return, scenario & 成本后净值、回撤、恢复 & 策略、窗口 & Python 复算误差不超过 1\%。\\
+流动性覆盖 & scenario & 90 天覆盖率、合法可动用比例 & 层级、约束 & 分子资产可追到变现期和折价。\\
+黄金收益分解 & asset return & 金价、汇率、交互项 & 国家、口径 & 三项和误差不超过 \(10^{-10}\)。\\
+对称剔除对比 & scenario & 完整、去黄金、去美元 & 指标、期限 & 两种剔除使用同一成本与再配置规则。\\
+黄金网格 & scenario & 0—20\% 黄金与 CVaR/回撤/成本 & 周期、期限 & 2.5\% 是条件点，不是无条件推荐。\\
+反例窗口 & scenario, event & 黄金或美元短债不占优窗口 & 区域、资产 & 两类各至少 3 个，否则显示验收未通过。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\chapter{第五页：决策、约束与证据中心}
+
+第五页输出“可行、条件可行、禁止、人工复核”四类路径状态。禁止并不让页面停止工作：系统继续显示风险、缺失、政策原文、可行替代工具类别和应咨询的专业领域，但不得给出规避制裁、外汇管制或跨境转移限制的操作步骤。
+
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{3.3cm}p{3.6cm}p{4.4cm}p{3.1cm}p{4.5cm}}
+\caption{第五页图表绑定与验收}\label{tab:page5-map}\\
+\toprule
+\textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\ \midrule
+\endhead
+路径状态卡 & portfolio scenario & constraint status、原因码 & 国家、策略 & 禁止状态不显示受限执行步骤。\\
+三层建议表 & scenario & 经营/流动/战略层权重区间 & 期限、口径 & 经营现金与战略资产不混层。\\
+条件清单 & scenario & 托管、权属、兑换、会计、税务 & 资产、法域 & 未验证条件显示人工复核，不默认为可行。\\
+案例证据矩阵 & case evidence & 角色、等级、冲突、事件簇 & 风险类型、国家 & 45 案例可筛；事件簇去重。\\
+反例入口 & case, scenario & 黄金/美元短债不占优 & 资产、周期 & 反例与正例同等可见。\\
+来源追溯 & source registry & URL、许可、版本、哈希、最早日期 & source ID & 所有关键数值一跳到来源。\\
+数据质量雷达 & 各事实表 & 完整率、代理、模拟、插值、复核 & 国家、企业、指标 & 质量标记不会被聚合隐藏。\\
+管理层简报 & 统一指标模型 & 风险、敞口、候选方案、限制和证据 & 当前筛选上下文 & 文案明确事实、模拟、假设与待复核。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\chapter{第六页：全球周期与历史危机}
+
+页面固定资源名为 \Field{DB06_XH202612_GLOBAL_CYCLE_CRISIS_V41}。它不把美国、日本或欧洲纳入亚非拉国别排名，而是把全球冲击源、历史机制、亚非拉传导和储备工具表现放到同一解释路径：先识别全球状态，再观察哪些国家通过汇率、贸易、融资、资本流动或银行支付通道受到影响，最后进入第四页对比美元与黄金的边际贡献。
+
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{3.3cm}p{3.6cm}p{4.4cm}p{3.1cm}p{4.5cm}}
+\caption{第六页图表绑定与验收}\label{tab:page6-map}\\
+\toprule
+\textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\
+\midrule
+\endfirsthead
+\toprule \textbf{组件} & \textbf{来源表} & \textbf{字段/指标} & \textbf{筛选与下钻} & \textbf{预期结论与验收}\\ \midrule
+\endhead
+全球周期状态带 & global cycle month & 主状态、多标签、compound、触发轨迹 & 时间、状态 & 标签不被主状态覆盖；状态与 Python 完全一致。\\
+历史危机时间轴 & historical crisis event, dim event & 1929—2025 事件、政策节点、事件簇 & 危机类型、地区、制度 & 17 个锚点均可见；《广场协议》是节点，不单独计危机。\\
+六维周期仪表 & global cycle month & 通胀、增长、利率、信用、美元、市场回撤 & 时间、指标 & 显示观测期、发布日期和 vintage；缺失不显示为 0。\\
+危机期资产对照 & global cycle, asset return, historical event & 黄金、美元短债、股票、房地产表现 & 周期、事件、资产、计价 & 股票/房地产只作对照；历史不可比阶段显示限制。\\
+全球冲击传导图 & country event, global cycle, country risk & 汇率、贸易、融资、资本流动、银行支付 & 地区、国家、事件 & 全球状态与国别实际值并列，不用全球均值替代。\\
+当前—历史相似度 & global cycle, historical event & 距离、共同字段、缺失维度、可比性等级 & 当前月、历史事件 & 低可比项不输出可执行建议；能下钻证据页码。\\
+制度与可交易性提示 & historical event, case evidence & 货币制度、资本管制、黄金合法持有、工具存在性 & 历史事件 & 1929—1970 禁止现代回测提示始终可见。\\
+周期资产边际贡献 & portfolio scenario, global cycle & full/no gold/no USD 结果差 & 状态、期限、口径 & 两种剔除对称；至少展示各 3 个反例和 2 个共同不足阶段。\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+第六页与第一页国家全景、第二页国别危机、第四页配置实验室和第五页证据中心联动。全局筛选器包括周期、危机类型、地区、国家、资产和时间；P95 典型响应不超过 10 秒。点击历史事件不得直接改变现代组合权重，而是先显示可比性、可用工具和回测许可，再允许跳转到高可比压力情景。
+
+\chapter{统一指标模型}
+
+\begin{longtable}{p{3.7cm}p{4.4cm}p{3.0cm}p{2.9cm}}
+\caption{Smartbi 统一指标及默认聚合}\label{tab:semantic-metrics}\\
+\toprule
+\textbf{指标名} & \textbf{计算口径} & \textbf{默认聚合} & \textbf{禁止误用}\\
+\midrule
+国家覆盖数 & distinct iso3 & 去重计数 & 不按年份求和。\\
+最新投资存量 & 对应 latest stock year 的 stock & 末值 & 缺失不填 0。\\
+月度风险分 & 指定模型和月份 & 末值/平均 & 不跨模型混合平均。\\
+汇率同比贬值 & FX/FX[-12]-1 & 末值 & 方向必须是本币/美元。\\
+通胀同比 & CPI/CPI[-12]-1 & 末值 & 不对同比再求和。\\
+事件数 & distinct event cluster/id & 去重计数 & 不按案例文档计数。\\
+全球周期主状态 & 固定优先级下首个已触发标签 & 末值 & 不覆盖并行标签。\\
+复合全球危机 & 两类以上危机标签同时成立 & 布尔/计数 & 不把普通扩张标签计为危机。\\
+历史危机锚点数 & distinct historical event/case link & 去重计数 & 政策节点与危机分列。\\
+历史可比性 & 共同可比字段与制度限制规则 & 等级 & 低可比不输出执行建议。\\
+海外收入占比 & 海外收入/总收入或披露值 & 加权/末值 & 不把公司百分比直接相加。\\
+汇兑损益率 & 汇兑损益/收入 & 比率 & 保留正负方向和会计范围。\\
+90 天覆盖率 & 合法可用资产/净流出 & 比率 & 授信与名义资产不能全部计入。\\
+人民币购买力保全 & 实际期末价值/期初价值 & 比率 & 必须指定期限和策略。\\
+最大回撤 & 路径峰谷 & 非可加 & 不对国家回撤求和。\\
+CVaR 95\% & 最差 5\% 损失均值 & 非可加 & 样本窗口必须一致。\\
+合法可动用比例 & 约束后可用/名义资产 & 比率 & 禁止状态不得计为可用。\\
+黄金边际贡献 & 完整—去黄金 & 差值 & 与去美元使用同一规则。\\
+美元边际贡献 & 完整—去美元 & 差值 & 不等同美元资产自身收益。\\
+\bottomrule
+\end{longtable}
+
+\part{质量验收、排期与交接}
+
+\chapter{全链路数据验收矩阵}
+\clearpage
+\begin{landscape}
+\begin{longtable}{p{1.7cm}p{4.0cm}p{4.6cm}p{3.0cm}p{3.2cm}p{2.7cm}}
+\caption{数据硬验收项目}\label{tab:data-acceptance}\\
+\toprule
+\textbf{编号} & \textbf{对象} & \textbf{检查方法} & \textbf{阈值} & \textbf{证据输出} & \textbf{责任/复核}\\
+\midrule
+\endfirsthead
+\toprule \textbf{编号} & \textbf{对象} & \textbf{检查方法} & \textbf{阈值} & \textbf{证据输出} & \textbf{责任/复核}\\ \midrule
+\endhead
+DQ01 & 130 国主表 & count distinct iso3 & 恰好 130 & country master QA & B/D\\
+DQ02 & 区域配额 & group by region & 45/51/34 & region count & B/A\\
+DQ03 & 国家必填 & ISO3/名称/区域/货币/标签非空 & 100\% & null report & B/D\\
+DQ04 & 通道排除 & 风险排名连接 channel 标志 & 0 行 & channel audit & B/C\\
+DQ05 & 投资缺失 & 比较原空值与导出值 & 不得变 0 & null-zero audit & B/A\\
+DQ06 & 来源证据 & presence=true 连接 source ID & 100\% & presence lineage & B/D\\
+DQ07 & 40 国数量 & distinct selected iso3 & 40 & selection card & B/C\\
+DQ08 & 40 国区域 & group by region & 15/14/11 & selection card & B/C\\
+DQ09 & 对照国 & group by region, control & 每区至少 3 & control audit & B/C\\
+DQ10 & FX 完整率 & 每国真实月度非空数 & 不少于 154/192 & coverage matrix & B/C\\
+DQ11 & CPI 完整率 & 每国真实月度非空数 & 不少于 154/192 & coverage matrix & B/C\\
+DQ12 & 核心资产 & 美元金、美元短债、USD/CNY 非空 & 不低于 95\% & asset coverage & B/C\\
+DQ13 & 十一表主键 & group by 主键 having count>1 & 0 & duplicate report & B/C\\
+DQ14 & 十一表空主键 & 主键任一列为空 & 0 & key-null report & B/C\\
+DQ15 & 正式值来源 & formal value 无 source ID & 0 & lineage report & B/D\\
+DQ16 & 频率 & 月度表出现 annual 复制 & 0 & frequency audit & B/C\\
+DQ17 & 危机期插值 & 核心主结果 is imputed & 0 & imputation audit & B/C\\
+DQ18 & 极端值保留 & 标记前后行数比较 & 删除 0 行 & outlier report & B/C\\
+DQ19 & 币制改制 & 改制月机械变化误触发 & 0 & reform audit & B/C\\
+DQ20 & 企业样本 & distinct company id & 20 & company summary & D/B\\
+DQ21 & 企业关键值 & 页码和双复核 & 100\% & double check & D/B\\
+DQ22 & 地理粒度 & region 扩到 country & 0 行 & bridge audit & D/B\\
+DQ23 & 案例覆盖 & distinct case id & 45 & case matrix & D/A\\
+DQ24 & 事件数量 & 正式独立 event id & 至少 20 & event summary & C/D\\
+DQ25 & 事件区域 & group by region & 每区至少 5 & event summary & C/D\\
+DQ26 & 事件证据 & A 或两项独立 B & 100\% & evidence audit & D/A\\
+DQ27 & 权重 & abs(sum weight-1) & 不超过 \(10^{-8}\) & portfolio recalc & C/A\\
+DQ28 & 成本 & 所有成本字段 & 不得为负 & cost audit & C/B\\
+DQ29 & 黄金分解 & 三贡献与总回报差 & 不超过 \(10^{-10}\) & return recalc & C/B\\
+DQ30 & 无未来信息 & release/vintage 与 decision date & 违规 0 & vintage audit & C/A\\
+DQ31 & 对称实验 & full/no gold/no usd 成组 & 100\% & scenario group QA & C/A\\
+DQ32 & 反例覆盖 & 黄金和美元短债不占优窗口 & 各至少 3 & counterexample QA & C/D\\
+DQ33 & 类型标签 & 真实、代理、模拟、插值可筛 & 100\% & class audit & B/C\\
+DQ34 & 可复算 & 抽取 100 个结果独立复算 & 误差不超过 1\% & recalculation & C/A\\
+DQ35 & 全球周期骨架 & 1971-01 至 2025-12 月份 & 660 月 & global coverage & B/C\\
+DQ36 & 全球核心指标 & 适用期非空/适用期月份 & 不低于 90\% & global coverage & B/C\\
+DQ37 & 房地产频率 & 季度观测日、发布日期与截至期关联 & 伪月度 0 & property as-of audit & B/C\\
+DQ38 & 历史层边界 & 1929—1970 统一月表/现代回测 & 0 行 & history boundary audit & D/C\\
+DQ39 & 历史案例覆盖 & 17 宏观 case ID 与历史事件连接 & 17/17 & history evidence & D/A\\
+DQ40 & 日本事件簇 & Plaza、泡沫、长期停滞 cluster & 1 簇且不重复计数 & cluster audit & D/C\\
+DQ41 & 预期分类 & 1973—80、1990、2000、2008、2020、2022 & 全部命中规定主/复合状态 & cycle unit test & C/A\\
+DQ42 & 非储备权重 & 股票、房产、油、信用/VIX 权重 & 全部为 0 & weight boundary audit & C/A\\
+DQ43 & 双资产共同不足 & 黄金与美元短债均未完全覆盖损失 & 至少 2 个阶段 & counterexample QA & C/D\\
+DQ44 & 许可分发 & restricted 原始值进入提交包 & 0 & license distribution audit & B/A\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+验收报告不得只给“通过/失败”结论。每一项至少记录分子、分母、阈值、实际值、受影响主键样例、修复责任人、修复期限和重跑步骤。DQ24、DQ25 或 DQ32 不通过时，数据包可以用于探索，但正式报告必须删除相应的跨区域、普遍性或对称反例结论。
+
+\chapter{Smartbi 导入和模型操作手册}
+
+\section{环境盘点}
+
+2026 年 8 月 16 日只读盘点已经确认实例版本、许可、主要功能目录、非空工作区和演示模型能力，结果见表\ref{tab:smartbi-instance-audit}。A 仍须建立 \File{data/qa/smartbi_environment_inventory.xlsx}：把上述事实写入“已核验”页，并在 P0 与 D11 分别补齐带时间截图、实际上传限制、Excel 类型识别、对象创建权限、XML 导出权限和恢复目标。任何未实际操作的功能必须标记 \Field{not_executed}，不能仅凭菜单存在标记 \Field{pass}。官方页面说明产品通用能力\cite{smartbiversion,smartbiprepare,smartbiaichat}，最终交付以本实例实际验收为准。
+
+\section{导入顺序和回退路径}
+
+\begin{enumerate}
+  \item 先查重并创建隔离目录 \Field{XH202612_V41}，登记资源锁；不得复用或修改登录前已有对象；
+  \item 在 P0 只导入四张小样表，取得表\ref{tab:smartbi-instance-audit}未验证项的实测证据；P0 不通过不得批量导入；
+  \item 主路径使用增强数据集中的“导入表/Excel”，按表\ref{tab:import-package}先导入六张维度，再导入 11 张权威表和桥表；
+  \item 若“导入表/Excel”不满足类型或更新要求，回退到自助 ETL 的 Excel/导入文件节点；业务主题只作为版本兼容回退，不作为主模型；
+  \item 每个对象采用表\ref{tab:smartbi-resource-names}和 \File{Smartbi}\textsf{模型映射}\File{_V4.1.xlsx}的唯一名称、角色、连接与刷新方式；
+  \item 每导入一表，记录源 XLSX 行数、Smartbi 行数、唯一主键数、空主键数和导入耗时；
+  \item 导入模式只允许“以运行号替换同运行包”或“创建新运行分区”，不得无条件追加导致重复；
+  \item 数据类型错误必须回 Python 导出层处理，不能在 Smartbi 中把数字批量改成文本绕过；
+  \item 导入全部通过后建立单一星座型增强数据模型，再建立指标模型、看板、AI 项目、知识库与智能体。
+\end{enumerate}
+
+\begin{warningbox}[禁止使用内部接口绕过产品流程]
+平台测试与正式建设只使用主办方提供的网页菜单、官方导入/导出能力和公开说明。不得把会话接口、内部服务端点或浏览器缓存当成数据导入 API，也不得在脚本中保存账号凭据。这样可以避免版本耦合、凭据泄露和提交资源无法恢复。
+\end{warningbox}
+
+\begin{longtable}{p{3.3cm}p{3.6cm}p{3.2cm}p{3.7cm}}
+\caption{Smartbi 字段类型映射}\label{tab:smartbi-types}\\
+\toprule
+\textbf{Python/Excel} & \textbf{Smartbi 类型} & \textbf{验证样例} & \textbf{常见失败}\\
+\midrule
+string & 字符/维度 & ISO3、company ID & 前导零丢失、代码被转数值。\\
+date/datetime & 日期/时间 & month end、release date & Excel 序列号被识别为数值。\\
+integer & 整数指标 & year、count & 空值导致整列变浮点/文本。\\
+decimal & 数值指标 & FX、return、cost & 千分位或百分号导致文本。\\
+boolean & 布尔/枚举 & is proxy、channel & True/False、0/1 混用。\\
+URL/long text & 字符/说明 & source URL、policy text & 文本截断或特殊字符乱码。\\
+\bottomrule
+\end{longtable}
+
+\section{导入对账 SQL/指标}
+
+每张表至少建立以下对账指标：\Field{row_count}、\Field{distinct_key_count}、\Field{null_key_count}、\Field{min_date}、\Field{max_date}、\Field{source_id_count}、\Field{run_id_count}。对账结果与 \File{Smartbi}\textsf{导入行数与哈希清单}\File{.xlsx} 比较。行数相等但主键数变化仍为失败；桥表连接后事实行数超过预期时，先检查桥表唯一性和连接方向。年度事实必须通过 \Field{dim_year} 过滤，任何由月维度造成的 12 倍膨胀均为失败。
+
+\section{性能测试}
+
+\begin{longtable}{p{2.0cm}p{4.7cm}p{3.1cm}p{3.8cm}}
+\caption{典型操作性能测试}\label{tab:performance}\\
+\toprule
+\textbf{编号} & \textbf{操作} & \textbf{阈值} & \textbf{证据}\\
+\midrule
+P01 & 第一页切换三大区域并刷新全部组件 & 不超过 10 秒 & 三次录屏、P50/P95。\\
+P02 & 地图点击国家并下钻第二页 & 不超过 10 秒 & 传参和完成时间。\\
+P03 & 第二页切换 16 年时间范围 & 不超过 10 秒 & 查询日志/录屏。\\
+P04 & 第三页筛选企业和财年 & 不超过 10 秒 & 组件刷新时间。\\
+P05 & 第四页切换事件、期限和计价口径 & 不超过 10 秒 & 完整/剔除三策略返回。\\
+P06 & 第五页打开 45 案例和来源下钻 & 不超过 10 秒 & 明细行数与耗时。\\
+P07 & 第六页切换全球周期、危机并联动国家与资产 & 不超过 10 秒 & 状态、历史类比、联动和 P50/P95。\\
+P08 & AIChat 执行包含来源追溯和制度限制的数值问答 & 记录，不与看板阈值混用 & 首 token/总耗时与准确率。\\
+\bottomrule
+\end{longtable}
+
+性能不达标时按顺序处理：删除不必要高基数字段的默认展示；建立按月/国/企业/周期的预聚合；检查多对多和无条件笛卡尔连接；减少一次页面返回的明细行；必要时对事实按年份或运行号分区。实测服务资源快照只能帮助确定测试规模，不能证明性能达标；P01—P07 均需三次冷/热缓存测试并记录 P50/P95。不得以删除质量字段、来源追溯、制度限制或反例数据换取性能。
+
+\chapter{XML 干净恢复测试}
+
+\section{干净环境定义}
+
+干净环境是未加载 \Field{XH202612_V41} 项目数据、模型、指标、看板、知识库、智能体和 AIChat 配置的新租户或经主办方确认的隔离目标。可以保留产品本身和必要账号，但不得预先存在同名前缀对象。同一非空工作区内覆盖旧对象不算干净恢复。恢复人最好不是原搭建人，以验证操作指南是否足够；若主办方不给第二目标空间，必须把恢复标为未验收并说明外部依赖。
+
+\section{恢复步骤}
+
+\begin{enumerate}
+  \item 记录源环境和目标环境的 Smartbi 版本、补丁、许可模块和时间；
+  \item 导出项目、增强数据模型、指标模型、六页看板、AI 项目、知识库、智能体及数据对象的 XML/迁移资源、依赖清单和连接说明，计算 SHA-256；
+  \item 在目标环境导入 XML，记录所有警告和对象映射；
+  \item 按操作指南连接或导入 V4.1 的 18 个数据工作簿与 3 个控制工作簿，不使用源环境本机绝对路径；
+  \item 验证六张维度、11 张权威表和桥表的连接，特别检查月度、季度截至期、年度与历史事件未混频；
+  \item 打开六页并执行 P01—P07；
+  \item 执行 AI-01、AI-07、AI-11、AI-14、AI-17、AI-18、AI-19、AI-21、AI-22、AI-23、AI-24、AI-25 的关键抽验；
+  \item 比较源环境和恢复环境的 25 个关键 KPI/答案基准；
+  \item 保存导入日志、截图、录屏、差异表和最终签字。
+\end{enumerate}
+
+\begin{longtable}{p{3.6cm}p{3.3cm}p{3.3cm}p{3.4cm}}
+\caption{XML 恢复验收}\label{tab:xml-recovery}\\
+\toprule
+\textbf{对象} & \textbf{通过条件} & \textbf{证据} & \textbf{失败处理}\\
+\midrule
+XML 文件 & 可导入、哈希一致 & 文件和导入日志 & 重新导出并锁定依赖。\\
+数据源 & 无本机绝对路径依赖 & 连接说明和截图 & 参数化路径/重新绑定。\\
+数据模型与指标 & 对象数、星座关系、指标口径一致 & 模型截图/映射清单 & 检查版本、年度维度与依赖顺序。\\
+六页看板 & 页面、组件、筛选、下钻可用 & 录屏 & 修复资源引用后重新导出。\\
+关键 KPI & 源/目标误差不超过 1\% & 差异表 & 对账字段类型和聚合。\\
+AIChat/知识库/智能体 & 关键抽验正确且有来源、截止期和限制 & 测试卡 & 重建指标绑定、知识和约束后复测。\\
+性能 & P01—P07 不超过 10 秒 & 三次测试 & 优化模型或预聚合。\\
+\bottomrule
+\end{longtable}
+
+\chapter{8 月 15—31 日实施排期}
+\clearpage
+\begin{landscape}
+
+本表把 8 月 15—16 日标记为已经由本地文件、哈希或 QA 证明的实际进展；8 月 17—31 日均为计划事项，只有对应门槛和证据通过后才能改为完成。
+\begin{longtable}{p{2.2cm}p{4.1cm}p{3.7cm}p{3.7cm}p{3.7cm}}
+\caption{逐日任务、产出与门槛}\label{tab:schedule}\\
+\toprule
+\textbf{日期} & \textbf{A 项目/平台} & \textbf{B 数据} & \textbf{C 模型/验证} & \textbf{D 企业/证据/交付}\\
+\midrule
+\endfirsthead
+\toprule \textbf{日期} & \textbf{A 项目/平台} & \textbf{B 数据} & \textbf{C 模型/验证} & \textbf{D 企业/证据/交付}\\ \midrule
+\endhead
+8/15（实际） & 完成方向演进、V1.1—V3.1 和数据接口规划 & 完成既有项目资产只读盘点 & 固定国别事件与组合方法边界 & 建成 45 份案例文件库\\
+8/16（实际） & 完成 V4.0、Smartbi 认证后只读盘点和 V4.1 交接同步 & 完成 688 项来源终态、许可、哈希与替代路由 & 核对正式数据/模型均未启动，不把归档冒充权威表 & 完成 1,478 条引用、45 案例链接索引、双包与离线交接 QA\\
+8/17（计划） & 签署 D0/G0，冻结 V4.1 配置和新运行号 & 导入 688 项交叉表，形成正式 source\_registry 种子 & 独立复核复用、重复和许可路由 & 把 45 案例与 17 宏观案例分派到复核模板\\
+8/18（计划） & 评审 D1 主表与 D3 输入 & 建立 130 国主数据，导入商务部公报 & 建立国家主键和来源 QA 基准 & 启动 20 家年报录入和历史来源页码复核\\
+8/19 & 跟踪 G1 & 非洲候选宏观采集 & 检查覆盖和币制跳点 & 汽车/装备企业录入\\
+8/20 & 冻结数据源版本与许可 & 拉美候选宏观；全球周期 1971—2025 & 国别与全球完整率独立复算 & 基建/资源企业录入、历史制度复核\\
+8/21 & 主持 G2 样本会 & 运行 40 国选择 & 验证 15/14/11 和对照 & 企业关键数字双复核\\
+8/22 & 执行 P0 四表小样、图表、五问和 XML 导出 & 政策、平行汇率、全球周期 & 国别事件和全球状态脚本初跑 & 案例证据矩阵与 17 历史事件\\
+8/23 & 评审 G3 问题 & 补采/清洗 11 表；许可审计 & 事件合并、预期阶段与类比测试 & 企业画像、六家评分与制度冲突复核\\
+8/24 & 批准 G3 & 冻结权威数据候选 & 资产收益、黄金分解、复合危机 & 核查反例、事件簇与可比性\\
+8/25 & 建数据模型骨架 & 导出首次 Smartbi 包 & 组合情景与对称剔除 & 准备中文指标口径\\
+8/26 & 完成前三页看板 & 修复导入类型/连接 & 模型敏感和反例检查 & 企业页与来源抽屉内容\\
+8/27 & 完成第四、第五、第六页 & 更新 18+3 导入清单 & 复算 100 个结果与周期联动 & 配置 25 个 AI 测试卡\\
+8/28 & 主持 G5 初验 & Smartbi/Python 对账 & 性能与无前视审计 & AIChat 全测、报告初稿\\
+8/29 & 导出 XML & 冻结数据包与哈希 & 独立恢复数值复核 & 恢复操作、视频脚本、合规说明\\
+8/30 & 干净环境恢复与 G6 & 提交数据字典和来源 & 完成最终模型 QA & 录制三分钟视频、材料互审\\
+8/31 & 最终提交和冻结归档 & 复核提交清单 & 复核关键结果 & 报告、视频、说明终检\\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+这是一条高风险排期。发生延期时，优先保留证据质量、40 国核心汇率/CPI、1971—2025 全球核心序列、17 个历史锚点、合格独立事件、最多 6 家深度企业、对称资产实验、六页故事线、来源追溯和 XML 恢复。不得通过删除反例、降低事件阈值、把年度/季度数据复制成月度、忽略数据许可或把模拟值写成真实值赶工。
+
+\chapter{RACI、交接与失败升级}
+
+\begin{longtable}{p{4.0cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{3.1cm}}
+\caption{关键交付 RACI}\label{tab:raci}\\
+\toprule
+\textbf{交付} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{交接证据}\\
+\midrule
+D0 配置冻结 & A & C & C & C & 签字、配置哈希\\
+130 国主数据 & I & R/A & C & C & 国家 QA\\
+来源登记与 raw & I & R/A & C & C & 下载日志/哈希\\
+40 国冻结 & A & R & C & I & 评分卡/G2\\
+企业披露 & I & C & I & R/A & 双复核表\\
+45 案例与事件证据 & I & C & C & R/A & 证据矩阵\\
+全球周期与历史制度层 & A & R & R & R & 完整率、触发、证据和可比性\\
+国别事件与复合危机 & A & C & R & C & 触发轨迹/G4\\
+资产与组合 & A & C & R & C & 复算/无前视\\
+Smartbi 包 & A & R & C & I & 行数哈希\\
+六页看板 & R/A & C & C & C & 页面验收\\
+AIChat 25 问 & A & C & C & R & 测试卡/录屏\\
+XML 恢复 & R/A & C & C & R & 恢复报告\\
+最终提交 & R/A & C & C & R & 最终清单\\
+\bottomrule
+\end{longtable}
+
+R=执行，A=最终负责，C=协作复核，I=知会。若只有 3 人，A 兼 D 后仍需 B 或 C 对 A/D 录入的关键数字复核；B 与 C 不能因排期紧张合并为同一生产与验收人。
+
+\begin{longtable}{p{3.0cm}p{4.1cm}p{3.2cm}p{3.8cm}}
+\caption{失败码与升级规则}\label{tab:failure-codes}\\
+\toprule
+\textbf{失败码} & \textbf{含义} & \textbf{负责人} & \textbf{下游动作}\\
+\midrule
+\Field{SCOPE_CONFLICT} & 赛题、字段或频率口径冲突 & A & 暂停所有受影响步骤。\\
+\Field{SOURCE_LICENSE_BLOCK} & 许可未知、付费或受限 & A/B & 不采集；启用登记替代源。\\
+\Field{COUNTRY_KEY_FAIL} & ISO3、区域、货币或数量错误 & B & 停止 D3—D5。\\
+\Field{G2_FAIL} & 40 国资格/配额失败 & B/C & 补采或缩小承诺。\\
+\Field{DISCLOSURE_QA_FAIL} & 企业页码/双复核缺失 & D/B & 降为基础案例。\\
+\Field{G3_FAIL} & 主键、来源、频率或完整率失败 & B/C & 拒绝问题行，禁止建模。\\
+\Field{EVENT_COUNT_FAIL} & 事件总数或区域数不足 & C/D & 不降阈值，删除普遍性结论。\\
+\Field{GLOBAL_CYCLE_SOURCE_FAIL} & 全球周期核心序列完整率或许可失败 & B/C & 启用登记替代源或缩小规则适用期。\\
+\Field{HISTORY_EVIDENCE_FAIL} & 17 个历史锚点、制度或页码未完成复核 & D/A & 降为待核验，不进入核心类比。\\
+\Field{CYCLE_CLASS_FAIL} & 预期历史阶段未命中或使用未来信息 & C/A & 检查实现与 vintage，不事后改阈值。\\
+\Field{ANALOGUE_COMPARABILITY_FAIL} & 历史类比跨制度/工具越级 & C/D & 禁止输出执行建议，只保留机制说明。\\
+\Field{LOOKAHEAD_FAIL} & 使用未来发布或修订信息 & C/A & 结果作废，从对应时点重跑。\\
+\Field{RETURN_RECON_FAIL} & 收益或黄金分解不平 & C/B & 禁止导出情景。\\
+\Field{EXPORT_SCHEMA_FAIL} & XLSX 类型/字段/行数错误 & B/A & 重新导出，不在 Smartbi 修数。\\
+\Field{SMARTBI_RECON_FAIL} & 平台与 Python 不一致 & A/B & 检查聚合、连接和类型。\\
+\Field{XML_RECOVERY_FAIL} & 干净环境无法恢复 & A/D & G6 不通过，不提交为可恢复资源。\\
+\bottomrule
+\end{longtable}
+
+\chapter{提交包和交接清单}
+
+\begin{longtable}{p{4.2cm}p{4.3cm}p{2.5cm}p{3.2cm}}
+\caption{最终交付清单}\label{tab:handoff}\\
+\toprule
+\textbf{交付物} & \textbf{必须内容} & \textbf{责任} & \textbf{验收证据}\\
+\midrule
+冻结数据包 & raw 快照、11 表、维度、桥表、字典、来源与许可清单 & B & 运行号、行数、哈希。\\
+Python 管线 & 全套职责脚本、运行器、配置、依赖锁定 & B/C & 全量重跑成功。\\
+模型结果 & 国别风险、全球周期、历史类比、事件、收益、情景、反例 & C & 复算、无前视与可比性报告。\\
+Smartbi 资源 & 隔离项目、星座模型、指标模型、六页、AI 项目/知识库/智能体、XML & A & P0、对账、性能、隔离恢复。\\
+分析报告 & 方法、结果、反例、限制、来源 & A/D & 数字追溯 100\%。\\
+三分钟视频 & 问题、数据、六页故事线、全球传导、结论与边界 & D & 时长和画面/声音检查。\\
+操作指南 & 导入、筛选、下钻、问数、恢复 & A/D & 非搭建人按指南复现。\\
+合规声明 & 数据许可、资产建议边界、受限路径规则 & D/A & 与第五页口径一致。\\
+最终清单 & 相对路径、大小、SHA-256、状态、责任人 & A & 无临时锁文件/绝对路径。\\
+\bottomrule
+\end{longtable}
+
+\part{公式、模板与附加验收规则}
+
+\chapter{计算公式与单元测试}
+
+\section{汇率、通胀和储备}
+
+月度汇率变化、同比贬值、通胀和储备下降分别为：
+
+\begin{align}
+r_{FX,t}^{(1)} &= \frac{FX_t}{FX_{t-1}}-1,\\
+r_{FX,t}^{(12)} &= \frac{FX_t}{FX_{t-12}}-1,\\
+\pi_t &= \frac{CPI_t}{CPI_{t-12}}-1,\\
+g_{R,t}^{(12)} &= \frac{R_t}{R_{t-12}}-1.
+\end{align}
+
+单元测试至少包含：汇率方向倒数测试、恒定序列零变化、缺少 \(t-12\) 时返回空、币制换算前后连续、负储备或 CPI 非正值拒绝进入公式。
+
+若进口值为月度，覆盖月数为 \(R_t/M_t\)；若为过去 12 月进口总额，则为 \(12R_t/\sum_{j=0}^{11}M_{t-j}\)。两种算法必须在 \Field{calculation_method} 中区分。
+
+\section{收益、成本和组合}
+
+组合毛收益、成本后收益与净值为：
+
+\begin{align}
+r_{p,t}^{gross} &= \sum_{i=1}^{n} w_{i,t-1}r_{i,t},\\
+c_{p,t} &= c_{trade,t}+c_{spread,t}+c_{custody,t}+c_{insurance,t}+c_{hedge,t}+c_{haircut,t},\\
+r_{p,t}^{net} &= r_{p,t}^{gross}-c_{p,t},\\
+V_t &= V_{t-1}(1+r_{p,t}^{net}).
+\end{align}
+
+若成本以金额提供，先除以期初组合价值；一次性变现折价只在触发变现时计入，不能每月重复扣除。换手成本按 \(\frac{1}{2}\sum_i |w_{i,t}-w_{i,t^-}|\) 或项目冻结的买卖双边规则计算，并在成本配置中说明。
+
+\section{回撤、恢复与 CVaR}
+
+\begin{align}
+DD_t &= \frac{V_t}{\max_{s\le t}V_s}-1,\\
+MDD &= \min_t DD_t,\\
+CVaR_{0.95} &= E[L\mid L\ge VaR_{0.95}].
+\end{align}
+
+恢复时间从谷底后首个 \(V_t\) 不低于前高的月份计算；观察期未恢复时 \Field{recovery_censored=1} 且月份为空。CVaR 采用损失正值或收益负值的方向必须全项目一致，并在数据字典中写明。
+
+\section{流动性与合法可用性}
+
+\begin{equation}
+LCR_{90}=\frac{\sum_i A_i\times h_i\times a_i\times \mathbf{1}(d_i\le90)}{O_{90}},
+\end{equation}
+
+其中 \(h_i\) 为折价后比例，\(a_i\) 为合法可动用比例，\(d_i\) 为变现天数，\(O_{90}\) 为 90 天预计净流出。授信只在已承诺、未撤销、可在压力下提款并已扣除提款条件时进入扩展覆盖率，基础覆盖率不计授信。
+
+\section{对称剔除的边际贡献}
+
+对任一评价函数 \(M\)：
+
+\begin{align}
+\Delta_G &= M(P_{full})-M(P_{no\ gold}),\\
+\Delta_U &= M(P_{full})-M(P_{no\ USD}).
+\end{align}
+
+若指标“越低越好”（如回撤绝对值、CVaR、成本），展示层需要统一方向或明确标注，防止正差被错误解释为改善。对称实验的再配置规则必须预先冻结，例如按剩余可行资产权重比例分配，而不是为两次剔除分别优化。
+
+\chapter{人工录入模板规范}
+
+\section{企业年报模板}
+
+模板包含 \Field{raw_text}、\Field{raw_value}、\Field{raw_unit}、\Field{normalized_value}、\Field{page}、\Field{table_note}、\Field{entry_reviewer}、\Field{check_reviewer} 和 \Field{review_status}。录入者先抄录原值与原单位，再由脚本换算；复核人只能在独立列签字，不覆盖原录入记录。若数字来自合并附注和管理层讨论两个位置，应记录两条证据并说明选用规则。
+
+\section{政策与事件模板}
+
+政策模板以一条“国家—指标—有效期—原文”为单位；事件模板以候选事件为单位，记录五类触发、确认来源、合并建议与结束依据。人工不得直接修改脚本生成的触发值，只能在 \Field{review_comment} 中确认、反驳或要求补证。
+
+\section{案例证据模板}
+
+每份案例必须回答：观察对象是谁；发生了什么；关键日期和数字是什么；支持、反驳或限制哪一命题；美元、黄金、本币和企业经营分别如何受影响；证据等级与页码；是否与已有事件簇重复。未能定位原始数字的内容降级为检索线索，不因案例标题完整就视为已核验。
+
+\begin{longtable}{p{3.3cm}p{3.4cm}p{3.3cm}p{3.4cm}}
+\caption{人工模板共同校验}\label{tab:manual-template-qa}\\
+\toprule
+\textbf{校验} & \textbf{通过条件} & \textbf{失败状态} & \textbf{处置}\\
+\midrule
+页码定位 & 关键数字均有页码/表号 & review & 返回录入者补定位。\\
+双人复核 & 录入者与复核者不同 & reject & 不进入 curated。\\
+原值保留 & 原值/单位未被覆盖 & reject & 从年报重新录入。\\
+粒度 & 国家/地区/全球明确 & review/reject & 禁止越级映射。\\
+事实与推断 & 分列且有状态 & review & 推断不作为正式数字。\\
+冲突 & 两来源差异被记录 & conflict & A 或 D 裁决并保留痕迹。\\
+\bottomrule
+\end{longtable}
+
+\chapter{计划书自身验收}
+
+\begin{longtable}{p{1.8cm}p{8.0cm}p{4.2cm}}
+\caption{V4.1 文档验收清单}\label{tab:document-qa}\\
+\toprule
+\textbf{编号} & \textbf{验收问题} & \textbf{通过证据}\\
+\midrule
+DOC01 & 是否新建独立 V4.1，且 V1.1—V4.0、调研归档 V1.0、旧 references 和旧 Mermaid 均保持原哈希？ & 受保护旧文件哈希前后对比。\\
+DOC02 & D0—D12 是否都有负责人、输入、操作、输出、验收、失败处理和下一接收人？ & 步骤卡逐项检查。\\
+DOC03 & 11 张表是否均写字段、来源、作用、处理、路径和阈值？ & 字段字典和步骤映射。\\
+DOC04 & 130 国、40 国、20 企业、192 月、20 事件、1971—2025 全球序列和 17 历史锚点是否未被写成已完成成果？ & 全文检索计划/现状表述。\\
+DOC05 & 月度、季度截至期、年度和历史事件是否分表且无伪月度？ & 字段字典与频率审计。\\
+DOC06 & 黄金与美元是否采用周期协同和对称剔除？ & D9、第四页与公式。\\
+DOC07 & Smartbi 是否具体到 18 个数据工作簿、3 个控制工作簿、唯一前缀、星座模型、指标模型、六页、AI 对象和回退？ & 实测章、D10—D11 与操作手册。\\
+DOC08 & AIChat 是否有 25 张测试卡、来源、容差、制度可比性和限制？ & AI-01—AI-25。\\
+DOC09 & 是否包含 XML 干净恢复、性能和提交闭环？ & G5/G6 与恢复章。\\
+DOC10 & PDF 是否使用 XeLaTeX 成功编译，无未定义引用、表格越界和异常空白页？ & 编译日志与逐页渲染检查。\\
+DOC11 & PDF 是否为可读的详细执行计划，新增双层危机内容未造成不可读小字或异常空白？ & pdfinfo 页数与逐页视觉检查。\\
+DOC12 & 最后一页是否直接显示版本号 V4.1 和 2026-08-16？ & 最后一页截图/文本提取。\\
+DOC13 & 实例版本、已开放能力与未执行试跑是否被明确分开，且未记录账号凭据？ & 实测表、全文凭据扫描和 P0 状态。\\
+DOC14 & 17 个宏观案例、《广场协议》节点、历史制度和 1929—1970 不回测边界是否完整？ & 历史锚点表、字典与 QA。\\
+DOC15 & 股票、房地产、信用、原油和 VIX 是否只作识别/对照且储备权重为 0？ & 资产边界、情景字段与 DQ42。\\
+DOC16 & 688 项、1,478 条引用、45 案例和终态数量是否与归档机器清单一致？ & 自动内容校验与归档运行清单。\\
+DOC17 & D0—D12 是否均有唯一当前状态、证据路径和下一动作？ & \File{PROJECT_STATUS_V4.1.csv/.jsonl}。\\
+DOC18 & 是否明确案例仅完成来源链接索引，正式数据、模型和平台仍未完成？ & 当前状态章与全文禁止完成性误述扫描。\\
+DOC19 & 下一位成员或 AI 能否从相对路径在 30 分钟内定位计划、状态、原件和首个任务？ & 不少于 30 问离线交接测试。\\
+\bottomrule
+\end{longtable}
+
+\appendix
+
+\chapter{来源优先级与使用边界}
+
+\begin{longtable}{p{3.5cm}p{3.3cm}p{3.1cm}p{3.5cm}}
+\caption{来源优先级决策表}\label{tab:source-priority}\\
+\toprule
+\textbf{数据主题} & \textbf{第一来源} & \textbf{替代来源} & \textbf{不得采用的做法}\\
+\midrule
+中国对外投资 & 商务部年度公报 & 相关部门官方表 & 媒体估算替代国家数值。\\
+月度汇率/CPI & GEM/IFS/央行统计局 & 经登记权威数据库 & WDI 年度值复制 12 月。\\
+储备/进口覆盖 & IMF/央行/GEM & WDI 年度补充 & 混用不同储备定义。\\
+资本与汇出限制 & AREAER/正式法规 & 学术编码 & 媒体标题直接编码。\\
+资本开放 & Chinn--Ito & 其他公开学术指数 & 超出版本期静默外推。\\
+地缘风险 & 真正覆盖该国的月度 GPR & 事件证据 & 区域平均填所有国家。\\
+企业披露 & 年报/交易所公告 & 公司正式报告 & 新闻数字无页码入表。\\
+黄金 & SGE/国际官方或权威市场源 & 经登记公开源 & 不同时区价格直接拼接。\\
+美元短债 & 美国财政部/FRED & 透明 ETF/指数代理 & 票息与总回报混用。\\
+衰退与就业 & NBER、FRED Sahm 实时指标 & 其他官方劳动力资料 & 把事后确认日期伪装为实时信号。\\
+金融条件 & 芝加哥联储 NFCI & 经许可公开信用指标 & 未经许可再分发 ICE 高收益利差原始数据。\\
+全球股市/VIX/原油 & 官方或权威公开市场源 & 登记透明代理 & 把它们加入企业储备权重。\\
+房地产 & BIS 住宅价格与官方房价 & 登记季度来源 & 把季度值复制成 3 条真实月度观测。\\
+历史制度 & 央行、监管、法规、NBER 与学术原始研究 & 双 B 级权威资料 & 用现代 ETF/自由金价回填早期历史。\\
+制裁与冻结 & 发布机构正式文本 & 可靠二手资料辅助 & 提供规避路径。\\
+\bottomrule
+\end{longtable}
+
+\chapter{赛题交付映射}
+
+\begin{longtable}{p{3.1cm}p{4.1cm}p{3.4cm}p{3.2cm}}
+\caption{赛题能力到可验收交付物的映射}\label{tab:competition-map}\\
+\toprule
+\textbf{赛题能力} & \textbf{V4.1 实施} & \textbf{验收} & \textbf{证据}\\
+\midrule
+数据接入与处理 & Python 采集、清洗、11 表和 Excel 导入 & G1—G3 & 原始快照、脚本、QA 与许可审计。\\
+数据建模 & 六维、11 事实/逻辑表、桥表和单一星座增强模型 & 主外键、混频、历史边界与膨胀检查 & 模型截图、映射表、对账。\\
+可视化交互 & 六页、筛选、联动和下钻 & P01—P07 & 录屏、响应时间。\\
+智能分析 & 指标模型、知识库、智能体和 AIChat 25 问 & 正确率/容差/来源/粒度/制度边界 & 测试卡与录屏。\\
+业务创新 & 企业国别风险、全球周期、历史类比、三层储备和周期协同 & 对称实验、反例与复合危机 & 情景表、分析报告。\\
+完整与复现 & 运行清单、数据字典、XML 恢复 & G6 & 干净恢复报告。\\
+最终材料 & 报告、XML、数据、视频、说明 & 提交清单 & SHA-256 清单。\\
+\bottomrule
+\end{longtable}
+
+\chapter{管理层输出模板}
+
+每份管理层简报固定一页摘要和一页证据，不以模型分数替代业务解释。摘要顺序如下：
+
+\begin{enumerate}
+  \item 当前国家与数据截止期；
+  \item 当前全球周期主状态、并行标签、复合危机标志及其可得日期；
+  \item 风险状态及较上期变化的前三项驱动；
+  \item 企业真实披露的地区/国家敞口及披露质量；
+  \item 90 天经营现金覆盖和 3—12 月流动性缺口；
+  \item 1—10 年战略储备中美元、人民币短资、黄金和套保的候选区间；
+  \item 完整、去黄金和去美元组合的差异；
+  \item 可行、条件可行、禁止和人工复核路径；
+  \item 至少一个支持案例、一个反例、一个历史类比及其制度可比性限制；
+  \item 需要财务、法务、税务、会计或当地专业机构确认的待办。
+\end{enumerate}
+
+证据页列出所有关键数字的 source ID、来源机构、观测期、发布日期、抓取日、原文件、页码或 API 参数、质量标记和运行号。模拟企业参数另列，不与真实年报混排。
+
+\chapter{最终执行检查表}
+
+\begin{longtable}{p{1.4cm}p{9.1cm}p{1.8cm}p{1.8cm}}
+\caption{提交前逐项签字表}\label{tab:final-signoff}\\
+\toprule
+\textbf{序号} & \textbf{检查项} & \textbf{责任} & \textbf{状态}\\
+\midrule
+1 & 冻结配置、来源和脚本哈希写入运行清单 & A/B & 待执行\\
+2 & 130 国 ISO3、区域、货币、通道标签通过 & B/D & 待执行\\
+3 & 40 国完整率、配额和对照规则通过 & B/C & 待执行\\
+4 & 20 家企业、双复核和粒度纪律通过 & D/B & 待执行\\
+5 & 45 案例全部入矩阵并按事件簇去重 & D/A & 待执行\\
+6 & 不少于 20 个事件且每区不少于 5 个 & C/D & 待执行\\
+7 & 11 表主键、来源、频率、许可和质量通过 G3 & B/C & 待执行\\
+8 & 黄金收益分解、成本、权重和无前视通过 & C/B & 待执行\\
+9 & 两类资产各至少 3 个不占优窗口和 2 个共同不足阶段保留 & C/D & 待执行\\
+10 & P0 小样门通过，18 个数据工作簿和 3 个控制工作簿导入前后行数、主键一致 & A/B & 待执行\\
+11 & 六页筛选、联动、下钻和 10 秒性能通过 & A/D & 待执行\\
+12 & AIChat 25 问、来源、制度限制和容差通过 & D/A & 待执行\\
+13 & XML/迁移资源在隔离目标恢复项目、模型、指标、看板、知识库和智能体并复验关键路径 & A/D & 待执行\\
+14 & 报告数字、数据字典、来源和合规一致 & 全体 & 待执行\\
+15 & 视频不超过 3 分钟，画面和声音通过 & D/A & 待执行\\
+16 & 提交包无临时锁文件、绝对路径和未授权数据 & A/B & 待执行\\
+17 & 最终文件清单、大小和 SHA-256 完整 & A & 待执行\\
+18 & 内容冻结后不再单独手工修改 PDF/看板数字 & 全体 & 待执行\\
+19 & 所有新平台对象使用 \Field{XH202612_V41_} 前缀，既存资源零改动 & A/D & 待执行\\
+20 & \File{Smartbi}\textsf{模型映射}\File{_V4.1.xlsx}与平台字段、关系、页面、AI 指标逐项一致 & A/B & 待执行\\
+21 & 1971—2025 全球核心指标适用期完整率不低于 90\% & B/C & 待执行\\
+22 & 17 个宏观案例全部入历史表，《广场协议》和日本事件簇不重复 & D/A & 待执行\\
+23 & 预期历史阶段分类、复合危机和无未来信息测试通过 & C/A & 待执行\\
+24 & 股票、房地产、原油、信用与 VIX 的组合权重均为 0 & C/A & 待执行\\
+25 & V1.1—V4.0、调研归档 V1.0 与旧 Mermaid 哈希保持不变 & A & V4.1 交接阶段已核验；提交时复验\\
+26 & 688 项归档资产均有正式复用、替代、人工动作或排除路由 & B/D & V4.1 交接阶段已核验；D2 后复验\\
+27 & 当前状态 CSV、JSONL、AI 上下文和计划书对 D0—D12 的状态一致 & A/D & V4.1 交接阶段已核验\\
+28 & 共享交接包不包含 private-only 原件、账号、Cookie、令牌或绝对路径依赖 & A/B & V4.1 交接包核验\\
+29 & 非原执行者通过不少于 30 问离线测试定位现状、证据和下一动作 & D/A & V4.1 离线测试记录\\
+\bottomrule
+\end{longtable}
+
+\backmatter
+
+\begin{thebibliography}{99}
+
+\bibitem{competition}
+Smartbi，新希望集团：《XH-202612 Smartbi AI驱动的数据创新平台研究》，赛题原文，项目本地文件，2026。
+
+\bibitem{smartbiprepare}
+Smartbi：数据连接与准备，\url{https://www.smartbi.com.cn/prepare}，访问日期：2026-08-16。
+
+\bibitem{smartbiaichat}
+Smartbi：AIChat，\url{https://www.smartbi.com.cn/aichat}，访问日期：2026-08-16。
+
+\bibitem{smartbiversion}
+Smartbi：V11 最新版本与能力说明，\url{https://www.smartbi.com.cn/newversion}，访问日期：2026-08-16。
+
+\bibitem{smartbiinstance}
+主办方 Smartbi 测试实例：认证后只读版本、许可、功能目录、资源树与公开演示模型核验记录，\url{https://tiaozhanbei.cloud.smartbi.com.cn/smartbi/vision/index.jsp}，核验日期：2026-08-16；记录不包含登录凭据，上传、建模与恢复另按 P0/D10--D12 验收。
+
+\bibitem{mofcom2024}
+中华人民共和国商务部：《2024年度中国对外直接投资统计公报》相关发布页，\url{https://www.mofcom.gov.cn/zfxxgk/fdzdgknr/ztfl/tjsj/gwjjhztj/art/2025/art_73650df853694bf0a192e5fceb2948bb.html}，访问日期：2026-08-15。
+
+\bibitem{wbgem}
+World Bank, Global Economic Monitor, \url{https://datacatalog.worldbank.org/search/dataset/0037798/global-economic-monitor}, accessed 2026-08-15.
+
+\bibitem{wbapi}
+World Bank, Indicator API Queries, \url{https://datahelpdesk.worldbank.org/knowledgebase/articles/889392}, accessed 2026-08-15.
+
+\bibitem{imfweo}
+International Monetary Fund, World Economic Outlook Database, \url{https://data.imf.org/Datasets/WEO}, accessed 2026-08-15.
+
+\bibitem{imfareaer}
+International Monetary Fund, Annual Report on Exchange Arrangements and Exchange Restrictions, \url{https://www.elibrary.imf.org/subject/012}, accessed 2026-08-15.
+
+\bibitem{chinnito}
+Chinn, M. D. and Ito, H., The Chinn--Ito Index, documentation for the 2023 release, \url{https://web.pdx.edu/~ito/Readme_kaopen2023.pdf}, accessed 2026-08-15.
+
+\bibitem{countrygpr}
+Banco de España, Geopolitical Risk Indices for 34 Economies, \href{https://www.bde.es/wbe/en/areas-actuacion/analisis-e-investigacion/recursos/indices-de-riesgo-geopolitico-generales-y-bilaterales-para-34-economias-6075d2451c9da91.html}{country GPR resource page}, accessed 2026-08-15.
+
+\bibitem{fred}
+Federal Reserve Bank of St. Louis, FRED economic data, \url{https://fred.stlouisfed.org/}, accessed 2026-08-15.
+
+\bibitem{sge}
+上海黄金交易所：上海金基准价及相关市场数据，\url{https://www.sge.com.cn/}，访问日期：2026-08-15。
+
+\bibitem{ofac}
+U.S. Department of the Treasury, OFAC Sanctions Programs and Information, \url{https://ofac.treasury.gov/}, accessed 2026-08-15.
+
+\bibitem{nberdating}
+National Bureau of Economic Research, Business Cycle Dating, \url{https://www.nber.org/research/business-cycle-dating}, accessed 2026-08-16.
+
+\bibitem{nberchronology}
+National Bureau of Economic Research, US Business Cycle Expansions and Contractions, \url{https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions}, accessed 2026-08-16.
+
+\bibitem{sahmfred}
+Federal Reserve Bank of St. Louis, Real-time Sahm Rule Recession Indicator, \url{https://fred.stlouisfed.org/series/SAHMREALTIME}, accessed 2026-08-16.
+
+\bibitem{nfciofficial}
+Federal Reserve Bank of Chicago, National Financial Conditions Index: Current Data, \url{https://www.chicagofed.org/research/data/nfci/current-data}, accessed 2026-08-16.
+
+\bibitem{nfcifred}
+Federal Reserve Bank of St. Louis, Chicago Fed National Financial Conditions Index, \url{https://fred.stlouisfed.org/series/NFCI}, accessed 2026-08-16.
+
+\bibitem{fredhyoas}
+Federal Reserve Bank of St. Louis and ICE Data Indices, US High Yield Index Option-Adjusted Spread, \url{https://fred.stlouisfed.org/series/BAMLH0A0HYM2}, accessed 2026-08-16. The submission package must follow the stated ICE/FRED access and redistribution restrictions; raw observations are not redistributed without permission.
+
+\bibitem{bisproperty}
+Bank for International Settlements, Residential Property Prices: Tables and Dashboards, \url{https://data.bis.org/topics/RPP/tables-and-dashboards}, accessed 2026-08-16.
+
+\bibitem{bispropertydoc}
+Bank for International Settlements, Selected Residential Property Price Series: Documentation, \url{https://www.bis.org/statistics/pp_selected_documentation.pdf}, accessed 2026-08-16.
+
+\bibitem{bojplaza2021}
+Bank of Japan, Speech on Japan's Economy and Monetary Policy, including the Plaza Accord, bubble formation and subsequent adjustment, \url{https://www.boj.or.jp/en/about/press/koen_2021/ko210831a.htm}, accessed 2026-08-16.
+
+\bibitem{bojplazabubble2011}
+Bank of Japan, Speech reviewing the Plaza Accord and Japan's asset-price bubble, \url{https://www.boj.or.jp/en/about/press/koen_2011/ko110906a.htm}, accessed 2026-08-16.
+
+\bibitem{archivev10}
+数据创新平台项目组：《XH-202612 调研资料归档 V1.0》，运行号 \Field{20260816_research_archive_v1}，包括研究资料总清单、引用与结论关系、案例索引、许可矩阵、缺失受限清单与资料卡，项目本地不可变归档，2026-08-16。
+
+\bibitem{archiveqa}
+数据创新平台项目组：《调研资料归档与 AI 交接说明书 V1.0》及 \File{package_verification.json}，96 页 PDF、共享/冷备份回环验证、秘密扫描与离线 AI 交接测试记录，2026-08-16。
+
+\bibitem{archivev11}
+数据创新平台项目组：《调研资料归档 V1.1：网页数据可用化增量包》，运行号 \Field{20260816_web_usability_v11}，包括688项四态动作清单、159项本地HTML处理矩阵、开放底层资源、正文与表格提取、结构化资源清单和失败任务卡，2026-08-16。
+
+\bibitem{secapi}
+U.S. Securities and Exchange Commission, EDGAR Application Programming Interfaces, \url{https://www.sec.gov/search-filings/edgar-application-programming-interfaces}, accessed 2026-08-16.
+
+\bibitem{treasuryxml}
+U.S. Department of the Treasury, Treasury Daily Interest Rate XML Feed, \url{https://home.treasury.gov/treasury-daily-interest-rate-xml-feed}, accessed 2026-08-16.
+
+\bibitem{bisapi}
+Bank for International Settlements, BIS Statistics API Documentation, \url{https://stats.bis.org/api-doc/v2/}, accessed 2026-08-16.
+
+\end{thebibliography}
+
+\clearpage
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{3.2cm}
+  {\color{OceanBlue}\rule{0.82\textwidth}{1.4pt}}\\[1.2cm]
+  {\Huge\bfseries\color{DeepNavy}文档版本信息\par}
+  \vspace{1.4cm}
+  \begin{tabular}{p{4.2cm}p{8.0cm}}
+    \toprule
+    文档名称 & 全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书\\
+    \midrule
+    版本号 & \textbf{V4.2}\\
+    编制日期 & 2026 年 8 月 16 日\\
+    文档状态 & 网页数据可用化、评分逐条落实与执行交接稿\\
+    适用项目 & 面向中国出海企业的国别风险与应急储备智能决策平台\\
+    文档边界 & V4.2 为独立数据可用化与评分执行版；不覆盖 V1.1—V4.1、调研归档 V1.0、旧参考文献或旧 Mermaid\\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  {\Large\bfseries\color{DeepNavy}版本号：V4.2\par}
+  \vspace{1.0cm}
+  {\color{OceanBlue}\rule{0.82\textwidth}{1.4pt}}
+\end{center}
+
+\end{document}

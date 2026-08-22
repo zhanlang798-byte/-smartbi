@@ -1,0 +1,19 @@
+﻿类别,变量或资产,论文定义/口径,时间范围,频率,来源,来源URL,与论文关系,可得状态,本地文件,许可/使用限制,精确或代理,备注
+论文,论文PDF,完整论文,2026-02-28,一次性,MDPI/PMC,https://www.mdpi.com/1099-4300/28/3/271,论文原文,已下载,research/media_sentiment_gold_paper/paper/Ji_et_al_2026_Entropy_CNN-QRLSTM.pdf,CC BY 4.0,精确,40页，DOI 10.3390/e28030271
+论文,全文XML,结构化全文与参考文献,2026-02-28,一次性,Europe PMC,https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13025532/fullTextXML,论文原文,已下载,research/media_sentiment_gold_paper/metadata/europepmc_fulltext.xml,PMC开放获取,精确,未发现supplementary-material节点
+文本词典,THUOCL财经词表,论文参考文献32所列清华财经类词汇词库,更新于2016-12-24,3830词条,THUNLP/Heywhale,https://github.com/thunlp/THUOCL,论文明确引用,已下载,research/media_sentiment_gold_paper/datasets/raw/THUOCL_caijing.txt,MIT；成果中应声明使用清华大学开放中文词库,精确引用源,词+DF值，Tab分隔；它不是论文最终55正/104负情绪词典
+目标价格,WGC/Global黄金价格,论文所谓WGC或Global市场金价，具体定盘价/时点未给出,2022-02-01至2025-02-28,日频/含非交易日,World Gold Council/Goldhub,https://china.gold.org/goldhub/data/gold-prices,论文声称使用但未给数据文件,未下载,,LBMA历史基准价受IBA许可约束,不可精确复现,论文没有定义字段、币种、时点和许可
+目标价格,LBMA黄金价格,LBMA Gold Price，AM/PM及币种未说明,2022-02-01至2025-02-28,日频/含非交易日,LBMA/IBA,https://www.lbma.org.uk/prices-and-data/lbma-precious-metal-prices,论文声称使用但未给数据文件,需授权,,获取、使用或再分发历史基准价通常需IBA许可,不可精确复现,不以第三方镜像规避许可
+目标价格,SGE黄金价格,上海黄金交易所金价，合约和收盘/加权均价未说明,2022-02-01至2025-02-28,日频/含非交易日,上海黄金交易所,https://www.sge.com.cn/sjzx/quotation_daily_new,论文声称使用但未给数据文件,官方入口可查,,按交易所网站条款使用,定义不充分,2024年起新查询页；更早数据在历史列表
+文本语料,金投网黄金新闻,标题与正文共1303篇,2022-02-01至2025-02-28,文章级→日聚合,金投网,https://www.cngold.org/,论文描述但未发布,未公开,,新闻正文受版权及网站条款约束,不可复现,作者未给URL清单、抓取时间、去重规则或文本文件
+情绪指标,BI媒体情绪极性,基于领域词典和语义规则的每日聚合情绪,2022-02-01至2025-02-28,日频,作者构造,https://www.mdpi.com/1099-4300/28/3/271,论文描述但未发布,未公开,,作者生成数据,不可复现,最终55个正向词、104个负向词及日度BI均未附
+文本词典,HowNet情感词典,基础情感词典之一,未说明,词表,HowNet,,正文提及，未给参考文献或版本,未下载,,版本和授权不明确,不可精确复现,需作者说明具体版本和许可
+解释变量,USDX,美元指数，论文未给供应商/代码,2022-02-01至2025-02-28,图示近似日频,未注明,,正文变量表,仅有代理,research/media_sentiment_gold_paper/datasets/processed/Fed_broad_dollar_proxy_2022-02_to_2025-02.csv,美联储数据可公开使用；代理口径需披露,代理,已整理770条非空观测；广义美元指数不等于ICE DXY
+解释变量,CPI,CPI国家、基期和季调均未说明；图示约99-103,2022-02-01至2025-02-28,月频阶梯,未注明,,正文变量表,未下载,,口径不明,不可精确复现,图形更像中国CPI指数，但属于推断
+解释变量,EIR,论文写作effective/real interest rate，期限和国家未说明,2022-02-01至2025-02-28,图示近似日频,未注明,,正文变量表,仅有代理,research/media_sentiment_gold_paper/datasets/processed/US_Treasury_real_yield_proxy_2022-02_to_2025-02.csv,美国财政部公开数据,代理,已整理769条10年期TIPS实际收益率
+解释变量,M2,国家、单位、是否同比/存量及缩放未说明,2022-02-01至2025-02-28,月频阶梯,未注明,,正文变量表,未下载,,口径不明,不可精确复现,图示2.45-3.15可能经过缩放，不能安全反推
+解释变量,EPU,经济政策不确定性指数，版本未说明,2022-02-01至2025-02-28,月频阶梯,未注明,,正文变量表,仅有候选代理,research/media_sentiment_gold_paper/datasets/processed/China_Mainland_EPU_proxy_2022-02_to_2025-02.csv,CC BY 4.0；注明Davis、Liu、Sheng及policyuncertainty.com,代理,已整理37个月；论文图示数值不能唯一锁定该版本
+解释变量,Petroleum,石油价格，品种和交易所未说明,2022-02-01至2025-02-28,图示近似日频,未注明,,正文变量表,仅有代理,research/media_sentiment_gold_paper/datasets/processed/World_Bank_commodity_proxies_2022-02_to_2025-02.csv,世界银行开放数据，注明来源,代理,已整理月度Brent；频率与论文不同
+解释变量,Copper,铜价，图示约5.5万-8.5万，疑似人民币/吨,2022-02-01至2025-02-28,图示近似日频,未注明,,正文变量表,仅有代理,research/media_sentiment_gold_paper/datasets/processed/World_Bank_commodity_proxies_2022-02_to_2025-02.csv,世界银行开放数据，注明来源,代理,已整理美元/吨月度铜价；不能冒充论文疑似国内铜价
+解释变量,ACI,Actuaries Climate Index，区域/季节聚合规则未说明,2022-02-01至2025-02-28,图示阶梯,Actuaries Climate Index,https://actuariesclimateindex.org/data/,正文变量表（来源未引用）,需人工接受条款,,仅限个人专业/非商业研究；禁止机器人抓取和再分发,未下载,必须由参赛者本人阅读并勾选条款后下载，不能自动抓取
+开放代理,世界银行商品月度数据,Brent、铜、金、银月度价格,2022-02-01至2025-02-28,月频,World Bank Commodity Markets,https://www.worldbank.org/en/research/commodity-markets,非论文明确引用,已整理,research/media_sentiment_gold_paper/datasets/processed/World_Bank_commodity_proxies_2022-02_to_2025-02.csv,注明世界银行来源,代理/拓展,37个月，可用于先跑通流程及金银联合建模

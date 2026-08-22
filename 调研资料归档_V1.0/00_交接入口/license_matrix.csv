@@ -1,0 +1,9 @@
+rule_id,source_group,routing,rule,policy_url
+LIC-01,项目自有文档与案例,shared,允许进入共享包；保持来源和历史版本。,
+LIC-02,World Bank开放数据,shared,通常CC BY 4.0；逐数据集检查第三方例外并署名。,https://data.worldbank.org/summary-terms-of-use
+LIC-03,美国政府公开资料,shared,按原机构署名；第三方嵌入内容另行判断。,
+LIC-04,WGC/LBMA/ICE,metadata_only,不自动抓取或再分发；只保存元数据和人工访问说明。,https://www.gold.org/terms-and-conditions
+LIC-05,FRED,metadata_only,逐序列检查版权和AI使用限制；优先原始发布机构。,https://fred.stlouisfed.org/legal/
+LIC-06,新闻媒体与付费内容,metadata_only,默认不保存全文；保留标题、链接、用途和访问日期。,
+LIC-07,公开但再分发未明确的论文/报告,private_only,仅进入本机冷备份；共享包仅保留元数据。,
+LIC-08,登录/勾选条款/付费数据,metadata_only,生成待办卡；用户人工授权后再纳入本机副本。,

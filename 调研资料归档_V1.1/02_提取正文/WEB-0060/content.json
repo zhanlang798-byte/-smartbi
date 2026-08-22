@@ -1,0 +1,54 @@
+{
+  "source_id": "WEB-0060",
+  "title": "shanghai gold exchange",
+  "publisher": "上海黄金交易所",
+  "publication_date": "",
+  "source_url": "https://en.sge.com.cn/h5_data_BenchmarkPrice",
+  "extracted_at": "2026-08-16T09:21:18.347Z",
+  "content_state": "STRUCTURED_DATA",
+  "paragraph_count": 10,
+  "table_count": 3,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Shanghai Gold Benchmark Price"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Shanghai Silver Benchmark Price"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Licensed Marked Data Distributors"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Shanghai Gold Benchmark Price Chart"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Tip: use IE10 and above or other same level browser ."
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Shanghai Gold Benchmark Price"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Monthly Average Price"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Detailed Rules of the Shanghai Gold Exchange on Benchmark Price Trading (Amended)"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Shanghai Gold Benchmark Price- White Paper"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "Copyright © 2016 Shanghai Gold Exchange All rights reserved"
+    }
+  ],
+  "outgoing_data_links": []
+}

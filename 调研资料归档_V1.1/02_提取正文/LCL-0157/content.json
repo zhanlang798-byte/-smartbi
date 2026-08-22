@@ -1,0 +1,34 @@
+{
+  "source_id": "LCL-0157",
+  "title": "data_DailyReport",
+  "publisher": "项目已有资料",
+  "publication_date": "2026-07-13",
+  "source_url": "",
+  "extracted_at": "2026-08-16T09:21:15.402Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 5,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Shanghai Gold Exchange Daily Report"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Please note that this page is available for the data"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "started from Jan 1,2024.Please click"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "to get earlier information"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Shanghai Gold Price Daily Report"
+    }
+  ],
+  "outgoing_data_links": []
+}

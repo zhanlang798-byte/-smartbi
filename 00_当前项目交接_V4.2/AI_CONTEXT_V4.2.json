@@ -1,0 +1,126 @@
+{
+  "context_version": "V4.2",
+  "as_of": "2026-08-16",
+  "project_name": "全球经济周期与亚非拉国别风险多币种储备智能决策平台",
+  "competition_code": "XH-202612",
+  "document_status": "网页数据可用化、评分逐条落实与执行交接稿",
+  "authoritative_plan": "计划书/07_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.2.pdf",
+  "authority_order": [
+    "00_当前项目交接_V4.2/README_先读我.md",
+    "00_当前项目交接_V4.2/AI_CONTEXT_V4.2.json",
+    "调研资料归档_V1.1/00_交接入口/source_action_registry_V1.1.jsonl",
+    "计划书/07_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.2.pdf",
+    "调研资料归档_V1.0/00_交接入口/研究资料总清单.jsonl"
+  ],
+  "actual_completed": {
+    "source_actions": {
+      "run_id": "20260816_web_usability_v11",
+      "as_of": "2026-08-16",
+      "status": "CLOSED_WITH_EXPLICIT_GAPS",
+      "total": 688,
+      "unique_asset_ids": 688,
+      "acquisition_state": {
+        "ACQUIRED": 367,
+        "NOT_ACQUIRED": 12,
+        "NOT_APPLICABLE": 309
+      },
+      "content_state": {
+        "BLOCK_PAGE": 3,
+        "DOCUMENT_LOCAL": 44,
+        "DOWNLOAD_LANDING": 7,
+        "EMPTY_SHELL": 1,
+        "LOCAL_ASSET": 151,
+        "LOW_CONTENT": 1,
+        "MIXED_CONTENT": 90,
+        "NARRATIVE_CONTENT": 49,
+        "NOT_ACQUIRED": 321,
+        "STRUCTURED_DATA": 8,
+        "STRUCTURED_LOCAL": 13
+      },
+      "extraction_state": {
+        "EXTRACTED": 154,
+        "FAILED": 325,
+        "NOT_REQUIRED": 208,
+        "PARTIAL": 1
+      },
+      "formal_use_state": {
+        "CORE": 46,
+        "EXCLUDED": 335,
+        "REPLACED": 13,
+        "SUPPLEMENT": 294
+      },
+      "html_local_file_count": 159,
+      "html_source_record_count": 196,
+      "actionable_gap_count": 365
+    },
+    "html_audit": {
+      "run_id": "20260816_web_usability_v11",
+      "audited_html": 196,
+      "file_exists": 159,
+      "content_state_counts": {
+        "BLOCK_PAGE": 3,
+        "DOWNLOAD_LANDING": 7,
+        "EMPTY_SHELL": 1,
+        "LOW_CONTENT": 1,
+        "MIXED_CONTENT": 90,
+        "NARRATIVE_CONTENT": 49,
+        "NOT_ACQUIRED": 37,
+        "STRUCTURED_DATA": 8
+      },
+      "candidates": 1909,
+      "fetchable_candidates": 1909
+    },
+    "structured_resources": {
+      "inspected_resources": 26,
+      "inventory_rows": 180,
+      "extracted_or_inspected": 178,
+      "manual_conversion_required": 2,
+      "failed": 0
+    },
+    "downloads": {
+      "attempted": 36,
+      "acquired": 26,
+      "failed": 10
+    },
+    "scoring_trace_rows": 17,
+    "mermaid_validation": "LOCAL_COMPATIBILITY_PASS_NOT_PLATFORM_RENDERED",
+    "plan_pdf": {
+      "pages": 287,
+      "machine_render_qa": "PASS",
+      "blank_pages": 0,
+      "edge_touch_pages": 0,
+      "sha256": "936d2f8d778b07a7c47928dde7dce1d7ac91c2692139e5debcb06d8d7b47407b",
+      "visual_sampling": "PASS"
+    }
+  },
+  "partial_reusable": [
+    "D0文字合同和评分矩阵",
+    "D2B取得的26个底层资源",
+    "D2C自动提取候选",
+    "V1.0的45案例和17宏观案例种子"
+  ],
+  "not_started": [
+    "130国正式表",
+    "40国正式面板",
+    "20家企业正式库",
+    "全球周期正式序列",
+    "事件与组合模型",
+    "Smartbi写入和六页",
+    "AIChat",
+    "XML恢复和最终提交"
+  ],
+  "immediate_next_actions": [
+    "A/B/C签署D0/G0",
+    "将CORE和SUPPLEMENT来源审批映射到正式source_registry",
+    "B建立130国ISO3主表",
+    "D人工复核关键数字和2个旧XLS"
+  ],
+  "do_not_claim": [
+    "HTML或HTTP 200等于数据可用",
+    "自动提取已经人工核验",
+    "所有受限全文均已取得",
+    "130国、40国、20家企业、模型或Smartbi已经完成",
+    "美元或黄金是预设单一胜者"
+  ],
+  "security": "Smartbi密码、Cookie、令牌和认证头不进入任何共享文件。"
+}

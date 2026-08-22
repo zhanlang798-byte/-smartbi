@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_IP_DURABLE_GOODS_DETAIL" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_IP_DURABLE_GOODS_DETAIL" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_IP_DURABLE_GOODS_DETAIL_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_IP_DURABLE_GOODS_DETAIL_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="GMFD">
+    <xs:annotation>
+     <xs:documentation>Durable manufacturing (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3361T3">
+    <xs:annotation>
+     <xs:documentation>  Motor vehicles and parts  NAICS=3361-3</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3364T9">
+    <xs:annotation>
+     <xs:documentation>  Aerospace and miscellaneous transportation eq.  NAICS=3364-9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G321">
+    <xs:annotation>
+     <xs:documentation>  Wood product  NAICS=321</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3211">
+    <xs:annotation>
+     <xs:documentation>    Sawmills and wood preservation  NAICS=3211</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3212A9">
+    <xs:annotation>
+     <xs:documentation>    Plywood and misc. wood products  NAICS=3212,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3212">
+    <xs:annotation>
+     <xs:documentation>      Veneer, plywood, and engineered wood product  NAICS=3212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G321211A2">
+    <xs:annotation>
+     <xs:documentation>        Veneer and plywood  NAICS=321211,2</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G321219">
+    <xs:annotation>
+     <xs:documentation>        Reconstituted wood product  NAICS=321219</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3219">
+    <xs:annotation>
+     <xs:documentation>      Other wood product  NAICS=3219</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32191">
+    <xs:annotation>
+     <xs:documentation>        Millwork  NAICS=32191</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32192">
+    <xs:annotation>
+     <xs:documentation>        Wood container and pallet  NAICS=32192</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32199">
+    <xs:annotation>
+     <xs:documentation>        All other wood product  NAICS=32199</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N321991">
+    <xs:annotation>
+     <xs:documentation>          Manufactured home (mobile home)  NAICS=321991</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G327">
+    <xs:annotation>
+     <xs:documentation>  Nonmetallic mineral product  NAICS=327</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3271A4A9">
+    <xs:annotation>
+     <xs:documentation>    Clay, lime, gypsum, and misc. nonmetallic mineral products  NAICS=3271,4,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3271A9">
+    <xs:annotation>
+     <xs:documentation>      Clay and misc. nonmetallic mineral products  NAICS=3271,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3271">
+    <xs:annotation>
+     <xs:documentation>        Clay product and refractory  NAICS=3271</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32711">
+    <xs:annotation>
+     <xs:documentation>          Pottery, ceramics, and plumbing fixture  NAICS=32711</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G32712">
+    <xs:annotation>
+     <xs:documentation>          Clay building material and refractories  NAICS=32712</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3279">
+    <xs:annotation>
+     <xs:documentation>        Other nonmetallic mineral product  NAICS=3279</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3274">
+    <xs:annotation>
+     <xs:documentation>      Lime and gypsum product  NAICS=3274</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3272">
+    <xs:annotation>
+     <xs:documentation>    Glass and glass product  NAICS=3272</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G327213">
+    <xs:annotation>
+     <xs:documentation>      Glass container  NAICS=327213</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3273">
+    <xs:annotation>
+     <xs:documentation>    Cement and concrete product  NAICS=3273</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32731">
+    <xs:annotation>
+     <xs:documentation>      Cement  NAICS=32731</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N32732T9">
+    <xs:annotation>
+     <xs:documentation>      Concrete and product  NAICS=32732-9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G331">
+    <xs:annotation>
+     <xs:documentation>  Primary metal  NAICS=331</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3311A2">
+    <xs:annotation>
+     <xs:documentation>    Iron and steel products  NAICS=3311,2</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3311A2Q">
+    <xs:annotation>
+     <xs:documentation>      Pig iron  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3311A2R">
+    <xs:annotation>
+     <xs:documentation>      Raw steel  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3311A2F">
+    <xs:annotation>
+     <xs:documentation>      Coke and products  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3311A2B">
+    <xs:annotation>
+     <xs:documentation>      Construction steel  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3311A2C">
+    <xs:annotation>
+     <xs:documentation>      Consumer durable steel  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3311A2D">
+    <xs:annotation>
+     <xs:documentation>      Can and closure steel  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3311A2E">
+    <xs:annotation>
+     <xs:documentation>      Equipment steel  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3311A2Z">
+    <xs:annotation>
+     <xs:documentation>      Miscellaneous steel  NAICS=3311,2pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3313A4">
+    <xs:annotation>
+     <xs:documentation>    Nonferrous except foundries  NAICS=3313,4</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3313">
+    <xs:annotation>
+     <xs:documentation>      Alumina and aluminum production and processing  NAICS=3313</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N331313P">
+    <xs:annotation>
+     <xs:documentation>        Primary aluminum production  NAICS=331313pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N331314">
+    <xs:annotation>
+     <xs:documentation>        Secondary smelting and alloying of aluminum  NAICS=331314</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N331315A8M">
+    <xs:annotation>
+     <xs:documentation>        Misc. aluminum materials  NAICS=331315,8pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N331318E">
+    <xs:annotation>
+     <xs:documentation>        Aluminum extruded product  NAICS=331318pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3314">
+    <xs:annotation>
+     <xs:documentation>      Nonferrous metal (except aluminum) production and processing  NAICS=3314</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33141">
+    <xs:annotation>
+     <xs:documentation>        Nonferrous metal (except aluminum) smelting and refining  NAICS=33141</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33141C">
+    <xs:annotation>
+     <xs:documentation>          Primary smelting and refining of copper  NAICS=33141pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N33141N">
+    <xs:annotation>
+     <xs:documentation>          Primary smelting and refining of nonferrous metal (except copper and aluminum)  NAICS=33141pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3315">
+    <xs:annotation>
+     <xs:documentation>    Foundries  NAICS=3315</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G332">
+    <xs:annotation>
+     <xs:documentation>  Fabricated metal product  NAICS=332</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3321">
+    <xs:annotation>
+     <xs:documentation>    Forging and stamping  NAICS=3321</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3322">
+    <xs:annotation>
+     <xs:documentation>    Cutlery and handtool  NAICS=3322</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3323">
+    <xs:annotation>
+     <xs:documentation>    Architectural and structural metals  NAICS=3323</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3325">
+    <xs:annotation>
+     <xs:documentation>    Hardware  NAICS=3325</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3326">
+    <xs:annotation>
+     <xs:documentation>    Spring and wire product  NAICS=3326</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3327">
+    <xs:annotation>
+     <xs:documentation>    Machine shops; turned product; and screw, nut, and bolt  NAICS=3327</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3328">
+    <xs:annotation>
+     <xs:documentation>    Coating, engraving, heat treating, and allied activities  NAICS=3328</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3329">
+    <xs:annotation>
+     <xs:documentation>    Other fabricated metal product  NAICS=3329</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G332991">
+    <xs:annotation>
+     <xs:documentation>      Ball and roller bearing  NAICS=332991</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G333">
+    <xs:annotation>
+     <xs:documentation>  Machinery  NAICS=333</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3331">
+    <xs:annotation>
+     <xs:documentation>    Agriculture, construction, and mining machinery  NAICS=3331</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33311">
+    <xs:annotation>
+     <xs:documentation>      Agricultural implement  NAICS=33311</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G333111">
+    <xs:annotation>
+     <xs:documentation>        Farm machinery and equipment  NAICS=333111</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33312">
+    <xs:annotation>
+     <xs:documentation>      Construction machinery  NAICS=33312</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N33313">
+    <xs:annotation>
+     <xs:documentation>      Mining and oil and gas field machinery  NAICS=33313</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3332">
+    <xs:annotation>
+     <xs:documentation>    Industrial machinery  NAICS=3332</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3333A9">
+    <xs:annotation>
+     <xs:documentation>    Commercial and service industry machinery and other general purpose machinery  NAICS=3333,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3334T6">
+    <xs:annotation>
+     <xs:documentation>    HVAC, metalworking, and power transmission machinery  NAICS=3334-6</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3334">
+    <xs:annotation>
+     <xs:documentation>      Ventilation, heating, air-conditioning, and commercial refrigeration equipment  NAICS=3334</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3335">
+    <xs:annotation>
+     <xs:documentation>      Metalworking machinery  NAICS=3335</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3336">
+    <xs:annotation>
+     <xs:documentation>      Engine, turbine, and power transmission equipment  NAICS=3336</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G334">
+    <xs:annotation>
+     <xs:documentation>  Computer and electronic product  NAICS=334</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3341">
+    <xs:annotation>
+     <xs:documentation>    Computer and peripheral equipment  NAICS=3341</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3342">
+    <xs:annotation>
+     <xs:documentation>    Communications equipment  NAICS=3342</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3343">
+    <xs:annotation>
+     <xs:documentation>    Audio and video equipment  NAICS=3343</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3344">
+    <xs:annotation>
+     <xs:documentation>    Semiconductor and other electronic component  NAICS=3344</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3345">
+    <xs:annotation>
+     <xs:documentation>    Navigational, measuring, electromedical, and control instruments  NAICS=3345</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G335">
+    <xs:annotation>
+     <xs:documentation>  Electrical equipment, appliance, and component  NAICS=335</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3352">
+    <xs:annotation>
+     <xs:documentation>    Household appliance  NAICS=3352</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33521">
+    <xs:annotation>
+     <xs:documentation>      Small electrical appliance  NAICS=33521</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33522">
+    <xs:annotation>
+     <xs:documentation>      Major appliance  NAICS=33522</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G335@2">
+    <xs:annotation>
+     <xs:documentation>    Electrical equipment except appliances  NAICS=3351,3,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3351">
+    <xs:annotation>
+     <xs:documentation>      Electric lighting equipment  NAICS=3351</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3353">
+    <xs:annotation>
+     <xs:documentation>      Electrical equipment  NAICS=3353</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3359">
+    <xs:annotation>
+     <xs:documentation>      Other electrical equipment and component  NAICS=3359</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33591">
+    <xs:annotation>
+     <xs:documentation>        Battery  NAICS=33591</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N33592">
+    <xs:annotation>
+     <xs:documentation>        Communication and energy wire and cable  NAICS=33592</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33593T9">
+    <xs:annotation>
+     <xs:documentation>        Other electrical equipment  NAICS=33593-9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G336">
+    <xs:annotation>
+     <xs:documentation>  Transportation equipment  NAICS=336</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3361">
+    <xs:annotation>
+     <xs:documentation>    Motor vehicle  NAICS=3361</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33611">
+    <xs:annotation>
+     <xs:documentation>      Automobile and light duty motor vehicle  NAICS=33611</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33611A">
+    <xs:annotation>
+     <xs:documentation>        Automobile  NAICS=336110pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33611T">
+    <xs:annotation>
+     <xs:documentation>        Light truck and utility vehicle  NAICS=336110pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33612">
+    <xs:annotation>
+     <xs:documentation>      Heavy duty truck  NAICS=33612</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3362">
+    <xs:annotation>
+     <xs:documentation>    Motor vehicle body and trailer  NAICS=3362</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G336212">
+    <xs:annotation>
+     <xs:documentation>      Truck trailer  NAICS=336212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N336213">
+    <xs:annotation>
+     <xs:documentation>      Motor home  NAICS=336213</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G336214">
+    <xs:annotation>
+     <xs:documentation>      Travel trailer and camper  NAICS=336214</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3363">
+    <xs:annotation>
+     <xs:documentation>    Motor vehicle parts  NAICS=3363</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3364">
+    <xs:annotation>
+     <xs:documentation>    Aerospace product and parts  NAICS=3364</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G336411T3">
+    <xs:annotation>
+     <xs:documentation>      Aircraft and parts  NAICS=336411-3</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3365T9">
+    <xs:annotation>
+     <xs:documentation>    Railroad eq., ships and boats, and other transportation equipment  NAICS=3365-9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3365">
+    <xs:annotation>
+     <xs:documentation>      Railroad rolling stock  NAICS=3365</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3366">
+    <xs:annotation>
+     <xs:documentation>      Ship and boat building  NAICS=3366</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3369">
+    <xs:annotation>
+     <xs:documentation>      Other transportation equipment  NAICS=3369</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G337">
+    <xs:annotation>
+     <xs:documentation>  Furniture and related product  NAICS=337</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3371">
+    <xs:annotation>
+     <xs:documentation>    Household and institutional furniture and kitchen cabinet  NAICS=3371</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3372A9">
+    <xs:annotation>
+     <xs:documentation>    Office and other furniture  NAICS=3372,9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G339">
+    <xs:annotation>
+     <xs:documentation>  Miscellaneous  NAICS=339</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N3391">
+    <xs:annotation>
+     <xs:documentation>    Medical equipment and supplies  NAICS=3391</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="N1133">
+    <xs:annotation>
+     <xs:documentation>Logging  NAICS=1133</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

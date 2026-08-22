@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_IP_GROSS_VALUE_STAGE_OF_PROCESS_GROUPS" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_IP_GROSS_VALUE_STAGE_OF_PROCESS_GROUPS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_IP_GROSS_VALUE_STAGE_OF_PROCESS_GROUPS_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_IP_GROSS_VALUE_STAGE_OF_PROCESS_GROUPS_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="TB56400">
+    <xs:annotation>
+     <xs:documentation>Finished processing--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="TB56300">
+    <xs:annotation>
+     <xs:documentation>Semifinished processing--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="TB56200">
+    <xs:annotation>
+     <xs:documentation>Primary processing--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="TB56100">
+    <xs:annotation>
+     <xs:documentation>Crude processing--gross value</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

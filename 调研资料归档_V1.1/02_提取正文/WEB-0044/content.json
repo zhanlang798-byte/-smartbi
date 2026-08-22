@@ -1,0 +1,254 @@
+{
+  "source_id": "WEB-0044",
+  "title": "World Bank Open Data",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://data.worldbank.org/summary-terms-of-use",
+  "extracted_at": "2026-08-16T09:21:17.069Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 60,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Summary Terms of Use"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Unless indicated otherwise in the data or indicator"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "metadata, you are free to copy, distribute, adapt, display or include the"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "data in other products for commercial or noncommercial purposes at no"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "cost under a Creative Commons Attribution 4.0 International License, with the"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "additional terms below. The basic terms may be accessed here. When"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "you download or use the Datasets, you are agreeing to comply with the terms"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "of a CC BY 4.0 license, and also agreeing to the following mandatory and"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Any and all disputes arising under this License that"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "cannot be settled amicably shall be resolved in accordance with the"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "following procedure:"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Pursuant to a notice of mediation communicated by"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "reasonable means by either You or the Licensor to the other, the"
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "dispute shall be submitted to non-binding mediation conducted in"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "accordance with rules designated by the Licensor in the copyright"
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "notice published with the Work, or if none then in accordance with"
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "those communicated in the notice of mediation. The language used in"
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "the mediation proceedings shall be English unless otherwise"
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "If any such dispute has not been settled within 45"
+    },
+    {
+      "locator": "html:paragraph[20]",
+      "text": "days following the date on which the notice of mediation is provided,"
+    },
+    {
+      "locator": "html:paragraph[21]",
+      "text": "either You or the Licensor may, pursuant to a notice of arbitration"
+    },
+    {
+      "locator": "html:paragraph[22]",
+      "text": "communicated by reasonable means to the other, elect to have the"
+    },
+    {
+      "locator": "html:paragraph[23]",
+      "text": "dispute referred to and finally determined by arbitration. The"
+    },
+    {
+      "locator": "html:paragraph[24]",
+      "text": "arbitration shall be conducted in accordance with the rules designated"
+    },
+    {
+      "locator": "html:paragraph[25]",
+      "text": "by the Licensor in the copyright notice published with the Work, or if"
+    },
+    {
+      "locator": "html:paragraph[26]",
+      "text": "none then in accordance with the UNCITRAL Arbitration Rules as then in"
+    },
+    {
+      "locator": "html:paragraph[27]",
+      "text": "force. The arbitral tribunal shall consist of a sole arbitrator and"
+    },
+    {
+      "locator": "html:paragraph[28]",
+      "text": "the language of the proceedings shall be English unless otherwise"
+    },
+    {
+      "locator": "html:paragraph[29]",
+      "text": "agreed. The place of arbitration shall be where the Licensor has its"
+    },
+    {
+      "locator": "html:paragraph[30]",
+      "text": "headquarters. The arbitral proceedings shall be conducted remotely"
+    },
+    {
+      "locator": "html:paragraph[31]",
+      "text": "(e.g., via telephone conference or written submissions) whenever"
+    },
+    {
+      "locator": "html:paragraph[32]",
+      "text": "You must include attribution for the data you use in"
+    },
+    {
+      "locator": "html:paragraph[33]",
+      "text": "the manner indicated in the metadata included with the data."
+    },
+    {
+      "locator": "html:paragraph[34]",
+      "text": "Generally, you agree to provide"
+    },
+    {
+      "locator": "html:paragraph[35]",
+      "text": "attribution to The World Bank and its data providers in the following"
+    },
+    {
+      "locator": "html:paragraph[36]",
+      "text": "format: The World Bank: Dataset name: Data source (if known). When"
+    },
+    {
+      "locator": "html:paragraph[37]",
+      "text": "sharing or facilitating access to the Datasets, you agree to include"
+    },
+    {
+      "locator": "html:paragraph[38]",
+      "text": "the same acknowledgment requirement in any sub-licenses of the data"
+    },
+    {
+      "locator": "html:paragraph[39]",
+      "text": "that you grant, and a requirement that any sub-licensees do the same."
+    },
+    {
+      "locator": "html:paragraph[40]",
+      "text": "You may meet this requirement by providing the uniform resource"
+    },
+    {
+      "locator": "html:paragraph[41]",
+      "text": "locator (URL) of these terms of use."
+    },
+    {
+      "locator": "html:paragraph[42]",
+      "text": "You may use our application programming interfaces"
+    },
+    {
+      "locator": "html:paragraph[43]",
+      "text": "(“APIs”) to facilitate access to the Datasets, whether through a"
+    },
+    {
+      "locator": "html:paragraph[44]",
+      "text": "separate Web site or through another type of software"
+    },
+    {
+      "locator": "html:paragraph[45]",
+      "text": "You must not claim or imply that The World Bank"
+    },
+    {
+      "locator": "html:paragraph[46]",
+      "text": "endorses your use of the data,or use The World Bank’s name, logo(s) or"
+    },
+    {
+      "locator": "html:paragraph[47]",
+      "text": "trademark(s) in conjunction with such use."
+    },
+    {
+      "locator": "html:paragraph[48]",
+      "text": "Some datasets and indicators are provided by third"
+    },
+    {
+      "locator": "html:paragraph[49]",
+      "text": "parties, and may not be redistributed or reused without the consent of"
+    },
+    {
+      "locator": "html:paragraph[50]",
+      "text": "the original data provider, or may be subject to additional terms and"
+    },
+    {
+      "locator": "html:paragraph[51]",
+      "text": "conditions. Where applicable, these conditions are included in the"
+    },
+    {
+      "locator": "html:paragraph[52]",
+      "text": "dataset or indicator metadata."
+    },
+    {
+      "locator": "html:paragraph[53]",
+      "text": "The World Bank makes no warranties with respect to"
+    },
+    {
+      "locator": "html:paragraph[54]",
+      "text": "the data and you agree The World Bank shall not be liable to you in"
+    },
+    {
+      "locator": "html:paragraph[55]",
+      "text": "connection with your use of the data."
+    },
+    {
+      "locator": "html:paragraph[56]",
+      "text": "This is only a summary of the Terms of Use for Datasets Listed in The World"
+    },
+    {
+      "locator": "html:paragraph[57]",
+      "text": "Bank Data Catalog. Please read the actual agreement that controls your use of"
+    },
+    {
+      "locator": "html:paragraph[58]",
+      "text": "the Datasets, which is available here: Terms of Use for Datasets. Also see"
+    },
+    {
+      "locator": "html:paragraph[59]",
+      "text": "the World Bank Terms and Conditions, to which you agree as a condition of"
+    },
+    {
+      "locator": "html:paragraph[60]",
+      "text": "accessing this website."
+    }
+  ],
+  "outgoing_data_links": []
+}

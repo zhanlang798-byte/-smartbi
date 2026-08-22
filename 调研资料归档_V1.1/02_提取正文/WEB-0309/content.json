@@ -1,0 +1,51 @@
+{
+  "source_id": "WEB-0309",
+  "title": "IFRS - IFRS Accounting Standards Navigator",
+  "publisher": "IFRS Foundation",
+  "publication_date": "",
+  "source_url": "https://www.ifrs.org/issued-standards/list-of-standards/",
+  "extracted_at": "2026-08-16T09:21:30.593Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 6,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "The IFRS Accounting Standards Navigator houses all IFRS Accounting Standards and related materials."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Premium access: the IFRS Digital Subscription offers enhanced content and exclusive features."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Free access: provides a basic level of access to all registered users of IFRS.org. The unaccompanied Standards FAQ includes more information about what's provided to registered users for free and why."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Our editorial corrections revise minor inaccuracies, including misspellings and numbering or grammatical mistakes, in the Standards and Amendments."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "IFRS Standards can be used free of charge for non-commercial purposes, such as preparing corporate disclosures. Any other use, including integration into products and services, requires a licence from the IFRS Foundation."
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Video guide to the Standards Navigator"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.ifrs.org/content/dam/ifrs/about-us/legal-and-governance/legal-docs/modern-slavery-statement.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Modern slavery statement",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.ifrs.org/content/dam/ifrs/about-us/legal-and-governance/legal-docs/trade-mark-guidelines.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Trade mark guidelines",
+      "locator": "anchor"
+    }
+  ]
+}

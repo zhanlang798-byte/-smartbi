@@ -1,0 +1,38 @@
+{
+  "source_id": "WEB-0238",
+  "title": "Publications by date",
+  "publisher": "European Central Bank",
+  "publication_date": "",
+  "source_url": "https://www.ecb.europa.eu/press/pubbydate/html/index.en.html",
+  "extracted_at": "2026-08-16T09:21:23.613Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 6,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Our website uses cookies"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "We use functional cookies to store user preferences; analytics cookies to improve website performance; third-party cookies set by third-party services integrated into the website. You have the choice to accept or reject them. For more information or to review your preference on the cookies and server logs we use, we invite you to:"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Read our privacy statement Learn more about how we use cookies"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Your cookie preference has expired"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "We are always working to improve this website for our users. To do this, we use the anonymous data provided"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Learn more about how we use cookies"
+    }
+  ],
+  "outgoing_data_links": []
+}

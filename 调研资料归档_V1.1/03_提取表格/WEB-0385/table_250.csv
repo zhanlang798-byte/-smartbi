@@ -1,0 +1,59 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7,column_8,column_9,column_10,column_11,column_12,column_13
+,,"Years Ended December 31,",,,,,,,,,,
+,,2005,,,2004,,,2003,,,,
+,,(in millions),,,,,,,,,,
+Operating activities:,,,,,,,,,,,,
+Net income,,$,322,,,$,443,,,$,476,
+Adjustments to reconcile net income to net cash provided from operating activities:,,,,,,,,,,,,
+"Depreciation, depletion and amortization",,,644,,,,662,,,,530,
+Minority interest expense,,,380,,,,335,,,,173,
+Loss (income) from discontinued operations,,,52,,,,(37,),,,—,
+Revenue from prepaid forward sales obligation,,,(48,),,,—,,,,—,
+Accretion of accumulated reclamation obligations,,,27,,,,25,,,,23,
+"Amortization of deferred stripping costs, net",,,(56,),,,4,,,,(36,)
+Deferred income taxes,,,(12,),,,74,,,,(31,)
+"Write-down of inventories, stockpiles and ore on leach pads",,,13,,,,25,,,,18,
+Write-down of long-lived assets,,,43,,,,39,,,,35,
+Write-down of goodwill,,,41,,,,52,,,,—,
+"Cumulative effect of change in accounting principle, net",,,—,,,,47,,,,35,
+"(Gain) loss on investments, net",,,(54,),,,39,,,,(83,)
+"Gain on extinguishment of NYOL liabilities, net",,,—,,,,—,,,,(221,)
+(Gain) loss on guarantee of QMC debt,,,(9,),,,(11,),,,30,
+"Gain on asset sales, net",,,(48,),,,(28,),,,(15,)
+"Hedge loss, net",,,99,,,,10,,,,—,
+Other operating adjustments,,,56,,,,(23,),,,(53,)
+Decrease (Increase) in operating assets:,,,,,,,,,,,,
+Trade and accounts receivable,,,(65,),,,(6,),,,5,
+"Inventories, stockpiles and ore on leach pads",,,(189,),,,(15,),,,(73,)
+Other assets,,,(32,),,,(1,),,,(5,)
+Increase (Decrease) in operating liabilities:,,,,,,,,,,,,
+Accounts payable and other accrued liabilities,,,137,,,,(37,),,,(23,)
+Early settlement of derivative instruments classified as cash flow hedges,,,—,,,,—,,,,(119,)
+Reclamation liabilities,,,(48,),,,(48,),,,(21,)
+Net cash provided from continuing operations,,,"1,253",,,,"1,549",,,,645,
+Net cash (used in) provided from discontinued operations,,,(10,),,,8,,,,39,
+Net cash from operations,,,"1,243",,,,"1,557",,,,684,
+Investing activities:,,,,,,,,,,,,
+"Additions to property, plant and mine development",,,"(1,226",),,,(683,),,,(484,)
+"Additions to property, plant and mine development of discontinued operations",,,(25,),,,(35,),,,(21,)
+Investments in marketable debt and equity securities,,,"(3,301",),,,"(1,720",),,,(189,)
+Proceeds from sale of marketable debt and equity securities,,,"3,358",,,,899,,,,412,
+Proceeds from sale of discontinued operations,,,147,,,,—,,,,—,
+Cash recorded upon consolidation of Batu Hijau,,,—,,,,82,,,,—,
+Proceeds from sale of assets,,,79,,,,51,,,,6,
+Early settlement of ineffective derivative instruments,,,—,,,,8,,,,(58,)
+Investments in affiliates,,,—,,,,—,,,,(70,)
+Other investing,,,(9,),,,(34,),,,24,
+Net cash used in investing activities,,,(977,),,,"(1,432",),,,(380,)
+Financing activities:,,,,,,,,,,,,
+"Proceeds from debt, net",,,583,,,,56,,,,493,
+Repayments of debt,,,(218,),,,(254,),,,"(1,162",)
+Dividends paid to common stockholders,,,(179,),,,(133,),,,(71,)
+Dividends paid to minority interests,,,(186,),,,(237,),,,(146,)
+Proceeds from stock issuance,,,43,,,,78,,,,"1,287",
+Change in restricted cash and other,,,(5,),,,15,,,,—,
+Net cash provided from (used in) financing activities,,,38,,,,(475,),,,401,
+Effect of exchange rate changes on cash,,,(3,),,,2,,,,24,
+Net change in cash and cash equivalents,,,301,,,,(348,),,,729,
+Cash and cash equivalents at beginning of year,,,781,,,,"1,129",,,,400,
+Cash and cash equivalents at end of year,,$,"1,082",,,$,781,,,$,"1,129",

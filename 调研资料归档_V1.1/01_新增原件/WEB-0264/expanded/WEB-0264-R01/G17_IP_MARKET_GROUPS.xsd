@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_IP_MARKET_GROUPS" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_IP_MARKET_GROUPS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_IP_MARKET_GROUPS_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_IP_MARKET_GROUPS_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="B50001">
+    <xs:annotation>
+     <xs:documentation>Total index</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B50030">
+    <xs:annotation>
+     <xs:documentation>  Final products and nonindustrial supplies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B50002">
+    <xs:annotation>
+     <xs:documentation>    Final products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51000">
+    <xs:annotation>
+     <xs:documentation>      Consumer goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51100">
+    <xs:annotation>
+     <xs:documentation>        Durable consumer goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51110">
+    <xs:annotation>
+     <xs:documentation>          Automotive products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51111">
+    <xs:annotation>
+     <xs:documentation>            Autos and trucks, consumer</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51112">
+    <xs:annotation>
+     <xs:documentation>            Auto parts and allied goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51120">
+    <xs:annotation>
+     <xs:documentation>          Other durable goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51121">
+    <xs:annotation>
+     <xs:documentation>            Computers, video and audio equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51122">
+    <xs:annotation>
+     <xs:documentation>            Appliances, furniture, and carpeting</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B511221">
+    <xs:annotation>
+     <xs:documentation>              Household appliances</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B511222">
+    <xs:annotation>
+     <xs:documentation>              Carpeting and furniture</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51123">
+    <xs:annotation>
+     <xs:documentation>            Miscellaneous durable goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51200">
+    <xs:annotation>
+     <xs:documentation>        Nondurable consumer goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51210">
+    <xs:annotation>
+     <xs:documentation>          Nondurable nonenergy consumer goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51211">
+    <xs:annotation>
+     <xs:documentation>            Foods and tobacco</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51212">
+    <xs:annotation>
+     <xs:documentation>            Clothing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51213">
+    <xs:annotation>
+     <xs:documentation>            Chemical products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51214">
+    <xs:annotation>
+     <xs:documentation>            Paper products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51215">
+    <xs:annotation>
+     <xs:documentation>            Miscellaneous nondurable goods</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51220">
+    <xs:annotation>
+     <xs:documentation>          Consumer energy products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51221">
+    <xs:annotation>
+     <xs:documentation>            Fuels</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B51222">
+    <xs:annotation>
+     <xs:documentation>            Residential utilities</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52000">
+    <xs:annotation>
+     <xs:documentation>      Equipment, total</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52100">
+    <xs:annotation>
+     <xs:documentation>        Business equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52110">
+    <xs:annotation>
+     <xs:documentation>          Transit equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3361E">
+    <xs:annotation>
+     <xs:documentation>            Business vehicles</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33611E">
+    <xs:annotation>
+     <xs:documentation>              Business light vehicles</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33611B">
+    <xs:annotation>
+     <xs:documentation>                Automobile, business  NAICS=336110pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G33611U">
+    <xs:annotation>
+     <xs:documentation>                Light trucks, business  NAICS=336110pt.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52120">
+    <xs:annotation>
+     <xs:documentation>          Information processing and related equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52130">
+    <xs:annotation>
+     <xs:documentation>          Industrial and other equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52131">
+    <xs:annotation>
+     <xs:documentation>            Industrial equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52132">
+    <xs:annotation>
+     <xs:documentation>            Other equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52200">
+    <xs:annotation>
+     <xs:documentation>        Oil and gas well drilling and manufactured homes</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B52300">
+    <xs:annotation>
+     <xs:documentation>        Defense and space equipment</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B54000">
+    <xs:annotation>
+     <xs:documentation>    Nonindustrial supplies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B54100">
+    <xs:annotation>
+     <xs:documentation>      Construction supplies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B54200">
+    <xs:annotation>
+     <xs:documentation>      Business supplies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B54210">
+    <xs:annotation>
+     <xs:documentation>        Non-energy business supplies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B54220">
+    <xs:annotation>
+     <xs:documentation>        Commercial energy products</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53000">
+    <xs:annotation>
+     <xs:documentation>  Materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="Z53010">
+    <xs:annotation>
+     <xs:documentation>    Materials ex. energy materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53100">
+    <xs:annotation>
+     <xs:documentation>      Durable goods materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53110">
+    <xs:annotation>
+     <xs:documentation>        Consumer parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53120">
+    <xs:annotation>
+     <xs:documentation>        Equipment parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53121">
+    <xs:annotation>
+     <xs:documentation>          Computer and other board assemblies and parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53122">
+    <xs:annotation>
+     <xs:documentation>          Semiconductors, printed circuit boards, and other</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53123">
+    <xs:annotation>
+     <xs:documentation>          Other equipment parts</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53130">
+    <xs:annotation>
+     <xs:documentation>        Other durable materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53131">
+    <xs:annotation>
+     <xs:documentation>          Basic metals</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53132">
+    <xs:annotation>
+     <xs:documentation>          Miscellaneous durable materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53200">
+    <xs:annotation>
+     <xs:documentation>      Nondurable goods materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53210">
+    <xs:annotation>
+     <xs:documentation>        Textile materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53220">
+    <xs:annotation>
+     <xs:documentation>        Paper materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53230">
+    <xs:annotation>
+     <xs:documentation>        Chemical materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53240">
+    <xs:annotation>
+     <xs:documentation>        Other nondurable materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53241">
+    <xs:annotation>
+     <xs:documentation>          Containers</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53242">
+    <xs:annotation>
+     <xs:documentation>          Miscellaneous nondurable materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53300">
+    <xs:annotation>
+     <xs:documentation>    Energy materials</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53310">
+    <xs:annotation>
+     <xs:documentation>      Primary energy</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B53320">
+    <xs:annotation>
+     <xs:documentation>      Converted fuel</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

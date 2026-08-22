@@ -1,0 +1,66 @@
+{
+  "source_id": "WEB-0318",
+  "title": "Money Matters, an IMF Exhibit -- The Importance of Global Cooperation, Reinventing the System (1972-1981), Part 3 of 7",
+  "publisher": "International Monetary Fund",
+  "publication_date": "",
+  "source_url": "https://www.imf.org/external/np/exr/center/mm/eng/mm_rs_03.htm",
+  "extracted_at": "2026-08-16T09:21:30.817Z",
+  "content_state": "STRUCTURED_DATA",
+  "paragraph_count": 13,
+  "table_count": 7,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Matters: An IMF Exhibit -- The Importance of Global Cooperation"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "the System (1972-1981)"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "oil importers accumulated huge bills they could not pay, oil exporters"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "accumulated large amounts of U.S. dollars - more than they knew"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "how to use. These dollars were known as \"petrodollars.\""
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "there such a thing as TOO MUCH money?"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "countries found themselves with so much money, they could not spend"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "it fast enough. Some had small populations; many were still at early"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "stages of industrialization. They could not import enough from the"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "countries that bought their oil to keep from piling up enormous"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "world economy would contract if all that money was taken out of"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "circulation (i.e., not spent or loaned to someone else to spend)."
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "Oil exporters needed investment outlets for their petrodollars."
+    }
+  ],
+  "outgoing_data_links": []
+}

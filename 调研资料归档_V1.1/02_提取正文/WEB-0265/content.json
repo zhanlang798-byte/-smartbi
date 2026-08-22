@@ -1,0 +1,101 @@
+{
+  "source_id": "WEB-0265",
+  "title": "Federal Reserve Board - Foreign Exchange Rates - H.10",
+  "publisher": "Federal Reserve Board",
+  "publication_date": "",
+  "source_url": "https://www.federalreserve.gov/releases/h10/current/",
+  "extracted_at": "2026-08-16T09:21:25.584Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 17,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Nominal/Real Indexes"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "During the week of November 9, the “Build Your Package” feature in the Data Download Program (DDP) will be removed in preparation for the eventual retirement of the DDP. Users can access data and expanded download options through the Federal Reserve Bank of St. Louis's"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Federal Reserve Economic Data (FRED). Learn more about the"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "DDP and FRED partnership."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Effective June 24, 2019, the Federal Reserve Board staff will make a change"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "to the indexation of the daily Broad, AFE, and EME dollar indexes. For more"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "information, see the"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Release Date: August 12, 2026"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Foreign Exchange Rates -- H.10 Weekly"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "(Rates in currency units per U.S. dollar except as noted by an asterisk)"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "* U.S. dollars per currency unit."
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "ND = No data for this date."
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "Please visit the Currency Weights page (http://www.federalreserve.gov/releases/H10/Weights) for current weights and country composition of the Broad Index."
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "1) A weighted average of the foreign exchange value of the U.S. dollar against the currencies of a broad group of major U.S. trading partners."
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "2) A weighted average of the foreign exchange value of the U.S. dollar against a subset of the broad index currencies that are advanced foreign economies."
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "3) A weighted average of the foreign exchange value of the U.S. dollar against a subset of the broad index currencies that are emerging market economies."
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "Last Update: August 12, 2026"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.federalreserve.gov/datadownload",
+      "extension": "",
+      "anchor_text": "Data Download Program",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/datadownload/Choose.aspx?rel=H10",
+      "extension": ".aspx",
+      "anchor_text": "Data Download",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/releases/h10/data/FRB_h10_xml.zip",
+      "extension": ".zip",
+      "anchor_text": "XML",
+      "locator": "anchor"
+    }
+  ]
+}

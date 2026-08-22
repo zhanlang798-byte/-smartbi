@@ -1,0 +1,24 @@
+{
+  "name": "xh-202612-research-archive-v1-1",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "网页内容审计、开放原件补取、结构化提取与可追溯交接工具",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "baseline": "node 00_freeze_legacy_hashes.mjs",
+    "run": "node run_archive_v11.mjs"
+  },
+  "dependencies": {
+    "@mozilla/readability": "0.6.0",
+    "cheerio": "1.1.2",
+    "csv-parse": "6.1.0",
+    "csv-stringify": "6.6.0",
+    "iconv-lite": "0.7.0",
+    "jsdom": "26.1.0",
+    "pngjs": "7.0.0",
+    "turndown": "7.2.0"
+  }
+}

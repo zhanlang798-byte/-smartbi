@@ -1,0 +1,58 @@
+{
+  "package_version": "V1.0",
+  "compiled_date": "2026-08-16",
+  "project_name": "面向中国出海企业的国别风险与应急储备智能决策平台",
+  "competition_code": "XH-202612",
+  "authoritative_plan": "02_方案演进与调研报告/本地原件/计划书/05_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书.pdf",
+  "historical_versions": [
+    "V1.1",
+    "V2.0",
+    "V3.1"
+  ],
+  "current_direction": "亚非拉国别风险、全球经济周期、多币种流动性与黄金战略储备的周期协同决策；美元与黄金进行对称检验，不预设单一胜者。",
+  "verified_baseline": {
+    "local_asset_count": 180,
+    "external_url_source_count": 507,
+    "no_url_reference_count": 1,
+    "external_source_count": 508,
+    "case_file_count": 45,
+    "status_counts": {
+      "EXCLUDED_SECRET": 4,
+      "ALREADY_LOCAL_VERIFIED": 168,
+      "DUPLICATE_CONTENT": 11,
+      "METADATA_ONLY_LICENSE": 274,
+      "DOWNLOADED_VERIFIED": 189,
+      "MANUAL_ACTION_REQUIRED": 16,
+      "BROKEN_OR_UNREACHABLE": 5,
+      "FETCH_FAILED": 6,
+      "PAYWALL_OR_AUTH": 15
+    },
+    "registry_sha256": "5c4fdd189e32160f4e06494f3390467196e23f99f1b5603fbdc2248befc658ac"
+  },
+  "not_completed": [
+    "130国正式覆盖表",
+    "40国月度量化面板",
+    "20家企业全量年报库",
+    "1971-2025全球周期正式数据",
+    "模型回测",
+    "Smartbi看板与AIChat",
+    "XML恢复与提交包"
+  ],
+  "do_not_claim": [
+    "黄金每年稳定增长约10%",
+    "黄金免疫制裁或冻结",
+    "美元或黄金必须被淘汰",
+    "计划中的数据和模型已经完成",
+    "代理数据等同论文原始数据",
+    "地区披露能够推断企业具体国家敞口"
+  ],
+  "first_read_order": [
+    "README_研究资料包.md",
+    "AI_CONTEXT.json",
+    "研究资料总清单.jsonl",
+    "缺失受限与待办清单.csv",
+    "V4.0权威计划书"
+  ],
+  "machine_registry": "00_交接入口/研究资料总清单.jsonl",
+  "gaps_registry": "00_交接入口/缺失受限与待办清单.csv"
+}

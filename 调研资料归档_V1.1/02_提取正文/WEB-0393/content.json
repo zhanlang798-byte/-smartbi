@@ -1,0 +1,49 @@
+{
+  "source_id": "WEB-0393",
+  "title": "现货实盘合约_详情-上海黄金交易所",
+  "publisher": "上海黄金交易所",
+  "publication_date": "",
+  "source_url": "https://www.sge.com.cn/cpfw/Product_service_details?pro_id=793736488955461632&parent_cplx=0&cplx=7",
+  "extracted_at": "2026-08-16T09:22:06.402Z",
+  "content_state": "STRUCTURED_DATA",
+  "paragraph_count": 4,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "日间：9:00至15:30，夜间:20:00 至次日 02:30。"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "标准重量 0.1 千克、成色不低于 99.99％的金条"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "经交易所认定的可提供标准金条企业生产的符合交易所执行的《金条》标准的实物，及伦敦金银市场协会（LBMA）认定的合格供货商生产的标准实物。"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "买方报价时冻结全额货款，卖方报价时需要相应的可用库存，成交后黄金货权实时过户。目前对个人投资者免收黄金实物的仓储费。黄金实物一旦提取出库，不能重复入库和交易。"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.sge.com.cn/hyzq/xzzq",
+      "extension": "",
+      "anchor_text": "下载专区",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sge.com.cn/tzzjy/shzrbg",
+      "extension": "",
+      "anchor_text": "社会责任报告",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sge.com.cn/cpfw/bdxz",
+      "extension": "",
+      "anchor_text": "表单下载",
+      "locator": "anchor"
+    }
+  ]
+}

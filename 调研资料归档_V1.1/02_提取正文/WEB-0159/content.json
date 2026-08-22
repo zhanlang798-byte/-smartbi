@@ -1,0 +1,85 @@
+{
+  "source_id": "WEB-0159",
+  "title": "World Bank Commodities Price Data (The Pink Sheet)",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet",
+  "extracted_at": "2026-08-16T09:21:21.844Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "With 189 member countries, staff from more than 170 countries, and offices in over 130 locations, the World Bank Group is a unique global partnership: five institutions working for sustainable solutions that reduce poverty and build shared prosperity in developing countries."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/original/CMO-Pink-Sheet-February-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-February-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-June-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-June-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-March-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-March-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-February-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-February-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-May-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-May-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-July-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-July-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "CMO-Historical-Data-Annual.xlsx",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "CMO-Historical-Data-Monthly.xlsx",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-April-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-April-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-August-2026.pdf",
+      "extension": ".pdf",
+      "anchor_text": "CMO-Pink-Sheet-August-2026.pdf",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/statistics?docid=74e8be41ceb20fa0da750cda2f6b9e4e",
+      "extension": "",
+      "anchor_text": "Download Stats",
+      "locator": "anchor"
+    }
+  ]
+}

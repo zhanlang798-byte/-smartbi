@@ -1,0 +1,39 @@
+{
+  "source_id": "WEB-0457",
+  "title": "每日行情",
+  "publisher": "上海黄金交易所",
+  "publication_date": "",
+  "source_url": "https://www.sge.com.cn/sjzx/quotation_daily_new?start_date=2026-07-01&end_date=2026-07-24&inst_ids=Au99.99&p=",
+  "extracted_at": "2026-08-16T09:22:16.136Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 3,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "注意：支持查询2024年1月1日后的数据，若要查询更早数据，请点击历史数据查询"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "注：数据由上一个工作日的20:00至2:30和本工作日的9:00至15:30的交易形成(节假日无上一个工作日的20:00至2:30中的数据)。成交量和成交金额为双向计量(不含现货实盘大宗交易数据)"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "系统支持查询周期为1个月，请重新选择查询日期"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.sge.com.cn/hyzq/xzzq",
+      "extension": "",
+      "anchor_text": "下载专区",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sge.com.cn/tzzjy/shzrbg",
+      "extension": "",
+      "anchor_text": "社会责任报告",
+      "locator": "anchor"
+    }
+  ]
+}

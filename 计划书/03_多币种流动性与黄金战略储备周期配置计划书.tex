@@ -1,0 +1,858 @@
+% !TEX program = xelatex
+\documentclass[UTF8,fontset=windows,12pt,openany]{ctexbook}
+
+\usepackage[a4paper,top=2.45cm,bottom=2.35cm,left=2.55cm,right=2.35cm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{array,booktabs,longtable,tabularx,multirow}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\definecolor{DeepNavy}{HTML}{17365D}
+\definecolor{OceanBlue}{HTML}{2F75B5}
+\definecolor{PaleBlue}{HTML}{EAF2F8}
+\definecolor{WarmGold}{HTML}{FFF2CC}
+\definecolor{GoldLine}{HTML}{C69C2D}
+\definecolor{PaleGreen}{HTML}{E2F0D9}
+\definecolor{PaleRed}{HTML}{FCE4D6}
+\definecolor{TextGray}{HTML}{4A5568}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=DeepNavy,
+  citecolor=OceanBlue,
+  urlcolor=OceanBlue,
+  pdftitle={多币种流动性与黄金战略储备周期配置计划书},
+  pdfsubject={面向中国出海企业的国别风险与应急储备智能决策平台},
+  pdfauthor={数据创新平台项目组}
+}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+% 本计划书为电子提交稿，不为双面印刷强制插入空白偶数页。
+\let\cleardoublepage\clearpage
+\setlist[itemize]{leftmargin=2em,itemsep=0.3em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=2.4em,itemsep=0.35em,topsep=0.35em}
+\renewcommand{\arraystretch}{1.22}
+\setlength{\LTpre}{0.6em}
+\setlength{\LTpost}{0.6em}
+\Urlmuskip=0mu plus 1mu
+
+\ctexset{
+  chapter={format=\Huge\bfseries\color{DeepNavy},number=\chinese{chapter},beforeskip=0pt,afterskip=20pt},
+  section={format=\Large\bfseries\color{DeepNavy}},
+  subsection={format=\large\bfseries\color{OceanBlue}}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 多币种流动性与黄金战略储备周期配置计划书}
+\fancyhead[R]{\small V2.0 独立计划稿}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newenvironment{decisionbox}[1][]{%
+  \par\medskip\noindent\begin{center}\begin{minipage}{0.92\textwidth}%
+  \color{OceanBlue}\hrule height 0.9pt\vspace{0.45em}%
+  \textbf{#1}\par\smallskip\color{black}%
+}{%
+  \par\vspace{0.35em}\color{OceanBlue}\hrule height 0.9pt%
+  \end{minipage}\end{center}\medskip%
+}
+\newenvironment{evidencebox}[1][]{%
+  \par\medskip\noindent\begin{center}\begin{minipage}{0.92\textwidth}%
+  \color{GoldLine}\hrule height 0.9pt\vspace{0.45em}%
+  \textbf{#1}\par\smallskip\color{black}%
+}{%
+  \par\vspace{0.35em}\color{GoldLine}\hrule height 0.9pt%
+  \end{minipage}\end{center}\medskip%
+}
+\newenvironment{gatebox}[1][]{%
+  \par\medskip\noindent\begin{center}\begin{minipage}{0.92\textwidth}%
+  \color{DeepNavy}\hrule height 0.9pt\vspace{0.45em}%
+  \textbf{#1}\par\smallskip\color{black}%
+}{%
+  \par\vspace{0.35em}\color{DeepNavy}\hrule height 0.9pt%
+  \end{minipage}\end{center}\medskip%
+}
+\newcommand{\Field}[1]{{\small\nolinkurl{#1}}}
+\newcommand{\StatusFact}{\textcolor{DeepNavy}{\textbf{已核验事实}}}
+\newcommand{\StatusHyp}{\textcolor{GoldLine}{\textbf{待检验假设}}}
+\newcommand{\StatusSim}{\textcolor{OceanBlue}{\textbf{模拟设定}}}
+\newcommand{\StatusPending}{\textcolor{TextGray}{\textbf{待补证}}}
+
+\begin{document}
+
+\begin{titlepage}
+  \pagecolor{PaleBlue}
+  \centering
+  \vspace*{1.7cm}
+  {\color{OceanBlue}\rule{0.86\textwidth}{1.4pt}}\\[1.0cm]
+  {\Huge\bfseries\color{DeepNavy}多币种流动性与黄金战略储备\\[0.35cm]周期配置计划书\par}
+  \vspace{0.8cm}
+  {\LARGE\color{OceanBlue}面向中国出海企业的国别风险与应急储备智能决策平台\par}
+  \vspace{1.0cm}
+  \begin{minipage}{0.86\textwidth}
+  \color{GoldLine}\rule{\textwidth}{0.9pt}\par\vspace{0.45cm}
+  \color{black}
+  \centering
+  本计划书以“经营现金层—流动性储备层—战略储备层”为主线，\par
+  在人民币、经营国本币和合同偿付货币三种口径下，\par
+  对美元、人民币短期资产、黄金、套保和授信进行周期协同配置。
+  \vspace{0.45cm}\par\color{GoldLine}\rule{\textwidth}{0.9pt}
+  \end{minipage}
+  \vfill
+  {\large 数据创新平台项目组\par}
+  \vspace{0.25cm}
+  {\large 2026年8月15日\par}
+  \vspace{0.75cm}
+  {\color{OceanBlue}\rule{0.86\textwidth}{1.4pt}}
+  \nopagecolor
+\end{titlepage}
+
+\frontmatter
+
+\chapter*{执行摘要}
+\addcontentsline{toc}{chapter}{执行摘要}
+
+\begin{decisionbox}[项目判定]
+本项目\textbf{有条件可行，建议按照多币种流动性与黄金战略储备协同配置的方向继续推进}。项目不再把美元和黄金放入单一资产淘汰赛，也不预设黄金在所有期限中占优。美元及人民币短期资产主要承担支付、偿债和近期流动性功能；黄金主要承担长期购买力保全、信用风险分散和尾部风险缓冲功能。最终权重由资金期限、计价口径、周期状态、经营国风险和合法可用性共同决定。
+\end{decisionbox}
+
+本计划面向中国出海企业总部、区域财资中心、境外子公司财务负责人和风险管理人员，拟建设“国别风险识别—企业敞口映射—储备分层—周期识别—组合实验—约束路由—管理层解释”的完整决策链。研究广度采用项目定义的亚洲45国、非洲51国和拉丁美洲34国共130国覆盖层；量化主干采用按规则筛选的40国面板；中国视角采用20家公开披露企业；危机样本从面板和权威事件资料中识别，不以少数预选国家代替跨国证据。
+
+本计划锁定六项原则：
+
+\begin{enumerate}
+  \item \textbf{三层资金不能混用。}未来90天必需的经营现金，不承担长期收益目标；3--12个月流动性储备兼顾安全、流动与收益；1--5年以上战略储备才进入黄金与多币种长期配置。
+  \item \textbf{三种计价口径并列。}集团价值看人民币，子公司生存看经营国本币，跨境采购和偿债看合同货币；不得只用美元收益评价中国企业。
+  \item \textbf{美元与黄金对称检验。}完整组合分别与“去掉黄金”和“去掉美元资产”的组合比较，测量两者在不同周期中的边际贡献。
+  \item \textbf{黄金采用条件底仓。}企业确有1--5年以上战略储备、持有载体清晰且路径合法可行时，产品策略从2.5\%战略底仓起步；研究仍保留0\%黄金反事实，量化底仓的收益、风险和机会成本。
+  \item \textbf{周期规则可解释。}以实际利率、美元趋势、通胀、当地汇率压力、资本限制和金融渠道状态划分周期，聚类或状态模型只作挑战验证。
+  \item \textbf{约束不等于关停。}存在法律、托管、兑换或进出口限制时，系统继续输出风险诊断和合法替代方案，只把具体路径标记为“可行、条件可行、禁止或人工复核”。
+\end{enumerate}
+
+当前项目资产能够支撑研究启动：已有45份案例档案、黄金与宏观因素工作簿、论文复现线索和初步方案文档。但项目尚未完成正式40国月度面板、企业敞口标准化、周期模型、组合回测、Smartbi五页看板、AIChat验收、XML恢复和三分钟视频。因此，本册中的产品结构、指标和分数均为\StatusHyp 或\StatusSim，不得写成现有成果。
+
+\chapter*{阅读说明与证据边界}
+\addcontentsline{toc}{chapter}{阅读说明与证据边界}
+
+本册是独立的研究与实施计划，不是投资建议、会计意见、法律意见或已经完成的回测报告。文中事实、假设、模拟和待补证事项按以下规则区分：
+
+\begin{longtable}{p{2.6cm}p{10.8cm}}
+\toprule
+\textbf{标记} & \textbf{含义}\\
+\midrule
+\StatusFact & 已由政府、监管、交易所、上市公司原始披露或国际机构原始数据库支持；正式报告仍需记录版本与页码。\\
+\StatusHyp & 需要由40国、企业披露、危机事件和组合实验检验，允许得到不成立或仅局部成立的结果。\\
+\StatusSim & 企业未公开的现金需求、币种结构、成本或持有载体采用透明情景参数生成，必须与真实披露分列。\\
+\StatusPending & 案例库已有线索，但关键数字、日期、适用法域或企业层证据尚未回到原始材料。\\
+\bottomrule
+\end{longtable}
+
+本册独立维护参考文献，不调用旧计划书的文献数据库。历史计划书和旧 Mermaid 均保持原状，只作为项目演进记录，不构成本册的编译依赖或权威正文。
+
+\tableofcontents
+
+\mainmatter
+
+\part{项目方向与决策逻辑}
+
+\chapter{从金价预测转向企业储备决策}
+
+\section{原始方向的价值与不足}
+
+黄金价格预测能够展示时间序列、宏观因子和机器学习方法，但预测结果本身不能回答企业财资决策。企业必须知道：未来90天能否支付工资、采购、税费和债务；资金能否从高风险国家调回；资产能否在压力时合法变现；选择某一资产后会产生何种会计、托管、汇兑和机会成本。若作品只给出“金价上涨概率”，即使模型精度较高，也无法形成企业行动闭环。
+
+已有黄金价格、实际利率、美元指数、市场情绪和商品价格资产继续保留，但用途调整为周期识别、黄金估值和情景压力输入。金价预测不再是作品主体，也不直接触发企业买卖建议。
+
+\section{核心业务问题}
+
+\begin{decisionbox}[正式命题]
+面向中国出海企业，识别亚非拉经营中的本币贬值、恶性通胀、资金汇出限制、金融渠道中断、主权和地缘风险；将企业资金划分为经营现金、流动性储备和战略储备；在人民币、经营国本币和合同偿付货币口径下，比较并协同配置本币、人民币短期资产、美元及短期美元资产、外汇套保、自然对冲、授信和黄金，形成可解释、可追溯、受约束的动态储备建议。
+\end{decisionbox}
+
+这一命题不要求证明“黄金永远优于美元”，也不要求证明“美元短债永远优于黄金”。需要回答的是：\textbf{什么资金、在什么国家、处于什么周期、使用什么计价口径时，两类资产分别承担什么功能；它们合并后是否比单一资产更稳健。}
+
+\section{目标用户与决策单位}
+
+\begin{longtable}{p{3.1cm}p{5.0cm}p{5.2cm}}
+\toprule
+\textbf{用户} & \textbf{平台回答} & \textbf{平台不替代}\\
+\midrule
+集团总部财资部门 & 集团人民币价值、区域币种错配和战略储备结构 & 董事会投资授权、真实资金调度和融资决策\\
+区域财资中心 & 哪些国家需提高流动性、降低本币净敞口或调整黄金/美元结构 & 银行谈判、资金池开户和跨境申报\\
+境外子公司财务部门 & 未来90天所需支付币种、可用资金和汇出风险 & 实际付款、税务申报和当地会计判断\\
+风险与约束审核人员 & 路径属于可行、条件可行、禁止还是需人工复核 & 正式法律、制裁、反洗钱、黄金进出口和外汇管制意见\\
+项目评审与老师 & 数据、模型、看板、AIChat和证据是否形成闭环 & 对具体企业作投资承诺\\
+\bottomrule
+\end{longtable}
+
+\chapter{三层储备架构}
+
+\section{第一层：经营现金}
+
+经营现金覆盖0--90天的工资、采购、税费、利息和到期债务。其目标顺序为本金安全、按时可用、币种匹配和结算便利，收益居后。企业现金管理实践通常把经营现金、短期战略现金和长期现金分开管理\cite{afpcash}。
+
+经营现金层的默认规则为：
+
+\begin{itemize}
+  \item 以预计净现金流出币种为配置基准，不为了获取收益主动承担大额币种错配；
+  \item 保留当地日常支付所需本币，但不得将无法汇出的全部余额等同于“安全现金”；
+  \item 对美元或人民币采购、债务和集团结算需求，优先持有相应货币现金或高流动短期工具；
+  \item 黄金可为0，不设置经营现金底仓；只有能够在90天内依法变现、折价已计入且不影响支付时，才作为补充可用资产计入覆盖率。
+\end{itemize}
+
+\section{第二层：流动性储备}
+
+流动性储备覆盖3--12个月的不确定现金缺口、再融资间隔和临时汇出延迟。其工具包括人民币短期国债或高流动资产、美元现金和3个月美国国库券、期限匹配的远期或NDF、自然对冲和已承诺授信。黄金在本层可进入0--5\%测试区间，但必须施加价格、变现时间和价差折扣。
+
+\section{第三层：战略储备}
+
+战略储备是1--5年以上不用于近期经营的可配置资金，用于跨周期购买力、信用和托管法域分散。IMF 2026年的储备管理研究认为，黄金没有信用风险并可能支持长期资产负债表韧性，但不适合替代即时流动性资产\cite{imfgold2026}；BIS研究指出，黄金权重取决于目标、计价货币、久期和风险容忍度，在非储备货币计价或极端风险条件下，较高权重可能得到数量支持\cite{bisgold2020}。
+
+本项目采用以下产品规则：
+
+\begin{enumerate}
+  \item 企业必须先证明该资金在1年以上不承担确定性经营支付；
+  \item 黄金载体、所有权、托管地、保险、变现渠道、会计和税务口径必须可描述；
+  \item 满足前两项且路径状态为“可行”或“条件可行”时，从战略储备的2.5\%条件底仓开始测试；
+  \item 测试网格为0\%、2.5\%、5\%、7.5\%、10\%、15\%和20\%，其中0\%仅作反事实或适用于无长期资金/路径禁止情形；
+  \item 产品输出为区间与再平衡方向，不输出虚假精确的单一最优点。
+\end{enumerate}
+
+\section{三层之间的资金防火墙}
+
+\begin{longtable}{p{2.8cm}p{2.8cm}p{3.5cm}p{4.5cm}}
+\toprule
+\textbf{层级} & \textbf{期限} & \textbf{主要目标} & \textbf{硬约束}\\
+\midrule
+经营现金 & 0--90天 & 当期支付与生存 & 不得用长期收益假设掩盖支付缺口；黄金无强制底仓\\
+流动性储备 & 3--12个月 & 缓冲、再融资与汇出延迟 & 计算票息、汇兑、套保、授信、变现折价和可用时间\\
+战略储备 & 1--5年以上 & 跨周期购买力与信用分散 & 先完成资金期限、载体、托管和约束资格判断，再启用2.5\%条件底仓\\
+\bottomrule
+\end{longtable}
+
+任何策略都不得为了提高历史收益，把经营现金事后划入战略层；层级划分必须在回测起点由当时可获得的现金流预测冻结。
+
+\chapter{三种计价口径与资产协同}
+
+\section{为什么不能只用美元评价}
+
+集团总部关心人民币合并价值，境外子公司关心本地购买力，跨境采购和债务又可能以美元、欧元或人民币计价。BIS储备管理研究强调，计价基准决定收益与风险的定义\cite{bisnumeraire}。因此同一策略必须同时输出：
+
+\begin{itemize}
+  \item \textbf{人民币口径：}衡量中国母公司合并价值和长期购买力；
+  \item \textbf{经营国本币口径：}衡量当地工资、采购和税费覆盖；
+  \item \textbf{合同偿付货币口径：}衡量美元、人民币、欧元或其他合同货币债务与采购能力。
+\end{itemize}
+
+上海黄金交易所提供人民币计价的上海金基准\cite{sgebenchmark}，可作为中国企业人民币黄金口径的重要来源；伦敦金和上海金应分别记录市场、时区、升贴水和汇率，不能被表述为已形成固定绑定关系。黄金在实用投资周期内能否稳定保护购买力仍有争议\cite{erbharvey}，因此必须使用滚动窗口而非单一起止日期。
+
+\section{收益分解}
+
+设黄金美元收益为\(r_{G,USD}\)，美元兑本币收益为\(r_{USD,L}\)，则本币黄金收益为：
+
+\begin{equation}
+1+r_{G,L}=(1+r_{G,USD})(1+r_{USD,L}),
+\end{equation}
+
+即：
+
+\begin{equation}
+r_{G,L}=r_{G,USD}+r_{USD,L}+r_{G,USD}r_{USD,L}.
+\end{equation}
+
+这一分解不是用美元否定黄金，而是把“黄金价格贡献”“汇率贡献”和“交互贡献”分开。人民币口径采用同样方法。任何“本币金价大涨”结论必须同时报告，如果只持有美元或人民币短期资产，会保留多少购买力；任何“美元短债占优”结论也必须报告，若美元进入长期走弱或实际利率下降阶段，黄金带来多少补偿。
+
+\section{对称剔除实验}
+
+每个国家、企业原型、周期和期限至少运行以下三套组合：
+
+\begin{enumerate}
+  \item \textbf{完整组合：}本币、人民币短期资产、美元短期资产、套保、授信和黄金；
+  \item \textbf{去黄金组合：}保持其他约束和再平衡规则不变，只将黄金权重按预设规则分配至可用短期资产；
+  \item \textbf{去美元组合：}保持其他约束和再平衡规则不变，只将美元现金和美元短债权重按预设规则分配至人民币、黄金或本币工具。
+\end{enumerate}
+
+两类资产的边际贡献使用同一公式、同一成本、同一计价和同一数据时点计算。报告不得只展示“加入黄金后改善多少”，也不得只展示“美元短债比黄金稳定多少”。
+
+\part{样本、证据与数据底座}
+
+\chapter{三层样本与事件衍生层}
+
+\section{130国覆盖层}
+
+商务部《2024年度中国对外直接投资统计公报》显示，中国境外企业覆盖190个国家和地区、约5.2万家，境外企业销售收入约3.6万亿美元\cite{mofcom2024}。本项目将亚洲45国、非洲51国、拉丁美洲34国合计定义为130国研究覆盖层；这是项目研究边界，不是商务部原文直接给出的“亚非拉130国”。
+
+覆盖层记录2016--2024年可获得的中国对外投资流量、存量和2024年企业覆盖状态。香港、澳门、开曼、英属维尔京和百慕大等标记为“投资或资金通道”，可以展示资金路径和投资统计，但不进入实体经营国风险排名。
+
+\section{40国量化层}
+
+40国在G2门槛按以下顺序冻结：
+
+\begin{enumerate}
+  \item 属于项目定义的亚非拉实体经营国；
+  \item 有中国投资、境外企业或上市公司披露的存在证据；
+  \item 2010--2025年汇率和CPI两项核心月度字段完整率分别不低于80\%；
+  \item 亚洲15国、非洲14国、拉丁美洲11国，每区至少保留3个低风险对照国；
+  \item 其余名额按“中国投资暴露百分位\(\times\)预审风险百分位”排序；并列时依次按数据完整率、投资暴露和ISO代码确定。
+\end{enumerate}
+
+原有国家名单只作为候选池，不保证全部进入正式面板。数据不足的国家可以保留为定性案例或覆盖层国家，但不得用邻国数据静默填补。
+
+\section{20家中国企业层}
+
+企业样本覆盖六种经营模式：
+
+\begin{longtable}{p{3.0cm}p{10.1cm}}
+\toprule
+\textbf{经营模式} & \textbf{候选企业}\\
+\midrule
+ICT与电子 & 华为、联想集团、中兴通讯、传音控股\\
+家电与消费制造 & 海尔智家、美的集团、海信家电、TCL科技\\
+汽车与新能源 & 比亚迪、上汽集团、吉利汽车、长城汽车\\
+工程机械与装备 & 三一重工、徐工机械\\
+基建与轨道交通 & 中国中车、中国交通建设\\
+资源与能源 & 紫金矿业、洛阳钼业、中国海油、中国石油\\
+\bottomrule
+\end{longtable}
+
+采集2018--2025年年报、交易所公告和风险说明。进入量化画像的企业必须同时具备“海外或地区收入”以及“汇兑损益或外汇风险说明”；不足者保留为基础案例但不进入精细配置模拟。深度企业最多六家，在G2后按披露完整度、海外敞口、行业覆盖和经营模式自动选出，不预先指定。MTN Nigeria、雀巢尼日利亚和AB InBev等国外企业只作外部验证。
+
+\section{危机事件衍生层}
+
+任一条件满足可生成候选事件：
+
+\begin{itemize}
+  \item 12个月本币对美元贬值不低于20\%；
+  \item CPI同比不低于15\%；
+  \item 官方汇率与可信平行市场汇率价差不低于20\%；
+  \item 年度资本管制指标或正式制度文件显示限制明显收紧；
+  \item 出现资金冻结、利润汇出限制或银行系统中断。
+\end{itemize}
+
+同国同类触发连续出现或间隔不超过2个月时合并。所有定量指标连续3个月退出阈值，或正式限制已被权威文件确认解除，事件才结束。事件窗口固定为开始前12个月至结束后24个月。候选事件必须由一项A级证据或两项相互独立的B级证据确认性质。目标为每区至少5个、合计不少于20个独立事件；若达不到，不降低阈值、不拆分同一事件，验收记为未通过并收缩跨国结论。
+
+\chapter{现有45份案例如何进入证据链}
+
+\section{四类案例的职责}
+
+现有案例库实际包含45份案例档案，而非若干独立、同质事件：
+
+\begin{longtable}{p{2.5cm}p{2.0cm}p{8.7cm}}
+\toprule
+\textbf{类别} & \textbf{数量} & \textbf{研究职责}\\
+\midrule
+宏观危机 & 17 & 检验黄金、美元短债和其他资产在流动性挤兑、滞胀、加息、复苏及长期熊市中的周期差异\\
+货币崩溃 & 10 & 检验本币、美元、人民币与黄金在贬值、通胀、多汇率和银行限制下的相对价值\\
+冲突与制裁 & 8 & 检验托管法域、所有权、禁运、折价、结算渠道和实际可用性\\
+微观企业 & 10 & 证明汇兑、冻结、退出和会计损失真实存在，并检验企业持金证据是否足以支持企业级结论\\
+\bottomrule
+\end{longtable}
+
+俄罗斯、伊朗、尼日利亚和阿根廷等重复观察使用\Field{event_cluster_id}聚合，不把45份文档当作45个独立事件。README状态、案例总数、编号缺失和重复编号须在R0治理阶段修正，但本轮计划书不修改案例文件。
+
+\section{证据记录与等级}
+
+每条关键结论进入\Field{case_evidence}，至少包含：案例ID、事件簇、国家、时间、风险机制、企业对象、三种计价口径下的资产表现、企业实际损失、托管与可用性、支持/反驳/限定角色、来源等级、链接、发布日期、页码和核验状态。
+
+证据等级固定为：
+
+\begin{itemize}
+  \item A级：政府、央行、监管、交易所、上市公司财报、正式法规和原始数据库；
+  \item B级：IMF、世界银行、BIS、IATA、学术论文和权威统计机构；
+  \item C级：Reuters等可信媒体或有方法说明的行业研究；
+  \item D级：无法定位原文的转述、估算和轶事，仅作为检索线索。
+\end{itemize}
+
+核心结论至少需要一项A级证据，或两项相互独立的B级证据。企业损失事实不能自动证明黄金有效，企业持金事实也不能自动证明其用于亚非拉应急储备。
+
+\section{必须保留的反例}
+
+模型和看板必须呈现1933年黄金征收、1980--2000年黄金熊市、2008年危机初期同跌、2013年黄金暴跌、委内瑞拉境外黄金冻结、中国黄金会计错配等反例。反例用于定义载体、托管、周期、会计和持有期限边界，而不是为了预先否定黄金。
+
+\chapter{数据来源与真实频率}
+
+\begin{longtable}{p{3.0cm}p{5.1cm}p{5.2cm}}
+\toprule
+\textbf{来源} & \textbf{计划采集} & \textbf{频率与边界}\\
+\midrule
+商务部对外投资公报 & 投资流量、存量、国家与企业覆盖 & 年度/快照；不承诺所有130国每年均有企业数\\
+世界银行GEM & 汇率、CPI、储备及部分高频宏观指标 & 按实际提供的月度、季度或年度频率\cite{wbgem}\\
+世界银行WDI & 官方汇率、贸易、外债和宏观补充 & 年度为主；API支持跨国调用\cite{wbapi}\\
+IMF WEO/IFS & 通胀、增长、外部收支、汇率补充 & WEO为年度；IFS按序列真实频率\cite{imfweo}\\
+IMF AREAER、Chinn--Ito & 兑换、汇出、资本账户开放 & 年度政策变量，不复制成月度观测\cite{imfareaer,chinnito}\\
+国别GPR & 地缘政治风险 & 仅纳入来源实际覆盖的国别月度序列，不默认覆盖40国\cite{countrygpr}\\
+FRED、美国财政部 & 3个月国库券、实际利率、美元指数 & 按原始日度/月度转换并保留发布日期\cite{fred}\\
+世界银行商品、LBMA、上金所 & 美元黄金、人民币黄金和商品价格 & 市场、时区、报价和汇率分列\cite{worldbankpink,sgebenchmark}\\
+企业年报与公告 & 海外收入、地区收入、汇兑损益、子公司与风险说明 & 年度/半年度；只按真实披露粒度使用\\
+OFAC、联合国、欧盟、中国及经营国规则 & 制裁、禁运、黄金进出口、外汇和托管约束 & 事件/规则；记录适用主体、生效和解除日期\cite{ofac1029}\\
+\bottomrule
+\end{longtable}
+
+所有原始记录必须有\Field{source_id}、\Field{vintage_date}和抓取日期。年度数据不前向填充为“真实月度值”；如压力模型需要月度政策状态，只能生成带\Field{is_proxy=1}的状态区间，并保留年度原值。
+
+\chapter{九张逻辑表的数据契约}
+
+\small
+\begin{longtable}{p{2.8cm}p{2.8cm}p{4.5cm}p{4.3cm}}
+\toprule
+\textbf{表名} & \textbf{主键} & \textbf{主要内容} & \textbf{V2.0新增约束}\\
+\midrule
+\Field{country_exposure} & 国家+年份 & 投资流量、存量、企业覆盖、区域、实体经营/资金通道 & 覆盖层与量化层分列，不把通道地纳入实体风险排名\\
+\Field{country_monthly_risk} & 国家+月份 & 汇率、CPI、储备、真实月度GPR、质量标记 & 增加美元周期、当地汇率压力和数据发布日期字段\\
+\Field{country_policy_year} & 国家+年份+政策 & AREAER、Chinn--Ito及其他年度制度变量 & 年度原值不复制为月度观测\\
+\Field{country_event} & 事件ID & 触发、起止、严重度、证据、事件簇、全球冲击簇 & 保存事件确认级别和策略决策时可见状态\\
+\Field{company_overseas_exposure} & 企业+财年+披露地区 & 海外收入、汇兑损益、子公司、风险说明、披露质量 & 增加支付币种、债务币种、资金期限和最低流动性需求\\
+\Field{asset_monthly_return} & 国家+月份+资产+计价口径 & 本币、人民币短期资产、美元短债、黄金和套保代理收益及成本 & 同一黄金底层分解为美元金价、汇率和交互贡献，不重复计收益\\
+\Field{portfolio_scenario} & 情景+策略+运行版本 & 配置输入、约束、覆盖、CVaR、回撤、折价和建议 & 增加\Field{reserve_layer}、\Field{holding_horizon}、\Field{regime_id}、黄金载体、各资产权重和对称剔除标签\\
+\Field{case_evidence} & 案例+结论+来源 & 45份案例、支持/反驳/限定/冲突、页码和核验状态 & 与危机事件簇连接，保留正反证据\\
+\Field{source_registry} & 来源+版本 & URL、许可、抓取日期、版本、校验值和原始/代理/模拟标签 & 增加法域、适用主体、发布时间和回测可用日期\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+所有结果表统一包含两组追溯字段：计价与来源字段
+\Field{currency_basis}、\Field{source_id}、\Field{vintage_date}；
+数据与运行状态字段\Field{is_proxy}、\Field{is_simulated}、\Field{run_version}。
+原始值不可被人民币、美元或本币换算值覆盖。
+
+\part{周期、模型与组合实验}
+
+\chapter{可对称检验的研究假设}
+
+\begin{longtable}{p{1.0cm}p{7.1cm}p{5.2cm}}
+\toprule
+\textbf{编号} & \textbf{可检验命题} & \textbf{限制或反驳结果}\\
+\midrule
+H1 & 本币收入与外币成本/债务错配显著放大跨国企业损失 & 控制行业和规模后，错配与损失无稳定关系\\
+H2 & 美元短期资产与黄金在期限和周期上互补，动态混合组合比单一资产具有更稳健的跨周期表现 & 完整组合在多数滚动窗口中未改善覆盖、尾损或恢复时间\\
+H3 & 美元走强、实际利率上升时，美元短期资产对经营和流动性层贡献提高 & 控制合同币种后，美元资产贡献没有系统变化\\
+H4 & 美元走弱、实际利率下降、高通胀或货币体系分化时，黄金对战略层贡献提高 & 黄金边际贡献在这些状态中仍为负或不稳定\\
+H5 & 人民币、本币与合同货币计价会改变策略排序 & 三种计价下排序高度一致，计价差异不重要\\
+H6 & 法律、托管、兑换和进出口约束会同时改变美元与黄金的可用性 & 计入真实约束后策略排序与无约束结果无差异\\
+\bottomrule
+\end{longtable}
+
+所有假设均可得到“仅部分国家成立”“仅某一层成立”或“不成立”。但产品规则与研究结论必须分开：2.5\%条件底仓是经用户确认的战略层政策起点，0\%反事实用于公开衡量该政策成本，不得通过删掉0\%结果来保护预设规则。
+
+\chapter{周期识别：规则主模型与挑战模型}
+
+\section{规则主模型}
+
+周期不以单一美联储利率判断，而由六组可解释信号共同描述：
+
+\begin{longtable}{p{3.1cm}p{5.2cm}p{5.0cm}}
+\toprule
+\textbf{信号组} & \textbf{主要字段} & \textbf{解释}\\
+\midrule
+美元与利率 & 广义美元指数、3个月国库券收益、10年实际利率及变化 & 识别美元融资条件和持金机会成本\\
+全球通胀 & 美国及全球通胀、通胀预期、商品价格 & 识别购买力和政策反应环境\\
+当地货币压力 & 12个月贬值、波动率、官方/平行汇率差 & 识别本币储备侵蚀和市场分割\\
+外部缓冲 & 储备下降、短债覆盖、经常账户 & 识别美元短缺和再融资压力\\
+资本与支付限制 & AREAER、正式汇出限制、银行中断、被困资金 & 识别“有价值但不可调度”的资产\\
+黄金市场状态 & 美元金价、人民币金价、实际利率敏感性、波动和流动性 & 识别战略增配与减配条件，不直接预测确定涨跌\\
+\bottomrule
+\end{longtable}
+
+主模型输出多标签状态，而非强迫每个月只能属于一个周期。例如同一时期可以同时标记“美元偏强”“当地货币危机”和“汇出受限”。规则阈值在G3前冻结，使用历史分位数或明确经济阈值；计算只使用当月能够获得的数据。
+
+\section{五类管理状态}
+
+\begin{enumerate}
+  \item \textbf{正常经营：}当地兑换和支付正常，重点匹配币种与期限；
+  \item \textbf{美元偏强/实际利率上行：}流动性层偏向美元或人民币短期收益资产，战略层保留条件黄金底仓；
+  \item \textbf{宽松/美元偏弱/通胀压力：}战略层提高黄金测试区间，流动性层仍满足支付覆盖；
+  \item \textbf{本币危机但跨境渠道可用：}减少超额本币，美元承担支付和债务，黄金承担中长期价值缓冲；
+  \item \textbf{支付、托管或制度受限：}先判断各载体真实可用性，再在合法路径内调整人民币、美元、黄金、套保和授信；不把任何资产描述为天然免疫。
+\end{enumerate}
+
+\section{挑战模型}
+
+挑战模型采用聚类、隐状态或主成分方法检验规则划分是否稳定，只承担三项职责：发现规则遗漏的组合状态、检验资产贡献在数据驱动状态中是否一致、标记规则与数据分类冲突。挑战模型不得直接覆盖主模型，也不得使用未来危机标签训练当期策略。
+
+\chapter{策略集合、成本和指标}
+
+\section{策略集合}
+
+每个事件至少比较：纯本币现金；本币加人民币短期资产；本币加美元现金；本币加3个月美国国库券；本币加外汇远期/NDF；本币加授信；本币加纯黄金；人民币/美元/黄金静态混合；以及三层动态组合。自然对冲和授信若没有统一市场收益，不伪造成月度回报序列，只在现金流和压力情景中发挥作用。
+
+\section{黄金载体分开建模}
+
+\begin{longtable}{p{3.0cm}p{4.8cm}p{5.5cm}}
+\toprule
+\textbf{载体} & \textbf{优势} & \textbf{必须计入的风险与成本}\\
+\midrule
+账户型/ETF黄金 & 交易便利、价格透明、易进入组合回测 & 托管人、交易所、账户冻结、管理费、跟踪误差和结算\\
+合规分配实物黄金 & 所有权和实物对应清晰、信用风险较低 & 仓储、保险、检验、运输、买卖价差、法域和变现时间\\
+非分配账户或衍生品 & 资金效率和流动性可能较高 & 对手方信用、追加保证金、终止条款和会计波动\\
+上海金/境内合规产品 & 人民币计价和中国市场基准 & 主体资格、交易制度、跨境调度和产品条款\\
+\bottomrule
+\end{longtable}
+
+实物黄金不是天然金融资产，会计分类取决于载体、持有目的和适用准则\cite{ifrscommodity}。恶性通胀经济体还需识别IAS 29影响\cite{ifrsias29}。计划书只规定数据字段和复核接口，不替企业选择会计政策。
+
+\section{评价指标}
+
+\begin{longtable}{p{3.4cm}p{6.2cm}p{3.7cm}}
+\toprule
+\textbf{指标} & \textbf{定义} & \textbf{对应决策}\\
+\midrule
+90天流动性覆盖率 & 90天内依法可动用资产/90天净现金流出 & 企业能否维持经营\\
+合法可动用比例 & 扣除冻结、结算、托管和法域限制后的价值/账面价值 & 防止把账面资产当现金\\
+人民币购买力保全率 & 期末人民币实际价值/期初人民币实际价值 & 集团长期价值\\
+合同货币覆盖率 & 可用合同货币资产/合同货币现金流出 & 采购和偿债能力\\
+95\% CVaR & 最差5\%结果的平均损失 & 尾部风险\\
+最大回撤与恢复时间 & 峰谷跌幅及回到前高所需时间 & 识别危机初期共跌\\
+综合持有成本 & 票息机会成本、套保费、托管、保险、税费、价差和折价 & 防止免费保险假设\\
+对称边际贡献 & 完整组合分别相对去黄金、去美元组合的指标变化 & 衡量两类资产增量价值\\
+\bottomrule
+\end{longtable}
+
+指标分别在90天、滚动1年、5年、10年和数据允许的20年窗口计算。长期窗口不得取代经营层的90天验收，短期稳定也不得直接否定战略层长期价值。
+
+\chapter{回测、事件研究与企业情景}
+
+\section{无前视回测}
+
+策略只能使用决策时点已经发布的数据。宏观数据使用\Field{vintage_date}判断可用性；权重规则、层级和周期阈值在事件开始前冻结；危机结束日期只用于事后评价，不能作为当时输入。对滚动策略，调仓频率和交易成本在G3冻结，不用事后最优参数回填历史。
+
+\section{跨国检验}
+
+采用事件研究比较危机前12个月至危机后24个月的价值保全差异；面板模型使用国家固定效应和日历时间固定效应，标准误按国家聚类，并报告小样本稳健敏感性。亚洲、非洲和拉丁美洲分别报告，区域差异通过分组估计和交互项呈现。结论只能表述为历史相关性和情景结果，不宣称因果关系或未来保证。
+
+\section{企业原型}
+
+公开年报通常不能提供逐日现金池、账户、授信和真实黄金头寸，因此最多六家深度企业只构建“可替换企业原型”。真实披露与模拟输入分列：
+
+\begin{itemize}
+  \item 真实字段：海外/地区收入、债务币种、外汇风险说明、汇兑损益、境外子公司；
+  \item 模拟字段：90天工资采购税费、回款周期、未披露国别分布、黄金载体、托管成本、授信和套保头寸；
+  \item 所有模拟记录必须有\Field{is_simulated=1}、假设来源、生成逻辑、可替换字段和情景版本；
+  \item 只有地区披露时，不推断企业与某一具体高风险国家重合。
+\end{itemize}
+
+\part{Smartbi产品与约束路由}
+
+\chapter{五页看板}
+
+\begin{longtable}{p{3.4cm}p{5.2cm}p{4.9cm}}
+\toprule
+\textbf{页面} & \textbf{核心内容} & \textbf{关键交互与验收}\\
+\midrule
+一、亚非拉经营风险全景 & 130国覆盖、40国风险、中国投资规模、数据完整度 & 地区、国家、时间筛选；地图与排名联动\\
+二、国别与危机下钻 & 汇率、通胀、储备、年度资本政策和事件时间线 & 月度与年度指标不混频；展示证据与缺失\\
+三、中国企业海外风险 & 20家企业海外收入、地区披露、汇兑损失和经营模式 & 真实、代理、模拟分列；不从地区擅自下钻国家\\
+四、多币种—黄金周期实验室 & 三层资金、三种计价、周期状态、资产权重和对称剔除 & 调整期限、现金需求和权重；同时显示去黄金与去美元结果\\
+五、决策约束与证据中心 & 配置区间、再平衡方向、路径状态、45案例与来源等级 & 显示可行、条件可行、禁止、人工复核；建议可回到证据\\
+\bottomrule
+\end{longtable}
+
+全局筛选器包括区域、国家、行业、企业、风险类型、资金层级、时间、计价口径、周期状态、黄金载体和策略。典型操作响应不超过10秒。地图只表达空间分布，不替代精确排名；跨策略比较优先使用点区间图、分组条形图和贡献瀑布图。
+
+\chapter{AIChat二十题验收集}
+
+AIChat只查询冻结后的指标、证据和模型解释，不自行生成事实。固定问题分五组：
+
+\begin{enumerate}[label=Q\arabic*.]
+  \item 亚非拉哪些国家同时具有较高中国投资暴露和汇率风险？
+  \item 哪些国家只属于投资通道，不参加实体经营风险排名？
+  \item 三大区域的独立危机事件数量和主要风险类型是什么？
+  \item 某国风险评分本期为何变化？等权、熵权和PCA是否一致？
+  \item 当前40国核心月度数据完整率和最新日期是什么？
+  \item 某企业披露到国家还是地区？能够得出什么层级的敞口结论？
+  \item 哪些企业同时披露海外收入与汇兑损益或外汇风险？
+  \item 某企业未来90天应保留哪些币种的经营现金？
+  \item 人民币、本币和合同货币口径下，同一策略排序为何不同？
+  \item 当前属于哪些周期标签？依据哪些字段？
+  \item 为什么本期同时持有美元短期资产和黄金？
+  \item 去掉黄金后，覆盖率、CVaR和恢复时间变化多少？
+  \item 去掉美元资产后，合同货币覆盖和尾部损失变化多少？
+  \item 黄金从0\%提高到2.5\%、5\%和10\%后，三层资金分别发生什么变化？
+  \item 在哪些事件中黄金不占优？原因是周期、成本、载体还是计价？
+  \item 在哪些事件中美元短债不占优？黄金的边际贡献来自什么？
+  \item 2.5\%条件底仓适用条件是否满足？0\%反事实成本是多少？
+  \item 当前资产路径属于可行、条件可行、禁止还是人工复核？
+  \item 本结论使用了哪些来源、版本、页码和模拟假设？
+  \item 生成带三层配置、三种计价、反事实结果和约束提示的管理层简报。
+\end{enumerate}
+
+数值题正确率不低于90\%，关键数值误差不超过1\%。每题记录筛选条件、期望答案、实际答案、关键字段、来源、是否幻觉、响应时间和回退提示。
+
+\chapter{约束路由而非全局停机}
+
+\section{四级路径状态}
+
+\begin{longtable}{p{2.8cm}p{5.2cm}p{5.5cm}}
+\toprule
+\textbf{状态} & \textbf{含义} & \textbf{系统行为}\\
+\midrule
+可行 & 数据和规则未发现阻断，载体与流程可描述 & 输出配置区间、成本和再平衡方向\\
+条件可行 & 需要主体资格、额度、托管、税务或会计确认 & 输出条件、缺失证据和通过条件，不伪装为已批准\\
+禁止 & 已有明确适用规则阻断具体载体或路径 & 不输出该路径的执行步骤；继续展示风险、历史表现和其他合法工具\\
+人工复核 & 规则冲突、适用主体或最新状态不能自动判断 & 保留分析，标记需要法务、合规、会计或税务复核\\
+\bottomrule
+\end{longtable}
+
+规则范围不以美国制度为唯一来源，而根据企业主体、经营国、托管地、交易对手、结算货币和产品载体，检查中国、经营国、托管地、联合国以及实际涉及的其他监管体系。俄罗斯、伊朗、委内瑞拉等案例仅用于历史和风险研究，不提供规避制裁、外汇管制或资产冻结的方法。黄金也可能被禁运、冻结或折价\cite{ofac1029,imfgold2023}；美元账户也可能因银行、法域或支付渠道受限而不可用。系统的职责是让这种差异可见，而不是替任何一方作政治预设。
+
+\section{托管、会计与物流}
+
+系统必须把“黄金是什么”拆成载体、所有权、托管人、托管地、保险、可提取性、运输和变现市场。自有实物并不自动等于可跨境使用；境外托管也不自动等于安全。会计、税务、黄金进出口、反洗钱和质押结论全部标注需适用法域专业复核。
+
+\part{执行、分工与参赛交付}
+
+\chapter{角色与七条工作流}
+
+实际团队按3--4人配置，不虚构七人团队：
+
+\begin{longtable}{p{1.0cm}p{4.0cm}p{8.4cm}}
+\toprule
+\textbf{角色} & \textbf{定位} & \textbf{职责}\\
+\midrule
+A & 项目负责人兼Smartbi架构 & 赛题映射、门槛主持、页面结构、跨模块验收和最终提交\\
+B & 数据负责人 & 130国、40国、亚洲/非洲/拉美区域包、九表数据和质量检查\\
+C & 金融与模型负责人 & 周期规则、事件研究、组合回测、对称剔除、挑战模型和企业情景\\
+D & 企业、证据与交付负责人 & 年报、45案例、AIChat、报告、约束、视频和QA\\
+\bottomrule
+\end{longtable}
+
+若只有3人，A兼任D；B与C不得合并，避免同一人同时生产并验证数据与模型。七条工作流为：项目与Smartbi；亚洲数据；非洲数据；拉美数据；企业年报与案例；周期/风险/组合模型；AIChat/报告/约束/视频/QA。
+
+\chapter{阶段、门槛与交付}
+
+\begin{longtable}{p{1.3cm}p{3.4cm}p{6.0cm}p{2.6cm}}
+\toprule
+\textbf{阶段} & \textbf{任务} & \textbf{通过条件} & \textbf{负责人}\\
+\midrule
+R0 & 案例清点、去重和编号治理 & 45份入矩阵；重复事件有事件簇；README问题有修复清单 & A+D\\
+R1 & 关键事实回源 & 核心结论达到一项A或双B；关键数字有页码 & D复核A\\
+G1 & 方向复审 & 接受三层、三计价、对称检验和约束路由 & A主持\\
+R2 & 样本与数据可得性 & 130国覆盖表、40国预审、20家企业披露登记 & B+D\\
+G2 & 样本与字段冻结 & 40国满足规则；企业和事件状态透明；九表字典冻结 & A+B+C\\
+R3 & 周期、基准和情景设计 & 主规则、挑战模型、成本、层级和反事实方法卡齐全 & C\\
+G3 & 可证伪性复审 & 美元/黄金对称剔除、三口径、无前视和负结果模板通过 & A+C，B验证\\
+E1 & 正式数据与模型 & 数据发布、周期识别、回测、企业原型和结果表 & B+C\\
+E2 & Smartbi与AIChat & 五页、20题、10秒响应、联动和解释通过 & A+D\\
+E3 & 报告、视频、恢复与提交 & PDF、XML、三分钟视频、字典、来源、约束和指南齐全 & 全员\\
+\bottomrule
+\end{longtable}
+
+G1未通过不得建设正式数据；G2未通过不得建模；G3未通过不得在报告中给出配置区间。门槛失败时缩小结论，不通过降低事件阈值、删反例、调高黄金或美元收益、伪造企业敞口来赶进度。
+
+\chapter{倒排计划}
+
+\begin{longtable}{p{3.0cm}p{7.5cm}p{3.0cm}}
+\toprule
+\textbf{日期} & \textbf{工作} & \textbf{主要交付}\\
+\midrule
+8月15--17日 & 冻结V2.0研究口径、国家选择规则和三层资产字典 & G1记录、来源目录、字段草案\\
+8月17--21日 & 130国覆盖、40国预审、20家企业披露表和案例回源 & G2候选包\\
+8月20--24日 & 危机事件、周期规则、风险评分、对称组合回测 & G3方法卡与结果初稿\\
+8月22--26日 & Smartbi五页、企业联动和周期实验室 & 页面验收包\\
+8月25--28日 & AIChat、报告、约束路由和视频脚本 & 20题记录、报告初稿\\
+8月28--30日 & 反例、性能、XML恢复、数据复现和材料互审 & QA记录与恢复证据\\
+8月31日 & 内容冻结和提交包终检 & 最终提交包\\
+\bottomrule
+\end{longtable}
+
+3--4人条件下该排期属于高风险排期。延期时依次保留：证据质量、40国主干、三层资金、三种计价、对称剔除、最多六家深度企业、五页故事线、恢复和约束材料。不得以删除黄金不利结果、美元不利结果或模拟标记来换取进度。
+
+\chapter{赛题映射与条件评分}
+
+以赛题原文为唯一规则来源\cite{competition}。当前资产与条件目标分开：
+
+\begin{longtable}{p{3.1cm}p{2.0cm}p{2.0cm}p{6.1cm}}
+\toprule
+\textbf{评分项} & \textbf{当前审慎分} & \textbf{条件目标} & \textbf{V2.0补强交付}\\
+\midrule
+问题价值 & 15/20 & 19/20 & 中国出海规模、亚非拉覆盖、企业币种错配与三层资金决策\\
+数据与方法 & 11/25 & 21--22/25 & 40国、20事件、三计价、周期模型、对称实验和证据分级\\
+可视化交互 & 2/25 & 20--22/25 & Smartbi五页、周期实验室、企业联动和10秒响应\\
+创新性 & 13/20 & 18/20 & 从单资产预测升级为多币种—黄金跨周期协同配置\\
+完整可复现 & 4/10 & 8--9/10 & 九表、字典、来源、运行版本、XML恢复和提交清单\\
+\textbf{合计} & \textbf{45/100} & \textbf{86--90/100} & 目标只在后续交付全部验收后成立\\
+\bottomrule
+\end{longtable}
+
+赛题对视频时长存在“3分钟以内”和“3--5分钟”两处冲突，最终执行更严格的不超过3分钟。写完计划书、生成静态图或编译PDF不会自动提高当前分数。
+
+\chapter{最终交付与验收}
+
+最终提交包包括：分析报告PDF、Smartbi资源XML、三分钟以内视频、示例数据、字段字典、来源说明、模型与模拟说明、约束声明、操作指南和恢复记录。Smartbi XML必须在干净环境完成恢复验证。
+
+\section{内容验收}
+
+\begin{enumerate}[label=\ensuremath{\square}]
+  \item 130国均有中国投资或企业覆盖状态，通道地单列；
+  \item 40国满足2010--2025年汇率和CPI月度完整率规则；
+  \item 20家企业覆盖六种经营模式，量化画像满足双披露条件；
+  \item 三大区域各有独立危机事件，总数目标不少于20；不足时不降阈值；
+  \item 三层资金、三种计价口径和资金层级防火墙贯穿数据、模型和页面；
+  \item 合格战略层执行2.5\%条件底仓，并公开0\%反事实；
+  \item 每项完整组合同时具有去黄金和去美元结果；
+  \item 所有回测使用当时可获得的数据并计入交易、保管、折价和税费；
+  \item 至少呈现3个黄金不占优、3个美元短债不占优或贡献有限的历史窗口；
+  \item 45份案例全部进入证据矩阵，重复事件不重复计数；
+  \item 月度、年度和事件数据不混频，真实、代理和模拟明确区分；
+  \item 五页看板支持地区、国家、企业、层级、计价、周期和策略联动；
+  \item 20个AIChat问题数值正确率不低于90\%，误差不超过1\%；
+  \item 路径受限时仍输出风险与合法替代方案，不输出规避限制的执行步骤；
+  \item XML恢复、视频、PDF、数据和说明材料逐项可打开并与最终版本一致。
+\end{enumerate}
+
+\section{研究停止与收缩条件}
+
+以下情况不终止整个国别风险平台，但必须收缩资产配置结论：40国核心数据不足；独立事件少于门槛；企业披露无法支撑币种与期限原型；周期规则在挑战模型下极不稳定；成本与约束使任一资产无法形成可执行路径；或不同计价口径得到完全冲突且无法解释的结论。系统可以输出“证据不足”和不确定区间，不能伪造确定性。
+
+\appendix
+\part{执行附录}
+
+\chapter{40国候选池}
+
+候选池仅用于R2预审，G2后才能称为正式40国：
+
+\begin{longtable}{p{2.4cm}p{10.6cm}}
+\toprule
+\textbf{区域} & \textbf{候选国家}\\
+\midrule
+亚洲及中东15国 & 孟加拉国、印度、印度尼西亚、伊朗、哈萨克斯坦、黎巴嫩、马来西亚、巴基斯坦、菲律宾、新加坡、斯里兰卡、泰国、土耳其、阿联酋、越南\\
+非洲14国 & 阿尔及利亚、安哥拉、刚果（金）、埃及、埃塞俄比亚、加纳、肯尼亚、毛里求斯、摩洛哥、莫桑比克、尼日利亚、南非、赞比亚、津巴布韦\\
+拉丁美洲11国 & 阿根廷、玻利维亚、巴西、智利、哥伦比亚、厄瓜多尔、墨西哥、巴拿马、巴拉圭、秘鲁、委内瑞拉\\
+\bottomrule
+\end{longtable}
+
+每国预审记录ISO代码、地区、投资存在证据、汇率完整率、CPI完整率、低风险对照资格、官方/平行汇率、替代来源、缺失原因和最后核验日期。刚果（金）、津巴布韦、阿根廷、委内瑞拉等特殊口径必须显式标记。
+
+\chapter{风险登记}
+
+\begin{longtable}{p{3.4cm}p{4.5cm}p{5.5cm}}
+\toprule
+\textbf{风险} & \textbf{触发信号} & \textbf{处置}\\
+\midrule
+黄金长期结论被起止日期主导 & 5年、10年、20年窗口排序反转 & 报告滚动分布和起点敏感性，不写“必然跑赢”\\
+美元与黄金关系结构变化 & 实际利率、美元和黄金同向次数增加 & 使用多标签周期与挑战模型，不写固定相关系数\\
+企业披露不足 & 只有地区收入、无币种和现金池 & 降级为基础画像，使用明确模拟原型\\
+政策数据混频 & 年度政策被复制到月度 & 分表保存；状态区间标记代理\\
+黄金载体被混为一类 & ETF、实物和非分配账户成本相同 & 分载体建模和约束路由\\
+合规被误解为政治立场 & 只检查单一国家规则或全局停机 & 依据实际法域多源检查；继续风险分析\\
+模型选择性展示 & 只展示黄金或美元有利窗口 & 强制对称剔除、反例和完整运行清单\\
+排期过紧 & G2/G3延期或Smartbi环境不足 & 缩小结论，不伪造完整性；优先恢复和证据\\
+\bottomrule
+\end{longtable}
+
+\chapter{术语表}
+
+\begin{longtable}{p{3.4cm}p{9.6cm}}
+\toprule
+\textbf{术语} & \textbf{本项目定义}\\
+\midrule
+经营现金 & 未来90天确定或高概率支付所需资金\\
+流动性储备 & 3--12个月内用于缓冲、再融资和汇出延迟的资金\\
+战略储备 & 1--5年以上不承担近期经营支付的可配置资金\\
+条件底仓 & 满足期限、载体和约束资格后，战略层从2.5\%黄金开始的产品规则\\
+0\%反事实 & 保持其他条件不变、去除黄金，用于衡量条件底仓成本与贡献的研究组合\\
+对称剔除 & 分别去除黄金和美元资产，比较两者边际贡献\\
+合同偿付货币 & 采购、利息、本金或其他合同实际约定的支付币种\\
+周期标签 & 由美元、利率、通胀、当地货币、资本限制和黄金状态共同形成的可解释多标签\\
+约束路由 & 将具体路径标记为可行、条件可行、禁止或人工复核，同时保留风险分析\\
+\bottomrule
+\end{longtable}
+
+\backmatter
+
+\chapter*{参考文献与权威来源}
+\addcontentsline{toc}{chapter}{参考文献与权威来源}
+
+\begin{thebibliography}{99}
+
+\bibitem{competition}
+Smartbi，\emph{XH-202612 Smartbi AI驱动的数据创新平台研究}，赛题原文，项目本地存档，2026。
+
+\bibitem{mofcom2024}
+中华人民共和国商务部、国家统计局、国家外汇管理局，\emph{2024年度中国对外直接投资统计公报}，2025，\url{https://www.mofcom.gov.cn/zfxxgk/fdzdgknr/ztfl/tjsj/gwjjhztj/art/2025/art_73650df853694bf0a192e5fceb2948bb.html}。
+
+\bibitem{wbgem}
+World Bank, \emph{Global Economic Monitor}, \url{https://datacatalog.worldbank.org/search/dataset/0037798/global-economic-monitor}.
+
+\bibitem{wbapi}
+World Bank, \emph{World Bank Indicators API Documentation}, \url{https://datahelpdesk.worldbank.org/knowledgebase/articles/889392}.
+
+\bibitem{imfweo}
+International Monetary Fund, \emph{World Economic Outlook Database}, \url{https://data.imf.org/Datasets/WEO}.
+
+\bibitem{imfareaer}
+International Monetary Fund, \emph{Annual Report on Exchange Arrangements and Exchange Restrictions}, \url{https://www.elibrary.imf.org/subject/012}.
+
+\bibitem{chinnito}
+Menzie Chinn and Hiro Ito, \emph{The Chinn--Ito Index}, 2023 release documentation, \url{https://web.pdx.edu/~ito/Readme_kaopen2023.pdf}.
+
+\bibitem{countrygpr}
+Banco de España, \emph{Country-specific Geopolitical Risk Indices for 34 Economies}, \href{https://www.bde.es/wbe/en/areas-actuacion/analisis-e-investigacion/recursos/indices-de-riesgo-geopolitico-generales-y-bilaterales-para-34-economias-6075d2451c9da91.html}{official source page}.
+
+\bibitem{bisgold2020}
+Omar Zulaica, \emph{What Share for Gold? On the Interaction of Gold and Foreign Exchange Reserve Returns}, BIS Working Papers No. 906, 2020, \url{https://www.bis.org/publ/work906.htm}.
+
+\bibitem{bisnumeraire}
+Bank for International Settlements, \emph{FX Reserve Management: Elements of a Framework}, BIS Papers No. 38, 2008, \url{https://www.bis.org/publ/bppdf/bispap38.pdf}.
+
+\bibitem{imfgold2026}
+Istvan Mak and Etienne Vaccaro-Grange, \emph{Gold in Central Bank Reserves: Strategic Considerations, Market Risks, and Practical Guidance}, IMF Notes 2026/007, 2026, \url{https://www.elibrary.imf.org/view/journals/068/2026/007/article-A001-en.xml}.
+
+\bibitem{imfgold2023}
+Serkan Arslanalp, Barry Eichengreen, and Chima Simpson-Bell, \emph{Gold as International Reserves: A Barbarous Relic No More?}, IMF Working Paper 2023/014, 2023, \url{https://www.imf.org/en/publications/wp/issues/2023/01/27/gold-as-international-reserves-a-barbarous-relic-no-more-528089}.
+
+\bibitem{erbharvey}
+Claude B. Erb and Campbell R. Harvey, \emph{The Golden Dilemma}, NBER Working Paper 18706, 2013, \url{https://www.nber.org/papers/w18706}.
+
+\bibitem{sgebenchmark}
+Shanghai Gold Exchange, \emph{Shanghai Gold Benchmark Price}, \url{https://en.sge.com.cn/h5_data_BenchmarkPrice}.
+
+\bibitem{afpcash}
+Association for Financial Professionals / gtnews, \emph{Guide to Investing Operating Cash}, 2014, \url{https://www.afponline.org/docs/default-source/default-document-library/pub/gtnews-guide-to-investing-operating-cash.pdf}.
+
+\bibitem{fred}
+Federal Reserve Bank of St. Louis, \emph{FRED Economic Data}, \url{https://fred.stlouisfed.org/}.
+
+\bibitem{worldbankpink}
+World Bank, \emph{Commodity Markets Pink Sheet}, \url{https://www.worldbank.org/en/research/commodity-markets}.
+
+\bibitem{ofac1029}
+U.S. Department of the Treasury, Office of Foreign Assets Control, \emph{FAQ 1029: Russia-related Sanctions and Gold-related Transactions}, 2022, \url{https://ofac.treasury.gov/faqs/1029}.
+
+\bibitem{ifrscommodity}
+IFRS Interpretations Committee, \emph{Commodity Loans and Related Transactions: Staff Paper AP10}, 2016, \url{https://www.ifrs.org/content/dam/ifrs/meetings/2016/november/ifrs-ic/commodity-loans/ap10-commodity-loans.pdf}.
+
+\bibitem{ifrsias29}
+IFRS Foundation, \emph{IAS 29 Financial Reporting in Hyperinflationary Economies}, \url{https://www.ifrs.org/issued-standards/list-of-standards/ias-29-financial-reporting-in-hyperinflationary-economies/}.
+
+\end{thebibliography}
+
+\clearpage
+\thispagestyle{empty}
+\null
+\vfill
+\begin{center}
+  {\color{OceanBlue}\rule{0.72\textwidth}{1pt}}\\[1.0cm]
+  {\LARGE\bfseries\color{DeepNavy}版本信息\par}
+  \vspace{0.9cm}
+  \begin{tabular}{>{\bfseries}p{3.5cm}p{8.0cm}}
+  文档名称： & 多币种流动性与黄金战略储备周期配置计划书\\[0.35cm]
+  版本号： & \textbf{V2.0}\\[0.35cm]
+  编制日期： & 2026年8月15日\\[0.35cm]
+  文档状态： & 研究与实施计划稿\\[0.35cm]
+  适用项目： & 面向中国出海企业的国别风险与应急储备智能决策平台\\[0.35cm]
+  声明： & V2.0为独立计划书，不覆盖V1.1历史文件。\\
+  \end{tabular}
+  \vspace{1.0cm}
+  {\color{OceanBlue}\rule{0.72\textwidth}{1pt}}
+\end{center}
+\vfill
+\null
+
+\end{document}

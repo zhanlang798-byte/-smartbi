@@ -1,0 +1,115 @@
+{
+ "extracted": [
+  {
+   "rel": "D0-D12_数据交付_V4.2/config/global_cycle_rules_v41.yaml",
+   "bytes": 5436,
+   "sha256": "02572ff2bf5b92e7683995a7b56a7629f2b8ebe7a98a78a3862d2d76a833a130"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/Smartbi导入行数与哈希清单.xlsx",
+   "bytes": 6934,
+   "sha256": "c26fb8f93cd34dac4423df3fc8f15dbdd0e7cc93c7df0abe64f64d06089a871d"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/Smartbi模型映射_V4.1.xlsx",
+   "bytes": 6390,
+   "sha256": "f84b81925581d5882ff21e410f942e2b3893edf0b23c1ce239c6295e2b55ec0f"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/asset_monthly_return.xlsx",
+   "bytes": 4323068,
+   "sha256": "0cebd558c77c10624613d834737e09b8c416b58bc3400612a5f29a54eb9efe74"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/bridge_company_geography.xlsx",
+   "bytes": 5577,
+   "sha256": "87b2c75347edef1e8e484fb64f37b4a3ec4d489501c3808ad85de350244bcd68"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/case_evidence.xlsx",
+   "bytes": 11336,
+   "sha256": "3b0b9b477d516879039e41ce991c221b80e7513d2c882bbe392702fdfd36e3d7"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/company_overseas_exposure.xlsx",
+   "bytes": 25838,
+   "sha256": "bd660364e2a23715ffde1ca66ad121cf32dec662c0f50bd136abd95e0dacca56"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/country_event.xlsx",
+   "bytes": 11317,
+   "sha256": "1a016b428968ad7a91f121b0a7a3569763a208cfffd35ff212724e128b87828a"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/country_exposure.xlsx",
+   "bytes": 154822,
+   "sha256": "b92a66d3e539a4763aa7807ea8d9c9aa9cadb7536393ec2948714bce69f5aca4"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/country_monthly_risk.xlsx",
+   "bytes": 679896,
+   "sha256": "0d83e648b5e142661e4f3726a164887c5c8bbf25c24d5e04e6a1449265879b0e"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/country_policy_year.xlsx",
+   "bytes": 164603,
+   "sha256": "b2b773d363967ecec470c57e111e27cd4d835dcb2f9d6dbd4fa752a86cabedfd"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/dim_asset.xlsx",
+   "bytes": 5739,
+   "sha256": "e73a7d660238cb69bcba1dcf83699d787a0b011a5b8bb7086d5b926a168c8646"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/dim_company.xlsx",
+   "bytes": 6063,
+   "sha256": "8d39b2f9b48c352a9e7b6e60bd86c17510cfb43c2649318524e42e4151d21904"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/dim_country.xlsx",
+   "bytes": 13396,
+   "sha256": "da2d031bb6d99ca6759ca91ee1e425395bed491b8b47388f4ebc7639fe4ddf5e"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/dim_date.xlsx",
+   "bytes": 28305,
+   "sha256": "d9cddd7223eda5687064b71e078ee27d7f144e91548e2267a69b6e98bd79fa0a"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/dim_event.xlsx",
+   "bytes": 8948,
+   "sha256": "7a725f650419e4eee2e039968c8ad1eaba8ce7ae09978f7a9b03731aaba07199"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/dim_year.xlsx",
+   "bytes": 5239,
+   "sha256": "c5e52389428ca3cce4cf10f20627dfeede9db7a413071ff0fbc2d2b88c709ffd"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/global_cycle_month.xlsx",
+   "bytes": 156933,
+   "sha256": "ce4923fa6210148279dc2ccf2daea1073ef57ddff05c5573be7aba1e9795f64c"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/historical_crisis_event.xlsx",
+   "bytes": 9191,
+   "sha256": "f2842eb59d47d41955a76fb21135f7f26d38c996ea0795ac8f72a67186a2df2d"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/portfolio_scenario.xlsx",
+   "bytes": 18524719,
+   "sha256": "2d0967bb1509fdb47fcadf1c58139c1ef1d3ab23faf3500b037235c5f26c397a"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/source_registry.xlsx",
+   "bytes": 189332,
+   "sha256": "cf5d0cda83a8ecd27dda3088201b6101e935eb6092af0fd6554a787f23f46a51"
+  },
+  {
+   "rel": "D0-D12_数据交付_V4.2/data/smartbi/数据字典_V4.1.xlsx",
+   "bytes": 15403,
+   "sha256": "183f7b1364f789d5c95cc2077174c08bf25624270579c9d5f389d9fab95b46c7"
+  }
+ ],
+ "ignored_in_scope": []
+}

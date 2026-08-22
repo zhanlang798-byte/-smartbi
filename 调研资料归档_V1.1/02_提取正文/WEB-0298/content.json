@@ -1,0 +1,50 @@
+{
+  "source_id": "WEB-0298",
+  "title": "IATA",
+  "publisher": "IATA",
+  "publication_date": "",
+  "source_url": "https://www.iata.org/",
+  "extracted_at": "2026-08-16T09:21:29.278Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 9,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Find upcoming classroom courses in a location near you."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Air cargo market intelligence at your fingertips."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "The ultimate source for international travel document requirements."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "See all products & services"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Save a Life, Not a Bag"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "In an emergency, every second counts. Yet some passengers still stop to get luggage and film when time is critical. Learn the six evacuation safety rules"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "We are the trade association for the world's airlines. Our members account for some 85% of total air traffic."
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Become an IATA member"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Some 550 Strategic Partners work with our member airlines to deliver solutions that shape aviation."
+    }
+  ],
+  "outgoing_data_links": []
+}

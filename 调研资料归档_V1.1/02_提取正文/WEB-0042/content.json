@@ -1,0 +1,37 @@
+{
+  "source_id": "WEB-0042",
+  "title": "World Bank Open Data",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+  "extracted_at": "2026-08-16T09:21:16.805Z",
+  "content_state": "DOWNLOAD_LANDING",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Inflation, consumer prices (annual %)DataBankMicrodataData CatalogMicrodataData CatalogDataBankAbout UsGet StartedFAQHelp DeskContactData ProgramsImproving Statistical CapacityGlobal Data FacilityInternational Comparison Program & Purchasing Power ParityInternational Household Survey Network (IHSN)Joint External Debt HubOpen Data ToolkitQuarterly External Debt StatisticsProductsWorld Development IndicatorsInternational Debt StatisticsOther Books and ReportsCountry & Lending GroupsData Portals and ToolsDevelopment GoalsTerms of UseFor DevelopersLabelAll Countries and EconomiesCountryMost Recent YearMost Recent ValueThis site uses cookies to optimize functionality and give you the best possible experience. If you continue to navigate this website beyond this page, cookies will be placed on your browser. To learn more about cookies, click here."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://api.worldbank.org/v2/en/indicator/FP.CPI.TOTL.ZG?downloadformat=csv",
+      "extension": ".zg",
+      "anchor_text": "CSV",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/en/indicator/FP.CPI.TOTL.ZG?downloadformat=xml",
+      "extension": ".zg",
+      "anchor_text": "XML",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/en/indicator/FP.CPI.TOTL.ZG?downloadformat=excel",
+      "extension": ".zg",
+      "anchor_text": "EXCEL",
+      "locator": "anchor"
+    }
+  ]
+}

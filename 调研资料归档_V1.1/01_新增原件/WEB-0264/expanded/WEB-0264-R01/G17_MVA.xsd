@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_MVA" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_MVA" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_MVA_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_MVA_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="TOTASS">
+    <xs:annotation>
+     <xs:documentation>Total motor vehicle assemblies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="AUTOAS">
+    <xs:annotation>
+     <xs:documentation>Auto assemblies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="TRUCKS">
+    <xs:annotation>
+     <xs:documentation>Truck assemblies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="LTTRCK">
+    <xs:annotation>
+     <xs:documentation>Light truck assemblies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="HMTRCK">
+    <xs:annotation>
+     <xs:documentation>Heavy and medium truck assemblies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="AUTLTT">
+    <xs:annotation>
+     <xs:documentation>Autos and light truck assemblies</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,117 @@
+# =============================================================================
+# XH-202612 项目范围冻结配置（D0 / G0 口径门）
+# 依据：总计划书 V4.2「D0—D12 端到端步骤卡」与「项目口径、架构与执行控制」
+# 生成：2026-08-17，脚本 00_build_d0_configs.py 之外的直接冻结文本
+# 注意：scope_status 为 pending_signature —— G0 需 A/B/C/D 人工签署，
+#       见 data/qa/D0_scope_signoff_20260817.xlsx；签署完成前下游结果为候选层。
+# =============================================================================
+
+scope_status: pending_signature   # frozen 需四人（或三人合并后）签字后改写
+run_id: "20260817_v42"            # 正式执行运行号；每次正式运行换新号
+archive_snapshot_id: "20260816_research_archive_v1"  # 不可变调研归档快照，禁止覆盖
+
+project:
+  name: 全球经济周期与亚非拉国别风险多币种储备智能决策平台
+  competition_code: XH-202612
+  platform: Smartbi Insight Edition 11.0.110415.26324
+  resource_prefix: XH202612_V41_   # 平台对象统一前缀（沿用 V4.1 命名合同）
+
+research_objects:
+  coverage_layer:
+    countries_total: 130
+    region_quota: { Asia: 45, Africa: 51, LatinAmerica: 34 }
+    excludes: [ CHN ]              # 无中国内地；日本/美国/欧洲只作全球冲击源
+    investment_window_years: [ 2016, 2024 ]
+  quant_layer:
+    countries_total: 40
+    region_quota: { Asia: 15, Africa: 14, LatinAmerica: 11 }
+    low_risk_control_per_region_min: 3
+    panel_start: "2010-01-31"
+    panel_end: "2025-12-31"
+    panel_months: 192
+  company_layer:
+    companies: 20
+    deep_dive_max: 6
+    fiscal_years: [ 2018, 2025 ]
+    deep_score_weights: { disclosure_completeness: 0.40, overseas_exposure: 0.35, model_representativeness: 0.25 }
+  event_layer:
+    independent_events_min: 20
+    per_region_min: 5
+    evidence_rule: "A 级单一证据或两项独立 B 级证据"
+  global_cycle_layer:
+    start: "1971-01-31"
+    end: "2025-12-31"
+    months: 660
+    core_coverage_min: 0.90
+  historical_regime_layer:
+    span_years: [ 1929, 2025 ]
+    anchors: 17
+    case_files_total: 45
+    pre_1971_rule: "1929—1970 只进历史制度与压力测试层；禁止拼接统一月度序列；modern_backtest_allowed=0"
+
+fx_direction:
+  convention: LCU_per_USD        # 1 美元兑换多少本币；值上升 = 本币贬值
+  original_direction_field: fx_original_direction   # 保留原方向与转换公式
+
+reserve_layers:
+  operating:   { horizon: "0-90D", goal: "工资、采购、税费、利息和到期债务按时支付", gold_floor: false }
+  liquidity:   { horizon: "3-12M", goal: "缓冲经营波动、汇出延迟和再融资间隔", note: "授信不等同现金" }
+  strategic:   { horizon: "1-10Y", goal: "跨周期购买力、信用与托管法域分散",
+                 conditional_gold_floor: 0.025,
+                 gold_floor_conditions: [ 期限真实, 托管可行, 权属清晰, 路径可复核 ],
+                 counterfactual_required: "必须保留 0% 黄金反事实" }
+
+currency_bases: [ CNY, LCU, CONTRACT ]   # 人民币 / 经营国本币 / 合同货币
+
+country_event_triggers:
+  fx_depreciation_12m: 0.20        # 12 个月本币贬值 ≥ 20%
+  cpi_yoy: 0.15                    # CPI 同比 ≥ 15%
+  parallel_premium: 0.20           # 官方与可信平行汇率差 ≥ 20%
+  policy_tightening: "资本管制明显收紧（人工编码确认）"
+  freeze_or_outage: "资金冻结、汇出限制或银行系统中断"
+merge_rule: "同国同类触发连续出现或间隔 ≤ 2 个月时合并为一个事件"
+exit_rule: "连续 3 个月退出所有数值阈值，或正式限制解除"
+event_window: { pre_months: 12, post_months: 24 }
+
+global_cycle:
+  primary_state_priority:          # 高 → 低
+    - credit_systemic
+    - asset_bust
+    - recession_deflation
+    - stagflation
+    - aggressive_tightening
+    - inflation_overheating
+    - recovery_reflation
+    - normal_expansion
+  compound_rule: "两类及以上危机类标签同时成立时 compound_global_crisis=1"
+  no_lookahead: "状态与分位只使用决策月当时已发布信息；扩展窗口，不用全样本分位"
+
+completeness_thresholds:
+  country_fx_cpi_min_nonnull: 154    # /192 真实月度非空值（80%）
+  core_asset_series_min: 0.95        # 美元金价、美元短债、USD/CNY 月度完整率
+  global_cycle_core_min: 0.90        # 核心适用指标适用期完整率
+
+portfolio:
+  horizons: [ 90D, 1Y, 5Y, 10Y ]
+  gold_grid: [ 0.0, 0.025, 0.05, 0.075, 0.10, 0.15, 0.20 ]
+  weight_sum_tolerance: 1.0e-8
+  gold_decomposition_tolerance: 1.0e-10
+  symmetric_exclusion: [ full, no_gold, no_usd ]
+  non_reserve_assets_weight: 0       # 股票、房地产、原油、信用利差、VIX 恒为 0
+  counterexample_min: { gold_not_superior: 3, usd_tbill_not_superior: 3, both_insufficient: 2 }
+
+compliance_rules:
+  - 投资与任何数值缺失保持为空，禁止填 0
+  - 年度/季度值禁止复制为月度观测；年度表经 dim_year 关联
+  - 核心危机期汇率与 CPI 主结果不插值（is_imputed=0）
+  - 禁止使用未来信息：release_date 不得晚于 decision_date
+  - 受限许可（如 ICE 高收益利差）原始序列不进入提交包，只保留派生触发布尔值
+  - 不输出规避制裁、外汇管制或转移受限资产的操作步骤
+  - METADATA_ONLY_LICENSE 来源只复用题录、链接与资料卡
+  - 模拟值必须 is_simulated=1，不与真实披露聚合为同一指标
+  - 2025 年无正式值时保持为空并报告最新完整期，不用预测冒充实际
+
+change_control:
+  change_log: data/qa/D0_scope_signoff_20260817.xlsx#change_log
+  required_fields: [ change_id, proposed_by, reason, affected_tables, approved_by, effective_run_id, status ]
+  rule: "任何口径修订触发受影响步骤重跑；冻结指一次提交口径稳定，不禁止正式变更单修订"

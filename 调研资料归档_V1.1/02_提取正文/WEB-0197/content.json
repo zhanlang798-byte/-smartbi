@@ -1,0 +1,189 @@
+{
+  "source_id": "WEB-0197",
+  "title": "Home  : 日本銀行 Bank of Japan",
+  "publisher": "Bank of Japan",
+  "publication_date": "",
+  "source_url": "https://www.boj.or.jp/en",
+  "extracted_at": "2026-08-16T09:21:22.740Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 12,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Warning against Scams Using the Bank's Name"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Aug. 14, 2026Research/Studies (Research Paper) What Prevents Productivity Gains from Translating into Wages: Lessons from Japan's Deflationary Period"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Aug. 13, 2026StatisticsJapanese Government Bonds Held by the Bank of Japan[XLSX 29KB]"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Aug. 13, 2026StatisticsBasic Figures on Fails (July)[PDF 152KB]"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Aug. 13, 2026StatisticsBank of Japan Accounts (August 10)"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Aug. 13, 2026StatisticsCorporate Goods Price Index (July)[PDF 218KB]"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Aug. 12, 2026Research/Studies(Research Paper) Market Operations in Fiscal 2025"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Aug. 12, 2026Research/Studies (Research Paper) Linkages of Firm Spending Behavior through Supply Chains"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Aug. 12, 2026Research/Studies (Research Paper) Mapping Japan's Manufacturing Supply Chains Through Firm-to-Firm Transaction Data"
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "Aug. 12, 2026StatisticsMoney Stock (July)[PDF 162KB]"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "Aug. 10, 2026Monetary PolicySummary of Opinions at the Monetary Policy Meeting on July 30 and 31, 2026[PDF 175KB]"
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Business Continuity Planning"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.boj.or.jp/en/rss/whatsnew.xml",
+      "extension": ".xml",
+      "anchor_text": "RSS",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei260810.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "Japanese Government Bonds Held by the Bank of Japan[XLSX 29KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/set/bffail/sjgb2607.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Basic Figures on Fails (July)[PDF 152KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2607.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Corporate Goods Price Index (July)[PDF 218KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/money/ms/ms2607.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Money Stock (July)[PDF 162KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi260731.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Summary of Opinions at the Monetary Policy Meeting on July 30 and 31, 2026[PDF 175KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260616.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Minutes of the Monetary Policy Meeting on June 15 and 16, 2026[PDF 313KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/outlook/gor2607b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Aug. 3,2026Outlook for Economic Activity and Prices (July 2026, full text)[PDF 1,330KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr260731b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Quarterly Schedule of Outright Purchases of Japanese Government Bonds (Competitive Auction Method) (July-September 2026) (Schedule Updates)[PDF 79KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr260731a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Timetable and Schedule of U.S. Dollar Funds-Supplying Operations (August-December 2026)[PDF 63KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Scheduled Dates of Monetary Policy Meetings in 2027[PDF 137KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/outlook/gor2607a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Outlook for Economic Activity and Prices (July 2026, The Bank's View)[PDF 202KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Statement on Monetary Policy[PDF 160KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr260717a.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Loan Disbursement under the Funds-Supplying Operations to Support Financing for Climate Change Responses[PDF 78KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi260616.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Summary of Opinions at the Monetary Policy Meeting on June 15 and 16, 2026[PDF 212KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2607.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Principal Figures of Financial Institutions (July)[PDF 188KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/market/short/call/call.xlsx",
+      "extension": ".xlsx",
+      "anchor_text": "Amounts Outstanding in the Call Money Market (July)[XLSX 33KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/boj/other/tseifu/release/2026/seifu2607.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Bank of Japan's Transactions with the Government (July)[PDF 93KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/statistics/boj/other/mbt/mbt2607.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Monetary Base and the Bank of Japan's Transactions (July)[PDF 133KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/about/organization/policyboard/pb260703b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Designation of a Board Member to Perform the Duties of the Chairperson If the Chairperson Is Prevented from Attending to Their Duties[PDF 83KB]",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/paym/bond/ryudo.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Liquidity Indicators in the JGB Markets (May)[PDF 1,246KB]",
+      "locator": "anchor"
+    }
+  ]
+}

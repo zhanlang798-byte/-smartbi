@@ -1,0 +1,17 @@
+{
+  "run_id": "20260816_web_usability_v11",
+  "audited_html": 196,
+  "file_exists": 159,
+  "content_state_counts": {
+    "BLOCK_PAGE": 3,
+    "DOWNLOAD_LANDING": 7,
+    "EMPTY_SHELL": 1,
+    "LOW_CONTENT": 1,
+    "MIXED_CONTENT": 90,
+    "NARRATIVE_CONTENT": 49,
+    "NOT_ACQUIRED": 37,
+    "STRUCTURED_DATA": 8
+  },
+  "candidates": 1909,
+  "fetchable_candidates": 1909
+}

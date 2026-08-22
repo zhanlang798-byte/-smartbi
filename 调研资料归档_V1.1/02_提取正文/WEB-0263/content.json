@@ -1,0 +1,67 @@
+{
+  "source_id": "WEB-0263",
+  "title": "Federal Reserve issues FOMC statement",
+  "publisher": "Federal Reserve Board",
+  "publication_date": "",
+  "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm",
+  "extracted_at": "2026-08-16T09:21:24.669Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 10,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Federal Reserve issues FOMC statement"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "For release at 2:00 p.m. EST"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Available indicators suggest that economic activity has been expanding at a moderate pace. Job gains have slowed this year, and the unemployment rate has edged up through September. More recent indicators are consistent with these developments. Inflation has moved up since earlier in the year and remains somewhat elevated."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. Uncertainty about the economic outlook remains elevated. The Committee is attentive to the risks to both sides of its dual mandate and judges that downside risks to employment rose in recent months."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "In support of its goals and in light of the shift in the balance of risks, the Committee decided to lower the target range for the federal funds rate by 1/4 percentage point to 3-1/2 to 3‑3/4 percent. In considering the extent and timing of additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks. The Committee is strongly committed to supporting maximum employment and returning inflation to its 2 percent objective."
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's assessments will take into account a wide range of information, including readings on labor market conditions, inflation pressures and inflation expectations, and financial and international developments."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "The Committee judges that reserve balances have declined to ample levels and will initiate purchases of shorter-term Treasury securities as needed to maintain an ample supply of reserves on an ongoing basis."
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target range for the federal funds rate by 1/2 percentage point at this meeting; and Austan D. Goolsbee and Jeffrey R. Schmid, who preferred no change to the target range for the federal funds rate at this meeting."
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "For media inquiries, please email [email protected] or call 202-452-2955."
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "Implementation Note issued December 10, 2025"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.federalreserve.gov/datadownload",
+      "extension": "",
+      "anchor_text": "Data Download Program",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20251210a1.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    }
+  ]
+}

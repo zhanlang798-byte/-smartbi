@@ -1,0 +1,8 @@
+asset_id,original_project_path,size_bytes,sha256,line_count,non_empty_lines,invalid_json_lines,qa_result
+LCL-0083,最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/黄金价格传导链因素与时序数据_20260724.xlsx.inspect.ndjson,30557280,19079124b4bf9620aaaa826251d336fb2f6bc88b23a112934c8d5bc1c0c3a717,80607,80607,0,PASS
+LCL-0085,最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/金银价格波动影响因素与时序数据_20260726.xlsx.inspect.ndjson,34974640,207ab603f76ec588066120b57d2265c823c38c1b0b467fbc734e11dc3b37ca65,91654,91654,0,PASS
+LCL-0087,最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/金银价格波动影响因素与时序数据_中文字段版_20260726.xlsx.inspect.ndjson,35103966,65e698de0ccddf71f4ec460e3125c80599abcb306e9a699c7dd5fcb51df74eaa,91946,91946,0,PASS
+LCL-0089,最终数据/最终数据/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/金银价格预测_官方数据与因素台账_20260713.xlsx.inspect.ndjson,33120505,48964f401365f9a00bb2988bff50b9dc8d19f0b6cb55eea312a71ed3cf81ddfd,61422,61422,0,PASS
+LCL-0165,最终数据/最终数据/research/media_sentiment_gold_paper/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/论文数据来源与复现清单.xlsx.inspect.ndjson,4156109,3f3960de6bf79f0fdbedd13be0eb34444d13838dd1df9b7c18930753c20d5b75,13149,13149,0,PASS
+LCL-0166,最终数据/最终数据/research/media_sentiment_gold_paper/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/formula_error_scan.ndjson,60,acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146,1,1,0,PASS
+LCL-0176,最终数据/最终数据/research/media_sentiment_gold_paper/outputs/019f56e7-91fe-7a43-b1d0-ae50e45c9d0c/workbook_inspect.ndjson,15877,0b6ae80ef747fff19c464db237e165e78ab63611686614db7def0cf6320c6353,11,11,0,PASS

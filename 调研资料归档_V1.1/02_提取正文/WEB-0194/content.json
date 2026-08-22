@@ -1,0 +1,53 @@
+{
+  "source_id": "WEB-0194",
+  "title": "U.S. Bureau of Labor Statistics",
+  "publisher": "www.bls.gov",
+  "publication_date": "",
+  "source_url": "https://www.bls.gov/cpi/",
+  "extracted_at": "2026-08-16T09:21:22.344Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 8,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "CPI for all items increases 0.1% in July; shelter rises"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "In July, the Consumer Price Index for All Urban Consumers rose 0.1 percent, seasonally"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "adjusted (SA), and rose 3.4 percent over the last 12 months, not seasonally adjusted (NSA). The index for"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "all items less food and energy rose 0.2 percent in July (SA); up 2.5 percent over the year (NSA)."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Local and Regional CPI"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "The Consumer Price Index for"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "is scheduled to be released on"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "at 8:30 A.M. Eastern Time."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.bls.gov/news.release/pdf/cpi.pdf",
+      "extension": ".pdf",
+      "anchor_text": "PDF",
+      "locator": "anchor"
+    }
+  ]
+}

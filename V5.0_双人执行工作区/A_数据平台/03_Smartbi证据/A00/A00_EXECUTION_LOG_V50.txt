@@ -1,0 +1,54 @@
+A00 输入锁定 执行日志 V5.0
+==================================================
+执行时间：2026-08-22 20:20:56 +0800
+执行方式：AI只读分析+脚本提取与核对；上传/点击/权限/XML导入/录屏均未涉及
+
+步骤1：确认外层路径与内层ZIP → PASS
+  外层 C:\Users\33625\Desktop\数据创新平台-张奥 = 目录 ✓
+  内层ZIP实际位于桌面根级：大小2,394,409,968字节、修改时间2026-08-21 20:27:43 +0800、SHA-256 06a5dd4fcb623074… 与期望完全一致 ✓
+  位置偏差说明：计划书字面路径为同名目录内嵌套ZIP，实际交付在桌面根级；
+  对象身份由大小+哈希双指标确认，记录为偏差备注，不构成FAIL。
+
+步骤2：提取Smartbi目录与周期规则到只读镜像 → PASS
+  提取22个文件（21张工作簿+global_cycle_rules_v41.yaml）到
+  V5.0_双人执行工作区\A_数据平台\01_输入只读镜像\D0-D12_数据交付_V4.2\…
+  提取清单与逐文件SHA-256见 A00_extract_manifest.json；zipfile读取自动CRC校验通过。
+
+步骤3：排除垃圾项 → PASS
+  镜像范围内提取时排除__MACOSX/._/.DS_Store/.venv/node_modules，实际进入提取范围的垃圾项0条。
+  原ZIP内忽略项仅统计不删除：__MACOSX 28,080条、.DS_Store 11条、.venv 10,591条、node_modules 12,086条；
+  其中smartbi相关34条全部为__MACOSX/._影子文件，均未提取。
+
+步骤4：按控制清单核对18张正式表 → 全部PASS
+  [ 1] dim_country.xlsx  工作表=data  行130/130  列11/11  主键[iso3]重复0/空0  SHA-256匹配  → PASS
+  [ 2] dim_date.xlsx  工作表=data  行660/660  列8/8  主键[date_key]重复0/空0  SHA-256匹配  → PASS
+  [ 3] dim_year.xlsx  工作表=data  行16/16  列5/5  主键[year_key]重复0/空0  SHA-256匹配  → PASS
+  [ 4] dim_company.xlsx  工作表=data  行20/20  列8/8  主键[company_id]重复0/空0  SHA-256匹配  → PASS
+  [ 5] dim_asset.xlsx  工作表=data  行10/10  列8/8  主键[asset_id]重复0/空0  SHA-256匹配  → PASS
+  [ 6] dim_event.xlsx  工作表=data  行60/60  列10/10  主键[event_id]重复0/空0  SHA-256匹配  → PASS
+  [ 7] country_exposure.xlsx  工作表=data  行1170/1170  列33/33  主键[iso3+year]重复0/空0  SHA-256匹配  → PASS
+  [ 8] country_monthly_risk.xlsx  工作表=data  行7680/7680  列18/18  主键[iso3+month_end]重复0/空0  SHA-256匹配  → PASS
+  [ 9] country_policy_year.xlsx  工作表=data  行2744/2744  列15/15  主键[iso3+year+policy_code]重复0/空0  SHA-256匹配  → PASS
+  [10] country_event.xlsx  工作表=data  行23/23  列31/31  主键[event_id]重复0/空0  SHA-256匹配  → PASS
+  [11] global_cycle_month.xlsx  工作表=data  行660/660  列36/36  主键[scope_id+month_end]重复0/空0  SHA-256匹配  → PASS
+  [12] historical_crisis_event.xlsx  工作表=data  行18/18  列37/37  主键[historical_event_id]重复0/空0  SHA-256匹配  → PASS
+  [13] company_overseas_exposure.xlsx  工作表=data  行168/168  列37/37  主键[company_id+fiscal_year+geography_id]重复0/空0  SHA-256匹配  → PASS
+  [14] bridge_company_geography.xlsx  工作表=data  行8/8  列10/10  主键[bridge_id]重复0/空0  SHA-256匹配  → PASS
+  [15] asset_monthly_return.xlsx  工作表=data  行91727/91727  列10/10  主键[iso3+month_end+asset_id+currency_basis]重复0/空0  SHA-256匹配  → PASS
+  [16] portfolio_scenario.xlsx  工作表=data  行207720/207720  列19/19  主键[scenario_id+strategy_id+iso3+window_end+horizon+run_id]重复0/空0  SHA-256匹配  → PASS
+  [17] case_evidence.xlsx  工作表=data  行45/45  列31/31  主键[case_id]重复0/空0  SHA-256匹配  → PASS
+  [18] source_registry.xlsx  工作表=data  行734/734  列42/42  主键[source_id]重复0/空0  SHA-256匹配  → PASS
+  正式表合计 313,593 行（期望313,593）
+
+步骤5：3张控制簿单列 → PASS
+  数据字典_V4.1.xlsx  行数369（期望369）  不计入313,593行
+  Smartbi模型映射_V4.1.xlsx  行数18（期望18）  不计入313,593行
+  Smartbi导入行数与哈希清单.xlsx  行数18（期望18）  不计入313,593行
+
+步骤6：逐项清单与B抽查
+  逐项清单见 INPUT_INVENTORY_V50.xlsx 与本日志。
+  B抽查为人工动作：AI不代替执行者B操作。已备抽查单（建议大表3张：portfolio_scenario、asset_monthly_return、country_monthly_risk；
+  小表3张：dim_year、dim_asset、bridge_company_geography），读数以 A00_TABLE_READINGS_V50.csv 为准，B人工复核后出回执。
+
+最终判定：PASS（18表+3控制簿齐全、合计313,593行、工作表均为data、主键重复0空0、哈希全匹配、原ZIP未变）
+待办人工项：① B抽查3大3小并出回执；② 执行者对桌面ZIP属性与本日志关键读数截图存档。

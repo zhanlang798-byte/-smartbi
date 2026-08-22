@@ -1,0 +1,25 @@
+{
+  "source_id": "WEB-0039",
+  "title": "Residential property prices - dashboards",
+  "publisher": "Bank for International Settlements",
+  "publication_date": "",
+  "source_url": "https://data.bis.org/topics/RPP/tables-and-dashboards",
+  "extracted_at": "2026-08-16T09:21:16.269Z",
+  "content_state": "DOWNLOAD_LANDING",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "DashboardsResidential property prices dashboard Explore the residential property prices dashboard to get quick visual insights into our statistics, analyse country and global developments and build your own data stories. This data set tracks developments of residential property prices including regional data and information for various property types."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://data.bis.org/bulkdownload",
+      "extension": "",
+      "anchor_text": "Bulk downloads",
+      "locator": "anchor"
+    }
+  ]
+}

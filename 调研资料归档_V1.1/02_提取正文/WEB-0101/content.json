@@ -1,0 +1,71 @@
+{
+  "source_id": "WEB-0101",
+  "title": "Daily Treasury Rates | U.S. Department of the Treasury",
+  "publisher": "U.S. Department of the Treasury",
+  "publication_date": "",
+  "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_real_yield_curve",
+  "extracted_at": "2026-08-16T09:21:20.254Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 5,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Extrapolation Factor"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "6 WEEKS BANK DISCOUNT"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "8 WEEKS BANK DISCOUNT"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "17 WEEKS BANK DISCOUNT"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "52 WEEKS BANK DISCOUNT"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://home.treasury.gov/system/files/136/Fact-Sheet-Department-of-Education-and-Department-of-the-Treasury.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Student Loans",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://home.treasury.gov/developer-notice-xml-changes",
+      "extension": "",
+      "anchor_text": "Developer Notice on Changes to the XML Feeds",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics/interest-rate-xml-files",
+      "extension": "",
+      "anchor_text": "Treasury Daily Interest Rate XML Feed",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/all?type=daily_treasury_real_yield_curve&page&_format=csv",
+      "extension": "",
+      "anchor_text": "Download CSV",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_real_yield_curve&field_tdr_date_value=",
+      "extension": "",
+      "anchor_text": "View XML feed",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xmlview?data=daily_treasury_real_yield_curve&field_tdr_date_value=",
+      "extension": "",
+      "anchor_text": "Render XML",
+      "locator": "anchor"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "context_version": "V4.2/V1.1",
+  "as_of": "2026-08-16",
+  "run_id": "20260816_web_usability_v11",
+  "project_name": "全球经济周期与亚非拉国别风险多币种储备智能决策平台",
+  "authoritative_plan": "计划书/07_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.2.pdf",
+  "archive_v10_immutable": true,
+  "archive_v11_type": "incremental_usability_layer",
+  "actual_state": {
+    "source_registry_closed": {
+      "run_id": "20260816_web_usability_v11",
+      "as_of": "2026-08-16",
+      "status": "CLOSED_WITH_EXPLICIT_GAPS",
+      "total": 688,
+      "unique_asset_ids": 688,
+      "acquisition_state": {
+        "ACQUIRED": 367,
+        "NOT_ACQUIRED": 12,
+        "NOT_APPLICABLE": 309
+      },
+      "content_state": {
+        "BLOCK_PAGE": 3,
+        "DOCUMENT_LOCAL": 44,
+        "DOWNLOAD_LANDING": 7,
+        "EMPTY_SHELL": 1,
+        "LOCAL_ASSET": 151,
+        "LOW_CONTENT": 1,
+        "MIXED_CONTENT": 90,
+        "NARRATIVE_CONTENT": 49,
+        "NOT_ACQUIRED": 321,
+        "STRUCTURED_DATA": 8,
+        "STRUCTURED_LOCAL": 13
+      },
+      "extraction_state": {
+        "EXTRACTED": 154,
+        "FAILED": 325,
+        "NOT_REQUIRED": 208,
+        "PARTIAL": 1
+      },
+      "formal_use_state": {
+        "CORE": 46,
+        "EXCLUDED": 335,
+        "REPLACED": 13,
+        "SUPPLEMENT": 294
+      },
+      "html_local_file_count": 159,
+      "html_source_record_count": 196,
+      "actionable_gap_count": 365
+    },
+    "html_audit": {
+      "run_id": "20260816_web_usability_v11",
+      "audited_html": 196,
+      "file_exists": 159,
+      "content_state_counts": {
+        "BLOCK_PAGE": 3,
+        "DOWNLOAD_LANDING": 7,
+        "EMPTY_SHELL": 1,
+        "LOW_CONTENT": 1,
+        "MIXED_CONTENT": 90,
+        "NARRATIVE_CONTENT": 49,
+        "NOT_ACQUIRED": 37,
+        "STRUCTURED_DATA": 8
+      },
+      "candidates": 1909,
+      "fetchable_candidates": 1909
+    },
+    "new_downloads": {
+      "attempted": 36,
+      "acquired": 26,
+      "failed": 10
+    },
+    "completed": [
+      "688项四态动作闭包",
+      "159个HTML内容审计",
+      "可用HTML正文与表格提取",
+      "开放候选原件补取",
+      "V1.0到V1.1映射"
+    ],
+    "not_completed": [
+      "130国正式主表",
+      "40国正式面板",
+      "20家企业正式库",
+      "模型",
+      "Smartbi写入与看板",
+      "AIChat和XML恢复"
+    ]
+  },
+  "read_order": [
+    "00_当前项目交接_V4.2/README_先读我.md",
+    "00_当前项目交接_V4.2/AI_CONTEXT_V4.2.json",
+    "调研资料归档_V1.1/00_交接入口/source_action_registry_V1.1.jsonl",
+    "计划书/07_全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书_V4.2.pdf",
+    "调研资料归档_V1.0/00_交接入口/研究资料总清单.jsonl"
+  ],
+  "do_not_claim": [
+    "HTTP 200或文件存在等同于内容可用",
+    "所有受限全文均已取得",
+    "HTML表格和正文自动提取已经人工核验",
+    "正式130国、40国、20家企业数据已经建成",
+    "模型、Smartbi、AIChat或XML已经完成"
+  ]
+}

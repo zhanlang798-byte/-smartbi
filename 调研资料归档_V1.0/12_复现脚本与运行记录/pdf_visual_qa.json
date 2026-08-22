@@ -1,0 +1,23 @@
+{
+  "reviewed_at": "2026-08-15T19:44:58.137Z",
+  "pdf_pages": 96,
+  "all_pages_rendered": true,
+  "rendered_page_count": 96,
+  "contact_sheets_reviewed": 5,
+  "representative_pages_reviewed": [
+    1,
+    9,
+    20,
+    34,
+    36,
+    56,
+    70,
+    95,
+    96
+  ],
+  "cover_toc_tables_bibliography_field_dictionary_last_page": "PASS",
+  "clipping_overlap_garbled_text_abnormal_blank_pages": "NONE_FOUND",
+  "final_page_version_visible": true,
+  "compile_log_forbidden_issue_count": 0,
+  "result": "PASS"
+}

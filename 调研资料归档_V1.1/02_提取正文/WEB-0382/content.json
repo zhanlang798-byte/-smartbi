@@ -1,0 +1,47 @@
+{
+  "source_id": "WEB-0382",
+  "title": "国家外汇管理局门户网站",
+  "publisher": "www.safe.gov.cn",
+  "publication_date": "",
+  "source_url": "https://www.safe.gov.cn/",
+  "extracted_at": "2026-08-16T09:21:32.543Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 2,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "中国人民银行 国家外汇管理局发布《关于跨国公司本外币跨..."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "为深入贯彻党的二十届四中全会精神，落实《中华人民共和国国民经济和社会发展第十五个五年规划纲要》有关要求，2026年8月14日，中国人民银行、国家外汇管理局联合发布《关于跨国公司本外币跨境资金集中运营业务有关事宜的通知》（..."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.safe.gov.cn/safe/2024/1227/25585.html",
+      "extension": ".html",
+      "anchor_text": "国家外汇管理局关于印发《银行外汇风险交易报告管理办法（试...",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.safe.gov.cn/safe/2026/0327/27302.html",
+      "extension": ".html",
+      "anchor_text": "2025年中国国际收支报告",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.safe.gov.cn/safe/2025/0930/26620.html",
+      "extension": ".html",
+      "anchor_text": "2025年上半年中国国际收支报告",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.safe.gov.cn/safe/2025/0328/25914.html",
+      "extension": ".html",
+      "anchor_text": "2024年中国国际收支报告",
+      "locator": "anchor"
+    }
+  ]
+}

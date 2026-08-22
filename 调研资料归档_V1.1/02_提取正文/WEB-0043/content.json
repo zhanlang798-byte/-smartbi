@@ -1,0 +1,37 @@
+{
+  "source_id": "WEB-0043",
+  "title": "World Bank Open Data",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://data.worldbank.org/indicator/PA.NUS.FCRF",
+  "extracted_at": "2026-08-16T09:21:17.001Z",
+  "content_state": "DOWNLOAD_LANDING",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Official exchange rate (LCU per US$, period average)DataBankMicrodataData CatalogMicrodataData CatalogDataBankAbout UsGet StartedFAQHelp DeskContactData ProgramsImproving Statistical CapacityGlobal Data FacilityInternational Comparison Program & Purchasing Power ParityInternational Household Survey Network (IHSN)Joint External Debt HubOpen Data ToolkitQuarterly External Debt StatisticsProductsWorld Development IndicatorsInternational Debt StatisticsOther Books and ReportsCountry & Lending GroupsData Portals and ToolsDevelopment GoalsTerms of UseFor Developers Shaded Points2025All Countries and EconomiesCountryMost Recent YearMost Recent Value"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://api.worldbank.org/v2/en/indicator/PA.NUS.FCRF?downloadformat=csv",
+      "extension": ".fcrf",
+      "anchor_text": "CSV",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/en/indicator/PA.NUS.FCRF?downloadformat=xml",
+      "extension": ".fcrf",
+      "anchor_text": "XML",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/en/indicator/PA.NUS.FCRF?downloadformat=excel",
+      "extension": ".fcrf",
+      "anchor_text": "EXCEL",
+      "locator": "anchor"
+    }
+  ]
+}

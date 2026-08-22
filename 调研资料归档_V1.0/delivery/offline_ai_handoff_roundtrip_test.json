@@ -1,0 +1,162 @@
+{
+  "executed_at": "2026-08-15T19:46:34.193Z",
+  "input_scope": "freshly extracted shared ZIP only",
+  "registry_assets": 688,
+  "case_rows": 45,
+  "question_count": 25,
+  "question_pass_count": 25,
+  "questions": [
+    {
+      "test_id": "AI-01",
+      "question": "最新权威总计划书在哪里？",
+      "expected_lookup": "02_方案演进与调研报告中的V4.0 PDF/TEX",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-02",
+      "question": "赛题原文在哪里？",
+      "expected_lookup": "01_比赛与项目基线",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-03",
+      "question": "案例库共有多少案例？",
+      "expected_lookup": "案例索引应为45条",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-04",
+      "question": "哪些案例是黄金反例？",
+      "expected_lookup": "检索2013暴跌、1980-2000熊市、中国黄金会计错配",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-05",
+      "question": "论文PDF旧清单为何不一致？",
+      "expected_lookup": "legacy_inconsistencies.csv",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-06",
+      "question": "哪些数据只是代理？",
+      "expected_lookup": "按raw_proxy_simulated=proxy筛选",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-07",
+      "question": "WGC资料为什么没有全文？",
+      "expected_lookup": "许可矩阵与METADATA_ONLY_LICENSE",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-08",
+      "question": "FRED资料如何处理？",
+      "expected_lookup": "许可矩阵要求优先原始发布者",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-09",
+      "question": "World Bank数据许可是什么？",
+      "expected_lookup": "license_matrix.csv",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-10",
+      "question": "是否已经建成130国正式面板？",
+      "expected_lookup": "AI_CONTEXT.json明确未完成",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-11",
+      "question": "是否已经运行配置模型？",
+      "expected_lookup": "AI_CONTEXT.json明确未完成",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-12",
+      "question": "Smartbi账号是否在包内？",
+      "expected_lookup": "敏感信息策略明确禁止",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-13",
+      "question": "如何从asset_id定位原件？",
+      "expected_lookup": "研究资料总清单的local_path与sha256",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-14",
+      "question": "宏观危机案例有哪些？",
+      "expected_lookup": "case_index.csv按宏观危机篇筛选",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-15",
+      "question": "货币崩溃案例有哪些？",
+      "expected_lookup": "case_index.csv按货币崩溃篇筛选",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-16",
+      "question": "制裁与冻结案例有哪些？",
+      "expected_lookup": "case_index.csv按地缘冲突与制裁篇筛选",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-17",
+      "question": "企业级证据有哪些？",
+      "expected_lookup": "case_index.csv按微观企业篇筛选",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-18",
+      "question": "哪些来源下载失败？",
+      "expected_lookup": "缺失受限与待办清单.csv",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-19",
+      "question": "如何核验文件未被修改？",
+      "expected_lookup": "checksums_sha256.txt",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-20",
+      "question": "哪些原件只能本机使用？",
+      "expected_lookup": "redistribution_scope=private_only",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-21",
+      "question": "哪些来源需要人工操作？",
+      "expected_lookup": "MANUAL_ACTION_REQUIRED",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-22",
+      "question": "美元与黄金的项目立场是什么？",
+      "expected_lookup": "V4.0与AI_CONTEXT：周期协同、对称剔除",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-23",
+      "question": "为什么不能把年度政策复制成月度？",
+      "expected_lookup": "V4.0数据频率边界",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-24",
+      "question": "如何识别重复危机事件？",
+      "expected_lookup": "case_index.csv中的event_cluster_id",
+      "result": "PASS"
+    },
+    {
+      "test_id": "AI-25",
+      "question": "下一位AI第一步读什么？",
+      "expected_lookup": "README、AI_CONTEXT、总清单、缺口清单、V4.0",
+      "result": "PASS"
+    }
+  ],
+  "shared_local_hash_failures": [],
+  "result": "PASS"
+}

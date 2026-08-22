@@ -1,0 +1,1243 @@
+% !TEX program = xelatex
+\documentclass[UTF8,openany,oneside,11pt]{ctexbook}
+\usepackage[a4paper,margin=2.2cm,headheight=14pt]{geometry}
+\usepackage{longtable,booktabs,array,tabularx,xcolor,hyperref,fancyhdr,enumitem}
+\usepackage[backend=biber,style=numeric,sorting=nyt,maxbibnames=4]{biblatex}
+\addbibresource{research_sources.bib}
+\renewcommand*{\bibfont}{\small\sloppy\setlength{\emergencystretch}{4em}}
+\setcounter{biburlnumpenalty}{100}\setcounter{biburlucpenalty}{100}\setcounter{biburllcpenalty}{100}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!60!black,citecolor=blue!55!black,pdftitle={XH-202612调研资料归档与AI交接说明书V1.0}}
+\definecolor{DeepBlue}{HTML}{163A5F}
+\definecolor{SoftBlue}{HTML}{EAF2F8}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{XH-202612 调研证据归档}\fancyhead[R]{V1.0}\fancyfoot[C]{\thepage}
+\setlength{\parindent}{2em}\setlength{\parskip}{0.35em}
+\setlength{\tabcolsep}{4pt}\setlength{\LTpre}{0.4em}\setlength{\LTpost}{0.4em}
+\Urlmuskip=0mu plus 1mu\emergencystretch=2em\raggedbottom
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{document}
+\begin{titlepage}
+\centering\vspace*{2.2cm}
+{\Huge\bfseries\color{DeepBlue} XH-202612 调研资料归档与AI交接说明书\par}
+\vspace{0.8cm}{\Large 证据原件、数据资产、许可边界与接力入口\par}
+\vfill
+\begin{tabular}{p{3cm}p{11cm}}
+版本号：& V1.0\\
+编制日期：& 2026年8月16日\\
+适用项目：& 面向中国出海企业的国别风险与应急储备智能决策平台\\
+文档状态：& 调研证据归档与AI交接稿\\
+\end{tabular}
+\vfill
+\end{titlepage}
+\frontmatter\tableofcontents\mainmatter
+\chapter{执行摘要}
+本归档把历史项目文档、案例、工作簿、代理数据和外部来源统一到可追溯资产表中。它不宣称已完成130国、40国、20家企业、全球周期面板、配置模型或Smartbi产品。每个来源必须具有唯一终态；无法合法下载的资料保留元数据、用途、许可和下一步，不静默遗漏。
+
+本次共登记资产 688 项，其中本地资产 180 项、外部来源 508 项；已登记本地或下载文件体积约 395.44 MiB。权威机器清单为\texttt{研究资料总清单.csv/jsonl}，PDF不是唯一事实源。
+
+\chapter{十分钟接力路径}
+\begin{enumerate}[leftmargin=2.5em]
+\item 阅读\texttt{README\_研究资料包.md}与\texttt{AI\_CONTEXT.json}；
+\item 按\texttt{缺失受限与待办清单.csv}排除不可用资料；
+\item 以V4.0为当前权威计划，V1.1--V3.1仅作为历史演进；
+\item 使用\texttt{asset\_id}、\texttt{local\_path}和\texttt{sha256}定位证据；
+\item 任何代理、模拟、元数据来源不得冒充正式原始数据。
+\end{enumerate}
+
+\chapter{项目演进与权威边界}
+V1.1确立亚非拉国别风险和多资产比较，V2.0强调美元与黄金的周期协同和对称剔除，V3.1把数据采集、处理、验收与Smartbi落地写成端到端执行流程，V4.0新增1971年以来全球周期量化层及1929年以来历史制度压力层。当前执行以V4.0为权威计划，其余版本保留用于追溯决策演进，不相互覆盖。
+
+\chapter{分类与分发统计}
+\begin{longtable}{L{10cm}rr}\toprule
+归档类别 & 资产数 & 有本地原件\\\midrule\endhead
+01\_比赛与项目基线 & 8 & 6 \\
+02\_方案演进与调研报告 & 28 & 28 \\
+03\_案例库与证据 & 47 & 47 \\
+04\_国别货币与中国出海 & 34 & 13 \\
+05\_全球周期与历史危机 & 97 & 23 \\
+06\_黄金美元与储备配置 & 187 & 104 \\
+07\_会计合规与制裁 & 52 & 13 \\
+08\_企业案例与公开披露 & 133 & 39 \\
+09\_Smartbi与比赛平台 & 5 & 0 \\
+10\_数据集原件与说明 & 97 & 94 \\
+\bottomrule\end{longtable}
+\begin{longtable}{L{10cm}r}\toprule
+分发范围 & 资产数\\\midrule\endhead
+shared & 314 \\
+metadata\_only & 297 \\
+private\_only & 77 \\
+\bottomrule\end{longtable}
+
+\chapter{归档口径与许可路由}
+共享包仅纳入项目自有资料和明确允许内部共享的开放原件；本机冷备份增加许可未完全确认但合法公开访问的研究副本和完整QA日志。WGC、LBMA、ICE/FRED第三方序列及新闻正文默认只保留元数据。账号、密码、Cookie、会话令牌和Office锁文件不进入任何包。
+
+\begin{longtable}{L{3.4cm}L{2.8cm}L{9.2cm}}\toprule
+来源组 & 路由 & 规则\\\midrule\endhead
+项目自有文档与案例 & shared & 保持来源、哈希和历史版本，可进入共享包。\\
+World Bank开放数据 & shared & 按具体数据集许可署名，第三方内容例外单独处理。\\
+政府与国际组织公开资料 & shared/\allowbreak{}private\_only & 明确可转交者进入共享包，否则仅本机保留。\\
+WGC、LBMA、ICE与FRED第三方序列 & metadata\_only & 不自动抓取或再分发，优先原始发布者。\\
+新闻、付费与登录资料 & metadata\_only & 只留题名、链接、用途和人工操作卡。\\
+\bottomrule\end{longtable}
+
+\chapter{终态闭包}
+\begin{longtable}{L{9.8cm}r}\toprule
+终态 & 数量\\\midrule\endhead
+METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 274 \\
+DOWNLOADED\_\allowbreak{}VERIFIED & 189 \\
+ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & 168 \\
+MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 16 \\
+PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & 15 \\
+DUPLICATE\_\allowbreak{}CONTENT & 11 \\
+FETCH\_\allowbreak{}FAILED & 6 \\
+BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & 5 \\
+EXCLUDED\_\allowbreak{}SECRET & 4 \\
+\bottomrule\end{longtable}
+终态数量之和必须等于资产总数；若存在空终态或核心A/B来源无原件且无替代来源，则总体状态不得标记为完整完成。
+
+\chapter{完整资产目录}
+\begingroup\setlength{\tabcolsep}{2pt}\fontsize{7.4}{9}\selectfont\sloppy
+\begin{longtable}{L{1.4cm}L{2.4cm}L{6.0cm}L{3.0cm}L{1.8cm}}
+\toprule ID & 类别 & 标题/文件 & 终态 & 分发范围\\\midrule\endhead
+LCL-\allowbreak{}0001 & 比赛与项目基线 & \textasciitilde{}\$XH-\allowbreak{}202612比赛硬性要求与评分标准\_\allowbreak{}含技术方案.xlsx & EXCLUDED\_\allowbreak{}SECRET & metadata\_\allowbreak{}only \\
+LCL-\allowbreak{}0002 & 比赛与项目基线 & 02数据创新平台.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0003 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0004 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0005 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0006 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0007 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0008 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0009 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0010 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0011 & 案例库与证据 & 调研方向与跨国企业筛选报告.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0012 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0013 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0014 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0015 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0016 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0017 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0018 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0019 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0020 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0021 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0022 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0023 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0024 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0025 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0026 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0027 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0028 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0029 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0030 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0031 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0032 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0033 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0034 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0035 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0036 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0037 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0038 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0039 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0040 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0041 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0042 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0043 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0044 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0045 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0046 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0047 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0048 & 案例库与证据 & 案例档案.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0049 & 案例库与证据 & README\_\allowbreak{}案例库总览.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0050 & 方案演进与调研报告 & 方案整合与实施路径.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0051 & 方案演进与调研报告 & 方案整合与实施路径.tex & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0052 & 方案演进与调研报告 & 方案整合与实施路径.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0053 & 方案演进与调研报告 & 01\_\allowbreak{}项目可行性研究与参赛方案书.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0054 & 方案演进与调研报告 & 01\_\allowbreak{}项目可行性研究与参赛方案书.tex & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0055 & 方案演进与调研报告 & 02\_\allowbreak{}项目执行与协作手册.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0056 & 方案演进与调研报告 & 02\_\allowbreak{}项目执行与协作手册.tex & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0057 & 方案演进与调研报告 & 03\_\allowbreak{}多币种流动性与黄金战略储备周期配置计划书.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0058 & 方案演进与调研报告 & 03\_\allowbreak{}多币种流动性与黄金战略储备周期配置计划书.tex & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0059 & 方案演进与调研报告 & 04\_\allowbreak{}亚非拉国别风险与多币种储备智能决策平台总计划书.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0060 & 方案演进与调研报告 & 04\_\allowbreak{}亚非拉国别风险与多币种储备智能决策平台总计划书.tex & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0061 & 方案演进与调研报告 & 05\_\allowbreak{}全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0062 & 方案演进与调研报告 & 05\_\allowbreak{}全球经济周期与亚非拉国别风险多币种储备智能决策平台总计划书.tex & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0063 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}项目实施与数据采集全景图\_\allowbreak{}预览.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0064 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}项目实施与数据采集全景图.mmd & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0065 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}项目实施与数据采集全景图.svg & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0066 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}V3.0\_\allowbreak{}数据采集处理与Smartbi落地全流程\_\allowbreak{}预览.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0067 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}V3.0\_\allowbreak{}数据采集处理与Smartbi落地全流程.mmd & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0068 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}V3.0\_\allowbreak{}数据采集处理与Smartbi落地全流程.svg & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0069 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}V4.0\_\allowbreak{}全球经济周期与系统性危机全流程\_\allowbreak{}预览.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0070 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}V4.0\_\allowbreak{}全球经济周期与系统性危机全流程.mmd & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0071 & 方案演进与调研报告 & 飞书兼容\_\allowbreak{}Mermaid\_\allowbreak{}V4.0\_\allowbreak{}全球经济周期与系统性危机全流程.svg & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0072 & 方案演进与调研报告 & planbook-\allowbreak{}style.tex & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0073 & 方案演进与调研报告 & references.bib & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0074 & 方案演进与调研报告 & 跨国公司黄金硬通货需求调研报告.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0075 & 方案演进与调研报告 & 命题可行性验证报告.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0076 & 方案演进与调研报告 & 企业资产配置调研报告.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0077 & 比赛与项目基线 & 生成评分标准表.mjs & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0078 & 方案演进与调研报告 & 题意符合性评估报告.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0079 & 比赛与项目基线 & 预览\_\allowbreak{}硬性要求与评分标准.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0080 & 比赛与项目基线 & 预览\_\allowbreak{}整体流程.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0081 & 比赛与项目基线 & 最终数据.zip & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & metadata\_\allowbreak{}only \\
+LCL-\allowbreak{}0082 & 数据集原件与说明 & 黄金价格传导链因素与时序数据\_\allowbreak{}20260724.xlsx & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0083 & 数据集原件与说明 & 黄金价格传导链因素与时序数据\_\allowbreak{}20260724.xlsx.inspect.ndjson & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0084 & 数据集原件与说明 & 金银价格波动影响因素与时序数据\_\allowbreak{}20260726.xlsx & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0085 & 数据集原件与说明 & 金银价格波动影响因素与时序数据\_\allowbreak{}20260726.xlsx.inspect.ndjson & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0086 & 数据集原件与说明 & 金银价格波动影响因素与时序数据\_\allowbreak{}中文字段版\_\allowbreak{}20260726.xlsx & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0087 & 数据集原件与说明 & 金银价格波动影响因素与时序数据\_\allowbreak{}中文字段版\_\allowbreak{}20260726.xlsx.inspect.ndjson & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0088 & 数据集原件与说明 & 金银价格预测\_\allowbreak{}官方数据与因素台账\_\allowbreak{}20260713.xlsx & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0089 & 数据集原件与说明 & 金银价格预测\_\allowbreak{}官方数据与因素台账\_\allowbreak{}20260713.xlsx.inspect.ndjson & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0090 & 数据集原件与说明 & 00\_\allowbreak{}说明与总览.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0091 & 数据集原件与说明 & 01\_\allowbreak{}价格传导链.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0092 & 数据集原件与说明 & 02\_\allowbreak{}影响因素表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0093 & 数据集原件与说明 & 03\_\allowbreak{}事件关联.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0094 & 数据集原件与说明 & 05\_\allowbreak{}日度对齐主表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0095 & 数据集原件与说明 & 06\_\allowbreak{}SGE原始日行情.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0096 & 数据集原件与说明 & 07\_\allowbreak{}FRED日度原始.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0097 & 数据集原件与说明 & 08\_\allowbreak{}CFTC周度持仓.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0098 & 数据集原件与说明 & 09\_\allowbreak{}月度研究主表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0099 & 数据集原件与说明 & 10\_\allowbreak{}GPR月度.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0100 & 数据集原件与说明 & 12\_\allowbreak{}来源与口径.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0101 & 数据集原件与说明 & 13\_\allowbreak{}质量检查\_\allowbreak{}导出后复核.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0102 & 数据集原件与说明 & 13\_\allowbreak{}质量检查.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0103 & 数据集原件与说明 & 全部工作表总览.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0104 & 数据集原件与说明 & 00\_\allowbreak{}说明与总览.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0105 & 数据集原件与说明 & 01\_\allowbreak{}金银传导链.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0106 & 数据集原件与说明 & 02\_\allowbreak{}金银因素表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0107 & 数据集原件与说明 & 03\_\allowbreak{}事件关联.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0108 & 数据集原件与说明 & 04\_\allowbreak{}术语与字段说明.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0109 & 数据集原件与说明 & 05\_\allowbreak{}金银日度主表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0110 & 数据集原件与说明 & 06\_\allowbreak{}SGE原始日行情.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0111 & 数据集原件与说明 & 07\_\allowbreak{}FRED日度原始.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0112 & 数据集原件与说明 & 08\_\allowbreak{}CFTC周度持仓.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0113 & 数据集原件与说明 & 09\_\allowbreak{}金银月度主表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0114 & 数据集原件与说明 & 10\_\allowbreak{}GPR月度.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0115 & 数据集原件与说明 & 11\_\allowbreak{}白银年度供需.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0116 & 数据集原件与说明 & 12\_\allowbreak{}来源与口径.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0117 & 数据集原件与说明 & 13\_\allowbreak{}质量检查.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0118 & 数据集原件与说明 & 00\_\allowbreak{}说明与总览.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0119 & 数据集原件与说明 & 01\_\allowbreak{}金银传导链.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0120 & 数据集原件与说明 & 02\_\allowbreak{}金银因素表.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0121 & 数据集原件与说明 & 03\_\allowbreak{}事件关联.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0122 & 数据集原件与说明 & 05\_\allowbreak{}金银日度主表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0123 & 数据集原件与说明 & 06\_\allowbreak{}SGE原始日行情.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0124 & 数据集原件与说明 & 07\_\allowbreak{}FRED日度原始.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0125 & 数据集原件与说明 & 08\_\allowbreak{}CFTC周度持仓.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0126 & 数据集原件与说明 & 09\_\allowbreak{}金银月度主表.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0127 & 数据集原件与说明 & 10\_\allowbreak{}GPR月度.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0128 & 数据集原件与说明 & 11\_\allowbreak{}白银年度供需.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0129 & 数据集原件与说明 & 12\_\allowbreak{}来源与口径.png & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+LCL-\allowbreak{}0130 & 数据集原件与说明 & 13\_\allowbreak{}质量检查.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0131 & 数据集原件与说明 & 00\_\allowbreak{}使用说明.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0132 & 数据集原件与说明 & 01\_\allowbreak{}数据目录.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0133 & 数据集原件与说明 & 02\_\allowbreak{}因素地图.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0134 & 数据集原件与说明 & 03\_\allowbreak{}事件时间线.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0135 & 数据集原件与说明 & 04\_\allowbreak{}因子扫描.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0136 & 数据集原件与说明 & 05\_\allowbreak{}月度建模表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0137 & 数据集原件与说明 & 06\_\allowbreak{}月度价格.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0138 & 数据集原件与说明 & 07\_\allowbreak{}日收益率.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0139 & 数据集原件与说明 & 08\_\allowbreak{}美元指数.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0140 & 数据集原件与说明 & 09\_\allowbreak{}CFTC持仓.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0141 & 数据集原件与说明 & 10\_\allowbreak{}GPR指数.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0142 & 数据集原件与说明 & 11\_\allowbreak{}质量检查.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0143 & 数据集原件与说明 & China\_\allowbreak{}Mainland\_\allowbreak{}EPU\_\allowbreak{}proxy\_\allowbreak{}2022-\allowbreak{}02\_\allowbreak{}to\_\allowbreak{}2025-\allowbreak{}02.csv & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0144 & 数据集原件与说明 & Fed\_\allowbreak{}broad\_\allowbreak{}dollar\_\allowbreak{}proxy\_\allowbreak{}2022-\allowbreak{}02\_\allowbreak{}to\_\allowbreak{}2025-\allowbreak{}02.csv & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0145 & 数据集原件与说明 & THUOCL\_\allowbreak{}caijing\_\allowbreak{}utf8.csv & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0146 & 数据集原件与说明 & US\_\allowbreak{}Treasury\_\allowbreak{}real\_\allowbreak{}yield\_\allowbreak{}proxy\_\allowbreak{}2022-\allowbreak{}02\_\allowbreak{}to\_\allowbreak{}2025-\allowbreak{}02.csv & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0147 & 数据集原件与说明 & World\_\allowbreak{}Bank\_\allowbreak{}commodity\_\allowbreak{}proxies\_\allowbreak{}2022-\allowbreak{}02\_\allowbreak{}to\_\allowbreak{}2025-\allowbreak{}02.csv & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0148 & 数据集原件与说明 & \textasciitilde{}\$China\_\allowbreak{}Mainland\_\allowbreak{}Paper\_\allowbreak{}EPU.xlsx & EXCLUDED\_\allowbreak{}SECRET & metadata\_\allowbreak{}only \\
+LCL-\allowbreak{}0149 & 数据集原件与说明 & China\_\allowbreak{}Mainland\_\allowbreak{}Paper\_\allowbreak{}EPU.xlsx & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0150 & 数据集原件与说明 & THUOCL\_\allowbreak{}caijing.txt & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0151 & 数据集原件与说明 & THUOCL\_\allowbreak{}LICENSE.txt & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0152 & 数据集原件与说明 & checksums\_\allowbreak{}sha256.txt & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0153 & 数据集原件与说明 & dataset\_\allowbreak{}manifest.csv & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0154 & 数据集原件与说明 & europepmc\_\allowbreak{}fulltext.xml & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0155 & 数据集原件与说明 & heywhale\_\allowbreak{}app.js & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0156 & 数据集原件与说明 & heywhale\_\allowbreak{}dataset\_\allowbreak{}page.html & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0157 & 数据集原件与说明 & sge\_\allowbreak{}en\_\allowbreak{}daily.html & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0158 & 数据集原件与说明 & sge\_\allowbreak{}func.js & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0159 & 数据集原件与说明 & sge\_\allowbreak{}main.js & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0160 & 数据集原件与说明 & sge\_\allowbreak{}quotation\_\allowbreak{}daily\_\allowbreak{}new.html & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0161 & 数据集原件与说明 & sge\_\allowbreak{}tools.js & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0162 & 数据集原件与说明 & weebly\_\allowbreak{}cookies.txt & EXCLUDED\_\allowbreak{}SECRET & metadata\_\allowbreak{}only \\
+LCL-\allowbreak{}0163 & 数据集原件与说明 & \textasciitilde{}\$论文数据来源与复现清单.xlsx & EXCLUDED\_\allowbreak{}SECRET & metadata\_\allowbreak{}only \\
+LCL-\allowbreak{}0164 & 数据集原件与说明 & 论文数据来源与复现清单.xlsx & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0165 & 数据集原件与说明 & 论文数据来源与复现清单.xlsx.inspect.ndjson & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0166 & 数据集原件与说明 & formula\_\allowbreak{}error\_\allowbreak{}scan.ndjson & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0167 & 数据集原件与说明 & 导读.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0168 & 数据集原件与说明 & 复现风险.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0169 & 数据集原件与说明 & 美元指数代理.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0170 & 数据集原件与说明 & 商品月度代理.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0171 & 数据集原件与说明 & 实际利率代理.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0172 & 数据集原件与说明 & 数据清单.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0173 & 数据集原件与说明 & 质量检查.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0174 & 数据集原件与说明 & EPU代理.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0175 & 数据集原件与说明 & THUOCL财经词表.png & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0176 & 数据集原件与说明 & workbook\_\allowbreak{}inspect.ndjson & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+LCL-\allowbreak{}0177 & 数据集原件与说明 & README\_\allowbreak{}论文学习与数据说明.md & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0178 & 数据集原件与说明 & build\_\allowbreak{}reproducibility\_\allowbreak{}package.mjs & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0179 & 比赛与项目基线 & XH-\allowbreak{}202612\_\allowbreak{}Smartbi AI驱动的数据创新平台研究.pdf & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+LCL-\allowbreak{}0180 & 比赛与项目基线 & XH-\allowbreak{}202612比赛硬性要求与评分标准\_\allowbreak{}含技术方案.xlsx & ALREADY\_\allowbreak{}LOCAL\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0001 & 全球周期与历史危机 & 5. 中国建设银行，2013年8月，《2013年上半年黄金市场回顾与预判》——6月20日美联储声明后金价单日跌5\% & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0002 & 黄金美元与储备配置 & shanghai gold exchange & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0003 & 全球周期与历史危机 & 4. 人民网财经，2013年4月22日，"黄金暴跌美联储和高盛难逃操纵嫌疑"——4月12日-\allowbreak{}5.03\%、4月15日-\allowbreak{}9.09\%为30年最大单日跌幅 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0004 & 企业案例与公开披露 & 贷后预警信号清单（120 项） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0005 & 黄金美元与储备配置 & purl.org 来源资料（WEB-\allowbreak{}0005） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0006 & 黄金美元与储备配置 & purl.org 来源资料（WEB-\allowbreak{}0006） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0007 & 黄金美元与储备配置 & purl.org 来源资料（WEB-\allowbreak{}0007） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0008 & 企业案例与公开披露 & 中国期货业协会分析框架，2022 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0009 & 企业案例与公开披露 & 经济观察网，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0010 & 企业案例与公开披露 & 《金融研究》论文 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0011 & 企业案例与公开披露 & 中国人民银行办公厅关于印发《黄金租借业务管理暂行办法》的通知（银办发〔2022〕88号） & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0012 & 企业案例与公开披露 & 票据承兑资讯，2022 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0013 & 黄金美元与储备配置 & 首页-\allowbreak{}上海黄金交易所 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0014 & 黄金美元与储备配置 & o4509683932790784.ingest.us.sentry.io 来源资料（WEB-\allowbreak{}0014） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0015 & 会计合规与制裁 & 解释变量,\allowbreak{}ACI,\allowbreak{}Actuaries Climate Index，区域/\allowbreak{}季节聚合规则未说明,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}图示阶梯,\allowbreak{}Actuaries Climate Index,\allowbreak{} & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0016 & 企业案例与公开披露 & UBS GFOR 2025 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0017 & 企业案例与公开披露 & 2. 尼日利亚 8.1–8.5 亿美元与阿联酋航空停飞拉各斯（2023-\allowbreak{}06）：Reuters/\allowbreak{}African Business 2023 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0018 & 企业案例与公开披露 & African Business，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0019 & 黄金美元与储备配置 & ai.heywhale.com 来源资料（WEB-\allowbreak{}0019） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0020 & 全球周期与历史危机 & 5. American Institute for Economic Research（AIER），《The Federal Reserve Board and the Rise of the Cor & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0021 & 黄金美元与储备配置 & 5. 美联社（AP News），2026，《Lebanon's economic crisis:\allowbreak{} Gold reserves as a lifeline?》——央行 286.8 吨黄金储备及 1986 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0022 & 企业案例与公开披露 & 财务分析通行标准 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0023 & 企业案例与公开披露 & 百度百科·Z值预警 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0024 & 全球周期与历史危机 & 6. BestFolio /\allowbreak{} Cresset Capital（2026）：1970 年代滞胀期美股复盘（标普 500 1973–74 下跌约 48\%、实际回报至 1993 年才收复 1968 年高点） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0025 & 企业案例与公开披露 & Blockworks，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0026 & 黄金美元与储备配置 & Precious metals retreat from record highs & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0027 & 全球周期与历史危机 & 4. Bullion Exchanges，《Gold Crisis 2008 Explained:\allowbreak{} Drop,\allowbreak{} Recovery,\allowbreak{} and Rally Path》，2026年， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0028 & 企业案例与公开披露 & 清晖智库，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0029 & 企业案例与公开披露 & Business Insider NG，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0030 & 黄金美元与储备配置 & cdn.kesci.com 来源资料（WEB-\allowbreak{}0030） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0031 & 黄金美元与储备配置 & 8. 被困资金（blocked funds）数据：IATA/\allowbreak{}CAPA 尼日利亚 8.5 亿美元报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0032 & 企业案例与公开披露 & IATA/\allowbreak{}CAPA，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0033 & 黄金美元与储备配置 & 目标价格,\allowbreak{}WGC/\allowbreak{}Global黄金价格,\allowbreak{}论文所谓WGC或Global市场金价，具体定盘价/\allowbreak{}时点未给出,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}日频/\allowbreak{}含非交易日,\allowbreak{}World Gold Council & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0034 & 全球周期与历史危机 & 8. 比特币 2022 年 -\allowbreak{}65\%：CoinMarketCap 年度数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0035 & 全球周期与历史危机 & 7. 比特币 2020-\allowbreak{}03-\allowbreak{}12 单日 -\allowbreak{}40\%：CoinMarketCap 历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0036 & 会计合规与制裁 & 3. 阿联酋（约 96.4 吨）与香港（约 88 吨）承接俄金：贸易数据（UN Comtrade /\allowbreak{} 港府统计处）及 Reuters 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0037 & 黄金美元与储备配置 & ropy (Basel)</\allowbreak{}abbrev-\allowbreak{}journal-\allowbreak{}title </\allowbreak{}journal-\allowbreak{}title-\allowbreak{}group <publisher <publisher-\allowbreak{}name Multidisciplinar & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0038 & 黄金美元与储备配置 & http cookies & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0039 & 国别货币与中国出海 & Residential property prices -\allowbreak{} dashboards | BIS Data Portal & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0040 & 黄金美元与储备配置 & WEO & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0041 & 国别货币与中国出海 & 7. 移民人数：联合国难民署（UNHCR） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0042 & 国别货币与中国出海 & Inflation,\allowbreak{} consumer prices (annual \%) | Data & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0043 & 国别货币与中国出海 & Official exchange rate (LCU per US\$,\allowbreak{} period average) | Data & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0044 & 国别货币与中国出海 & Summary Terms of Use | Data & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0045 & 会计合规与制裁 & DataBank | The World Bank & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0046 & 黄金美元与储备配置 & World Bank Data Catalog & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0047 & 国别货币与中国出海 & 逐指标核验. 2026. url:\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & shared \\
+WEB-\allowbreak{}0048 & 黄金美元与储备配置 & Global Economic Monitor -\allowbreak{} World Bank Data Catalog & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0049 & 国别货币与中国出海 & World Bank Data Help Desk & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0050 & 黄金美元与储备配置 & About the Indicators API Documentation – World Bank Data Help Desk & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0051 & 国别货币与中国出海 & 2. Statista（汇编帝国银行数据），"金马克对纸马克价值1922–1923"，2024。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0052 & 企业案例与公开披露 & Discovery Alert，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0053 & 全球周期与历史危机 & 6. Discovery Alert，"Gold \& Oil Embargo:\allowbreak{} Historic and Modern Impact on Gold Prices"（2026，引用 CPI 峰值 14 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0054 & 企业案例与公开披露 & 10.16511/\allowbreak{}j.cnki.qhdxxb.2023.21.008.pdf) & FETCH\_\allowbreak{}FAILED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0055 & 国别货币与中国出海 & 10.3386/\allowbreak{}w18706. & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0056 & 黄金美元与储备配置 & 10.3390/\allowbreak{}e28030271 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0057 & 黄金美元与储备配置 & 9. 美元化程度：Ecoanalítica & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0058 & 全球周期与历史危机 & 7. "三驾马车"救助规模：欧盟委员会财政事务文件 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0059 & 全球周期与历史危机 & 3. Yale Program on Financial Stability,\allowbreak{} K. Nygaard,\allowbreak{} "The Federal Reserve's Response to the 1987 Mark & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0060 & 黄金美元与储备配置 & shanghai gold exchange & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0061 & 黄金美元与储备配置 & 14 Shanghai Gold Exchange,\allowbreak{} Shanghai Gold Benchmark Price,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0062 & 企业案例与公开披露 & 同花顺财经，2025-\allowbreak{}11 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0063 & 企业案例与公开披露 & 财新报道，2019 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0064 & 企业案例与公开披露 & 世界黄金协会，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0065 & 企业案例与公开披露 & 世界黄金协会，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0066 & 企业案例与公开披露 & 证券时报·数据宝 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0067 & 全球周期与历史危机 & 3. 新浪财经（2022）："对1970年代滞涨期的回顾和对比"（美元指数 1971 年 120.4→1980 年 84.7）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0068 & 企业案例与公开披露 & 新浪财经引外汇局，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0069 & 企业案例与公开披露 & 粤开证券李奇霖，2019 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0070 & 企业案例与公开披露 & 人民银行，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0071 & 全球周期与历史危机 & 1. 标普 500 历史数据（2020 峰值/\allowbreak{}谷底/\allowbreak{}全年）：Yahoo Finance/\allowbreak{}Refinitiv 历史行情 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0072 & 全球周期与历史危机 & 6. Financial Gravity（引标普500 2007年10月—2009年3月回撤56.8\%数据），2024年， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0073 & 企业案例与公开披露 & 3. 美国财政部年报（1940，圣路易斯联储 FRASER 档案）：1911–1932 年白银年均价格表，1929 年 53.3 美分、1932 年 28.2 美分、1932 年 12 月低点 24. & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0074 & 黄金美元与储备配置 & Federal Reserve Bank of St. Louis 来源资料（WEB-\allowbreak{}0074） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0075 & 黄金美元与储备配置 & FRED法律条款 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0076 & 黄金美元与储备配置 & 1. 埃镑汇率数据（15.7 → 48–50）：美联储圣路易斯分部（FRED）EGP/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0077 & 黄金美元与储备配置 & 1. 里亚尔汇率数据（2011–2025）：IMF IFS /\allowbreak{} Bonbast（伊朗黑市汇率跟踪）/\allowbreak{}美联储 FRED（IRR/\allowbreak{}USD） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0078 & 企业案例与公开披露 & 1. 奈拉汇率数据（N461 → N1,\allowbreak{}535）：美联储圣路易斯分部（FRED）NGN/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0079 & 黄金美元与储备配置 & Adjusted Spread,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0080 & 会计合规与制裁 & 1. 卢布 2014 年汇率（33 → 68，-\allowbreak{}72\%）：美联储圣路易斯分部（FRED）RUB/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0081 & 全球周期与历史危机 & 2. 美联储圣路易斯分部（FRED）比索/\allowbreak{}美元汇率数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0082 & 企业案例与公开披露 & 2. 美联储圣路易斯分部（FRED）阿根廷比索/\allowbreak{}美元汇率 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0083 & 黄金美元与储备配置 & 1. 土耳其里拉汇率数据（2018–2025）：美联储圣路易斯分部（FRED）TRY/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0084 & 全球周期与历史危机 & 5. 联邦基金利率（沃尔克 20\% 峰值，1981-\allowbreak{}06）：美联储圣路易斯分部 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0085 & 会计合规与制裁 & 5. 以色列谢克尔汇率：FRED ILS/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0086 & 全球周期与历史危机 & 3. 希腊 10 年期国债收益率历史 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0087 & 黄金美元与储备配置 & Federal Reserve Bank of St. Louis 来源资料（WEB-\allowbreak{}0087） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0088 & 全球周期与历史危机 & 2. 美联储圣路易斯分部（FRED）卢布/\allowbreak{}美元汇率 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0089 & 黄金美元与储备配置 & Federal Reserve Bank of St. Louis 来源资料（WEB-\allowbreak{}0089） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0090 & 黄金美元与储备配置 & 13 Federal Reserve Bank of St. Louis,\allowbreak{} FRED economic data,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0091 & 企业案例与公开披露 & WGC 报告，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0092 & 黄金美元与储备配置 & 文本词典,\allowbreak{}THUOCL财经词表,\allowbreak{}论文参考文献32所列清华财经类词汇词库,\allowbreak{}更新于2016-\allowbreak{}12-\allowbreak{}24,\allowbreak{}3830词条,\allowbreak{}THUNLP/\allowbreak{}Heywhale,\allowbreak{} & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & shared \\
+WEB-\allowbreak{}0093 & 企业案例与公开披露 & 5. Tether XAUt（黄金计价稳定币，约 7.66 吨实物支持）：Tether 官方产品页面 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0094 & 全球周期与历史危机 & 5. GoldSilver.com（引 LBMA 与 Macrotrends 数据）："The 1971 Nixon Shock"（金价 35→850 美元、+2,\allowbreak{}300\%）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0095 & 全球周期与历史危机 & 2. GoldSilver.com（引用 Macrotrends 百年金价图、LBMA 历史数据、World Gold Council），"Gold Price Cycles:\allowbreak{} What Histor & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0096 & 黄金美元与储备配置 & hm.src = " & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0097 & 黄金美元与储备配置 & hm.src = " & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0098 & 黄金美元与储备配置 & Treasury Prohibits Transactions with Central Bank of Russia and Imposes Sanctions on Key Sources of  & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0099 & 全球周期与历史危机 & Legislative Basis | U.S. Department of the Treasury & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0100 & 全球周期与历史危机 & 4. 美国 10 年期国债收益率：美国财政部利率历史 & FETCH\_\allowbreak{}FAILED & shared \\
+WEB-\allowbreak{}0101 & 黄金美元与储备配置 & Daily Treasury Rates | U.S. Department of the Treasury & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0102 & 全球周期与历史危机 & 6. HowMuch.net（2020）：百年金银价格比图，1933 年金银比 132.4 的极值记录。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0103 & 企业案例与公开披露 & 公开年报 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0104 & 全球周期与历史危机 & 1. 日经指数历史数据（峰值 38,\allowbreak{}957 点、谷底 7,\allowbreak{}607 点）：日经平均指数官方历史数据，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0105 & 企业案例与公开披露 & 彭博社转引，2020 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0106 & 全球周期与历史危机 & 1. International Banker（2021）：《The Dotcom Bubble Burst (2000)》——纳斯达克跌幅与 5 万亿美元市值蒸发数据。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0107 & 企业案例与公开披露 & 1. Palantir 2021Q2 财报与致股东信（购入 5,\allowbreak{}070 万美元金条、对冲黑天鹅表述） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0108 & 企业案例与公开披露 & 中国人寿完成国内保险机构首笔黄金询价交易\_\allowbreak{}中共上海市委金融委员会办公室、中共上海市金融工作委员会 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0109 & 企业案例与公开披露 & 上金所启用香港黄金交割仓库 中国黄金市场国际化迈出关键一步\_\allowbreak{}中共上海市委金融委员会办公室、中共上海市金融工作委员会 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0110 & 会计合规与制裁 & 7. KSE（基辅经济学院）《Direct losses of Russian assets and companies》2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0111 & 企业案例与公开披露 & 财联社，2025-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0112 & 企业案例与公开披露 & 财联社，2025-\allowbreak{}10 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0113 & 企业案例与公开披露 & 搜狐财经，2026-\allowbreak{}05 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0114 & 全球周期与历史危机 & 3. Federal Reserve History /\allowbreak{} maseconomics 综述——印尼盾贬值约 80\%、韩元约 50\%、IMF 超 1,\allowbreak{}100 亿美元救助、雅加达指数跌 81\%： & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0115 & 黄金美元与储备配置 & 缺失论文PDF官方开放CDN恢复候选 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0116 & 全球周期与历史危机 & 4. MetalCharts /\allowbreak{} National Mining Association 历史金价数据：1987年LBMA均价447美元、年涨约21.5\%。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0117 & 国别货币与中国出海 & 4. Mises Institute,\allowbreak{} "Understanding Money Mechanics"（货币供应膨胀70亿倍等数据），2024。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0118 & 黄金美元与储备配置 & modelwhale.com 来源资料（WEB-\allowbreak{}0118） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0119 & 企业案例与公开披露 & 中国黄金公告，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0120 & 黄金美元与储备配置 & mp.weixin.qq.com 来源资料（WEB-\allowbreak{}0120） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0121 & 黄金美元与储备配置 & mw-\allowbreak{}ds-\allowbreak{}ng-\allowbreak{}parsed-\allowbreak{}meta-\allowbreak{}1254542291.cos.ap-\allowbreak{}nanjing.myqcloud.com 来源资料（WEB-\allowbreak{}0121） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0122 & 黄金美元与储备配置 & mw-\allowbreak{}workspace-\allowbreak{}parsed-\allowbreak{}1254542291.cos.ap-\allowbreak{}nanjing.myqcloud.com 来源资料（WEB-\allowbreak{}0122） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0123 & 全球周期与历史危机 & 8. New Business Age（TC Correspondent），2014年，"Investors Run Away From Gold In 2013"——GLD全年减持546吨、两日自1 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0124 & 企业案例与公开披露 & New Lines Magazine，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0125 & 企业案例与公开披露 & 世界黄金协会，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0126 & 企业案例与公开披露 & 新浪新闻引中国新闻周刊，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0127 & 全球周期与历史危机 & 4. MetalCharts /\allowbreak{} National Mining Association 历史金价数据：1987年LBMA均价447美元、年涨约21.5\%。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0128 & 会计合规与制裁 & Home | Office of Foreign Assets Control & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0129 & 会计合规与制裁 & 1029 | Office of Foreign Assets Control & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0130 & 会计合规与制裁 & related Sanctions and Gold-\allowbreak{}related Transactions,\allowbreak{} 2022,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0131 & 全球周期与历史危机 & 5. OnlyGold 历史金价：1986年末390.9美元、1987年末486.5美元。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0132 & 全球周期与历史危机 & 1. World Bank（世界银行），《The Korean Financial Crisis of 1997:\allowbreak{} Onset,\allowbreak{} Turnaround,\allowbreak{} and Thereafter》——献金运动 2 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0133 & 国别货币与中国出海 & 3. 财新网，《"直升机撒钱"：赤字货币化是魔鬼吗》，2016。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0134 & 企业案例与公开披露 & 财新网专栏，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0135 & 企业案例与公开披露 & 东方财富研报，2021 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0136 & 企业案例与公开披露 & 开源证券，2025-\allowbreak{}02 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0137 & 企业案例与公开披露 & 开源证券，2025-\allowbreak{}01 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0138 & 企业案例与公开披露 & 建筑业实证，2024 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0139 & 黄金美元与储备配置 & Forecasting the Price of Gold with Integrated Media Sentiment—A Prediction Framework Based on Online & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0140 & 黄金美元与储备配置 & 缺失论文PDF恢复候选 & FETCH\_\allowbreak{}FAILED & shared \\
+WEB-\allowbreak{}0141 & 黄金美元与储备配置 & press.un.org 来源资料（WEB-\allowbreak{}0141） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0142 & 黄金美元与储备配置 & res.wx.qq.com 来源资料（WEB-\allowbreak{}0142） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0143 & 企业案例与公开披露 & 《台大管理论丛》 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0144 & 国别货币与中国出海 & 2. 俄罗斯 CPI（1998-\allowbreak{}12 同比 84\%）：俄罗斯联邦统计局（Rosstat） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0145 & 黄金美元与储备配置 & a href=" & FETCH\_\allowbreak{}FAILED & shared \\
+WEB-\allowbreak{}0146 & 会计合规与制裁 & BBVA 公告，2022 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0147 & 黄金美元与储备配置 & silverinstitute.org 来源资料（WEB-\allowbreak{}0147） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0148 & 黄金美元与储备配置 & silverinstitute.org 来源资料（WEB-\allowbreak{}0148） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0149 & 全球周期与历史危机 & 3. The Silver Institute（2026）：《World Silver Survey》——白银年度均价（2000：4.95；2001：4.37；2002：4.60 美元/\allowbreak{}盎司）。 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0150 & 全球周期与历史危机 & 4. Small Caps（2020）：《What history teaches us about gold in economic crises》，Homestake 股价 80→495 美元、1 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0151 & 黄金美元与储备配置 & static.heywhale.com 来源资料（WEB-\allowbreak{}0151） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0152 & 黄金美元与储备配置 & static.heywhale.com 来源资料（WEB-\allowbreak{}0152） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0153 & 黄金美元与储备配置 & static.heywhale.com 来源资料（WEB-\allowbreak{}0153） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0154 & 黄金美元与储备配置 & static.heywhale.com 来源资料（WEB-\allowbreak{}0154） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0155 & 黄金美元与储备配置 & static.heywhale.com 来源资料（WEB-\allowbreak{}0155） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0156 & 企业案例与公开披露 & 上交所重组报告书，2025 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0157 & 企业案例与公开披露 & 1. Tether《Tether Attestation Reports》（储备构成与黄金持仓） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0158 & 黄金美元与储备配置 & World Bank 来源资料（WEB-\allowbreak{}0158） & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0159 & 黄金美元与储备配置 & World Bank Commodities Price Data (The Pink Sheet) & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0160 & Smartbi与比赛平台 & 核验记录， & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0161 & Smartbi与比赛平台 & Smartbi 来源资料（WEB-\allowbreak{}0161） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0162 & 全球周期与历史危机 & Front page | U.S. Department of the Treasury & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0163 & 全球周期与历史危机 & 5. US Gold and Coin Research，"Gold vs S\&P 500 by Decade (1970s–2020s)"（2026 年 2 月更新，数据源：National Min & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0164 & 企业案例与公开披露 & 中国经营报，2025-\allowbreak{}12 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0165 & 黄金美元与储备配置 & web.pdx.edu 来源资料（WEB-\allowbreak{}0165） & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0166 & 黄金美元与储备配置 & www.afponline.org 来源资料（WEB-\allowbreak{}0166） & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0167 & 黄金美元与储备配置 & vesting Operating Cash,\allowbreak{} 2014,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0168 & 黄金美元与储备配置 & 4. Arabian Gulf Business Insight（AGBI），2023，《Lebanon's new bank rules offer 'lollar' accounts respit & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0169 & 全球周期与历史危机 & 3. 世界黄金协会（WGC），2013年《Gold Demand Trends Q2 2013》——ETF流出为需求下滑主因 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0170 & 企业案例与公开披露 & AInvest，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0171 & 国别货币与中国出海 & 2. 伊朗 CPI 数据（2018–2025 30\%–50\%）：伊朗统计中心（SCI） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0172 & 全球周期与历史危机 & 9. 希腊雅典综合指数历史 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0173 & 会计合规与制裁 & AzerNews，2013 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0174 & 全球周期与历史危机 & 3. 墨西哥央行（Banxico）历史汇率与利率数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0175 & 会计合规与制裁 & 2. 2014-\allowbreak{}12"黑色星期二"与央行加息 650 基点：Reuters/\allowbreak{}BBC 2014 年 12 月报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0176 & 国别货币与中国出海 & 8. 2021 年"低利率政策"与里拉 -\allowbreak{}44\%：BBC/\allowbreak{}Reuters 2021 年 12 月报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0177 & 企业案例与公开披露 & 4. 废钞与美元化（2009-\allowbreak{}02）：Reuters/\allowbreak{}BBC 2009 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0178 & 会计合规与制裁 & 1. 委内瑞拉伦敦黄金（31 吨/\allowbreak{}约 10 亿美元）被冻结：Reuters/\allowbreak{}BBC 2019–2020 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0179 & 黄金美元与储备配置 & 3. 2018 年向俄销售黄金与德银抵押被没收：Reuters/\allowbreak{}BBC & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0180 & 黄金美元与储备配置 & 6. 伊朗央行金本位/\allowbreak{}黄金担保数字货币（2025）：Reuters/\allowbreak{}BBC Persian 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0181 & 全球周期与历史危机 & 4. 阿根廷央行（BCRA）历史汇率与通胀数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0182 & 国别货币与中国出海 & analisis e investigacion & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0183 & 黄金美元与储备配置 & www.bde.es 来源资料（WEB-\allowbreak{}0183） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0184 & 会计合规与制裁 & BDO，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0185 & 企业案例与公开披露 & 8. BDO《IAS 29 应用指引》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0186 & 企业案例与公开披露 & Berkshire 2011 股东信 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0187 & 黄金美元与储备配置 & Bank for International Settlements & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0188 & 企业案例与公开披露 & 7. BIS（国际清算银行）1998 年年报第六章——危机对商品与金价的压制作用： & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0189 & 国别货币与中国出海 & Bank for International Settlements 来源资料（WEB-\allowbreak{}0189） & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0190 & 黄金美元与储备配置 & work,\allowbreak{} BIS Papers No. 38,\allowbreak{} 2008,\allowbreak{} & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0191 & 黄金美元与储备配置 & What share for gold? On the interaction of gold and foreign exchange reserve returns & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0192 & 国别货币与中国出海 & umentation,\allowbreak{} & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0193 & 黄金美元与储备配置 & 黄金. Bank for International Settlements,\allowbreak{} 2013,\allowbreak{} pp. 1–75. url:\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0194 & 全球周期与历史危机 & CPI Home :\allowbreak{} U.S. Bureau of Labor Statistics & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0195 & 黄金美元与储备配置 & Databases,\allowbreak{} Tables \& Calculators by Subject :\allowbreak{} U.S. Bureau of Labor Statistics & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0196 & 全球周期与历史危机 & 4. 墨西哥股市 IPC 指数历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0197 & 全球周期与历史危机 & Home :\allowbreak{} 日本銀行 Bank of Japan & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0198 & 全球周期与历史危机 & Speech by Board Member Kamezaki in Mie (Recent Economic and Financial Developments in Japan) :\allowbreak{} 日本銀行  & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0199 & 全球周期与历史危机 & Speech by Board Member NAKAMURA in Miyazaki (Economic Activity,\allowbreak{} Prices,\allowbreak{} and Monetary Policy in Japan & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0200 & 全球周期与历史危机 & Flow of Funds :\allowbreak{} 日本銀行 Bank of Japan & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0201 & 国别货币与中国出海 & 5. Britannica,\allowbreak{} "Hyperinflation in the Weimar Republic (1922–23)"。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0202 & 全球周期与历史危机 & 4. Britannica（大英百科全书）："Silver Thursday"（亨特兄弟持仓与 1980 年银价崩盘）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0203 & 全球周期与历史危机 & 2. BullionVault（2009）：《Gold in the Depression》，Homestake EPS、股息数据及里士满联储 John Walter（2005）银行倒闭统计。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0204 & 全球周期与历史危机 & 1. BullionVault（Adrian Ash），2023年，"Gold's Big Price Crash,\allowbreak{} 10 Year On"——两日跌幅、季度-\allowbreak{}25.4\%、TIPS相关性、GLD流出等 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0205 & 全球周期与历史危机 & 2. BullionVault,\allowbreak{} Adrian Ash,\allowbreak{} "How Does Gold Perform When Stock Markets Crash?"（2024）：黑色星期一当日金价 +3.2\% & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0206 & 全球周期与历史危机 & 3. Merval 指数历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0207 & 企业案例与公开披露 & CAFI 报告 PDF & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0208 & 国别货币与中国出海 & 2. 埃及 CPI（2023-\allowbreak{}09 峰值 38.0\%）：埃及中央公共动员与统计局（CAPMAS） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0209 & 国别货币与中国出海 & 1. 德意志联邦银行（Deutsche Bundesbank）历史统计档案，转引自 Cato Institute：Hanke \& Krus,\allowbreak{} "World Hyperinflations",\allowbreak{} Cato & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0210 & 国别货币与中国出海 & 3. 2022–2024 年三次贬值时间线：Reuters/\allowbreak{}Bloomberg 报道及埃及央行（CBE）公告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0211 & 企业案例与公开披露 & 7. 尼日利亚央行（CBN）外汇改革声明（2023-\allowbreak{}06 统一汇率） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0212 & 黄金美元与储备配置 & www.cboe.com 来源资料（WEB-\allowbreak{}0212） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0213 & 会计合规与制裁 & 4. 俄央行固定价 5,\allowbreak{}000 卢布/\allowbreak{}克购金：俄罗斯央行（CBR）公告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0214 & 黄金美元与储备配置 & www.cftc.gov 来源资料（WEB-\allowbreak{}0214） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0215 & 企业案例与公开披露 & Channels TV，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0216 & 国别货币与中国出海 & National Financial Conditions Index:\allowbreak{} Current Data -\allowbreak{} Federal Reserve Bank of Chicago & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0217 & 会计合规与制裁 & 正保会计网校，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0218 & 会计合规与制裁 & 2. 中国黄金集团黄金珠宝股份有限公司官网/\allowbreak{}公告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0219 & 企业案例与公开披露 & CICPA 刊载研究，2017 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0220 & 企业案例与公开披露 & 2. 传音 2024-\allowbreak{}10 三季报（2024Q3 净利润同比 -\allowbreak{}44\%，归因埃塞俄比亚币贬值汇兑损失）：公司公告/\allowbreak{}财联社 2024-\allowbreak{}10 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0221 & 企业案例与公开披露 & 财联社，2025-\allowbreak{}04 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0222 & 企业案例与公开披露 & 财联社，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0223 & 全球周期与历史危机 & 2. 财联社（2024/\allowbreak{}2026）："以史为鉴：70年代的黄金牛市是如何开始、如何结束的"（1970–74、1977–80 黄金年化收益 32.5\%/\allowbreak{}45.2\%）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0224 & 全球周期与历史危机 & 5. WTI 原油负值事件（2020-\allowbreak{}04-\allowbreak{}20）：CME Group 与媒体记录 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0225 & 黄金美元与储备配置 & www.cmegroup.com 来源资料（WEB-\allowbreak{}0225） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0226 & 全球周期与历史危机 & 4. CNBC Indonesia，《Rupiah Nelangsa,\allowbreak{} Krisis 1997/\allowbreak{}1998 Terulang?》，2024——印尼盾金价 40,\allowbreak{}000→73,\allowbreak{}125 印尼盾/\allowbreak{}克、通胀 7 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0227 & 黄金美元与储备配置 & 7. 新华网/\allowbreak{}新华财经，2023，《黎巴嫩本币兑美元汇率跌破 100000 比 1 大关》——黑市破 10 万、累计贬值超 98\%。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0228 & 黄金美元与储备配置 & 文本语料,\allowbreak{}金投网黄金新闻,\allowbreak{}标题与正文共1303篇,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}文章级→日聚合,\allowbreak{}金投网,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0229 & 会计合规与制裁 & 3. 美国财政部 OFAC 对伊朗制裁与 IFCA（2013）条文：美国国会立法《Iran Freedom and Counter-\allowbreak{}Proliferation Act》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0230 & 企业案例与公开披露 & Cornerstone Research & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0231 & 会计合规与制裁 & CPDbox，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0232 & 全球周期与历史危机 & 1. Crescat Capital（2024）：《The Countercyclicality of Gold Mining Stocks》，Homestake 与道指 1929–1932 对比数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0233 & 全球周期与历史危机 & 4. 银行不良债权处置（100 万亿日元级）：日本金融厅/\allowbreak{}存款保险机构披露，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0234 & 会计合规与制裁 & 6. 迪拜黄金贸易枢纽角色：迪拜多种商品交易中心（DMCC）黄金贸易报告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0235 & 全球周期与历史危机 & 亚洲金融危机回顾与思考 -\allowbreak{} 国务院发展研究中心 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0236 & 黄金美元与储备配置 & 论文,\allowbreak{}全文XML,\allowbreak{}结构化全文与参考文献,\allowbreak{}2026-\allowbreak{}02-\allowbreak{}28,\allowbreak{}一次性,\allowbreak{}Europe PMC,\allowbreak{} & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+WEB-\allowbreak{}0237 & 全球周期与历史危机 & European Central Bank & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0238 & 全球周期与历史危机 & Publications by date & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0239 & 全球周期与历史危机 & 5. Burdekin,\allowbreak{} R.C.K.（2005，EconStor 学术档案）：《US pressure on China's currency:\allowbreak{} Milton Friedman and the si & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0240 & 会计合规与制裁 & 4. 土耳其天然气进口数据：EIA《Turkey》国别分析 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0241 & 会计合规与制裁 & 10. 委内瑞拉石油产量与制裁：EIA & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0242 & 企业案例与公开披露 & change Restrictions. 2026. url:\allowbreak{} & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0243 & 企业案例与公开披露 & IMF WP，2020 & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0244 & 黄金美元与储备配置 & 3. IMF，2023，《Lebanon:\allowbreak{} 2023 Article IV Consultation》——黑市汇率 2023 年 3 月中旬达 140,\allowbreak{}000/\allowbreak{}美元。 & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0245 & 黄金美元与储备配置 & 2026/\allowbreak{}007,\allowbreak{} 2026,\allowbreak{} & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0246 & 黄金美元与储备配置 & International Monetary Fund 来源资料（WEB-\allowbreak{}0246） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0247 & 全球周期与历史危机 & 3. 名义 GDP 停滞数据：日本内阁府国民经济核算，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0248 & 企业案例与公开披露 & EuroFinance，2022 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0249 & 企业案例与公开披露 & CRS，2018 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0250 & 企业案例与公开披露 & EY，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0251 & 企业案例与公开披露 & 方达律所速评 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0252 & 黄金美元与储备配置 & www.fdic.gov 来源资料（WEB-\allowbreak{}0252） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0253 & 黄金美元与储备配置 & The Fed -\allowbreak{} The Federal Reserve’s responses to the post-\allowbreak{}Covid period of high inflation & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0254 & 全球周期与历史危机 & The Fed -\allowbreak{} Meeting calendars and information & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0255 & 全球周期与历史危机 & 4. 美联储 2020 年 3 月紧急行动（降息至 0–0.25\% + 无限量 QE）：美联储官网新闻稿 & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & shared \\
+WEB-\allowbreak{}0256 & 国别货币与中国出海 & Federal Reserve Board -\allowbreak{} 2020 FOMC Press Releases & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0257 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Federal Reserve issues FOMC statement & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0258 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Implementation Note issued March 15,\allowbreak{} 2020 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0259 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Implementation Note issued December 15,\allowbreak{} 2021 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0260 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Federal Reserve issues FOMC statement & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0261 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Federal Reserve Board announces it will make available additional funding to & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0262 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Federal Reserve issues FOMC statement & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0263 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Federal Reserve issues FOMC statement & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0264 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Industrial Production and Capacity Utilization -\allowbreak{} G.17 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0265 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Foreign Exchange Rates -\allowbreak{} H.10 -\allowbreak{} August 12,\allowbreak{} 2026 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0266 & 黄金美元与储备配置 & Federal Reserve Board -\allowbreak{} Foreign Exchange Rates -\allowbreak{} H.10 -\allowbreak{} August 12,\allowbreak{} 2026 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0267 & 全球周期与历史危机 & 1. Federal Reserve History（美联储官方历史项目，2013）："Nixon Ends Convertibility of U.S. Dollars to Gold and An & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0268 & 全球周期与历史危机 & 1. Federal Reserve History（美联储官方历史网站），《Gold Reserve Act of 1934》， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0269 & 企业案例与公开披露 & 中国金融新闻网，2025-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0270 & 企业案例与公开披露 & 中国金融新闻网，2024-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0271 & 企业案例与公开披露 & 中国黄金协会，2026-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0272 & 企业案例与公开披露 & WGC《黄金作为战略资产（2025 年版）》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0273 & 全球周期与历史危机 & 2. Gainesville Coins，《Gold Price History:\allowbreak{} Why Did Gold Fall In 2008?》，2025年（引LBMA历史定盘价）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0274 & 黄金美元与储备配置 & www.gdeltproject.org 来源资料（WEB-\allowbreak{}0274） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0275 & 会计合规与制裁 & WGC，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0276 & 黄金美元与储备配置 & World Gold Council 来源资料（WEB-\allowbreak{}0276） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0277 & 会计合规与制裁 & 5. 2022-\allowbreak{}03-\allowbreak{}08 金价冲至 2,\allowbreak{}078 美元：LBMA 金价历史数据/\allowbreak{}世界黄金协会 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0278 & 会计合规与制裁 & 2. 俄罗斯境内黄金储备（约 2,\allowbreak{}300 吨）与"制裁免疫"：世界黄金协会黄金储备数据库 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0279 & 会计合规与制裁 & 9. 世界黄金协会《Gold as a Strategic Asset》地缘风险研究 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0280 & 会计合规与制裁 & 4. 2022 年全球央行购金 1,\allowbreak{}136 吨：世界黄金协会《Gold Demand Trends Full Year 2022》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0281 & 黄金美元与储备配置 & World Gold Council 来源资料（WEB-\allowbreak{}0281） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0282 & 全球周期与历史危机 & 2. World Gold Council（世界黄金协会），《The Asian financial crisis – 20 years later》，2017——危机成因、黄金无信用风险属性的分析： & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0283 & 全球周期与历史危机 & 1. 世界黄金协会（WGC），《The gold perspective – 10 years after Lehman Brothers failed》，2019年， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0284 & 全球周期与历史危机 & 10. 世界黄金协会《Gold Outlook》：2022 年黄金组合分散价值研究报告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0285 & 黄金美元与储备配置 & World Gold Council 来源资料（WEB-\allowbreak{}0285） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0286 & 黄金美元与储备配置 & WGC条款 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0287 & 全球周期与历史危机 & 1. Goldman Sachs,\allowbreak{} "Global Financial Markets Crash on Black Monday"（2019）：道指单日 -\allowbreak{}22.61\%、508.32点。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0288 & 全球周期与历史危机 & 5. Gold Price Forecast（2024）：《Dot-\allowbreak{}com Bubble and Gold》——纳斯达克 1994—2000 年约 600\% 涨幅及同期黄金走势背景。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0289 & 企业案例与公开披露 & 黄金及黄金制品进出口管理办法\_\allowbreak{}人民银行\_\allowbreak{}中国政府网 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0290 & 全球周期与历史危机 & 6. 英国 1999–2000 年出售黄金储备（415 吨）：英国财政部/\allowbreak{}英格兰银行公开记录 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0291 & 企业案例与公开披露 & Z 值模型应用研究，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0292 & 企业案例与公开披露 & 汉坤律所解读 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0293 & 黄金美元与储备配置 & www.heywhale.com 来源资料（WEB-\allowbreak{}0293） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0294 & 黄金美元与储备配置 & www.heywhale.com 来源资料（WEB-\allowbreak{}0294） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0295 & 黄金美元与储备配置 & www.heywhale.com 来源资料（WEB-\allowbreak{}0295） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0296 & 企业案例与公开披露 & 1. 华为 2025 年年度报告（净汇兑损失 12.68 亿元、财务费用构成）：华为投资控股有限公司官网（企业社会责任/\allowbreak{}年度报告栏目） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0297 & 黄金美元与储备配置 & www.iaea.org 来源资料（WEB-\allowbreak{}0297） & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0298 & 企业案例与公开披露 & IATA -\allowbreak{} Home & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0299 & 国别货币与中国出海 & IATA -\allowbreak{} Blocked Funds & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0300 & 企业案例与公开披露 & IATA -\allowbreak{} Pressroom & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0301 & 国别货币与中国出海 & IATA -\allowbreak{} Blocked Funds Drop to \$1.8 billion with Major Clearance in Nigeria & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0302 & 国别货币与中国出海 & Dollars with Major Clearance in Nigeria. June 2,\allowbreak{} 2024. url:\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0303 & 会计合规与制裁 & IFRS -\allowbreak{} IFRS Foundation & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0304 & 会计合规与制裁 & Paper AP10,\allowbreak{} 2016,\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0305 & 会计合规与制裁 & 25. url:\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0306 & 会计合规与制裁 & IFRS Foundation 来源资料（WEB-\allowbreak{}0306） & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0307 & 会计合规与制裁 & IFRS Foundation 来源资料（WEB-\allowbreak{}0307） & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0308 & 会计合规与制裁 & 2026. url:\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0309 & 会计合规与制裁 & IFRS -\allowbreak{} IFRS Accounting Standards Navigator & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0310 & 会计合规与制裁 & IFRS -\allowbreak{} IAS 29 Financial Reporting in Hyperinflationary Economies & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0311 & 企业案例与公开披露 & 5. IMF《Blocked Funds and Currency Convertibility》研究（危机期对冲成本高企） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0312 & 全球周期与历史危机 & 1. IMF《Argentina:\allowbreak{} Selected Issues》与 2001 年救助文件 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0313 & 黄金美元与储备配置 & 4. IMF 救助（2022-\allowbreak{}12 30 亿美元 → 2024-\allowbreak{}03 80 亿美元）：IMF《Egypt Article IV Consultation》与新闻稿 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0314 & 全球周期与历史危机 & 1. IMF《Russian Federation:\allowbreak{} Selected Issues》与 1998 年救助文件 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0315 & 会计合规与制裁 & 6. 2021 年 IMF/\allowbreak{}世行暂停对苏援助：IMF 新闻稿 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0316 & 黄金美元与储备配置 & 2023,\allowbreak{} & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0317 & 黄金美元与储备配置 & International Monetary Fund 来源资料（WEB-\allowbreak{}0317） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0318 & 全球周期与历史危机 & Money Matters,\allowbreak{} an IMF Exhibit -\allowbreak{}-\allowbreak{} The Importance of Global Cooperation,\allowbreak{} Reinventing the System (1972-\allowbreak{} & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0319 & 企业案例与公开披露 & 2. 阿根廷 CPI（2023-\allowbreak{}12 单月 25.5\%、2024-\allowbreak{}05 同比 289.4\%）：阿根廷国家统计局（INDEC） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0320 & 全球周期与历史危机 & 4. Investopedia，"Silver Thursday:\allowbreak{} What It Means,\allowbreak{} How It Works"， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0321 & 企业案例与公开披露 & 4. 2024–2025 年以色列打击后伊朗金价飙升报道：Iran International、Reuters 2024–2025 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0322 & 企业案例与公开披露 & Iran International，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0323 & 全球周期与历史危机 & 4. 美国 20+ 年期长期国债 ETF（TLT）-\allowbreak{}30\% 涨跌：贝莱德 iShares TLT 历史价格 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0324 & 国别货币与中国出海 & 6. 解放日报·上观新闻，2023，《"全球最大危机之一"！"中东小巴黎"，发生了什么？》——2023 年 2 月 1 日官方汇率 1507.5→15000、黑市 64000。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0325 & 企业案例与公开披露 & 金杜律所，2022 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0326 & 全球周期与历史危机 & 6. Kitco News，《Gold revaluation would pay Washington,\allowbreak{} not private holders,\allowbreak{} historian says》（2026，引述美联 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0327 & 会计合规与制裁 & 2. G7 禁运俄金（2022-\allowbreak{}06）与 LBMA 除名：G7 峰会公报 /\allowbreak{} LBMA 官方声明 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0328 & 全球周期与历史危机 & 2. LBMA《Alchemist》第74期，"After the Gold Crash"——2013全年-\allowbreak{}30\%、集中于二季度、近半跌幅在4月两日 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0329 & 黄金美元与储备配置 & London Bullion Market Association 来源资料（WEB-\allowbreak{}0329） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0330 & 黄金美元与储备配置 & London Bullion Market Association 来源资料（WEB-\allowbreak{}0330） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0331 & 黄金美元与储备配置 & 目标价格,\allowbreak{}LBMA黄金价格,\allowbreak{}LBMA Gold Price，AM/\allowbreak{}PM及币种未说明,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}日频/\allowbreak{}含非交易日,\allowbreak{}LBMA/\allowbreak{}IBA,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0332 & 全球周期与历史危机 & 7. 白银历史价格：LBMA 白银基准价历史数据，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0333 & 全球周期与历史危机 & 6. Macrotrends 白银百年价格序列：1987年10—12月白银月度价格。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0334 & 黄金美元与储备配置 & www.matteoiacoviello.com 来源资料（WEB-\allowbreak{}0334） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0335 & 黄金美元与储备配置 & \&nbsp;\allowbreak{} & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0336 & 国别货币与中国出海 & \&nbsp;\allowbreak{} & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0337 & 会计合规与制裁 & Mineros 公告，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0338 & 企业案例与公开披露 & 彭博/\allowbreak{}MINING.COM，2019 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0339 & 黄金美元与储备配置 & www.modelwhale.com 来源资料（WEB-\allowbreak{}0339） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0340 & 黄金美元与储备配置 & www.modelwhale.com 来源资料（WEB-\allowbreak{}0340） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0341 & 全球周期与历史危机 & 3. RTS 指数历史数据（1997 峰值 → 1998 谷底） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0342 & 国别货币与中国出海 & 接投资统计公报. 2025. url:\allowbreak{} & FETCH\_\allowbreak{}FAILED & shared \\
+WEB-\allowbreak{}0343 & 黄金美元与储备配置 & 资统计公报，2025， & FETCH\_\allowbreak{}FAILED & shared \\
+WEB-\allowbreak{}0344 & 黄金美元与储备配置 & 商务部、国家统计局和国家外汇管理局联合发布《2024年度中国对外直接投资统计公报》 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0345 & 企业案例与公开披露 & 人社部，2020 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0346 & 企业案例与公开披露 & 2. MTN Group 2024 年报（含尼日利亚分部汇兑损失披露） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0347 & 企业案例与公开披露 & 3. MTN Nigeria 2023/\allowbreak{}2024 财报（汇兑损失 7,\allowbreak{}404 亿 + 9,\allowbreak{}254 亿奈拉）：MTN Group 与 MTN Nigeria 官方公告（NGX 披露） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0348 & 全球周期与历史危机 & The Golden Dilemma | NBER & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0349 & 全球周期与历史危机 & Business Cycle Dating | NBER & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0350 & 全球周期与历史危机 & Public Use Data Archive | NBER & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0351 & 全球周期与历史危机 & US Business Cycle Expansions and Contractions | NBER & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0352 & 企业案例与公开披露 & NBER，2013 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0353 & 全球周期与历史危机 & 16 National Bureau of Economic Research,\allowbreak{} Business Cycle Dating,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0354 & 企业案例与公开披露 & 全国股转系统公司年报披露，2021–2022 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0355 & 企业案例与公开披露 & 4. 雀巢尼日利亚 2023 年报（股东权益 -\allowbreak{}780 亿奈拉）：雀巢尼日利亚/\allowbreak{}NGX 披露 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0356 & 企业案例与公开披露 & 2. 雀巢集团 2023 年报（尼日利亚分部汇兑损失与资不抵债披露） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0357 & 企业案例与公开披露 & 国家金融监督管理总局 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0358 & 企业案例与公开披露 & 金融监管总局原文，2025-\allowbreak{}02-\allowbreak{}07 & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+WEB-\allowbreak{}0359 & 企业案例与公开披露 & 国家金融监督管理总局 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0360 & 企业案例与公开披露 & 2. 尼日利亚 CPI（2024-\allowbreak{}06 同比 34.2\%）：尼日利亚国家统计局（NBS） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0361 & 企业案例与公开披露 & OSW/\allowbreak{}KSE，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0362 & 企业案例与公开披露 & PIIE，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0363 & 黄金美元与储备配置 & Economic Policy Uncertainty Index & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0364 & 黄金美元与储备配置 & China Policy Uncertainty Indices Based on Mainland Papers & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0365 & 全球周期与历史危机 & 7. Reuters（经Politico转引），2013年12月31日——标普500全年+29.6\% & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0366 & 全球周期与历史危机 & 2. The American Presidency Project（加州大学圣巴巴拉分校），《White House Statement on Proclamation 2072》（1934年1月3 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0367 & 企业案例与公开披露 & PR Newswire，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0368 & 企业案例与公开披露 & 普华永道，2024 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0369 & 会计合规与制裁 & 3. RAND《How Russia is using gold in wartime》（2025） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0370 & 会计合规与制裁 & RAND，2025 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0371 & 全球周期与历史危机 & 2. 日本不动产研究所《六大城市地价指数》历史数据（商业地价 -\allowbreak{}87\%） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0372 & 企业案例与公开披露 & 1. 雷诺 2022 年报与 AvtoVAZ 出售（1 卢布）公告：雷诺集团官网/\allowbreak{}SEC 20-\allowbreak{}F & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0373 & 黄金美元与储备配置 & 5. 2020 年以 9 吨黄金支付伊朗换汽油：Reuters 2020-\allowbreak{}05 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0374 & 会计合规与制裁 & 6. 西方企业退出俄罗斯损失超 1,\allowbreak{}070 亿美元：Reuters 2024-\allowbreak{}03 统计 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0375 & 黄金美元与储备配置 & 5. 阿联酋 ADQ 350 亿美元注资（2024-\allowbreak{}02）：Reuters/\allowbreak{}路透报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0376 & 会计合规与制裁 & 3. 2024-\allowbreak{}10-\allowbreak{}26 以色列打击与金价 2,\allowbreak{}790 新高：Reuters 2024-\allowbreak{}10 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0377 & 国别货币与中国出海 & 7. 2018-\allowbreak{}08-\allowbreak{}10 里拉单日 -\allowbreak{}14\% 与新兴市场传染：Reuters/\allowbreak{}Bloomberg 2018 年 8 月报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0378 & 企业案例与公开披露 & 2. CEO 卡普公开表述（金库地点、接受黄金付款意向）：Reuters/\allowbreak{}Bloomberg 2021-\allowbreak{}08 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0379 & 会计合规与制裁 & 1. 俄罗斯外储被冻结约 3,\allowbreak{}000 亿美元：Reuters/\allowbreak{}Reuters 2022-\allowbreak{}02-\allowbreak{}28 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0380 & 企业案例与公开披露 & Reuters，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0381 & 企业案例与公开披露 & 中国证券业协会，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0382 & 全球周期与历史危机 & 国家外汇管理局门户网站 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0383 & 全球周期与历史危机 & 7. 上海高级金融学院（转文汇报，2015）：港股及全球市场1987年10月跌幅数据。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0384 & 企业案例与公开披露 & 《清华大学学报》财务预警综述，2023 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0385 & 企业案例与公开披露 & Form 10-\allowbreak{}K & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0386 & 企业案例与公开披露 & FWP & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0387 & 企业案例与公开披露 & Directory List of /\allowbreak{}Archives/\allowbreak{}edgar/\allowbreak{}data/\allowbreak{}1668717 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0388 & 企业案例与公开披露 & Directory List of /\allowbreak{}Archives/\allowbreak{}edgar/\allowbreak{}data/\allowbreak{}1668717/\allowbreak{}000119312524052002 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0389 & 企业案例与公开披露 & EX-\allowbreak{}99.1 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0390 & 企业案例与公开披露 & Barrick 2009 年报，SEC & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0391 & 企业案例与公开披露 & EDGAR Entity Landing Page & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0392 & 会计合规与制裁 & 5. 2025 年人民币金价上涨（约 +20\%+）：上海黄金交易所（SGE）Au99.99 行情 & DUPLICATE\_\allowbreak{}CONTENT & shared \\
+WEB-\allowbreak{}0393 & 企业案例与公开披露 & 现货实盘合约\_\allowbreak{}详情-\allowbreak{}上海黄金交易所 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0394 & 黄金美元与储备配置 & 每日行情-\allowbreak{}上海黄金交易所 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0395 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0396 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0397 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0398 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0399 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0400 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0401 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0402 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0403 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0404 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0405 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0406 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0407 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0408 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0409 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0410 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0411 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0412 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0413 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0414 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0415 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0416 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0417 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0418 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0419 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0420 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0421 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0422 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0423 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0424 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0425 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0426 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0427 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0428 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0429 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0430 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0431 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0432 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0433 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0434 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0435 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0436 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0437 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0438 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0439 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0440 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0441 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0442 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0443 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0444 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0445 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0446 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0447 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0448 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0449 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0450 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0451 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0452 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0453 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0454 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0455 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0456 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0457 & 黄金美元与储备配置 & 每日行情 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0458 & 全球周期与历史危机 & 6. 上海期货交易所，2013年12月，《美联储QE决策的时间纵向分析及对金价的影响》——2013年12月18日美联储宣布缩减购债 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0459 & 企业案例与公开披露 & 上期所研究报告 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0460 & 企业案例与公开披露 & 新浪财经，2025-\allowbreak{}10 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0461 & 全球周期与历史危机 & 4. SlickCharts 据标普官方数据——标普 500 含股息年度总回报（2000：-\allowbreak{}9.10\%；2001：-\allowbreak{}11.89\%；2002：-\allowbreak{}22.10\%）。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0462 & Smartbi与比赛平台 & 3 Smartbi：AIChat， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0463 & Smartbi与比赛平台 & 4 Smartbi：V11 最新版本与能力说明， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0464 & Smartbi与比赛平台 & 2 Smartbi：数据连接与准备， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0465 & 企业案例与公开披露 & 2. 法兴出售罗斯银行（1 欧元）与累计损失（约 31 亿欧元）：法兴 2022–2023 年报 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0466 & 企业案例与公开披露 & 搜狐财经引 Wind，2025-\allowbreak{}04 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0467 & 企业案例与公开披露 & 搜狐·承兑逾期查询，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0468 & 全球周期与历史危机 & 3. 标普 500 历史指数（1980–2000）：Yahoo Finance/\allowbreak{}S\&P 历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0469 & 会计合规与制裁 & 首页 | 上海证券交易所 & DOWNLOADED\_\allowbreak{}VERIFIED & private\_\allowbreak{}only \\
+WEB-\allowbreak{}0470 & 全球周期与历史危机 & 2. 希腊统计局（ELSTAT）GDP/\allowbreak{}失业率历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0471 & 企业案例与公开披露 & 2024年全国规模以上工业企业利润下降3.3\% -\allowbreak{} 国家统计局 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0472 & 企业案例与公开披露 & 国家统计局信息公开 & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0473 & 全球周期与历史危机 & 8. 圣路易斯联储经济评论《The Tequila Effect:\allowbreak{} Mexico's 1994-\allowbreak{}95 Financial Crisis》（危机传染与跨国影响综述） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0474 & 国别货币与中国出海 & 6. 苏伊士运河收入下降（红海危机）：苏伊士运河管理局（SCA）年度数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0475 & 会计合规与制裁 & 英国最高法院 UKSC 2020/\allowbreak{}0195 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0476 & 国别货币与中国出海 & 3. 土耳其央行利率决策（2018 加息、2021 降息、2023–24 再加息）：土耳其央行（CBRT） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0477 & 企业案例与公开披露 & TheCable，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0478 & 企业案例与公开披露 & The National，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0479 & 企业案例与公开披露 & 5. "7 家企业 2024 财年汇兑损失 2.06 万亿奈拉"：THISDAY 2025-\allowbreak{}03 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0480 & 企业案例与公开披露 & THISDAY，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0481 & 国别货币与中国出海 & 2. 土耳其 CPI（2018-\allowbreak{}10 峰值 25.2\%、2022-\allowbreak{}10 峰值 85.5\%）：土耳其统计局（TURKSTAT） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0482 & 会计合规与制裁 & 4. 苏丹黄金产量（非洲第三、约 50–70 吨/\allowbreak{}年）：美国地质调查局（USGS）矿物年鉴 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0483 & 全球周期与历史危机 & 5. U.S. Money Reserve，《How Does Silver Perform in a Recession?》，2024年（白银2008年2月末19.24美元→10月末9.09美元）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0484 & 会计合规与制裁 & 路透社 Factbox，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0485 & 黄金美元与储备配置 & www.whitehouse.gov 来源资料（WEB-\allowbreak{}0485） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0486 & 黄金美元与储备配置 & www.whitehouse.gov 来源资料（WEB-\allowbreak{}0486） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0487 & 黄金美元与储备配置 & www.whitehouse.gov 来源资料（WEB-\allowbreak{}0487） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0488 & 黄金美元与储备配置 & www.who.int 来源资料（WEB-\allowbreak{}0488） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0489 & 黄金美元与储备配置 & www.who.int 来源资料（WEB-\allowbreak{}0489） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0490 & 黄金美元与储备配置 & www.who.int 来源资料（WEB-\allowbreak{}0490） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0491 & 会计合规与制裁 & Wisconsin Project，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0492 & 黄金美元与储备配置 & World Bank Group -\allowbreak{} International Development,\allowbreak{} Poverty and Sustainability & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0493 & 会计合规与制裁 & Sudan | World Bank Group & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0494 & 黄金美元与储备配置 & Lebanon’s Crisis:\allowbreak{} Great Denial in the Deliberate Depression & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0495 & 国别货币与中国出海 & Lebanon:\allowbreak{} Normalization of Crisis is No Road to Stabilization & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0496 & 黄金美元与储备配置 & Conflict in Middle East Could Bring ‘Dual Shock’ to Global Commodity Markets & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0497 & 全球周期与历史危机 & Global Economic Prospects & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0498 & 会计合规与制裁 & Commodity Markets & DOWNLOADED\_\allowbreak{}VERIFIED & shared \\
+WEB-\allowbreak{}0499 & 企业案例与公开披露 & 盈科律所贷后风控要点 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0500 & 企业案例与公开披露 & 中国清算网典型案例，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0501 & 企业案例与公开披露 & Research Affiliates，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0502 & 企业案例与公开披露 & 北京日报，2025-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0503 & 企业案例与公开披露 & 雪球研究，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0504 & 企业案例与公开披露 & 金融监管总局数据，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0505 & 企业案例与公开披露 & 监管指引整理 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0506 & 企业案例与公开披露 & 证券时报·数据宝，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+WEB-\allowbreak{}0507 & 黄金美元与储备配置 & xueshu.baidu.com 来源资料（WEB-\allowbreak{}0507） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & metadata\_\allowbreak{}only \\
+REF-\allowbreak{}0001 & 会计合规与制裁 & 40国候选样本数据接口预审记录 & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & metadata\_\allowbreak{}only \\
+\bottomrule\end{longtable}
+\endgroup
+
+\chapter{案例证据索引}
+案例库实际包含45份档案。\texttt{event\_cluster\_id}用于合并同一事件的重复观察，文档数量不得直接当作独立事件数量。
+\footnotesize
+\begin{longtable}{L{1.5cm}L{3cm}L{10cm}r}\toprule
+案例ID & 事件簇 & 文件 & 来源数\\\midrule\endhead
+CASE-001 & EVT-RUS-2022 & 案例库/地缘冲突与制裁篇/01\_2022俄乌冲突-外储冻结/案例档案.md & 7 \\
+CASE-002 & EVT-RUS-2022 & 案例库/地缘冲突与制裁篇/02\_2022俄罗斯黄金制裁免疫/案例档案.md & 7 \\
+CASE-003 & EVT-03\_2024以色列-伊朗冲突 & 案例库/地缘冲突与制裁篇/03\_2024以色列-伊朗冲突/案例档案.md & 6 \\
+CASE-004 & EVT-IRN-TUR-2012-2013 & 案例库/地缘冲突与制裁篇/04\_2012-2013土耳其-伊朗黄金换天然气/案例档案.md & 6 \\
+CASE-005 & EVT-VEN-2019-GOLD & 案例库/地缘冲突与制裁篇/05\_2019委内瑞拉伦敦黄金冻结/案例档案.md & 6 \\
+CASE-006 & EVT-06\_2014克里米亚危机-卢布暴跌 & 案例库/地缘冲突与制裁篇/06\_2014克里米亚危机-卢布暴跌/案例档案.md & 9 \\
+CASE-007 & EVT-07\_2018特朗普对伊制裁 & 案例库/地缘冲突与制裁篇/07\_2018特朗普对伊制裁/案例档案.md & 2 \\
+CASE-008 & EVT-08\_2023苏丹内战黄金经济 & 案例库/地缘冲突与制裁篇/08\_2023苏丹内战黄金经济/案例档案.md & 4 \\
+CASE-009 & EVT-01\_1929大萧条 & 案例库/宏观危机篇/01\_1929大萧条/案例档案.md & 6 \\
+CASE-010 & EVT-02\_1933罗斯福黄金新政 & 案例库/宏观危机篇/02\_1933罗斯福黄金新政/案例档案.md & 6 \\
+CASE-011 & EVT-03\_1971布雷顿森林解体 & 案例库/宏观危机篇/03\_1971布雷顿森林解体/案例档案.md & 6 \\
+CASE-012 & EVT-04\_1973-1980滞胀大牛市 & 案例库/宏观危机篇/04\_1973-1980滞胀大牛市/案例档案.md & 6 \\
+CASE-013 & EVT-06\_1987黑色星期一 & 案例库/宏观危机篇/06\_1987黑色星期一/案例档案.md & 8 \\
+CASE-014 & EVT-07\_1997亚洲金融危机 & 案例库/宏观危机篇/07\_1997亚洲金融危机/案例档案.md & 7 \\
+CASE-015 & EVT-08\_2000互联网泡沫 & 案例库/宏观危机篇/08\_2000互联网泡沫/案例档案.md & 5 \\
+CASE-016 & EVT-09\_2008全球金融危机 & 案例库/宏观危机篇/09\_2008全球金融危机/案例档案.md & 6 \\
+CASE-017 & EVT-10\_1990日本资产泡沫破裂 & 案例库/宏观危机篇/10\_1990日本资产泡沫破裂/案例档案.md & 7 \\
+CASE-018 & EVT-11\_1994墨西哥龙舌兰危机 & 案例库/宏观危机篇/11\_1994墨西哥龙舌兰危机/案例档案.md & 8 \\
+CASE-019 & EVT-11\_2013黄金暴跌（反面案例） & 案例库/宏观危机篇/11\_2013黄金暴跌（反面案例）/案例档案.md & 8 \\
+CASE-020 & EVT-RUS-1998 & 案例库/宏观危机篇/12\_1998俄罗斯金融危机/案例档案.md & 7 \\
+CASE-021 & EVT-13\_2001阿根廷债务危机 & 案例库/宏观危机篇/13\_2001阿根廷债务危机/案例档案.md & 7 \\
+CASE-022 & EVT-14\_2010欧洲主权债务危机 & 案例库/宏观危机篇/14\_2010欧洲主权债务危机/案例档案.md & 7 \\
+CASE-023 & EVT-15\_2020疫情全球市场崩盘 & 案例库/宏观危机篇/15\_2020疫情全球市场崩盘/案例档案.md & 6 \\
+CASE-024 & EVT-16\_2022美联储激进加息周期 & 案例库/宏观危机篇/16\_2022美联储激进加息周期/案例档案.md & 9 \\
+CASE-025 & EVT-17\_1980-2000黄金熊市\_反面案例 & 案例库/宏观危机篇/17\_1980-2000黄金熊市\_反面案例/案例档案.md & 7 \\
+CASE-026 & EVT-01\_1923魏玛德国恶性通胀 & 案例库/货币崩溃篇/01\_1923魏玛德国恶性通胀/案例档案.md & 5 \\
+CASE-027 & EVT-02\_2008津巴布韦恶性通胀 & 案例库/货币崩溃篇/02\_2008津巴布韦恶性通胀/案例档案.md & 5 \\
+CASE-028 & EVT-VEN-2015-2021-FX & 案例库/货币崩溃篇/03\_2015-2021委内瑞拉玻利瓦尔/案例档案.md & 8 \\
+CASE-029 & EVT-TUR-2018-FX & 案例库/货币崩溃篇/04\_2018土耳其里拉危机/案例档案.md & 8 \\
+CASE-030 & EVT-05\_2019-2023黎巴嫩镑崩溃 & 案例库/货币崩溃篇/05\_2019-2023黎巴嫩镑崩溃/案例档案.md & 7 \\
+CASE-031 & EVT-06\_2022-2024尼日利亚奈拉崩溃 & 案例库/货币崩溃篇/06\_2022-2024尼日利亚奈拉崩溃/案例档案.md & 9 \\
+CASE-032 & EVT-07\_2022-2024埃及镑贬值 & 案例库/货币崩溃篇/07\_2022-2024埃及镑贬值/案例档案.md & 9 \\
+CASE-033 & EVT-08\_2010-2025伊朗里亚尔 & 案例库/货币崩溃篇/08\_2010-2025伊朗里亚尔/案例档案.md & 9 \\
+CASE-034 & EVT-09\_2023-2024阿根廷比索危机 & 案例库/货币崩溃篇/09\_2023-2024阿根廷比索危机/案例档案.md & 8 \\
+CASE-035 & EVT-RUS-1998 & 案例库/货币崩溃篇/10\_1998俄罗斯卢布危机/案例档案.md & 4 \\
+CASE-036 & EVT-01\_MTN尼日利亚 & 案例库/微观企业篇/01\_MTN尼日利亚/案例档案.md & 7 \\
+CASE-037 & EVT-02\_雀巢尼日利亚 & 案例库/微观企业篇/02\_雀巢尼日利亚/案例档案.md & 8 \\
+CASE-038 & EVT-03\_ABINBEV阿根廷 & 案例库/微观企业篇/03\_ABInBev阿根廷/案例档案.md & 6 \\
+CASE-039 & EVT-04\_传音控股 & 案例库/微观企业篇/04\_传音控股/案例档案.md & 4 \\
+CASE-040 & EVT-05\_华为 & 案例库/微观企业篇/05\_华为/案例档案.md & 3 \\
+CASE-041 & EVT-06\_雷诺法兴俄罗斯退出 & 案例库/微观企业篇/06\_雷诺法兴俄罗斯退出/案例档案.md & 5 \\
+CASE-042 & EVT-07\_IATA航司被困资金 & 案例库/微观企业篇/07\_IATA航司被困资金/案例档案.md & 6 \\
+CASE-043 & EVT-08\_PALANTIR黑天鹅黄金 & 案例库/微观企业篇/08\_Palantir黑天鹅黄金/案例档案.md & 6 \\
+CASE-044 & EVT-09\_TETHER黄金储备 & 案例库/微观企业篇/09\_Tether黄金储备/案例档案.md & 5 \\
+CASE-045 & EVT-10\_中国黄金会计错配\_反面 & 案例库/微观企业篇/10\_中国黄金会计错配\_反面/案例档案.md & 5 \\
+\bottomrule\end{longtable}\normalsize
+
+\chapter{缺失、受限与失败来源}
+\footnotesize
+\begin{longtable}{L{1.5cm}L{5.5cm}L{3cm}L{5cm}}\toprule
+ID & 标题 & 终态 & 后续动作\\\midrule\endhead
+LCL-\allowbreak{}0001 & \textasciitilde{}\$XH-\allowbreak{}202612比赛硬性要求与评分标准\_\allowbreak{}含技术方案.xlsx & EXCLUDED\_\allowbreak{}SECRET & 保持旧文件不动；不得复制到任何交接包。 \\
+LCL-\allowbreak{}0148 & \textasciitilde{}\$China\_\allowbreak{}Mainland\_\allowbreak{}Paper\_\allowbreak{}EPU.xlsx & EXCLUDED\_\allowbreak{}SECRET & 保持旧文件不动；不得复制到任何交接包。 \\
+LCL-\allowbreak{}0162 & weebly\_\allowbreak{}cookies.txt & EXCLUDED\_\allowbreak{}SECRET & 保持旧文件不动；不得复制到任何交接包。 \\
+LCL-\allowbreak{}0163 & \textasciitilde{}\$论文数据来源与复现清单.xlsx & EXCLUDED\_\allowbreak{}SECRET & 保持旧文件不动；不得复制到任何交接包。 \\
+WEB-\allowbreak{}0001 & 5. 中国建设银行，2013年8月，《2013年上半年黄金市场回顾与预判》——6月20日美联储声明后金价单日跌5\% & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0003 & 4. 人民网财经，2013年4月22日，"黄金暴跌美联储和高盛难逃操纵嫌疑"——4月12日-\allowbreak{}5.03\%、4月15日-\allowbreak{}9.09\%为30年最大单日跌幅 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0004 & 贷后预警信号清单（120 项） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0005 & purl.org 来源资料（WEB-\allowbreak{}0005） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0006 & purl.org 来源资料（WEB-\allowbreak{}0006） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0007 & purl.org 来源资料（WEB-\allowbreak{}0007） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0009 & 经济观察网，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0010 & 《金融研究》论文 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0012 & 票据承兑资讯，2022 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0014 & o4509683932790784.ingest.us.sentry.io 来源资料（WEB-\allowbreak{}0014） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0015 & 解释变量,\allowbreak{}ACI,\allowbreak{}Actuaries Climate Index，区域/\allowbreak{}季节聚合规则未说明,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}图示阶梯,\allowbreak{}Actuaries Climate Index,\allowbreak{} & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0017 & 2. 尼日利亚 8.1–8.5 亿美元与阿联酋航空停飞拉各斯（2023-\allowbreak{}06）：Reuters/\allowbreak{}African Business 2023 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0018 & African Business，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0019 & ai.heywhale.com 来源资料（WEB-\allowbreak{}0019） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0021 & 5. 美联社（AP News），2026，《Lebanon's economic crisis:\allowbreak{} Gold reserves as a lifeline?》——央行 286.8 吨黄金储备及 1986 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0022 & 财务分析通行标准 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0023 & 百度百科·Z值预警 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0024 & 6. BestFolio /\allowbreak{} Cresset Capital（2026）：1970 年代滞胀期美股复盘（标普 500 1973–74 下跌约 48\%、实际回报至 1993 年才收复 1968 年高点） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0025 & Blockworks，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0027 & 4. Bullion Exchanges，《Gold Crisis 2008 Explained:\allowbreak{} Drop,\allowbreak{} Recovery,\allowbreak{} and Rally Path》，2026年， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0028 & 清晖智库，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0029 & Business Insider NG，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0030 & cdn.kesci.com 来源资料（WEB-\allowbreak{}0030） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0031 & 8. 被困资金（blocked funds）数据：IATA/\allowbreak{}CAPA 尼日利亚 8.5 亿美元报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0032 & IATA/\allowbreak{}CAPA，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0033 & 目标价格,\allowbreak{}WGC/\allowbreak{}Global黄金价格,\allowbreak{}论文所谓WGC或Global市场金价，具体定盘价/\allowbreak{}时点未给出,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}日频/\allowbreak{}含非交易日,\allowbreak{}World Gold Council & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0034 & 8. 比特币 2022 年 -\allowbreak{}65\%：CoinMarketCap 年度数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0035 & 7. 比特币 2020-\allowbreak{}03-\allowbreak{}12 单日 -\allowbreak{}40\%：CoinMarketCap 历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0036 & 3. 阿联酋（约 96.4 吨）与香港（约 88 吨）承接俄金：贸易数据（UN Comtrade /\allowbreak{} 港府统计处）及 Reuters 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0037 & ropy (Basel)</\allowbreak{}abbrev-\allowbreak{}journal-\allowbreak{}title </\allowbreak{}journal-\allowbreak{}title-\allowbreak{}group <publisher <publisher-\allowbreak{}name Multidisciplinar & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0038 & http cookies & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0041 & 7. 移民人数：联合国难民署（UNHCR） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0047 & 逐指标核验. 2026. url:\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0048。 \\
+WEB-\allowbreak{}0051 & 2. Statista（汇编帝国银行数据），"金马克对纸马克价值1922–1923"，2024。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0052 & Discovery Alert，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0053 & 6. Discovery Alert，"Gold \& Oil Embargo:\allowbreak{} Historic and Modern Impact on Gold Prices"（2026，引用 CPI 峰值 14 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0054 & 10.16511/\allowbreak{}j.cnki.qhdxxb.2023.21.008.pdf) & FETCH\_\allowbreak{}FAILED & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0384。 \\
+WEB-\allowbreak{}0055 & 10.3386/\allowbreak{}w18706. & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0056 & 10.3390/\allowbreak{}e28030271 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0057 & 9. 美元化程度：Ecoanalítica & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0058 & 7. "三驾马车"救助规模：欧盟委员会财政事务文件 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0059 & 3. Yale Program on Financial Stability,\allowbreak{} K. Nygaard,\allowbreak{} "The Federal Reserve's Response to the 1987 Mark & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0061 & 14 Shanghai Gold Exchange,\allowbreak{} Shanghai Gold Benchmark Price,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0062 & 同花顺财经，2025-\allowbreak{}11 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0063 & 财新报道，2019 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0064 & 世界黄金协会，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0065 & 世界黄金协会，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0066 & 证券时报·数据宝 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0067 & 3. 新浪财经（2022）："对1970年代滞涨期的回顾和对比"（美元指数 1971 年 120.4→1980 年 84.7）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0068 & 新浪财经引外汇局，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0069 & 粤开证券李奇霖，2019 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0070 & 人民银行，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0071 & 1. 标普 500 历史数据（2020 峰值/\allowbreak{}谷底/\allowbreak{}全年）：Yahoo Finance/\allowbreak{}Refinitiv 历史行情 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0072 & 6. Financial Gravity（引标普500 2007年10月—2009年3月回撤56.8\%数据），2024年， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0074 & Federal Reserve Bank of St. Louis 来源资料（WEB-\allowbreak{}0074） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0075 & FRED法律条款 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0076 & 1. 埃镑汇率数据（15.7 → 48–50）：美联储圣路易斯分部（FRED）EGP/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0077 & 1. 里亚尔汇率数据（2011–2025）：IMF IFS /\allowbreak{} Bonbast（伊朗黑市汇率跟踪）/\allowbreak{}美联储 FRED（IRR/\allowbreak{}USD） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0078 & 1. 奈拉汇率数据（N461 → N1,\allowbreak{}535）：美联储圣路易斯分部（FRED）NGN/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0079 & Adjusted Spread,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0080 & 1. 卢布 2014 年汇率（33 → 68，-\allowbreak{}72\%）：美联储圣路易斯分部（FRED）RUB/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0081 & 2. 美联储圣路易斯分部（FRED）比索/\allowbreak{}美元汇率数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0082 & 2. 美联储圣路易斯分部（FRED）阿根廷比索/\allowbreak{}美元汇率 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0083 & 1. 土耳其里拉汇率数据（2018–2025）：美联储圣路易斯分部（FRED）TRY/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0084 & 5. 联邦基金利率（沃尔克 20\% 峰值，1981-\allowbreak{}06）：美联储圣路易斯分部 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0085 & 5. 以色列谢克尔汇率：FRED ILS/\allowbreak{}USD & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0086 & 3. 希腊 10 年期国债收益率历史 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0087 & Federal Reserve Bank of St. Louis 来源资料（WEB-\allowbreak{}0087） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0088 & 2. 美联储圣路易斯分部（FRED）卢布/\allowbreak{}美元汇率 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0089 & Federal Reserve Bank of St. Louis 来源资料（WEB-\allowbreak{}0089） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0090 & 13 Federal Reserve Bank of St. Louis,\allowbreak{} FRED economic data,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0091 & WGC 报告，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0092 & 文本词典,\allowbreak{}THUOCL财经词表,\allowbreak{}论文参考文献32所列清华财经类词汇词库,\allowbreak{}更新于2016-\allowbreak{}12-\allowbreak{}24,\allowbreak{}3830词条,\allowbreak{}THUNLP/\allowbreak{}Heywhale,\allowbreak{} & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & AUTH\_\allowbreak{}OR\_\allowbreak{}BOT\_\allowbreak{}CHALLENGE \\
+WEB-\allowbreak{}0093 & 5. Tether XAUt（黄金计价稳定币，约 7.66 吨实物支持）：Tether 官方产品页面 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0094 & 5. GoldSilver.com（引 LBMA 与 Macrotrends 数据）："The 1971 Nixon Shock"（金价 35→850 美元、+2,\allowbreak{}300\%）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0095 & 2. GoldSilver.com（引用 Macrotrends 百年金价图、LBMA 历史数据、World Gold Council），"Gold Price Cycles:\allowbreak{} What Histor & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0096 & hm.src = " & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0097 & hm.src = " & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0100 & 4. 美国 10 年期国债收益率：美国财政部利率历史 & FETCH\_\allowbreak{}FAILED & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0101。 \\
+WEB-\allowbreak{}0102 & 6. HowMuch.net（2020）：百年金银价格比图，1933 年金银比 132.4 的极值记录。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0104 & 1. 日经指数历史数据（峰值 38,\allowbreak{}957 点、谷底 7,\allowbreak{}607 点）：日经平均指数官方历史数据，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0105 & 彭博社转引，2020 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0106 & 1. International Banker（2021）：《The Dotcom Bubble Burst (2000)》——纳斯达克跌幅与 5 万亿美元市值蒸发数据。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0107 & 1. Palantir 2021Q2 财报与致股东信（购入 5,\allowbreak{}070 万美元金条、对冲黑天鹅表述） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0110 & 7. KSE（基辅经济学院）《Direct losses of Russian assets and companies》2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0111 & 财联社，2025-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0112 & 财联社，2025-\allowbreak{}10 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0113 & 搜狐财经，2026-\allowbreak{}05 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0114 & 3. Federal Reserve History /\allowbreak{} maseconomics 综述——印尼盾贬值约 80\%、韩元约 50\%、IMF 超 1,\allowbreak{}100 亿美元救助、雅加达指数跌 81\%： & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0116 & 4. MetalCharts /\allowbreak{} National Mining Association 历史金价数据：1987年LBMA均价447美元、年涨约21.5\%。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0117 & 4. Mises Institute,\allowbreak{} "Understanding Money Mechanics"（货币供应膨胀70亿倍等数据），2024。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0118 & modelwhale.com 来源资料（WEB-\allowbreak{}0118） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0119 & 中国黄金公告，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0120 & mp.weixin.qq.com 来源资料（WEB-\allowbreak{}0120） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0121 & mw-\allowbreak{}ds-\allowbreak{}ng-\allowbreak{}parsed-\allowbreak{}meta-\allowbreak{}1254542291.cos.ap-\allowbreak{}nanjing.myqcloud.com 来源资料（WEB-\allowbreak{}0121） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0122 & mw-\allowbreak{}workspace-\allowbreak{}parsed-\allowbreak{}1254542291.cos.ap-\allowbreak{}nanjing.myqcloud.com 来源资料（WEB-\allowbreak{}0122） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0123 & 8. New Business Age（TC Correspondent），2014年，"Investors Run Away From Gold In 2013"——GLD全年减持546吨、两日自1 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0124 & New Lines Magazine，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0125 & 世界黄金协会，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0126 & 新浪新闻引中国新闻周刊，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0127 & 4. MetalCharts /\allowbreak{} National Mining Association 历史金价数据：1987年LBMA均价447美元、年涨约21.5\%。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0130 & related Sanctions and Gold-\allowbreak{}related Transactions,\allowbreak{} 2022,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0131 & 5. OnlyGold 历史金价：1986年末390.9美元、1987年末486.5美元。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0133 & 3. 财新网，《"直升机撒钱"：赤字货币化是魔鬼吗》，2016。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0134 & 财新网专栏，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0140 & 缺失论文PDF恢复候选 & FETCH\_\allowbreak{}FAILED & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0115。 \\
+WEB-\allowbreak{}0141 & press.un.org 来源资料（WEB-\allowbreak{}0141） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0142 & res.wx.qq.com 来源资料（WEB-\allowbreak{}0142） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0144 & 2. 俄罗斯 CPI（1998-\allowbreak{}12 同比 84\%）：俄罗斯联邦统计局（Rosstat） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0145 & a href=" & FETCH\_\allowbreak{}FAILED & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0395。 \\
+WEB-\allowbreak{}0147 & silverinstitute.org 来源资料（WEB-\allowbreak{}0147） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0148 & silverinstitute.org 来源资料（WEB-\allowbreak{}0148） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0150 & 4. Small Caps（2020）：《What history teaches us about gold in economic crises》，Homestake 股价 80→495 美元、1 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0151 & static.heywhale.com 来源资料（WEB-\allowbreak{}0151） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0152 & static.heywhale.com 来源资料（WEB-\allowbreak{}0152） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0153 & static.heywhale.com 来源资料（WEB-\allowbreak{}0153） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0154 & static.heywhale.com 来源资料（WEB-\allowbreak{}0154） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0155 & static.heywhale.com 来源资料（WEB-\allowbreak{}0155） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0157 & 1. Tether《Tether Attestation Reports》（储备构成与黄金持仓） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0160 & 核验记录， & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0161 & Smartbi 来源资料（WEB-\allowbreak{}0161） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0163 & 5. US Gold and Coin Research，"Gold vs S\&P 500 by Decade (1970s–2020s)"（2026 年 2 月更新，数据源：National Min & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0164 & 中国经营报，2025-\allowbreak{}12 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0167 & vesting Operating Cash,\allowbreak{} 2014,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0168 & 4. Arabian Gulf Business Insight（AGBI），2023，《Lebanon's new bank rules offer 'lollar' accounts respit & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0169 & 3. 世界黄金协会（WGC），2013年《Gold Demand Trends Q2 2013》——ETF流出为需求下滑主因 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0170 & AInvest，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0171 & 2. 伊朗 CPI 数据（2018–2025 30\%–50\%）：伊朗统计中心（SCI） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0172 & 9. 希腊雅典综合指数历史 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0173 & AzerNews，2013 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0174 & 3. 墨西哥央行（Banxico）历史汇率与利率数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0175 & 2. 2014-\allowbreak{}12"黑色星期二"与央行加息 650 基点：Reuters/\allowbreak{}BBC 2014 年 12 月报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0176 & 8. 2021 年"低利率政策"与里拉 -\allowbreak{}44\%：BBC/\allowbreak{}Reuters 2021 年 12 月报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0177 & 4. 废钞与美元化（2009-\allowbreak{}02）：Reuters/\allowbreak{}BBC 2009 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0178 & 1. 委内瑞拉伦敦黄金（31 吨/\allowbreak{}约 10 亿美元）被冻结：Reuters/\allowbreak{}BBC 2019–2020 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0179 & 3. 2018 年向俄销售黄金与德银抵押被没收：Reuters/\allowbreak{}BBC & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0180 & 6. 伊朗央行金本位/\allowbreak{}黄金担保数字货币（2025）：Reuters/\allowbreak{}BBC Persian 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0181 & 4. 阿根廷央行（BCRA）历史汇率与通胀数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0182 & analisis e investigacion & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0183 & www.bde.es 来源资料（WEB-\allowbreak{}0183） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0184 & BDO，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0185 & 8. BDO《IAS 29 应用指引》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0193 & 黄金. Bank for International Settlements,\allowbreak{} 2013,\allowbreak{} pp. 1–75. url:\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0196 & 4. 墨西哥股市 IPC 指数历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0201 & 5. Britannica,\allowbreak{} "Hyperinflation in the Weimar Republic (1922–23)"。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0202 & 4. Britannica（大英百科全书）："Silver Thursday"（亨特兄弟持仓与 1980 年银价崩盘）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0203 & 2. BullionVault（2009）：《Gold in the Depression》，Homestake EPS、股息数据及里士满联储 John Walter（2005）银行倒闭统计。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0204 & 1. BullionVault（Adrian Ash），2023年，"Gold's Big Price Crash,\allowbreak{} 10 Year On"——两日跌幅、季度-\allowbreak{}25.4\%、TIPS相关性、GLD流出等 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0205 & 2. BullionVault,\allowbreak{} Adrian Ash,\allowbreak{} "How Does Gold Perform When Stock Markets Crash?"（2024）：黑色星期一当日金价 +3.2\% & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0206 & 3. Merval 指数历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0208 & 2. 埃及 CPI（2023-\allowbreak{}09 峰值 38.0\%）：埃及中央公共动员与统计局（CAPMAS） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0209 & 1. 德意志联邦银行（Deutsche Bundesbank）历史统计档案，转引自 Cato Institute：Hanke \& Krus,\allowbreak{} "World Hyperinflations",\allowbreak{} Cato & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0210 & 3. 2022–2024 年三次贬值时间线：Reuters/\allowbreak{}Bloomberg 报道及埃及央行（CBE）公告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0211 & 7. 尼日利亚央行（CBN）外汇改革声明（2023-\allowbreak{}06 统一汇率） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0212 & www.cboe.com 来源资料（WEB-\allowbreak{}0212） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0213 & 4. 俄央行固定价 5,\allowbreak{}000 卢布/\allowbreak{}克购金：俄罗斯央行（CBR）公告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0214 & www.cftc.gov 来源资料（WEB-\allowbreak{}0214） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0215 & Channels TV，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0217 & 正保会计网校，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0218 & 2. 中国黄金集团黄金珠宝股份有限公司官网/\allowbreak{}公告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0220 & 2. 传音 2024-\allowbreak{}10 三季报（2024Q3 净利润同比 -\allowbreak{}44\%，归因埃塞俄比亚币贬值汇兑损失）：公司公告/\allowbreak{}财联社 2024-\allowbreak{}10 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0221 & 财联社，2025-\allowbreak{}04 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0222 & 财联社，2026-\allowbreak{}01 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0223 & 2. 财联社（2024/\allowbreak{}2026）："以史为鉴：70年代的黄金牛市是如何开始、如何结束的"（1970–74、1977–80 黄金年化收益 32.5\%/\allowbreak{}45.2\%）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0224 & 5. WTI 原油负值事件（2020-\allowbreak{}04-\allowbreak{}20）：CME Group 与媒体记录 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0225 & www.cmegroup.com 来源资料（WEB-\allowbreak{}0225） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0226 & 4. CNBC Indonesia，《Rupiah Nelangsa,\allowbreak{} Krisis 1997/\allowbreak{}1998 Terulang?》，2024——印尼盾金价 40,\allowbreak{}000→73,\allowbreak{}125 印尼盾/\allowbreak{}克、通胀 7 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0227 & 7. 新华网/\allowbreak{}新华财经，2023，《黎巴嫩本币兑美元汇率跌破 100000 比 1 大关》——黑市破 10 万、累计贬值超 98\%。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0228 & 文本语料,\allowbreak{}金投网黄金新闻,\allowbreak{}标题与正文共1303篇,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}文章级→日聚合,\allowbreak{}金投网,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0229 & 3. 美国财政部 OFAC 对伊朗制裁与 IFCA（2013）条文：美国国会立法《Iran Freedom and Counter-\allowbreak{}Proliferation Act》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0230 & Cornerstone Research & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0231 & CPDbox，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0232 & 1. Crescat Capital（2024）：《The Countercyclicality of Gold Mining Stocks》，Homestake 与道指 1929–1932 对比数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0233 & 4. 银行不良债权处置（100 万亿日元级）：日本金融厅/\allowbreak{}存款保险机构披露，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0234 & 6. 迪拜黄金贸易枢纽角色：迪拜多种商品交易中心（DMCC）黄金贸易报告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0240 & 4. 土耳其天然气进口数据：EIA《Turkey》国别分析 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0241 & 10. 委内瑞拉石油产量与制裁：EIA & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0242 & change Restrictions. 2026. url:\allowbreak{} & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0243 & IMF WP，2020 & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0244 & 3. IMF，2023，《Lebanon:\allowbreak{} 2023 Article IV Consultation》——黑市汇率 2023 年 3 月中旬达 140,\allowbreak{}000/\allowbreak{}美元。 & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0245 & 2026/\allowbreak{}007,\allowbreak{} 2026,\allowbreak{} & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0246 & International Monetary Fund 来源资料（WEB-\allowbreak{}0246） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0247 & 3. 名义 GDP 停滞数据：日本内阁府国民经济核算，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0248 & EuroFinance，2022 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0250 & EY，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0251 & 方达律所速评 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0252 & www.fdic.gov 来源资料（WEB-\allowbreak{}0252） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0255 & 4. 美联储 2020 年 3 月紧急行动（降息至 0–0.25\% + 无限量 QE）：美联储官网新闻稿 & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0256。 \\
+WEB-\allowbreak{}0267 & 1. Federal Reserve History（美联储官方历史项目，2013）："Nixon Ends Convertibility of U.S. Dollars to Gold and An & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0268 & 1. Federal Reserve History（美联储官方历史网站），《Gold Reserve Act of 1934》， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0269 & 中国金融新闻网，2025-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0270 & 中国金融新闻网，2024-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0271 & 中国黄金协会，2026-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0272 & WGC《黄金作为战略资产（2025 年版）》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0273 & 2. Gainesville Coins，《Gold Price History:\allowbreak{} Why Did Gold Fall In 2008?》，2025年（引LBMA历史定盘价）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0274 & www.gdeltproject.org 来源资料（WEB-\allowbreak{}0274） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0275 & WGC，2018 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0276 & World Gold Council 来源资料（WEB-\allowbreak{}0276） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0277 & 5. 2022-\allowbreak{}03-\allowbreak{}08 金价冲至 2,\allowbreak{}078 美元：LBMA 金价历史数据/\allowbreak{}世界黄金协会 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0278 & 2. 俄罗斯境内黄金储备（约 2,\allowbreak{}300 吨）与"制裁免疫"：世界黄金协会黄金储备数据库 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0279 & 9. 世界黄金协会《Gold as a Strategic Asset》地缘风险研究 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0280 & 4. 2022 年全球央行购金 1,\allowbreak{}136 吨：世界黄金协会《Gold Demand Trends Full Year 2022》 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0281 & World Gold Council 来源资料（WEB-\allowbreak{}0281） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0282 & 2. World Gold Council（世界黄金协会），《The Asian financial crisis – 20 years later》，2017——危机成因、黄金无信用风险属性的分析： & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0283 & 1. 世界黄金协会（WGC），《The gold perspective – 10 years after Lehman Brothers failed》，2019年， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0284 & 10. 世界黄金协会《Gold Outlook》：2022 年黄金组合分散价值研究报告 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0285 & World Gold Council 来源资料（WEB-\allowbreak{}0285） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0286 & WGC条款 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0287 & 1. Goldman Sachs,\allowbreak{} "Global Financial Markets Crash on Black Monday"（2019）：道指单日 -\allowbreak{}22.61\%、508.32点。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0288 & 5. Gold Price Forecast（2024）：《Dot-\allowbreak{}com Bubble and Gold》——纳斯达克 1994—2000 年约 600\% 涨幅及同期黄金走势背景。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0290 & 6. 英国 1999–2000 年出售黄金储备（415 吨）：英国财政部/\allowbreak{}英格兰银行公开记录 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0291 & Z 值模型应用研究，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0292 & 汉坤律所解读 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0293 & www.heywhale.com 来源资料（WEB-\allowbreak{}0293） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0294 & www.heywhale.com 来源资料（WEB-\allowbreak{}0294） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0295 & www.heywhale.com 来源资料（WEB-\allowbreak{}0295） & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 由用户阅读并接受来源条款后人工下载；登记文件哈希和许可范围。 \\
+WEB-\allowbreak{}0296 & 1. 华为 2025 年年度报告（净汇兑损失 12.68 亿元、财务费用构成）：华为投资控股有限公司官网（企业社会责任/\allowbreak{}年度报告栏目） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0302 & Dollars with Major Clearance in Nigeria. June 2,\allowbreak{} 2024. url:\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0304 & Paper AP10,\allowbreak{} 2016,\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0306。 \\
+WEB-\allowbreak{}0305 & 25. url:\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0306。 \\
+WEB-\allowbreak{}0308 & 2026. url:\allowbreak{} & BROKEN\_\allowbreak{}OR\_\allowbreak{}UNREACHABLE & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0306。 \\
+WEB-\allowbreak{}0311 & 5. IMF《Blocked Funds and Currency Convertibility》研究（危机期对冲成本高企） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0312 & 1. IMF《Argentina:\allowbreak{} Selected Issues》与 2001 年救助文件 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0313 & 4. IMF 救助（2022-\allowbreak{}12 30 亿美元 → 2024-\allowbreak{}03 80 亿美元）：IMF《Egypt Article IV Consultation》与新闻稿 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0314 & 1. IMF《Russian Federation:\allowbreak{} Selected Issues》与 1998 年救助文件 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0315 & 6. 2021 年 IMF/\allowbreak{}世行暂停对苏援助：IMF 新闻稿 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0316 & 2023,\allowbreak{} & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0317 & International Monetary Fund 来源资料（WEB-\allowbreak{}0317） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0319 & 2. 阿根廷 CPI（2023-\allowbreak{}12 单月 25.5\%、2024-\allowbreak{}05 同比 289.4\%）：阿根廷国家统计局（INDEC） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0320 & 4. Investopedia，"Silver Thursday:\allowbreak{} What It Means,\allowbreak{} How It Works"， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0321 & 4. 2024–2025 年以色列打击后伊朗金价飙升报道：Iran International、Reuters 2024–2025 年报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0322 & Iran International，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0323 & 4. 美国 20+ 年期长期国债 ETF（TLT）-\allowbreak{}30\% 涨跌：贝莱德 iShares TLT 历史价格 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0324 & 6. 解放日报·上观新闻，2023，《"全球最大危机之一"！"中东小巴黎"，发生了什么？》——2023 年 2 月 1 日官方汇率 1507.5→15000、黑市 64000。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0325 & 金杜律所，2022 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0326 & 6. Kitco News，《Gold revaluation would pay Washington,\allowbreak{} not private holders,\allowbreak{} historian says》（2026，引述美联 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0327 & 2. G7 禁运俄金（2022-\allowbreak{}06）与 LBMA 除名：G7 峰会公报 /\allowbreak{} LBMA 官方声明 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0328 & 2. LBMA《Alchemist》第74期，"After the Gold Crash"——2013全年-\allowbreak{}30\%、集中于二季度、近半跌幅在4月两日 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0329 & London Bullion Market Association 来源资料（WEB-\allowbreak{}0329） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0330 & London Bullion Market Association 来源资料（WEB-\allowbreak{}0330） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0331 & 目标价格,\allowbreak{}LBMA黄金价格,\allowbreak{}LBMA Gold Price，AM/\allowbreak{}PM及币种未说明,\allowbreak{}2022-\allowbreak{}02-\allowbreak{}01至2025-\allowbreak{}02-\allowbreak{}28,\allowbreak{}日频/\allowbreak{}含非交易日,\allowbreak{}LBMA/\allowbreak{}IBA,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0332 & 7. 白银历史价格：LBMA 白银基准价历史数据，< & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0333 & 6. Macrotrends 白银百年价格序列：1987年10—12月白银月度价格。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0334 & www.matteoiacoviello.com 来源资料（WEB-\allowbreak{}0334） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0337 & Mineros 公告，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0338 & 彭博/\allowbreak{}MINING.COM，2019 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0339 & www.modelwhale.com 来源资料（WEB-\allowbreak{}0339） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0340 & www.modelwhale.com 来源资料（WEB-\allowbreak{}0340） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0341 & 3. RTS 指数历史数据（1997 峰值 → 1998 谷底） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0342 & 接投资统计公报. 2025. url:\allowbreak{} & FETCH\_\allowbreak{}FAILED & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0344。 \\
+WEB-\allowbreak{}0343 & 资统计公报，2025， & FETCH\_\allowbreak{}FAILED & 原链接不可用或不适合自动归档；使用已验证替代资产 WEB-\allowbreak{}0344。 \\
+WEB-\allowbreak{}0346 & 2. MTN Group 2024 年报（含尼日利亚分部汇兑损失披露） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0347 & 3. MTN Nigeria 2023/\allowbreak{}2024 财报（汇兑损失 7,\allowbreak{}404 亿 + 9,\allowbreak{}254 亿奈拉）：MTN Group 与 MTN Nigeria 官方公告（NGX 披露） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0353 & 16 National Bureau of Economic Research,\allowbreak{} Business Cycle Dating,\allowbreak{} & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0354 & 全国股转系统公司年报披露，2021–2022 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0355 & 4. 雀巢尼日利亚 2023 年报（股东权益 -\allowbreak{}780 亿奈拉）：雀巢尼日利亚/\allowbreak{}NGX 披露 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0356 & 2. 雀巢集团 2023 年报（尼日利亚分部汇兑损失与资不抵债披露） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0360 & 2. 尼日利亚 CPI（2024-\allowbreak{}06 同比 34.2\%）：尼日利亚国家统计局（NBS） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0361 & OSW/\allowbreak{}KSE，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0362 & PIIE，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0365 & 7. Reuters（经Politico转引），2013年12月31日——标普500全年+29.6\% & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0366 & 2. The American Presidency Project（加州大学圣巴巴拉分校），《White House Statement on Proclamation 2072》（1934年1月3 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0367 & PR Newswire，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0369 & 3. RAND《How Russia is using gold in wartime》（2025） & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0370 & RAND，2025 & PAYWALL\_\allowbreak{}OR\_\allowbreak{}AUTH & HTTP 403 \\
+WEB-\allowbreak{}0371 & 2. 日本不动产研究所《六大城市地价指数》历史数据（商业地价 -\allowbreak{}87\%） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0372 & 1. 雷诺 2022 年报与 AvtoVAZ 出售（1 卢布）公告：雷诺集团官网/\allowbreak{}SEC 20-\allowbreak{}F & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0373 & 5. 2020 年以 9 吨黄金支付伊朗换汽油：Reuters 2020-\allowbreak{}05 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0374 & 6. 西方企业退出俄罗斯损失超 1,\allowbreak{}070 亿美元：Reuters 2024-\allowbreak{}03 统计 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0375 & 5. 阿联酋 ADQ 350 亿美元注资（2024-\allowbreak{}02）：Reuters/\allowbreak{}路透报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0376 & 3. 2024-\allowbreak{}10-\allowbreak{}26 以色列打击与金价 2,\allowbreak{}790 新高：Reuters 2024-\allowbreak{}10 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0377 & 7. 2018-\allowbreak{}08-\allowbreak{}10 里拉单日 -\allowbreak{}14\% 与新兴市场传染：Reuters/\allowbreak{}Bloomberg 2018 年 8 月报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0378 & 2. CEO 卡普公开表述（金库地点、接受黄金付款意向）：Reuters/\allowbreak{}Bloomberg 2021-\allowbreak{}08 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0379 & 1. 俄罗斯外储被冻结约 3,\allowbreak{}000 亿美元：Reuters/\allowbreak{}Reuters 2022-\allowbreak{}02-\allowbreak{}28 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0380 & Reuters，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0381 & 中国证券业协会，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0383 & 7. 上海高级金融学院（转文汇报，2015）：港股及全球市场1987年10月跌幅数据。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0460 & 新浪财经，2025-\allowbreak{}10 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0461 & 4. SlickCharts 据标普官方数据——标普 500 含股息年度总回报（2000：-\allowbreak{}9.10\%；2001：-\allowbreak{}11.89\%；2002：-\allowbreak{}22.10\%）。 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0462 & 3 Smartbi：AIChat， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0463 & 4 Smartbi：V11 最新版本与能力说明， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0464 & 2 Smartbi：数据连接与准备， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0465 & 2. 法兴出售罗斯银行（1 欧元）与累计损失（约 31 亿欧元）：法兴 2022–2023 年报 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0466 & 搜狐财经引 Wind，2025-\allowbreak{}04 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0467 & 搜狐·承兑逾期查询，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0468 & 3. 标普 500 历史指数（1980–2000）：Yahoo Finance/\allowbreak{}S\&P 历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0470 & 2. 希腊统计局（ELSTAT）GDP/\allowbreak{}失业率历史数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0473 & 8. 圣路易斯联储经济评论《The Tequila Effect:\allowbreak{} Mexico's 1994-\allowbreak{}95 Financial Crisis》（危机传染与跨国影响综述） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0474 & 6. 苏伊士运河收入下降（红海危机）：苏伊士运河管理局（SCA）年度数据 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0475 & 英国最高法院 UKSC 2020/\allowbreak{}0195 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0476 & 3. 土耳其央行利率决策（2018 加息、2021 降息、2023–24 再加息）：土耳其央行（CBRT） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0477 & TheCable，2024 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0478 & The National，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0479 & 5. "7 家企业 2024 财年汇兑损失 2.06 万亿奈拉"：THISDAY 2025-\allowbreak{}03 报道 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0480 & THISDAY，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0481 & 2. 土耳其 CPI（2018-\allowbreak{}10 峰值 25.2\%、2022-\allowbreak{}10 峰值 85.5\%）：土耳其统计局（TURKSTAT） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0482 & 4. 苏丹黄金产量（非洲第三、约 50–70 吨/\allowbreak{}年）：美国地质调查局（USGS）矿物年鉴 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0483 & 5. U.S. Money Reserve，《How Does Silver Perform in a Recession?》，2024年（白银2008年2月末19.24美元→10月末9.09美元）， & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0484 & 路透社 Factbox，2023 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0485 & www.whitehouse.gov 来源资料（WEB-\allowbreak{}0485） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0486 & www.whitehouse.gov 来源资料（WEB-\allowbreak{}0486） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0487 & www.whitehouse.gov 来源资料（WEB-\allowbreak{}0487） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0488 & www.who.int 来源资料（WEB-\allowbreak{}0488） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0489 & www.who.int 来源资料（WEB-\allowbreak{}0489） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0490 & www.who.int 来源资料（WEB-\allowbreak{}0490） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0491 & Wisconsin Project，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0499 & 盈科律所贷后风控要点 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0500 & 中国清算网典型案例，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0501 & Research Affiliates，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0502 & 北京日报，2025-\allowbreak{}02 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0503 & 雪球研究，2025 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0504 & 金融监管总局数据，2026 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0505 & 监管指引整理 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0506 & 证券时报·数据宝，2021 & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+WEB-\allowbreak{}0507 & xueshu.baidu.com 来源资料（WEB-\allowbreak{}0507） & METADATA\_\allowbreak{}ONLY\_\allowbreak{}LICENSE & 保留元数据和原链接，不抓取或再分发正文。 \\
+REF-\allowbreak{}0001 & 40国候选样本数据接口预审记录 & MANUAL\_\allowbreak{}ACTION\_\allowbreak{}REQUIRED & 按题名、作者和年份检索权威原文；取得后登记URL、许可、文件哈希和证据等级。 \\
+\bottomrule\end{longtable}\normalsize
+
+\chapter{历史不一致与已采取措施}
+\begin{itemize}[leftmargin=2.5em]
+\item 旧论文复现清单声称Ji等2026年论文PDF存在，但磁盘与历史ZIP中缺失；V1.0从MDPI官方开放CDN恢复PDF，旧清单保持原样并在\texttt{legacy\_inconsistencies.csv}记录。
+\item 案例库README状态陈旧；本归档以实际45份案例和\texttt{case\_index.csv}为准，不修改旧README。
+\item 两份《方案整合与实施路径》PDF页数相同但哈希不同；两版均按历史资产登记，不擅自删除或覆盖。
+\end{itemize}
+
+\chapter{数据与复现边界}
+现有黄金预测工作簿、EPU、实际利率、广义美元和商品价格中包含代理序列。代理资产用于复现实验或方法学习，不得写成论文作者原始数据。正式国别与全球周期数据仍须在后续项目执行中按V4.0数据合同采集、清洗和冻结。
+
+\chapter{AI交接合同}
+下一位AI必须先读取机器清单，再读取PDF；必须区分事实、推断、代理、模拟、计划和缺失。不得从地区收入推断企业具体国家敞口，不得把黄金描述为稳定年化收益、制裁免疫或美元替代品，也不得把本归档误述为已完成的Smartbi作品。
+
+离线交接测试固定为25问，覆盖权威计划定位、案例证据、代理边界、许可路由、缺失来源、哈希验证和下一步入口。逐题结果见\texttt{AI\_HANDOFF\_TESTS.json}与\texttt{AI\_HANDOFF\_TEST\_RESULTS.md}。
+
+\nocite{*}
+\printbibliography[heading=bibintoc,title={外部来源目录}]
+
+\appendix
+\chapter{资产字段字典}
+\begin{longtable}{L{4cm}L{11.6cm}}\toprule
+字段 & 含义\\\midrule\endhead
+asset\_\allowbreak{}id & 稳定资产编号；LCL为本地资产，WEB为URL或DOI来源，REF为无URL题录。 \\
+asset\_\allowbreak{}class & local、web或bibliographic\_reference。 \\
+title & 文件名、网页题名或文献题录。 \\
+publisher & 发布机构；无法自动识别时明确标为待核验。 \\
+publication\_\allowbreak{}date & 原资料发布日期；未知时留空，不使用抓取日期代替。 \\
+category & 归档模块目录。 \\
+evidence\_\allowbreak{}grade & A政府/监管/原始披露，B权威数据库/学术资料，C可信媒体，D检索线索，内部为项目资产。 \\
+purpose & 该资料在项目中解决的问题。 \\
+supported\_\allowbreak{}claim & 使用或引用该来源的历史文件与主张入口。 \\
+limitations & 代理、口径、许可、可比性和证据强度边界。 \\
+original\_\allowbreak{}url & 历史文件中出现的原始URL。 \\
+canonical\_\allowbreak{}url & 去除跟踪参数并规范化后的URL；无URL题录为空。 \\
+final\_\allowbreak{}url & HTTP重定向后的最终URL。 \\
+cited\_\allowbreak{}in & 引用该来源的项目文件集合。 \\
+citation\_\allowbreak{}locations & 文件、行号、PDF文本行或XLSX内部条目位置。 \\
+original\_\allowbreak{}project\_\allowbreak{}path & 旧项目中的相对路径。 \\
+local\_\allowbreak{}path & 归档内规范原件路径；为空表示没有可封装原件。 \\
+mime\_\allowbreak{}type & 响应或本地文件MIME类型。 \\
+extension & 规范文件扩展名。 \\
+size\_\allowbreak{}bytes & 原件字节数。 \\
+sha256 & 文件内容SHA-256，用于去重和复制验收。 \\
+data\_\allowbreak{}period\_\allowbreak{}start & 数据覆盖起点；尚未结构化识别时为空。 \\
+data\_\allowbreak{}period\_\allowbreak{}end & 数据覆盖终点；尚未结构化识别时为空。 \\
+frequency & 月度、年度、事件或其他原始频率。 \\
+geography & 适用国家、地区或全球范围。 \\
+key\_\allowbreak{}fields & 数据集关键字段；待后续正式数据工程补充时留空。 \\
+unit & 原始计量单位。 \\
+raw\_\allowbreak{}proxy\_\allowbreak{}simulated & 原始、派生、代理、模拟或题录元数据标签。 \\
+download\_\allowbreak{}status & 固定枚举中的唯一终态。 \\
+http\_\allowbreak{}status & 最后一次HTTP响应状态。 \\
+request\_\allowbreak{}method & GET、NOT\_REQUESTED或LOCAL\_FILE。 \\
+request\_\allowbreak{}started\_\allowbreak{}at & 请求开始时间（UTC ISO-8601）。 \\
+request\_\allowbreak{}headers\_\allowbreak{}profile & 只记录公开无认证请求配置，不保存认证头。 \\
+response\_\allowbreak{}headers\_\allowbreak{}safe & 仅保存日期、类型、长度、修改时间、ETag、文件名和缓存等非敏感响应头。 \\
+access\_\allowbreak{}date & 归档访问日期。 \\
+license\_\allowbreak{}name & 已识别许可或许可处理策略。 \\
+license\_\allowbreak{}url & 许可条款入口。 \\
+redistribution\_\allowbreak{}scope & shared、private\_only或metadata\_only。 \\
+duplicate\_\allowbreak{}of\_\allowbreak{}asset\_\allowbreak{}id & 内容哈希完全相同时指向规范资产。 \\
+replacement\_\allowbreak{}source & 失效或受限来源对应的已验证替代资产ID。 \\
+missing\_\allowbreak{}reason & 未取得原件的明确原因。 \\
+next\_\allowbreak{}action & 下一位成员可执行的补救或使用动作。 \\
+\bottomrule\end{longtable}
+
+\clearpage\thispagestyle{empty}\centering\vspace*{4cm}
+{\LARGE\bfseries 调研资料归档与AI交接说明书\par}\vspace{1cm}
+{\Large 版本号：V1.0\par}\vspace{0.5cm}
+编制日期：2026年8月16日\par
+内容清单SHA-256：\par\nolinkurl{5c4fdd189e32160f4e06494f3390467196e23f99f1b5603fbdc2248befc658ac}\par
+\vfill
+本说明书为独立归档文档，不覆盖V1.1、V2.0、V3.1和V4.0历史文件。最终ZIP哈希见\texttt{delivery/package\_hashes.txt}。
+\end{document}

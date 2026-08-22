@@ -1,0 +1,10 @@
+﻿column_1,column_2,column_3,column_4,column_5,column_6,column_7,column_8,column_9,column_10,column_11,column_12,column_13,column_14,column_15,column_16,column_17,column_18,column_19,column_20,column_21,column_22
+,,2005,,2004,,2003,,,,,,,,,,,,,,,
+,,Number ofShares,,,WeightedAverageExercisePrice,,Number ofShares,,,WeightedAverageExercisePrice,,Number ofShares,,,WeightedAverageExercisePrice,,,,,,
+Outstanding at beginning of year,,,"9,209,914",,,$,34.11,,,"10,629,449",,,$,30.02,,,"13,108,428",,,$,27.43
+Granted,,,"2,002,638",,,$,41.67,,,"2,030,722",,,$,43.16,,,"2,014,600",,,$,39.92
+Exercised,,,"(1,517,601",),,$,44.40,,,"(3,053,688",),,$,24.80,,,"(4,025,689",),,$,24.25
+Forfeited and expired,,,"(261,282",),,$,49.40,,,"(396,569",),,$,47.77,,,"(467,890",),,$,41.38
+Outstanding at end of year,,,"9,433,669",,,$,35.90,,,"9,209,914",,,$,34.11,,,"10,629,449",,,$,30.02
+Options exercisable at year end,,,"5,920,180",,,$,32.58,,,"5,577,335",,,$,30.51,,,"7,245,460",,,$,28.05
+Weighted-average fair value of options granted during the year,,$,14.39,,,,,,$,14.05,,,,,,$,17.66,,,,

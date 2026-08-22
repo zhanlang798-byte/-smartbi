@@ -1,0 +1,39 @@
+{
+  "source_id": "WEB-0392",
+  "title": "首页-上海黄金交易所",
+  "publisher": "上海黄金交易所",
+  "publication_date": "",
+  "source_url": "https://www.sge.com.cn/",
+  "extracted_at": "2026-08-16T09:22:06.091Z",
+  "content_state": "STRUCTURED_DATA",
+  "paragraph_count": 3,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "地址：上海市黄浦区中山南路699号 电话：021-33189588 传真：021-33662058"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Copyright 2016 上海黄金交易所 All Right Reserved"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "本网站支持IPV6沪公网安备 31010102002879号"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.sge.com.cn/hyzq/xzzq",
+      "extension": "",
+      "anchor_text": "下载专区",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sge.com.cn/tzzjy/shzrbg",
+      "extension": "",
+      "anchor_text": "社会责任报告",
+      "locator": "anchor"
+    }
+  ]
+}

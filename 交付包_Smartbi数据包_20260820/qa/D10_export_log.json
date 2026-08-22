@@ -1,0 +1,14 @@
+{
+  "run_id": "20260819_v42",
+  "ts": "2026-08-20T06:19:51.761798+00:00",
+  "data_files": 18,
+  "control_files": 3,
+  "total_xlsx": 21,
+  "total_rows": 313593,
+  "license_exclusions": {
+    "global_cycle_month.xlsx": [
+      "hy_oas_bps"
+    ]
+  },
+  "pk_issues": []
+}

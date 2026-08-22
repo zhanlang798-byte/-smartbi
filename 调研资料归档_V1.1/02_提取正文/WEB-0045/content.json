@@ -1,0 +1,38 @@
+{
+  "source_id": "WEB-0045",
+  "title": "DataBank | The World Bank",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://databank.worldbank.org/",
+  "extracted_at": "2026-08-16T09:21:17.225Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 6,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Help us improve this section of the site. Can we get your feedback?"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Quarterly External Debt Statistics GDDS was updated on August 12, 2026"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Quarterly Public Sector Debt was updated on August 11, 2026"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Quarterly External Debt Statistics SDDS was updated on August 7, 2026"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "World Development Indicators was updated on July 13, 2026"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Agriculture & Rural DevelopmentAid EffectivenessClimate ChangeEconomic Policy & External DebtEducationEnergy & MiningEnvironmentFinancial SectorGenderHealthInfrastructureLabor & Social ProtectionPovertyPrivate SectorPublic SectorScience & TechnologySocial DevelopmentUrban DevelopmentApply filter"
+    }
+  ],
+  "outgoing_data_links": []
+}

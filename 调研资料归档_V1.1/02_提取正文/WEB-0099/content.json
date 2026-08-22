@@ -1,0 +1,41 @@
+{
+  "source_id": "WEB-0099",
+  "title": "Legislative Basis",
+  "publisher": "U.S. Department of the Treasury",
+  "publication_date": "",
+  "source_url": "https://home.treasury.gov/policy-issues/international/exchange-stabilization-fund/legislative-basis",
+  "extracted_at": "2026-08-16T09:21:18.578Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 5,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Congress in the Gold Reserve Act of 1934 appropriated to the ESF $2 billion out of the increment resulting from a reduction in the weight of the gold dollar. Section 7 of the Bretton Woods Agreements Act of 1945 made the ESF's operations permanent. This Act also directed the Secretary to pay $1.8 billion from the ESF to the IMF in partial payment of the initial U.S. quota subscription in the IMF, thereby reducing the ESF's appropriated capital to the level of $200 million. An amendment to the Bretton Woods Agreements Act (passed in 1962) provided that any currencies or gold purchased by the United States from the IMF may be transferred from the Treasury General Account to the ESF and administered as part of the ESF."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "The ESF statute requires the Secretary to \"report each year to the President and the Congress on the operation of the fund [the ESF].\" As part of the annual report by the Secretary to the President and the Congress on the operations of the ESF, Treasury includes an audit report of the ESF. The audit is performed by Treasury's Office of the Inspector General."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "The Special Drawing Rights Act of 1968 likewise provided that any SDRs allocated by the IMF or otherwise acquired by the United States are resources of the ESF. In accordance with the Act, SDRs can be \"monetized\" (i.e., converted into dollars) through the issuance of Special Drawing Rights Certificates (SDRCs) by the Secretary to the Federal Reserve System in an amount not to exceed the dollar value of the ESF's SDR holdings. The dollar proceeds of such monetizations are assets of the ESF, and the SDRCs are a counterpart liability of the ESF."
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "In 1977, the Gold Reserve Act was amended to state that no loan or credit to a foreign government or entity can be extended by the ESF for more than six months in any twelve-month period, unless the President provides a written determination to the Congress that \"unique or emergency circumstances\" necessitate a term greater than six months."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Pursuant to this legislation and the underlying Congressional intent, Treasury has developed since the mid-1970s policy criteria to govern ESF credits, such as a requiring an assured source of repayment. Also, Treasury has often linked the availability of ESF financing to a borrower's use of the credit facilities of the IMF, both to support the IMF's role and to strengthen assurances that there will be timely repayment of ESF financing."
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://home.treasury.gov/system/files/136/Fact-Sheet-Department-of-Education-and-Department-of-the-Treasury.pdf",
+      "extension": ".pdf",
+      "anchor_text": "Student Loans",
+      "locator": "anchor"
+    }
+  ]
+}

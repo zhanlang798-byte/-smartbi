@@ -1,0 +1,10 @@
+﻿Market,Market_Scenario,RMSE,MAE,R2
+WGC,Normal Stability,13.520,10.480,0.999
+High-Volatility Rally,19.240,15.120,0.997,
+High-Volatility Drop,23.460,18.350,0.995,
+LBMA,Normal Stability,29.830,22.680,0.995
+High-Volatility Rally,37.240,29.150,0.992,
+High-Volatility Drop,41.810,33.050,0.990,
+SGE,Normal Stability,10.760,8.390,0.999
+High-Volatility Rally,16.310,12.790,0.998,
+High-Volatility Drop,19.390,15.210,0.996,

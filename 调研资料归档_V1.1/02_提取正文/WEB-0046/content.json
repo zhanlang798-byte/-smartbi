@@ -1,0 +1,18 @@
+{
+  "source_id": "WEB-0046",
+  "title": "World Bank Data Catalog",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://datacatalog.worldbank.org/",
+  "extracted_at": "2026-08-16T09:21:17.289Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Search & Share Development Data7,894 Datasets AvailableGetting StartedThe Data Catalog is designed to make World Bank's development data easy to find, download, use, and share. It includes data from the World Bank's microdata, finances and energy data platforms, as well as datasets from the open data catalog…Read MoreFeaturedContributing CatalogsRecently Updated"
+    }
+  ],
+  "outgoing_data_links": []
+}

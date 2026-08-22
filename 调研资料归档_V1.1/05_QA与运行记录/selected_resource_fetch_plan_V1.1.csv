@@ -1,0 +1,37 @@
+﻿parent_asset_id,candidate_type,url,extension_hint,anchor_text,source_locator,fetch_allowed,fetch_decision_reason,redistribution_scope,selection_score
+WEB-0101,LINKED_RESOURCE,https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/all?type=daily_treasury_real_yield_curve&page&_format=csv,,Download CSV,anchor,1,PUBLIC_GET_NO_AUTH,shared,185
+WEB-0351,LINKED_RESOURCE,https://www.nber.org/sites/default/files/2023-03/BCDC_spreadsheet_for_website.xlsx,.xlsx,Downloadable Excel File of Business Cycle Expansions and Contractions,anchor,1,PUBLIC_GET_NO_AUTH,private_only,175
+WEB-0364,LINKED_RESOURCE,https://www.policyuncertainty.com/media/China_Mainland_Paper_EPU.xlsx,.xlsx,Download Data,anchor,1,PUBLIC_GET_NO_AUTH,private_only,175
+WEB-0042,LINKED_RESOURCE,https://api.worldbank.org/v2/en/indicator/FP.CPI.TOTL.ZG?downloadformat=csv,.zg,CSV,anchor,1,PUBLIC_GET_NO_AUTH,shared,165
+WEB-0043,LINKED_RESOURCE,https://api.worldbank.org/v2/en/indicator/PA.NUS.FCRF?downloadformat=csv,.fcrf,CSV,anchor,1,PUBLIC_GET_NO_AUTH,shared,165
+WEB-0040,LINKED_RESOURCE,https://data.imf.org/-/media/iData/External-Storage/Documents/2F78EE59F79143A7921E5E203D3AAA80/en/WEOApr2026all.xlsx,.xlsx,"DOCUMENTApril 2026 WEO Entire Dataset in ExcelThis data file includes the data published in the World Economic Outlook Database in spreadsheet format. The data are presented in three datasheets (Countries, Country Groups, and Commodity Prices).",anchor,1,PUBLIC_GET_NO_AUTH,private_only,155
+WEB-0040,LINKED_RESOURCE,https://data.imf.org/-/media/iData/External-Storage/Documents/977574FA66914EAD900D3FEC55C7316A/en/WEOhistorical.xlsx,.xlsx,"DOCUMENTWEO Historical Forecasts Database A comprehensive archive of the IMF’s World Economic Outlook historical forecasts, providing past projections for key macroeconomic indicators across countries and regions.",anchor,1,PUBLIC_GET_NO_AUTH,private_only,155
+WEB-0048,LINKED_RESOURCE,https://datacatalogfiles.worldbank.org/ddh-published/0037798/DR0092042/GemDataEXTR.zip,.zip,Excel file,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0497,LINKED_RESOURCE,https://openknowledge.worldbank.org/bitstream/handle/10986/25823/Global-Economic-Prospects-January-2017-Charts.zip,.zip,Jan. 2017,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0497,LINKED_RESOURCE,https://openknowledge.worldbank.org/bitstream/handle/10986/28932/Global-Economic-Prospects-Jan-2018-Charts.zip,.zip,Jan. 2018,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0497,LINKED_RESOURCE,https://openknowledge.worldbank.org/bitstream/handle/10986/29801/211257Charts.zip,.zip,June 2018,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0498,LINKED_RESOURCE,https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx,.xlsx,Annual prices,table-link,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0498,LINKED_RESOURCE,https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx,.xlsx,Monthly prices,table-link,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0197,LINKED_RESOURCE,https://www.boj.or.jp/en/rss/whatsnew.xml,.xml,RSS,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0197,LINKED_RESOURCE,https://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei260810.xlsx,.xlsx,Japanese Government Bonds Held by the Bank of Japan[XLSX 29KB],anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0197,LINKED_RESOURCE,https://www.boj.or.jp/en/statistics/market/short/call/call.xlsx,.xlsx,Amounts Outstanding in the Call Money Market (July)[XLSX 33KB],anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0200,LINKED_RESOURCE,https://www.boj.or.jp/en/statistics/sj/sjds.xlsx,.xlsx,[XLSX 29KB],table-link,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0200,LINKED_RESOURCE,https://www.boj.or.jp/en/statistics/sj/sjfs.xlsx,.xlsx,[XLSX 23KB],table-link,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0200,LINKED_RESOURCE,https://www.boj.or.jp/en/statistics/sj/sjfy.xlsx,.xlsx,[XLSX 217KB],table-link,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0253,LINKED_RESOURCE,https://www.federalreserve.gov/feeds/feds_notes.xml,.xml,RSS,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0264,LINKED_RESOURCE,https://www.federalreserve.gov/releases/g17/data/FRB_g17_xml.zip,.zip,XML,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0266,LINKED_RESOURCE,https://www.federalreserve.gov/releases/h10/data/FRB_h10_xml.zip,.zip,XML,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0471,LINKED_RESOURCE,https://www.stats.gov.cn/sj/zxfb/202501/P020250127324149881531.xlsx,.xlsx,相关数据表,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0472,LINKED_RESOURCE,https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202412/P020241227323532210431.xlsx,.xlsx,相关数据表,anchor,1,PUBLIC_GET_NO_AUTH,shared,155
+WEB-0050,LINKED_RESOURCE,https://addons.mozilla.org/en-US/firefox/addon/10869/,,JSON View,anchor,1,PUBLIC_GET_NO_AUTH,shared,70
+WEB-0042,LINKED_RESOURCE,https://api.worldbank.org/v2/en/indicator/FP.CPI.TOTL.ZG?downloadformat=excel,.zg,EXCEL,anchor,1,PUBLIC_GET_NO_AUTH,shared,70
+WEB-0042,LINKED_RESOURCE,https://api.worldbank.org/v2/en/indicator/FP.CPI.TOTL.ZG?downloadformat=xml,.zg,XML,anchor,1,PUBLIC_GET_NO_AUTH,shared,70
+WEB-0043,LINKED_RESOURCE,https://api.worldbank.org/v2/en/indicator/PA.NUS.FCRF?downloadformat=excel,.fcrf,EXCEL,anchor,1,PUBLIC_GET_NO_AUTH,shared,70
+WEB-0043,LINKED_RESOURCE,https://api.worldbank.org/v2/en/indicator/PA.NUS.FCRF?downloadformat=xml,.fcrf,XML,anchor,1,PUBLIC_GET_NO_AUTH,shared,70
+WEB-0040,LINKED_RESOURCE,https://data.imf.org/en/Resource-Pages/Download-Excel-Add-in,,Excel Add-in,anchor,1,PUBLIC_GET_NO_AUTH,private_only,70
+WEB-0351,LINKED_RESOURCE,https://data.nber.org/cycles/,,JSON file format,anchor,1,PUBLIC_GET_NO_AUTH,private_only,70
+WEB-0101,LINKED_RESOURCE,https://home.treasury.gov/developer-notice-xml-changes,,Developer Notice on Changes to the XML Feeds,anchor,1,PUBLIC_GET_NO_AUTH,shared,70
+WEB-0101,LINKED_RESOURCE,https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics/interest-rate-xml-files,,Treasury Daily Interest Rate XML Feed,anchor,1,PUBLIC_GET_NO_AUTH,shared,70
+WEB-0264,LINKED_RESOURCE,https://www.federalreserve.gov/releases/g17/19971215/g17.txt,.txt,ASCII,table-link,1,PUBLIC_GET_NO_AUTH,shared,45
+WEB-0264,LINKED_RESOURCE,https://www.federalreserve.gov/releases/g17/19980116/g17.txt,.txt,ASCII,table-link,1,PUBLIC_GET_NO_AUTH,shared,45
+WEB-0388,LINKED_RESOURCE,https://www.sec.gov/Archives/edgar/data/1668717/000119312524052002/0001193125-24-052002.txt,.txt,0001193125-24-052002.txt,table-link,1,PUBLIC_GET_NO_AUTH,shared,45

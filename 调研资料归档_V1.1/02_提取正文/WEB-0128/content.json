@@ -1,0 +1,18 @@
+{
+  "source_id": "WEB-0128",
+  "title": "Home",
+  "publisher": "U.S. Department of the Treasury",
+  "publication_date": "",
+  "source_url": "https://ofac.treasury.gov/",
+  "extracted_at": "2026-08-16T09:21:20.463Z",
+  "content_state": "NARRATIVE_CONTENT",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Sanctions Lists Lists of individuals and companies owned or controlled by, or acting for or on behalf of, targeted countries.View Lists Sanctions List SearchFrequently Asked QuestionsGuidance in the form of questions and answers that highlight key issues and topics relating to economic sanctions.Browse FAQsCompliance HotlineContact OFAC's Compliance Hotline for assistance complying with OFAC sanctions and navigating OFAC's resources.Contact ComplianCE HOTLINEApply for a Specific LicenseA license is an authorization from OFAC to engage in a transaction that otherwise would be prohibited (e.g. release of blocked funds).Contact Licensing"
+    }
+  ],
+  "outgoing_data_links": []
+}

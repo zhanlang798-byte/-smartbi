@@ -1,0 +1,24 @@
+{
+  "run_id": "20260817_v42",
+  "step": "D2-seed",
+  "built_at": "2026-08-17T15:46:31",
+  "note": "本轮无新增下载;新增下载仅在正式字段仍缺来源时按 G1 执行",
+  "outputs": [
+    {
+      "path": "data\\staging\\archive_source_crosswalk.parquet",
+      "sha256": "b1f43a1cb42027626e3eef894828c410e5f3df31c6ae41fd86b8836d6b4512e9"
+    },
+    {
+      "path": "data\\curated\\source_registry.xlsx",
+      "sha256": "e7e335ec683dc8d2b1e25dbc5947da735d44fea8f9a2d30438fe4eecbe5b7b90"
+    },
+    {
+      "path": "data\\qa\\archive_reuse_audit.xlsx",
+      "sha256": "2500add552ab0400477e41ac38b7cf2f54be6f0878cd50c4cf68e028ac57a181"
+    },
+    {
+      "path": "data\\qa\\download_log_20260817_v42.xlsx",
+      "sha256": "0a217489db69ed9f7d8fb0152295515b260846ad69481b1d4ef8feb3c6ba1e7b"
+    }
+  ]
+}

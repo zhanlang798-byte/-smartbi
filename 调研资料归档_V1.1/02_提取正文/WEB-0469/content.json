@@ -1,0 +1,55 @@
+{
+  "source_id": "WEB-0469",
+  "title": "首页 | 上海证券交易所",
+  "publisher": "www.sse.com.cn",
+  "publication_date": "",
+  "source_url": "https://www.sse.com.cn/",
+  "extracted_at": "2026-08-16T09:22:16.519Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 1,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "——上交所成功举办第六届“对话国际投资者：ESG赋能上市公司”活动"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://www.sse.com.cn/home/app/update/",
+      "extension": "",
+      "anchor_text": "APP下载",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sse.com.cn/home/component/news/c/c_20260814_10828948.shtml",
+      "extension": ".shtml",
+      "anchor_text": "中国证监会发布上市公司2025年年度财务报告会计监管报告",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sse.com.cn/aboutus/mediacenter/conference/c/10828976/files/feaaeec72cb749c294b76dff72043383.pdf",
+      "extension": ".pdf",
+      "anchor_text": "第五百一十四期新闻发布会",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sse.com.cn/aboutus/mediacenter/conference/c/10828308/files/2c803b09152c48bdbad6b3db41f71746.pdf",
+      "extension": ".pdf",
+      "anchor_text": "第五百一十三期新闻发布会",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sse.com.cn/aboutus/mediacenter/conference/c/10827492/files/ce02bd6f239042729ffeab6202253a65.pdf",
+      "extension": ".pdf",
+      "anchor_text": "第五百一十二期新闻发布会",
+      "locator": "anchor"
+    },
+    {
+      "url": "https://www.sse.com.cn/aboutus/mediacenter/conference/c/10826679/files/b69f212457e44d76a02d8efc07fdf30b.pdf",
+      "extension": ".pdf",
+      "anchor_text": "第五百一十一期新闻发布会",
+      "locator": "anchor"
+    }
+  ]
+}

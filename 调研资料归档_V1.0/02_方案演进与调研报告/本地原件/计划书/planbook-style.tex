@@ -1,0 +1,130 @@
+% 两册计划书共享版式。由两本主文件在 documentclass 之后载入。
+\usepackage[a4paper,top=2.6cm,bottom=2.5cm,left=2.65cm,right=2.45cm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,tabularx,array,multirow,makecell}
+\usepackage{lscape}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[backend=biber,style=numeric-comp,maxbibnames=99,sorting=nyt]{biblatex}
+\addbibresource{references.bib}
+\usepackage{hyperref}
+
+\definecolor{DeepNavy}{HTML}{17365D}
+\definecolor{ActionBlue}{HTML}{276EA3}
+\definecolor{GoldAccent}{HTML}{B8872D}
+\definecolor{WarmGold}{HTML}{F4E7C6}
+\definecolor{PaleBlue}{HTML}{EAF2F8}
+\definecolor{PaleGray}{HTML}{F4F6F8}
+\definecolor{DarkGray}{HTML}{374151}
+\definecolor{RiskRed}{HTML}{9E3B3B}
+\definecolor{SafeGreen}{HTML}{2F6B4F}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=DeepNavy,
+  citecolor=ActionBlue,
+  urlcolor=ActionBlue,
+  pdftitle={面向中国出海企业的国别风险与应急储备智能决策平台},
+  pdfauthor={项目团队}
+}
+
+\ctexset{
+  chapter={
+    format=\huge\bfseries\color{DeepNavy},
+    name={第,章},
+    number=\chinese{chapter},
+    beforeskip=8pt,
+    afterskip=24pt
+  },
+  section={format=\Large\bfseries\color{DeepNavy}},
+  subsection={format=\large\bfseries\color{ActionBlue}}
+}
+
+\linespread{1.22}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.2em}
+\setlist[itemize]{leftmargin=2em,itemsep=0.35em,topsep=0.45em}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=0.35em,topsep=0.45em}
+\renewcommand{\arraystretch}{1.28}
+\captionsetup{font=small,labelfont=bf,labelsep=quad}
+\sloppy
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{DarkGray}\BookShortTitle}
+\fancyhead[R]{\small\color{DarkGray}XH-202612 · 2026-08}
+\fancyfoot[C]{\small\color{DarkGray}\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\small\color{DarkGray}\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\newcommand{\RiskTag}{\textcolor{RiskRed}{\textbf{风险}}}
+\newcommand{\GateTag}{\textcolor{GoldAccent}{\textbf{门槛}}}
+\newcommand{\DoneTag}{\textcolor{SafeGreen}{\textbf{已确认}}}
+\newcommand{\PendingTag}{\textcolor{ActionBlue}{\textbf{待验证}}}
+\newcommand{\SimTag}{\textcolor{GoldAccent}{\textbf{模拟}}}
+\newcommand{\Field}[1]{\nolinkurl{#1}}
+
+\newenvironment{decisionbox}[1][决策结论]
+{\begin{center}\begin{minipage}{0.93\textwidth}\color{DeepNavy}\hrule\vspace{0.7em}\textbf{#1}\par\vspace{0.4em}\color{black}}
+{\vspace{0.7em}\color{DeepNavy}\hrule\end{minipage}\end{center}}
+
+\newenvironment{cautionbox}[1][重要边界]
+{\begin{center}\begin{minipage}{0.93\textwidth}\colorbox{WarmGold}{\parbox{0.96\linewidth}{\textbf{#1}}}\par\vspace{0.45em}}
+{\end{minipage}\end{center}}
+
+\newcommand{\PlanTitlePage}[4]{%
+\begin{titlepage}
+  \pagecolor{PaleGray}
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[DeepNavy] (current page.north west) rectangle ([yshift=-4.0cm]current page.north east);
+    \fill[GoldAccent] ([yshift=-4.0cm]current page.north west) rectangle ([yshift=-4.18cm]current page.north east);
+    \draw[DeepNavy,line width=1.2pt] ([xshift=2.4cm,yshift=2.4cm]current page.south west) -- ([xshift=-2.4cm,yshift=2.4cm]current page.south east);
+  \end{tikzpicture}
+  \vspace*{1.0cm}
+  {\color{white}\Large XH-202612 · Smartbi AI 驱动的数据创新平台研究\par}
+  \vspace{3.7cm}
+  {\Huge\bfseries\color{DeepNavy} #1\par}
+  \vspace{0.8cm}
+  {\LARGE\color{ActionBlue} #2\par}
+  \vspace{1.5cm}
+  \begin{decisionbox}[文件定位]
+  #3
+  \end{decisionbox}
+  \vfill
+  \begin{tabular}{@{}ll@{}}
+    项目名称：& 面向中国出海企业的国别风险与应急储备智能决策平台\\
+    文档版本：& V1.1（扩展样本评阅稿）\\
+    编制日期：& 2026 年 8 月 15 日\\
+    文档状态：& 研究与计划阶段，不代表投资、法律或会计意见\\
+    适用对象：& #4
+  \end{tabular}
+  \vspace{1.0cm}
+  \nopagecolor
+\end{titlepage}}
+
+\newcommand{\EvidenceLegend}{%
+\begin{table}[H]
+\centering
+\caption{事实状态与证据等级标记}
+\begin{tabularx}{\textwidth}{p{2.2cm}X p{2.1cm}X}
+\toprule
+\textbf{事实状态} & \textbf{含义} & \textbf{证据等级} & \textbf{使用规则}\\
+\midrule
+已确认 & 已由原始资料或权威来源定位 & A & 政府、央行、监管、法规、上市公司财报、原始数据库\\
+待复核 & 内部案例库已有线索，尚缺原文页码或口径核对 & B & IMF、世界银行、交易所、学术论文、权威行业机构\\
+推断 & 从已确认事实得到的研究判断 & C & Reuters 等可信媒体或行业研究，只作辅助\\
+模拟 & 后续按公开假设生成，不冒充企业真实数据 & D & 转述、估算、轶事，仅作检索线索\\
+\bottomrule
+\end{tabularx}
+\end{table}}

@@ -1,0 +1,25 @@
+{
+  "source_id": "WEB-0048",
+  "title": "Global Economic Monitor - World Bank Data Catalog",
+  "publisher": "World Bank",
+  "publication_date": "",
+  "source_url": "https://datacatalog.worldbank.org/search/dataset/0037798/global-economic-monitor",
+  "extracted_at": "2026-08-16T09:21:17.379Z",
+  "content_state": "DOWNLOAD_LANDING",
+  "paragraph_count": 1,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "The database provides daily updates of high-frequency indicators on global economic developments, encompassing both advanced economies and emerging market and developing economies. Data are provided at monthly and/or quarterly frequencies, as well as annual series. It includes data on consumer prices, exchange rates, foreign reserves, GDP, industrial production, merchandise trade, retail sales, stock markets, terms of trade, and unemployment.Excel filezipLast Updated: Jul 21, 2026Size: 10.1 MBMETADATA MetadataView MoreCLEAR FILTERSNo Data AvailableSort By CLEAR FILTERSNo Data Available"
+    }
+  ],
+  "outgoing_data_links": [
+    {
+      "url": "https://datacatalogfiles.worldbank.org/ddh-published/0037798/DR0092042/GemDataEXTR.zip",
+      "extension": ".zip",
+      "anchor_text": "Excel file",
+      "locator": "anchor"
+    }
+  ]
+}

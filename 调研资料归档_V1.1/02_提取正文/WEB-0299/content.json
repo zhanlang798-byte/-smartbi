@@ -1,0 +1,102 @@
+{
+  "source_id": "WEB-0299",
+  "title": "Airline Blocked Funds",
+  "publisher": "IATA",
+  "publication_date": "",
+  "source_url": "https://www.iata.org/blocked-funds",
+  "extracted_at": "2026-08-16T09:21:29.435Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 22,
+  "table_count": 1,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Blocked funds are revenues earned by airlines in a particular country that cannot be repatriated in US dollars due to foreign exchange controls, currency shortages, or regulatory barriers. These funds are typically generated from ticket sales, cargo services, and other commercial activities, but remain trapped in the country of sale, often for extended periods."
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Airlines earn revenues in local currencies, but timely repatriation in US dollars is essential to meet dollar-denominated expenses like leasing, fuel, maintenance, and salaries. Delays and denials violate international treaties and bilateral agreements and increase exchange rate risks."
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Why Do Blocked Funds Matter?"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Blocked funds create significant financial and operational challenges for airlines. They can also have a wider impact on travelers, businesses and investors."
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Cash Flow Disruptions"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Airlines rely on timely access to revenue to cover operational costs, including fuel, maintenance, salaries, and leasing fees. Reliable access to revenues is critical for any business—particularly airlines which operate on very thin margins."
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "If the exchange rate between the local currency and the currency of repatriation changes while the funds are blocked, the value of those funds could decrease, resulting in financial loss for the airline."
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Reduced Connectivity"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Persistent issues with blocked funds may force airlines to reduce service or suspend operations to affected markets. This causes airfare to rise, impacting tourism, trade, and jobs. Economic growth relies on international connectivity."
+    },
+    {
+      "locator": "html:paragraph[10]",
+      "text": "Investment Deterrent"
+    },
+    {
+      "locator": "html:paragraph[11]",
+      "text": "Countries with a history of blocked funds may be viewed as high-risk markets, potentially discouraging future investment."
+    },
+    {
+      "locator": "html:paragraph[12]",
+      "text": "Countries with Blocked Funds"
+    },
+    {
+      "locator": "html:paragraph[13]",
+      "text": "This map highlights countries currently blocking airline funds."
+    },
+    {
+      "locator": "html:paragraph[14]",
+      "text": "Figures as of end-March 2026"
+    },
+    {
+      "locator": "html:paragraph[15]",
+      "text": "Top 10 Countries with Blocked Funds"
+    },
+    {
+      "locator": "html:paragraph[16]",
+      "text": "As of end-March 2026"
+    },
+    {
+      "locator": "html:paragraph[17]",
+      "text": "Amount HELD in USD Million"
+    },
+    {
+      "locator": "html:paragraph[18]",
+      "text": "Resources for Airlines"
+    },
+    {
+      "locator": "html:paragraph[19]",
+      "text": "IATA Currency Center"
+    },
+    {
+      "locator": "html:paragraph[20]",
+      "text": "The IATA Currency Center is a dynamic online information tool that provides currency information from an economic and financial perspective for different regions and affected countries. Detailed currency updates and analysis of IATA’s repatriation efforts are also available. The tool is updated as new information becomes available, supporting our members’ efforts to manage their foreign exchange repatriation and the associated risks in order to make informed decisions."
+    },
+    {
+      "locator": "html:paragraph[21]",
+      "text": "IATA Members have free access to the Currency Center."
+    },
+    {
+      "locator": "html:paragraph[22]",
+      "text": "> Learn more and get access"
+    }
+  ],
+  "outgoing_data_links": []
+}

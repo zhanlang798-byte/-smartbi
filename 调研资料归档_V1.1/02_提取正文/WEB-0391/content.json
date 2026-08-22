@@ -1,0 +1,50 @@
+{
+  "source_id": "WEB-0391",
+  "title": "EDGAR Entity Landing Page",
+  "publisher": "U.S. SEC",
+  "publication_date": "",
+  "source_url": "https://www.sec.gov/edgar/browse/?CIK=0001321655",
+  "extracted_at": "2026-08-16T09:22:05.779Z",
+  "content_state": "MIXED_CONTENT",
+  "paragraph_count": 9,
+  "table_count": 0,
+  "paragraphs": [
+    {
+      "locator": "html:paragraph[1]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[2]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[3]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[4]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[5]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[6]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[7]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[8]",
+      "text": "Click to toggle column"
+    },
+    {
+      "locator": "html:paragraph[9]",
+      "text": "Click to toggle column visibility"
+    }
+  ],
+  "outgoing_data_links": []
+}

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.federalreserve.gov/structure/compact/G17_IP_MAJOR_INDUSTRY_GROUPS" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.federalreserve.gov/structure/compact/G17_IP_MAJOR_INDUSTRY_GROUPS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:frb="http://www.federalreserve.gov/structure/compact/common">
+ <xs:import namespace="http://www.federalreserve.gov/structure/compact/common" schemaLocation="frb_common.xsd" />
+ <xs:element name="Series" type="SeriesType" substitutionGroup="frb:Series" />
+ <xs:complexType name="SeriesType">
+  <xs:complexContent>
+   <xs:extension base="frb:SeriesType">
+    <xs:attribute name="SERIES_CODE" type="CL_IP_MAJOR_INDUSTRY_GROUPS_CODES" use="required" />
+    <xs:attribute name="SA" type="CL_SA" use="required" />
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:simpleType name="CL_IP_MAJOR_INDUSTRY_GROUPS_CODES">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="B50001">
+    <xs:annotation>
+     <xs:documentation>Total index</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B00004">
+    <xs:annotation>
+     <xs:documentation>Manufacturing (SIC)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMF">
+    <xs:annotation>
+     <xs:documentation>  Manufacturing (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMFD">
+    <xs:annotation>
+     <xs:documentation>    Durable manufacturing (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G321">
+    <xs:annotation>
+     <xs:documentation>      Wood product  NAICS=321</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G327">
+    <xs:annotation>
+     <xs:documentation>      Nonmetallic mineral product  NAICS=327</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G331">
+    <xs:annotation>
+     <xs:documentation>      Primary metal  NAICS=331</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G332">
+    <xs:annotation>
+     <xs:documentation>      Fabricated metal product  NAICS=332</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G333">
+    <xs:annotation>
+     <xs:documentation>      Machinery  NAICS=333</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G334">
+    <xs:annotation>
+     <xs:documentation>      Computer and electronic product  NAICS=334</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G335">
+    <xs:annotation>
+     <xs:documentation>      Electrical equipment, appliance, and component  NAICS=335</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3361T3">
+    <xs:annotation>
+     <xs:documentation>      Motor vehicles and parts  NAICS=3361-3</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G3364T9">
+    <xs:annotation>
+     <xs:documentation>      Aerospace and miscellaneous transportation eq.  NAICS=3364-9</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G337">
+    <xs:annotation>
+     <xs:documentation>      Furniture and related product  NAICS=337</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G339">
+    <xs:annotation>
+     <xs:documentation>      Miscellaneous  NAICS=339</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMFN">
+    <xs:annotation>
+     <xs:documentation>    Nondurable manufacturing (NAICS)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G311A2">
+    <xs:annotation>
+     <xs:documentation>      Food, beverage, and tobacco  NAICS=311,2</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G313A4">
+    <xs:annotation>
+     <xs:documentation>      Textiles and products  NAICS=313,4</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G315A6">
+    <xs:annotation>
+     <xs:documentation>      Apparel and leather goods  NAICS=315,6</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G322">
+    <xs:annotation>
+     <xs:documentation>      Paper  NAICS=322</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G323">
+    <xs:annotation>
+     <xs:documentation>      Printing and related support activities  NAICS=323</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G324">
+    <xs:annotation>
+     <xs:documentation>      Petroleum and coal products  NAICS=324</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G325">
+    <xs:annotation>
+     <xs:documentation>      Chemical  NAICS=325</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G326">
+    <xs:annotation>
+     <xs:documentation>      Plastics and rubber products  NAICS=326</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="GMFO">
+    <xs:annotation>
+     <xs:documentation>  Other manufacturing</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G21">
+    <xs:annotation>
+     <xs:documentation>Mining  NAICS=21</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G2211A2">
+    <xs:annotation>
+     <xs:documentation>Electric and gas utilities  NAICS=2211,2</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G2211">
+    <xs:annotation>
+     <xs:documentation>  Electric power generation, transmission, and distribution  NAICS=2211</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="G2212">
+    <xs:annotation>
+     <xs:documentation>  Natural gas distribution  NAICS=2212</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B5610C">
+    <xs:annotation>
+     <xs:documentation>Crude processing (capacity)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B562A3C">
+    <xs:annotation>
+     <xs:documentation>Primary and semifinished processing (capacity)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="B5640C">
+    <xs:annotation>
+     <xs:documentation>Finished processing (capacity)</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="CL_SA">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NSA">
+    <xs:annotation>
+     <xs:documentation>Not seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="SA">
+    <xs:annotation>
+     <xs:documentation>Seasonally adjusted</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:schema>
