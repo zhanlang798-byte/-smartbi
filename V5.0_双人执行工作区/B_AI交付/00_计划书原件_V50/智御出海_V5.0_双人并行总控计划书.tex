@@ -1,0 +1,671 @@
+% !TEX program = xelatex
+\documentclass[UTF8,openany,zihao=-4]{ctexbook}
+\usepackage[a4paper,margin=2.2cm,headheight=16pt]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{url}
+\usepackage{ragged2e}
+
+\definecolor{Navy}{HTML}{15324A}
+\definecolor{Teal}{HTML}{0B7A75}
+\definecolor{Gold}{HTML}{C9962E}
+\definecolor{Pale}{HTML}{F3F7F8}
+\definecolor{Warn}{HTML}{FFF4DF}
+\definecolor{Danger}{HTML}{FDEBEC}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong}
+\newfontfamily\promptlatin{Consolas}
+\newCJKfontfamily\promptcjk{FangSong}
+\newcommand{\PromptFont}{\promptlatin\promptcjk}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.25em,topsep=0.35em,leftmargin=2.2em}
+\setlength{\emergencystretch}{12em}
+\sloppy
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+
+\ctexset{
+  chapter={format=\Huge\bfseries\color{Navy},beforeskip=0pt,afterskip=24pt},
+  section={format=\Large\bfseries\color{Teal}},
+  subsection={format=\large\bfseries\color{Navy}}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 智御出海 V5.0 双人并行总控}
+\fancyhead[R]{\small 执行者A + 执行者B}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\newtcolorbox{statusbox}[1]{colback=Pale,colframe=Teal,title=#1,fonttitle=\bfseries,boxrule=0.8pt,arc=1mm,left=2mm,right=2mm,top=1mm,bottom=1mm}
+\newtcolorbox{gatebox}[1]{colback=Warn,colframe=Gold,title=#1,fonttitle=\bfseries,boxrule=0.8pt,arc=1mm,left=2mm,right=2mm,top=1mm,bottom=1mm}
+\newtcolorbox{dangerbox}[1]{colback=Danger,colframe=red!65!black,title=#1,fonttitle=\bfseries,boxrule=0.8pt,arc=1mm,left=2mm,right=2mm,top=1mm,bottom=1mm}
+\lstnewenvironment{PromptBox}[1]{\lstset{title={#1},basicstyle=\promptlatin\scriptsize,breaklines=true,breakatwhitespace=false,frame=single,rulecolor=\color{Teal},columns=fullflexible,keepspaces=true,showstringspaces=false,upquote=true,tabsize=2,escapeinside={(*@}{@*)}}}{}
+\newcommand{\PathField}[1]{\path{#1}}
+\renewcommand{\_}{\textunderscore\allowbreak}
+\urlstyle{same}
+\newcommand{\Code}[1]{\texttt{#1}}
+\renewcommand{\arraystretch}{1.25}
+\raggedbottom
+\let\cleardoublepage\clearpage
+\begin{document}
+\begin{titlepage}
+\pagecolor{Navy}\color{white}
+\centering
+\vspace*{1.8cm}
+{\Huge\bfseries 智御出海\par}
+\vspace{0.45cm}
+{\Large AI驱动的中国出海企业国别风险监测与跨境流动性决策平台\par}
+\vspace{1.0cm}
+{\LARGE\bfseries V5.0 双人并行总控计划书\par}
+\vspace{0.55cm}
+{\Large 九天冲刺｜六页Smartbi｜25问｜XML恢复\par}
+\vspace{0.8cm}
+\begin{tcolorbox}[colback=white!7!Navy,colframe=Gold,width=.88\textwidth,boxrule=1.1pt,arc=1mm]
+\centering\large 执行者A + 执行者B
+\end{tcolorbox}
+\vfill
+\begin{tcolorbox}[colback=white!9!Navy,colframe=Gold,width=.88\textwidth,boxrule=1pt,arc=1mm]
+本册保留V4.3业务脉络，压缩执行难度，不压缩真实性、六页、25问、XML与比赛必交物。
+\end{tcolorbox}
+\vfill
+{\large 版本：V5.0｜日期：2026年8月22日\par}
+{\large 内部本科生AI执行手册｜不冒充已完成平台或最终分析报告\par}
+\end{titlepage}
+\nopagecolor\color{black}
+\frontmatter
+\chapter*{执行摘要}\addcontentsline{toc}{chapter}{执行摘要}
+\begin{statusbox}{本册的作用}
+本册是两名执行者共同使用的总控台。它回答项目是什么、为什么符合比赛、谁能改什么、每天过哪一道门、六页和25问怎样共同验收。具体点击和提示词分别在A、B副册。
+
+\end{statusbox}
+\begin{gatebox}{当前真实状态}
+数据快照已核实为18张正式工作簿、3张控制工作簿和313,593行正式数据；Smartbi六页、AIChat、XML独立恢复、分析报告与视频仍是待执行任务。
+
+\end{gatebox}
+\begin{dangerbox}{真实性底线}
+本手册不能作为平台已经部署的证据。没有截图、日志、哈希和交叉复核的步骤，状态只能是FAIL或BLOCKED。
+
+\end{dangerbox}
+\tableofcontents
+\mainmatter
+\chapter{五分钟看懂项目}
+\begin{statusbox}{一句话}
+中国出海企业面对国别汇率、通胀、资本约束和资金可得性风险时，利用Smartbi识别风险，再比较多币种流动性方案与黄金小比例风险缓冲的情景效果，并把来源、反例和合规限制一起交给管理层。
+
+\end{statusbox}
+\section{四步业务主线}
+
+\begin{center}
+\begin{tikzpicture}[node distance=7mm and 7mm, every node/.style={font=\small,align=center}]
+  \node[draw=Teal,fill=Pale,rounded corners,minimum width=3.2cm,minimum height=1.2cm] (a) {国别风险\\汇率、通胀、储备};
+  \node[draw=Teal,fill=Pale,rounded corners,minimum width=3.2cm,minimum height=1.2cm,right=of a] (b) {危机事件\\触发、确认、来源};
+  \node[draw=Gold,fill=Warn,rounded corners,minimum width=3.2cm,minimum height=1.2cm,below=of b] (c) {流动性情景\\完整、去黄金、去美元};
+  \node[draw=red!65!black,fill=Danger,rounded corners,minimum width=3.2cm,minimum height=1.2cm,left=of c] (d) {决策建议\\约束、反例、人工复核};
+  \draw[-{Latex[length=3mm]},thick,color=Navy] (a) -- (b);
+  \draw[-{Latex[length=3mm]},thick,color=Navy] (b) -- (c);
+  \draw[-{Latex[length=3mm]},thick,color=Navy] (c) -- (d);
+  \draw[-{Latex[length=3mm]},thick,dashed,color=Teal] (d) -- (a);
+\end{tikzpicture}
+\end{center}
+四步不是四个孤立模块。第一页和第二页先说明‘哪里有风险、为什么’，第三页说明‘企业数据能否连接到国家’，第四页做同条件情景比较，第五页给来源与限制，第六页说明周期背景与历史可比性。
+
+\section{评委十秒应该看见什么}
+\begin{itemize}
+\item 这是一个Smartbi数据创新平台作品，不是单独的黄金研究。
+\item 国别风险、危机事件、企业披露、流动性情景、证据合规形成闭环。
+\item 黄金只是0\%--20\%网格中的小比例风险缓冲变量，2.5\%或5\%只是情景点。
+\item 平台知道哪些问题能答，也能在数据不足时正确拒答。
+\end{itemize}
+\chapter{为什么做以及怎样契合比赛}
+\begin{longtable}{@{}p{0.17\textwidth}p{0.43\textwidth}p{0.31\textwidth}@{}}
+\toprule
+\textbf{比赛要求} & \textbf{项目对应} & \textbf{完成证据} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{比赛要求} & \textbf{项目对应} & \textbf{完成证据} \\
+\midrule
+\endhead
+基于Smartbi & 18表+3辅助表进入统一模型，建设六页看板和AIChat & 资源名、页面截图、演示环境、XML \\
+数据创新 & 把国家、事件、企业、周期、资产与来源按证据键组织 & 行数/主键/来源/质量对账 \\
+AI增强 & 固定25问覆盖数值、集合、来源、合规和拒答 & 问题原文、基准、实答、误差、截图 \\
+可视化与洞察 & 六页每页最多4个核心组件，保留反例 & 逐页对账与操作计时 \\
+可复现交付 & XML在不存在V5对象的独立目标恢复 & 空置截图、导入日志、源/目标KPI差异 \\
+报告与视频 & 报告只写已验证结果，视频不超过3分钟 & PDF、视频时长与提交清单 \\
+合规与来源 & source\_id追溯、代理/模拟/待核标记、禁止绕行 & 来源说明、许可和合规声明 \\
+\bottomrule
+\end{longtable}
+\begin{dangerbox}{比赛硬红线}
+\begin{itemize}
+\item 不得虚构数据或来源。
+\item 不得把缺失填0。
+\item 不得把模拟冒充企业真实值。
+\item 不得输出规避制裁、外汇管制或托管限制的方法。
+\item XML必须在干净目标独立恢复。
+\item 视频必须实际不超过180秒。
+\end{itemize}
+\end{dangerbox}
+\chapter{当前真实数据底座与收缩边界}
+\begin{longtable}{@{}p{0.18\textwidth}p{0.36\textwidth}p{0.37\textwidth}@{}}
+\toprule
+\textbf{资产} & \textbf{已核实范围} & \textbf{V5执行含义} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{资产} & \textbf{已核实范围} & \textbf{V5执行含义} \\
+\midrule
+\endhead
+正式Smartbi工作簿 & 18张，合计313,593行；控制清单主键重复/空主键均为0 & 不重新跑全量数据工程；先核对后只读导入 \\
+国家 & dim\_country 130国；40国月度样本7,680行 & 第一页展示130覆盖与40量化，不混淆 \\
+事件 & 23条正式country\_event；45条case\_evidence & 事件数与证据条数分开 \\
+企业 & 20家；company行168=160 global+8 region；国家桥0 & 企业页以披露边界为成果，不造排名 \\
+周期 & global\_cycle\_month 660月 & 生成660行无未来信息周期辅助层 \\
+组合 & portfolio\_scenario 207,720行 & 页面4做完整/去黄金/去美元对称比较 \\
+来源 & source\_registry 734行 & 所有数字通过source\_id追溯 \\
+历史 & 18条start\_date均1970-01-01、review\_status均pending & 只能展示主题和可比性限制，不能做真实时间轴 \\
+平台交付 & 看板、AIChat、XML独立恢复、报告、视频尚待执行 & 本三册是执行手册，不是完成证明 \\
+\bottomrule
+\end{longtable}
+\section{现在必须完成}
+\begin{itemize}[label=$\square$]
+\item 生成3张辅助表40/20/660行
+\item Smartbi导入18张正式表+3张辅助表
+\item 冻结共享模型和基础指标
+\item 建设六页并完成联动/性能
+\item 配置AIChat并执行25问
+\item 导出XML并独立恢复
+\item 完成报告、175秒视频、来源与合规、提交包
+\end{itemize}
+\section{时间紧明确不做}
+\begin{itemize}
+\item 不重新搜集130国资料，不重跑完整数据工程。
+\item 不修复与比赛主线无关的旧环境、旧构建文件、node\_modules或重复归档。
+\item 不把地区收入拆成国家，不做企业国别风险排名。
+\item 不把18条异常历史记录包装成1929--2025正式时间轴。
+\item 不增加复杂预测分数、新模型或视觉装饰挤占修复时间。
+\end{itemize}
+\chapter{本科生词语手册}
+读到陌生词时先看‘通俗解释’，再看项目例子；如果发现自己正在做‘最常见错误’，立即停下并回到上一门槛。
+
+\begin{longtable}{@{}p{0.13\textwidth}p{0.28\textwidth}p{0.28\textwidth}p{0.22\textwidth}@{}}
+\toprule
+\textbf{名词} & \textbf{通俗解释} & \textbf{本项目例子} & \textbf{最常见错误} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{名词} & \textbf{通俗解释} & \textbf{本项目例子} & \textbf{最常见错误} \\
+\midrule
+\endhead
+Smartbi & 把工作簿变成可筛选数据模型、看板和AI问答的平台。 & 把country\_monthly\_risk导入后做国别趋势。 & 把本地Excel存在误写成Smartbi已部署。 \\
+数据表 & 按行列保存同一种对象或记录。 & dim\_country一行一个国家。 & 把3张控制簿当成业务事实表。 \\
+维度表 & 描述‘是谁/何时/什么资产’的目录表，键应唯一。 & dim\_country用iso3识别国家。 & 维度键重复后仍建关系。 \\
+事实表 & 记录数值、事件或情景的表。 & portfolio\_scenario一行是一组情景结果。 & 事实表之间直接多对多。 \\
+主键 & 唯一认出一行的字段或字段组合。 & country\_monthly\_risk用iso3+month\_end。 & 用DISTINCT掩盖主键重复。 \\
+粒度 & 一句话说明一行代表什么。 & 国家--月份表示一个国家一个月一行。 & 把年度政策复制12次冒充月度。 \\
+关联 & 用共同键让维度筛选事实。 & dim\_country.iso3连接国别事实表。 & 连接后事实行数成倍增长。 \\
+筛选器 & 让用户限定国家、月份、期限等范围。 & DB04按iso3、期限和gold\_weight筛选。 & 筛选器显示值但没有传给图表。 \\
+看板 & 同一页的图表、筛选器与说明组合。 & 六页分别回答六个业务问题。 & 堆太多图而无法十秒讲清。 \\
+AIChat & 基于冻结模型和知识规则回答固定问题。 & AI-17追溯source\_id。 & 把流畅回答当正确答案。 \\
+XML恢复 & 把Smartbi资源导出后在干净目标重新导入。 & 目标事先没有V5前缀对象。 & 在原环境覆盖导入称独立恢复。 \\
+ISO3 & 三位国家代码，作为文本键。 & CHN、BRA等。 & 被Excel识别成数字或用国家中文名连接。 \\
+CPI同比 & 同月指数与12个月前相比的变化率。 & 2026年1月对2025年1月。 & 拿上月环比代替同比。 \\
+汇率贬值 & 本项目用本币/美元；数值上升代表本币贬值。 & 12个月变化达到20\%触发。 & 把方向写反。 \\
+ODI & 中国对外直接投资，本项目区分流量、存量和年份。 & 散点横轴用最新投资存量。 & 把不同年份投资与风险月份写成同日。 \\
+CVaR & 最差5\%情形的平均结果，用于看尾部风险。 & DB04与回撤、恢复月数并列。 & 把CVaR说成最大可能损失。 \\
+最大回撤 & 从此前峰值到随后谷值的最大跌幅。 & portfolio\_scenario.max\_drawdown。 & 用全样本未来峰值计算实时状态。 \\
+情景 & 给定国家、期限、窗口和权重后的试验结果。 & gold\_weight为0到20\%的网格。 & 把情景写成企业真实持仓或投资建议。 \\
+代理数据 & 没有直接观测时使用的替代序列，必须标记。 & is\_proxy=1时在页面显示。 & 代理冒充官方直接数据。 \\
+模拟数据 & 按规则生成的试验值，不是企业实际值。 & portfolio\_scenario是情景层。 & 写成企业真实现金需求。 \\
+数据截止期 & 某个字段最后一个可用观测日期。 & 汇率、CPI、储备可有不同日期。 & 强行合并成统一‘截至’时间。 \\
+source\_id & 连接事实数字与来源登记的证据键。 & SRC0721追到企业年报页。 & 找不到时编一个来源。 \\
+run\_id & 标记数据由哪次运行生成。 & 正式表多为20260819\_v42。 & 不同运行批次混合比较。 \\
+模型冻结 & 记录版本和时间，禁止静默改变下游接口。 & A冻结后B只读搭页。 & 改字段不通知B。 \\
+正确拒答 & 数据不足时说明不能答、缺什么、怎样合法补齐。 & 企业国家桥为0时拒绝重合排名。 & 把拒答当失败而强迫AI编答案。 \\
+\bottomrule
+\end{longtable}
+\chapter{六页Smartbi总设计}
+\begin{longtable}{@{}p{0.29\textwidth}p{0.20\textwidth}p{0.10\textwidth}p{0.30\textwidth}@{}}
+\toprule
+\textbf{资源名} & \textbf{页面} & \textbf{写入者} & \textbf{四组件摘要} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{资源名} & \textbf{页面} & \textbf{写入者} & \textbf{四组件摘要} \\
+\midrule
+\endhead
+DB01\_XH202612\_V50\_RISK\_OVERVIEW & 亚非拉风险全景 & A & 130/40/23总量、40国触发、投资--阈值散点、截止期与来源 \\
+DB02\_XH202612\_V50\_COUNTRY\_DRILL & 国别与危机下钻 & A & 单国摘要、汇率/CPI、储备覆盖、事件与政策 \\
+DB03\_XH202612\_V50\_COMPANY\_BOUNDARY & 中国企业海外风险与披露边界 & B & 20家目录、披露矩阵、地区/国家边界、能答与不能答 \\
+DB04\_XH202612\_V50\_LIQUIDITY\_LAB & 多币种—黄金周期实验室 & A & 0\%--20\%网格、三策略对称比较、反例与权重检查 \\
+DB05\_XH202612\_V50\_EVIDENCE\_CENTER & 决策、约束与证据中心 & B & 政策状态、source\_id、缺失/代理/模拟、管理层简报 \\
+DB06\_XH202612\_V50\_CYCLE\_CONTEXT & 全球周期与历史边界 & B & 周期主状态/并行标签、指标、三策略、历史限制 \\
+\bottomrule
+\end{longtable}
+\section{六页固定名称与对象}
+\begin{itemize}
+\item 亚非拉风险全景（DB01\_XH202612\_V50\_RISK\_OVERVIEW；执行者A唯一写入）
+\item 国别与危机下钻（DB02\_XH202612\_V50\_COUNTRY\_DRILL；执行者A唯一写入）
+\item 中国企业海外风险与披露边界（DB03\_XH202612\_V50\_COMPANY\_BOUNDARY；执行者B唯一写入）
+\item 多币种—黄金周期实验室（DB04\_XH202612\_V50\_LIQUIDITY\_LAB；执行者A唯一写入）
+\item 决策、约束与证据中心（DB05\_XH202612\_V50\_EVIDENCE\_CENTER；执行者B唯一写入）
+\item 全球周期与历史边界（DB06\_XH202612\_V50\_CYCLE\_CONTEXT；执行者B唯一写入）
+\end{itemize}
+\section{页面间交互合同}
+\begin{itemize}
+\item DB01点击国家只把iso3传给DB02。
+\item DB02进入DB04只传当前国家iso3；不传DB04不存在的event\_id筛选器。
+\item DB03、DB05、DB06只读取A冻结模型，不复制影子模型。
+\item 所有页面保留当前筛选、数据截止期、source\_id、质量和限制。
+\item 每页最多4个主要组件；典型筛选、联动或下钻不超过10秒。
+\end{itemize}
+\chapter{两人职责、对象锁与共享接口}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.38\textwidth}p{0.18\textwidth}X@{}}
+\toprule
+\textbf{对象} & \textbf{唯一写入者} & \textbf{另一人的权限} \\
+\midrule
+18表导入、3辅助表、MDL/IM共享模型 & A & B只读、提问题单 \\
+DB01、DB02、DB04 & A & B只读复核 \\
+DB03、DB05、DB06 & B & A只读复核 \\
+AIP、KB、AGENT、25问测试 & B & A只读复核 \\
+XML导出与独立目标恢复 & A & B只读核对空置、日志、KPI \\
+报告、视频、合规、提交目录 & B & A核对数字和完整性 \\
+最终放行 & A与B共同 & 互为复核，不增加第三人 \\
+\bottomrule
+\end{tabularx}
+\section{共享模型交接合同}
+\begin{itemize}[label=$\square$]
+\item 模型版本和冻结时间
+\item 表、主键、关系、字段中文名和类型
+\item 逐表行数、最小/最大日期和质量状态
+\item 三张辅助表字段字典
+\item 页面3/5/6可用指标
+\item 已知缺口与禁止推断
+\item B只读权限测试
+\item 模型变更日志与受影响页面/AI题
+\end{itemize}
+\begin{gatebox}{变更规则}
+G2后A不得静默改字段名、类型、关系或指标。确需修改时，A发布新修订号，列出受影响的DB03/05/06和AI题；B在收到变更通知后暂停相关对象，复测通过再恢复。
+
+\end{gatebox}
+\section{问题单最小字段}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{填写要求} \\
+\midrule
+对象名 & 必须是完整Smartbi资源名 \\
+现象 & 可重复的错误，不写‘不对’ \\
+证据 & 截图/日志/筛选条件/时间 \\
+期望 & 应出现的精确读数或行为 \\
+所有者 & 按对象锁确定A或B \\
+截止 & 不晚于当前门槛 \\
+状态 & OPEN/FIXED/RETEST\_PASS/RETEST\_FAIL/BLOCKED \\
+\bottomrule
+\end{tabularx}
+\chapter{8月23日至8月31日双人并行日程}
+\begin{longtable}{@{}p{0.13\textwidth}p{0.28\textwidth}p{0.28\textwidth}p{0.22\textwidth}@{}}
+\toprule
+\textbf{日期} & \textbf{执行者A} & \textbf{执行者B} & \textbf{当日停止条件} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{日期} & \textbf{执行者A} & \textbf{执行者B} & \textbf{当日停止条件} \\
+\midrule
+\endhead
+8月23日 & A00/A01/A02：输入、辅助表、P0 & 熟悉边界、词典、25问基准框架 & 40/20/660且P0 PASS \\
+8月24日 & A03/A04：全量导入、模型、指标、对账 & DB03/05/06线框、知识草稿；18:00签模型 & 313,593行，G2签收 \\
+8月25日 & DB01、DB02 & DB03、DB05 & 四页可打开、筛选、来源可见 \\
+8月26日 & DB04、性能第一轮 & DB06、AIChat配置 & 六页完成，每页≤4组件 \\
+8月27日 & XML首次导出/恢复预演 & 25问第一次全测、报告初稿 & 25问有结果；XML可导入 \\
+8月28日 & 数据/模型/性能修复 & AI修复、全量回归、视频脚本 & 数值≥90\%、关键误差≤1\% \\
+8月29日 & 独立恢复与KPI比较 & 报告、视频、合规 & 恢复后六页/KPI一致 \\
+8月30日 & 复核B页面/AI/报告 & 复核A数据/模型/XML & 双人交叉验收 \\
+8月31日 & 只修缺陷 & 只修缺陷、封包提交 & 硬失败0，不增功能 \\
+\bottomrule
+\end{longtable}
+\begin{statusbox}{每天两次交接}
+09:00确认今日输入、对象锁和当前门槛；18:00交换只读成果、真实读数和阻塞。A模型未过门时，B继续知识规则、基准、报告框架和视频脚本，不空等。
+
+\end{statusbox}
+\chapter{G0--G6阶段门槛与延期降级}
+\begin{longtable}{@{}p{0.17\textwidth}p{0.18\textwidth}p{0.40\textwidth}p{0.16\textwidth}@{}}
+\toprule
+\textbf{门槛} & \textbf{截至} & \textbf{通过条件} & \textbf{不通过时} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{门槛} & \textbf{截至} & \textbf{通过条件} & \textbf{不通过时} \\
+\midrule
+\endhead
+G0 输入锁定 & 8月23日10:00 & 路径、18+3、只读、哈希、负责人 & 停止导入，纠正输入 \\
+G1 数据P0 & 8月23日18:00 & 40/20/660；四表上传/类型/关系/XML路径PASS & 只修结构、类型、权限 \\
+G2 模型冻结 & 8月24日18:00 & 313,593；主键0/0；关系/指标/交接签收 & B只做离线材料 \\
+G3 六页初验 & 8月26日18:00 & 六页可开；每页≤4；筛选/来源/边界 & 删装饰，修核心链路 \\
+G4 AIChat初验 & 8月28日18:00 & 25问全测；数值≥90\%；误差≤1\%；拒答全对 & 收紧知识/提示词或修模型 \\
+G5 恢复与材料 & 8月29日18:00 & 干净目标恢复；KPI一致；报告/视频/合规齐 & 冻结新功能，只修必交 \\
+G6 最终放行 & 8月31日 & 双人交叉；硬失败0；清单/哈希/提交截图 & 不得标完成 \\
+\bottomrule
+\end{longtable}
+\section{延期时的唯一降级顺序}
+\begin{itemize}
+\item 先删除装饰、动画、次要文字和第五个以后组件。
+\item 再缩短报告背景和视频重复解释。
+\item 保留数据真实性、六页主线、25问边界、XML恢复、来源合规和必交材料。
+\item 不得重新搜集大规模数据、增加复杂模型、降低误差标准或删除反例。
+\end{itemize}
+\chapter{六页、25问和最终交付总验收}
+\section{六页共同标准}
+\begin{itemize}[label=$\square$]
+\item 资源名完全一致
+\item 每页最多4个核心组件
+\item 筛选、联动、下钻可用
+\item 典型操作≤10秒
+\item 数字与源工作簿误差≤1\%
+\item 缺失不显示0
+\item 来源/质量/截止期可见
+\item 无企业国家越级、历史伪时间轴或黄金统一建议
+\end{itemize}
+\section{AI-01至AI-25总索引}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{范围} & \textbf{问题类型} & \textbf{固定边界} \\
+\midrule
+AI-01--05 & 国别、样本、事件、完整度 & 用现成数据直接复算 \\
+AI-06--10 & 企业披露 & 能答则答；不足则拒答；不造收入/国家/六家 \\
+AI-11--15 & 资产与组合 & 同键、同成本、对称、报告反例 \\
+AI-16--20 & 解释、来源、合规 & 无总分不分解；待核转人工；无绕行 \\
+AI-21--25 & 周期与历史 & 无未来信息；AI-22/23拒答；AI-25只用两字段 \\
+\bottomrule
+\end{tabularx}
+\begin{dangerbox}{AI硬失败}
+\begin{itemize}
+\item 企业国家越级推断或企业海外收入排名
+\item 无来源历史故事或伪造页码
+\item 缺失填0
+\item 模拟冒充真实企业数据
+\item 输出规避制裁/外汇/托管限制的方法
+\item AI-25使用指定两字段以外历史事实
+\end{itemize}
+\end{dangerbox}
+\section{XML、报告、视频和提交包}
+\begin{itemize}[label=$\square$]
+\item XML在导入前无XH202612\_V50对象的独立目标恢复
+\item 恢复后18+3表、模型、六页、关键AI题和130/40/23/20/734 KPI一致
+\item 报告只写已验证结果并清楚写缺口
+\item 视频实测≤180秒，目标175秒，顺序为问题→数据→六页→AI→来源/恢复
+\item 数据字典、来源许可、合规声明、恢复日志、提交清单和SHA-256齐全
+\item 凭据扫描0命中
+\end{itemize}
+\chapter{M00每日协调完整执行卡}
+\section{M00｜每日09:00/18:00双人协调与阶段门判断}
+\subsection*{1. 本卡为什么要做}
+两个人并行时最大的风险不是工作量，而是A改了模型、B还按旧字段搭页，或双方都以为对方会补证据。M00把当日输入、对象锁、门槛、阻塞和下一步压成一张共同回执。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item 09:00形成当日输入与对象锁清单
+\item 18:00形成实际完成、未完成和阻塞表
+\item 每个对象只有一个写入者
+\item 每个状态都有证据路径
+\item 次日任务只来自当前门槛与缺陷优先级
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item A、B各自日报读数
+\item 当前G0--G6状态
+\item 共享问题单和模型变更日志
+\item 能够访问只读证据目录
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{共享协调目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}00\_\allowbreak{}共享\textbackslash{}\allowbreak{}每日协调}\par
+\noindent\textbf{问题单目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}00\_\allowbreak{}共享\textbackslash{}\allowbreak{}问题单}\par
+\noindent\textbf{模型交接目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}00\_\allowbreak{}共享\textbackslash{}\allowbreak{}模型交接}\par
+\noindent\textbf{最终截止：}{\promptlatin\promptcjk\small 2026-\allowbreak{}08-\allowbreak{}31}\par
+\begin{gatebox}{上一门槛}
+每日只判断一个当前门槛；上一门槛无证据时，不得用“差不多”进入下一阶段。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{M00完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的双人项目总控协调员。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+(*@{\promptcjk 双人项目总控协调员，执行}@*)M00(*@{\promptcjk 每日会}@*)
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 共享协调目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\00_(*@{\promptcjk 共享}@*)\(*@{\promptcjk 每日协调}@*)
+- (*@{\promptcjk 问题单目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\00_(*@{\promptcjk 共享}@*)\(*@{\promptcjk 问题单}@*)
+- (*@{\promptcjk 模型交接目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\00_(*@{\promptcjk 共享}@*)\(*@{\promptcjk 模型交接}@*)
+- (*@{\promptcjk 最终截止：}@*)2026-08-31
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A(*@{\promptcjk 与执行者}@*)B(*@{\promptcjk 共同}@*)
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 读取两人真实进度、证据和问题单}@*)
+2. (*@{\promptcjk 识别对象冲突、依赖与关键路径}@*)
+3. (*@{\promptcjk 按真实性、六页、}@*)25(*@{\promptcjk 问、}@*)XML(*@{\promptcjk 、材料的顺序排下一步}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 把计划写成已完成}@*)
+2. (*@{\promptcjk 未经对象所有者同意直接分派对方对象}@*)
+3. (*@{\promptcjk 用视觉美化覆盖硬失败}@*)
+4. (*@{\promptcjk 隐藏阻塞或删除失败记录}@*)
+5. (*@{\promptcjk 新增第三名执行者}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：}@*)09:00(*@{\promptcjk 分别读取}@*)A/B(*@{\promptcjk 昨日日报、当前门槛和问题单}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：列出今日必须完成、可并行、依赖}@*)A(*@{\promptcjk 冻结和可以离线做的任务}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：确认}@*)A(*@{\promptcjk 写共享模型}@*)/DB01/02/04/XML(*@{\promptcjk ，}@*)B(*@{\promptcjk 写}@*)DB03/05/06/AI/(*@{\promptcjk 材料}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：为每项任务写开始条件、停止条件、证据和}@*)18:00(*@{\promptcjk 读数}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：}@*)18:00(*@{\promptcjk 逐项核对实际证据，不以口头说明代替}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：更新}@*)G0--G6(*@{\promptcjk 状态、硬失败、模型版本与对象变更}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：按}@*)P0(*@{\promptcjk 真实性与必交材料优先级生成次日清单}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- M00_MORNING_YYYYMMDD.txt
+- M00_EVENING_YYYYMMDD.txt
+- DAILY_OBJECT_LOCK_YYYYMMDD.xlsx
+- DAILY_GATE_STATUS_YYYYMMDD.xlsx
+- (*@{\promptcjk 问题单与截图索引}@*)
+- (*@{\promptcjk 次日第一任务清单}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- (*@{\promptcjk 每日早会记录}@*)
+- (*@{\promptcjk 每日晚会记录}@*)
+- (*@{\promptcjk 对象锁表}@*)
+- (*@{\promptcjk 门槛状态表}@*)
+- (*@{\promptcjk 阻塞与次日清单}@*)
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- 09:00(*@{\promptcjk 和}@*)18:00(*@{\promptcjk 均有记录}@*)
+- (*@{\promptcjk 对象所有权无冲突}@*)
+- (*@{\promptcjk 门槛只按证据升级}@*)
+- (*@{\promptcjk 阻塞有负责人和截止}@*)
+- (*@{\promptcjk 延期不牺牲硬约束}@*)
+- (*@{\promptcjk 两人都签收}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 无证据将状态改}@*)PASS
+- (*@{\promptcjk 两人同时改同一对象}@*)
+- (*@{\promptcjk 模型静默变更}@*)
+- (*@{\promptcjk 隐藏硬失败}@*)
+- (*@{\promptcjk 引入第三名执行者或口头审核替代交叉复核}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 汇总文本、发现依赖、生成当日表格 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 提供真实读数、确认对象锁、签收门槛与下一步 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 09:00分别读取A/B昨日日报、当前门槛和问题单
+\item 列出今日必须完成、可并行、依赖A冻结和可以离线做的任务
+\item 确认A写共享模型/DB01/02/04/XML，B写DB03/05/06/AI/材料
+\item 为每项任务写开始条件、停止条件、证据和18:00读数
+\item 18:00逐项核对实际证据，不以口头说明代替
+\item 更新G0--G6状态、硬失败、模型版本与对象变更
+\item 按P0真实性与必交材料优先级生成次日清单
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+对象锁 & 每个对象唯一写入者 & 冲突：停止双方修改 \\
+状态 & PASS/FAIL/BLOCKED且有证据 & 仅写完成百分比：退回 \\
+门槛 & 只在证据齐全后升级 & 无证升级：硬失败 \\
+阻塞 & 有负责人、截止、最小修复 & 无人负责：升级 \\
+模型 & 版本与受影响页面/AI题明确 & 静默变更：回滚 \\
+延期 & 先降装饰和文字，不降真实性/六页/25问/XML & 删硬交付：不允许 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item M00\_MORNING\_YYYYMMDD.txt
+\item M00\_EVENING\_YYYYMMDD.txt
+\item DAILY\_OBJECT\_LOCK\_YYYYMMDD.xlsx
+\item DAILY\_GATE\_STATUS\_YYYYMMDD.xlsx
+\item 问题单与截图索引
+\item 次日第一任务清单
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 09:00和18:00均有记录
+\item 对象所有权无冲突
+\item 门槛只按证据升级
+\item 阻塞有负责人和截止
+\item 延期不牺牲硬约束
+\item 两人都签收
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 无证据将状态改PASS
+\item 两人同时改同一对象
+\item 模型静默变更
+\item 隐藏硬失败
+\item 引入第三名执行者或口头审核替代交叉复核
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{M00失败追问提示词}
+(*@{\promptcjk 请只分析}@*)M00(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A与执行者B共同填写执行时间、真实读数、异常、证据路径与最终状态；由执行者A与执行者B交叉在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A与执行者B共同 \\
+复核人 & 执行者A与执行者B交叉 \\
+下一门槛 & 当前G门之后的下一门槛 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}00\_共享\textbackslash{}每日协调 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+
+\cleardoublepage
+\chapter*{最终签字与放行页}
+\addcontentsline{toc}{chapter}{最终签字与放行页}
+本页签署只表示对应证据已经核对，不表示未实施的Smartbi平台能力已经完成。任何硬失败未清零时不得签署“放行”。
+
+\vspace{1cm}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.30\textwidth}Xp{0.25\textwidth}@{}}
+\toprule
+\textbf{签署项} & \textbf{签字} & \textbf{日期} \\
+\midrule
+执行者A与执行者B共同 & \rule{0.88\linewidth}{0.4pt} & \rule{0.88\linewidth}{0.4pt} \\
+交叉复核人 & \rule{0.88\linewidth}{0.4pt} & \rule{0.88\linewidth}{0.4pt} \\
+最终放行状态（PASS/FAIL/BLOCKED） & \rule{0.88\linewidth}{0.4pt} & \rule{0.88\linewidth}{0.4pt} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.8cm}
+\begin{dangerbox}{签字前的最后问题}
+能否用文件、截图、日志、哈希和独立复核证明“已经完成”？如果不能，状态只能是FAIL或BLOCKED，不能用口头说明替代证据。
+\end{dangerbox}
+\end{document}

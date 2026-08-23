@@ -1,0 +1,2395 @@
+% !TEX program = xelatex
+\documentclass[UTF8,openany,zihao=-4]{ctexbook}
+\usepackage[a4paper,margin=2.2cm,headheight=16pt]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{url}
+\usepackage{ragged2e}
+
+\definecolor{Navy}{HTML}{15324A}
+\definecolor{Teal}{HTML}{0B7A75}
+\definecolor{Gold}{HTML}{C9962E}
+\definecolor{Pale}{HTML}{F3F7F8}
+\definecolor{Warn}{HTML}{FFF4DF}
+\definecolor{Danger}{HTML}{FDEBEC}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong}
+\newfontfamily\promptlatin{Consolas}
+\newCJKfontfamily\promptcjk{FangSong}
+\newcommand{\PromptFont}{\promptlatin\promptcjk}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.25em,topsep=0.35em,leftmargin=2.2em}
+\setlength{\emergencystretch}{12em}
+\sloppy
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+
+\ctexset{
+  chapter={format=\Huge\bfseries\color{Navy},beforeskip=0pt,afterskip=24pt},
+  section={format=\Large\bfseries\color{Teal}},
+  subsection={format=\large\bfseries\color{Navy}}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 智御出海 V5.0 执行者A}
+\fancyhead[R]{\small 数据与平台唯一写入者}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\newtcolorbox{statusbox}[1]{colback=Pale,colframe=Teal,title=#1,fonttitle=\bfseries,boxrule=0.8pt,arc=1mm,left=2mm,right=2mm,top=1mm,bottom=1mm}
+\newtcolorbox{gatebox}[1]{colback=Warn,colframe=Gold,title=#1,fonttitle=\bfseries,boxrule=0.8pt,arc=1mm,left=2mm,right=2mm,top=1mm,bottom=1mm}
+\newtcolorbox{dangerbox}[1]{colback=Danger,colframe=red!65!black,title=#1,fonttitle=\bfseries,boxrule=0.8pt,arc=1mm,left=2mm,right=2mm,top=1mm,bottom=1mm}
+\lstnewenvironment{PromptBox}[1]{\lstset{title={#1},basicstyle=\promptlatin\scriptsize,breaklines=true,breakatwhitespace=false,frame=single,rulecolor=\color{Teal},columns=fullflexible,keepspaces=true,showstringspaces=false,upquote=true,tabsize=2,escapeinside={(*@}{@*)}}}{}
+\newcommand{\PathField}[1]{\path{#1}}
+\renewcommand{\_}{\textunderscore\allowbreak}
+\urlstyle{same}
+\newcommand{\Code}[1]{\texttt{#1}}
+\renewcommand{\arraystretch}{1.25}
+\raggedbottom
+\let\cleardoublepage\clearpage
+\begin{document}
+\begin{titlepage}
+\pagecolor{Navy}\color{white}
+\centering
+\vspace*{1.8cm}
+{\Huge\bfseries 智御出海\par}
+\vspace{0.45cm}
+{\Large AI驱动的中国出海企业国别风险监测与跨境流动性决策平台\par}
+\vspace{1.0cm}
+{\LARGE\bfseries 执行者A 数据与平台副计划书\par}
+\vspace{0.55cm}
+{\Large 只读输入｜三张辅助表｜Smartbi模型｜页面1/2/4｜XML恢复\par}
+\vspace{0.8cm}
+\begin{tcolorbox}[colback=white!7!Navy,colframe=Gold,width=.88\textwidth,boxrule=1.1pt,arc=1mm]
+\centering\large 数据与平台唯一写入者
+\end{tcolorbox}
+\vfill
+\begin{tcolorbox}[colback=white!9!Navy,colframe=Gold,width=.88\textwidth,boxrule=1pt,arc=1mm]
+本册告诉本科生A为什么做、点什么、看什么读数、什么算完成；AI不能替代真实Smartbi操作。
+\end{tcolorbox}
+\vfill
+{\large 版本：V5.0｜日期：2026年8月22日\par}
+{\large 内部本科生AI执行手册｜不冒充已完成平台或最终分析报告\par}
+\end{titlepage}
+\nopagecolor\color{black}
+\frontmatter
+\chapter*{执行摘要}\addcontentsline{toc}{chapter}{执行摘要}
+\begin{statusbox}{A的唯一责任}
+A是18表导入、3张辅助表、共享模型、指标、DB01/DB02/DB04、性能和XML恢复的唯一写入者。
+
+\end{statusbox}
+\begin{gatebox}{A的工作顺序}
+A00输入锁定→A01辅助层→A02 P0→A03全量导入→A04模型冻结→A05/06/07页面与恢复。任一门未PASS不得跳步。
+
+\end{gatebox}
+\begin{dangerbox}{绝不能做}
+不改原ZIP和工作簿；不让事实表多对多；不把8条地区桥拆成国家；不把黄金情景写成统一建议；不在非空目标冒充独立恢复。
+
+\end{dangerbox}
+\tableofcontents
+\mainmatter
+\chapter{A先用五分钟理解自己的任务}
+
+\begin{center}
+\begin{tikzpicture}[node distance=7mm and 7mm, every node/.style={font=\small,align=center}]
+  \node[draw=Teal,fill=Pale,rounded corners,minimum width=3.2cm,minimum height=1.2cm] (a) {国别风险\\汇率、通胀、储备};
+  \node[draw=Teal,fill=Pale,rounded corners,minimum width=3.2cm,minimum height=1.2cm,right=of a] (b) {危机事件\\触发、确认、来源};
+  \node[draw=Gold,fill=Warn,rounded corners,minimum width=3.2cm,minimum height=1.2cm,below=of b] (c) {流动性情景\\完整、去黄金、去美元};
+  \node[draw=red!65!black,fill=Danger,rounded corners,minimum width=3.2cm,minimum height=1.2cm,left=of c] (d) {决策建议\\约束、反例、人工复核};
+  \draw[-{Latex[length=3mm]},thick,color=Navy] (a) -- (b);
+  \draw[-{Latex[length=3mm]},thick,color=Navy] (b) -- (c);
+  \draw[-{Latex[length=3mm]},thick,color=Navy] (c) -- (d);
+  \draw[-{Latex[length=3mm]},thick,dashed,color=Teal] (d) -- (a);
+\end{tikzpicture}
+\end{center}
+A负责业务主线中的数据事实层和可复算平台层：先证明输入真实，再把复杂数据压成三张展示辅助表，经过P0后全量导入，冻结模型，最后完成风险、国别下钻和流动性实验室，并证明XML能恢复。
+
+\section{六页对象总索引与职责}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.29\textwidth}p{0.27\textwidth}p{0.14\textwidth}X@{}}
+\toprule
+\textbf{资源名} & \textbf{页面} & \textbf{唯一写入者} & \textbf{本册权限} \\
+\midrule
+DB01\_XH202612\_V50\_RISK\_OVERVIEW & 亚非拉风险全景 & A & 写入 \\
+DB02\_XH202612\_V50\_COUNTRY\_DRILL & 国别与危机下钻 & A & 写入 \\
+DB03\_XH202612\_V50\_COMPANY\_BOUNDARY & 中国企业海外风险与披露边界 & B & 只读复核 \\
+DB04\_XH202612\_V50\_LIQUIDITY\_LAB & 多币种—黄金周期实验室 & A & 写入 \\
+DB05\_XH202612\_V50\_EVIDENCE\_CENTER & 决策、约束与证据中心 & B & 只读复核 \\
+DB06\_XH202612\_V50\_CYCLE\_CONTEXT & 全球周期与历史边界 & B & 只读复核 \\
+\bottomrule
+\end{tabularx}
+\begin{itemize}
+\item 亚非拉风险全景（DB01\_XH202612\_V50\_RISK\_OVERVIEW；执行者A唯一写入）
+\item 国别与危机下钻（DB02\_XH202612\_V50\_COUNTRY\_DRILL；执行者A唯一写入）
+\item 中国企业海外风险与披露边界（DB03\_XH202612\_V50\_COMPANY\_BOUNDARY；执行者B唯一写入）
+\item 多币种—黄金周期实验室（DB04\_XH202612\_V50\_LIQUIDITY\_LAB；执行者A唯一写入）
+\item 决策、约束与证据中心（DB05\_XH202612\_V50\_EVIDENCE\_CENTER；执行者B唯一写入）
+\item 全球周期与历史边界（DB06\_XH202612\_V50\_CYCLE\_CONTEXT；执行者B唯一写入）
+\end{itemize}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}p{0.38\textwidth}X@{}}
+\toprule
+\textbf{A负责} & \textbf{为什么由A唯一写} & \textbf{完成的证据} \\
+\midrule
+输入与辅助表 & 避免两人各自产生不同数据版本 & 哈希、脚本、QA、40/20/660 \\
+共享模型与指标 & 所有页面和AI必须共用接口 & 关系审计、指标字典、B签收 \\
+DB01/02/04 & 数值、下钻和情景对称性依赖模型 & 逐页对账、性能、截图 \\
+XML恢复 & 恢复对象依赖A的模型与资源 & 空置目标、日志、源/目标差异、B复核 \\
+\bottomrule
+\end{tabularx}
+\chapter{本科生词语手册}
+读到陌生词时先看‘通俗解释’，再看项目例子；如果发现自己正在做‘最常见错误’，立即停下并回到上一门槛。
+
+\begin{longtable}{@{}p{0.13\textwidth}p{0.28\textwidth}p{0.28\textwidth}p{0.22\textwidth}@{}}
+\toprule
+\textbf{名词} & \textbf{通俗解释} & \textbf{本项目例子} & \textbf{最常见错误} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{名词} & \textbf{通俗解释} & \textbf{本项目例子} & \textbf{最常见错误} \\
+\midrule
+\endhead
+数据表 & 按行列保存同一种对象或记录。 & dim\_country一行一个国家。 & 把3张控制簿当成业务事实表。 \\
+维度表 & 描述‘是谁/何时/什么资产’的目录表，键应唯一。 & dim\_country用iso3识别国家。 & 维度键重复后仍建关系。 \\
+事实表 & 记录数值、事件或情景的表。 & portfolio\_scenario一行是一组情景结果。 & 事实表之间直接多对多。 \\
+主键 & 唯一认出一行的字段或字段组合。 & country\_monthly\_risk用iso3+month\_end。 & 用DISTINCT掩盖主键重复。 \\
+粒度 & 一句话说明一行代表什么。 & 国家--月份表示一个国家一个月一行。 & 把年度政策复制12次冒充月度。 \\
+关联 & 用共同键让维度筛选事实。 & dim\_country.iso3连接国别事实表。 & 连接后事实行数成倍增长。 \\
+ISO3 & 三位国家代码，作为文本键。 & CHN、BRA等。 & 被Excel识别成数字或用国家中文名连接。 \\
+CPI同比 & 同月指数与12个月前相比的变化率。 & 2026年1月对2025年1月。 & 拿上月环比代替同比。 \\
+汇率贬值 & 本项目用本币/美元；数值上升代表本币贬值。 & 12个月变化达到20\%触发。 & 把方向写反。 \\
+ODI & 中国对外直接投资，本项目区分流量、存量和年份。 & 散点横轴用最新投资存量。 & 把不同年份投资与风险月份写成同日。 \\
+CVaR & 最差5\%情形的平均结果，用于看尾部风险。 & DB04与回撤、恢复月数并列。 & 把CVaR说成最大可能损失。 \\
+最大回撤 & 从此前峰值到随后谷值的最大跌幅。 & portfolio\_scenario.max\_drawdown。 & 用全样本未来峰值计算实时状态。 \\
+情景 & 给定国家、期限、窗口和权重后的试验结果。 & gold\_weight为0到20\%的网格。 & 把情景写成企业真实持仓或投资建议。 \\
+代理数据 & 没有直接观测时使用的替代序列，必须标记。 & is\_proxy=1时在页面显示。 & 代理冒充官方直接数据。 \\
+run\_id & 标记数据由哪次运行生成。 & 正式表多为20260819\_v42。 & 不同运行批次混合比较。 \\
+模型冻结 & 记录版本和时间，禁止静默改变下游接口。 & A冻结后B只读搭页。 & 改字段不通知B。 \\
+\bottomrule
+\end{longtable}
+\chapter{输入文件地图和只读规则}
+\noindent\textbf{外层同名目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥.zip}\par
+\noindent\textbf{真正内层ZIP：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥.zip\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥.zip}\par
+\noindent\textbf{ZIP内Smartbi目录：}{\promptlatin\promptcjk\small 数据创新平台-\allowbreak{}张奥/\allowbreak{}D0-\allowbreak{}D12\_\allowbreak{}数据交付\_\allowbreak{}V4.2/\allowbreak{}data/\allowbreak{}smartbi/\allowbreak{}}\par
+\noindent\textbf{ZIP内周期规则：}{\promptlatin\promptcjk\small 数据创新平台-\allowbreak{}张奥/\allowbreak{}D0-\allowbreak{}D12\_\allowbreak{}数据交付\_\allowbreak{}V4.2/\allowbreak{}config/\allowbreak{}global\_\allowbreak{}cycle\_\allowbreak{}rules\_\allowbreak{}v41.yaml}\par
+\noindent\textbf{A执行工作区：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台}\par
+\begin{dangerbox}{输入识别}
+外层‘数据创新平台-张奥.zip’在本机是目录；真正数据包是该目录内同名、2,394,409,968字节的ZIP。A00必须核对SHA-256：06A5DD4FCB623074334E06A470677EC27C0CC9A64F6F8708C99D46EB77FEA03C。
+
+\end{dangerbox}
+\section{只读与忽略}
+\begin{itemize}
+\item 原V4.3 TEX/PDF、内层ZIP、18张正式工作簿和3张控制簿保持只读。
+\item 只在工作区生成辅助表、P0样本、证据和XML。
+\item 忽略\_\_MACOSX、.\_开头、.DS\_Store、.venv、node\_modules、旧归档、备份和LaTeX构建产物。
+\item 忽略不等于删除；本任务不授权清理原项目。
+\end{itemize}
+\chapter{18张正式表的固定导入合同}
+下表顺序来自Smartbi模型映射控制簿。正式表总行数313,593；每张工作表名为data；控制清单记录的主键重复和空主键均为0。
+
+\begin{longtable}{@{}p{0.04\textwidth}p{0.17\textwidth}p{0.09\textwidth}p{0.05\textwidth}p{0.13\textwidth}p{0.22\textwidth}p{0.13\textwidth}@{}}
+\toprule
+\textbf{序} & \textbf{文件} & \textbf{行} & \textbf{列} & \textbf{粒度} & \textbf{主键} & \textbf{用途} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{序} & \textbf{文件} & \textbf{行} & \textbf{列} & \textbf{粒度} & \textbf{主键} & \textbf{用途} \\
+\midrule
+\endhead
+1 & dim\_country.xlsx & 130 & 11 & 国家 & iso3 & 130国目录、40国标记与区域 \\
+2 & dim\_date.xlsx & 660 & 8 & 月 & date\_key & 统一月份筛选与日期桥 \\
+3 & dim\_year.xlsx & 16 & 5 & 年 & year\_key & 投资、政策、企业财年的年份桥 \\
+4 & dim\_company.xlsx & 20 & 8 & 企业 & company\_id & 20家企业目录与行业 \\
+5 & dim\_asset.xlsx & 10 & 8 & 资产 & asset\_id & 资产代码、类别、市场与计价 \\
+6 & dim\_event.xlsx & 60 & 10 & 事件 & event\_id & 事件名称、范围与事件簇 \\
+7 & country\_exposure.xlsx & 1,170 & 33 & 国家--年份 & iso3+year & 中国投资流量、存量与国家暴露 \\
+8 & country\_monthly\_risk.xlsx & 7,680 & 18 & 国家--月份 & iso3+month\_end & 40国汇率、CPI、储备月度面板 \\
+9 & country\_policy\_year.xlsx & 2,744 & 15 & 国家--年份--政策 & iso3+year+policy\_code & 政策、资本与人工复核状态 \\
+10 & country\_event.xlsx & 23 & 31 & 事件 & event\_id & 23条正式国别危机事件 \\
+11 & global\_cycle\_month.xlsx & 660 & 36 & 全球范围--月份 & scope\_id+month\_end & 1971--2025全球周期月度指标 \\
+12 & historical\_crisis\_event.xlsx & 18 & 37 & 历史事件/节点 & historical\_event\_id & 历史边界记录；当前日期异常且待审 \\
+13 & company\_overseas\_exposure.xlsx & 168 & 37 & 企业--财年--披露地区 & company\_id+fiscal\_year+geography\_id & 160条全球基础行与8条地区披露 \\
+14 & bridge\_company\_geography.xlsx & 8 & 10 & 企业披露--地理对象 & bridge\_id & 8条地区桥；国家桥接为0 \\
+15 & asset\_monthly\_return.xlsx & 91,727 & 10 & 国家--月份--资产--口径 & iso3+month\_end+asset\_id+currency\_basis & 资产收益与计价口径 \\
+16 & portfolio\_scenario.xlsx & 207,720 & 19 & 情景--国家--期限--窗口--运行版 & scenario\_id+strategy\_id+iso3+window\_end+horizon+run\_id & 完整、去黄金、去美元组合情景 \\
+17 & case\_evidence.xlsx & 45 & 31 & 案例证据 & case\_id & 案例主张、页码、证据等级与状态 \\
+18 & source\_registry.xlsx & 734 & 42 & 来源 & source\_id & 来源、许可、时间、哈希与质量追溯 \\
+\bottomrule
+\end{longtable}
+\section{3张控制工作簿}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.34\textwidth}p{0.12\textwidth}X@{}}
+\toprule
+\textbf{文件} & \textbf{行数} & \textbf{A怎样用} \\
+\midrule
+数据字典\_V4.1.xlsx & 369 & 查字段类型、中文名和run\_id，不导入业务模型 \\
+Smartbi模型映射\_V4.1.xlsx & 18 & 锁定导入顺序、粒度、主键、关系和刷新方式 \\
+Smartbi导入行数与哈希清单.xlsx & 18 & 核对行/列、SHA-256、主键重复与空值 \\
+\bottomrule
+\end{tabularx}
+\chapter{三张MVP辅助表的字段合同与算法}
+\section{MVP\_country\_latest.xlsx：40行}
+\begin{statusbox}{字段合同}
+主键iso3。字段包括国家/区域、latest\_fx\_value/date、latest\_cpi\_value/date、latest\_reserve\_usd/date、latest\_reserve\_import\_months/date、fx\_12m\_depr、cpi\_yoy、两个threshold\_multiple、max\_threshold\_multiple、trigger\_label、crisis\_event\_count、latest\_odi\_stock\_usd/year、source\_id、质量、missing\_reason、source\_run\_id、view\_run\_id、view\_version、generated\_at。
+
+\end{statusbox}
+\begin{itemize}
+\item 主表只取dim\_country.is\_selected\_40=1，必须40行。
+\item 每个指标独立取最新非空值及自己的日期。
+\item fx\_12m\_depr=(本月本币/美元÷12月前本币/美元)-1；端点缺失则为空。
+\item cpi\_yoy=(本月CPI÷12月前CPI)-1；端点缺失则为空。
+\item 汇率阈值20\%、CPI阈值15\%；倍数分别除以0.20和0.15。
+\item 两项达标=双触发；一项达标=单触发；两项都有值且均未达=未触发；无法判断=数据不足。
+\item 事件数按唯一event\_id；投资取最新非空存量及其年份。
+\item 随机5国手算误差≤1e-10。
+\end{itemize}
+\section{MVP\_company\_data\_status.xlsx：20行}
+\begin{dangerbox}{必须如实出现}
+company\_overseas\_exposure共168行，其中global 160、region 8；bridge\_company\_geography 8行全部是region，国家级桥接0；total\_revenue、overseas\_revenue、overseas\_revenue\_share可用值均为0。
+
+\end{dangerbox}
+\begin{itemize}
+\item 以dim\_company 20家为主表，避免没有披露的企业被丢掉。
+\item 统计财年最小/最大、披露行数、固定披露字段非空数、地区行、国家行、唯一来源数。
+\item answer\_scope写明能答目录/行业/财年/地区披露/已核验单项/通用情景。
+\item prohibited\_inference写明不能做海外收入排名、企业国家重合、真实现金需求与持仓。
+\item 不得把地区拆国家，不得生成企业国别风险分数。
+\end{itemize}
+\section{MVP\_cycle\_state.xlsx：660行}
+\begin{itemize}
+\item 按scope\_id、month\_end升序；每月只使用当月及此前可得数据。
+\item NFCI采用扩展窗口分位；股票回撤只对截至当时已见峰值；房地产只用当时已发布季度值。
+\item 每个触发器使用三态：1=证据充分且触发，0=证据充分且未触发，空=输入不足。
+\item 主状态优先级为信用系统性→资产泡沫破裂→衰退→通缩→滞胀→激进紧缩→通胀过热→复苏再通胀→正常扩张。
+\item 主状态不覆盖并行标签；两类及以上crisis\_class=true时compound\_global\_crisis=1。
+\item 正常扩张所需正常区间未冻结时不得自创阈值；证据不足则主状态空并写missing\_reason。
+\item 保留触发指标、阈值、缺失原因、来源运行版和规则版。
+\end{itemize}
+\begin{gatebox}{辅助层不是权威层}
+三张表统一写view\_version=V5.0，source\_run\_id来自上游，不能改名冒充V4.2正式表。原18表不修改。
+
+\end{gatebox}
+\chapter{Smartbi P0、全量导入和模型冻结手册}
+\section{为什么必须先做四表P0}
+P0用3国×24个月的小样验证上传、中文、日期、ISO3、关系、筛选、图表和XML。P0失败的修复成本远低于全量导入后返工。
+
+\begin{itemize}[label=$\square$]
+\item P0\_dim\_country
+\item P0\_dim\_date
+\item P0\_country\_monthly\_risk
+\item P0\_global\_cycle\_month
+\item 导入前后行数一致
+\item 日期与文本类型正确
+\item 关系不膨胀
+\item KPI/趋势误差≤1\%
+\item XML导出有哈希
+\end{itemize}
+\section{正式对象与模型名}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{类型} & \textbf{命名} \\
+\midrule
+数据表 & TB\_XH202612\_V50\_原文件名 \\
+共享模型 & MDL\_XH202612\_V50\_COUNTRY\_RESERVE \\
+指标模型 & IM\_XH202612\_V50\_COUNTRY\_RESERVE \\
+A页面 & DB01/DB02/DB04\_XH202612\_V50 \\
+辅助表 & TB\_XH202612\_V50\_MVP\_country\_latest等 \\
+\bottomrule
+\end{tabularx}
+\section{关系建立顺序}
+\begin{itemize}
+\item 先验证维度主键唯一，再建单向维度→事实关系。
+\item 国家维度连接国家相关事实；日期维度连接月度事实；年份维度连接年度事实。
+\item 企业维度连接企业事实；bridge\_company\_geography当前只在企业/财年范围使用，不连接国家。
+\item 每建一条关系，记录事实行数、未匹配外键和筛选前后读数。
+\item 事实表之间不直接多对多；不用DISTINCT掩盖膨胀。
+\end{itemize}
+\section{模型冻结给B的9件材料}
+\begin{itemize}[label=$\square$]
+\item MODEL\_HANDOFF\_V50.txt
+\item TABLE\_CONTRACT\_V50.xlsx
+\item FIELD\_DICTIONARY\_V50.xlsx
+\item RELATIONSHIP\_MAP\_V50.xlsx
+\item RELATIONSHIP\_AUDIT\_V50.xlsx
+\item METRIC\_DICTIONARY\_V50.xlsx
+\item KNOWN\_GAPS\_V50.txt
+\item MODEL\_CHANGELOG\_V50.txt
+\item B只读权限测试和签收
+\end{itemize}
+\chapter{A负责的三页逐组件搭建说明}
+\section{亚非拉风险全景｜DB01\_XH202612\_V50\_RISK\_OVERVIEW}
+130/40/23总量、40国触发、投资--阈值散点、截止期与来源
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.08\textwidth}p{0.28\textwidth}p{0.35\textwidth}X@{}}
+\toprule
+\textbf{组件} & \textbf{图表/问题} & \textbf{字段} & \textbf{筛选} \\
+\midrule
+1 & 130/40/23总量卡组 & dim\_country、country\_event & 区域/质量 \\
+2 & 40国触发表或地图 & MVP\_country\_latest.trigger\_label & 区域/国家/质量 \\
+3 & ODI存量--阈值倍数散点 & latest\_odi\_stock\_usd、max\_threshold\_multiple & 投资年/风险月 \\
+4 & 来源与独立截止期条 & 日期/source\_id/质量 & 当前国家 \\
+\bottomrule
+\end{tabularx}
+\begin{gatebox}{本页完成定义}
+\begin{itemize}[label=$\square$]
+\item 最多4个核心组件
+\item 逐组件与源表误差≤1\%
+\item 缺失/来源/截止期可见
+\item 三次典型操作≤10秒
+\item 全页、筛选、下钻/反例截图齐全
+\end{itemize}
+\end{gatebox}
+\section{国别与危机下钻｜DB02\_XH202612\_V50\_COUNTRY\_DRILL}
+单国摘要、汇率/CPI、储备覆盖、事件与政策
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.08\textwidth}p{0.28\textwidth}p{0.35\textwidth}X@{}}
+\toprule
+\textbf{组件} & \textbf{图表/问题} & \textbf{字段} & \textbf{筛选} \\
+\midrule
+1 & 单国最新摘要 & FX/CPI/储备/覆盖/ODI及日期 & iso3 \\
+2 & FX与CPI趋势 & country\_monthly\_risk & 月份范围 \\
+3 & 储备与进口覆盖趋势 & 储备美元/覆盖月数 & 月份范围 \\
+4 & 事件与政策状态表 & country\_event/country\_policy\_year/source\_id & 事件类型/质量 \\
+\bottomrule
+\end{tabularx}
+\begin{gatebox}{本页完成定义}
+\begin{itemize}[label=$\square$]
+\item 最多4个核心组件
+\item 逐组件与源表误差≤1\%
+\item 缺失/来源/截止期可见
+\item 三次典型操作≤10秒
+\item 全页、筛选、下钻/反例截图齐全
+\end{itemize}
+\end{gatebox}
+\section{多币种—黄金周期实验室｜DB04\_XH202612\_V50\_LIQUIDITY\_LAB}
+0\%--20\%网格、三策略对称比较、反例与权重检查
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.08\textwidth}p{0.28\textwidth}p{0.35\textwidth}X@{}}
+\toprule
+\textbf{组件} & \textbf{图表/问题} & \textbf{字段} & \textbf{筛选} \\
+\midrule
+1 & 情景关键结果 & 收益/回撤/CVaR/恢复/成本 & 国家/期限/窗口 \\
+2 & 0\%--20\%黄金网格 & gold\_weight与指标 & gold\_weight \\
+3 & 完整/去黄金/去美元 & 三策略同键 & strategy\_id \\
+4 & 反例与权重检查 & 不占优窗口、weight\_sum & 周期/质量 \\
+\bottomrule
+\end{tabularx}
+\begin{gatebox}{本页完成定义}
+\begin{itemize}[label=$\square$]
+\item 最多4个核心组件
+\item 逐组件与源表误差≤1\%
+\item 缺失/来源/截止期可见
+\item 三次典型操作≤10秒
+\item 全页、筛选、下钻/反例截图齐全
+\end{itemize}
+\end{gatebox}
+\chapter{性能、XML独立恢复与B只读复核}
+\section{性能测试}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.28\textwidth}p{0.18\textwidth}p{0.30\textwidth}X@{}}
+\toprule
+\textbf{用例} & \textbf{次数} & \textbf{记录} & \textbf{通过} \\
+\midrule
+DB01区域切换 & 冷3+热3 & 筛选、秒数、缓存 & 每次≤10秒 \\
+DB01→DB02下钻 & 冷3+热3 & iso3与到达页 & 参数正确且≤10秒 \\
+DB02全时间范围 & 冷3+热3 & 点数与秒数 & 不截断且≤10秒 \\
+DB04国家/期限/黄金切换 & 冷3+热3 & 共同键、秒数 & 结果正确且≤10秒 \\
+\bottomrule
+\end{tabularx}
+\section{独立恢复七步}
+\begin{itemize}
+\item 导出V5数据对象、MDL、IM、六页、AIP/KB/AGENT及依赖。
+\item 生成XML依赖清单、源环境版本、对象数、行数、KPI和SHA-256。
+\item 拍摄目标环境不存在XH202612\_V50对象的空置证据。
+\item A按书面顺序导入并记录全部警告。
+\item 恢复数据绑定、模型、指标、页面和AI资源。
+\item B只读核对18+3表、六页和130/40/23/20/734 KPI。
+\item 复测关键AI题、页面交互和性能；源目标关键误差≤1\%。
+\end{itemize}
+\begin{dangerbox}{恢复无效的情况}
+\begin{itemize}
+\item 目标导入前已有V5对象。
+\item XML缺依赖或有未解决警告。
+\item 只有A现场解释才会恢复。
+\item B未只读复核。
+\item 源目标KPI超差。
+\item 恢复包包含账号、密码、Cookie或令牌。
+\end{itemize}
+\end{dangerbox}
+\chapter{A的九天日清单}
+\begin{longtable}{@{}p{0.15\textwidth}p{0.38\textwidth}p{0.38\textwidth}@{}}
+\toprule
+\textbf{日期} & \textbf{A必须收口} & \textbf{交给B} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{日期} & \textbf{A必须收口} & \textbf{交给B} \\
+\midrule
+\endhead
+8月23日 & A00/A01/A02 & 输入清单、辅助表合同、P0状态 \\
+8月24日 & A03/A04 & 冻结模型、字段/指标/缺口/只读权限 \\
+8月25日 & A05/A06 & DB01/02只读页面与截图 \\
+8月26日 & A07页面4+性能 & DB04与三策略基准 \\
+8月27日 & XML首次导出/预演 & 依赖、哈希、预演问题 \\
+8月28日 & 修数据/模型/性能 & 新修订号与受影响题 \\
+8月29日 & 独立恢复 & 目标空置、日志、KPI \\
+8月30日 & 复核B页面/AI/报告 & 问题单与签收 \\
+8月31日 & 只修缺陷 & 最终XML与哈希 \\
+\bottomrule
+\end{longtable}
+\chapter{A00--A07完整执行卡}
+\section{A00｜核对内层ZIP、18张正式表、3张控制表和哈希}
+\subsection*{1. 本卡为什么要做}
+所有后续页面和AI回答都依赖同一份输入。如果第一步认错ZIP、漏表或哈希不符，后面的漂亮页面只会把错误放大。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item 明确看到外层同名目录和内层约2.39GB ZIP的区别
+\item 18张正式表与3张控制表清单齐全
+\item 正式表合计313,593行
+\item 18张正式表主键重复与空主键均为0
+\item 内层ZIP哈希与A00冻结基线完全一致
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item 能够读取内层ZIP
+\item 有足够空间建立只读镜像
+\item 未修改V4.3、ZIP或旧版目录
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{内层ZIP：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥.zip\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥.zip}\par
+\noindent\textbf{ZIP内Smartbi目录：}{\promptlatin\promptcjk\small 数据创新平台-\allowbreak{}张奥/\allowbreak{}D0-\allowbreak{}D12\_\allowbreak{}数据交付\_\allowbreak{}V4.2/\allowbreak{}data/\allowbreak{}smartbi/\allowbreak{}}\par
+\noindent\textbf{工作区只读镜像：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}01\_\allowbreak{}输入只读镜像}\par
+\noindent\textbf{证据目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}A00}\par
+\begin{gatebox}{上一门槛}
+G0输入锁定：只有路径、文件数、行数、主键和哈希均已核对，才允许进入A01。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A00完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的数据交付审计员。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+(*@{\promptcjk 数据交付审计员，执行}@*)A00(*@{\promptcjk 输入锁定}@*)
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 内层}@*)ZIP(*@{\promptcjk ：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*).zip\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*).zip
+- ZIP(*@{\promptcjk 内}@*)Smartbi(*@{\promptcjk 目录：数据创新平台}@*)-(*@{\promptcjk 张奥}@*)/D0-D12_(*@{\promptcjk 数据交付}@*)_V4.2/data/smartbi/
+- (*@{\promptcjk 工作区只读镜像：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\01_(*@{\promptcjk 输入只读镜像}@*)
+- (*@{\promptcjk 证据目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\A00
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 只读列举}@*)ZIP(*@{\promptcjk 并提取限定目录到}@*)A(*@{\promptcjk 工作区}@*)
+2. (*@{\promptcjk 计算哈希、读取工作表元数据和控制清单}@*)
+3. (*@{\promptcjk 生成对账与忽略项清单}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 改写、覆盖、重命名原}@*)ZIP(*@{\promptcjk 或工作簿}@*)
+2. (*@{\promptcjk 删除}@*)__MACOSX(*@{\promptcjk 、}@*).DS_Store(*@{\promptcjk 、}@*).venv(*@{\promptcjk 、}@*)node_modules(*@{\promptcjk 或旧归档}@*)
+3. (*@{\promptcjk 修改期望哈希迎合实际文件}@*)
+4. (*@{\promptcjk 在任一正式表缺失时继续}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：确认外层路径为目录，内层路径为}@*)ZIP(*@{\promptcjk 文件并记录大小、修改时间和}@*)SHA-256
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：只提取}@*)Smartbi(*@{\promptcjk 目录、周期规则和必要控制清单到只读镜像}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：排除}@*)__MACOSX(*@{\promptcjk 、}@*)._(*@{\promptcjk 开头、}@*).DS_Store(*@{\promptcjk 、}@*).venv(*@{\promptcjk 、}@*)node_modules(*@{\promptcjk 和构建产物}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：按控制清单核对}@*)18(*@{\promptcjk 张表的顺序、工作表}@*)data(*@{\promptcjk 、行列数、主键和}@*)SHA-256
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：把}@*)3(*@{\promptcjk 张控制簿单列，不计入}@*)313,593(*@{\promptcjk 行}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：生成}@*)PASS/FAIL/BLOCKED(*@{\promptcjk 逐项清单并由}@*)B(*@{\promptcjk 抽查}@*)3(*@{\promptcjk 张大表和}@*)3(*@{\promptcjk 张小表}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- INPUT_INVENTORY_V50.xlsx
+- HASH_CHECK_V50.txt
+- A00_EXECUTION_LOG_V50.txt
+- 18(*@{\promptcjk 张逐表读数截图或导出}@*)
+- (*@{\promptcjk 内层}@*)ZIP(*@{\promptcjk 大小、时间、哈希截图}@*)
+- B(*@{\promptcjk 抽查回执}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- INPUT_INVENTORY_V50.xlsx
+- HASH_CHECK_V50.txt
+- A00_EXECUTION_LOG_V50.txt
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- 18(*@{\promptcjk 张正式表和}@*)3(*@{\promptcjk 张控制表齐全}@*)
+- (*@{\promptcjk 正式表合计}@*)313,593(*@{\promptcjk 行}@*)
+- (*@{\promptcjk 所有正式表工作表名为}@*)data
+- (*@{\promptcjk 主键重复}@*)0(*@{\promptcjk 、空主键}@*)0
+- (*@{\promptcjk 哈希全部匹配且原}@*)ZIP(*@{\promptcjk 未变}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 任一正式表缺失、哈希不符或工作表不是}@*)data
+- (*@{\promptcjk 总行数不等于}@*)313,593
+- (*@{\promptcjk 主键重复或空值非}@*)0
+- (*@{\promptcjk 原}@*)ZIP(*@{\promptcjk 或}@*)V4.3(*@{\promptcjk 出现修改}@*)
+- AI(*@{\promptcjk 声称未实际读取也已通过}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 解析ZIP清单、生成只读检查脚本、解释读数 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 确认路径、执行提取与哈希、保存截图并签字 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 确认外层路径为目录，内层路径为ZIP文件并记录大小、修改时间和SHA-256
+\item 只提取Smartbi目录、周期规则和必要控制清单到只读镜像
+\item 排除\_\_MACOSX、.\_开头、.DS\_Store、.venv、node\_modules和构建产物
+\item 按控制清单核对18张表的顺序、工作表data、行列数、主键和SHA-256
+\item 把3张控制簿单列，不计入313,593行
+\item 生成PASS/FAIL/BLOCKED逐项清单并由B抽查3张大表和3张小表
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+路径/文件类型 & 外层为目录；内层为2,394,409,968字节ZIP & 内层不是文件或大小明显不同：停止 \\
+文件数 & 18正式+3控制 & 多计Mac元数据或漏表：重做过滤 \\
+正式表总行数 & 313,593 & 任何差异：定位到具体文件 \\
+主键 & 每表pk\_dup=0且pk\_null=0 & 任一非0：FAIL \\
+哈希 & 18张与导入哈希清单一致 & 任一不一致：FAIL \\
+原件状态 & 大小、修改时间和ZIP哈希与基线一致 & 变化：立即停止并保全证据 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item INPUT\_INVENTORY\_V50.xlsx
+\item HASH\_CHECK\_V50.txt
+\item A00\_EXECUTION\_LOG\_V50.txt
+\item 18张逐表读数截图或导出
+\item 内层ZIP大小、时间、哈希截图
+\item B抽查回执
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 18张正式表和3张控制表齐全
+\item 正式表合计313,593行
+\item 所有正式表工作表名为data
+\item 主键重复0、空主键0
+\item 哈希全部匹配且原ZIP未变
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 任一正式表缺失、哈希不符或工作表不是data
+\item 总行数不等于313,593
+\item 主键重复或空值非0
+\item 原ZIP或V4.3出现修改
+\item AI声称未实际读取也已通过
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A00失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A00(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G1数据P0 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}03\_Smartbi证据\textbackslash{}A00 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{A01｜生成三张MVP展示辅助表}
+\subsection*{1. 本卡为什么要做}
+正式表适合数据工程，却不适合本科生在九天内直接搭六页。三张辅助表把最新国别状态、企业可答边界和周期规则压成可展示粒度，同时不改原表。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item MVP\_country\_latest.xlsx恰好40行
+\item MVP\_company\_data\_status.xlsx恰好20行
+\item MVP\_cycle\_state.xlsx恰好660行
+\item 三表主键重复0、空主键0
+\item 所有新增表含source\_run\_id、view\_run\_id、view\_version=V5.0和generated\_at
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item A00为PASS
+\item 只读镜像完整
+\item global\_cycle\_rules\_v41.yaml可读
+\item 知道缺失不得填0、地区不得拆国家
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{只读Smartbi目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}01\_\allowbreak{}输入只读镜像\textbackslash{}\allowbreak{}D0-\allowbreak{}D12\_\allowbreak{}数据交付\_\allowbreak{}V4.2\textbackslash{}\allowbreak{}data\textbackslash{}\allowbreak{}smartbi}\par
+\noindent\textbf{周期规则：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}01\_\allowbreak{}输入只读镜像\textbackslash{}\allowbreak{}D0-\allowbreak{}D12\_\allowbreak{}数据交付\_\allowbreak{}V4.2\textbackslash{}\allowbreak{}config\textbackslash{}\allowbreak{}global\_\allowbreak{}cycle\_\allowbreak{}rules\_\allowbreak{}v41.yaml}\par
+\noindent\textbf{输出目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}02\_\allowbreak{}MVP辅助表}\par
+\noindent\textbf{证据目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}A01}\par
+\begin{gatebox}{上一门槛}
+A00必须书面PASS；任一哈希或主键问题未解决时不得生成辅助表。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A01完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的审慎数据工程师。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+(*@{\promptcjk 审慎数据工程师，执行}@*)A01(*@{\promptcjk 辅助层生成}@*)
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 只读}@*)Smartbi(*@{\promptcjk 目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\01_(*@{\promptcjk 输入只读镜像}@*)\D0-D12_(*@{\promptcjk 数据交付}@*)_V4.2\data\smartbi
+- (*@{\promptcjk 周期规则：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\01_(*@{\promptcjk 输入只读镜像}@*)\D0-D12_(*@{\promptcjk 数据交付}@*)_V4.2\config\global_cycle_rules_v41.yaml
+- (*@{\promptcjk 输出目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\02_MVP(*@{\promptcjk 辅助表}@*)
+- (*@{\promptcjk 证据目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\A01
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 在}@*)A(*@{\promptcjk 工作区创建新表，不改原}@*)18(*@{\promptcjk 表}@*)
+2. (*@{\promptcjk 生成可复算脚本、字段字典和}@*)QA
+3. (*@{\promptcjk 对抽样国家与周期月份做手算}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 使用未来数据或全样本最终峰值}@*)
+2. (*@{\promptcjk 缺失填}@*)0(*@{\promptcjk 或把未知标成未触发}@*)
+3. (*@{\promptcjk 把地区披露拆成国家或生成企业国别排名}@*)
+4. (*@{\promptcjk 发明}@*)YAML(*@{\promptcjk 没有的阈值}@*)
+5. (*@{\promptcjk 把新表冒充}@*)V4.2(*@{\promptcjk 权威表}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：以}@*)is_selected_40=1(*@{\promptcjk 为主表生成国别最新视图，每个指标独立取最新非空值及日期}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：用}@*)fx_avg_lcu_per_usd(*@{\promptcjk 计算}@*)12(*@{\promptcjk 个月贬值、用}@*)cpi_index(*@{\promptcjk 计算同比；端点缺失则结果为空}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：按}@*)20%(*@{\promptcjk 汇率与}@*)15%CPI(*@{\promptcjk 阈值计算倍数，并只输出双触发、单触发、未触发、数据不足}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：以}@*)20(*@{\promptcjk 家}@*)dim_company(*@{\promptcjk 为主表统计财年、可用披露字段、地区}@*)/(*@{\promptcjk 国家行、来源数和可回答范围}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：确认}@*)company_overseas_exposure(*@{\promptcjk 为}@*)160(*@{\promptcjk 条}@*)global+8(*@{\promptcjk 条}@*)region(*@{\promptcjk ，海外收入三个字段可用值均为}@*)0(*@{\promptcjk ，国家桥接}@*)0
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：按}@*)month_end(*@{\promptcjk 升序、扩展窗口分位和截至当时峰值生成}@*)660(*@{\promptcjk 行周期状态，所有触发器使用}@*)1/0/(*@{\promptcjk 空三态}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：生成字段字典、运行日志、随机}@*)5(*@{\promptcjk 国手算与无未来信息审计}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- (*@{\promptcjk 三张辅助工作簿}@*)
+- MVP_FIELD_DICTIONARY_V50.xlsx
+- A01_QA_RESULT_V50.xlsx
+- A01_EXECUTION_LOG_V50.txt
+- 5(*@{\promptcjk 国手算明细}@*)
+- (*@{\promptcjk 无未来信息审计表}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- MVP_country_latest.xlsx
+- MVP_company_data_status.xlsx
+- MVP_cycle_state.xlsx
+- MVP_FIELD_DICTIONARY_V50.xlsx
+- A01_QA_RESULT_V50.xlsx
+- A01_EXECUTION_LOG_V50.txt
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 三表分别}@*)40(*@{\promptcjk 、}@*)20(*@{\promptcjk 、}@*)660(*@{\promptcjk 行}@*)
+- (*@{\promptcjk 主键重复}@*)0(*@{\promptcjk 、空主键}@*)0
+- 5(*@{\promptcjk 国手算误差不超过}@*)1e-10
+- (*@{\promptcjk 企业地区}@*)8(*@{\promptcjk 、国家}@*)0(*@{\promptcjk 、海外收入可用值}@*)0
+- (*@{\promptcjk 周期计算只用当月及此前数据}@*)
+- (*@{\promptcjk 所有新增表保留版本、来源与缺失原因}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 缺失被填}@*)0
+- (*@{\promptcjk 企业地区被拆成国家}@*)
+- (*@{\promptcjk 使用未来峰值或未来修订值}@*)
+- (*@{\promptcjk 行数或主键不符}@*)
+- (*@{\promptcjk 自行发明周期阈值}@*)
+- (*@{\promptcjk 未写}@*)source_run_id(*@{\promptcjk 或}@*)view_version
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 编写生成脚本、解释公式、输出QA规则 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 运行脚本、手算抽查、确认类型并保存证据 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 以is\_selected\_40=1为主表生成国别最新视图，每个指标独立取最新非空值及日期
+\item 用fx\_avg\_lcu\_per\_usd计算12个月贬值、用cpi\_index计算同比；端点缺失则结果为空
+\item 按20\%汇率与15\%CPI阈值计算倍数，并只输出双触发、单触发、未触发、数据不足
+\item 以20家dim\_company为主表统计财年、可用披露字段、地区/国家行、来源数和可回答范围
+\item 确认company\_overseas\_exposure为160条global+8条region，海外收入三个字段可用值均为0，国家桥接0
+\item 按month\_end升序、扩展窗口分位和截至当时峰值生成660行周期状态，所有触发器使用1/0/空三态
+\item 生成字段字典、运行日志、随机5国手算与无未来信息审计
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+国别行数 & 40，主键iso3 & 非40：检查选样标志与连接膨胀 \\
+企业行数 & 20，地区合计8、国家合计0 & 出现国家行：硬失败 \\
+周期行数 & 660，主键scope\_id+month\_end & 非660：检查重复/丢月 \\
+FX/CPI & 端点齐全才计算 & 空值变0：硬失败 \\
+周期触发 & 1/0/空且空有missing\_reason & 缺失判未触发：硬失败 \\
+版本 & view\_version=V5.0 & 冒充V4.2：硬失败 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item 三张辅助工作簿
+\item MVP\_FIELD\_DICTIONARY\_V50.xlsx
+\item A01\_QA\_RESULT\_V50.xlsx
+\item A01\_EXECUTION\_LOG\_V50.txt
+\item 5国手算明细
+\item 无未来信息审计表
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 三表分别40、20、660行
+\item 主键重复0、空主键0
+\item 5国手算误差不超过1e-10
+\item 企业地区8、国家0、海外收入可用值0
+\item 周期计算只用当月及此前数据
+\item 所有新增表保留版本、来源与缺失原因
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 缺失被填0
+\item 企业地区被拆成国家
+\item 使用未来峰值或未来修订值
+\item 行数或主键不符
+\item 自行发明周期阈值
+\item 未写source\_run\_id或view\_version
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A01失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A01(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G1数据P0 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}03\_Smartbi证据\textbackslash{}A01 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{A02｜执行Smartbi四表P0小样门}
+\subsection*{1. 本卡为什么要做}
+先用小样证明Smartbi上传、日期类型、关系、筛选、图表和XML链路可行，能把平台问题提前暴露，避免207,720行情景表导入后才返工。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item 4张P0小样成功导入
+\item month\_end被识别为日期，iso3为文本
+\item 关系前后事实行数不膨胀
+\item 国家KPI和两张折线可复算
+\item P0 XML成功导出并有SHA-256
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item A01为PASS
+\item Smartbi上传、建模和XML权限已人工确认
+\item 有P0独立前缀
+\item 能够保存全页截图
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{只读输入：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}01\_\allowbreak{}输入只读镜像}\par
+\noindent\textbf{P0证据目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}P0}\par
+\noindent\textbf{P0对象前缀：}{\promptlatin\promptcjk\small P0\_\allowbreak{}XH202612\_\allowbreak{}V50}\par
+\noindent\textbf{四张源表：}{\promptlatin\promptcjk\small dim\_\allowbreak{}country.xlsx；dim\_\allowbreak{}date.xlsx；country\_\allowbreak{}monthly\_\allowbreak{}risk.xlsx；global\_\allowbreak{}cycle\_\allowbreak{}month.xlsx}\par
+\begin{gatebox}{上一门槛}
+A01的三张辅助表已通过QA；P0未通过禁止进入A03。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A02完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的}@*)Smartbi(*@{\promptcjk 平台小样验收教练。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+Smartbi(*@{\promptcjk 平台小样验收教练，执行}@*)A02 P0(*@{\promptcjk 门}@*)
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 只读输入：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\01_(*@{\promptcjk 输入只读镜像}@*)
+- P0(*@{\promptcjk 证据目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\P0
+- P0(*@{\promptcjk 对象前缀：}@*)P0_XH202612_V50
+- (*@{\promptcjk 四张源表：}@*)dim_country.xlsx(*@{\promptcjk ；}@*)dim_date.xlsx(*@{\promptcjk ；}@*)country_monthly_risk.xlsx(*@{\promptcjk ；}@*)global_cycle_month.xlsx
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 从源表复制限定小样到}@*)A(*@{\promptcjk 工作区}@*)
+2. (*@{\promptcjk 指导实际上传、字段类型设置、关系和图表}@*)
+3. (*@{\promptcjk 生成本地基准与平台对账}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 直接导入全部正式表}@*)
+2. (*@{\promptcjk 使用正式资源名}@*)
+3. (*@{\promptcjk 日期仍为文本时继续}@*)
+4. (*@{\promptcjk 用}@*)DISTINCT(*@{\promptcjk 掩盖膨胀}@*)
+5. (*@{\promptcjk 把同一非空目标覆盖恢复称为独立恢复}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：选择至少}@*)3(*@{\promptcjk 国、连续}@*)24(*@{\promptcjk 个月并包含一个缺失样本}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：生成}@*)4(*@{\promptcjk 张}@*)P0(*@{\promptcjk 表并保留主键、来源、质量和}@*)run_id
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：由}@*)A(*@{\promptcjk 人工上传并记录源}@*)/(*@{\promptcjk 平台行数与字段类型}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：建立}@*)dim_country(*@{\promptcjk 与}@*)dim_date(*@{\promptcjk 到事实表的单向关系}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：建立}@*)1(*@{\promptcjk 个国家数}@*)KPI(*@{\promptcjk 、}@*)2(*@{\promptcjk 张折线、国家与月份筛选器}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：验证筛选、缺失和关系前后行数}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：导出}@*)P0 XML(*@{\promptcjk 并计算}@*)SHA-256(*@{\promptcjk ；没有干净目标就明确写恢复未验收}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- P0(*@{\promptcjk 四张样本表}@*)
+- P0_IMPORT_RECONCILIATION.xlsx
+- P0_TYPE_CHECK.xlsx
+- P0_RELATIONSHIP_CHECK.xlsx
+- P0_XML_DEPENDENCIES.txt
+- P0_ACCEPTANCE.txt
+- (*@{\promptcjk 上传、类型、关系、图表和}@*)XML(*@{\promptcjk 截图}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- P0(*@{\promptcjk 样本工作簿}@*)
+- P0_IMPORT_RECONCILIATION.xlsx
+- P0_TYPE_CHECK.xlsx
+- P0_RELATIONSHIP_CHECK.xlsx
+- P0_XML_DEPENDENCIES.txt
+- P0_ACCEPTANCE.txt
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 四表行数一致且主键正常}@*)
+- (*@{\promptcjk 日期}@*)/(*@{\promptcjk 文本}@*)/(*@{\promptcjk 数字类型正确}@*)
+- (*@{\promptcjk 筛选不膨胀且缺失仍为空}@*)
+- KPI(*@{\promptcjk 和折线误差不超过}@*)1%
+- XML(*@{\promptcjk 已导出并有哈希}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- P0(*@{\promptcjk 未}@*)PASS(*@{\promptcjk 却进入全量导入}@*)
+- (*@{\promptcjk 日期是文本}@*)
+- (*@{\promptcjk 关系导致膨胀}@*)
+- (*@{\promptcjk 缺失显示}@*)0
+- AI(*@{\promptcjk 假装完成实际平台点击}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 生成小样与本地基准、解释Smartbi点击位置 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 上传、设置类型和关系、操作筛选、截图并确认P0状态 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 选择至少3国、连续24个月并包含一个缺失样本
+\item 生成4张P0表并保留主键、来源、质量和run\_id
+\item 由A人工上传并记录源/平台行数与字段类型
+\item 建立dim\_country与dim\_date到事实表的单向关系
+\item 建立1个国家数KPI、2张折线、国家与月份筛选器
+\item 验证筛选、缺失和关系前后行数
+\item 导出P0 XML并计算SHA-256；没有干净目标就明确写恢复未验收
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+导入 & 四表前后行数相等 & 任一不等：FAIL \\
+日期 & month\_end为日期 & 文本：停止 \\
+国家码 & iso3为文本且保留三位 & 自动转数值：停止 \\
+关系 & 筛选有效且事实行数不变 & 膨胀或失配：FAIL \\
+图表 & 与本地基准误差不超过1\% & 超差：查聚合 \\
+XML & 导出成功并有哈希 & 失败：P0不通过 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item P0四张样本表
+\item P0\_IMPORT\_RECONCILIATION.xlsx
+\item P0\_TYPE\_CHECK.xlsx
+\item P0\_RELATIONSHIP\_CHECK.xlsx
+\item P0\_XML\_DEPENDENCIES.txt
+\item P0\_ACCEPTANCE.txt
+\item 上传、类型、关系、图表和XML截图
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 四表行数一致且主键正常
+\item 日期/文本/数字类型正确
+\item 筛选不膨胀且缺失仍为空
+\item KPI和折线误差不超过1\%
+\item XML已导出并有哈希
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item P0未PASS却进入全量导入
+\item 日期是文本
+\item 关系导致膨胀
+\item 缺失显示0
+\item AI假装完成实际平台点击
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A02失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A02(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G1数据P0 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}03\_Smartbi证据\textbackslash{}P0 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{A03｜按固定顺序导入18张正式表和3张辅助表}
+\subsection*{1. 本卡为什么要做}
+固定顺序先建维度再进事实，能降低类型和关系返工；逐表对账可防止Smartbi默认去重、截断或字段误识别。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item 18张正式表按1--18顺序全部导入
+\item 正式表合计313,593行
+\item 三张辅助表为40/20/660行
+\item 每张表均有源/平台行数、类型、主键和截图
+\item 3张控制簿只核对、不进入业务模型
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item A02 P0书面PASS
+\item 21个正式对象名未被占用
+\item 正式表只读镜像和辅助表目录完整
+\item 控制清单可读取
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{正式表目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}01\_\allowbreak{}输入只读镜像\textbackslash{}\allowbreak{}D0-\allowbreak{}D12\_\allowbreak{}数据交付\_\allowbreak{}V4.2\textbackslash{}\allowbreak{}data\textbackslash{}\allowbreak{}smartbi}\par
+\noindent\textbf{辅助表目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}02\_\allowbreak{}MVP辅助表}\par
+\noindent\textbf{对账目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}全量导入}\par
+\noindent\textbf{数据对象前缀：}{\promptlatin\promptcjk\small TB\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}}\par
+\begin{gatebox}{上一门槛}
+G1 P0必须PASS；没有P0证据就直接BLOCKED。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A03完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的}@*)Smartbi(*@{\promptcjk 全量导入与逐表对账员。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+Smartbi(*@{\promptcjk 全量导入与逐表对账员，执行}@*)A03
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 正式表目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\01_(*@{\promptcjk 输入只读镜像}@*)\D0-D12_(*@{\promptcjk 数据交付}@*)_V4.2\data\smartbi
+- (*@{\promptcjk 辅助表目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\02_MVP(*@{\promptcjk 辅助表}@*)
+- (*@{\promptcjk 对账目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\(*@{\promptcjk 全量导入}@*)
+- (*@{\promptcjk 数据对象前缀：}@*)TB_XH202612_V50_
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 按模型映射清单顺序人工上传}@*)
+2. (*@{\promptcjk 生成逐表源端基准和}@*)Smartbi(*@{\promptcjk 对账表}@*)
+3. (*@{\promptcjk 登记资源锁和类型审计}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 覆盖}@*)V4.1/V4.2/V4.3(*@{\promptcjk 对象}@*)
+2. (*@{\promptcjk 调换固定顺序}@*)
+3. (*@{\promptcjk 删列、抽样、去重或填}@*)0(*@{\promptcjk 来通过}@*)
+4. (*@{\promptcjk 把}@*)3(*@{\promptcjk 张控制簿计入}@*)18(*@{\promptcjk 张业务表}@*)
+5. (*@{\promptcjk 静默修改字段名、类型或聚合}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：先检查}@*)21(*@{\promptcjk 个正式对象名不存在并建立资源锁}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：按}@*)1--6(*@{\promptcjk 导入维度表，每张导完立即核对}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：按}@*)7--14(*@{\promptcjk 导入国别、周期、历史与企业表}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：按}@*)15--18(*@{\promptcjk 导入资产、情景、证据与来源表}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：正式}@*)18(*@{\promptcjk 表总行数复核为}@*)313,593
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：在正式表}@*)PASS(*@{\promptcjk 后导入三张辅助表并核对}@*)40/20/660
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：导出逐表类型、日期范围、主键和截图索引}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- SMARTBI_IMPORT_RECONCILIATION_V50.xlsx
+- SMARTBI_RESOURCE_LOCK_V50.xlsx
+- SMARTBI_TYPE_AUDIT_V50.xlsx
+- A03_EXECUTION_LOG_V50.txt
+- 21(*@{\promptcjk 张逐表截图}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- SMARTBI_IMPORT_RECONCILIATION_V50.xlsx
+- SMARTBI_RESOURCE_LOCK_V50.xlsx
+- SMARTBI_TYPE_AUDIT_V50.xlsx
+- A03_EXECUTION_LOG_V50.txt
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- 18(*@{\promptcjk 张正式表合计}@*)313,593(*@{\promptcjk 行}@*)
+- (*@{\promptcjk 关键表行数精确一致}@*)
+- (*@{\promptcjk 三张辅助表}@*)40/20/660
+- (*@{\promptcjk 主键重复}@*)0(*@{\promptcjk 、空主键}@*)0
+- (*@{\promptcjk 对象命名正确且未覆盖旧对象}@*)
+- (*@{\promptcjk 字段类型与源端合同一致}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 无}@*)P0(*@{\promptcjk 证据直接全量导入}@*)
+- (*@{\promptcjk 覆盖旧对象}@*)
+- (*@{\promptcjk 行数或主键异常}@*)
+- (*@{\promptcjk 控制簿误入模型}@*)
+- (*@{\promptcjk 用页面计算掩盖导入错误}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 生成导入清单、对账模板与源端基准 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 逐表上传、检查类型、截图和确认资源锁 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 先检查21个正式对象名不存在并建立资源锁
+\item 按1--6导入维度表，每张导完立即核对
+\item 按7--14导入国别、周期、历史与企业表
+\item 按15--18导入资产、情景、证据与来源表
+\item 正式18表总行数复核为313,593
+\item 在正式表PASS后导入三张辅助表并核对40/20/660
+\item 导出逐表类型、日期范围、主键和截图索引
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+正式表总数 & 18，不含控制簿 & 计数不符：停止 \\
+正式总行数 & 313,593 & 定位到具体表 \\
+关键表 & 130 / 7,680 / 23 / 20 / 660 / 91,727 / 207,720 / 734 & 任一不符：FAIL \\
+辅助表 & 40 / 20 / 660 & 任一不符：FAIL \\
+对象名 & 均为TB\_XH202612\_V50\_前缀 & 覆盖旧对象：硬失败 \\
+类型 & ISO3文本、日期为日期、数字为数值 & 误识别：回到该表 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item SMARTBI\_IMPORT\_RECONCILIATION\_V50.xlsx
+\item SMARTBI\_RESOURCE\_LOCK\_V50.xlsx
+\item SMARTBI\_TYPE\_AUDIT\_V50.xlsx
+\item A03\_EXECUTION\_LOG\_V50.txt
+\item 21张逐表截图
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 18张正式表合计313,593行
+\item 关键表行数精确一致
+\item 三张辅助表40/20/660
+\item 主键重复0、空主键0
+\item 对象命名正确且未覆盖旧对象
+\item 字段类型与源端合同一致
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 无P0证据直接全量导入
+\item 覆盖旧对象
+\item 行数或主键异常
+\item 控制簿误入模型
+\item 用页面计算掩盖导入错误
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A03失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A03(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G2模型冻结 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}03\_Smartbi证据\textbackslash{}全量导入 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{A04｜建立星座模型、关系、指标并冻结给B}
+\subsection*{1. 本卡为什么要做}
+六页和25问必须共用同一个冻结模型。维度连接事实、事实不互连，可以避免多对多造成的数字膨胀；版本冻结让B不会因为A静默改字段而返工。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item 共享模型MDL\_XH202612\_V50\_COUNTRY\_RESERVE可查询
+\item 指标模型IM\_XH202612\_V50\_COUNTRY\_RESERVE可复算
+\item 关系后事实行数不膨胀
+\item 企业地区桥没有接到国家
+\item B收到只读交接合同并签收
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item A03全部导入并对账PASS
+\item 知道每表粒度和主键
+\item B的只读账号/权限可测试
+\item 共享问题单目录已建立
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{数据对象前缀：}{\promptlatin\promptcjk\small TB\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}}\par
+\noindent\textbf{共享模型：}{\promptlatin\promptcjk\small MDL\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}COUNTRY\_\allowbreak{}RESERVE}\par
+\noindent\textbf{指标模型：}{\promptlatin\promptcjk\small IM\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}COUNTRY\_\allowbreak{}RESERVE}\par
+\noindent\textbf{模型证据：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}模型}\par
+\noindent\textbf{交接目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}00\_\allowbreak{}共享\textbackslash{}\allowbreak{}模型交接}\par
+\begin{gatebox}{上一门槛}
+A03正式18表和3张辅助表全部PASS。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A04完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的}@*)Smartbi(*@{\promptcjk 数据模型架构师。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+Smartbi(*@{\promptcjk 数据模型架构师，执行}@*)A04
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 数据对象前缀：}@*)TB_XH202612_V50_
+- (*@{\promptcjk 共享模型：}@*)MDL_XH202612_V50_COUNTRY_RESERVE
+- (*@{\promptcjk 指标模型：}@*)IM_XH202612_V50_COUNTRY_RESERVE
+- (*@{\promptcjk 模型证据：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\(*@{\promptcjk 模型}@*)
+- (*@{\promptcjk 交接目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\00_(*@{\promptcjk 共享}@*)\(*@{\promptcjk 模型交接}@*)
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 建立维度到事实的单向关系}@*)
+2. (*@{\promptcjk 为每条关系生成膨胀与未匹配审计}@*)
+3. (*@{\promptcjk 建立基础指标和交接合同}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 事实表之间直接多对多}@*)
+2. (*@{\promptcjk 把地区桥连接国家}@*)
+3. (*@{\promptcjk 年度政策复制成月度}@*)
+4. (*@{\promptcjk 用}@*)DISTINCT(*@{\promptcjk 掩盖重复}@*)
+5. (*@{\promptcjk 静默改字段、类型、关系或指标}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：用}@*)dim_country(*@{\promptcjk 、}@*)dim_date(*@{\promptcjk 、}@*)dim_year(*@{\promptcjk 、}@*)dim_company(*@{\promptcjk 、}@*)dim_asset(*@{\promptcjk 、}@*)dim_event(*@{\promptcjk 作为共享维度}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：逐条建立国家、日期、年份、企业、资产和事件关系，每条关系后核对事实行数}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：}@*)bridge_company_geography(*@{\promptcjk 只连接企业与财年，不连接国家}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：建立}@*)130(*@{\promptcjk 国、}@*)40(*@{\promptcjk 国、}@*)23(*@{\promptcjk 事件、}@*)20(*@{\promptcjk 企业、}@*)734(*@{\promptcjk 来源及}@*)FX/CPI/ODI/(*@{\promptcjk 回撤}@*)/CVaR/(*@{\promptcjk 成本}@*)/(*@{\promptcjk 权重等指标}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：为指标写公式、粒度、单位、日期口径、空值规则、来源表和允许页面}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：测试}@*)B(*@{\promptcjk 只读查询和页面}@*)3/5/6(*@{\promptcjk 所需字段}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：冻结版本、时间和变更流程，}@*)A/B(*@{\promptcjk 签收}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- (*@{\promptcjk 关系模型全屏截图}@*)
+- RELATIONSHIP_AUDIT_V50.xlsx
+- METRIC_DICTIONARY_V50.xlsx
+- MODEL_HANDOFF_V50.txt
+- TABLE_CONTRACT_V50.xlsx
+- FIELD_DICTIONARY_V50.xlsx
+- RELATIONSHIP_MAP_V50.xlsx
+- KNOWN_GAPS_V50.txt
+- MODEL_CHANGELOG_V50.txt
+- A/B(*@{\promptcjk 签收}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- RELATIONSHIP_AUDIT_V50.xlsx
+- METRIC_DICTIONARY_V50.xlsx
+- MODEL_HANDOFF_V50.txt
+- TABLE_CONTRACT_V50.xlsx
+- FIELD_DICTIONARY_V50.xlsx
+- RELATIONSHIP_MAP_V50.xlsx
+- KNOWN_GAPS_V50.txt
+- MODEL_CHANGELOG_V50.txt
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 不存在事实}@*)--(*@{\promptcjk 事实多对多}@*)
+- (*@{\promptcjk 关系前后事实行数不膨胀}@*)
+- (*@{\promptcjk 地区桥不传播到国家}@*)
+- (*@{\promptcjk 关键指标误差不超过}@*)1%
+- B(*@{\promptcjk 可读不可写}@*)
+- (*@{\promptcjk 冻结版本和变更流程完整}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 循环或多对多关系}@*)
+- (*@{\promptcjk 企业地区被错误映射国家}@*)
+- (*@{\promptcjk 用}@*)DISTINCT(*@{\promptcjk 掩盖膨胀}@*)
+- B(*@{\promptcjk 能修改模型}@*)
+- (*@{\promptcjk 冻结后静默改字段}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 生成关系审计和指标字典、解释粒度 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 在Smartbi建立关系/指标、设置权限、截图并与B签收 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 用dim\_country、dim\_date、dim\_year、dim\_company、dim\_asset、dim\_event作为共享维度
+\item 逐条建立国家、日期、年份、企业、资产和事件关系，每条关系后核对事实行数
+\item bridge\_company\_geography只连接企业与财年，不连接国家
+\item 建立130国、40国、23事件、20企业、734来源及FX/CPI/ODI/回撤/CVaR/成本/权重等指标
+\item 为指标写公式、粒度、单位、日期口径、空值规则、来源表和允许页面
+\item 测试B只读查询和页面3/5/6所需字段
+\item 冻结版本、时间和变更流程，A/B签收
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+维度键 & 唯一且无空 & 非唯一：禁止建关系 \\
+事实行数 & 关系前后不变 & 增加：禁用最近关系 \\
+地区桥 & 8条region、iso3空、无国家关系 & 出现国家传播：硬失败 \\
+基础指标 & 130/40/23/20/734准确 & 误差超1\%：FAIL \\
+B权限 & 可只读查询、不可改模型 & 可写或不可读：调整权限 \\
+模型版本 & 有冻结时间与修订号 & 静默变化：硬失败 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item 关系模型全屏截图
+\item RELATIONSHIP\_AUDIT\_V50.xlsx
+\item METRIC\_DICTIONARY\_V50.xlsx
+\item MODEL\_HANDOFF\_V50.txt
+\item TABLE\_CONTRACT\_V50.xlsx
+\item FIELD\_DICTIONARY\_V50.xlsx
+\item RELATIONSHIP\_MAP\_V50.xlsx
+\item KNOWN\_GAPS\_V50.txt
+\item MODEL\_CHANGELOG\_V50.txt
+\item A/B签收
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 不存在事实--事实多对多
+\item 关系前后事实行数不膨胀
+\item 地区桥不传播到国家
+\item 关键指标误差不超过1\%
+\item B可读不可写
+\item 冻结版本和变更流程完整
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 循环或多对多关系
+\item 企业地区被错误映射国家
+\item 用DISTINCT掩盖膨胀
+\item B能修改模型
+\item 冻结后静默改字段
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A04失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A04(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G2模型冻结 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}03\_Smartbi证据\textbackslash{}模型 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{A05｜建设页面1“亚非拉风险全景”}
+\subsection*{1. 本卡为什么要做}
+第一页要在十秒内让评委明白覆盖范围、40国触发、投资暴露和数据截止期，是六页故事的入口。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item 页面对象名正确
+\item 恰好4个核心组件
+\item 130/40/23总量准确
+\item 四类触发标签不把数据不足显示为绿色
+\item 点击国家只传iso3到DB02
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item G2模型冻结
+\item DB01对象未被占用
+\item MVP\_country\_latest为40行
+\item A拥有DB01写权限
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{共享模型：}{\promptlatin\promptcjk\small MDL\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}COUNTRY\_\allowbreak{}RESERVE}\par
+\noindent\textbf{指标模型：}{\promptlatin\promptcjk\small IM\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}COUNTRY\_\allowbreak{}RESERVE}\par
+\noindent\textbf{页面对象：}{\promptlatin\promptcjk\small DB01\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}RISK\_\allowbreak{}OVERVIEW}\par
+\noindent\textbf{证据目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}DB01}\par
+\begin{gatebox}{上一门槛}
+G2模型冻结并由B签收。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A05完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的}@*)Smartbi(*@{\promptcjk 看板教练。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+Smartbi(*@{\promptcjk 看板教练，执行}@*)A05(*@{\promptcjk 页面}@*)1
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 共享模型：}@*)MDL_XH202612_V50_COUNTRY_RESERVE
+- (*@{\promptcjk 指标模型：}@*)IM_XH202612_V50_COUNTRY_RESERVE
+- (*@{\promptcjk 页面对象：}@*)DB01_XH202612_V50_RISK_OVERVIEW
+- (*@{\promptcjk 证据目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\DB01
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 设计}@*)4(*@{\promptcjk 个核心组件与筛选联动}@*)
+2. (*@{\promptcjk 逐组件与本地基准对账}@*)
+3. (*@{\promptcjk 记录冷}@*)/(*@{\promptcjk 热缓存操作时间}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 超过}@*)4(*@{\promptcjk 个核心组件}@*)
+2. (*@{\promptcjk 把数据不足显示为安全绿色}@*)
+3. (*@{\promptcjk 混淆投资年份和风险月份}@*)
+4. (*@{\promptcjk 增加预测分数}@*)
+5. (*@{\promptcjk 隐藏}@*)source_id(*@{\promptcjk 、质量或截止期}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：建立}@*)130(*@{\promptcjk 国}@*)/40(*@{\promptcjk 国}@*)/23(*@{\promptcjk 事件总量卡组}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：建立}@*)40(*@{\promptcjk 国触发表或地图，标签只允许四类}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：建立最新}@*)ODI(*@{\promptcjk 存量}@*)--(*@{\promptcjk 最大阈值倍数散点，分别显示投资年份与风险日期}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：建立来源与截止期条，显示}@*)FX(*@{\promptcjk 、}@*)CPI(*@{\promptcjk 、储备、}@*)ODI(*@{\promptcjk 的独立日期与}@*)source_id
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：加入区域、国家、质量筛选并验证点数}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：配置点击国家传}@*)iso3(*@{\promptcjk 到}@*)DB02(*@{\promptcjk ，不传其他猜测参数}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：做三次典型筛选并对账、计时、截图}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- DB01(*@{\promptcjk 全页截图}@*)
+- (*@{\promptcjk 四组件与筛选截图}@*)
+- DB01_COMPONENT_MAP_V50.xlsx
+- DB01_RECONCILIATION_V50.xlsx
+- DB01_ACCEPTANCE_V50.txt
+- (*@{\promptcjk 三次性能记录}@*)
+- DB01(*@{\promptcjk 到}@*)DB02(*@{\promptcjk 下钻截图}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- Smartbi(*@{\promptcjk 页面}@*)DB01
+- DB01_COMPONENT_MAP_V50.xlsx
+- DB01_RECONCILIATION_V50.xlsx
+- DB01_ACCEPTANCE_V50.txt
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 总量精确为}@*)130/40/23
+- 40(*@{\promptcjk 国点数和标签与辅助表一致}@*)
+- (*@{\promptcjk 缺失不显示}@*)0
+- (*@{\promptcjk 独立日期、来源和质量可见}@*)
+- iso3(*@{\promptcjk 下钻成功}@*)
+- (*@{\promptcjk 典型操作不超过}@*)10(*@{\promptcjk 秒}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 把缺失涂绿或填}@*)0
+- (*@{\promptcjk 总量或点数错误}@*)
+- (*@{\promptcjk 一国多点未解释}@*)
+- (*@{\promptcjk 下钻丢失}@*)iso3
+- (*@{\promptcjk 隐藏来源}@*)
+- (*@{\promptcjk 性能超}@*)10(*@{\promptcjk 秒仍发布}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 提供图表字段映射、对账公式和诊断建议 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 实际搭页、配置交互、点击筛选、计时和截图 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 建立130国/40国/23事件总量卡组
+\item 建立40国触发表或地图，标签只允许四类
+\item 建立最新ODI存量--最大阈值倍数散点，分别显示投资年份与风险日期
+\item 建立来源与截止期条，显示FX、CPI、储备、ODI的独立日期与source\_id
+\item 加入区域、国家、质量筛选并验证点数
+\item 配置点击国家传iso3到DB02，不传其他猜测参数
+\item 做三次典型筛选并对账、计时、截图
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+总量 & 130/40/23 & 任一错误：查模型 \\
+触发标签 & 双触发/单触发/未触发/数据不足 & 出现第五类或未知当安全：FAIL \\
+散点 & 一国一点且两轴日期分开 & 重复或日期合并：FAIL \\
+来源 & 可见source\_id与质量 & 缺失：不发布 \\
+下钻 & 只传当前iso3 & 参数丢失/多传：修交互 \\
+性能 & 典型操作不超过10秒 & 超时：减装饰、查模型 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item DB01全页截图
+\item 四组件与筛选截图
+\item DB01\_COMPONENT\_MAP\_V50.xlsx
+\item DB01\_RECONCILIATION\_V50.xlsx
+\item DB01\_ACCEPTANCE\_V50.txt
+\item 三次性能记录
+\item DB01到DB02下钻截图
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 总量精确为130/40/23
+\item 40国点数和标签与辅助表一致
+\item 缺失不显示0
+\item 独立日期、来源和质量可见
+\item iso3下钻成功
+\item 典型操作不超过10秒
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 把缺失涂绿或填0
+\item 总量或点数错误
+\item 一国多点未解释
+\item 下钻丢失iso3
+\item 隐藏来源
+\item 性能超10秒仍发布
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A05失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A05(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G3六页初验 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}03\_Smartbi证据\textbackslash{}DB01 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{A06｜建设页面2“国别与危机下钻”}
+\subsection*{1. 本卡为什么要做}
+第二页解释一个国家为何触发风险，必须把月度指标、年度政策和危机事件分层，防止把低频政策伪造成月度曲线。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item DB01到DB02的iso3下钻成功
+\item 4个核心组件展示摘要、FX/CPI、储备覆盖、事件政策
+\item 5国抽查数值与日期一致
+\item DB02到DB04只传iso3
+\item 年度政策没有乘12膨胀
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item DB01验收通过
+\item 共享模型仍为冻结版本
+\item country\_event为23行
+\item A拥有DB02写权限
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{共享模型：}{\promptlatin\promptcjk\small MDL\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}COUNTRY\_\allowbreak{}RESERVE}\par
+\noindent\textbf{页面对象：}{\promptlatin\promptcjk\small DB02\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}COUNTRY\_\allowbreak{}DRILL}\par
+\noindent\textbf{上游页面：}{\promptlatin\promptcjk\small DB01\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}RISK\_\allowbreak{}OVERVIEW}\par
+\noindent\textbf{下游页面：}{\promptlatin\promptcjk\small DB04\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}LIQUIDITY\_\allowbreak{}LAB}\par
+\noindent\textbf{证据目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}DB02}\par
+\begin{gatebox}{上一门槛}
+DB01入口可用且模型版本未变化。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A06完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的}@*)Smartbi(*@{\promptcjk 国别风险页面教练。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+Smartbi(*@{\promptcjk 国别风险页面教练，执行}@*)A06(*@{\promptcjk 页面}@*)2
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 共享模型：}@*)MDL_XH202612_V50_COUNTRY_RESERVE
+- (*@{\promptcjk 页面对象：}@*)DB02_XH202612_V50_COUNTRY_DRILL
+- (*@{\promptcjk 上游页面：}@*)DB01_XH202612_V50_RISK_OVERVIEW
+- (*@{\promptcjk 下游页面：}@*)DB04_XH202612_V50_LIQUIDITY_LAB
+- (*@{\promptcjk 证据目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\DB02
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 配置单国筛选、趋势和事件政策表}@*)
+2. (*@{\promptcjk 生成}@*)5(*@{\promptcjk 国本地基准}@*)
+3. (*@{\promptcjk 验证两个下钻方向}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 年度政策复制成}@*)12(*@{\promptcjk 个月}@*)
+2. (*@{\promptcjk 裁掉危机极值}@*)
+3. (*@{\promptcjk 把本币}@*)/(*@{\promptcjk 美元方向写反}@*)
+4. (*@{\promptcjk 用事件标题猜连接}@*)
+5. (*@{\promptcjk 向}@*)DB04(*@{\promptcjk 传不存在的}@*)event_id(*@{\promptcjk 筛选}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：接收}@*)DB01(*@{\promptcjk 的}@*)iso3(*@{\promptcjk 并设置国家、月份范围、事件类型和质量筛选}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：建立单国最新汇率、}@*)CPI(*@{\promptcjk 、储备、进口覆盖、投资摘要并逐项显示日期和单位}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：建立}@*)FX(*@{\promptcjk 与}@*)CPI(*@{\promptcjk 趋势并注明正向}@*)FX(*@{\promptcjk 变化代表本币贬值}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：建立储备与进口覆盖趋势，分别显示美元与月数单位}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：建立事件与政策表，显示起止、确认日、触发值、有效期和}@*)source_id
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：配置来源下钻；进入}@*)DB04(*@{\promptcjk 时只传}@*)iso3(*@{\promptcjk ，不传}@*)event_id
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：随机}@*)5(*@{\promptcjk 国核对最新值、趋势点数、事件与政策行数}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- DB02(*@{\promptcjk 全页与}@*)4(*@{\promptcjk 组件截图}@*)
+- 5(*@{\promptcjk 国逐项核对表}@*)
+- DB02_COMPONENT_MAP_V50.xlsx
+- DB02_RECONCILIATION_V50.xlsx
+- DB02_ACCEPTANCE_V50.txt
+- DB01(*@{\promptcjk 到}@*)DB02(*@{\promptcjk 及}@*)DB02(*@{\promptcjk 到}@*)DB04(*@{\promptcjk 截图}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- Smartbi(*@{\promptcjk 页面}@*)DB02
+- DB02_COMPONENT_MAP_V50.xlsx
+- DB02_RECONCILIATION_V50.xlsx
+- DB02_ACCEPTANCE_V50.txt
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- 5(*@{\promptcjk 国最新值和日期一致}@*)
+- (*@{\promptcjk 趋势点数与源表一致}@*)
+- (*@{\promptcjk 政策无月度膨胀}@*)
+- (*@{\promptcjk 事件唯一数}@*)23
+- (*@{\promptcjk 两个下钻参数正确}@*)
+- (*@{\promptcjk 典型操作不超过}@*)10(*@{\promptcjk 秒}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 汇率方向错误}@*)
+- (*@{\promptcjk 年度政策膨胀}@*)
+- (*@{\promptcjk 不同指标日期被合并}@*)
+- (*@{\promptcjk 事件重复}@*)
+- (*@{\promptcjk 向}@*)DB04(*@{\promptcjk 传}@*)event_id
+- (*@{\promptcjk 页面手工覆盖数据}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 提供字段映射、5国核对脚本和交互诊断 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 搭页、配置下钻、逐国操作和截图 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 接收DB01的iso3并设置国家、月份范围、事件类型和质量筛选
+\item 建立单国最新汇率、CPI、储备、进口覆盖、投资摘要并逐项显示日期和单位
+\item 建立FX与CPI趋势并注明正向FX变化代表本币贬值
+\item 建立储备与进口覆盖趋势，分别显示美元与月数单位
+\item 建立事件与政策表，显示起止、确认日、触发值、有效期和source\_id
+\item 配置来源下钻；进入DB04时只传iso3，不传event\_id
+\item 随机5国核对最新值、趋势点数、事件与政策行数
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+入口 & DB01传入iso3后只显示该国 & 未过滤：修参数 \\
+最新值 & 各字段独立最新非空与日期 & 强行同月：FAIL \\
+FX方向 & 本币/美元上升=本币贬值 & 方向相反：硬失败 \\
+政策 & 保持年度粒度 & 乘12：硬失败 \\
+事件 & 唯一事件总数仍23 & 重复：查关系 \\
+DB04下钻 & 只传iso3 & event\_id造成空页：修交互 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item DB02全页与4组件截图
+\item 5国逐项核对表
+\item DB02\_COMPONENT\_MAP\_V50.xlsx
+\item DB02\_RECONCILIATION\_V50.xlsx
+\item DB02\_ACCEPTANCE\_V50.txt
+\item DB01到DB02及DB02到DB04截图
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 5国最新值和日期一致
+\item 趋势点数与源表一致
+\item 政策无月度膨胀
+\item 事件唯一数23
+\item 两个下钻参数正确
+\item 典型操作不超过10秒
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 汇率方向错误
+\item 年度政策膨胀
+\item 不同指标日期被合并
+\item 事件重复
+\item 向DB04传event\_id
+\item 页面手工覆盖数据
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A06失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A06(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G3六页初验 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}03\_Smartbi证据\textbackslash{}DB02 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{A07｜建设页面4、性能检查、XML导出与独立恢复}
+\subsection*{1. 本卡为什么要做}
+页面4承接国别风险并展示对称情景；XML独立恢复证明作品不是只在A当前账号里能打开。该卡是A侧发布门，必须把页面、性能、导出、恢复和B只读复核串成闭环。
+
+
+\subsection*{2. 完成后应该看到什么}
+\begin{itemize}
+\item DB04展示0\%--20\%网格和三策略对称比较
+\item 黄金与美元不占优的反例可见
+\item DB01/DB02/DB04典型操作不超过10秒
+\item XML有依赖清单和SHA-256
+\item A在不存在V5对象的独立目标恢复，B只读复核KPI
+\end{itemize}
+
+\subsection*{3. 开始前必须具备什么}
+\begin{itemize}[label=$\square$]
+\item DB01、DB02通过
+\item 三页共享同一冻结模型
+\item 有XML导出与目标环境权限
+\item 独立目标预先无XH202612\_V50对象
+\end{itemize}
+
+\subsection*{4. 输入文件、路径和上一门槛}
+\noindent\textbf{共享模型：}{\promptlatin\promptcjk\small MDL\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}COUNTRY\_\allowbreak{}RESERVE}\par
+\noindent\textbf{页面对象：}{\promptlatin\promptcjk\small DB04\_\allowbreak{}XH202612\_\allowbreak{}V50\_\allowbreak{}LIQUIDITY\_\allowbreak{}LAB}\par
+\noindent\textbf{情景源表：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}01\_\allowbreak{}输入只读镜像\textbackslash{}\allowbreak{}D0-\allowbreak{}D12\_\allowbreak{}数据交付\_\allowbreak{}V4.2\textbackslash{}\allowbreak{}data\textbackslash{}\allowbreak{}smartbi\textbackslash{}\allowbreak{}portfolio\_\allowbreak{}scenario.xlsx}\par
+\noindent\textbf{XML目录：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}04\_\allowbreak{}XML恢复}\par
+\noindent\textbf{性能证据：}{\promptlatin\promptcjk\small C:\textbackslash{}\allowbreak{}Users\textbackslash{}\allowbreak{}73998\textbackslash{}\allowbreak{}Desktop\textbackslash{}\allowbreak{}数据创新平台-\allowbreak{}张奥\textbackslash{}\allowbreak{}V5.0\_\allowbreak{}双人执行工作区\textbackslash{}\allowbreak{}A\_\allowbreak{}数据平台\textbackslash{}\allowbreak{}03\_\allowbreak{}Smartbi证据\textbackslash{}\allowbreak{}性能}\par
+\begin{gatebox}{上一门槛}
+G3前A侧页面1、2完成；G5前六页依赖和B资源均已纳入导出清单。
+
+\end{gatebox}
+
+\subsection*{5. 可整段复制给AI的完整提示词}
+\begin{PromptBox}{A07完整提示词}
+(*@{\promptcjk 你是“智御出海}@*) V5.0(*@{\promptcjk ”的}@*)Smartbi(*@{\promptcjk 发布与恢复负责人。执行者是本科生，请用中文短句、逐步编号和明确读数指导，不假定执行者理解数据工程、}@*)Smartbi(*@{\promptcjk 或}@*)AI(*@{\promptcjk 治理。}@*)
+
+(*@{\promptcjk 【本次任务】}@*)
+Smartbi(*@{\promptcjk 发布与恢复负责人，执行}@*)A07
+
+(*@{\promptcjk 【永久规则】}@*)
+1. (*@{\promptcjk 原}@*)V4.3(*@{\promptcjk 计划书、内层}@*)ZIP(*@{\promptcjk 、}@*)18(*@{\promptcjk 张正式工作簿和}@*)3(*@{\promptcjk 张控制工作簿始终只读。}@*)
+2. AI(*@{\promptcjk 只能分析文件、生成脚本或给操作步骤；真实上传、点击、权限配置、}@*)XML(*@{\promptcjk 导入和录屏必须由执行者人工完成。}@*)
+3. (*@{\promptcjk 每一步先检查输入，再执行，再记录证据；没有证据不得写“完成”。}@*)
+4. (*@{\promptcjk 缺失保持为空，不填}@*)0(*@{\promptcjk ；代理和模拟必须明示；不得虚构}@*)source_id(*@{\promptcjk 、企业国家映射、海外收入或历史细节。}@*)
+5. (*@{\promptcjk 不提供规避制裁、外汇管制、托管、兑换、利润汇出或其他法律限制的方法。}@*)
+6. (*@{\promptcjk 黄金只作为}@*)0%(*@{\promptcjk —}@*)20%(*@{\promptcjk 网格中的风险缓冲情景，不是统一投资建议。}@*)
+7. (*@{\promptcjk 最终状态只有}@*)PASS(*@{\promptcjk 、}@*)FAIL(*@{\promptcjk 、}@*)BLOCKED(*@{\promptcjk 。失败不得降低门槛或伪造完成。}@*)
+
+(*@{\promptcjk 【精确输入】}@*)
+- (*@{\promptcjk 共享模型：}@*)MDL_XH202612_V50_COUNTRY_RESERVE
+- (*@{\promptcjk 页面对象：}@*)DB04_XH202612_V50_LIQUIDITY_LAB
+- (*@{\promptcjk 情景源表：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\01_(*@{\promptcjk 输入只读镜像}@*)\D0-D12_(*@{\promptcjk 数据交付}@*)_V4.2\data\smartbi\portfolio_scenario.xlsx
+- XML(*@{\promptcjk 目录：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\04_XML(*@{\promptcjk 恢复}@*)
+- (*@{\promptcjk 性能证据：}@*)C:\Users\73998\Desktop\(*@{\promptcjk 数据创新平台}@*)-(*@{\promptcjk 张奥}@*)\V5.0_(*@{\promptcjk 双人执行工作区}@*)\A_(*@{\promptcjk 数据平台}@*)\03_Smartbi(*@{\promptcjk 证据}@*)\(*@{\promptcjk 性能}@*)
+
+(*@{\promptcjk 【对象所有权】}@*)
+(*@{\promptcjk 唯一写入者：执行者}@*)A
+(*@{\promptcjk 不得直接修改其他执行者拥有的对象；发现问题时提交包含对象名、现象、截图、期望结果和截止时间的问题单。}@*)
+
+(*@{\promptcjk 【允许操作范围】}@*)
+1. (*@{\promptcjk 搭建}@*)DB04(*@{\promptcjk 与对称基准}@*)
+2. (*@{\promptcjk 执行冷}@*)/(*@{\promptcjk 热缓存性能测试}@*)
+3. (*@{\promptcjk 导出}@*)XML(*@{\promptcjk 、依赖和哈希}@*)
+4. (*@{\promptcjk 在干净目标恢复并生成源}@*)/(*@{\promptcjk 目标差异}@*)
+
+(*@{\promptcjk 【禁止事项】}@*)
+1. (*@{\promptcjk 只展示支持黄金的窗口}@*)
+2. (*@{\promptcjk 把}@*)2.5%(*@{\promptcjk 或}@*)5%(*@{\promptcjk 写成最佳建议}@*)
+3. (*@{\promptcjk 虚构}@*)90(*@{\promptcjk 天覆盖率或合法可动用比例}@*)
+4. (*@{\promptcjk 在非空目标覆盖恢复}@*)
+5. (*@{\promptcjk 写入密码、}@*)Cookie(*@{\promptcjk 、令牌或个人连接串}@*)
+
+(*@{\promptcjk 【分步骤动作与判据】}@*)
+(*@{\promptcjk 步骤}@*)1(*@{\promptcjk ：建立国家、期限、}@*)window_end(*@{\promptcjk 、}@*)strategy_id(*@{\promptcjk 、}@*)gold_weight(*@{\promptcjk 、}@*)cycle_state_at_end(*@{\promptcjk 筛选}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)2(*@{\promptcjk ：建立}@*)cum_return(*@{\promptcjk 、}@*)max_drawdown(*@{\promptcjk 、}@*)cvar_95(*@{\promptcjk 、}@*)recovery_months(*@{\promptcjk 、}@*)cost_total(*@{\promptcjk 关键结果}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)3(*@{\promptcjk ：建立}@*)0%--20%(*@{\promptcjk 黄金网格与完整}@*)/(*@{\promptcjk 去黄金}@*)/(*@{\promptcjk 去美元三策略同键比较}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)4(*@{\promptcjk ：建立反例和}@*)weight_sum(*@{\promptcjk 检查，偏离}@*)1(*@{\promptcjk 超过}@*)1e-8(*@{\promptcjk 的记录停止用于结论}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)5(*@{\promptcjk ：对}@*)DB01(*@{\promptcjk 区域、}@*)DB01(*@{\promptcjk 到}@*)DB02(*@{\promptcjk 、}@*)DB02(*@{\promptcjk 全期、}@*)DB04(*@{\promptcjk 切换各做}@*)3(*@{\promptcjk 次冷缓存与}@*)3(*@{\promptcjk 次热缓存}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)6(*@{\promptcjk ：导出全部}@*)V5(*@{\promptcjk 数据对象、模型、指标、六页与}@*)AI(*@{\promptcjk 依赖，生成依赖清单和}@*)SHA-256
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)7(*@{\promptcjk ：拍摄目标空置证据，由}@*)A(*@{\promptcjk 导入；}@*)B(*@{\promptcjk 随后只读核对对象数、关系、六页和}@*)130/40/23/20/734 KPI
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+(*@{\promptcjk 步骤}@*)8(*@{\promptcjk ：恢复后复测}@*)25(*@{\promptcjk 问关键题、筛选和性能；生成源}@*)/(*@{\promptcjk 目标差异与最终状态}@*)
+  (*@{\promptcjk 正常：完成该动作并得到可复核读数。}@*)
+  (*@{\promptcjk 异常：读数不符、文件不可达或权限不足时立即记录，不进入下一步。}@*)
+
+(*@{\promptcjk 【必留证据】}@*)
+- DB04(*@{\promptcjk 全页和筛选截图}@*)
+- DB04_RECONCILIATION_V50.xlsx
+- PERFORMANCE_TEST_V50.xlsx
+- XML(*@{\promptcjk 正式文件}@*)
+- XML_DEPENDENCY_LIST_V50.txt
+- XML_SHA256_V50.txt
+- RECOVERY_GUIDE_V50.txt
+- RECOVERY_LOG_V50.txt
+- SOURCE_TARGET_DIFF_V50.xlsx
+- (*@{\promptcjk 目标空置截图}@*)
+- B(*@{\promptcjk 只读复核回执}@*)
+- (*@{\promptcjk 恢复录屏}@*)
+
+(*@{\promptcjk 【必须输出】}@*)
+- Smartbi(*@{\promptcjk 页面}@*)DB04
+- PERFORMANCE_TEST_V50.xlsx
+- XML(*@{\promptcjk 及依赖}@*)/(*@{\promptcjk 哈希}@*)
+- RECOVERY_GUIDE_V50.txt
+- RECOVERY_LOG_V50.txt
+- SOURCE_TARGET_DIFF_V50.xlsx
+
+(*@{\promptcjk 【}@*)PASS(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 三策略同键对称、反例可见}@*)
+- (*@{\promptcjk 权重和误差不超过}@*)1e-8
+- (*@{\promptcjk 典型操作不超过}@*)10(*@{\promptcjk 秒}@*)
+- XML(*@{\promptcjk 依赖和哈希齐全}@*)
+- (*@{\promptcjk 独立目标恢复成功}@*)
+- (*@{\promptcjk 源}@*)/(*@{\promptcjk 目标}@*)KPI(*@{\promptcjk 误差不超过}@*)1%
+- B(*@{\promptcjk 只读复核签收}@*)
+
+(*@{\promptcjk 【}@*)FAIL(*@{\promptcjk 或}@*)BLOCKED(*@{\promptcjk 标准】}@*)
+- (*@{\promptcjk 目标不是空环境}@*)
+- XML(*@{\promptcjk 缺依赖}@*)
+- (*@{\promptcjk 源目标}@*)KPI(*@{\promptcjk 超差}@*)
+- (*@{\promptcjk 只报支持黄金结果}@*)
+- (*@{\promptcjk 性能失败仍发布}@*)
+- B(*@{\promptcjk 未复核}@*)
+- (*@{\promptcjk 泄露凭据}@*)
+
+(*@{\promptcjk 【最终回复格式】}@*)
+(*@{\promptcjk 先输出“输入检查”，再输出“逐步执行记录”，最后输出“证据索引”和“最终判定”。}@*)
+(*@{\promptcjk 如果你不能访问本地文件或}@*)Smartbi(*@{\promptcjk ，请明确写}@*)BLOCKED(*@{\promptcjk ，给执行者可照做的人工步骤和检查命令，不得把建议冒充已执行结果。}@*)
+\end{PromptBox}
+
+\subsection*{6. AI能做什么、执行者必须人工做什么}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}XX@{}}
+\toprule
+\textbf{参与者} & \textbf{可以做} & \textbf{不能替代} \\
+\midrule
+AI & 生成同键比较、性能模板、依赖清单和恢复检查脚本 & 不得声称已经点击Smartbi或完成真人签字 \\
+执行者 & 实际搭页、计时、导出、导入、录屏并接受B复核 & 不得让AI替代真实上传、截图、复核与签字 \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{7. 逐条操作顺序}
+\begin{enumerate}
+\item 建立国家、期限、window\_end、strategy\_id、gold\_weight、cycle\_state\_at\_end筛选
+\item 建立cum\_return、max\_drawdown、cvar\_95、recovery\_months、cost\_total关键结果
+\item 建立0\%--20\%黄金网格与完整/去黄金/去美元三策略同键比较
+\item 建立反例和weight\_sum检查，偏离1超过1e-8的记录停止用于结论
+\item 对DB01区域、DB01到DB02、DB02全期、DB04切换各做3次冷缓存与3次热缓存
+\item 导出全部V5数据对象、模型、指标、六页与AI依赖，生成依赖清单和SHA-256
+\item 拍摄目标空置证据，由A导入；B随后只读核对对象数、关系、六页和130/40/23/20/734 KPI
+\item 恢复后复测25问关键题、筛选和性能；生成源/目标差异与最终状态
+\end{enumerate}
+
+\subsection*{8. 每一步正常输出、异常输出和读数方法}
+\begin{longtable}{@{}p{0.22\textwidth}p{0.335\textwidth}p{0.335\textwidth}@{}}
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{检查点} & \textbf{正常读数} & \textbf{异常读数与动作} \\
+\midrule
+\endhead
+情景行数 & 207,720 & 不符：停止 \\
+三策略 & 同iso3/期限/窗口/run\_id一对一 & 缺策略或混键：FAIL \\
+权重和 & 与1差不超过1e-8 & 超差：不用于结论 \\
+反例 & 黄金或美元不占优窗口可见 & 只报正例：硬失败 \\
+性能 & 典型操作不超过10秒 & 超时：优化后复测 \\
+目标环境 & 导入前无V5对象 & 非空：恢复无效 \\
+恢复KPI & 源目标误差不超过1\% & 超差：FAIL \\
+复核 & B只读签收 & 无交叉复核：未完成 \\
+\bottomrule
+\end{longtable}
+
+\subsection*{9. 产物、截图、日志和哈希证据}
+\begin{itemize}[label=$\square$]
+\item DB04全页和筛选截图
+\item DB04\_RECONCILIATION\_V50.xlsx
+\item PERFORMANCE\_TEST\_V50.xlsx
+\item XML正式文件
+\item XML\_DEPENDENCY\_LIST\_V50.txt
+\item XML\_SHA256\_V50.txt
+\item RECOVERY\_GUIDE\_V50.txt
+\item RECOVERY\_LOG\_V50.txt
+\item SOURCE\_TARGET\_DIFF\_V50.xlsx
+\item 目标空置截图
+\item B只读复核回执
+\item 恢复录屏
+\end{itemize}
+
+\subsection*{10. 验收标准和硬失败条件}
+\begin{statusbox}{通过标准}
+\begin{itemize}[label=$\square$]
+\item 三策略同键对称、反例可见
+\item 权重和误差不超过1e-8
+\item 典型操作不超过10秒
+\item XML依赖和哈希齐全
+\item 独立目标恢复成功
+\item 源/目标KPI误差不超过1\%
+\item B只读复核签收
+\end{itemize}
+\end{statusbox}
+\begin{dangerbox}{硬失败}
+\begin{itemize}
+\item 目标不是空环境
+\item XML缺依赖
+\item 源目标KPI超差
+\item 只报支持黄金结果
+\item 性能失败仍发布
+\item B未复核
+\item 泄露凭据
+\end{itemize}
+\end{dangerbox}
+
+\subsection*{11. 常见报错、最小修复、回滚及失败追问提示词}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}XX@{}}
+\toprule
+\textbf{常见问题} & \textbf{最小修复} & \textbf{回滚点} \\
+\midrule
+路径不存在或ZIP打不开 & 从父目录逐级枚举，确认内层ZIP而不是同名外层目录 & 回到输入锁定，不创建正式对象 \\
+行数、字段或主键异常 & 保存实际读数并与控制清单逐项比较 & 撤销当前依赖步骤，保留错误证据 \\
+Smartbi权限或上传失败 & 保存错误码、账号角色和时间，申请最小必要权限 & 不改数据，不用个人临时对象顶替 \\
+关系后行数膨胀 & 禁用最后一条关系，检查维度键唯一性与粒度 & 恢复到上一个关系审计PASS版本 \\
+AI无法访问本机或平台 & 让AI只输出检查脚本和人工点击清单 & 状态标BLOCKED，禁止假装已执行 \\
+\bottomrule
+\end{tabularx}
+\begin{PromptBox}{A07失败追问提示词}
+(*@{\promptcjk 请只分析}@*)A07(*@{\promptcjk 的失败，不扩大任务范围。输入我提供的错误原文、对象名、步骤号、预期读数、实际读数和截图路径。按以下格式回复：}@*)
+1. (*@{\promptcjk 最可能原因，按概率排序；}@*)
+2. (*@{\promptcjk 只读确认方法；}@*)
+3. (*@{\promptcjk 最小修复动作；}@*)
+4. (*@{\promptcjk 明确回滚点；}@*)
+5. (*@{\promptcjk 复测步骤与原验收标准；}@*)
+6. (*@{\promptcjk 仍然失败时应标记}@*)FAIL(*@{\promptcjk 还是}@*)BLOCKED(*@{\promptcjk 。}@*)
+(*@{\promptcjk 禁止删数据、改阈值、填}@*)0(*@{\promptcjk 、降低误差标准或伪造}@*)PASS(*@{\promptcjk 。}@*)
+\end{PromptBox}
+
+\subsection*{12. 完成回执、复核人和下一门槛}
+由执行者A填写执行时间、真实读数、异常、证据路径与最终状态；由执行者B在只读条件下抽查。只有全部通过项都有证据时才签PASS。
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}X@{}}
+\toprule
+\textbf{字段} & \textbf{应填写内容} \\
+\midrule
+状态 & PASS、FAIL或BLOCKED \\
+唯一写入者 & 执行者A \\
+复核人 & 执行者B \\
+下一门槛 & G5恢复与材料 \\
+证据目录 & C:\textbackslash{}Users\textbackslash{}73998\textbackslash{}Desktop\textbackslash{}数据创新平台-张奥\textbackslash{}V5.0\_双人执行工作区\textbackslash{}A\_数据平台\textbackslash{}04\_XML恢复 \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+\chapter{A最终验收清单}
+\begin{itemize}[label=$\square$]
+\item 原V4.3、内层ZIP和18张工作簿未修改
+\item 18正式+3控制齐全；正式合计313,593
+\item 三辅助40/20/660且主键0/0
+\item P0书面PASS后才全量
+\item 模型无事实多对多、无地区→国家
+\item DB01/02/04每页≤4，误差≤1\%，操作≤10秒
+\item DB02→DB04只传iso3
+\item XML在干净目标恢复，B只读复核
+\item 源目标KPI一致且无凭据泄露
+\end{itemize}
+
+\cleardoublepage
+\chapter*{最终签字与放行页}
+\addcontentsline{toc}{chapter}{最终签字与放行页}
+本页签署只表示对应证据已经核对，不表示未实施的Smartbi平台能力已经完成。任何硬失败未清零时不得签署“放行”。
+
+\vspace{1cm}
+\noindent\begin{tabularx}{\textwidth}{@{}p{0.30\textwidth}Xp{0.25\textwidth}@{}}
+\toprule
+\textbf{签署项} & \textbf{签字} & \textbf{日期} \\
+\midrule
+执行者A & \rule{0.88\linewidth}{0.4pt} & \rule{0.88\linewidth}{0.4pt} \\
+交叉复核人 & \rule{0.88\linewidth}{0.4pt} & \rule{0.88\linewidth}{0.4pt} \\
+最终放行状态（PASS/FAIL/BLOCKED） & \rule{0.88\linewidth}{0.4pt} & \rule{0.88\linewidth}{0.4pt} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.8cm}
+\begin{dangerbox}{签字前的最后问题}
+能否用文件、截图、日志、哈希和独立复核证明“已经完成”？如果不能，状态只能是FAIL或BLOCKED，不能用口头说明替代证据。
+\end{dangerbox}
+\end{document}
