@@ -1,0 +1,19 @@
+{
+ "t1_rows": 40,
+ "t2_rows": 20,
+ "t3_rows": 660,
+ "step5": {
+  "global": 160,
+  "region": 8,
+  "revenue_nonnull": {
+   "total_revenue": 0,
+   "overseas_revenue": 0,
+   "overseas_revenue_share": 0
+  },
+  "bridge_country": 0
+ },
+ "audit_equity_max_diff": 5.551115123125783e-17,
+ "audit_equity_months": 113,
+ "view_run_id": "20260823_v50_a01",
+ "generated_at": "2026-08-23 10:56:21 +0800"
+}

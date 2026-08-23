@@ -1,0 +1,7 @@
+﻿审计项,方法,读数,判定
+equity_drawdown为逐月截断值,对全部113个非空月，用≤t的equity_index重算回撤并与提供值比对,最大差5.55e-17（113个月）,PASS
+nfci_expanding_percentile,使用冻结表中已按扩展窗口计算的列（列名即口径），不再重算,660/660非空,PASS
+property序列为as-of结转,使用冻结表property_real_index（property_asof_carried=1），峰谷回撤仅用≤t最大值,见生成脚本,PASS
+12个月变化仅用t-12端点,policy_rate/real_policy_rate的12月变化取同序列i-12，i<12留空,见生成脚本,PASS
+国别最新视图,每指标取最新非空值，数据最大月份2025-12-31，无超出数据期的取值,最新月=2025-12-31（40/40国）,PASS
+连续3月窗口,窗口内任一缺失则该条件不可判（None），不插值不补0,见三态合法性检查,PASS

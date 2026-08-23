@@ -1,0 +1,36 @@
+A01 辅助层生成 执行日志 V5.0
+==================================================
+执行时间：2026-08-23 10:56:21 +0800
+执行方式：AI编写并运行生成/QA脚本；读取只读镜像；未修改任何原表
+view_run_id：20260823_v50_a01　view_version：V5.0
+
+步骤1 国别最新视图 → PASS
+  dim_country is_selected_40=1 → 40国（实测）。country_monthly_risk：40国×192月，
+  最新月全部为2025-12-31。每指标独立取最新非空值及日期。
+  储备缺失国5个（AGO/BEN/CIV/ETH/IRN）→ 字段留空并写missing_reason，未填0。
+步骤2 贬值与同比 → PASS
+  fx_12m_depr=当月fx/12月前fx-1；cpi_yoy同理；端点缺失则空（本次40国端点齐全）。
+步骤3 阈值倍数与触发标签 → PASS
+  阈值20%/15%来自V5.0合同，未自创。触发分布：双触发2（TUR 22.0%/30.9%；ZWE 2493.5%/77.2%）、
+  单触发4（BOL/ETH/NGA/SDN）、未触发34、数据不足0。
+步骤4 企业数据状态 → PASS
+  dim_company 20家全部保留；地区行合计8、国家行合计0。
+步骤5 企业表确认 → PASS（实测读数）
+  company_overseas_exposure：global 160 + region 8 = 168；
+  total_revenue/overseas_revenue/overseas_revenue_share 可用值均为0；
+  bridge_company_geography 8行全部region、iso3全空 → 国家桥接0。
+步骤6 周期状态660行 → PASS（结构），附DQ41发现（见问题单ISS-20260823-001）
+  按month_end升序逐月计算；触发器全部1/0/空三态（非法值0个）；
+  空触发行100%带missing_reason；主状态优先级按YAML；
+  主状态分布：inflation_overheating 181、asset_bust 142、recession 71、
+  aggressive_tightening 66、credit_systemic 37、recovery_reflation 2、stagflation 1、空160。
+步骤7 字典/日志/手算/审计 → PASS
+  5国手算（iso3升序每8取1）：最大误差0.00e+00 ≤1e-10，明细见A01_HANDCALC_5COUNTRIES_V50.txt。
+  无未来信息审计：equity_drawdown提供值与≤t截断重算113个月最大差5.55e-17；
+  房产回撤仅用≤t最大值；12月变化仅用t-12端点；连续3月窗口缺失即不可判。
+
+QA汇总：33项检查，PASS 27，FAIL 6（全部为DQ41历史单测，明细A01_QA_RESULT_V50.xlsx
+与A01_DQ41_DETAIL_V50.txt）。DQ41不属A01验收六项标准，但按真实性原则原样上报并已开问题单。
+
+最终判定：PASS（A01验收六项全部满足且有证据）
+遗留：ISS-20260823-001（DQ41未全命中，对象属V4.2冻结数据/规则，需对象所有者裁决，建议G2前处理）。
