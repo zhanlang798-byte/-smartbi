@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>智御出海 V5.0 · B 三页线框草案（DB03/05/06）</title>
+<style>
+:root{
+  --navy:#15324A; --teal:#0B7A75; --gold:#C9962E; --pale:#F3F7F8;
+  --warn:#FFF4DF; --danger:#FDEBEC; --ink:#1f2a33; --mut:#6b7a86; --line:#dfe7eb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC",-apple-system,"Segoe UI",sans-serif;background:#e9eef1;color:var(--ink);line-height:1.5}
+.topbar{background:var(--navy);color:#fff;padding:10px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.topbar .logo{font-weight:700;font-size:15px}
+.topbar .badge{background:var(--gold);color:#fff;font-size:11px;padding:2px 8px;border-radius:10px}
+.tabs{display:flex;gap:8px;margin-left:auto}
+.tab{background:rgba(255,255,255,.12);color:#dfe9f0;border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px}
+.tab.active{background:#fff;color:var(--navy);font-weight:700}
+.page{display:none;max-width:1180px;margin:18px auto;padding:0 14px 30px}
+.page.active{display:block}
+.pagetitle{background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);padding:12px 16px;border-radius:8px;margin-bottom:12px}
+.pagetitle h1{font-size:18px;color:var(--navy)}
+.pagetitle .q{font-size:12.5px;color:var(--mut);margin-top:3px}
+.pagetitle .q b{color:var(--teal)}
+.filters{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-bottom:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:12.5px}
+.filters .lab{color:var(--mut)}
+.chip{border:1px solid var(--teal);color:var(--teal);border-radius:14px;padding:2px 10px;font-size:12px;background:var(--pale);cursor:pointer}
+.chip:hover{background:var(--teal);color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 14px;min-height:170px}
+.card h3{font-size:14px;color:var(--navy);border-bottom:2px solid var(--pale);padding-bottom:6px;margin-bottom:8px}
+.card h3 .num{background:var(--teal);color:#fff;font-size:11px;border-radius:4px;padding:1px 6px;margin-right:6px}
+.card.full{grid-column:1/-1}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{background:var(--pale);color:var(--navy);text-align:left;padding:5px 8px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:5px 8px;border-bottom:1px solid #eef3f5}
+tr:hover td{background:#f7fafb}
+.kpi{display:flex;gap:12px;flex-wrap:wrap}
+.kpi .box{flex:1;min-width:150px;border:1px solid var(--line);border-radius:8px;padding:10px;text-align:center}
+.kpi .box .v{font-size:26px;font-weight:700;color:var(--navy)}
+.kpi .box .l{font-size:12px;color:var(--mut);margin-top:2px}
+.box.warn{background:var(--warn);border-color:var(--gold)}
+.box.warn .v{color:var(--gold)}
+.box.danger{background:var(--danger);border-color:#c0392b}
+.box.danger .v{color:#c0392b}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;margin-right:4px}
+.tag.ok{background:#e3f2ec;color:var(--teal)}
+.tag.warn{background:var(--warn);color:#8a6512}
+.tag.danger{background:var(--danger);color:#c0392b}
+.tag.gray{background:#eceff1;color:var(--mut)}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.can,.cant{border-radius:8px;padding:10px 12px;font-size:12.5px}
+.can{background:#eef7f3;border:1px solid #bcdcd0}
+.cant{background:var(--danger);border:1px solid #ecc5c9}
+.can h4{color:var(--teal);font-size:13px;margin-bottom:5px}
+.cant h4{color:#c0392b;font-size:13px;margin-bottom:5px}
+.can li,.cant li{margin-left:18px;margin-bottom:3px}
+.matrix{display:grid;grid-template-columns:70px repeat(8,1fr);gap:2px;font-size:10.5px;align-items:center}
+.matrix .h{color:var(--mut);text-align:center}
+.matrix .c{height:14px;border-radius:2px;background:#eef3f5}
+.matrix .c.on{background:var(--teal)}
+.matrix .c.one{background:var(--gold)}
+.matrix .nm{color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.legend{font-size:11px;color:var(--mut);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 10px;vertical-align:-1px}
+.bars{display:flex;align-items:flex-end;gap:10px;height:110px;padding:8px 4px 0;border-bottom:1px solid var(--line)}
+.bars .b{flex:1;background:linear-gradient(180deg,var(--teal),#0a5f5b);border-radius:4px 4px 0 0;position:relative;min-width:26px}
+.bars .b span{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:10.5px;color:var(--navy);white-space:nowrap}
+.bars .b em{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--mut);font-style:normal;white-space:nowrap}
+.footer{margin-top:12px;background:var(--pale);border:1px dashed #b9cdd4;border-radius:8px;padding:8px 12px;font-size:11.5px;color:var(--mut)}
+.seg{display:flex;flex-direction:column;gap:6px;font-size:12.5px}
+.seg .s{display:flex;gap:8px}
+.seg .s b{color:var(--teal);min-width:52px}
+.note{font-size:11.5px;color:var(--mut);margin-top:6px}
+.hist td{color:#8a3238}
+.hist .pill{background:#c0392b;color:#fff;font-size:10px;border-radius:8px;padding:1px 6px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="logo">智御出海 V5.0 · 三页线框草案</div>
+  <div class="badge">B 离线草案 · 非 Smartbi 实机</div>
+  <div class="tabs">
+    <div class="tab active" data-p="p3" onclick="go(this)">DB03 企业披露边界</div>
+    <div class="tab" data-p="p5" onclick="go(this)">DB05 证据中心</div>
+    <div class="tab" data-p="p6" onclick="go(this)">DB06 周期与历史</div>
+  </div>
+</div>
+
+<!-- ============ DB03 ============ -->
+<div class="page active" id="p3">
+  <div class="pagetitle">
+    <h1>DB03 中国企业海外风险与披露边界 <span class="tag gray">DB03_XH202612_V50_COMPANY_BOUNDARY</span></h1>
+    <div class="q">本页回答：<b>"20 家中国企业目前披露到什么粒度？能答什么、不能答什么？"</b>（诚实边界页，不做排行榜）</div>
+  </div>
+  <div class="filters">
+    <span class="lab">筛选器：</span>
+    <span class="chip">企业 ▾</span><span class="chip">行业 ▾</span><span class="chip">财年 ▾</span><span class="chip">质量 ▾</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><span class="num">1</span>20 家企业目录</h3>
+      <table>
+        <tr><th>企业</th><th>行业</th><th>经营模式</th></tr>
+        <tr><td>华为</td><td>ICT 与电子</td><td>ICT</td></tr>
+        <tr><td>联想</td><td>ICT 与电子</td><td>ICT</td></tr>
+        <tr><td>传音控股</td><td>ICT 与电子</td><td>ICT</td></tr>
+        <tr><td>比亚迪</td><td>汽车与新能源</td><td>汽车</td></tr>
+        <tr><td>紫金矿业</td><td>资源与能源</td><td>资源能源</td></tr>
+        <tr><td>中国交建</td><td>基建与轨道交通</td><td>基建轨交</td></tr>
+      </table>
+      <div class="note">共 20 家 · 4 个行业类（ICT4 / 家电4 / 汽车4 / 工程装备2 / 基建2 / 资源4 等）</div>
+    </div>
+    <div class="card">
+      <h3><span class="num">2</span>披露可用性矩阵（企业 × 财年）</h3>
+      <div class="matrix">
+        <div class="h"></div><div class="h">2018</div><div class="h">2019</div><div class="h">2020</div><div class="h">2021</div><div class="h">2022</div><div class="h">2023</div><div class="h">2024</div><div class="h">2025</div>
+        <div class="nm">COMP001</div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div>
+        <div class="nm">COMP002</div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c one"></div><div class="c on"></div>
+        <div class="nm">COMP003</div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div><div class="c on"></div>
+        <div class="nm">…</div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div><div class="c"></div>
+      </div>
+      <div class="legend"><i style="background:var(--teal)"></i>有披露行<i style="background:var(--gold)"></i>含已核验单项（联想 2024 汇兑损益，全库唯一）</div>
+    </div>
+    <div class="card full">
+      <h3><span class="num">3</span>地区 / 国家粒度边界（诚实缺口，全页核心）</h3>
+      <div class="kpi">
+        <div class="box"><div class="v">160</div><div class="l">global 全球汇总行</div></div>
+        <div class="box warn"><div class="v">8</div><div class="l">region 地区行（最细粒度）</div></div>
+        <div class="box danger"><div class="v">0</div><div class="l">country 国家桥 = 0（不可拆！）</div></div>
+        <div class="box danger"><div class="v">0</div><div class="l">海外收入字段可用值 = 0</div></div>
+      </div>
+    </div>
+    <div class="card full">
+      <h3><span class="num">4</span>能答 / 不能答（answer_scope / prohibited_inference）</h3>
+      <div class="twocol">
+        <div class="can"><h4>✅ 能答</h4>
+          <li>20 家目录、行业、经营模式</li>
+          <li>财年覆盖 2018–2025、披露行数、来源数</li>
+          <li>地区级披露（8 行）与已核验单项（联想汇兑损益）</li>
+          <li>通用流动性情景（模拟，带标记）</li>
+        </div>
+        <div class="cant"><h4>🚫 不能答</h4>
+          <li>海外收入排名 / 占比 Top 名单（字段可用值 = 0）</li>
+          <li>企业 × 国家重合结论（国家桥 = 0）</li>
+          <li>企业真实现金需求与真实持仓</li>
+          <li>企业国别风险分数（禁止生成）</li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">页脚条：各指标独立数据截止期 ｜ source_id 可见 ｜ 质量标记可见 ｜ 缺失显示为空不显示 0 ｜ 本页 ≤4 组件 ✓</div>
+</div>
+
+<!-- ============ DB05 ============ -->
+<div class="page" id="p5">
+  <div class="pagetitle">
+    <h1>DB05 决策、约束与证据中心 <span class="tag gray">DB05_XH202612_V50_EVIDENCE_CENTER</span></h1>
+    <div class="q">本页回答：<b>"这些数字从哪里来？有哪些限制？谁要人工复核？建议能直接执行吗？"</b></div>
+  </div>
+  <div class="filters">
+    <span class="lab">筛选器：</span>
+    <span class="chip">国家 ▾</span><span class="chip">年份 ▾</span><span class="chip">来源类型 ▾</span><span class="chip">质量/状态 ▾</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><span class="num">1</span>政策与限制状态</h3>
+      <table>
+        <tr><th>policy_code</th><th>状态</th><th>处置</th></tr>
+        <tr><td>FX_REGIME_FINE</td><td><span class="tag ok">no_conflict</span></td><td>直接展示</td></tr>
+        <tr><td>CAPITAL_OPEN_KAOPEN</td><td><span class="tag ok">no_conflict</span></td><td>直接展示</td></tr>
+        <tr><td>SANCTIONS_OFAC_PROGRAM</td><td><span class="tag warn">待核 ×40</span></td><td><b>转人工复核</b></td></tr>
+      </table>
+      <div class="note">全表 2,744 行：no_conflict 2,704｜机提待核 <b>40 行 = 转人工集合</b>｜禁止输出任何绕行路径</div>
+    </div>
+    <div class="card">
+      <h3><span class="num">2</span>source_id 证据追溯（示例行）</h3>
+      <table>
+        <tr><th>字段</th><th>值</th></tr>
+        <tr><td>source_id</td><td><b>SRC0721</b></td></tr>
+        <tr><td>指向</td><td>联想 2024 年报 · 第 43 页</td></tr>
+        <tr><td>内容</td><td>汇兑损益 -2,100（万美元）</td></tr>
+        <tr><td>许可/哈希</td><td>license ✓ ｜ sha256 ✓</td></tr>
+      </table>
+      <div class="note">734 行登记，source_id 唯一 ✓；AI-17 测试选中行须 10 字段 100% 完整</div>
+    </div>
+    <div class="card">
+      <h3><span class="num">3</span>缺失 / 代理 / 模拟清单</h3>
+      <table>
+        <tr><th>类型</th><th>对象</th><th>处置</th></tr>
+        <tr><td><span class="tag warn">代理</span></td><td>AST004 美元短债 / AST008 套保</td><td>is_proxy=1 标记展示</td></tr>
+        <tr><td><span class="tag gray">模拟</span></td><td>portfolio_scenario 207,720 行</td><td>标"情景层"，≠真实持仓</td></tr>
+        <tr><td><span class="tag danger">缺失</span></td><td>5 国储备全空（AGO/BEN/CIV/ETH/IRN）</td><td>留空，不填 0</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3><span class="num">4</span>七段管理层简报（随筛选联动）</h3>
+      <div class="seg">
+        <div class="s"><b>①结论</b><span>当前筛选下的风险一句话……</span></div>
+        <div class="s"><b>②数字</b><span>每个数字带观测期+单位+source_id+质量</span></div>
+        <div class="s"><b>③来源</b><span>来源遗漏率须 = 0</span></div>
+        <div class="s"><b>④反例</b><span>34.8% 窗口加金后收益反降</span></div>
+        <div class="s"><b>⑤限制</b><span>缺失/代理/模拟/政策待核</span></div>
+        <div class="s"><b>⑥合规</b><span>无绕行；待核转人工</span></div>
+        <div class="s"><b>⑦下一步</b><span>合法补证路径</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">页脚条：source_id 可追溯 ｜ 待核 ≠ 允许 ｜ 无绕行建议 ｜ 本页 ≤4 组件 ✓</div>
+</div>
+
+<!-- ============ DB06 ============ -->
+<div class="page" id="p6">
+  <div class="pagetitle">
+    <h1>DB06 全球周期与历史边界 <span class="tag gray">DB06_XH202612_V50_CYCLE_CONTEXT</span></h1>
+    <div class="q">本页回答：<b>"现在处于什么周期？历史数据能告诉我们什么、不能告诉我们什么？"</b></div>
+  </div>
+  <div class="filters">
+    <span class="lab">筛选器：</span>
+    <span class="chip">月份 ▾</span><span class="chip">指标 ▾</span><span class="chip">周期 ▾</span><span class="chip">策略 ▾</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><span class="num">1</span>周期主状态与并行标签（660 月）</h3>
+      <div class="kpi">
+        <div class="box"><div class="v" style="font-size:20px">正常扩张</div><div class="l">最新月主状态（示例读数）</div></div>
+        <div class="box warn"><div class="v" style="font-size:20px">并行标签</div><div class="l">主状态不覆盖标签；≥2 类 crisis 触发 compound</div></div>
+      </div>
+      <div class="note">⏳ 正式读数等 A01 的 MVP_cycle_state 到位后逐字段对账（AI-21 基准也等它）</div>
+    </div>
+    <div class="card">
+      <h3><span class="num">2</span>周期触发指标（占位图）</h3>
+      <div class="bars">
+        <div class="b" style="height:55%"><span>通胀</span><em>CPI</em></div>
+        <div class="b" style="height:40%"><span>增长</span><em>GDP</em></div>
+        <div class="b" style="height:70%"><span>利率</span><em>rate</em></div>
+        <div class="b" style="height:62%"><span>NFCI</span><em>金融</em></div>
+        <div class="b" style="height:48%"><span>美元</span><em>DXY</em></div>
+        <div class="b" style="height:35%"><span>市场</span><em>股/房</em></div>
+      </div>
+      <div class="note" style="margin-top:22px">带阈值线与质量标记；只用当月及此前数据（无未来信息）</div>
+    </div>
+    <div class="card full">
+      <h3><span class="num">3</span>三策略按周期结果（已用真实数据算出的基准值）</h3>
+      <table>
+        <tr><th>周期</th><th>样本数</th><th>去黄金−完整（均差）</th><th>去美元−完整（均差）</th><th>黄金拖累占比（反例）</th><th>美元拖累占比</th></tr>
+        <tr><td>正常扩张</td><td>15,000</td><td>-0.00627</td><td>-0.38159</td><td>41.2%</td><td>19.1%</td></tr>
+        <tr><td>激进紧缩</td><td>3,280</td><td>-0.00945</td><td>-0.65869</td><td>23.8%</td><td>9.7%</td></tr>
+        <tr><td>衰退或通缩</td><td>2,080</td><td>-0.01763</td><td>-0.77195</td><td>7.9%</td><td>9.7%</td></tr>
+        <tr><td>资产泡沫破裂</td><td>480</td><td>-0.00484</td><td>-0.44147</td><td>40.8%</td><td>7.7%</td></tr>
+        <tr><td>通胀过热</td><td>2,240</td><td>-0.00454</td><td>-0.43224</td><td>32.0%</td><td>16.0%</td></tr>
+      </table>
+      <div class="note">完整 / 去黄金 / 去美元三策略同键对称（共同键 23,080，零缺失匹配）· 正例反例都展示</div>
+    </div>
+    <div class="card full">
+      <h3><span class="num">4</span>历史边界表（18 条，如实标红）</h3>
+      <table class="hist">
+        <tr><th>记录</th><th>start_date</th><th>review_status</th><th>comparability_grade</th><th>modern_backtest</th></tr>
+        <tr><td>HIST001 大萧条 1929–1933</td><td><span class="pill">1970-01-01 异常</span></td><td>pending</td><td>空</td><td>0 禁止</td></tr>
+        <tr><td>HIST002 互联网泡沫 2000</td><td><span class="pill">1970-01-01 异常</span></td><td>pending</td><td>空</td><td>0 禁止</td></tr>
+        <tr><td>HIST018 广场协议 1985</td><td><span class="pill">1970-01-01 异常</span></td><td>pending</td><td>空</td><td>0 禁止</td></tr>
+        <tr><td>…共 18 条</td><td>全部 1970-01-01</td><td>全部 pending</td><td>全部空</td><td>—</td></tr>
+      </table>
+      <div class="note">说明卡：为什么不能做 1929–2025 时间轴 → AI-22/23/25 必须拒答；HIST001.comparability_limit：「历史压力层;记录金本位、银行体系和工具不可比性,不套用现代 ETF」</div>
+    </div>
+  </div>
+  <div class="footer">页脚条：无未来信息 ｜ 历史限制可见 ｜ 三策略含反例 ｜ 本页 ≤4 组件 ✓</div>
+</div>
+
+<script>
+function go(el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById(el.dataset.p).classList.add('active');
+}
+</script>
+</body>
+</html>
