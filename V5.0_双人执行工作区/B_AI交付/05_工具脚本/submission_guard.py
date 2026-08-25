@@ -14,7 +14,12 @@ import argparse, hashlib, re, sys
 from datetime import datetime
 from pathlib import Path
 
-BASE = Path("/Users/tanshuo888/Code/pre-code/Smartbi/-smartbi/V5.0_双人执行工作区")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
+BASE = Path(__file__).resolve().parents[2]
 OUT_DEFAULT = BASE / "B_AI交付" / "05_工具脚本" / "guard_out"
 
 # 凭据模式（名称, 正则）
@@ -81,7 +86,7 @@ def main():
     ap.add_argument("--dir", required=True, help="待扫描的提交包目录")
     ap.add_argument("--out", default=str(OUT_DEFAULT))
     args = ap.parse_args()
-    target, outdir = Path(args.dir), Path(args.out)
+    target, outdir = Path(args.dir).resolve(), Path(args.out).resolve()
     if not target.exists():
         print(f"目录不存在：{target}"); return 2
     outdir.mkdir(parents=True, exist_ok=True)

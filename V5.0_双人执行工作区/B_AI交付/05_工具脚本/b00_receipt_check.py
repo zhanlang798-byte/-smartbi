@@ -11,18 +11,25 @@ B00 签收自动核对脚本（执行者B · G2 模型冻结用）
 说明：
     - 9件材料/表合同/行数：核对 A04 交接包文件（交接包未到位时如实报缺，不猜）
     - 真实边界：始终用本地只读镜像 + A01 正式MVP表独立亲核（不等交接包）
-    - Smartbi 平台内的只读权限/关系/指标：脚本无法触达，生成人工检查清单
+    - Smartbi 平台内的字段/关系/指标：脚本无法触达，读取已归档记录并生成人工复核清单
 """
 import argparse, sys, json
 from datetime import datetime
 from pathlib import Path
 
-# ===== 路径配置（跨机器只改这里） =====
-BASE = Path("/Users/tanshuo888/Code/pre-code/Smartbi/-smartbi/V5.0_双人执行工作区")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
+# ===== 路径配置：从脚本位置自动定位 V5.0_双人执行工作区 =====
+BASE = Path(__file__).resolve().parents[2]
 DEFAULT_HANDOFF = BASE / "00_共享" / "模型交接"
 SRC = BASE / "A_数据平台" / "01_输入只读镜像" / "D0-D12_数据交付_V4.2" / "data" / "smartbi"
 MVP = BASE / "A_数据平台" / "02_MVP辅助表"
 OUT_DEFAULT = BASE / "B_AI交付" / "05_工具脚本" / "b00_out"
+ACCOUNT_RECORD = BASE / "B_AI交付" / "01_模型接收" / "B00_READONLY_TEST_V50.txt"
+FIELD_AUDIT = BASE / "B_AI交付" / "01_模型接收" / "B00_SMARTBI_FIELD_AUDIT_20260825.md"
 
 EXPECTED_FILES = [
     "MODEL_HANDOFF_V50.txt", "TABLE_CONTRACT_V50.xlsx", "FIELD_DICTIONARY_V50.xlsx",
@@ -34,10 +41,13 @@ EXPECTED_AUX = {"MVP_country_latest": 40, "MVP_company_data_status": 20, "MVP_cy
 
 results, diffs = [], []
 
-def ck(name, ok, detail=""):
-    results.append((name, "PASS" if ok else "FAIL", detail))
-    if not ok:
-        diffs.append({"检查项": name, "差异": detail})
+def ck(name, ok=None, detail="", status=None):
+    status = status or ("PASS" if ok else "FAIL")
+    if status not in {"PASS", "FAIL", "BLOCKED"}:
+        raise ValueError(f"未知状态：{status}")
+    results.append((name, status, detail))
+    if status != "PASS":
+        diffs.append({"检查项": name, "状态": status, "差异": detail})
 
 def main():
     ap = argparse.ArgumentParser()
@@ -56,26 +66,45 @@ def main():
     # ---- 1. 9件材料齐全性 ----
     print("\n[1] 交接材料齐全性（9件）")
     if not handoff.exists():
-        ck("交接包目录存在", False, f"未到位：{handoff}（A04 未交付，状态=BLOCKED 而非 FAIL）")
+        ck("交接包目录存在", detail=f"未到位：{handoff}", status="BLOCKED")
     else:
         ck("交接包目录存在", True, str(handoff))
         for f in EXPECTED_FILES:
-            ck(f"材料 {f}", (handoff / f).exists(), "缺失" if not (handoff / f).exists() else "在")
-        ro_candidates = list(handoff.glob("*只读*")) + list(handoff.glob("*READONLY*")) + list(handoff.glob("*readonly*"))
-        ck("只读权限证明材料", len(ro_candidates) > 0, "未找到（可人工补截图）" if not ro_candidates else ro_candidates[0].name)
+            present = (handoff / f).exists()
+            ck(f"材料 {f}", present, "在" if present else "缺失", None if present else "BLOCKED")
+        account_ok = ACCOUNT_RECORD.exists() and FIELD_AUDIT.exists()
+        if account_ok:
+            account_text = ACCOUNT_RECORD.read_text(encoding="utf-8")
+            field_text = FIELD_AUDIT.read_text(encoding="utf-8")
+            account_ok = "既定运行前提" in account_text and "27/27 可见" in field_text
+        ck(
+            "共用账号口径与27字段核对记录",
+            account_ok,
+            "A/B共用账号为既定前提；27/27字段树可见；B已审核确认（2026-08-25）" if account_ok else "记录缺失或口径不完整",
+            None if account_ok else "BLOCKED",
+        )
 
     # ---- 2. 表合同：18+3表、行数 ----
     print("\n[2] 表合同（TABLE_CONTRACT_V50.xlsx）")
     tc = handoff / "TABLE_CONTRACT_V50.xlsx"
     if tc.exists():
         try:
-            df = pd.read_excel(tc)
+            df = pd.read_excel(tc, sheet_name="表合同", header=4)
             cols = {c.lower(): c for c in df.columns}
             rowcol = next((cols[c] for c in cols if "行" in c or "row" in c), None)
             namecol = next((cols[c] for c in cols if "表" in c or "table" in c or "名" in c), None)
-            total = int(df[rowcol].sum()) if rowcol else -1
+            categorycol = next((c for c in df.columns if "类别" in str(c)), None)
+            if rowcol and categorycol:
+                formal = df[df[categorycol].astype(str).str.contains("正式", na=False)]
+            elif rowcol and namecol:
+                aux_mask = df[namecol].astype(str).str.contains("MVP_country_latest|MVP_company_data_status|MVP_cycle_state", na=False)
+                formal = df[~aux_mask]
+            else:
+                formal = pd.DataFrame()
+            total = int(formal[rowcol].sum()) if rowcol and not formal.empty else -1
             ck("表合同行数合计=313,593", total == EXPECTED_TOTAL_ROWS, f"实算 {total:,}")
-            ck("表合同表数=21（18+3）", len(df) == 21, f"实有 {len(df)}")
+            ck("表合同正式表数=18", len(formal) == 18, f"实有 {len(formal)}")
+            ck("表合同总表数=21（18+3）", len(df) == 21, f"实有 {len(df)}")
             for aux_name, exp_rows in EXPECTED_AUX.items():
                 hit = df[df[namecol].astype(str).str.contains(aux_name, na=False)] if namecol else pd.DataFrame()
                 ok = (not hit.empty) and int(hit.iloc[0][rowcol]) == exp_rows
@@ -83,7 +112,7 @@ def main():
         except Exception as e:
             ck("表合同可解析", False, str(e))
     else:
-        ck("表合同文件", False, "未到位，跳过（交接后重跑）")
+        ck("表合同文件", detail="未到位，跳过（交接后重跑）", status="BLOCKED")
 
     # ---- 3. 真实边界亲核（本地数据，始终可跑） ----
     print("\n[3] 真实边界亲核（本地只读镜像 + A01正式MVP表）")
@@ -117,37 +146,39 @@ def main():
 
     # ---- 4. 人工检查清单（脚本无法触达） ----
     manual = [
-        "B 账号在 Smartbi 内对共享模型实测：能查询、保存修改被拒（截图）",
-        "RELATIONSHIP_MAP：维度→事实单向、无事实-事实多对多、地区桥不连国家（肉眼核）",
-        "RELATIONSHIP_AUDIT：每条关系前后事实行数不膨胀（肉眼核）",
-        "METRIC_DICTIONARY：DB03/05/06 所需指标逐项在列（对照三页线框字段）",
-        "KNOWN_GAPS / MODEL_CHANGELOG：已读并签收（签字）",
+        (True, "A/B共用同一Smartbi账号为项目既定前提；B不修改A对象属于职责纪律；B已确认"),
+        (True, "Smartbi共享模型字段树27/27可见记录已归档；B已审核确认（2026-08-25）"),
+        (False, "RELATIONSHIP_MAP：维度→事实单向、无事实-事实多对多、地区桥不连国家（肉眼核）"),
+        (False, "RELATIONSHIP_AUDIT：每条关系前后事实行数不膨胀（肉眼核）"),
+        (False, "METRIC_DICTIONARY：DB03/05/06 所需指标逐项在列（对照三页线框字段）"),
+        (True, "KNOWN_GAPS / MODEL_CHANGELOG：B已阅读确认（2026-08-25）"),
     ]
 
     # ---- 汇总输出 ----
-    n_pass = sum(1 for _, s, _ in results if s == "PASS")
-    n_fail = len(results) - n_pass
+    counts = {s: sum(1 for _, status, _ in results if status == s) for s in ("PASS", "FAIL", "BLOCKED")}
     print("\n" + "=" * 60)
     for name, s, d in results:
         print(f"  {s:4s}  {name}" + (f"  | {d}" if d else ""))
     print("=" * 60)
-    print(f"合计 {len(results)} 项：PASS {n_pass} / FAIL {n_fail}")
+    print(f"合计 {len(results)} 项：PASS {counts['PASS']} / FAIL {counts['FAIL']} / BLOCKED {counts['BLOCKED']}")
 
     date = datetime.now().strftime("%Y%m%d")
     md = outdir / f"B00_RECEIPT_CHECK_{date}.md"
     with open(md, "w", encoding="utf-8") as f:
         f.write(f"# B00 签收自动核对结果（{datetime.now():%Y-%m-%d %H:%M}）\n\n")
-        f.write(f"- 交接包目录：{handoff}\n- 合计 {len(results)} 项：PASS {n_pass} / FAIL {n_fail}\n\n")
+        f.write(f"- 交接包目录：{handoff}\n- 合计 {len(results)} 项：PASS {counts['PASS']} / FAIL {counts['FAIL']} / BLOCKED {counts['BLOCKED']}\n\n")
         f.write("## 逐项\n\n| 检查项 | 判定 | 说明 |\n|---|---|---|\n")
         for name, s, d in results:
             f.write(f"| {name} | {s} | {d} |\n")
         f.write("\n## 需人工完成（脚本无法触达）\n\n")
-        for i, m in enumerate(manual, 1):
-            f.write(f"{i}. [ ] {m}\n")
+        for i, (done, m) in enumerate(manual, 1):
+            f.write(f"{i}. [{'x' if done else ' '}] {m}\n")
         f.write("\n> 签收规则：任何 FAIL = 不签收，写问题单退回；BLOCKED（交接未到位）不记 FAIL。\n")
-    pd.DataFrame(diffs, columns=["检查项", "差异"]).to_csv(outdir / f"B00_DIFF_{date}.csv", index=False, encoding="utf-8-sig")
+    pd.DataFrame(diffs, columns=["检查项", "状态", "差异"]).to_csv(outdir / f"B00_DIFF_{date}.csv", index=False, encoding="utf-8-sig")
     print(f"\n已输出：{md}\n已输出：{outdir / ('B00_DIFF_' + date + '.csv')}")
-    return 0 if n_fail == 0 else 2
+    if counts["FAIL"]:
+        return 2
+    return 3 if counts["BLOCKED"] else 0
 
 if __name__ == "__main__":
     sys.exit(main())

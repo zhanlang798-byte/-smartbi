@@ -11,7 +11,12 @@
 import argparse, re, sys
 from pathlib import Path
 
-BASE = Path("/Users/tanshuo888/Code/pre-code/Smartbi/-smartbi/V5.0_双人执行工作区")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
+BASE = Path(__file__).resolve().parents[2]
 FRAMEWORK = BASE / "B_AI交付" / "02_25问基准与判分" / "02_25问基准框架_V50.xlsx"
 RECORDS = BASE / "B_AI交付" / "02_25问基准与判分" / "06_25问判分记录表_V50.xlsx"
 DIMC = BASE / "A_数据平台" / "01_输入只读镜像" / "D0-D12_数据交付_V4.2" / "data" / "smartbi" / "dim_country.xlsx"
@@ -188,20 +193,27 @@ def regression():
     df = pd.read_excel(RECORDS)
     print(f"\n{'='*60}\n25问全量回归检查\n{'='*60}")
     n = len(df)
-    first_done = df["first_result"].notna().sum()
+    first = df["first_result"].fillna("").astype(str).str.strip().str.upper()
+    retest = df["retest_result"].fillna("").astype(str).str.strip().str.upper()
+    first_done = (first != "").sum()
     hard_fail = (df["hard_failure"].astype(str).str.upper().isin(["1","TRUE","YES","是"])).sum()
     fixed = df[df["fix_version"].notna()]
     print(f"题目总数 {n} | 已测(first_result非空) {first_done} | 硬失败 {hard_fail}")
     print(f"修复过的题 {len(fixed)}: {list(fixed['test_id']) if len(fixed) else '无'}")
+    discipline_ok = first_done == n
+    effective = first
     if len(fixed):
-        retested = df["retest_result"].notna().sum()
-        ok = retested == n
-        print(f"全量回归纪律：修复后 25 题全部重测？ retest_result 非空 {retested}/{n} -> {'PASS' if ok else 'FAIL（只重测了改过的题=违规）'}")
+        retested = (retest != "").sum()
+        discipline_ok = retested == n
+        effective = retest
+        print(f"全量回归纪律：修复后 25 题全部重测？ retest_result 非空 {retested}/{n} -> {'PASS' if discipline_ok else 'FAIL（只重测了改过的题=违规）'}")
     stat = df["first_result"].value_counts(dropna=False).to_dict() if first_done else {}
     print("first_result 分布:", stat if stat else "（尚未开始测试）")
     with pd.option_context("display.width", 200, "display.max_columns", 20):
         print(df[["test_id", "题型", "first_result", "failure_type", "retest_result", "hard_failure"]].to_string(index=False))
-    return 0
+    all_pass = n == 25 and first_done == n and discipline_ok and (effective == "PASS").all() and hard_fail == 0
+    print(f"门禁结论：{'PASS' if all_pass else 'BLOCKED/FAIL'}")
+    return 0 if all_pass else 1
 
 
 def main():
