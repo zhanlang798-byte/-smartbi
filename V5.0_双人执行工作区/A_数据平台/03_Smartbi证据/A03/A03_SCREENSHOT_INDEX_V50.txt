@@ -1,0 +1,43 @@
+A03逐表截图索引 V5.0
+============================================================
+证据时间：2026-08-25 23:00—23:24 +08:00
+证据类型：Smartbi“预览数据”截图
+证据边界：证明当前对象名与显示行数；不证明主键审计、全部字段类型、对象所有者、创建时间或上传前同名状态。
+
+01 V50_dim_country                     130      逐表截图/01_dim_country.png
+02 V50_dim_date                        660      逐表截图/02_dim_date.png
+03 V50_dim_year                         16      逐表截图/03_dim_year.png
+04 V50_dim_company                      20      逐表截图/04_dim_company.png
+05 V50_dim_asset                        10      逐表截图/05_dim_asset.png
+06 V50_dim_event                        60      逐表截图/06_dim_event.png
+07 V50_country_exposure              1,170      逐表截图/07_country_exposure.png
+08 V50_country_monthly_risk           7,680      逐表截图/08_country_monthly_risk.png
+09 V50_country_policy_year            2,744      逐表截图/09_country_policy_year.png
+10 V50_country_event                     23      逐表截图/10_country_event.png
+11 V50_global_cycle_month               660      逐表截图/11_global_cycle_month.png
+12 V50_historical_crisis_event           18      逐表截图/12_historical_crisis_event.png
+13 V50_company_overseas_exposure        168      逐表截图/13_company_overseas_exposure.png
+14 V50_bridge_company_geography           8      逐表截图/14_bridge_company_geography.png
+15 V50_asset_monthly_return           91,727      逐表截图/15_asset_monthly_return.png
+16 V50_portfolio_scenario            207,720      逐表截图/16_portfolio_scenario.png
+17 V50_case_evidence                      45      逐表截图/17_case_evidence.png
+18 V50_source_registry                   734      逐表截图/18_source_registry.png
+正式18表合计                         313,593
+
+19 V50_MVP_country_latest                 40      逐表截图/19_MVP_country_latest.png
+20 V50_MVP_company_data_status            20      逐表截图/20_MVP_company_data_status.png
+21 V50_MVP_cycle_state                   660      逐表截图/21_MVP_cycle_state.png
+三张辅助表合计                           720
+
+判定：行数证据PASS；A03整体仍BLOCKED。
+
+XML元数据证据（2026-08-26）：
+1. XML元数据/A03_METADATA_EXPORT_V50_20260825.xml
+   - Smartbi共享模型导出原件副本；SHA-256见A03_XML_METADATA_AUDIT_V50.txt。
+   - 只证明导出时的模型、视图、字段和平台类型。
+2. XML元数据/A03_XML_METADATA_AUDIT_V50.txt
+   - 21/21目标表、442/442字段、额外视图、敏感信息边界和类型比对读数。
+3. SMARTBI_TYPE_AUDIT_V50.xlsx
+   - XML实测类型已填满442项；PASS 379、FAIL 63、BLOCKED 0。
+
+最新判定：字段类型审计FAIL；A03整体FAIL。不得沿用上文旧BLOCKED判定作为最新状态。

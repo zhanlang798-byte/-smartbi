@@ -1,0 +1,40 @@
+A03 XML元数据审计 V5.0
+==================================================
+最终状态：FAIL（发现平台字段类型偏差；不得降级为PASS）
+
+输入检查：
+1. 原文件：migrate (1).xml（仅分析、仅复制，未修改）
+2. 文件字节：976503
+3. SHA-256：cca79ffa747d025c6a3cfccc4e65ccd0eb0b5cbdae607f7f10839f35411cbcd6
+4. 模型别名：MDL_XH202612_V50_COUNTRY_RESERVE
+5. 模型名称：RELATIONSHIP_AUDIT_V50
+6. 模型创建时间：2026-08-25 11:00:37
+7. 模型最后修改：2026-08-25 17:33:47
+
+逐步执行记录：
+1. XML内唯一视图：22张。
+2. 本次21张目标表：精确匹配21/21；缺失0；重复0。
+3. 目标字段：442/442。
+4. 额外视图：V50_monthly_risk（18字段）。
+5. 类型判定：PASS 379；FAIL 63；BLOCKED 0。
+6. FAIL按表：global_cycle_month=18；MVP_cycle_state=16；MVP_country_latest=9；company_overseas_exposure=7；source_registry=5；country_monthly_risk=3；case_evidence=2；country_event=1；bridge_company_geography=1；portfolio_scenario=1。
+7. 全空列规则：平台类型仅记录为占位；不填0；不因占位类型判FAIL。
+8. 非空字段规则：正式表按数据字典_V4.1.xlsx；辅助表按MVP_FIELD_DICTIONARY_V50.xlsx。
+
+敏感信息检查：
+1. password/passwd/pwd/secret/token/apiKey/authorization/accessKey命中均为0。
+2. XML含22处内部连接地址和22处数据库用户元数据。
+3. 原始XML只保存在本地证据目录。不得上传公开GitHub。不得在报告中抄录连接值。
+
+证据边界：
+1. XML证明导出时模型内的表、字段、平台类型和模型元数据。
+2. XML不证明平台主键重复/空值读数。
+3. XML不证明上传前同名资源不存在，也不证明每张表的所有者。
+4. XML不替代B账号只读不可写测试。
+
+下一动作：
+1. A按SMARTBI_TYPE_AUDIT_V50.xlsx筛选FAIL。
+2. 在Smartbi中逐项人工改型。AI不得代替点击。
+3. 改型后重新导出XML。再次核验必须为PASS 442、FAIL 0、BLOCKED 0。
+4. 另补21张表的平台主键重复数和空主键数证据。
+5. 另补资源锁/所有者证据，之后再判A03整体是否PASS。

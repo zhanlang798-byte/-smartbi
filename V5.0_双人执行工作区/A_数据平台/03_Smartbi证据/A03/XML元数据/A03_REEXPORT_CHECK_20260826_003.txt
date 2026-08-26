@@ -1,0 +1,27 @@
+A03 第三次XML导出单字段验证 V5.0
+==================================================
+输入：migrate (3).xml
+SHA-256：136b8146255a81e8f70ef06bdad197d73bc81afba17e6b9468dfef6d0d72815c
+模型最后修改：2026-08-26 00:31:30
+
+输入检查：
+1. 21/21目标表存在。
+2. 442/442目标字段存在。
+3. 缺失0，重复0。
+
+逐步执行记录：
+1. V50_country_monthly_risk.cpi_index=STRING。
+2. V50_monthly_risk.cpi_index=STRING。
+3. 目标字段类型变化数=0。
+4. PASS 383，FAIL 59，BLOCKED 0。
+
+下一动作：
+1. 打开V50_country_monthly_risk，不要打开V50_monthly_risk。
+2. 将cpi_index改成长浮点型。
+3. 点击页面左上角保存并等待成功提示。
+4. 刷新浏览器，重新打开MDL_XH202612_V50_COUNTRY_RESERVE。
+5. 再次打开cpi_index字段属性。
+6. 截图必须同时显示表名、字段名和“长浮点型”。
+7. 若刷新后仍显示字符串，记录为平台改型不生效问题单，不再反复导出XML。
+
+最终状态：FAIL
