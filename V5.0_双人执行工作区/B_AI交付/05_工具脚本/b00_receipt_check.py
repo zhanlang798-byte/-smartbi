@@ -89,8 +89,26 @@ def main():
     tc = handoff / "TABLE_CONTRACT_V50.xlsx"
     if tc.exists():
         try:
-            df = pd.read_excel(tc, sheet_name="表合同", header=4)
-            cols = {c.lower(): c for c in df.columns}
+            raw = pd.read_excel(tc, sheet_name="表合同", header=None)
+            header_row = next(
+                (
+                    idx
+                    for idx, row in raw.head(15).iterrows()
+                    if any(
+                        "表" in str(value)
+                        or "table" in str(value).lower()
+                        or "对象名" in str(value)
+                        or "源文件" in str(value)
+                        for value in row
+                    )
+                    and any("行" in str(value) or "row" in str(value).lower() for value in row)
+                ),
+                None,
+            )
+            if header_row is None:
+                raise ValueError("未识别到同时包含表名与行数的表头")
+            df = pd.read_excel(tc, sheet_name="表合同", header=header_row).dropna(how="all")
+            cols = {str(c).lower(): c for c in df.columns}
             rowcol = next((cols[c] for c in cols if "行" in c or "row" in c), None)
             namecol = next((cols[c] for c in cols if "表" in c or "table" in c or "名" in c), None)
             categorycol = next((c for c in df.columns if "类别" in str(c)), None)
