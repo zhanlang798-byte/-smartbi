@@ -1,0 +1,35 @@
+DB06 ACCEPTANCE V5.0
+====================
+页面资源：DB06_XH202612_V50_CYCLE_CONTEXT
+检查日期：2026-08-30
+B签收时间：2026-08-30 15:59:59 +08:00
+
+【状态】
+PAGE_BUILD_DONE = PASS
+B_PREACCEPTANCE = PASS
+FORMAL_ACCEPTANCE = BLOCKED
+G3 = BLOCKED
+
+【现场读数】
+筛选器：4个；月份=2025-12-31；周期主状态=全部；策略=全部；观察窗口=1y
+组件1：预期1条，实际660条，BLOCKED_A_MODEL_RELATION
+组件2：660月，PASS_PAGE
+组件3：360条/18页，PASS_PAGE
+组件4：18条/1页，PASS_PAGE
+页脚：居中，灰蓝正文，1970/pending红色警示，PASS_PAGE
+
+【阻塞】
+V50_dim_date.month_end 已正确用于组件1和组件3，但月份筛选未传递到 V50_MVP_cycle_state。
+A需核查一对一关系的筛选方向或平台生效状态。B不修改共享模型。
+
+【待补】
+1. 2020-04、2023-10、2025-12三个月份复算与截图。
+2. HIST001/HIST018同屏截图。
+3. 三次冷/热性能。
+4. A只读复核与签名。
+
+【签收】
+B：已签当前页面完成和BLOCKED边界（2026-08-30 15:59:59 +08:00）
+A：待复核，B不代签
+
+最终判定：BLOCKED
