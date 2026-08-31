@@ -1,0 +1,31 @@
+【B04 2026-09-01 日报补记】
+
+一、当前状态
+PROMPT_R10 / KB_IMPORTED_43 / ALL_ENABLED / RETRIEVAL_PASS_7_OF_7 / AIP_CREATED_PUBLISHED / AGENT_CREATED_PUBLISHED / SMOKE_5_OF_5_PASS / FORMAL_25Q_25_OF_25_RECORDED_8_PASS_0_FAIL_17_BLOCKED / B_PREACCEPTANCE_PASS_A_REVIEW_PENDING
+门槛判定：B_PREACCEPTANCE_PASS / A_REVIEW_PENDING
+
+二、今日已恢复/已完成
+1. 系统提示词已报告为V50-B04-LOCAL_FINAL-r10。
+2. KB KB_XH202612_V50_GOVERNANCE：43条，全部启用，七类检索7/7。
+3. AIP AIP_XH202612_V50_DECISION：已创建、已发布。
+4. Agent AGENT_XH202612_V50_ASSISTANT：已创建、已发布。
+
+三、5题冒烟
+1. AI-04（国别数值）：PASS；数据 Agent 实机查询返回三项数值、月份、单位、source_id 与质量标记，PASS。
+2. AI-06（企业拒答）：PASS；首版首句格式不合格；r10复测逐字固定拒答首句，PASS。
+3. AI-22（历史拒答）：PASS；无来源历史题使用固定首句并拒绝因果叙事，PASS。
+4. AI-17（来源追溯）：PASS；目标source_id未命中时完整列缺口且不伪造，属于预期合规PASS。
+5. AI-18（政策合规）：PASS；政策题固定拒绝绕行并给合法人工复核路径，PASS。
+汇总：PASS 5/5，FAIL 0/5，BLOCKED 0/5，复测中 0/5，未开始 0/5，硬失败 0；A 复核 `PENDING`
+
+四、正式25问
+已记录25/25题：PASS 8，FAIL 0，BLOCKED 17，复测中 0，未开始 0，硬失败0。
+
+五、历史边界
+2026-08-31 的43条启用但检索0命中、AIP/Agent未创建、冒烟0/5是历史时点事实，原回执与证据不覆盖。2026-09-01只新增恢复快照。
+
+六、下一步
+1. 5/5、硬失败 0 且证据齐全后交 A 只读复核；不得代填 A 的意见、时间或签名。
+
+七、不得提前升级
+对象已发布不等于B04通过；5题未全部PASS、证据未齐或A未实际复核时，保持B_PREACCEPTANCE_PASS / A_REVIEW_PENDING。正式25问另行逐题实测，离线结果不得替代。

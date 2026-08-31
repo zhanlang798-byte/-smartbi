@@ -1,21 +1,30 @@
 智御出海 V5.0｜AIChat 治理规则
 
-文档版本：V50-B04-LOCAL_FINAL-r2
+文档版本：V50-B04-LOCAL_FINAL-r3
 适用对象：AIP_XH202612_V50_DECISION / KB_XH202612_V50_GOVERNANCE / AGENT_XH202612_V50_ASSISTANT / QA_XH202612_V50_AICHAT_25
 绑定模型：MDL_XH202612_V50_COUNTRY_RESERVE
 统一截止日：2025-12-31
-当前状态：MATERIAL_READY / KB_CREATED / FILES_0 / INDEX_PENDING / FORMAL_25Q_0_OF_25
+当前状态：PROMPT_R10 / KB_IMPORTED_43 / ALL_ENABLED / RETRIEVAL_PASS_7_OF_7 / AIP_CREATED_PUBLISHED / AGENT_CREATED_PUBLISHED / SMOKE_5_OF_5_PASS / FORMAL_25Q_25_OF_25_RECORDED_8_PASS_0_FAIL_17_BLOCKED / B_PREACCEPTANCE_PASS_A_REVIEW_PENDING
+
+[B04_20260901_CURRENT_BEGIN]
+记录日期：2026-09-01
+当前资源：PROMPT_R10 / KB_IMPORTED_43 / ALL_ENABLED / RETRIEVAL_PASS_7_OF_7 / AIP_CREATED_PUBLISHED / AGENT_CREATED_PUBLISHED
+当前测试：SMOKE_5_OF_5_PASS / FORMAL_25Q_25_OF_25_RECORDED_8_PASS_0_FAIL_17_BLOCKED
+门槛：B_PREACCEPTANCE_PASS / A_REVIEW_PENDING
+发布事实与验收结论分开记录：对象已发布不等于5题通过、A已复核或B04 PASS。
+2026-08-31零命中故障记录仍保留为历史证据。
+[B04_20260901_CURRENT_END]
 
 一、用途与非用途
 1. 本规则用于约束 AIChat 的知识、回答、证据、拒答、测试和版本维护。
 2. 本系统只支持决策证据查询、限制展示和人工复核，不提供投资承诺、监管规避或政策绕行方案。
-3. 本文件就绪和知识库空对象已创建，不等于知识已导入，也不等于 5 题冒烟或 25 问已通过。
+3. 本文件就绪；43 条知识已导入并全部启用，正式七类检索为 7/7；AIP 与 Agent 已创建并发布。当前 5 题状态为 SMOKE_5_OF_5_PASS，正式 25 问为 FORMAL_25Q_25_OF_25_RECORDED_8_PASS_0_FAIL_17_BLOCKED。这些事实仍不自动等于 B04、G4 或 25 问通过。
 
 二、门槛与状态
 1. G2 已 PASS，允许 B 配置正式 AIChat 对象并执行 5 题冒烟。
-2. B04 当前只能写 CONFIG_ALLOWED / BUILD_PENDING；只有 5/5 实测通过、硬失败为 0、证据截图齐全并经 A 只读复核后，才可申请 B04 PASS。
-3. G4 正式 25 问仍为 0/25。离线基准、模板、脚本结果和预验结果不得替代 AIChat 真实逐题执行。
-4. DB01/DB02 已通过 B 增量复核，DB06 正式验收为 PASS。DB04 页面主体已完成，但格式/默认态仍待 A 收口和 B 正式复核；DB04 直接依赖题在此之前保持 BLOCKED，复核后仍须具备当前知识版本、实机筛选和来源证据才能实测。G3 未闭环，AI-19 仍按依赖矩阵标记 BLOCKED，不得推断为 PASS。
+2. B04 当前状态为 `PROMPT_R10 / KB_IMPORTED_43 / ALL_ENABLED / RETRIEVAL_PASS_7_OF_7 / AIP_CREATED_PUBLISHED / AGENT_CREATED_PUBLISHED / SMOKE_5_OF_5_PASS / FORMAL_25Q_25_OF_25_RECORDED_8_PASS_0_FAIL_17_BLOCKED / B_PREACCEPTANCE_PASS_A_REVIEW_PENDING`。只有 5/5 实测通过、硬失败为 0、证据截图齐全并经 A 只读复核后，才可申请 B04 PASS。
+3. G4 正式 25 问当前为 `FORMAL_25Q_25_OF_25_RECORDED_8_PASS_0_FAIL_17_BLOCKED`。离线基准、模板、脚本结果和预验结果不得替代 AIChat 真实逐题执行。
+4. DB01—DB06 六页页面均已完成建设；DB01/DB02 已通过 B 增量复核，DB06 正式验收为 PASS。页面建设完成不自动等于 G3 整体签收或 25 问通过；页面直接依赖题仍须具备当前知识版本、实机筛选和来源证据才能判定。G3 未闭环，AI-19 仍按依赖矩阵标记 BLOCKED，不得推断为 PASS。
 
 三、固定资源与权属
 1. 模型：MDL_XH202612_V50_COUNTRY_RESERVE，A 负责；B 只绑定和记录实际版本，不编辑模型。
