@@ -1,0 +1,40 @@
+DB04 情景源表全量核验（A方）
+核验日期：2026-08-30（Asia/Shanghai）
+源文件：portfolio_scenario.xlsx
+源文件 SHA-256：2D0967BB1509FDB47FCADF1C58139C1EF1D3AB23FAF3500B037235C5F26C397A
+读取方式：工作区随附 Python + openpyxl 只读流式读取；未写回源文件。
+
+一、结构门槛
+- 工作表：data
+- 数据行：207,720（另有1行表头）
+- 字段数：19
+- A07 必需字段：全部存在
+- A07 必需字段空值：0
+
+二、维度和情景
+- 国家：40
+- horizon：4
+- window_end：190
+- strategy_id：3
+- gold_weight：7档（0、2.5%、5%、7.5%、10%、15%、20%）
+- cycle_state_at_end：5
+- run_id：1（20260818_v42）
+
+三、策略对称性
+- 3layer_grid：161,560行
+- 3layer_ablate_no_gold：23,080行
+- 3layer_ablate_no_usd：23,080行
+- 共同键：iso3 + horizon + window_end + run_id
+- 共同键组数：23,080
+- 缺少任一策略的共同键组：0
+- 策略/黄金权重模式异常组：0
+- 完整键重复行：0
+
+四、权重和与反例
+- weight_sum 最大绝对误差：0
+- weight_sum 偏离1超过1e-8的行：0
+- 以 cum_return 同键比较，黄金不占优窗口：8,064
+- 以 cum_return 同键比较，美元不占优窗口：4,265
+
+五、判定
+PASS。DB04 可进入 Smartbi 页面筛选器、指标、黄金网格、三策略比较和反例组件建设。

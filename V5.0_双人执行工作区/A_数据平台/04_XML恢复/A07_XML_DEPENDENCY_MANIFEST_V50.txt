@@ -1,0 +1,36 @@
+A07 XML 依赖清单（当前已确认部分）
+更新时间：2026-08-31 09:53:51 +08:00
+
+主模型：
+- MDL_XH202612_V50_COUNTRY_RESERVE
+- 22 个 BASIC_TABLE 视图（18 张正式表及共享维度/辅助对象，以模型基线 XML 实际内容为准）
+- 数据源依赖：可导入数据库（关系数据源，数据连接\）
+
+页面依赖（DB01 分析得到）：
+- DB01_XH202612_V50_RISK_OVERVIEW
+  -> MDL_XH202612_V50_COUNTRY_RESERVE
+  -> DB02_XH202612_V50_COUNTRY_DRILL
+  -> DB04_XH202612_V50_LIQUIDITY_LAB
+  -> 可导入数据库（由模型递归带出）
+
+已落盘页面分包2：
+- DB03_XH202612_V50_COMPANY_BOUNDARY
+- DB05_XH202612_V50_EVIDENCE_CENTER
+- DB06_XH202612_V50_CYCLE_CONTEXT
+- MDL_XH202612_V50_COUNTRY_RESERVE
+
+计划内仍需纳入最终包：
+- AIP_XH202612_V50_DECISION（2026-08-31 在导出搜索和AIChat资源树均未发现）
+- KB_XH202612_V50_GOVERNANCE（2026-08-31 在导出搜索和AIChat资源树均未发现）
+- AGENT_XH202612_V50_ASSISTANT（2026-08-31 在导出搜索和Agent资源树均未发现）
+- 上述对象须由 B 侧创建、发布并冻结，或提供当前账号可见路径后，再由 A 只读纳入；A 不修改、不代签。
+- IM：按当前项目范围为豁免/不适用，最终清单需保留豁免说明。
+
+建议恢复顺序：
+1. 在独立干净目标配置同构数据源映射（不得在包中携带密码、Cookie、令牌或可复用密钥）。
+2. 导入共享模型。
+3. 导入 DB01—DB06 页面及跳转依赖。
+4. 导入 AIP、KB、AGENT。
+5. 复核 18+3 表、六页、关键 AI 题以及 130/40/23/20/734 KPI。
+
+状态：六页+主模型 XML 分包及最终安全复核 COMPLETE；AI资源与独立目标恢复待完成。

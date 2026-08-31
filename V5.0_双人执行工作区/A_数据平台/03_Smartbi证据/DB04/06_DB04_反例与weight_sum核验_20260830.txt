@@ -1,0 +1,27 @@
+DB04 反例与 weight_sum 核验 V5.0
+
+测试日期：2026-08-30
+页面：DB04_XH202612_V50_LIQUIDITY_LAB
+组件：反例与weight_sum检查
+
+一、筛选与绑定
+1. 同一键值：iso3=OMN，horizon=90d，window_end=2010-03-31，run_id=20260818_v42。
+2. 六个页面筛选器均已设置为“此数据集所有组件”并保存。
+3. 反例组件绑定字段：scenario_id、strategy_id、iso3、horizon、window_end、run_id、gold_weight、weight_sum、cum_return、max_drawdown。
+4. 预览筛选值为OMN/90d/2010-03-31，加载遮罩为0。
+
+二、同键反例读数
+1. 3layer_grid，scenario_id=grid_g0.200，gold_weight=0.2，cum_return=-0.0003390533799547679，weight_sum=1。
+2. 3layer_ablate_no_gold，cum_return=0.0002776613103923076，weight_sum=1。
+3. 3layer_ablate_no_usd，cum_return=-0.0001392319524996521，weight_sum=1。
+4. 去黄金和去美元两种消融策略的cum_return均高于完整策略，本键属于“黄金或美元不占优”反例。
+
+三、全量只读核验
+1. portfolio_scenario.xlsx共有207,720行。
+2. 23,080个共同键全部具备完整三策略，缺策略组0。
+3. weight_sum最大误差为0；偏离1超过1e-8的记录为0。
+4. 黄金不占优窗口8,064组；美元不占优窗口4,265组。
+
+四、判定
+A07步骤4：PASS。
+说明：本记录由执行者A侧证据链维护，不替代执行者B独立只读复核。

@@ -1,0 +1,24 @@
+DB04 A07 第3步核验记录
+
+核验日期：2026-08-30
+页面：DB04_XH202612_V50_LIQUIDITY_LAB
+数据模型：MDL_XH202612_V50_COUNTRY_RESERVE
+
+一、黄金网格组件
+1. 标题：0%—20%黄金网格。
+2. 绑定字段：scenario_id、strategy_id、gold_weight、cum_return、max_drawdown、cvar_95、recovery_months、cost_total。
+3. 已见七档网格：grid_g0.000、grid_g0.025、grid_g0.050、grid_g0.075、grid_g0.100、grid_g0.150、grid_g0.200。
+4. 前半与后半预览截图合并覆盖七档；预览加载遮罩为0。
+
+二、三策略同键比较组件
+1. 标题：完整/去黄金/去美元三策略同键比较。
+2. 绑定字段：strategy_id、cum_return、max_drawdown、cvar_95、recovery_months、cost_total。
+3. 已见三类策略：3layer_grid、3layer_ablate_no_gold、3layer_ablate_no_usd。
+4. 源表全量核验显示23,080组共同键均含三策略，缺失策略组为0。
+
+三、显示说明
+Smartbi当前数值格式把gold_weight的0.025—0.200显示为0；因此页面保留scenario_id作为明确权重证据，scenario_id中的g0.xxx与源表gold_weight逐档对应。本记录不把该列描述为百分比显示。
+
+四、A方判定
+A07第3步：PASS。黄金网格及完整/去黄金/去美元三策略同键比较已建立、保存并完成预览核验。
+DB04整体状态：IN_PROGRESS；反例与weight_sum检查、性能、XML导出和恢复演练仍待完成。

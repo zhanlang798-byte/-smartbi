@@ -1,0 +1,27 @@
+A07 XML 最终安全复核（执行者A）
+复核时间：2026-08-31 10:00:12 +08:00
+
+复核对象：
+1. A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml
+2. A07_PAGES_DB03_DB05_DB06_WITH_MODEL_20260831.xml
+
+自动扫描结果（两包分别扫描）：
+- password/passwd/pwd 键：0
+- access/refresh token、bearer、paramsTicket、opLogHeadersTicket：0
+- client secret、API key、secret key：0
+- Cookie/Set-Cookie：0
+- 两包均为可解析的完整 XML。
+- 两包各含 SMARTBIX 页面 3 个、主模型 1 个及 BASIC_TABLE 22 个。
+
+内部基础设施信息：
+- 每包含 JDBC 地址引用 22 处。
+- 每包含数据库用户名 admin 引用 22 处。
+- 未发现与上述用户名配套的密码或可复用认证秘密。
+
+安全判定：CONDITIONAL PASS（受控内部交付）。
+- 允许：在授权的 Smartbi 内部恢复环境中通过受控渠道交付和导入。
+- 禁止：上传至公开 GitHub、公开网盘、公开聊天或其他无访问控制位置。
+- 导入时必须由目标环境重新映射数据源并单独配置凭据，不得从包外附带明文密码。
+
+A侧签署：执行者A（仅对上述两份页面/模型 XML 的扫描事实和受控内部使用结论负责）
+日期：2026-08-31

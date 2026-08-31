@@ -1,0 +1,18 @@
+A07 AI 资源导出核对状态（执行者A）
+更新时间：2026-08-31 09:53:51 +08:00
+
+计划规定对象：
+- AIP_XH202612_V50_DECISION
+- KB_XH202612_V50_GOVERNANCE
+- AGENT_XH202612_V50_ASSISTANT
+
+只读核对结果：
+1. Smartbi“运维设置 -> 导出资源”分别按三个完整对象名搜索，均返回“暂无结果”。
+2. Smartbi AIChat 资源树按 AIP_XH202612_V50_DECISION 搜索，返回“无符合条件的资源”。
+3. Smartbi AIChat 资源树按 KB_XH202612_V50_GOVERNANCE 搜索，返回“无符合条件的资源”。
+4. Smartbi Agent 资源树按 AGENT_XH202612_V50_ASSISTANT 搜索，返回“无符合条件的资源”。
+
+结论：BLOCKED。当前租户中未发现或当前账号不可见上述计划资源，因此无法生成 AIP/KB/AGENT XML 分包。该项应由 B 侧先创建、发布并冻结对象，或提供可见资源路径后再由 A 只读导出；A 不创建、不修改、不代签 B 侧资源。
+
+A侧签署：执行者A（仅搜索事实与阻塞确认）
+日期：2026-08-31
