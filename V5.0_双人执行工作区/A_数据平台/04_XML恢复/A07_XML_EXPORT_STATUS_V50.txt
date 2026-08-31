@@ -1,5 +1,5 @@
 A07 XML 导出状态（执行者A）
-更新时间：2026-08-31 10:00:12 +08:00
+更新时间：2026-08-31 13:50:00 +08:00
 
 当前结论：页面XML COMPLETE；AI资源与独立恢复仍未完成，不得签署 A07 整体 PASS。
 
@@ -13,10 +13,10 @@ A07 XML 导出状态（执行者A）
    - DB04_XH202612_V50_LIQUIDITY_LAB
 4. 排除数据源后，DB01+DB02+DB04+MDL 的服务器端导出流程出现“正在导出”并正常结束。
 5. 已归档 2026-08-26 的模型基线 XML 作为审计样本，不作为最终恢复包。
-6. 用户已将服务器生成包下载为 migrate (6).xml；已核验并归档为 A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml。
-7. 页面分包1包含 DB01、DB02、DB04、主模型和22个BASIC_TABLE视图；SHA-256 为 6F4113E3511D3F6E70C475615EAE877FD3435D461BCBD725BB1DBCD9F726CD38。
-8. 页面分包2已下载并归档，包含DB03、DB05、DB06、主模型和22个BASIC_TABLE视图；SHA-256 为 F4852D333FBFD60E0D228160E2DBB85E3EBFC4D242D4CCDF809DDD06A96FD77D。
-9. 两个分包合计覆盖DB01—DB06六页；两包均没有独立DATASOURCE顶层对象。
+6. 2026-08-31 13:47—13:49，在DB06关系修复后重新勾选两组页面与主模型并导出；旧包已保留在本机忽略目录作为可恢复备份。
+7. 页面分包1包含 DB01、DB02、DB04、主模型和22个BASIC_TABLE视图；SHA-256 为 E013A0695E0B97FD558BD90F870661BD6DA2F2592B993226D4A177A54C0463C5。
+8. 页面分包2包含DB03、DB05、DB06、主模型和22个BASIC_TABLE视图；SHA-256 为 5B77EFB3F93AF4C6DBD3061261C221347BCB92761DA577F1DE3427C2AC5404A3。
+9. 两个分包合计覆盖DB01—DB06六页；两包内嵌模型均为SINGLE×18、BOTH×1，已包含DB06日期维↔周期状态双向修复；两包均没有独立DATASOURCE顶层对象。
 10. 按计划规定的完整对象名，在“导出资源”、AIChat资源树和Agent资源树交叉搜索 AIP、KB、AGENT，均返回“暂无结果”或“无符合条件的资源”；核对记录见 A07_AI_RESOURCE_EXPORT_STATUS_V50.txt。
 
 阻塞证据：
@@ -26,7 +26,7 @@ A07 XML 导出状态（执行者A）
    TypeError: Cannot read properties of null (reading 'appendChild')
    位置：freequery.migrate.LoadingMask.js / ExportChooser.showProgressMaskDiv
 3. 六页页面分包已全部下载；计划内 AIP_XH202612_V50_DECISION、KB_XH202612_V50_GOVERNANCE、AGENT_XH202612_V50_ASSISTANT 当前未发现或不可见，无法导出分包。
-4. 两份页面分包最终安全复核已完成：无密码、Cookie、令牌、Secret或API Key；模型定义内嵌JDBC地址和数据库用户名，结论为受控内部交付 CONDITIONAL PASS，禁止公开上传。
+4. 两份修复后页面分包最终安全复核已完成：无密码、Cookie、令牌、Secret或API Key；模型定义内嵌JDBC地址和数据库用户名，结论为受控内部交付 CONDITIONAL PASS，禁止公开上传。
 5. 当前没有“导入前不存在 XH202612_V50 对象”的独立干净目标环境，不能执行合规的恢复验收。
 
 签署边界：

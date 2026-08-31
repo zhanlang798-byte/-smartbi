@@ -1,21 +1,23 @@
 A07 XML SHA-256（当前可核验文件）
-生成时间：2026-08-31 00:47:16 +08:00
+生成时间：2026-08-31 13:50:00 +08:00
 
 文件：A07_PAGES_DB03_DB05_DB06_WITH_MODEL_20260831.xml
-字节数：1131149
-SHA-256：F4852D333FBFD60E0D228160E2DBB85E3EBFC4D242D4CCDF809DDD06A96FD77D
+字节数：871374
+SHA-256：5B77EFB3F93AF4C6DBD3061261C221347BCB92761DA577F1DE3427C2AC5404A3
 结构：SMARTBIX_PAGE × 3（DB03、DB05、DB06）+ AUGMENTED_DATASET × 1（主模型）
-导出/下载时间：2026-08-31 09:46:34 +08:00
+导出/下载时间：2026-08-31 13:47:28 +08:00
 敏感扫描：password/cookie/token/secret/apiKey 均为0；模型定义中含22处JDBC地址和22处数据库用户名admin。最终安全复核结论为受控内部交付 CONDITIONAL PASS，禁止公开上传。
+模型关系校验：filterDirection = SINGLE × 18，BOTH × 1；DB06日期维与MVP周期状态关系已纳入双向修复版本。
 
 ---
 
 文件：A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml
-字节数：1139199
-SHA-256：6F4113E3511D3F6E70C475615EAE877FD3435D461BCBD725BB1DBCD9F726CD38
+字节数：878820
+SHA-256：E013A0695E0B97FD558BD90F870661BD6DA2F2592B993226D4A177A54C0463C5
 结构：SMARTBIX_PAGE × 3（DB01、DB02、DB04）+ AUGMENTED_DATASET × 1（主模型）
-导出时间：2026-08-31 01:15:03 +08:00（由 exportTime 换算）
+导出/下载时间：2026-08-31 13:49:32 +08:00
 敏感扫描：password/cookie/token/secret/apiKey 均为0；模型定义中含22处JDBC地址和22处数据库用户名admin。最终安全复核结论为受控内部交付 CONDITIONAL PASS，禁止公开上传。
+模型关系校验：filterDirection = SINGLE × 18，BOTH × 1；与分包2内嵌共享模型一致。
 
 ---
 
@@ -39,4 +41,4 @@ Smartbi 元数据：
 - apiKey：0
 - 但包含 JDBC URL 与数据库用户名 admin。
 
-结论：20260826文件仅作为模型基线与故障排查样本；20260831两个页面分包已覆盖DB01—DB06并完成哈希与最终安全复核。仍须补齐AI资源和独立恢复。
+结论：20260826文件仅作为模型基线与故障排查样本；20260831两个页面分包已在DB06双向关系修复后重新导出，覆盖DB01—DB06并完成哈希、结构与最终安全复核。仍须补齐AI资源和独立恢复。

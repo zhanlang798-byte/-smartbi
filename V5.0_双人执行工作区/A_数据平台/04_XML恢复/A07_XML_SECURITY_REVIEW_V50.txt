@@ -1,5 +1,5 @@
 A07 XML 最终安全复核（执行者A）
-复核时间：2026-08-31 10:00:12 +08:00
+复核时间：2026-08-31 13:50:00 +08:00
 
 复核对象：
 1. A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml
@@ -12,6 +12,7 @@ A07 XML 最终安全复核（执行者A）
 - Cookie/Set-Cookie：0
 - 两包均为可解析的完整 XML。
 - 两包各含 SMARTBIX 页面 3 个、主模型 1 个及 BASIC_TABLE 22 个。
+- 两包内嵌模型关系计数一致：filterDirection = SINGLE × 18、BOTH × 1；BOTH为DB06日期维与MVP周期状态的双向修复。
 
 内部基础设施信息：
 - 每包含 JDBC 地址引用 22 处。

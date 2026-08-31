@@ -1,35 +1,37 @@
 DB06 ACCEPTANCE V5.0
 ====================
 页面资源：DB06_XH202612_V50_CYCLE_CONTEXT
-检查日期：2026-08-30
+检查日期：2026-08-31
 B签收时间：2026-08-30 15:59:59 +08:00
+A关系修复签署时间：2026-08-31 13:41:45 +08:00
 
 【状态】
 PAGE_BUILD_DONE = PASS
 B_PREACCEPTANCE = PASS
-FORMAL_ACCEPTANCE = BLOCKED
+A_MODEL_RELATION_FIX = PASS
+FORMAL_ACCEPTANCE = READY_B_REVIEW
 G3 = BLOCKED
 
 【现场读数】
 筛选器：4个；月份=2025-12-31；周期主状态=全部；策略=全部；观察窗口=1y
-组件1：预期1条，实际660条，BLOCKED_A_MODEL_RELATION
+组件1：2020-04、2023-10、2025-12三个月份A预检均为1条，PASS_A_FIX
 组件2：660月，PASS_PAGE
-组件3：360条/18页，PASS_PAGE
+组件3：上述三个月份均为360条/18页，PASS_PAGE
 组件4：18条/1页，PASS_PAGE
 页脚：居中，灰蓝正文，1970/pending红色警示，PASS_PAGE
 
-【阻塞】
-V50_dim_date.month_end 已正确用于组件1和组件3，但月份筛选未传递到 V50_MVP_cycle_state。
-A需核查一对一关系的筛选方向或平台生效状态。B不修改共享模型。
+【A修复】
+V50_dim_date.month_end = V50_MVP_cycle_state.month_end 保持1:1，筛选方向已改为双向；Smartbi保存和清缓存成功。
+原BLOCKED_A_MODEL_RELATION已解除，当前进入B独立复核。
 
 【待补】
-1. 2020-04、2023-10、2025-12三个月份复算与截图。
+1. B本人独立复测2020-04、2023-10、2025-12并签收。
 2. HIST001/HIST018同屏截图。
-3. 三次冷/热性能。
-4. A只读复核与签名。
+3. 用户已明确不要求性能计时截图。
 
 【签收】
 B：已签当前页面完成和BLOCKED边界（2026-08-30 15:59:59 +08:00）
-A：待复核，B不代签
+A：已签关系修复与A侧预检事实（2026-08-31 13:41:45 +08:00）
+B正式复核：待本人签收，A不代签
 
-最终判定：BLOCKED
+最终判定：READY_B_REVIEW（B签收前G3保持BLOCKED）
