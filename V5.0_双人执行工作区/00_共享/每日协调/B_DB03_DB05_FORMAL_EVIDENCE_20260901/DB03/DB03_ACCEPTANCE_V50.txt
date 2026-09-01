@@ -1,0 +1,79 @@
+DB03 ACCEPTANCE V5.0
+====================
+页面资源：DB03_XH202612_V50_COMPANY_BOUNDARY
+检查日期：2026-09-01
+记录性质：AI 协助整理 B 侧现场证据；不代替执行者 B 或执行者 A 本人签收
+
+【状态】
+PAGE_BUILD_DONE = PASS
+DEFAULT_AND_ENTERPRISE_LINKAGE = PASS_RUNTIME
+FISCAL_YEAR_LINKAGE = PASS_RUNTIME
+QUALITY_FLAG_BINDING_AND_LINKAGE = PASS_FIX_VERIFIED
+PERFORMANCE = PASS_RUNTIME
+COMPONENT_MAP_AND_RECONCILIATION = PASS
+B_SIGNOFF = READY_B_SIGN
+A_READONLY_REVIEW = PENDING
+FORMAL_ACCEPTANCE = BLOCKED_SIGNOFF
+G3 = BLOCKED
+
+【现场核对读数】
+1. 默认预览：企业目录 20 条，披露矩阵 20 家，Global=160，Region=8，Country=0，海外收入字段可用值=0；底部企业数据可答边界 20 条。
+2. 企业=华为：企业目录 1 条，披露矩阵 1 家，Global=8，Region=5，企业数据可答边界 1 条；两张固定边界卡保持 0。
+3. 企业=华为、财年=2020：矩阵披露记录数=6、来源数=1；Country 和海外收入字段可用值保持 0。
+4. 数据质量字段已从错误的 fiscal_year 修正为 V50_company_overseas_exposure.quality_flag；下拉返回两个真实标签：
+   - ai_evidence_final_user_confirmed
+   - user_confirmed_ai_review_sparse
+5. 质量标签 ai_evidence_final_user_confirmed：矩阵 2 家，Global=0，Region=8，Country=0，海外收入字段可用值=0。
+6. 质量标签 user_confirmed_ai_review_sparse：矩阵 20 家，Global=160，Region=0，Country=0，海外收入字段可用值=0。
+7. 恢复数据质量“全部”并关闭下拉完成刷新后，页面回到 20 / 20 / 160 / 8 / 0 / 0 默认基线。
+8. 四个顶部筛选器均采用自定义作用范围，绑定企业目录、披露矩阵、Global、Region、企业数据可答边界五个动态组件；Country 与海外收入字段可用值两张固定模型边界卡不参与动态筛选。
+
+【性能记录】
+1. 恢复企业筛选为全部并完成刷新：2.575 秒，PASS（≤10 秒）。
+2. 选择 ai_evidence_final_user_confirmed：3.813 秒，PASS（≤10 秒）。
+3. 选择 user_confirmed_ai_review_sparse：3.799 秒，PASS（≤10 秒）。
+4. 恢复数据质量为全部并关闭下拉完成刷新：7.615 秒，PASS（≤10 秒）。
+5. 本轮修正后四次操作均完成刷新，未见空白组件、字段报错或加载失败。
+
+【正式验收三件套】
+1. DB03_COMPONENT_MAP_V50.xlsx
+2. DB03_RECONCILIATION_V50.xlsx（含“性能计时”sheet）
+3. DB03_ACCEPTANCE_V50.txt
+
+【关键截图】
+1. 01c_DB03_默认全页_预览态_上半页_20260901.png
+2. 01d_DB03_默认全页_预览态_下半页_20260901.png
+3. 05c_DB03_组件3_geography_level无country_配置证据.png
+4. 05d_DB03_数据质量筛选器绑定_quality_flag_配置证据_20260901.png
+5. 07d_DB03_企业筛选_华为联动_干净预览态_20260901.png
+6. 08a_DB03_华为_财年2020_披露6_来源1_20260901.png
+7. 08b_DB03_数据质量筛选器错误显示财年候选_BLOCKED_20260901.png（历史问题闭环证据，不代表当前状态）
+8. 08c_DB03_数据质量_ai_evidence联动_PASS_20260901.png
+9. 08d_DB03_数据质量_user_confirmed联动_PASS_20260901.png
+10. 08e_DB03_数据质量候选项_真实标签_20260901.png
+11. 10a_DB03_性能1_恢复默认全部企业_2.575秒_20260901.png
+12. 10b_DB03_性能4_数据质量恢复全部_7.615秒_PASS_20260901.png
+
+【证据边界】
+1. Smartbi 页面纵向内容超过单屏，默认全页采用上半页和下半页两张连续预览证据，不把分页/滚动结构误写成页面缺失。
+2. 08b 为修复前错误绑定证据；当前口径以 05d、08c、08d、08e 和 10b 为准。
+3. 09_DB03_全页_编辑态暂停点_待修正.png 仅为历史过程截图，不作为正式结果证据。
+4. AI 只能整理现场证据，不得代签 B，也不得代签 A。
+
+【仍待人工闭环】
+1. 执行者 B 已于 2026-09-01 22:30 +08:00 本人填写 PASS、签名和时间。
+2. B 将本目录提交执行者 A；A 只读复核后本人填写 PASS / FAIL / BLOCKED、签名和时间。
+3. A 完成只读复核签署前，DB03 状态保持 B_SIGNED / A_REVIEW_PENDING，G3 仍为 BLOCKED。
+
+【B本人签署区】
+执行者 B 判定：PASS
+执行者 B 签名：✅（本人填写）
+执行者 B 时间：2026-09-01 22:30 +08:00
+
+【A只读复核签署区｜由A本人填写】
+执行者 A 只读复核判定（PASS / FAIL / BLOCKED）：________________
+执行者 A 签名：________________
+执行者 A 时间：________________
+
+当前判定：B_SIGNED_PASS / A_REVIEW_PENDING
+说明：DB03 页面运行时、财年/质量联动、性能、组件映射和对账已经补齐；B 已本人签署 PASS，正式闭环仍以 A 只读复核为最后门槛。
