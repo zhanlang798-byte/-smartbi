@@ -11,6 +11,7 @@
 7. `V50_MVP_country_latest.latest_odi_stock_year` 别名改为 `odi_stock_year`，数据类型改为整型。
 8. `AIP_XH202612_V50_DECISION` 项目说明保存项目级r11路由约束。
 9. A侧AI-01冒烟13.532秒，安全返回`BLOCKED／待补证`，未输出错误金额或18180年份。
+10. 删除来源登记自动生成的 `is_proxy2` 求和度量，避免问数误选计数/求和；保存结果为`保存成功！`。
 
 ## 截图
 
@@ -22,6 +23,7 @@
 - `06_PROJECT_R11_PUBLISHED.png`：项目级r11已保存说明。
 - `07_AI01_A_SIDE_SMOKE_BLOCKED.png`：A侧安全边界冒烟。
 - `08_MODEL_VALIDATION_FINAL.png`：iso3类型修复后的最终校验；键类型不一致已消失，剩余为模型关系建议项。
+- `09_PROXY_MEASURE_REMOVED.png`：原始 `registry_is_proxy` 保留，右侧度量树不再含 `is_proxy2`。
 
 ## 判定边界
 
