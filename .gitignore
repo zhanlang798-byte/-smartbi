@@ -35,9 +35,11 @@ tmp/
 
 # 本地检查缓存、备份与工具输出（不上传）
 *.inspect.ndjson
+.codex_work/
 **/backups/
 **/outputs/
 
 # Smartbi 原始导出XML含内部数据源元数据，仅本机受控保存
 V5.0_双人执行工作区/A_数据平台/03_Smartbi证据/A03/XML元数据/*.xml
+V5.0_双人执行工作区/A_数据平台/03_Smartbi证据/P1/**/*.xml
 V5.0_双人执行工作区/A_数据平台/04_XML恢复/*.xml
