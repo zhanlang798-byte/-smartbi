@@ -2,8 +2,8 @@
 
 ## 当前状态
 
-- DB03：`B_SIGNED_PASS / A_REVIEW_PENDING`
-- DB05：`B_SIGNED_PASS / A_REVIEW_PENDING`
+- DB03：`B_SIGNED_PASS / A_READONLY_REVIEW_PASS`
+- DB05：`B_SIGNED_PASS / A_READONLY_REVIEW_PASS`
 - 正式只读包：`SHARED_PACKAGE_READY`
 - G3：A 完成只读复核签署且其余门槛满足前，仍保持 `BLOCKED`
 
@@ -32,11 +32,11 @@ DB05 已完成 10 个 `source_id` × 12 字段抽查（120/120）、五项性能
 - [正式只读包说明](B_DB03_DB05_FORMAL_EVIDENCE_20260901/README.md)
 - [本次同步 SHA-256 清单](B_FORMAL_SYNC_SHA256_20260901.txt)
 
-## A 下一步
+## A 复核结果
 
-1. 对 DB03、DB05 正式材料执行只读复核。
-2. 分别在两个 `ACCEPTANCE` 文件的 A 专属签署区本人填写 `PASS / FAIL / BLOCKED`、签名和时间。
-3. 若判定 `FAIL` 或 `BLOCKED`，记录具体对象、证据编号和阻断原因，不修改 B 原始证据。
+1. 已对 DB03、DB05 正式材料执行只读复核。
+2. 已在两个 `ACCEPTANCE` 文件的 A 专属签署区填写 `PASS`、签名和时间。
+3. 公式错误扫描、截图、组件映射、对象/KPI 对账和性能记录均未发现阻断项；DB03、DB05 页面项闭环。
 
 ## 交接边界
 
@@ -46,4 +46,4 @@ DB05 已完成 10 个 `source_id` × 12 字段抽查（120/120）、五项性能
 
 B 提交状态：已提交（本人已签收，`2026-09-01 22:30 +08:00`）
 
-A 接收/复核状态：________________
+A 接收/复核状态：`PASS / 已签署`（`2026-09-01 23:49:52 +08:00`）

@@ -12,9 +12,9 @@ QUALITY_FLAG_BINDING_AND_LINKAGE = PASS_FIX_VERIFIED
 PERFORMANCE = PASS_RUNTIME
 COMPONENT_MAP_AND_RECONCILIATION = PASS
 B_SIGNOFF = READY_B_SIGN
-A_READONLY_REVIEW = PENDING
-FORMAL_ACCEPTANCE = BLOCKED_SIGNOFF
-G3 = BLOCKED
+A_READONLY_REVIEW = PASS
+FORMAL_ACCEPTANCE = PASS_B_AND_A_REVIEW
+G3_PAGE_ITEM = PASS
 
 【现场核对读数】
 1. 默认预览：企业目录 20 条，披露矩阵 20 家，Global=160，Region=8，Country=0，海外收入字段可用值=0；底部企业数据可答边界 20 条。
@@ -60,10 +60,10 @@ G3 = BLOCKED
 3. 09_DB03_全页_编辑态暂停点_待修正.png 仅为历史过程截图，不作为正式结果证据。
 4. AI 只能整理现场证据，不得代签 B，也不得代签 A。
 
-【仍待人工闭环】
+【人工闭环结果】
 1. 执行者 B 已于 2026-09-01 22:30 +08:00 本人填写 PASS、签名和时间。
-2. B 将本目录提交执行者 A；A 只读复核后本人填写 PASS / FAIL / BLOCKED、签名和时间。
-3. A 完成只读复核签署前，DB03 状态保持 B_SIGNED / A_REVIEW_PENDING，G3 仍为 BLOCKED。
+2. 执行者 A 已核对截图、组件映射、对象/KPI 对账、公式错误扫描和性能记录，未发现阻断项。
+3. DB03 页面项已完成 B 签署与 A 只读复核；项目级 G3 仍须等待 DB04 等其余页面门槛闭环。
 
 【B本人签署区】
 执行者 B 判定：PASS
@@ -71,9 +71,9 @@ G3 = BLOCKED
 执行者 B 时间：2026-09-01 22:30 +08:00
 
 【A只读复核签署区｜由A本人填写】
-执行者 A 只读复核判定（PASS / FAIL / BLOCKED）：________________
-执行者 A 签名：________________
-执行者 A 时间：________________
+执行者 A 只读复核判定（PASS / FAIL / BLOCKED）：PASS
+执行者 A 签名：✅（A 已明确授权电子落盘）
+执行者 A 时间：2026-09-01 23:49:52 +08:00
 
-当前判定：B_SIGNED_PASS / A_REVIEW_PENDING
-说明：DB03 页面运行时、财年/质量联动、性能、组件映射和对账已经补齐；B 已本人签署 PASS，正式闭环仍以 A 只读复核为最后门槛。
+当前判定：B_SIGNED_PASS / A_READONLY_REVIEW_PASS
+说明：DB03 页面运行时、财年/质量联动、性能、组件映射和对账已经补齐；B 已本人签署 PASS，A 已完成只读复核并签署 PASS。

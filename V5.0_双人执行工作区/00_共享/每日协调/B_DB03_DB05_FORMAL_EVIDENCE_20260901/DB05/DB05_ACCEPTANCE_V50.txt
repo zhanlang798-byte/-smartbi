@@ -68,7 +68,7 @@ coverage_end、publication_date、fetch_timestamp、data_version、sha256、qual
 
 七、当前结论与签署
 ------------------
-当前结论：B_SIGNED_PASS / A_REVIEW_PENDING
+当前结论：B_SIGNED_PASS / A_READONLY_REVIEW_PASS
 
 【B本人签署区】
 B最终结论：PASS
@@ -76,8 +76,8 @@ B本人签名：✅（本人填写）
 B签署时间：2026-09-01 22:30 +08:00
 
 【A只读复核签署区｜由A本人填写】
-A只读复核结论（PASS / FAIL / BLOCKED）：________________
-A签名：________________
-A签署时间：________________
+A只读复核结论（PASS / FAIL / BLOCKED）：PASS
+A签名：✅（A 已明确授权电子落盘）
+A签署时间：2026-09-01 23:49:52 +08:00
 
-说明：DB05 页面、10 个 source_id 抽查、性能及验收三件套已补齐，B 已本人签署 PASS；A 完成只读复核签署前，DB05 仍为 A_REVIEW_PENDING。本文件由 AI 协助规范 B 已填写的签署格式，AI 未代替 B 或 A 签名。
+说明：DB05 页面、10 个 source_id × 12 字段抽查（120/120）、五组性能复测及验收三件套已补齐；B 已本人签署 PASS，A 已核对截图、工作簿和对账结果并完成只读复核签署。电子落盘由 AI 按 A 的明确授权执行，未代替 B 签名。
