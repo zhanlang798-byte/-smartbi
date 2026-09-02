@@ -2,16 +2,31 @@
 
 ## 状态
 
-`A_AGENT_MDL_REPAIR_PARTIAL_PASS / 4_OF_6_A_SELFTEST_PASS / AI19_AI20_STEP_LIMIT_BLOCKED / B_RETEST_REQUIRED`
+`R20_REAL_QUERY_RETEST_COMPLETE / 3_OF_6_PASS / 3_OF_6_FAIL / G4_BLOCKED / B_RETEST_AFTER_REPAIR`
 
 ## 执行条件
 
-- 通道：Smartbi“数据洞察”，不是 V50 Agent 正式判分；依据 B 最新回执，本轮只作为 MDL 映射和查询链诊断旁证。
+- 通道：R20 使用正式 `AGENT_XH202612_V50_ASSISTANT`，每题均触发 ReAct/MDL 真实查询；第一轮“数据洞察”只作为历史诊断旁证。
 - 模型：`MDL_XH202612_V50_COUNTRY_RESERVE`。
 - 会话：每题独立新会话。
 - 联网：每题提交前确认关闭。
 - Skills：沿用 2026-09-01 正式轮次配置，测试中未调整。
 - 问句：AI-01/04/16 使用 `B04_17题BLOCKED问数话术_20260901.md` 的 r2；AI-17 使用已修正的源表空值口径；AI-19/20 使用同手册 r1 长版原文。
+
+## R20 去硬编码后的真实问数复测（当前有效结论）
+
+2026-09-02 检查发现此前 Agent 内层 LLM 自定义提示词包含 AI-01/04/17 的固定答案片段，故 R12—R19 的 Agent PASS 截图仅保留为历史证据，不再作为最终“模型真实问数”通过依据。A 已删除固定答案，改为通用约束提示词 `AGENT_LLM_CUSTOM_PROMPT_V50_R20.txt`，保存后以同一正式 Agent、同一冻结 MDL、独立新会话执行六题。
+
+| 题号 | R20判定 | 真实结果 | 证据 |
+|---|---|---|---|
+| AI-17 | PASS | 真实查询 `V50_source_registry`；SRC0721 的机构、数据集、观测期、版本、许可、代理状态和 SHA-256 正确，未登记日期保持空 | `19_AGENT_AI17_R20_REAL_MODEL_PASS_20260902.png` |
+| AI-04 | PASS | 真实查询 `V50_country_monthly_risk`；`42.70252 / 2018.099 / 184021`，日期、单位、`WEB-0048-R01`、两项布尔值均正确 | `20_AGENT_AI04_R20_REAL_MODEL_PASS_20260902.png` |
+| AI-16 | FAIL | 月度值、同比和首末差值正确，但 `source_id` 返回“见 manifest”、`is_proxy` 返回 `4`，违反原始元数据与布尔约束 | `21_AGENT_AI16_R20_REAL_MODEL_FAIL_20260902.png` |
+| AI-01 | PASS | 40个非空样本；中位数 `1,527,540,000 USD`；ETH/TUR入选；ZWE排除；2024财年、来源ID和附表定位均正确 | `22_AGENT_AI01_R20_REAL_MODEL_PASS_20260902.png` |
+| AI-19 | FAIL | 七段已交付，但 `cpi_yoy=-0.83604`、`crisis_event_count=23`，与冻结真值 `0.309024`、`2` 不一致 | `23_AGENT_AI19_R20_REAL_MODEL_FAIL_20260902.png` |
+| AI-20 | FAIL | 六段已交付并正确拒绝直接执行，但储备全程缺失国家回答为0（冻结基线5个）、企业分层回答为2条（冻结基线168条），且月度元数据仍为“见 manifest/4” | `24_AGENT_AI20_R20_REAL_MODEL_FAIL_20260902.png` |
+
+当前有效结论：R20 为 `3 PASS / 3 FAIL`。六题都已真实执行并形成交付，不再是20步上限 BLOCKED；但 AI-16/19/20 出现事实或元数据硬失败，A 不签 G4，B 暂不进入25问正式签收，需先修复模型别名/派生字段和宽表计数口径后重跑失败三题。
 
 ## 第一轮结果（数据洞察诊断，历史保留）
 
@@ -24,7 +39,9 @@
 | AI-19 | 2026-09-02 15:10:27 | FAIL | 多表查询和 exposure 年份语义验证后，最终界面显示“未生成交付物”，七段简报未交付 | `05_AI19_MDL_RETEST_NO_DELIVERABLE_FAIL_20260902.png` |
 | AI-20 | 2026-09-02 15:10:30 | FAIL | 数据质量、代理和治理表查询后，最终界面显示“未生成交付物”，六段边界清单未交付 | `06_AI20_MDL_RETEST_NO_DELIVERABLE_FAIL_20260902.png` |
 
-## 修复后结果（正式 `AGENT_XH202612_V50_ASSISTANT`）
+## R12—R19 历史结果（已被R20取代）
+
+> 注意：本节包含发现固定答案污染之前的运行记录，不能再作为最终 PASS 依据；当前判定仅以 R20 六题真实问数结果为准。
 
 修复内容：Start→ReAct 用户请求改为会话变量 `question`；月度来源/布尔、来源登记、MVP 综合来源和 ODI 来源使用唯一业务别名；`V50_country_exposure.year` 修为字符串并别名 `exposure_odi_stock_year`；确认原表 `odi_stock_usd` 已在数据源侧截断为 `2147483647` 后将其隐藏，并以 `V50_MVP_country_latest.exposure_odi_stock_usd_exact` 提供精确金额桥接；保存、清缓存并发布 R19。模型仍为 `MDL_XH202612_V50_COUNTRY_RESERVE`，Agent 为标准模式，推理关闭，未切换其他模型。
 
@@ -37,14 +54,14 @@
 | AI-19 | BLOCKED | R17曾返回正确月度/MVP/ODI/政策与GLOBAL周期核心值，但仍复现来源拼接和`is_proxy=4`红线；消歧后R18/R19均被后端固定20步上限截断，未形成可签七段答案 | `17_AGENT_AI19_R19_STEP_LIMIT_BLOCKED_20260902.txt` |
 | AI-20 | BLOCKED | 冻结六段问句在标准模式、推理关闭下稳定触发后端20步上限，未形成可签答案 | `18_AGENT_AI20_R19_STEP_LIMIT_BLOCKED_20260902.txt` |
 
-结论：A 已完成可在现有 Agent 执行器内闭环的 4 题修复与实跑，具备提交 B 对 AI-01/04/16/17 独立复测的条件；AI-19/20 不是数据真值未修，而是冻结长问句超过平台固定执行步数，仍需 B 决定是否接受拆分执行、平台侧提高上限或保持 BLOCKED。A 不代 B 作该决定。
+历史结论已被 R20 取代：去除固定答案后，AI-19/20 均可完成长问句交付，原“20步上限 BLOCKED”不再是当前主阻塞；当前主阻塞为 AI-16/19/20 的真实查询结果错误。
 
 ## 判定与修复边界
 
-1. 第一轮 `0 PASS / 6 FAIL` 作为诊断历史保留，不倒改原始失败证据。
-2. 修复后 A侧正式 Agent 实跑为 `4 PASS / 2 BLOCKED`；只有 AI-01/04/16/17 可交 B 独立复测，AI-19/20 不冒签。
-3. G4、B04和25问仍保持 `BLOCKED`，必须由 B 使用冻结问句独立复测并本人签署；A的4题PASS不自动升级为B PASS。
-4. 若测试规则不允许拆分 AI-19/20，需平台管理员提高后端20步硬上限；界面“最大执行轮次”填写40后后端仍在20步截断，故不能以界面配置冒充已解决。
+1. 第一轮 `0 PASS / 6 FAIL` 与 R12—R19 记录均作为历史保留，不倒改原始证据。
+2. 当前有效的 A 侧正式 Agent 结果为 R20 `3 PASS / 3 FAIL`；通过题为 AI-01/04/17，失败题为 AI-16/19/20。
+3. G4、B04和25问保持 `BLOCKED`；失败三题修复并由 A 重跑通过后，才能提交 B 独立复测与25问全量签收。
+4. 不再把 AI-19/20 归因于固定20步上限：R20 已分别在约95秒、172秒完成答案，当前应修复返回口径和真实字段映射。
 
 ## SHA-256
 
@@ -65,15 +82,22 @@ CCE016FCDCB9C42A2847706BA57BCDEACA887744F329C7EE14505036ACB3CA23  15_AGENT_AI16_
 0B4A478AB1B420D7AEF2A7F322661231054FC99D62402D011EF628E2F815128D  16_AGENT_AI01_R19_PASS_20260902.png
 BBA68BDBA249983A285A4B4FD864E1C3175AD8F86C81D3C59641691B50617B1D  17_AGENT_AI19_R19_STEP_LIMIT_BLOCKED_20260902.txt
 5BF52D156CBFEC7A56FBE9E1827FB92284EAF635F67875934710644B7331F403  18_AGENT_AI20_R19_STEP_LIMIT_BLOCKED_20260902.txt
+376CD2B20D07EDD94B921AC3ECB3D6B4825623AE090CA4E9DAEF6A45DDDD38E0  19_AGENT_AI17_R20_REAL_MODEL_PASS_20260902.png
+941A86EE7C4D3118DB55B8FDC015B0793D8A44D49A05033C42076D42CE3FC16D  20_AGENT_AI04_R20_REAL_MODEL_PASS_20260902.png
+99F0CB1B2D59CD3905CE2D4E3FF31CF2C732CA4B6056004044FE5F4BCC72F660  21_AGENT_AI16_R20_REAL_MODEL_FAIL_20260902.png
+4AB423A2194A7EF7387B4CD086293CFCE4E761F7D8A3CDA8383A471D8675884C  22_AGENT_AI01_R20_REAL_MODEL_PASS_20260902.png
+83FA10B0D47EDA80F0E0FFF976BB0BC1ABED9D326BD9768087CFC562331A70C9  23_AGENT_AI19_R20_REAL_MODEL_FAIL_20260902.png
+7AD34B2B0E238638BC6B6D6902614A60F26090DC7385F9671088E780F719FC1A  24_AGENT_AI20_R20_REAL_MODEL_FAIL_20260902.png
+641A4EFF013CB2E56D9B9B01DBE2DBB2B493B45BC139BFA055C5B9EA16FD9BAF  AGENT_LLM_CUSTOM_PROMPT_V50_R20.txt
 ```
 
 ## A签署
 
-- 执行者A：`PASS`（仅限模型/Agent R19修复发布，以及 AI-01/04/16/17 A侧实跑）。
-- 签署时间：`2026-09-02 20:45:44 +08:00`。
-- 签署边界：AI-19/20 保持 `BLOCKED`；不代签 B，不代表 B04、G4或25问通过。
+- 执行者A：`R20_RETEST_COMPLETE / 3_PASS_3_FAIL`。
+- 签署时间：`2026-09-02 22:32:05 +08:00`。
+- 签署边界：仅确认去硬编码、六题真实执行及证据归档完成；AI-16/19/20 为 FAIL，不签 G4，不代签 B。
 
 ## B签署
 
 - 执行者B：`PENDING`。
-- 条件：B 对 AI-01/04/16/17 独立新会话复测；AI-19/20 由 B 决定拆分、平台提限或继续 BLOCKED，并完成25问全量后本人签署。
+- 条件：A 先修复 AI-16/19/20 并重跑至六题全过；随后 B 使用冻结问句独立复测并完成25问全量后本人签署。
