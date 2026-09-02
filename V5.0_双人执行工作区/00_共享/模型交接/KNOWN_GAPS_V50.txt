@@ -59,3 +59,9 @@ G10 指标模型范围豁免
 - 证据：A04/07_metric_waiver.png。
 - SHA256：6881488C6C902C04716F54219D3C0639D1356552474DD49775B78225CD0CAB1F。
 - 处置：不创建IM模型；不申请指标目录权限；Smartbi实际值保持空；离线指标合同继续保留。
+
+G11 ODI原金额截断与Agent长问句上限
+- V50_country_exposure.odi_stock_usd在当前数据源/模型链中已截断为2147483647，修改语义类型和清缓存不能恢复真实金额。
+- 处置：隐藏截断原值；精确金额使用V50_MVP_country_latest.exposure_odi_stock_usd_exact桥接，财年/来源/质量/定位仍从country_exposure最新财年行取得；交接时必须披露该桥接。
+- AI-19/20冻结长问句在正式Agent中稳定触发后端固定20步上限；界面最大执行轮次改40仍在20步截断。
+- 处置：B决定允许按段拆分、由平台管理员提高后端硬上限，或保持BLOCKED；不得把A短题PASS冒充G4通过。

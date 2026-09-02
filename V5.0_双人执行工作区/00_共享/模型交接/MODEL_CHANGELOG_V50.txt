@@ -30,6 +30,16 @@ MODEL_CHANGELOG_V50｜模型变更日志
 - 页面3/5/6字段树27/27可见记录已由B复核确认；A04仍待前缀及资产/事件隔离正式确认、冻结和A/B最终签收。
 - 关系截图已归档：RELATIONSHIP_MODEL_FULLSCREEN_V50.png、RELATIONSHIP_DETAIL_COMPANY_STATUS_V50.png、RELATIONSHIP_DETAIL_GLOBAL_CYCLE_V50.png、RELATIONSHIP_DETAIL_MVP_CYCLE_V50.png。
 
+2026-09-02 20:45:44 +08:00
+- 变更人：执行者A；对象：MDL_XH202612_V50_COUNTRY_RESERVE、AGENT_XH202612_V50_ASSISTANT。
+- country_monthly_risk、source_registry、MVP综合来源和country_exposure来源字段采用唯一业务别名，避免多表同名字段混用。
+- V50_country_exposure.year改为字符串并使用exposure_odi_stock_year；原odi_stock_usd已确认在数据源侧截断为2147483647，隐藏为odi_stock_usd_capped_raw。
+- 精确ODI金额改由V50_MVP_country_latest.exposure_odi_stock_usd_exact桥接；ODI财年、来源、质量和定位仍从country_exposure同一最新财年行取得。
+- 保存并清缓存；正式Agent发布V50-B04-AGENT-REACT-R19，标准模式、推理关闭，未切换其他模型。
+- A侧冻结问句回归：AI-01/04/16/17 PASS；AI-19/20因后端固定20步上限BLOCKED。完整B独立复测仍待执行，G4不升级。
+- 证据：A_数据平台/03_Smartbi证据/P1/A_MDL_FORMAL_PRETEST_20260902/。
+- 回滚点：恢复本次变更前字段别名和R16提示词；不得重新暴露已截断原金额作为精确值。
+
 冻结后变更流程
 1. 提交人先登记日期、变更人、对象名、变更内容、原因。
 2. 写清受影响的表、字段、关系、指标、DB03/DB05/DB06和AI问题。

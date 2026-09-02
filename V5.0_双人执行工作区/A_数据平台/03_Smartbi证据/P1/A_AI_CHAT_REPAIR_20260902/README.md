@@ -1,5 +1,7 @@
 # A侧 AIChat/Agent 修复证据（2026-09-02）
 
+> 后续更新：本目录保留早期 Agent/KB 三题自测。正式冻结MDL绑定、R19修复及AI-01/04/16/17通过、AI-19/20步数上限阻塞的最新结论见相邻目录 `../A_MDL_FORMAL_PRETEST_20260902/README.md`。
+
 ## 状态
 
 `A_AGENT_REPAIR_PUBLISHED / A_SELFTEST_AI01_AI04_AI17_PASS / B_DATA_INSIGHT_RETEST_PENDING`
