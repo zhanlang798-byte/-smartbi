@@ -1,0 +1,28 @@
+Smartbi 内置“数据洞察”修复后正式复测运行记录
+日期：2026-09-03（Asia/Shanghai）
+
+固定执行条件
+- 通道：平台内置“数据洞察”
+- 模型：MDL_XH202612_V50_COUNTRY_RESERVE
+- 联网搜索：关闭（提交前检查按钮无 --active 状态）
+- 会话纪律：AI-01、AI-04分别使用独立新会话
+- 问句：B04_六题复测执行单_20260902.md 中对应冻结 r2 原文
+
+AI-01 r3
+- 提交时间：2026-09-03 14:38:32 +08:00
+- 页面结果：未生成回答；弹出“服务异常”
+- 错误详情：sessionstatus_timeout
+- 判定：RUNTIME_BLOCKED；不判 PASS，不判题目 FAIL
+- 截图：34_BUILTIN_DATA_INSIGHT_AI01_R3_SESSIONSTATUS_TIMEOUT_20260903.png
+
+AI-04 r3
+- 提交时间：2026-09-03 14:39:29 +08:00
+- 页面结果：未生成回答；弹出“服务异常”
+- 错误详情：sessionstatus_timeout
+- 判定：RUNTIME_BLOCKED；不判 PASS，不判题目 FAIL
+- 截图：35_BUILTIN_DATA_INSIGHT_AI04_R3_SESSIONSTATUS_TIMEOUT_20260903.png
+
+综合判定
+- 两个不同冻结问句、两个独立会话在相邻时段复现相同 sessionstatus_timeout，证明公共会话服务仍未恢复。
+- 为避免制造更多无效轮次，本次不继续提交 AI-16、AI-17、AI-19、AI-20。
+- 既有正式成绩保持 19/25 PASS；六题修复后正式复测仍未完成。
