@@ -1,7 +1,7 @@
 A07 独立恢复状态
 更新时间：2026-09-03 15:35:52 +08:00
 
-状态：BLOCKED / NOT STARTED
+状态：PACKAGE_READY / CLEAN_TARGET_BLOCKED / RECOVERY_NOT_STARTED
 
 已就绪：
 1. DB01—DB06+模型已在DB06双向关系修复后重新分两包落盘并完成哈希与安全复核。
