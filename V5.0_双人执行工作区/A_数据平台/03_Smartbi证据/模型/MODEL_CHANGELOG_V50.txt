@@ -1,7 +1,7 @@
 MODEL_CHANGELOG_V50｜模型变更日志
 ============================================================
-当前状态：BLOCKED
-当前版本：V5.0-A04-DRAFT-r3
+当前状态：G2_START_RELEASE_PASS / LIVE_CHANGED / FINAL_FREEZE_BLOCKED
+当前版本：未统一（G2后已有登记变更；不得把旧DRAFT-r3冒充最终冻结版）
 冻结版本：未生成
 
 2026-08-24 21:11:10 +08:00
@@ -27,7 +27,36 @@ MODEL_CHANGELOG_V50｜模型变更日志
 - Smartbi指标实际值保持空，未填0，未把未执行测试伪写成PASS。
 - 范围豁免证据SHA256：6881488C6C902C04716F54219D3C0639D1356552474DD49775B78225CD0CAB1F。
 - ISS-20260825-004按范围豁免关闭。
-- A04仍待B只读测试、页面3/5/6测试、前缀及隔离确认、冻结和A/B签收。
+- 页面3/5/6字段树27/27可见记录已由B复核确认；A04仍待前缀及资产/事件隔离正式确认、冻结和A/B最终签收。
+- 关系截图已归档：RELATIONSHIP_MODEL_FULLSCREEN_V50.png、RELATIONSHIP_DETAIL_COMPANY_STATUS_V50.png、RELATIONSHIP_DETAIL_GLOBAL_CYCLE_V50.png、RELATIONSHIP_DETAIL_MVP_CYCLE_V50.png。
+
+2026-08-28
+- G2启动放行完成A/B双方签署，状态为PASS。
+- 既有前缀偏差、平台证据和模型冻结问题转入非阻塞跟踪，但仍影响恢复验收与G6最终签收。
+- 依据：00_共享/每日协调/G2_START_RELEASE_20260828.md。
+
+2026-08-31 13:41:45 +08:00至15:16:04 +08:00
+- DB06日期维表与MVP周期状态表关系的过滤方向改为双向。
+- B独立复测3个月并签署PASS；该变更解决DB06月份切换联动，不等于模型最终冻结。
+- 依据：00_共享/每日协调/B_DB06_RELATION_FIX_REVIEW_PASS_20260831.md。
+
+2026-09-01
+- 增补risk_source_id、risk_is_proxy、registry_source_id、registry_is_proxy、exposure_odi_stock_year、mvp_source_id_composite、exposure_source_id、exposure_quality_flag等发布字段。
+- country_monthly_risk.iso3改为字符串；删除错误求和度量；隐藏截断的ODI展示字段并暴露精确桥接字段。
+- 依据：00_共享/每日协调/A_B04_FIX_HANDOFF_20260901.md。
+
+2026-09-02 20:45:44 +08:00
+- 对象：MDL_XH202612_V50_COUNTRY_RESERVE、AGENT_XH202612_V50_ASSISTANT；变更人：执行者A。
+- country_monthly_risk、source_registry、MVP综合来源和country_exposure来源字段采用唯一业务别名，避免多表同名字段混用。
+- V50_country_exposure.year改为字符串并使用exposure_odi_stock_year；原odi_stock_usd确认已在数据源侧截断为2147483647，隐藏为odi_stock_usd_capped_raw。
+- 精确ODI金额改由V50_MVP_country_latest.exposure_odi_stock_usd_exact桥接；财年、来源、质量和定位仍从country_exposure同一最新财年行取得。
+- 自定义Agent当时发布V50-B04-AGENT-REACT-R19；A侧AI-01/04/16/17 PASS，AI-19/20因后端固定20步上限BLOCKED。该结果现仅保留为历史诊断，不作为正式内置“数据洞察”评分。
+- 证据：A_数据平台/03_Smartbi证据/P1/A_MDL_FORMAL_PRETEST_20260902/。
+
+2026-09-03 22:18:58 +08:00
+- 正式AI评分路线确认使用Smartbi内置“数据洞察”及MDL_XH202612_V50_COUNTRY_RESERVE；自建AIP/知识库/Agent仅作为历史和诊断材料。
+- 页面/模型XML导出哈希、AI资源盘点及知识库原生CSV备份已归档。
+- 独立干净目标恢复、恢复后哈希/对象核验、B独立复核及最终模型冻结仍未执行，故当前状态保持FINAL_FREEZE_BLOCKED。
 
 冻结后变更流程
 1. 提交人先登记日期、变更人、对象名、变更内容、原因。

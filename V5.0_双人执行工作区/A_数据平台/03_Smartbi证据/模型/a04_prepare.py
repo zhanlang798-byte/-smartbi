@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 # A04 交付物生成：关系图/关系审计/指标字典/表合同/字段字典/交接/缺口/变更日志 + 问题单ISS-20260824-002
 import os, sys, datetime
+
+# 归档生成器：模板停留在2026-08-24初建口径，会覆盖后续实机证据与签署状态。
+# 仅在明确重建历史草稿时设置 A04_ALLOW_ARCHIVE_REBUILD=1；日常维护请直接更新现行证据和共享交接材料。
+if os.environ.get('A04_ALLOW_ARCHIVE_REBUILD') != '1':
+    raise SystemExit('ARCHIVED_GENERATOR_BLOCKED: set A04_ALLOW_ARCHIVE_REBUILD=1 only for an intentional historical rebuild')
+
 sys.path.insert(0, r"C:\Users\33625\Desktop\数据创新平台-张奥\V5.0_双人执行工作区\A_数据平台\03_Smartbi证据\A00")
 sys.path.insert(0, r"C:\Users\33625\Desktop\数据创新平台-张奥\V5.0_双人执行工作区\A_数据平台\03_Smartbi证据\A01")
 from xlsx_min import Xlsx
