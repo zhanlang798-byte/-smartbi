@@ -1,5 +1,7 @@
 # A｜R21 修复完成与 AIChat 公共会话超时交接（2026-09-03）
 
+> 口径更新：本文件记录的R21自研Agent结果自2026-09-03起只作为历史诊断证据。项目已根据赛事方建议改用内置“数据洞察”作为正式评分通道，当前有效交接见 `A_BUILTIN_AGENT_ROUTE_SWITCH_20260903.md`。
+
 ## 当前状态
 
 `AGENT_R21_PUBLISHED / AI01_AI04_AI16_AI17_PASS / AI19_AI20_RUNTIME_BLOCKED / B_RETEST_NOT_READY / G4_BLOCKED`

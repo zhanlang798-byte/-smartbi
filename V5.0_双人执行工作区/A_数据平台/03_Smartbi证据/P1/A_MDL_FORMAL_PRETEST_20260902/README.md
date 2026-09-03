@@ -1,26 +1,35 @@
 # A侧指定 MDL 数据洞察诊断预检（2026-09-02）
 
+> **2026-09-03正式口径更新**：根据用户提供的赛事群公告（平台内置Agent已测试通过，建议优先使用；自研Agent会被额外检验准确率）及项目明确决定，正式评分统一使用 Smartbi 内置“数据洞察”+`MDL_XH202612_V50_COUNTRY_RESERVE`，关闭联网、每题独立新会话。自研 `AGENT_XH202612_V50_ASSISTANT` 的R20/R21结果降为历史诊断，不折算为正式PASS。完整交接见 `../../../../00_共享/每日协调/A_BUILTIN_AGENT_ROUTE_SWITCH_20260903.md`。
+
 ## 状态
 
-`R21_AI16_FIX_PASS / 4_OF_6_PASS / 2_OF_6_RUNTIME_BLOCKED / AGENT_R21_PUBLISHED / G4_BLOCKED`
+`BUILTIN_DATA_INSIGHT_SELECTED / FORMAL_19_OF_25_PASS / SIX_POST_FIX_RETEST_PENDING / AI19_RUNTIME_BLOCKED / G4_BLOCKED`
 
 ## 执行条件
 
-- 通道：R20 使用正式 `AGENT_XH202612_V50_ASSISTANT`，每题均触发 ReAct/MDL 真实查询；第一轮“数据洞察”只作为历史诊断旁证。
+- 通道：当前正式通道为内置“数据洞察”；R20/R21自研Agent只作为历史诊断旁证。
 - 模型：`MDL_XH202612_V50_COUNTRY_RESERVE`。
 - 会话：每题独立新会话。
 - 联网：每题提交前确认关闭。
 - Skills：沿用 2026-09-01 正式轮次配置，测试中未调整。
 - 问句：AI-01/04/16 使用 `B04_17题BLOCKED问数话术_20260901.md` 的 r2；AI-17 使用已修正的源表空值口径；AI-19/20 使用同手册 r1 长版原文。
 
-## R21 修复与 2026-09-03 运行链路复核（当前有效结论）
+## 内置 Agent 正式切换复核（当前有效结论）
+
+1. 已在独立新会话确认顶部对象为内置“数据洞察”，绑定模型为 `MDL_XH202612_V50_COUNTRY_RESERVE`，并关闭联网搜索。
+2. 2026-09-03 14:04:59提交AI-19冻结r1长版原文后，平台未生成回答并显式返回 `服务异常 / sessionstatus_timeout`。
+3. AI-19记为`RUNTIME_BLOCKED`；AI-20尚未在本轮内置通道重跑。既有内置通道正式成绩仍为19/25 PASS，修复后的AI-01/04/16/17/19/20六题均待正式复测。
+4. 证据：`29_BUILTIN_DATA_INSIGHT_AI19_NO_DELIVERABLE_20260903.png`、`30_ORGANIZER_BUILTIN_AGENT_RECOMMENDATION_20260903.png`；先前显式错误证据为`26_AICHAT_SHARED_SESSIONSTATUS_TIMEOUT_20260903.png`。
+
+## R21 自研 Agent 修复与运行链路复核（历史诊断，非正式评分）
 
 1. 已将正式 Agent 的 ReAct“用户请求”固定绑定到 `开始-输出1 / 用户当前问句`，重新打开后确认绑定持久化；结束节点继续绑定 `React模式(Beta)-输出1 / 返回内容`，流程连线完整。
 2. 已将 ReAct 模型从隐式 `默认 (smartbi-llm)` 改为显式 `smartbi-llm`；系统提示词升级为 `V50-B04-AGENT-REACT-R21`，补充 `V50_MVP_country_latest` 五个唯一别名路由规则；保存并重新发布，平台显示 `状态：已发布`。
 3. AI-16 使用冻结问句完成 R21 实测：最近12个月、逐行 `WEB-0048-R01`、`is_proxy=false`、`is_imputed=false` 以及首末差值 `+7.16619 / +398.721 / +18047` 均正确，判定 `PASS`，证据为 `25_AGENT_AI16_R21_ROUTING_FIX_PASS_20260902.png`。
 4. 2026-09-03 继续测试时，正式 Agent 冒烟题与同一指定模型的“数据洞察”对照题均长时间无回答；随后平台显式返回 `服务异常 / sessionstatus_timeout`。因此该轮 AI-19/20 未形成可判原答，记为 `RUNTIME_BLOCKED`，不得写成题目 `FAIL`，也不得写成 `PASS`。
 
-当前六题有效状态：AI-01/04/16/17 为 `PASS`；AI-19/20 为 `RUNTIME_BLOCKED`。待 Smartbi AIChat 公共会话服务恢复后，A 必须用冻结原文先重跑 AI-19/20；两题通过后才能交 B 独立六题复测。
+该段历史诊断状态为：自研Agent中AI-01/04/16/17 `PASS`，AI-19/20 `RUNTIME_BLOCKED`。这些结果不再作为正式评分结论；服务恢复后必须在内置“数据洞察”重跑六题。
 
 | 证据 | 说明 |
 |---|---|
@@ -28,6 +37,8 @@
 | `26_AICHAT_SHARED_SESSIONSTATUS_TIMEOUT_20260903.png` | 指定模型“数据洞察”公共链路显式返回 `sessionstatus_timeout`，证明阻塞不只发生在正式 Agent |
 | `27_AGENT_R21_BINDING_EXPLICIT_LLM_PUBLISHED_20260903.png` | 正式 Agent 已发布；ReAct 显式 `smartbi-llm`，用户请求绑定为 `用户当前问句`，流程连线完整 |
 | `28_AGENT_R21_PROMPT_MARKER_PUBLISHED_20260903.png` | 系统提示词编辑框原文显示 `V50-B04-AGENT-REACT-R21`、固定正式 Agent 和固定 MDL |
+| `29_BUILTIN_DATA_INSIGHT_AI19_NO_DELIVERABLE_20260903.png` | 内置“数据洞察”、指定模型及AI-19提交后的无交付状态 |
+| `30_ORGANIZER_BUILTIN_AGENT_RECOMMENDATION_20260903.png` | 用户提供的赛事群公告截图，支持项目优先使用内置Agent的决定 |
 
 ## R20 去硬编码后的真实问数复测（当前有效结论）
 
@@ -108,6 +119,8 @@ BBA68BDBA249983A285A4B4FD864E1C3175AD8F86C81D3C59641691B50617B1D  17_AGENT_AI19_
 D68659FD496475F91EFF535BC66C19C835C0072397697FE21D510D982F97BFD2  26_AICHAT_SHARED_SESSIONSTATUS_TIMEOUT_20260903.png
 2F16AEF1A478FC224A3C86BEBED33FFF451B56CC14FF601E618611E0F6ADC1C1  27_AGENT_R21_BINDING_EXPLICIT_LLM_PUBLISHED_20260903.png
 45EFE5369D9C748F6EEC159A9A658F7C02A0663BF7230420779B7DAF47D28D51  28_AGENT_R21_PROMPT_MARKER_PUBLISHED_20260903.png
+D05E298BE63E6FEC94B58AA485A6106BDB9B13F278DA964E6812F4AF58E2A658  29_BUILTIN_DATA_INSIGHT_AI19_NO_DELIVERABLE_20260903.png
+A4DCA91F60181EAB7D5139460B6D3E7FD88A41C0F4E41CA235D5317C407C7942  30_ORGANIZER_BUILTIN_AGENT_RECOMMENDATION_20260903.png
 641A4EFF013CB2E56D9B9B01DBE2DBB2B493B45BC139BFA055C5B9EA16FD9BAF  AGENT_LLM_CUSTOM_PROMPT_V50_R20.txt
 ```
 
