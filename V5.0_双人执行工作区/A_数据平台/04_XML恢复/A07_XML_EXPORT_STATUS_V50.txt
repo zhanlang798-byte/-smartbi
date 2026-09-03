@@ -1,38 +1,24 @@
 A07 XML 导出状态（执行者A）
-更新时间：2026-08-31 13:50:00 +08:00
+更新时间：2026-09-03 15:35:52 +08:00
 
-当前结论：页面XML COMPLETE；AI资源与独立恢复仍未完成，不得签署 A07 整体 PASS。
+当前结论：页面/模型 XML COMPLETE；KB 原生补充备份 COMPLETE；独立恢复仍未开始，不得签署 A07 整体 PASS。
 
 已完成：
-1. 在 Smartbi 运维设置中定位并勾选 MDL_XH202612_V50_COUNTRY_RESERVE。
-2. 自动依赖识别确认数据源为“可导入数据库”（关系数据源，路径：数据连接\）。
-3. 对 DB01 页面执行依赖分析，确认页面依赖包括：
-   - MDL_XH202612_V50_COUNTRY_RESERVE
-   - 可导入数据库
-   - DB02_XH202612_V50_COUNTRY_DRILL
-   - DB04_XH202612_V50_LIQUIDITY_LAB
-4. 排除数据源后，DB01+DB02+DB04+MDL 的服务器端导出流程出现“正在导出”并正常结束。
-5. 已归档 2026-08-26 的模型基线 XML 作为审计样本，不作为最终恢复包。
-6. 2026-08-31 13:47—13:49，在DB06关系修复后重新勾选两组页面与主模型并导出；旧包已保留在本机忽略目录作为可恢复备份。
-7. 页面分包1包含 DB01、DB02、DB04、主模型和22个BASIC_TABLE视图；SHA-256 为 E013A0695E0B97FD558BD90F870661BD6DA2F2592B993226D4A177A54C0463C5。
-8. 页面分包2包含DB03、DB05、DB06、主模型和22个BASIC_TABLE视图；SHA-256 为 5B77EFB3F93AF4C6DBD3061261C221347BCB92761DA577F1DE3427C2AC5404A3。
-9. 两个分包合计覆盖DB01—DB06六页；两包内嵌模型均为SINGLE×18、BOTH×1，已包含DB06日期维↔周期状态双向修复；两包均没有独立DATASOURCE顶层对象。
-10. 按计划规定的完整对象名，在“导出资源”、AIChat资源树和Agent资源树交叉搜索 AIP、KB、AGENT，均返回“暂无结果”或“无符合条件的资源”；核对记录见 A07_AI_RESOURCE_EXPORT_STATUS_V50.txt。
+1. DB01、DB02、DB04、主模型与22个BASIC_TABLE已形成分包1，字节数878820，SHA-256为E013A0695E0B97FD558BD90F870661BD6DA2F2592B993226D4A177A54C0463C5。
+2. DB03、DB05、DB06、主模型与22个BASIC_TABLE已形成分包2，字节数871374，SHA-256为5B77EFB3F93AF4C6DBD3061261C221347BCB92761DA577F1DE3427C2AC5404A3。
+3. 两个分包合计覆盖 DB01—DB06；内嵌模型均为 SINGLE×18、BOTH×1，并包含DB06日期维与周期状态双向修复。
+4. 页面/模型 XML 最终安全复核已完成：未发现密码、Cookie、令牌、Secret或API Key；因含 JDBC URL 与数据库用户名，只允许受控内部交付。
+5. 2026-09-03 在通用迁移搜索中已定位 AIP、KB、Agent 三个对象，纠正了此前“未发现”的旧结论。
+6. KB 使用知识库原生导出成功，45 条记录校验通过；CSV SHA-256为0DF11F73D8999985C16307C7FDDA09B666E51B40D781DD03273C4FD4A7A479CD。
+7. 正式评分路线为平台内置“数据洞察”+MDL_XH202612_V50_COUNTRY_RESERVE；自定义AIP/KB/Agent仅为历史诊断资产，独立XML不是正式恢复前置条件。
 
-阻塞证据：
-1. 模型连同自动依赖导出时，Smartbi 后端返回：
-   java.lang.Long cannot be cast to smartbi.catalogtree.cache.AclObject
-2. 模型不加依赖重试时，客户端日志返回：
-   TypeError: Cannot read properties of null (reading 'appendChild')
-   位置：freequery.migrate.LoadingMask.js / ExportChooser.showProgressMaskDiv
-3. 六页页面分包已全部下载；计划内 AIP_XH202612_V50_DECISION、KB_XH202612_V50_GOVERNANCE、AGENT_XH202612_V50_ASSISTANT 当前未发现或不可见，无法导出分包。
-4. 两份修复后页面分包最终安全复核已完成：无密码、Cookie、令牌、Secret或API Key；模型定义内嵌JDBC地址和数据库用户名，结论为受控内部交付 CONDITIONAL PASS，禁止公开上传。
-5. 当前没有“导入前不存在 XH202612_V50 对象”的独立干净目标环境，不能执行合规的恢复验收。
+已记录但不构成正式路线阻塞：
+1. 通用迁移树不能单独勾选项目/知识库搜索结果。
+2. Agent 虽可在“我的工作区”树勾选，但确认后未产生下载文件。
+3. 自定义 Agent 编辑页显示未发布；本次未修改、未发布。
 
-签署边界：
-- A 仅确认以上操作与故障事实。
-- A07 性能门、六页XML和最终安全复核已完成；AI资源导出与独立恢复仍为BLOCKED。
-- 不代签 B，不把旧模型基线包或非空同环境导入冒充独立恢复。
+当前唯一正式恢复阻塞：尚无独立干净目标环境，故未执行合规导入和 B 独立复核。
 
-A侧签署：执行者A（仅故障与进度确认）
-日期：2026-08-31
+A侧签署：执行者A（页面/模型XML、AI资源核查及KB备份事实）
+日期：2026-09-03
+边界：不签独立恢复、不签AIP/Agent XML成功、不代签B。

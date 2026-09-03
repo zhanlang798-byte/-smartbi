@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-`BUILTIN_DATA_INSIGHT_SELECTED / MDL_FIXED / FORMAL_19_OF_25_PASS / SIX_POST_FIX_RETEST_PENDING / AI01_AI04_AI19_AI20_RUNTIME_BLOCKED / G4_BLOCKED`
+`BUILTIN_DATA_INSIGHT_SELECTED / MDL_FIXED / FORMAL_19_OF_25_PASS / CURRENT_RETEST_SKIPPED_BY_USER / G4_BLOCKED`
 
 ## 口径依据与项目决定
 
@@ -38,6 +38,14 @@
 - 模型修复后的正式待复测题为 `AI-01 / AI-04 / AI-16 / AI-17 / AI-19 / AI-20` 共6题。
 - 自研 Agent 中 AI-01/04/16/17 的通过结果只证明修复方向，不直接折算为内置通道正式 PASS。
 - G4、25问最终签收和B方签署继续保持未通过。
+- 在不同题目与独立会话连续复现 sessionstatus_timeout 后，用户明确指示“问题无法解决，跳过”；本轮不再提交六题，既有19/25成绩不变。该指示只停止当前重试，不把未生成原答的题目记为通过。
+
+## 15:35 AI资源与恢复依赖核查
+
+1. 通用迁移搜索已定位 AIP_XH202612_V50_DECISION、KB_XH202612_V50_GOVERNANCE、AGENT_XH202612_V50_ASSISTANT，纠正8月31日“未发现”的旧结论。
+2. KB已通过知识库原生导出形成45条CSV备份并完成哈希、唯一性、空值和敏感关键词检查。
+3. 自定义Agent编辑页显示未发布；正式路线使用平台内置“数据洞察”，故不发布、不修改该Agent。
+4. 自定义AIP/KB/Agent不再作为正式恢复前置条件；A07恢复的正式阻塞仅剩独立干净目标导入验证及B独立复核。
 
 ## 证据
 
@@ -53,7 +61,7 @@
 | `../../A_数据平台/03_Smartbi证据/P1/A_MDL_FORMAL_PRETEST_20260902/35_BUILTIN_DATA_INSIGHT_AI04_R3_SESSIONSTATUS_TIMEOUT_20260903.png` | AI-04 r3独立会话复现同一公共服务错误 | `783087C33BC5FA5177AA9A2FD378DBB04503FD2F70A95E04E4BD66E2EF7D4DEE` |
 | `../../A_数据平台/03_Smartbi证据/P1/A_MDL_FORMAL_PRETEST_20260902/36_BUILTIN_DATA_INSIGHT_AI01_AI04_SESSIONSTATUS_TIMEOUT_20260903.txt` | 两题复测设置、时间、结果和综合运行阻塞判定 | `A347DD47D0979AC1B5F7C8A09B0DB2F642B00FEC79896DB4C0BB37E27922CEF8` |
 
-## 服务恢复后的执行顺序
+## 如后续重新开启复测的执行顺序
 
 1. A 在内置“数据洞察”按冻结原文逐题新开会话，先跑 AI-01/04/16/17，再跑 AI-19/20。
 2. 六题均取得完整原答并按冻结基准通过后，A只签“A侧复测完成”。
