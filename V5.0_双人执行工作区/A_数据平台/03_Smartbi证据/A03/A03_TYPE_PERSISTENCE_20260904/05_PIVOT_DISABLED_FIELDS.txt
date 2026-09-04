@@ -1,0 +1,396 @@
+- generic: 
+- generic: 撤销
+- generic: 
+- generic: 重做
+- generic: 
+- generic: 刷新
+- generic: 
+- generic: 保存
+- generic: 
+- generic: 
+- generic: 导出
+- generic: 
+- generic: 
+- generic: 浏览模式
+- generic: 
+- generic: 
+- generic: 
+- generic: 设置行列度量区字段
+- generic: 数据
+- generic: 添加过滤条件
+- generic: 过滤条件区
+- generic: 设置样式/完善报表
+- generic: 属性
+- generic: 保存报表
+- text:   
+- generic: 设置
+- text: 
+- generic: 数据
+- generic: 属性
+- generic: 交互
+- tablist:
+  - tab " 行" [expanded]:
+    - button " 行":
+      - text: 
+      - generic: 
+      - generic: 行
+  - tabpanel " 行":
+    - generic: 拖入字段
+  - generic: 
+  - tab " 列" [expanded]:
+    - button " 列":
+      - text: 
+      - generic: 
+      - generic: 列
+  - tabpanel " 列":
+    - generic: 拖入字段
+  - tab " 度量区" [expanded]:
+    - button " 度量区":
+      - text: 
+      - generic: 
+      - generic: 度量区
+  - tabpanel " 度量区":
+    - generic: 拖入字段
+  - tab " 过滤条件" [expanded]:
+    - button " 过滤条件":
+      - text: 
+      - generic: 
+      - generic: 过滤条件
+  - tabpanel " 过滤条件":
+    - generic: 拖入字段
+- generic: 数据
+- text: 
+- generic: MDL_XH202612_V50_COUNTRY_RESERVE
+- text:     
+- generic:    
+- tablist:
+  - tab " 维度" [expanded]:
+    - button " 维度":
+      - text: 
+      - generic: 
+      - text:  维度
+      - generic: 
+  - tabpanel " 维度":
+    - tree:
+      - treeitem "  fiscal_year_时间维度" [disabled] [expanded]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: fiscal_year_时间维度
+        - treeitem " 年" [disabled]:
+          - text: 
+          - checkbox [disabled]:
+            - checkbox [disabled]
+          - text: 
+          - generic: 
+          - generic: 年
+      - treeitem "  V50_country_monthly_risk" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_monthly_risk
+      - treeitem "  V50_monthly_risk" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_monthly_risk
+      - treeitem "  V50_case_evidence" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_case_evidence
+      - treeitem "  V50_country_exposure" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_exposure
+      - treeitem "  V50_country_event" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_event
+      - treeitem "  V50_historical_crisis_event" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_historical_crisis_event
+      - treeitem "  V50_country_policy_year" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_policy_year
+      - treeitem "  V50_MVP_country_latest" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_country_latest
+      - treeitem "  V50_bridge_company_geography" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_bridge_company_geography
+      - treeitem "  V50_company_overseas_exposure" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_company_overseas_exposure
+      - treeitem "  V50_asset_monthly_return" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_asset_monthly_return
+      - treeitem "  V50_dim_country" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_country
+      - treeitem "  V50_source_registry" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_source_registry
+      - treeitem "  V50_dim_event" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_event
+      - treeitem "  V50_portfolio_scenario" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_portfolio_scenario
+      - treeitem "  V50_dim_company" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_company
+      - treeitem "  V50_dim_date" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_date
+      - treeitem "  V50_MVP_company_data_status" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_company_data_status
+      - treeitem "  V50_MVP_cycle_state" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_cycle_state
+      - treeitem "  V50_dim_asset" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_asset
+      - treeitem "  V50_dim_year" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_year
+      - treeitem "  V50_global_cycle_month" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_global_cycle_month
+    - text: 
+  - tab " 度量" [expanded]:
+    - button " 度量":
+      - text: 
+      - generic: 
+      - text:  度量
+      - generic: 
+  - tabpanel " 度量":
+    - tree:
+      - treeitem "  V50_country_monthly_risk" [disabled] [expanded]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_monthly_risk
+        - treeitem " fx_avg_lcu_per_usd" [disabled]:
+          - text: 
+          - checkbox [disabled]:
+            - checkbox [disabled]
+          - text: 
+          - generic: 
+          - generic: fx_avg_lcu_per_usd
+        - treeitem " fx_reserves_usd" [disabled]:
+          - text: 
+          - checkbox [disabled]:
+            - checkbox [disabled]
+          - text: 
+          - generic: 
+          - generic: fx_reserves_usd
+        - treeitem " reserve_import_months" [disabled]:
+          - text: 
+          - checkbox [disabled]:
+            - checkbox [disabled]
+          - text: 
+          - generic: 
+          - generic: reserve_import_months
+        - treeitem " imports_usd" [disabled]:
+          - text: 
+          - checkbox [disabled]:
+            - checkbox [disabled]
+          - text: 
+          - generic: 
+          - generic: imports_usd
+        - treeitem " fx_eom_lcu_per_usd" [disabled]:
+          - text: 
+          - checkbox [disabled]:
+            - checkbox [disabled]
+          - text: 
+          - generic: 
+          - generic: fx_eom_lcu_per_usd
+      - treeitem "  V50_monthly_risk" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_monthly_risk
+      - treeitem "  V50_case_evidence" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_case_evidence
+      - treeitem "  V50_country_exposure" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_exposure
+      - treeitem "  V50_country_event" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_event
+      - treeitem "  V50_historical_crisis_event" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_historical_crisis_event
+      - treeitem "  V50_country_policy_year" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_country_policy_year
+      - treeitem "  V50_MVP_country_latest" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_country_latest
+      - treeitem "  V50_company_overseas_exposure" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_company_overseas_exposure
+      - treeitem "  V50_asset_monthly_return" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_asset_monthly_return
+      - treeitem "  V50_dim_country" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_country
+      - treeitem "  V50_source_registry" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_source_registry
+      - treeitem "  V50_dim_event" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_event
+      - treeitem "  V50_portfolio_scenario" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_portfolio_scenario
+      - treeitem "  V50_dim_date" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_date
+      - treeitem "  V50_MVP_company_data_status" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_company_data_status
+      - treeitem "  V50_MVP_cycle_state" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_cycle_state
+      - treeitem "  V50_dim_year" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_dim_year
+      - treeitem "  V50_global_cycle_month" [disabled]:
+        - text: 
+        - text: 
+        - generic: 
+        - generic: 
+        - generic: V50_global_cycle_month
+  - tab "命名集":
+    - button "命名集":
+      - text: 
+      - text: 
+      - generic: 
+      - text: 命名集
+      - generic: 
+  - text: 
+  - tab "参数":
+    - button "参数":
+      - text: 
+      - text: 
+      - generic: 
+      - text: 参数
+      - generic: 
+  - text: 
+- generic: 
+- generic: 数据
+- generic: 设置

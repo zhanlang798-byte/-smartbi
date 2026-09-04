@@ -1,0 +1,1079 @@
+- tablist:
+  - tab "数据模型" [selected]:
+    - generic: 数据模型
+- text: 
+- generic: 
+- tabpanel "数据模型":
+  - generic: 
+  - generic: 保存
+  - text:  
+  - generic: 
+  - generic: 
+  - generic: 校验
+  - generic: 
+  - generic: 预览数据
+  - text:         
+  - generic: 
+  - generic: 设置
+  - generic: 
+  - generic: 
+  - generic: 清空缓存
+  - generic: 
+  - generic: 预计算管理
+  - generic: 
+  - generic: 新建分析
+  - generic: 
+  - generic: 
+  - generic: 检测关系
+  - generic: 
+  - generic: 设置参数
+  - generic: 直连
+  - switch:
+    - checkbox
+  - generic: 抽取
+  - text: 
+  - generic:  
+  - tabpanel "数据模型":
+    - textbox [active]
+    - generic: 
+    - generic: 
+    - generic: V50_country_monthly_risk
+    - generic: 
+    - generic: 
+    - generic: V50_monthly_risk
+    - generic: 
+    - generic: 
+    - generic: V50_case_evidence
+    - generic: 
+    - generic: 
+    - generic: V50_country_exposure
+    - generic: 
+    - generic: 
+    - generic: V50_country_event
+    - generic: 
+    - generic: 
+    - generic: V50_historical_crisis_event
+    - generic: 
+    - generic: 
+    - generic: V50_country_policy_year
+    - generic: 
+    - generic: 
+    - generic: V50_MVP_country_latest
+    - generic: 
+    - generic: 
+    - generic: V50_bridge_company_geography
+    - generic: 
+    - generic: 
+    - generic: V50_company_overseas_exposure
+    - generic: 
+    - generic: 
+    - generic: V50_asset_monthly_return
+    - generic: 
+    - generic: 
+    - generic: V50_dim_country
+    - generic: 
+    - generic: 
+    - generic: V50_source_registry
+    - generic: 
+    - generic: 
+    - generic: V50_dim_event
+    - generic: 
+    - generic: 
+    - generic: V50_portfolio_scenario
+    - generic: 
+    - generic: 
+    - generic: V50_dim_company
+    - generic: 
+    - generic: 
+    - generic: V50_dim_date
+    - generic: 
+    - generic: 
+    - generic: V50_MVP_company_data_status
+    - generic: 
+    - generic: 
+    - generic: V50_MVP_cycle_state
+    - generic: 
+    - generic: 
+    - generic: V50_dim_asset
+    - generic: 
+    - generic: 
+    - generic: V50_dim_year
+    - generic: 
+    - generic: 
+    - generic: V50_global_cycle_month
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+  - tablist:
+    - tab " 所有表" [selected]:
+      - generic: 
+      - text: 所有表
+  - generic: 
+  - generic: 预览数据
+  - generic: 表字段属性
+  - generic: 抽取设置
+  - textbox: V50_source_registry
+  - text: 
+  - generic: 
+  - generic: 
+  - text:        
+  - table:
+    - rowgroup:
+      - row "名称 别名 数据类型 数据格式 可见性 脱敏规则 转换规则":
+        - columnheader "名称":
+          - generic: 名称
+        - columnheader "别名":
+          - generic: 别名
+        - columnheader "数据类型":
+          - generic: 数据类型
+        - columnheader "数据格式":
+          - generic: 数据格式
+        - columnheader "可见性":
+          - generic: 可见性
+        - columnheader "脱敏规则":
+          - generic: 脱敏规则
+        - columnheader "转换规则":
+          - generic: 转换规则
+  - table:
+    - rowgroup:
+      - row " source_id10 registry_source_id 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " source_id10":
+          - generic: 
+          - generic: source_id10
+        - cell "registry_source_id":
+          - generic "registry_source_id"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " archive_asset_id archive_asset_id 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " archive_asset_id":
+          - generic: 
+          - generic: archive_asset_id
+        - cell "archive_asset_id":
+          - generic "archive_asset_id"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " archive_run_id archive_run_id 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " archive_run_id":
+          - generic: 
+          - generic: archive_run_id
+        - cell "archive_run_id":
+          - generic "archive_run_id"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " reuse_status reuse_status 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " reuse_status":
+          - generic: 
+          - generic: reuse_status
+        - cell "reuse_status":
+          - generic "reuse_status"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " redistribution_scope redistribution_scope 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " redistribution_scope":
+          - generic: 
+          - generic: redistribution_scope
+        - cell "redistribution_scope":
+          - generic "redistribution_scope"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " revalidation_required revalidation_required 整型 <整型-默认值>  请选择 请选择":
+        - cell " revalidation_required":
+          - generic: 
+          - generic: revalidation_required
+        - cell "revalidation_required":
+          - generic "revalidation_required"
+        - cell "整型":
+          - generic "整型"
+        - cell "<整型-默认值>":
+          - generic "<整型-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " publisher publisher 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " publisher":
+          - generic: 
+          - generic: publisher
+        - cell "publisher":
+          - generic "publisher"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " dataset_name dataset_name 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " dataset_name":
+          - generic: 
+          - generic: dataset_name
+        - cell "dataset_name":
+          - generic "dataset_name"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " source_url source_url 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " source_url":
+          - generic: 
+          - generic: source_url
+        - cell "source_url":
+          - generic "source_url"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " license license 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " license":
+          - generic: 
+          - generic: license
+        - cell "license":
+          - generic "license"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " scope scope 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " scope":
+          - generic: 
+          - generic: scope
+        - cell "scope":
+          - generic "scope"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " source_frequency4 source_frequency 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " source_frequency4":
+          - generic: 
+          - generic: source_frequency4
+        - cell "source_frequency":
+          - generic "source_frequency"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " coverage_start coverage_start 浮点型 <浮点型-默认值>  请选择 请选择":
+        - cell " coverage_start":
+          - generic: 
+          - generic: coverage_start
+        - cell "coverage_start":
+          - generic "coverage_start"
+        - cell "浮点型":
+          - generic "浮点型"
+        - cell "<浮点型-默认值>":
+          - generic "<浮点型-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " coverage_end coverage_end 浮点型 <浮点型-默认值>  请选择 请选择":
+        - cell " coverage_end":
+          - generic: 
+          - generic: coverage_end
+        - cell "coverage_end":
+          - generic "coverage_end"
+        - cell "浮点型":
+          - generic "浮点型"
+        - cell "<浮点型-默认值>":
+          - generic "<浮点型-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " publication_date publication_date 日期 <日期-默认值>  请选择":
+        - cell " publication_date":
+          - generic: 
+          - generic: publication_date
+        - cell "publication_date":
+          - generic "publication_date"
+        - cell "日期":
+          - generic "日期"
+        - cell "<日期-默认值>":
+          - generic "<日期-默认值>"
+        - cell "":
+          - generic: 
+        - cell
+        - cell "请选择":
+          - generic "请选择"
+      - row " fetch_timestamp fetch_timestamp 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " fetch_timestamp":
+          - generic: 
+          - generic: fetch_timestamp
+        - cell "fetch_timestamp":
+          - generic "fetch_timestamp"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " data_version3 data_version 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " data_version3":
+          - generic: 
+          - generic: data_version3
+        - cell "data_version":
+          - generic "data_version"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " raw_file_name raw_file_name 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " raw_file_name":
+          - generic: 
+          - generic: raw_file_name
+        - cell "raw_file_name":
+          - generic "raw_file_name"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " raw_relative_path raw_relative_path 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " raw_relative_path":
+          - generic: 
+          - generic: raw_relative_path
+        - cell "raw_relative_path":
+          - generic "raw_relative_path"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " file_size_bytes file_size_bytes 浮点型 <浮点型-默认值>  请选择 请选择":
+        - cell " file_size_bytes":
+          - generic: 
+          - generic: file_size_bytes
+        - cell "file_size_bytes":
+          - generic "file_size_bytes"
+        - cell "浮点型":
+          - generic "浮点型"
+        - cell "<浮点型-默认值>":
+          - generic "<浮点型-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " sha256 sha256 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " sha256":
+          - generic: 
+          - generic: sha256
+        - cell "sha256":
+          - generic "sha256"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " api_request_params api_request_params 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " api_request_params":
+          - generic: 
+          - generic: api_request_params
+        - cell "api_request_params":
+          - generic "api_request_params"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " earliest_backtest_date earliest_backtest_date 日期 <日期-默认值>  请选择":
+        - cell " earliest_backtest_date":
+          - generic: 
+          - generic: earliest_backtest_date
+        - cell "earliest_backtest_date":
+          - generic "earliest_backtest_date"
+        - cell "日期":
+          - generic "日期"
+        - cell "<日期-默认值>":
+          - generic "<日期-默认值>"
+        - cell "":
+          - generic: 
+        - cell
+        - cell "请选择":
+          - generic "请选择"
+      - row " data_class data_class 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " data_class":
+          - generic: 
+          - generic: data_class
+        - cell "data_class":
+          - generic "data_class"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " is_proxy4 registry_is_proxy 整型 <整型-默认值>  请选择 请选择":
+        - cell " is_proxy4":
+          - generic: 
+          - generic: is_proxy4
+        - cell "registry_is_proxy":
+          - generic "registry_is_proxy"
+        - cell "整型":
+          - generic "整型"
+        - cell "<整型-默认值>":
+          - generic "<整型-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " proxy_reason proxy_reason 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " proxy_reason":
+          - generic: 
+          - generic: proxy_reason
+        - cell "proxy_reason":
+          - generic "proxy_reason"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " alternative_source_id alternative_source_id 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " alternative_source_id":
+          - generic: 
+          - generic: alternative_source_id
+        - cell "alternative_source_id":
+          - generic "alternative_source_id"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " alternative_reason alternative_reason 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " alternative_reason":
+          - generic: 
+          - generic: alternative_reason
+        - cell "alternative_reason":
+          - generic "alternative_reason"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " access_restriction access_restriction 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " access_restriction":
+          - generic: 
+          - generic: access_restriction
+        - cell "access_restriction":
+          - generic "access_restriction"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " redistribution_allowed redistribution_allowed 整型 <整型-默认值>  请选择 请选择":
+        - cell " redistribution_allowed":
+          - generic: 
+          - generic: redistribution_allowed
+        - cell "redistribution_allowed":
+          - generic "redistribution_allowed"
+        - cell "整型":
+          - generic "整型"
+        - cell "<整型-默认值>":
+          - generic "<整型-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " license_note license_note 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " license_note":
+          - generic: 
+          - generic: license_note
+        - cell "license_note":
+          - generic "license_note"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " quality_tier quality_tier 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " quality_tier":
+          - generic: 
+          - generic: quality_tier
+        - cell "quality_tier":
+          - generic "quality_tier"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " owner_id owner_id 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " owner_id":
+          - generic: 
+          - generic: owner_id
+        - cell "owner_id":
+          - generic "owner_id"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " acquisition_state acquisition_state 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " acquisition_state":
+          - generic: 
+          - generic: acquisition_state
+        - cell "acquisition_state":
+          - generic "acquisition_state"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " content_state content_state 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " content_state":
+          - generic: 
+          - generic: content_state
+        - cell "content_state":
+          - generic "content_state"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " extraction_state extraction_state 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " extraction_state":
+          - generic: 
+          - generic: extraction_state
+        - cell "extraction_state":
+          - generic "extraction_state"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " formal_use_state formal_use_state 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " formal_use_state":
+          - generic: 
+          - generic: formal_use_state
+        - cell "formal_use_state":
+          - generic "formal_use_state"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " target_table target_table 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " target_table":
+          - generic: 
+          - generic: target_table
+        - cell "target_table":
+          - generic "target_table"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " smartbi_page smartbi_page 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " smartbi_page":
+          - generic: 
+          - generic: smartbi_page
+        - cell "smartbi_page":
+          - generic "smartbi_page"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " next_action next_action 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " next_action":
+          - generic: 
+          - generic: next_action
+        - cell "next_action":
+          - generic "next_action"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " quality_flag8 quality_flag 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " quality_flag8":
+          - generic: 
+          - generic: quality_flag8
+        - cell "quality_flag":
+          - generic "quality_flag"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+      - row " run_id12 run_id 字符串 <字符串-默认值>  请选择 请选择":
+        - cell " run_id12":
+          - generic: 
+          - generic: run_id12
+        - cell "run_id":
+          - generic "run_id"
+        - cell "字符串":
+          - generic "字符串"
+        - cell "<字符串-默认值>":
+          - generic "<字符串-默认值>"
+        - cell "":
+          - generic: 
+        - cell "请选择":
+          - generic: 请选择
+        - cell "请选择":
+          - generic "请选择"
+  - generic: 
+  - text:                                                
+  - generic: 
+  - generic: 维度
+  - generic: 
+  - text:        
+  - generic: 
+  - tree:
+    - treeitem "  fiscal_year_时间维度":
+      - generic: 
+      - generic: 
+      - generic: fiscal_year_时间维度
+      - generic: 
+    - treeitem "  V50_country_monthly_risk":
+      - generic: 
+      - generic: 
+      - generic: V50_country_monthly_risk
+      - generic: 
+    - treeitem "  V50_monthly_risk":
+      - generic: 
+      - generic: 
+      - generic: V50_monthly_risk
+      - generic: 
+    - treeitem "  V50_case_evidence":
+      - generic: 
+      - generic: 
+      - generic: V50_case_evidence
+      - generic: 
+    - treeitem "  V50_country_exposure":
+      - generic: 
+      - generic: 
+      - generic: V50_country_exposure
+      - generic: 
+    - treeitem "  V50_country_event":
+      - generic: 
+      - generic: 
+      - generic: V50_country_event
+      - generic: 
+    - treeitem "  V50_historical_crisis_event":
+      - generic: 
+      - generic: 
+      - generic: V50_historical_crisis_event
+      - generic: 
+    - treeitem "  V50_country_policy_year":
+      - generic: 
+      - generic: 
+      - generic: V50_country_policy_year
+      - generic: 
+    - treeitem "  V50_MVP_country_latest":
+      - generic: 
+      - generic: 
+      - generic: V50_MVP_country_latest
+      - generic: 
+    - treeitem "  V50_bridge_company_geography":
+      - generic: 
+      - generic: 
+      - generic: V50_bridge_company_geography
+      - generic: 
+    - treeitem "  V50_company_overseas_exposure":
+      - generic: 
+      - generic: 
+      - generic: V50_company_overseas_exposure
+      - generic: 
+    - treeitem "  V50_asset_monthly_return":
+      - generic: 
+      - generic: 
+      - generic: V50_asset_monthly_return
+      - generic: 
+    - treeitem "  V50_dim_country":
+      - generic: 
+      - generic: 
+      - generic: V50_dim_country
+      - generic: 
+    - treeitem "  V50_source_registry":
+      - generic: 
+      - generic: 
+      - generic: V50_source_registry
+      - generic: 
+    - treeitem "  V50_dim_event":
+      - generic: 
+      - generic: 
+      - generic: V50_dim_event
+      - generic: 
+    - treeitem "  V50_portfolio_scenario":
+      - generic: 
+      - generic: 
+      - generic: V50_portfolio_scenario
+      - generic: 
+    - treeitem "  V50_dim_company":
+      - generic: 
+      - generic: 
+      - generic: V50_dim_company
+      - generic: 
+    - treeitem "  V50_dim_date":
+      - generic: 
+      - generic: 
+      - generic: V50_dim_date
+      - generic: 
+    - treeitem "  V50_MVP_company_data_status":
+      - generic: 
+      - generic: 
+      - generic: V50_MVP_company_data_status
+      - generic: 
+    - treeitem "  V50_MVP_cycle_state":
+      - generic: 
+      - generic: 
+      - generic: V50_MVP_cycle_state
+      - generic: 
+    - treeitem "  V50_dim_asset":
+      - generic: 
+      - generic: 
+      - generic: V50_dim_asset
+      - generic: 
+    - treeitem "  V50_dim_year":
+      - generic: 
+      - generic: 
+      - generic: V50_dim_year
+      - generic: 
+    - treeitem "  V50_global_cycle_month":
+      - generic: 
+      - generic: 
+      - generic: V50_global_cycle_month
+      - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - tablist:
+    - tab "度量" [selected]:
+      - generic: 度量
+    - tab "成员":
+      - generic: 成员
+    - tab "命名集":
+      - generic: 命名集
+  - tabpanel "度量":
+    - tree:
+      - treeitem "  V50_country_monthly_risk":
+        - generic: 
+        - generic: 
+        - generic: V50_country_monthly_risk
+        - text: 
+      - treeitem "  V50_monthly_risk":
+        - generic: 
+        - generic: 
+        - generic: V50_monthly_risk
+        - text: 
+      - treeitem "  V50_case_evidence":
+        - generic: 
+        - generic: 
+        - generic: V50_case_evidence
+        - text: 
+      - treeitem "  V50_country_exposure":
+        - generic: 
+        - generic: 
+        - generic: V50_country_exposure
+        - text: 
+      - treeitem "  V50_country_event":
+        - generic: 
+        - generic: 
+        - generic: V50_country_event
+        - text: 
+      - treeitem "  V50_historical_crisis_event":
+        - generic: 
+        - generic: 
+        - generic: V50_historical_crisis_event
+        - text: 
+      - treeitem "  V50_country_policy_year":
+        - generic: 
+        - generic: 
+        - generic: V50_country_policy_year
+        - text: 
+      - treeitem "  V50_MVP_country_latest":
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_country_latest
+        - text: 
+      - treeitem "  V50_company_overseas_exposure":
+        - generic: 
+        - generic: 
+        - generic: V50_company_overseas_exposure
+        - text: 
+      - treeitem "  V50_asset_monthly_return":
+        - generic: 
+        - generic: 
+        - generic: V50_asset_monthly_return
+        - text: 
+      - treeitem "  V50_dim_country":
+        - generic: 
+        - generic: 
+        - generic: V50_dim_country
+        - text: 
+      - treeitem "  V50_source_registry":
+        - generic: 
+        - generic: 
+        - generic: V50_source_registry
+        - text: 
+      - treeitem "  V50_dim_event":
+        - generic: 
+        - generic: 
+        - generic: V50_dim_event
+        - text: 
+      - treeitem "  V50_portfolio_scenario":
+        - generic: 
+        - generic: 
+        - generic: V50_portfolio_scenario
+        - text: 
+      - treeitem "  V50_dim_date":
+        - generic: 
+        - generic: 
+        - generic: V50_dim_date
+        - text: 
+      - treeitem "  V50_MVP_company_data_status":
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_company_data_status
+        - text: 
+      - treeitem "  V50_MVP_cycle_state":
+        - generic: 
+        - generic: 
+        - generic: V50_MVP_cycle_state
+        - text: 
+      - treeitem "  V50_dim_year":
+        - generic: 
+        - generic: 
+        - generic: V50_dim_year
+        - text: 
+      - treeitem "  V50_global_cycle_month":
+        - generic: 
+        - generic: 
+        - generic: V50_global_cycle_month
+        - text: 
+    - generic: 
+  - generic: 
+- generic: 
+- text:                                            

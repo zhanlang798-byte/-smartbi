@@ -1,0 +1,16 @@
+{
+  "scope": "Source-only full-table CPI baseline. Never substitute these values for platform results.",
+  "sourceFile": "country_monthly_risk.xlsx",
+  "sourceSha256": "0d83e648b5e142661e4f3726a164887c5c8bbf25c24d5e04e6a1449265879b0e",
+  "field": "cpi_index",
+  "rows": 7680,
+  "nonNull": 7616,
+  "null": 64,
+  "min": "92.2793786307064",
+  "max": "47954.2419061244",
+  "sum": "2862057.9036281263939",
+  "average": "375.7954180183989487788865546",
+  "numericMethod": "Decimal(str(openpyxl numeric cell value)); ignore None only, no fill-zero, no distinct",
+  "platformAggregate": null,
+  "calculationStatus": "PENDING"
+}

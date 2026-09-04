@@ -1,0 +1,425 @@
+{
+  "checkedAt": "2026-09-04T06:36:30.635Z",
+  "scope": "59 note cells only; no acceptance status or B signature changes",
+  "inputSha256": "9a8b1d301f77429d1660b6894dc23b4929e8a5aef9ed507b761beb29473acb8f",
+  "outputSha256": "4d95ffa59288cd1f21ff4654e73aeba87bb5ae138753827567c2e7bb3b58547e",
+  "counts": {
+    "PASS": 383,
+    "FAIL": 59
+  },
+  "changes": [
+    {
+      "cell": "F88",
+      "table": "country_monthly_risk.xlsx",
+      "field": "cpi_index",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型BIGDECIMAL；在线长浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F153",
+      "table": "global_cycle_month.xlsx",
+      "field": "unemployment_rate",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F154",
+      "table": "global_cycle_month.xlsx",
+      "field": "cpi_index",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F157",
+      "table": "global_cycle_month.xlsx",
+      "field": "equity_index",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F158",
+      "table": "global_cycle_month.xlsx",
+      "field": "vix_level",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F159",
+      "table": "global_cycle_month.xlsx",
+      "field": "oil_price_usd",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F161",
+      "table": "global_cycle_month.xlsx",
+      "field": "broad_dollar_index",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F162",
+      "table": "global_cycle_month.xlsx",
+      "field": "tbill_3m",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F163",
+      "table": "global_cycle_month.xlsx",
+      "field": "broad_dollar_1973",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F164",
+      "table": "global_cycle_month.xlsx",
+      "field": "industrial_production_yoy",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F165",
+      "table": "global_cycle_month.xlsx",
+      "field": "cpi_yoy",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F166",
+      "table": "global_cycle_month.xlsx",
+      "field": "real_policy_rate",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F167",
+      "table": "global_cycle_month.xlsx",
+      "field": "yield_spread_10y_3m",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F168",
+      "table": "global_cycle_month.xlsx",
+      "field": "sahm_realtime_value",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F169",
+      "table": "global_cycle_month.xlsx",
+      "field": "nfci_expanding_percentile",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F170",
+      "table": "global_cycle_month.xlsx",
+      "field": "equity_drawdown",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F171",
+      "table": "global_cycle_month.xlsx",
+      "field": "hy_oas_12m_change_bps",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F182",
+      "table": "global_cycle_month.xlsx",
+      "field": "property_release_date",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F223",
+      "table": "company_overseas_exposure.xlsx",
+      "field": "fiscal_year",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同整数，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F224",
+      "table": "company_overseas_exposure.xlsx",
+      "field": "report_date",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F238",
+      "table": "company_overseas_exposure.xlsx",
+      "field": "fx_gain_loss",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F239",
+      "table": "company_overseas_exposure.xlsx",
+      "field": "foreign_currency_assets",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F240",
+      "table": "company_overseas_exposure.xlsx",
+      "field": "foreign_currency_liabilities",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F243",
+      "table": "company_overseas_exposure.xlsx",
+      "field": "hedge_notional",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F249",
+      "table": "company_overseas_exposure.xlsx",
+      "field": "committed_credit_line",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F261",
+      "table": "bridge_company_geography.xlsx",
+      "field": "fiscal_year",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同整数，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F288",
+      "table": "portfolio_scenario.xlsx",
+      "field": "max_drawdown",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F303",
+      "table": "case_evidence.xlsx",
+      "field": "start_date",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F304",
+      "table": "case_evidence.xlsx",
+      "field": "end_date",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F341",
+      "table": "source_registry.xlsx",
+      "field": "coverage_start",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F342",
+      "table": "source_registry.xlsx",
+      "field": "coverage_end",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F343",
+      "table": "source_registry.xlsx",
+      "field": "publication_date",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F348",
+      "table": "source_registry.xlsx",
+      "field": "file_size_bytes",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F351",
+      "table": "source_registry.xlsx",
+      "field": "earliest_backtest_date",
+      "before": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F375",
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_fx_date",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F377",
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_cpi_date",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F378",
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_reserve_usd",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F379",
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_reserve_date",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F381",
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_reserve_import_months_date",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DATE；在线日期一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F382",
+      "table": "MVP_country_latest.xlsx",
+      "field": "fx_12m_depr",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F384",
+      "table": "MVP_country_latest.xlsx",
+      "field": "fx_threshold_multiple",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F389",
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_odi_stock_usd",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表DOUBLE，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F390",
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_odi_stock_year",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同整数，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表INTEGER，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F417",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "cpi_yoy",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F418",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "industrial_production_yoy",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F419",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "sahm_realtime_value",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F420",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "nfci_expanding_percentile",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F421",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "equity_drawdown",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F423",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "policy_rate_12m_change_bps",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F424",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "real_policy_rate_12m_change_bps",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F425",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "hy_oas_12m_change_bps",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型DOUBLE；在线浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F427",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_asset_bust",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F428",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_recession",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F429",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_deflation",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F430",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_stagflation",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F431",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_aggressive_tightening",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F432",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_inflation_overheating",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F433",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_recovery_reflation",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    },
+    {
+      "cell": "F437",
+      "table": "MVP_cycle_state.xlsx",
+      "field": "compound_global_crisis",
+      "before": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "after": "2026-09-04分层复核：9/1底表STRING，模型INTEGER；在线整型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。"
+    }
+  ]
+}
