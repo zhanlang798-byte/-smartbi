@@ -1,0 +1,171 @@
+- tablist:
+  - tab "数据模型":
+    - generic: 数据模型
+  - tab "SQL查询" [selected]:
+    - generic: SQL查询
+    - text: 
+- text: 
+- generic: 
+- text:                                                                                                                                                                                                                                                                                                                                    
+- tabpanel "SQL查询":
+  - iframe [active]:
+    - table:
+      - rowgroup:
+        - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表    执行   保存  格式化SQL  复制SQL  回到模型 run_id, fx_eom_lcu_per_usd, fx_eom_source, fx_avg_source, cpi_source FROM input.v50_country_monthly_risk ) cpi_cast_check 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+          - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表    执行   保存  格式化SQL  复制SQL  回到模型 run_id, fx_eom_lcu_per_usd, fx_eom_source, fx_avg_source, cpi_source FROM input.v50_country_monthly_risk ) cpi_cast_check 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+            - table:
+              - rowgroup:
+                - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表    执行   保存  格式化SQL  复制SQL  回到模型 run_id, fx_eom_lcu_per_usd, fx_eom_source, fx_avg_source, cpi_source FROM input.v50_country_monthly_risk ) cpi_cast_check 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                  - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                    - table:
+                      - rowgroup:
+                        - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                          - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                            - table:
+                              - rowgroup:
+                                - row "数据源 可导入数据库":
+                                  - cell "数据源"
+                                  - cell "可导入数据库":
+                                    - textbox "请选择"
+                                    - button
+                                    - text:                  
+                                  - cell: 
+                                - row "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                  - cell "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                    - radio "显示名称" [checked]
+                                    - text: 显示名称
+                                    - radio "显示别名"
+                                    - text: 显示别名
+                                    - generic "名称：input 别名：可导入数据库":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 可导入数据库
+                                      - text: 
+                                    - generic "名称：input 别名：input":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: input
+                                      - text: 
+                                    - generic "名称：USER_PROPERTIES 别名：用户属性 描述：用户属性":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 用户属性
+                                      - text: 
+                                    - generic "名称：FUNCTIONS 别名：函数列表 描述：函数列表":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 函数列表
+                                      - text: 
+                                - row " ":
+                                  - cell " ":
+                                    - generic "搜索":
+                                      - generic: 
+                                    - textbox "搜索资源"
+                                    - text:  
+                                    - generic: 
+                                    - text:   
+                  - cell
+                  - cell " 执行   保存  格式化SQL  复制SQL  回到模型 run_id, fx_eom_lcu_per_usd, fx_eom_source, fx_avg_source, cpi_source FROM input.v50_country_monthly_risk ) cpi_cast_check 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                    - text: 
+                    - generic: 执行
+                    - generic: 
+                    - text:  
+                    - text: 
+                    - generic: 保存
+                    - text: 
+                    - text: 
+                    - generic: 格式化SQL
+                    - text: 
+                    - generic: 复制SQL
+                    - text: 
+                    - generic: 回到模型
+                    - textbox
+                    - generic: "21"
+                    - generic: "22"
+                    - generic: "23"
+                    - generic: "24"
+                    - generic: "25"
+                    - generic: "26"
+                    - generic: "27"
+                    - generic: "28"
+                    - generic: run_id,
+                    - generic: fx_eom_lcu_per_usd,
+                    - generic: fx_eom_source,
+                    - generic: fx_avg_source,
+                    - generic: cpi_source
+                    - generic: FROM input.v50_country_monthly_risk
+                    - generic: ) cpi_cast_check
+                    - generic "参数设置"
+                    - generic "数据预览"
+                    - generic: 
+                    - text: 
+                    - table:
+                      - rowgroup:
+                        - text:               
+                        - row "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                          - cell "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                            - table:
+                              - rowgroup:
+                                - row:
+                                  - cell
+                                - row "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                                  - cell "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                                    - table:
+                                      - rowgroup:
+                                        - row:
+                                          - cell
+                                        - row "共 1 行每页 10 行   1 / 1   刷新":
+                                          - cell "共 1 行每页 10 行   1 / 1   刷新":
+                                            - table:
+                                              - rowgroup:
+                                                - row "共 1 行每页 10 行   1 / 1   刷新":
+                                                  - cell "共 1 行每页 10 行   1 / 1   刷新":
+                                                    - generic: 共 1 行
+                                                    - text: 每页
+                                                    - textbox
+                                                    - text: 行
+                                                    - generic "首页":
+                                                      - generic: 
+                                                    - generic "上页":
+                                                      - generic: 
+                                                    - textbox
+                                                    - generic: /
+                                                    - generic: "1"
+                                                    - generic "下页":
+                                                      - generic: 
+                                                    - generic "尾页":
+                                                      - generic: 
+                                                    - generic: 刷新
+                                        - row:
+                                          - cell
+                                        - row "7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                                          - cell "7,680 7,616 64 2,862,057.90 375.80 47,954.24 total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                                            - table:
+                                              - rowgroup:
+                                                - row "7,680 7,616 64 2,862,057.90 375.80 47,954.24":
+                                                  - cell "7,680"
+                                                  - cell "7,616"
+                                                  - cell "64"
+                                                  - cell "2,862,057.90"
+                                                  - cell "375.80"
+                                                  - cell "47,954.24"
+                                            - table:
+                                              - rowgroup:
+                                                - row "total_rows non_null_rows null_rows numeric_sum numeric_avg numeric_max":
+                                                  - cell "total_rows":
+                                                    - generic: total_rows
+                                                  - cell "non_null_rows":
+                                                    - generic: non_null_rows
+                                                  - cell "null_rows":
+                                                    - generic: null_rows
+                                                  - cell "numeric_sum":
+                                                    - generic: numeric_sum
+                                                  - cell "numeric_avg":
+                                                    - generic: numeric_avg
+                                                  - cell "numeric_max":
+                                                    - generic: numeric_max
+                                        - row:
+                                          - cell
+  - generic: 
+- generic: 
+- text:                                 

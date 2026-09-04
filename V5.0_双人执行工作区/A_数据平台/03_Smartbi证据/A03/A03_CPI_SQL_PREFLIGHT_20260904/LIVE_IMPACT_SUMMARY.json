@@ -1,0 +1,18 @@
+{
+  "capturedDate": "2026-09-04",
+  "method": "Smartbi 数据连接源表右键 > 影响性分析 > 展开正式模型；从可见 tr[customid] 提取白名单",
+  "scope": "源表到正式模型、模型到六页的资源级依赖；不表示六页均直接使用 CPI。CPI 字段展开未显示页面私有度量，须与页面 XML 对照。",
+  "sourceFieldId": "FIELD.input.input.null.v50_country_monthly_risk.cpi_index",
+  "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+  "modelName": "MDL_XH202612_V50_COUNTRY_RESERVE",
+  "modelFieldId": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index",
+  "pages": [
+    {"id":"161b2c84aa6c738645e7256f75d2dc00","name":"DB01_XH202612_V50_RISK_OVERVIEW"},
+    {"id":"12cbefc293d1f1cd6c76771772ede621","name":"DB02_XH202612_V50_COUNTRY_DRILL"},
+    {"id":"96d3a52a55f6e16edb602fc2f6d13010","name":"DB03_XH202612_V50_COMPANY_BOUNDARY"},
+    {"id":"2f546d06e3f70f0956ea8d5740e26a83","name":"DB04_XH202612_V50_LIQUIDITY_LAB"},
+    {"id":"0e8d39f578a43c473088b8f7042e8331","name":"DB05_XH202612_V50_EVIDENCE_CENTER"},
+    {"id":"684ef06176737964de2551a03de747e8","name":"DB06_XH202612_V50_CYCLE_CONTEXT"}
+  ],
+  "modified": false
+}

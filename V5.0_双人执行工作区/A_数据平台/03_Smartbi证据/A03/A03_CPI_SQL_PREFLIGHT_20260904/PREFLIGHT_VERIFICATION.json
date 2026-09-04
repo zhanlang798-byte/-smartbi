@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-04",
+  "verificationScope": "Offline assertions over captured live SQL UI results and controlled XML references; does not run SQL or validate deployment.",
+  "sqlPreflight": "PASS",
+  "formalRepairStatus": "FAIL_MAX_PENDING_REPAIR",
+  "nativeAggregateObservedThisTurn": false,
+  "metrics": {
+    "total_rows": "7,680",
+    "non_null_rows": "7,616",
+    "null_rows": "64",
+    "numeric_sum": "2,862,057.90",
+    "numeric_avg": "375.80",
+    "numeric_max": "47,954.24"
+  },
+  "grainAndNullCheck": {
+    "total_rows": "7,680",
+    "country_count": "40",
+    "first_month": "2010-01-31",
+    "last_month": "2025-12-31",
+    "null_key_rows": "0",
+    "raw_null_rows": "64",
+    "blank_string_rows": "0",
+    "cast_null_rows": "64",
+    "duplicate_key_groups": "0",
+    "extra_duplicate_rows": "0"
+  },
+  "sourceColumnCount": 18,
+  "sourceRelations": 2,
+  "resourceDependentPagesLive": 6,
+  "historicalDirectCpiPortlet": "50069196dac827c6732e076784c7fd80",
+  "referenceAuditCaveat": "Current 2026-09-04 model export and historical controlled six-page export; not a complete live tenant reference scan",
+  "comparisonPrecision": "SQL UI aggregation compared with prior independent source baseline at 2 decimal places; no full-precision equality claim.",
+  "sourceWorkbookSha256": "0d83e648b5e142661e4f3726a164887c5c8bbf25c24d5e04e6a1449265879b0e",
+  "typeWorkbookSha256": "5cd12fe8d507258156f422d74011b467829b94a8e15aad435f346191f8d9eaed",
+  "queryDiscardedWithoutSaving": true,
+  "formalModelPublished": false,
+  "bSigned": false,
+  "evidenceSha256": {
+    "01_SQL_FULL_QUERY_RESULT.txt": "6ccfdc39feae89ef2184aa83c26ef072dbb75d4c4ff1e24de474a454791bffa7",
+    "02_EXECUTED_SQL.txt": "035214473cd64729516faa61884180c90968447eefc2c5d9b0160fa590599a1d",
+    "03_FULL_18_COLUMN_PREVIEW.txt": "9ad1facd81b4c6e582cb651b8d9ebbfe90d2a847304f84ba77b679ffd634994f",
+    "04_FULL_18_COLUMN_EXECUTED.sql": "00c3d0c00d24603c4ffbf226c52c7cfd5511c98da56af067e296e4596d73916a",
+    "05_KEY_NULL_RESULT.txt": "94f306716ca845b7cc234a900c64999c8d6d853e84aa21bc3e48315c16c8ccda",
+    "06_KEY_NULL_EXECUTED.sql": "7b2179031e38989f5dd9dcfb531b6e1d04791c713def9702a6dd31292929d9f2",
+    "07_NATIVE_EDIT_ENTRY.json": "3640146604b6cb134353109cc6397b939afe3a8d6efea93590642c62320ce702",
+    "08_QUERY_DISCARD.json": "d93bb8b367c0db5e29c57f13a291ceca1fcec615b61ad6fc524e750382329bd2",
+    "REFERENCE_AUDIT.json": "cd2c117fb076949c27b622f7d7ad593870177dd63079d3d21f1f37076b017ca1",
+    "LIVE_IMPACT_SUMMARY.json": "64ea9ce6632610eee9ae3a171236092f5c4ae6c4e8203f7b33b0047a23d38601"
+  },
+  "nextBlocker": "No verified reference-preserving replacement entry. Native BASIC_TABLE Edit menu is disabled; this is not proof of an account-permission cause."
+}

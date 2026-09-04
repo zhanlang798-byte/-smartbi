@@ -1,0 +1,261 @@
+{
+  "scope": "Current 2026-09-04 model export and historical controlled six-page export; not a complete live tenant reference scan",
+  "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+  "modelLastModified": "2026-09-02 23:44:40",
+  "sourceViewId": "aeff8422c42966f645693674f870bc27",
+  "sourceViewType": "BASIC_TABLE",
+  "sourceFieldId": "Field-input-input-null-v50_country_monthly_risk-cpi_index",
+  "modelFieldId": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index",
+  "publishedField": {
+    "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index",
+    "name": "cpi_index",
+    "alias": "cpi_index",
+    "valueType": "BIGDECIMAL",
+    "referenceFieldId": "Field-input-input-null-v50_country_monthly_risk-cpi_index",
+    "viewId": "aeff8422c42966f645693674f870bc27"
+  },
+  "sourceFieldCount": 18,
+  "sourceFieldIds": [
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-iso3",
+      "name": "iso3"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-month_end",
+      "name": "month_end"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_avg_lcu_per_usd",
+      "name": "fx_avg_lcu_per_usd"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-cpi_index",
+      "name": "cpi_index"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_reserves_usd",
+      "name": "fx_reserves_usd"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-reserve_import_months",
+      "name": "reserve_import_months"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-imports_usd",
+      "name": "imports_usd"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-source_id",
+      "name": "source_id"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-source_frequency",
+      "name": "source_frequency"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fetch_date",
+      "name": "fetch_date"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-data_version",
+      "name": "data_version"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-is_proxy",
+      "name": "is_proxy"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-is_imputed",
+      "name": "is_imputed"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-run_id",
+      "name": "run_id"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_eom_lcu_per_usd",
+      "name": "fx_eom_lcu_per_usd"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_eom_source",
+      "name": "fx_eom_source"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_avg_source",
+      "name": "fx_avg_source"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-cpi_source",
+      "name": "cpi_source"
+    }
+  ],
+  "relationsInvolvingSource": [
+    {
+      "srcViewId": "3ebf4ae635c6d364a734cbc07a0710df",
+      "destViewId": "aeff8422c42966f645693674f870bc27",
+      "fieldRelations": [
+        {
+          "srcFieldId": "Field-input-input-null-dim_country_gi0c3510b657b27001-iso3",
+          "destFieldId": "Field-input-input-null-v50_country_monthly_risk-iso3",
+          "operator": "EQUALS"
+        }
+      ],
+      "linkType": null,
+      "cardinalityType": "ONE2MANY",
+      "srcViewBO": null,
+      "destViewBO": null,
+      "assumeReferentialIntegrity": "INCOMPLETENESS",
+      "filterDirection": "SINGLE"
+    },
+    {
+      "srcViewId": "a9de04e81cb73cae3f61e20cdd572e73",
+      "destViewId": "aeff8422c42966f645693674f870bc27",
+      "fieldRelations": [
+        {
+          "srcFieldId": "Field-input-input-null-dim_date_dpkgi0c3510fdb4327001-month_end",
+          "destFieldId": "Field-input-input-null-v50_country_monthly_risk-month_end",
+          "operator": "EQUALS"
+        }
+      ],
+      "linkType": null,
+      "cardinalityType": "ONE2MANY",
+      "srcViewBO": null,
+      "destViewBO": null,
+      "assumeReferentialIntegrity": "INCOMPLETENESS",
+      "filterDirection": "SINGLE"
+    }
+  ],
+  "modelReferences": [
+    {
+      "section": "nodes",
+      "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index",
+      "name": "cpi_index",
+      "references": {
+        "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "pageId": "161b2c84aa6c738645e7256f75d2dc00",
+      "name": "DB01_XH202612_V50_RISK_OVERVIEW",
+      "lastModified": "2026-08-27 23:10:44",
+      "sourceFile": "A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml",
+      "sourceSha256": "e013a0695e0b97fd558bd90f870661bd6da2f2592b993226d4a177a54c0463c5",
+      "portlets": [],
+      "allReferencePaths": []
+    },
+    {
+      "pageId": "12cbefc293d1f1cd6c76771772ede621",
+      "name": "DB02_XH202612_V50_COUNTRY_DRILL",
+      "lastModified": "2026-08-29 20:45:33",
+      "sourceFile": "A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml",
+      "sourceSha256": "e013a0695e0b97fd558bd90f870661bd6da2f2592b993226d4a177a54c0463c5",
+      "portlets": [
+        {
+          "id": "50069196dac827c6732e076784c7fd80",
+          "type": "ECHARTS_COMBINATION__DUAL",
+          "title": {
+            "text": "汇率与CPI趋势（FX上升=本币贬值）"
+          },
+          "references": [
+            {
+              "path": "$.extended.fields.rows[0].id",
+              "reference": "Field-input-input-null-v50_country_monthly_risk-cpi_index-PRIVATE-MEASURE-88a269d6daf1ae1e883b666099f49d57"
+            },
+            {
+              "path": "$.extended.fields.rows[0].extended",
+              "reference": "{\"ref\":\"AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index\",\"aggregator\":\"sum\",\"type\":\"PRIVATE_MEASURE\"}"
+            },
+            {
+              "path": "$.extended.fields.rows[0].refDataSetFieldId",
+              "reference": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index"
+            },
+            {
+              "path": "$.extended.fields.rows[0].groupName",
+              "reference": "Field-input-input-null-v50_country_monthly_risk-cpi_index-PRIVATE-MEASURE-88a269d6daf1ae1e883b666099f49d57_SUM_ECHARTS_LINE_3eea04bd1291cbbcb14bb7cda00403cd"
+            }
+          ]
+        }
+      ],
+      "allReferencePaths": [
+        {
+          "path": "$.portlets[5].extended.fields.rows[0].id",
+          "reference": "Field-input-input-null-v50_country_monthly_risk-cpi_index-PRIVATE-MEASURE-88a269d6daf1ae1e883b666099f49d57"
+        },
+        {
+          "path": "$.portlets[5].extended.fields.rows[0].extended",
+          "reference": "{\"ref\":\"AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index\",\"aggregator\":\"sum\",\"type\":\"PRIVATE_MEASURE\"}"
+        },
+        {
+          "path": "$.portlets[5].extended.fields.rows[0].refDataSetFieldId",
+          "reference": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index"
+        },
+        {
+          "path": "$.portlets[5].extended.fields.rows[0].groupName",
+          "reference": "Field-input-input-null-v50_country_monthly_risk-cpi_index-PRIVATE-MEASURE-88a269d6daf1ae1e883b666099f49d57_SUM_ECHARTS_LINE_3eea04bd1291cbbcb14bb7cda00403cd"
+        },
+        {
+          "path": "$.privateDatasets[0].fields[2].id",
+          "reference": "Field-input-input-null-v50_country_monthly_risk-cpi_index-PRIVATE-MEASURE-88a269d6daf1ae1e883b666099f49d57"
+        },
+        {
+          "path": "$.privateDatasets[0].fields[2].refDataSetFieldId",
+          "reference": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index"
+        },
+        {
+          "path": "$.privateDatasets[0].fields[2].extended",
+          "reference": "{\"ref\":\"AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index\",\"aggregator\":\"sum\",\"type\":\"PRIVATE_MEASURE\"}"
+        },
+        {
+          "path": "$.privateDatasets[0].fields[2].privateDefine",
+          "reference": "{\"ref\":\"AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index\",\"aggregator\":\"sum\",\"type\":\"PRIVATE_MEASURE\"}"
+        }
+      ]
+    },
+    {
+      "pageId": "2f546d06e3f70f0956ea8d5740e26a83",
+      "name": "DB04_XH202612_V50_LIQUIDITY_LAB",
+      "lastModified": "2026-08-30 23:18:03",
+      "sourceFile": "A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml",
+      "sourceSha256": "e013a0695e0b97fd558bd90f870661bd6da2f2592b993226d4a177a54c0463c5",
+      "portlets": [],
+      "allReferencePaths": []
+    },
+    {
+      "pageId": "96d3a52a55f6e16edb602fc2f6d13010",
+      "name": "DB03_XH202612_V50_COMPANY_BOUNDARY",
+      "lastModified": "2026-08-31 10:42:31",
+      "sourceFile": "A07_PAGES_DB03_DB05_DB06_WITH_MODEL_20260831.xml",
+      "sourceSha256": "5b77efb3f93af4c6dbd3061261c221347bcb92761da577f1de3427c2ac5404a3",
+      "portlets": [],
+      "allReferencePaths": []
+    },
+    {
+      "pageId": "0e8d39f578a43c473088b8f7042e8331",
+      "name": "DB05_XH202612_V50_EVIDENCE_CENTER",
+      "lastModified": "2026-08-29 23:06:59",
+      "sourceFile": "A07_PAGES_DB03_DB05_DB06_WITH_MODEL_20260831.xml",
+      "sourceSha256": "5b77efb3f93af4c6dbd3061261c221347bcb92761da577f1de3427c2ac5404a3",
+      "portlets": [],
+      "allReferencePaths": []
+    },
+    {
+      "pageId": "684ef06176737964de2551a03de747e8",
+      "name": "DB06_XH202612_V50_CYCLE_CONTEXT",
+      "lastModified": "2026-08-30 15:55:18",
+      "sourceFile": "A07_PAGES_DB03_DB05_DB06_WITH_MODEL_20260831.xml",
+      "sourceSha256": "5b77efb3f93af4c6dbd3061261c221347bcb92761da577f1de3427c2ac5404a3",
+      "portlets": [],
+      "allReferencePaths": []
+    }
+  ],
+  "preservationRequirements": [
+    "Source view ID",
+    "All 18 field reference IDs",
+    "Relationship edges",
+    "Existing private measures and filters",
+    "NULLs and row grain"
+  ],
+  "applied": false
+}

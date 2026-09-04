@@ -1,0 +1,28 @@
+{
+  "capturedAt": "2026-09-04T08:45:34.587Z",
+  "source": "Smartbi formal model source table context menu, visible DOM attributes",
+  "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+  "sourceView": "V50_country_monthly_risk",
+  "menu": [
+    "- listitem: 编辑",
+    "- listitem: 复制",
+    "- listitem: 同步",
+    "- listitem: 新建关系",
+    "- listitem: 转换为ETL高级查询",
+    "- listitem: 新建计算列",
+    "- listitem: 新建预计算",
+    "- listitem: 分区设置",
+    "- listitem: 删除",
+    "- listitem: 属性",
+    "- listitem: 构建布局"
+  ],
+  "editItem": [
+    {
+      "class": "__ViewRelationPanel_menuDelete ctx-item disabled",
+      "qtp": "ViewRelationPanel_EditMenuItem",
+      "text": "编辑"
+    }
+  ],
+  "interpretation": "Edit is disabled for this source table in this UI. Cause and availability of a reference-preserving conversion elsewhere are not established.",
+  "modified": false
+}

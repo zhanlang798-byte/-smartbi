@@ -1,0 +1,183 @@
+- tablist:
+  - tab "数据模型":
+    - generic: 数据模型
+  - tab "SQL查询" [selected]:
+    - generic: SQL查询
+    - text: 
+- text: 
+- generic: 
+- text:                                                                                                                                                                                                                                                                                                                                    
+- tabpanel "SQL查询":
+  - iframe [active]:
+    - table:
+      - rowgroup:
+        - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表    执行   保存  格式化SQL  复制SQL  回到模型 FROM ( SELECT iso3, month_end, COUNT(*) AS key_rows FROM input.v50_country_monthly_risk GROUP BY iso3, month_end HAVING COUNT(*) > 1 ) d ) k 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+          - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表    执行   保存  格式化SQL  复制SQL  回到模型 FROM ( SELECT iso3, month_end, COUNT(*) AS key_rows FROM input.v50_country_monthly_risk GROUP BY iso3, month_end HAVING COUNT(*) > 1 ) d ) k 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+            - table:
+              - rowgroup:
+                - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表    执行   保存  格式化SQL  复制SQL  回到模型 FROM ( SELECT iso3, month_end, COUNT(*) AS key_rows FROM input.v50_country_monthly_risk GROUP BY iso3, month_end HAVING COUNT(*) > 1 ) d ) k 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                  - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                    - table:
+                      - rowgroup:
+                        - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                          - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                            - table:
+                              - rowgroup:
+                                - row "数据源 可导入数据库":
+                                  - cell "数据源"
+                                  - cell "可导入数据库":
+                                    - textbox "请选择"
+                                    - button
+                                    - text:                  
+                                  - cell: 
+                                - row "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                  - cell "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                    - radio "显示名称" [checked]
+                                    - text: 显示名称
+                                    - radio "显示别名"
+                                    - text: 显示别名
+                                    - generic "名称：input 别名：可导入数据库":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 可导入数据库
+                                      - text: 
+                                    - generic "名称：input 别名：input":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: input
+                                      - text: 
+                                    - generic "名称：USER_PROPERTIES 别名：用户属性 描述：用户属性":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 用户属性
+                                      - text: 
+                                    - generic "名称：FUNCTIONS 别名：函数列表 描述：函数列表":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 函数列表
+                                      - text: 
+                                - row " ":
+                                  - cell " ":
+                                    - generic "搜索":
+                                      - generic: 
+                                    - textbox "搜索资源"
+                                    - text:  
+                                    - generic: 
+                                    - text:   
+                  - cell
+                  - cell " 执行   保存  格式化SQL  复制SQL  回到模型 FROM ( SELECT iso3, month_end, COUNT(*) AS key_rows FROM input.v50_country_monthly_risk GROUP BY iso3, month_end HAVING COUNT(*) > 1 ) d ) k 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                    - text: 
+                    - generic: 执行
+                    - generic: 
+                    - text:  
+                    - text: 
+                    - generic: 保存
+                    - text: 
+                    - text: 
+                    - generic: 格式化SQL
+                    - text: 
+                    - generic: 复制SQL
+                    - text: 
+                    - generic: 回到模型
+                    - textbox
+                    - generic: "25"
+                    - generic: "26"
+                    - generic: "27"
+                    - generic: "28"
+                    - generic: "29"
+                    - generic: "30"
+                    - generic: "31"
+                    - generic: "32"
+                    - generic: FROM (
+                    - generic: SELECT iso3, month_end, COUNT(*) AS key_rows
+                    - generic: FROM input.v50_country_monthly_risk
+                    - generic: GROUP BY iso3, month_end
+                    - generic: HAVING COUNT(*) > 1
+                    - generic: ) d
+                    - generic: ) k
+                    - generic "参数设置"
+                    - generic "数据预览"
+                    - generic: 
+                    - text: 
+                    - table:
+                      - rowgroup:
+                        - text:               
+                        - row "共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                          - cell "共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                            - table:
+                              - rowgroup:
+                                - row:
+                                  - cell
+                                - row "共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                                  - cell "共 1 行每页 10 行   1 / 1   刷新 7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                                    - table:
+                                      - rowgroup:
+                                        - row:
+                                          - cell
+                                        - row "共 1 行每页 10 行   1 / 1   刷新":
+                                          - cell "共 1 行每页 10 行   1 / 1   刷新":
+                                            - table:
+                                              - rowgroup:
+                                                - row "共 1 行每页 10 行   1 / 1   刷新":
+                                                  - cell "共 1 行每页 10 行   1 / 1   刷新":
+                                                    - generic: 共 1 行
+                                                    - text: 每页
+                                                    - textbox
+                                                    - text: 行
+                                                    - generic "首页":
+                                                      - generic: 
+                                                    - generic "上页":
+                                                      - generic: 
+                                                    - textbox
+                                                    - generic: /
+                                                    - generic: "1"
+                                                    - generic "下页":
+                                                      - generic: 
+                                                    - generic "尾页":
+                                                      - generic: 
+                                                    - generic: 刷新
+                                        - row:
+                                          - cell
+                                        - row "7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                                          - cell "7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0 total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                                            - table:
+                                              - rowgroup:
+                                                - row "7,680 40 2010-01-31 2025-12-31 0 64 0 64 0 0":
+                                                  - cell "7,680"
+                                                  - cell "40"
+                                                  - cell "2010-01-31"
+                                                  - cell "2025-12-31"
+                                                  - cell "0"
+                                                  - cell "64"
+                                                  - cell "0"
+                                                  - cell "64"
+                                                  - cell "0"
+                                                  - cell "0"
+                                            - table:
+                                              - rowgroup:
+                                                - row "total_rows country_count first_month last_month null_key_rows raw_null_rows blank_string_rows cast_null_rows duplicate_key_groups extra_duplicate_rows":
+                                                  - cell "total_rows":
+                                                    - generic: total_rows
+                                                  - cell "country_count":
+                                                    - generic: country_count
+                                                  - cell "first_month":
+                                                    - generic: first_month
+                                                  - cell "last_month":
+                                                    - generic: last_month
+                                                  - cell "null_key_rows":
+                                                    - generic: null_key_rows
+                                                  - cell "raw_null_rows":
+                                                    - generic: raw_null_rows
+                                                  - cell "blank_string_rows":
+                                                    - generic: blank_string_rows
+                                                  - cell "cast_null_rows":
+                                                    - generic: cast_null_rows
+                                                  - cell "duplicate_key_groups":
+                                                    - generic: duplicate_key_groups
+                                                  - cell "extra_duplicate_rows":
+                                                    - generic: extra_duplicate_rows
+                                        - row:
+                                          - cell
+  - generic: 
+- generic: 
+- text:                                 

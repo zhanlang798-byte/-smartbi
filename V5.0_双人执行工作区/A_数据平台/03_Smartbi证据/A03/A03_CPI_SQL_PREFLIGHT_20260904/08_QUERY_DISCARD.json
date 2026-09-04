@@ -1,0 +1,14 @@
+{
+  "capturedAt": "2026-09-04T08:46:04.226Z",
+  "prompt": "- generic: 提示信息\n- button \"Close\":\n  - generic: \n- generic: \n- generic: 是否保存对查询的更改？\n- button \"保存\":\n  - generic: 保存\n- button \"不保存\":\n  - generic: 不保存\n- button \"取消\":\n  - generic: 取消",
+  "action": "点击“不保存”",
+  "remainingTabs": [
+    "数据模型数据模型",
+    "\r\n            所有表\r\n          右键新增布局",
+    "度量度量",
+    "成员成员",
+    "命名集命名集"
+  ],
+  "sqlTabPresent": false,
+  "formalModelSaveClicked": false
+}

@@ -1,0 +1,378 @@
+- tablist:
+  - tab "数据模型":
+    - generic: 数据模型
+  - tab "SQL查询" [selected]:
+    - generic: SQL查询
+    - text: 
+- text: 
+- generic: 
+- text:                                                                                                                                                                                                                                                                                                                                    
+- tabpanel "SQL查询":
+  - iframe [active]:
+    - table:
+      - rowgroup:
+        - row:
+          - cell:
+            - table:
+              - rowgroup:
+                - row:
+                  - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                    - table:
+                      - rowgroup:
+                        - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                          - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                            - table:
+                              - rowgroup:
+                                - row "数据源 可导入数据库":
+                                  - cell "数据源"
+                                  - cell "可导入数据库":
+                                    - textbox "请选择"
+                                    - button
+                                    - text:                  
+                                  - cell: 
+                                - row "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                  - cell "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                    - radio "显示名称" [checked]
+                                    - text: 显示名称
+                                    - radio "显示别名"
+                                    - text: 显示别名
+                                    - generic "名称：input 别名：可导入数据库":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 可导入数据库
+                                      - text: 
+                                    - generic "名称：input 别名：input":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: input
+                                      - text: 
+                                    - generic "名称：USER_PROPERTIES 别名：用户属性 描述：用户属性":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 用户属性
+                                      - text: 
+                                    - generic "名称：FUNCTIONS 别名：函数列表 描述：函数列表":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 函数列表
+                                      - text: 
+                                - row " ":
+                                  - cell " ":
+                                    - generic "搜索":
+                                      - generic: 
+                                    - textbox "搜索资源"
+                                    - text:  
+                                    - generic: 
+                                    - text:   
+                  - cell
+                  - cell:
+                    - text: 
+                    - generic: 执行
+                    - generic: 
+                    - text:  
+                    - text: 
+                    - generic: 保存
+                    - text: 
+                    - text: 
+                    - generic: 格式化SQL
+                    - text: 
+                    - generic: 复制SQL
+                    - text: 
+                    - generic: 回到模型
+                    - textbox
+                    - generic: "13"
+                    - generic: "14"
+                    - generic: "15"
+                    - generic: "16"
+                    - generic: "17"
+                    - generic: "18"
+                    - generic: "19"
+                    - generic: "20"
+                    - generic: is_imputed,
+                    - generic: run_id,
+                    - generic: fx_eom_lcu_per_usd,
+                    - generic: fx_eom_source,
+                    - generic: fx_avg_source,
+                    - generic: cpi_source
+                    - generic: FROM input.v50_country_monthly_risk
+                    - generic "参数设置"
+                    - generic "数据预览"
+                    - generic: 
+                    - text: 
+                    - table:
+                      - rowgroup:
+                        - text:               
+                        - row:
+                          - cell:
+                            - table:
+                              - rowgroup:
+                                - row:
+                                  - cell
+                                - row:
+                                  - cell:
+                                    - table:
+                                      - rowgroup:
+                                        - row:
+                                          - cell
+                                        - row "共 7680 行每页 10 行   1 / 768   刷新":
+                                          - cell "共 7680 行每页 10 行   1 / 768   刷新":
+                                            - table:
+                                              - rowgroup:
+                                                - row "共 7680 行每页 10 行   1 / 768   刷新":
+                                                  - cell "共 7680 行每页 10 行   1 / 768   刷新":
+                                                    - generic: 共 7680 行
+                                                    - text: 每页
+                                                    - textbox
+                                                    - text: 行
+                                                    - generic "首页":
+                                                      - generic: 
+                                                    - generic "上页":
+                                                      - generic: 
+                                                    - textbox
+                                                    - generic: /
+                                                    - generic: "768"
+                                                    - generic "下页":
+                                                      - generic: 
+                                                    - generic "尾页":
+                                                      - generic: 
+                                                    - generic: 刷新
+                                        - row:
+                                          - cell
+                                        - row:
+                                          - cell:
+                                            - table:
+                                              - rowgroup:
+                                                - row "GEO 2010-01-31 1.71 100.00 2,106.20 5.73 291.56 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.74 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-01-31"
+                                                  - cell "1.71"
+                                                  - cell "100.00"
+                                                  - cell "2,106.20"
+                                                  - cell "5.73"
+                                                  - cell "291.56"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.74"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-02-28 1.72 101.47 2,046.27 5.13 330.39 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.74 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-02-28"
+                                                  - cell "1.72"
+                                                  - cell "101.47"
+                                                  - cell "2,046.27"
+                                                  - cell "5.13"
+                                                  - cell "330.39"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.74"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-03-31 1.73 101.28 2,199.23 5.16 435.46 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.75 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-03-31"
+                                                  - cell "1.73"
+                                                  - cell "101.28"
+                                                  - cell "2,199.23"
+                                                  - cell "5.16"
+                                                  - cell "435.46"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.75"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-04-30 1.75 101.53 2,116.17 5.25 385.87 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.77 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-04-30"
+                                                  - cell "1.75"
+                                                  - cell "101.53"
+                                                  - cell "2,116.17"
+                                                  - cell "5.25"
+                                                  - cell "385.87"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.77"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-05-31 1.78 101.17 1,957.09 4.55 441.56 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.78 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-05-31"
+                                                  - cell "1.78"
+                                                  - cell "101.17"
+                                                  - cell "1,957.09"
+                                                  - cell "4.55"
+                                                  - cell "441.56"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.78"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-06-30 1.86 100.87 1,864.41 4.45 414.90 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.84 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-06-30"
+                                                  - cell "1.86"
+                                                  - cell "100.87"
+                                                  - cell "1,864.41"
+                                                  - cell "4.45"
+                                                  - cell "414.90"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.84"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-07-31 1.84 100.63 1,947.26 4.82 421.95 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.84 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-07-31"
+                                                  - cell "1.84"
+                                                  - cell "100.63"
+                                                  - cell "1,947.26"
+                                                  - cell "4.82"
+                                                  - cell "421.95"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.84"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-08-31 1.84 102.97 1,948.65 4.48 453.23 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.83 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-08-31"
+                                                  - cell "1.84"
+                                                  - cell "102.97"
+                                                  - cell "1,948.65"
+                                                  - cell "4.48"
+                                                  - cell "453.23"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.83"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-09-30 1.83 106.16 2,110.24 4.72 456.54 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.81 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-09-30"
+                                                  - cell "1.83"
+                                                  - cell "106.16"
+                                                  - cell "2,110.24"
+                                                  - cell "4.72"
+                                                  - cell "456.54"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.81"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                                - row "GEO 2010-10-31 1.79 108.32 2,143.45 4.69 502.00 WEB-0048-R01 monthly 2026-08-18 00:00:00 WEB-0048-R01 FALSE FALSE 20260818_v42 1.78 IMF_IFS:DBnomics":
+                                                  - cell "GEO"
+                                                  - cell "2010-10-31"
+                                                  - cell "1.79"
+                                                  - cell "108.32"
+                                                  - cell "2,143.45"
+                                                  - cell "4.69"
+                                                  - cell "502.00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "monthly"
+                                                  - cell "2026-08-18 00:00:00"
+                                                  - cell "WEB-0048-R01"
+                                                  - cell "FALSE"
+                                                  - cell "FALSE"
+                                                  - cell "20260818_v42"
+                                                  - cell "1.78"
+                                                  - cell "IMF_IFS:DBnomics"
+                                                  - cell
+                                                  - cell
+                                            - table:
+                                              - rowgroup:
+                                                - row "iso3 month_end fx_avg_lcu_per_usd cpi_index fx_reserves_usd reserve_import_months imports_usd source_id source_frequency fetch_date data_version is_proxy is_imputed run_id fx_eom_lcu_per_usd fx_eom_source fx_avg_source cpi_source":
+                                                  - cell "iso3":
+                                                    - generic: iso3
+                                                  - cell "month_end":
+                                                    - generic: month_end
+                                                  - cell "fx_avg_lcu_per_usd":
+                                                    - generic: fx_avg_lcu_per_usd
+                                                  - cell "cpi_index":
+                                                    - generic: cpi_index
+                                                  - cell "fx_reserves_usd":
+                                                    - generic: fx_reserves_usd
+                                                  - cell "reserve_import_months":
+                                                    - generic: reserve_import_months
+                                                  - cell "imports_usd":
+                                                    - generic: imports_usd
+                                                  - cell "source_id":
+                                                    - generic: source_id
+                                                  - cell "source_frequency":
+                                                    - generic: source_frequency
+                                                  - cell "fetch_date":
+                                                    - generic: fetch_date
+                                                  - cell "data_version":
+                                                    - generic: data_version
+                                                  - cell "is_proxy":
+                                                    - generic: is_proxy
+                                                  - cell "is_imputed":
+                                                    - generic: is_imputed
+                                                  - cell "run_id":
+                                                    - generic: run_id
+                                                  - cell "fx_eom_lcu_per_usd":
+                                                    - generic: fx_eom_lcu_per_usd
+                                                  - cell "fx_eom_source":
+                                                    - generic: fx_eom_source
+                                                  - cell "fx_avg_source":
+                                                    - generic: fx_avg_source
+                                                  - cell "cpi_source":
+                                                    - generic: cpi_source
+                                        - row:
+                                          - cell
+  - generic: 
+- generic: 
+- text:                                 
