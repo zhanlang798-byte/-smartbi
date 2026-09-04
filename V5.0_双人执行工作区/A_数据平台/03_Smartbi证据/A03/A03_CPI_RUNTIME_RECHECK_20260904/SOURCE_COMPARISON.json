@@ -1,0 +1,47 @@
+{
+  "source": "A_数据平台\\01_输入只读镜像\\D0-D12_数据交付_V4.2\\data\\smartbi\\country_monthly_risk.xlsx",
+  "sourceSha256": "0d83e648b5e142661e4f3726a164887c5c8bbf25c24d5e04e6a1449265879b0e",
+  "grain": "iso3 + month_end; no joins, no filters, no fill-zero, no DISTINCT",
+  "rows": 7680,
+  "nonNull": 7616,
+  "null": 64,
+  "comparison": [
+    {
+      "metric": "SUM",
+      "sourceExact": "2862057.9036281263939",
+      "sourceDisplay2dp": "2,862,057.90",
+      "platformDisplay": "2,862,057.90",
+      "matchesAt2dp": true,
+      "evidence": "01_SUM_PLATFORM.txt"
+    },
+    {
+      "metric": "AVG",
+      "sourceExact": "375.7954180183989487788865546",
+      "sourceDisplay2dp": "375.80",
+      "platformDisplay": "375.80",
+      "matchesAt2dp": true,
+      "evidence": "02_AVG_PLATFORM.txt"
+    },
+    {
+      "metric": "MAX",
+      "sourceExact": "47954.2419061244",
+      "sourceDisplay2dp": "47,954.24",
+      "platformDisplay": "993.56",
+      "matchesAt2dp": false,
+      "evidence": "04_MAX_PLATFORM.txt"
+    }
+  ],
+  "lexicographicMax": {
+    "value": "993.558523173606",
+    "iso3": "IRN",
+    "month_end": "2021-06-30 00:00:00",
+    "display2dp": "993.56"
+  },
+  "numericMax": {
+    "value": "47954.2419061244",
+    "iso3": "SDN",
+    "month_end": "2023-02-28 00:00:00"
+  },
+  "scope": "Native indicator card, source cpi_index copied to a temporary measure. No formal model or source modification. UI displays two decimal places; no claim of full precision equality.",
+  "status": "FAIL_MAX_PENDING_REPAIR"
+}

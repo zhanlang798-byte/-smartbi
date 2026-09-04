@@ -1,0 +1,41 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const dir=path.dirname(fileURLToPath(import.meta.url));
+const input=path.join(path.dirname(dir),'SMARTBI_TYPE_AUDIT_V50.xlsx');
+const outputDir=path.join(dir,'outputs','cpi-runtime-20260904');
+const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(input));
+const sheet=wb.worksheets.getItemAt(0);
+const before=sheet.getUsedRange().values;
+if(process.argv[2]==='--inspect'){console.log(JSON.stringify(before.map((r,i)=>({row:i+1,values:r})).filter(({values:r})=>r.some(v=>String(v).includes('cpi_index')))));process.exit(0);}
+const matches=before.map((r,i)=>({r,i})).filter(({r})=>r[0]==='country_monthly_risk.xlsx'&&r[1]==='cpi_index');
+if(matches.length!==1||matches[0].r[4]!=='FAIL')throw new Error('Unexpected CPI ledger baseline');
+const {r,i}=matches[0];
+const cell=`F${i+1}`;
+const renderRange=`A${i+1}:F${i+1}`;
+if(process.argv[2]==='--preview'){
+  console.log((await wb.inspect({kind:'table',range:`'${sheet.name}'!${renderRange}`,include:'values,formulas',tableMaxRows:1,tableMaxCols:6,maxChars:2500})).ndjson);
+  const p=await wb.render({sheetName:sheet.name,range:renderRange,scale:1,format:'png'});
+  await fs.writeFile(path.join(dir,'LEDGER_BEFORE.png'),new Uint8Array(await p.arrayBuffer()));
+  process.exit(0);
+}
+if(process.argv[2]!=='--apply')throw new Error('Use --preview or --apply');
+if(!process.env.CPI_APPLY_AUTHORIZED)throw new Error('Explicit execution flag required; historical reruns must not overwrite current ledger');
+const note='2026-09-04实测：AVG 375.80匹配源表；MAX 993.56≠47,954.24。底表MAX按文本取值，CAST数值后为47,954.24。模型BIGDECIMAL持久化不等于聚合正确。保留FAIL，待底层修复与B复核。证据：A03_CPI_RUNTIME_RECHECK_20260904/README.md。';
+sheet.getRange(cell).values=[[note]];
+sheet.getRange(renderRange).format.autofitRows();
+const after=sheet.getUsedRange().values;
+for(let a=0;a<before.length;a++)for(let b=0;b<before[a].length;b++)if(JSON.stringify(before[a][b])!==JSON.stringify(after[a][b])&&!(a===i&&b===5))throw new Error('Unintended value edit');
+console.log((await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:20},summary:'Scoped error scan'})).ndjson);
+await fs.mkdir(outputDir,{recursive:true});
+const output=path.join(outputDir,'SMARTBI_TYPE_AUDIT_V50.xlsx');
+await (await SpreadsheetFile.exportXlsx(wb)).save(output);
+const saved=await SpreadsheetFile.importXlsx(await FileBlob.load(output));
+if(JSON.stringify(saved.worksheets.getItemAt(0).getUsedRange().values)!==JSON.stringify(after))throw new Error('Round-trip changed values');
+const p=await saved.render({sheetName:sheet.name,range:renderRange,scale:1,format:'png'});
+await fs.writeFile(path.join(dir,'LEDGER_AFTER.png'),new Uint8Array(await p.arrayBuffer()));
+const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+await fs.writeFile(path.join(dir,'LEDGER_CHANGELOG.json'),JSON.stringify({at:new Date().toISOString(),scope:'One CPI note cell only; existing FAIL and all B signatures unchanged',inputSha256:hash(await fs.readFile(input)),outputSha256:hash(await fs.readFile(output)),sheet:sheet.name,cell,before:r[5],after:note},null,2)+'\n');
+console.log(JSON.stringify({output,cell}));

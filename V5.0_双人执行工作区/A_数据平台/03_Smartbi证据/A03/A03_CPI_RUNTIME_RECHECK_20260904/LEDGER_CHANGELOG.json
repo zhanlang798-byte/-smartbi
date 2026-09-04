@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-04T07:31:05.305Z",
+  "scope": "One CPI note cell only; existing FAIL and all B signatures unchanged",
+  "inputSha256": "4d95ffa59288cd1f21ff4654e73aeba87bb5ae138753827567c2e7bb3b58547e",
+  "outputSha256": "5cd12fe8d507258156f422d74011b467829b94a8e15aad435f346191f8d9eaed",
+  "sheet": "类型审计",
+  "cell": "F88",
+  "before": "2026-09-04分层复核：9/1底表STRING，模型BIGDECIMAL；在线长浮点型一致。旧FAIL保留底表口径，计算/取值域和B复核待完成。证据：A03_TYPE_PERSISTENCE_20260904/TYPE_LAYER_RECONCILIATION.json。",
+  "after": "2026-09-04实测：AVG 375.80匹配源表；MAX 993.56≠47,954.24。底表MAX按文本取值，CAST数值后为47,954.24。模型BIGDECIMAL持久化不等于聚合正确。保留FAIL，待底层修复与B复核。证据：A03_CPI_RUNTIME_RECHECK_20260904/README.md。"
+}

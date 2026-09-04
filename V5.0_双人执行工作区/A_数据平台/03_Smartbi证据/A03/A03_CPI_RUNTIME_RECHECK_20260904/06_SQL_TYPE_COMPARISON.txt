@@ -1,0 +1,158 @@
+- tablist:
+  - tab "数据模型":
+    - generic: 数据模型
+  - tab "SQL查询" [selected]:
+    - generic: SQL查询
+    - text: 
+- text: 
+- generic: 
+- text:                                                                                                                                                                                                                                                                                                                                      
+- tabpanel "SQL查询":
+  - iframe [active]:
+    - table:
+      - rowgroup:
+        - row:
+          - cell:
+            - table:
+              - rowgroup:
+                - row:
+                  - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                    - table:
+                      - rowgroup:
+                        - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                          - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                            - table:
+                              - rowgroup:
+                                - row "数据源 可导入数据库":
+                                  - cell "数据源"
+                                  - cell "可导入数据库":
+                                    - textbox "请选择"
+                                    - button
+                                    - text:                  
+                                  - cell: 
+                                - row "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                  - cell "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                    - radio "显示名称" [checked]
+                                    - text: 显示名称
+                                    - radio "显示别名"
+                                    - text: 显示别名
+                                    - generic "名称：input 别名：可导入数据库":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 可导入数据库
+                                      - text: 
+                                    - generic "名称：input 别名：input":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: input
+                                      - text: 
+                                    - generic "名称：USER_PROPERTIES 别名：用户属性 描述：用户属性":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 用户属性
+                                      - text: 
+                                    - generic "名称：FUNCTIONS 别名：函数列表 描述：函数列表":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 函数列表
+                                      - text: 
+                                - row " ":
+                                  - cell " ":
+                                    - generic "搜索":
+                                      - generic: 
+                                    - textbox "搜索资源"
+                                    - text:  
+                                    - generic: 
+                                    - text:   
+                  - cell
+                  - cell " 执行   保存  格式化SQL  复制SQL  回到模型 SELECT COUNT(*) AS total_rows, COUNT(cpi_index) AS non_null_rows, SUM(CASE WHEN cpi_index IS NULL THEN 1 ELSE 0 END) AS null_rows, MAX(cpi_index) AS raw_max, MAX(CAST(NULLIF(TRIM(cpi_index), '') AS DECIMAL(30,12))) AS numeric_max, AVG(CAST(NULLIF(TRIM(cpi_index), '') AS DECIMAL(30,12))) AS numeric_avg FROM input.v50_country_monthly_risk SELECT COUNT(*) AS total_rows, COUNT(cpi_index) AS non_null_rows, SUM(CASE WHEN cpi_index IS NULL THEN 1 ELSE 0 END) AS null_rows, MAX(cpi_index) AS raw_max, MAX(CAST(NULLIF(TRIM(cpi_index), '') AS DECIMAL(30,12))) AS numeric_max, AVG(CAST(NULLIF(TRIM(cpi_index), '') AS DECIMAL(30,12))) AS numeric_avg FROM input.v50_country_monthly_risk 参数设置 数据预览 共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 993.558523173606 47,954.24 375.80 total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                    - text: 
+                    - generic: 执行
+                    - generic: 
+                    - text:  
+                    - text: 
+                    - generic: 保存
+                    - text: 
+                    - text: 
+                    - generic: 格式化SQL
+                    - text: 
+                    - generic: 复制SQL
+                    - text: 
+                    - generic: 回到模型
+                    - textbox
+                    - generic: "1"
+                    - generic: SELECT COUNT(*) AS total_rows, COUNT(cpi_index) AS non_null_rows, SUM(CASE WHEN cpi_index IS NULL THEN 1 ELSE 0 END) AS null_rows, MAX(cpi_index) AS raw_max, MAX(CAST(NULLIF(TRIM(cpi_index), '') AS DECIMAL(30,12))) AS numeric_max, AVG(CAST(NULLIF(TRIM(cpi_index), '') AS DECIMAL(30,12))) AS numeric_avg FROM input.v50_country_monthly_risk
+                    - generic "参数设置"
+                    - generic "数据预览"
+                    - generic: 
+                    - text: 
+                    - table:
+                      - rowgroup:
+                        - text:               
+                        - row "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 993.558523173606 47,954.24 375.80 total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                          - cell "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 993.558523173606 47,954.24 375.80 total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                            - table:
+                              - rowgroup:
+                                - row:
+                                  - cell
+                                - row "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 993.558523173606 47,954.24 375.80 total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                                  - cell "共 1 行每页 10 行   1 / 1   刷新 7,680 7,616 64 993.558523173606 47,954.24 375.80 total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                                    - table:
+                                      - rowgroup:
+                                        - row:
+                                          - cell
+                                        - row "共 1 行每页 10 行   1 / 1   刷新":
+                                          - cell "共 1 行每页 10 行   1 / 1   刷新":
+                                            - table:
+                                              - rowgroup:
+                                                - row "共 1 行每页 10 行   1 / 1   刷新":
+                                                  - cell "共 1 行每页 10 行   1 / 1   刷新":
+                                                    - generic: 共 1 行
+                                                    - text: 每页
+                                                    - textbox
+                                                    - text: 行
+                                                    - generic "首页":
+                                                      - generic: 
+                                                    - generic "上页":
+                                                      - generic: 
+                                                    - textbox
+                                                    - generic: /
+                                                    - generic: "1"
+                                                    - generic "下页":
+                                                      - generic: 
+                                                    - generic "尾页":
+                                                      - generic: 
+                                                    - generic: 刷新
+                                        - row:
+                                          - cell
+                                        - row "7,680 7,616 64 993.558523173606 47,954.24 375.80 total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                                          - cell "7,680 7,616 64 993.558523173606 47,954.24 375.80 total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                                            - table:
+                                              - rowgroup:
+                                                - row "7,680 7,616 64 993.558523173606 47,954.24 375.80":
+                                                  - cell "7,680"
+                                                  - cell "7,616"
+                                                  - cell "64"
+                                                  - cell "993.558523173606"
+                                                  - cell "47,954.24"
+                                                  - cell "375.80"
+                                            - table:
+                                              - rowgroup:
+                                                - row "total_rows non_null_rows null_rows raw_max numeric_max numeric_avg":
+                                                  - cell "total_rows":
+                                                    - generic: total_rows
+                                                  - cell "non_null_rows":
+                                                    - generic: non_null_rows
+                                                  - cell "null_rows":
+                                                    - generic: null_rows
+                                                  - cell "raw_max":
+                                                    - generic: raw_max
+                                                  - cell "numeric_max":
+                                                    - generic: numeric_max
+                                                  - cell "numeric_avg":
+                                                    - generic: numeric_avg
+                                        - row:
+                                          - cell
+  - generic: 
+- generic: 
+- text:                                            
