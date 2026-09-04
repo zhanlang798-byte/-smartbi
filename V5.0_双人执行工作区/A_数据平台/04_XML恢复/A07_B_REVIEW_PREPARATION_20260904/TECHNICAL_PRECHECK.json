@@ -1,0 +1,144 @@
+{
+  "checkedAt": "2026-09-04T21:33:13+08:00",
+  "reviewBasisCommit": "b7bb21a6fcd092b047d435c62f1b52aef785ce9b",
+  "status": "A_TECHNICAL_PRECHECK_COMPLETE_TEXT_EOL_DISCLOSED_B_REVIEW_PENDING",
+  "package": {
+    "sha256": "c5b2cfbf2bcbef8aa277a1d0a5ab6f94dff07bef27168d00205d054d137ba51d",
+    "bytes": 1036630,
+    "pageCount": 6,
+    "modelCount": 1,
+    "viewCount": 22,
+    "fieldCount": 460,
+    "relationCount": 19,
+    "matchesPreviousAuditExactly": true,
+    "rawXmlGitIgnored": true,
+    "securityClassification": "CONTROLLED_INTERNAL_ONLY_NOT_PUBLIC_SAFE"
+  },
+  "pkCapturedEvidence": {
+    "capturedAt": "2026-09-04T06:04:44.862Z",
+    "tables": 21,
+    "formalRows": 313593,
+    "auxiliaryRows": [
+      40,
+      20,
+      660
+    ],
+    "sqlHashMatches": true,
+    "allRowsCorroboratedByCapturedDom": true,
+    "exceptionCountsAllZero": true,
+    "newLiveQuery": false
+  },
+  "ledgerFileBinding": {
+    "reconciliationSha256": "d5e0f30ef0b22385f37f0c4bc24a5d3a794f3d3a679b6e643f706f4146133d36",
+    "typeAuditSha256": "5cd12fe8d507258156f422d74011b467829b94a8e15aad435f346191f8d9eaed",
+    "reconciliationChangeRows": 21,
+    "booleanExceptionRows": 4,
+    "typeNoteChanges": 59,
+    "lastNoteCell": "F88",
+    "recordedStatusCounts": {
+      "PASS": 383,
+      "FAIL": 59
+    },
+    "hashAndChangeRecordChainOnly": true,
+    "workbookCellsReaudited": false
+  },
+  "performanceCapturedEvidence": {
+    "lockedFiles": 4,
+    "recordedSamples": 24,
+    "recordedMaximumSeconds": 9.458,
+    "thresholdSeconds": 10,
+    "allRecordedSamplesWithinThreshold": true,
+    "newPerformanceTest": false,
+    "hashChecks": [
+      {
+        "path": "A_数据平台/03_Smartbi证据/DB01/09_DB01_区域与下钻性能自动计时_20260831.txt",
+        "historicalExpectedSha256": "600a264f07a9f9408ef6578c2a0fcf5fbcb94a3ef182df09eda691105ec9524c",
+        "currentRawSha256": "b185f3b7cee59f5c81d18332259282c4fefa21f2b082c12e8a5d1096559f6cde",
+        "gitBlobSha256": "600a264f07a9f9408ef6578c2a0fcf5fbcb94a3ef182df09eda691105ec9524c",
+        "lfNormalizedSha256": "600a264f07a9f9408ef6578c2a0fcf5fbcb94a3ef182df09eda691105ec9524c",
+        "rawByteHashMatches": false,
+        "onlyCrLfToLfDifference": true,
+        "fileRewritten": false
+      },
+      {
+        "path": "A_数据平台/03_Smartbi证据/DB02/09_DB02_全期性能自动计时_20260830.txt",
+        "historicalExpectedSha256": "d8ffe96e2dab88a29e8048649ea29465a2cd8f8944734a79fcce7c62abf6a6a2",
+        "currentRawSha256": "d5cb42acc0f4d8642388c175fc38675d2d434d534f0895401cefe51031ee4fd8",
+        "gitBlobSha256": "d8ffe96e2dab88a29e8048649ea29465a2cd8f8944734a79fcce7c62abf6a6a2",
+        "lfNormalizedSha256": "d8ffe96e2dab88a29e8048649ea29465a2cd8f8944734a79fcce7c62abf6a6a2",
+        "rawByteHashMatches": false,
+        "onlyCrLfToLfDifference": true,
+        "fileRewritten": false
+      },
+      {
+        "path": "A_数据平台/03_Smartbi证据/DB04/07_DB04_策略切换性能自动计时_20260830.txt",
+        "historicalExpectedSha256": "10203cec75961914ab1cd5725c97b66e3ae214b3a8b9230a2257c1e3f6abb928",
+        "currentRawSha256": "bb862f88e74b32e2efa1405b155a49d2439e98eeec9b29de68860be661a9d840",
+        "gitBlobSha256": "10203cec75961914ab1cd5725c97b66e3ae214b3a8b9230a2257c1e3f6abb928",
+        "lfNormalizedSha256": "10203cec75961914ab1cd5725c97b66e3ae214b3a8b9230a2257c1e3f6abb928",
+        "rawByteHashMatches": false,
+        "onlyCrLfToLfDifference": true,
+        "fileRewritten": false
+      },
+      {
+        "path": "A_数据平台/03_Smartbi证据/性能/A07_PERFORMANCE_STATUS_V50.txt",
+        "historicalExpectedSha256": "bafe4b25e48007cdf161372b1087d3dfafbc176ced69af585c73ae30e492cab2",
+        "currentRawSha256": "1738f781cfc26eb6d0c478cc90530ec0c45963258cbc7191ef809e7fe12ec4b5",
+        "gitBlobSha256": "bafe4b25e48007cdf161372b1087d3dfafbc176ced69af585c73ae30e492cab2",
+        "lfNormalizedSha256": "bafe4b25e48007cdf161372b1087d3dfafbc176ced69af585c73ae30e492cab2",
+        "rawByteHashMatches": false,
+        "onlyCrLfToLfDifference": true,
+        "fileRewritten": false
+      }
+    ]
+  },
+  "riskSourceHashesStillMatch": true,
+  "allInputsUnchanged": true,
+  "boundaries": {
+    "bIndependentReviewExecuted": false,
+    "bSigned": false,
+    "finalRiskAccepted": false,
+    "platformModified": false,
+    "cpiRepairedOrRetested": false,
+    "skippedAiRetested": false,
+    "independentRestoreExecuted": false,
+    "finalFreezeCreated": false
+  },
+  "inputSha256": {
+    "A_数据平台/04_XML恢复/A07_CURRENT_EXPORT_20260904/EXPORT_AUDIT.json": "f8fdfdcd606f5bd2478e83583c4c720de9cce7639e88c2d4882d181b656de176",
+    "A_数据平台/04_XML恢复/A07_CURRENT_EXPORT_20260904/audit_export.py": "0ec6f27e5dd8d66afe736b7d6115382ae752187e90e56b2fdb9b55c12769e81f",
+    "A_数据平台/04_XML恢复/A07_PAGES_DB01_DB06_WITH_MODEL_20260904.xml": "c5b2cfbf2bcbef8aa277a1d0a5ab6f94dff07bef27168d00205d054d137ba51d",
+    "A_数据平台/03_Smartbi证据/A03/A03_CPI_REPAIR_PREFLIGHT_20260904/backups/migrate_CPI_AFTER_TRIAL_20260904.xml": "688622fb50d69f04556685e060346964177402e1a15f7e95b2bf5348cd3c87eb",
+    "A_数据平台/04_XML恢复/A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml": "e013a0695e0b97fd558bd90f870661bd6da2f2592b993226d4a177a54c0463c5",
+    "A_数据平台/04_XML恢复/A07_PAGES_DB03_DB05_DB06_WITH_MODEL_20260831.xml": "5b77efb3f93af4c6dbd3061261c221347bcb92761da577f1de3427c2ac5404a3",
+    "A_数据平台/03_Smartbi证据/A03/A03_PK_AUDIT_20260904/A03_PK_PLATFORM_RESULTS_20260904.json": "afe18ad389e68b9e7ea18608874d25c3531c31bdd7acdcea75d32ee101bf1c5b",
+    "A_数据平台/03_Smartbi证据/A03/A03_PK_AUDIT_20260904/A03_PK_TARGETS_20260904.json": "fd592cb4dd7b34879efe910bd525e16e3cfba9fc95fe7d497d4ff01633387ebb",
+    "A_数据平台/03_Smartbi证据/A03/A03_PK_AUDIT_20260904/A03_PK_ALL_TABLES_20260904.sql": "6f44c28c0cf0cdd59aecd081be125f142336c9fbd8ce93eab525f41423fada15",
+    "A_数据平台/03_Smartbi证据/A03/A03_PK_AUDIT_20260904/A03_PK_PLATFORM_DOM_20260904.txt": "67474a6ead55521d621f7c41ba6ab6e67b7a7c6e84817647e97dcddc066d5fa0",
+    "A_数据平台/03_Smartbi证据/A03/A03_PK_AUDIT_20260904/A03_RECON_CHANGELOG_20260904.json": "ccd561d976668e6d5206db030540eed0b63f877a6faf2ada8aa34977137a0919",
+    "A_数据平台/03_Smartbi证据/A03/SMARTBI_IMPORT_RECONCILIATION_V50.xlsx": "d5e0f30ef0b22385f37f0c4bc24a5d3a794f3d3a679b6e643f706f4146133d36",
+    "A_数据平台/03_Smartbi证据/A03/A03_RECHECK_20260904/A03_TYPE_WAIVER_CHANGELOG_20260904.json": "d7f30b323d0fce5d3454803a797b49d3ce78e6c59268e6db77bdb83362cf653c",
+    "A_数据平台/03_Smartbi证据/A03/A03_TYPE_PERSISTENCE_20260904/TYPE_NOTES_CHANGELOG.json": "6641456435f98a40e363a3ceee47c03f5def8e11159577ef70f5920ab931a448",
+    "A_数据平台/03_Smartbi证据/A03/A03_CPI_RUNTIME_RECHECK_20260904/LEDGER_CHANGELOG.json": "dd8e4976ed75a38ef0328c7e6cdf0cab2beceaf9ceff9ff239f23ea92740d8c8",
+    "A_数据平台/03_Smartbi证据/A03/SMARTBI_TYPE_AUDIT_V50.xlsx": "5cd12fe8d507258156f422d74011b467829b94a8e15aad435f346191f8d9eaed",
+    "A_数据平台/03_Smartbi证据/A03/A03_RISK_DISPOSITION_20260904/RISK_EVIDENCE.json": "3fd4b12af2c92362c11d82076c3adb26a4f3030eb49373e3025a17b6a87f3b0e",
+    "A_数据平台/03_Smartbi证据/A03/SMARTBI_RESOURCE_LOCK_V50.xlsx": "79f0f5a2bce965f15f09fb6559407d48ebb7141e2454a2151011d218ac9bb205",
+    "A_数据平台/03_Smartbi证据/模型/RELATIONSHIP_AUDIT_V50.xlsx": "d448d17f24dcbfd0e0e1dc1171179b4af79644e888b60b23887d4343a5402c26",
+    "00_共享/模型交接/RELATIONSHIP_AUDIT_V50.xlsx": "a997376d94bf20d78647ffc1161b775d6d47b6e2930ea71f9cc48d57e8f2f39d",
+    "A_数据平台/01_输入只读镜像/D0-D12_数据交付_V4.2/data/smartbi/country_policy_year.xlsx": "b2b773d363967ecec470c57e111e27cd4d835dcb2f9d6dbd4fa752a86cabedfd",
+    "A_数据平台/01_输入只读镜像/D0-D12_数据交付_V4.2/data/smartbi/dim_year.xlsx": "c5e52389428ca3cce4cf10f20627dfeede9db7a413071ff0fbc2d2b88c709ffd",
+    "A_数据平台/03_Smartbi证据/A03/A03_EXECUTION_LOG_V50.txt": "fe93685f52d63d370324a1bf280fd8fd3ad3ec222e350583d3706e5744ada37a",
+    "00_共享/每日协调/G2_START_RELEASE_20260828.md": "2ce0236157b3e65d711ca014dd77b9509cc3bbb912a842b391b06d075abc6256",
+    "00_共享/每日协调/B_REVIEW_A03_A04_20260827.md": "27170aaacfc1b0d8aaabe9f6e249ad5a1046bc4782fb2335007faee5ee091878",
+    "A_数据平台/03_Smartbi证据/A03/A03_RESOURCE_RECONCILIATION_20260904/RESOURCE_AND_PACKAGE_RECONCILIATION.json": "9a1088bd6ca62e823bfddb72872001b82235c60cd98217eb8d294a09774ccda3",
+    "A_数据平台/03_Smartbi证据/A03/a03_prepare.py": "86bb0c84bfb44bde58021c265e6d127ab7ea27f700eaf5496c9b1dbf6128c2f2",
+    "A_数据平台/03_Smartbi证据/A03/A03_RECHECK_20260904/a03_preflight.mjs": "6b160e541d521490dcb4843e8416e4423dc44c6d3eda8b69d76eea52a2b62684",
+    "00_共享/每日协调/A_RISK_DISPOSITION_20260904.md": "2cfa4a34f0f8ce6e1da5479c562afc20249d556e6331f199df6b811e1f1c6665",
+    "00_共享/每日协调/A_CPI_REPAIR_STOPPED_BY_USER_20260904.md": "7451f071ce9b1a43f006cad6e315ed12f647c870236bd076da54393fb316c876",
+    "A_数据平台/03_Smartbi证据/性能/A07_PERFORMANCE_SHA256_20260831.txt": "6658ec6dc2da2efc14387667552b1cc91f6fa7381fc826145fdde0929a16bafe",
+    "A_数据平台/03_Smartbi证据/DB01/09_DB01_区域与下钻性能自动计时_20260831.txt": "b185f3b7cee59f5c81d18332259282c4fefa21f2b082c12e8a5d1096559f6cde",
+    "A_数据平台/03_Smartbi证据/DB02/09_DB02_全期性能自动计时_20260830.txt": "d5cb42acc0f4d8642388c175fc38675d2d434d534f0895401cefe51031ee4fd8",
+    "A_数据平台/03_Smartbi证据/DB04/07_DB04_策略切换性能自动计时_20260830.txt": "bb862f88e74b32e2efa1405b155a49d2439e98eeec9b29de68860be661a9d840",
+    "A_数据平台/03_Smartbi证据/性能/A07_PERFORMANCE_STATUS_V50.txt": "1738f781cfc26eb6d0c478cc90530ec0c45963258cbc7191ef809e7fe12ec4b5"
+  }
+}
