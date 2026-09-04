@@ -1,0 +1,207 @@
+{
+  "capturedAt": "2026-09-04T09:06:15.423Z",
+  "source": "SMARTBI_RESOURCE_LOCK_V50.xlsx",
+  "sha256": "79f0f5a2bce965f15f09fb6559407d48ebb7141e2454a2151011d218ac9bb205",
+  "sheet": "资源锁",
+  "headers": [
+    "序号",
+    "目标对象名",
+    "对应源文件",
+    "平台是否已存在同名(待填)",
+    "锁建立人",
+    "锁建立时间",
+    "备注"
+  ],
+  "rows": [
+    [
+      "1",
+      "V50_dim_country",
+      "dim_country.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/01_dim_country.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "2",
+      "V50_dim_date",
+      "dim_date.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/02_dim_date.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "3",
+      "V50_dim_year",
+      "dim_year.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/03_dim_year.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "4",
+      "V50_dim_company",
+      "dim_company.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/04_dim_company.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "5",
+      "V50_dim_asset",
+      "dim_asset.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/05_dim_asset.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "6",
+      "V50_dim_event",
+      "dim_event.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/06_dim_event.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "7",
+      "V50_country_exposure",
+      "country_exposure.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/07_country_exposure.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "8",
+      "V50_country_monthly_risk",
+      "country_monthly_risk.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/08_country_monthly_risk.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "9",
+      "V50_country_policy_year",
+      "country_policy_year.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/09_country_policy_year.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "10",
+      "V50_country_event",
+      "country_event.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/10_country_event.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "11",
+      "V50_global_cycle_month",
+      "global_cycle_month.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/11_global_cycle_month.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "12",
+      "V50_historical_crisis_event",
+      "historical_crisis_event.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/12_historical_crisis_event.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "13",
+      "V50_company_overseas_exposure",
+      "company_overseas_exposure.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/13_company_overseas_exposure.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "14",
+      "V50_bridge_company_geography",
+      "bridge_company_geography.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/14_bridge_company_geography.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "15",
+      "V50_asset_monthly_return",
+      "asset_monthly_return.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/15_asset_monthly_return.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "16",
+      "V50_portfolio_scenario",
+      "portfolio_scenario.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/16_portfolio_scenario.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "17",
+      "V50_case_evidence",
+      "case_evidence.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/17_case_evidence.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "18",
+      "V50_source_registry",
+      "source_registry.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/18_source_registry.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "19",
+      "V50_MVP_country_latest",
+      "MVP_country_latest.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/19_MVP_country_latest.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "20",
+      "V50_MVP_company_data_status",
+      "MVP_company_data_status.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/20_MVP_company_data_status.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ],
+    [
+      "21",
+      "V50_MVP_cycle_state",
+      "MVP_cycle_state.xlsx",
+      "无法追溯（截图仅证当前对象存在）",
+      "执行者A",
+      "2026-08-24 02:00:07 +0800",
+      "证据：逐表截图/21_MVP_cycle_state.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    ]
+  ],
+  "scope": "Read-only current workbook snapshot; not evidence of pre-import name absence."
+}

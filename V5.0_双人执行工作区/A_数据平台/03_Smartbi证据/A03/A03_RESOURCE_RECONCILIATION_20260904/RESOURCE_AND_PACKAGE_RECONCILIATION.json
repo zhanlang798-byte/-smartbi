@@ -1,0 +1,1030 @@
+{
+  "auditDate": "2026-09-04",
+  "scope": "READ_ONLY_SAVED_CONFIG_SNAPSHOTS_NOT_LIVE_CATALOGUE_OR_RESTORE",
+  "cpiRepairOrRetestPerformed": false,
+  "currentSnapshot": {
+    "path": "A_数据平台/03_Smartbi证据/A03/A03_CPI_REPAIR_PREFLIGHT_20260904/backups/migrate_CPI_AFTER_TRIAL_20260904.xml",
+    "sha256": "688622fb50d69f04556685e060346964177402e1a15f7e95b2bf5348cd3c87eb",
+    "bytes": 721318,
+    "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+    "modelAlias": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "modelLastModified": "2026-09-02 23:44:40",
+    "modelCanonicalXmlSha256": "c19533c42b1fa5376c5790aeffe0eb9ea9366299695dd17ef5026ca46693a7ea",
+    "defineCanonicalJsonSha256": "a7e6b6d402e3963645ae4d2a0ddfee6512bbd56cb041201db9553a223c489f80",
+    "viewCount": 22,
+    "publishedFieldCount": 460,
+    "relationCount": 19,
+    "filterDirections": {
+      "SINGLE": 18,
+      "BOTH": 1
+    },
+    "pages": []
+  },
+  "lockWorkbook": {
+    "path": "A_数据平台/03_Smartbi证据/A03/SMARTBI_RESOURCE_LOCK_V50.xlsx",
+    "sha256BeforeAndAfter": "79f0f5a2bce965f15f09fb6559407d48ebb7141e2454a2151011d218ac9bb205",
+    "modified": false
+  },
+  "identityMatches": 21,
+  "targets": [
+    {
+      "order": 1,
+      "object": "V50_dim_country",
+      "sourceFile": "dim_country.xlsx",
+      "viewId": "3ebf4ae635c6d364a734cbc07a0710df",
+      "physical": "dim_country_gi0c3510b657b27001",
+      "pkKeys": [
+        "iso3"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/01_dim_country.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 2,
+      "object": "V50_dim_date",
+      "sourceFile": "dim_date.xlsx",
+      "viewId": "a9de04e81cb73cae3f61e20cdd572e73",
+      "physical": "dim_date_dpkgi0c3510fdb4327001",
+      "pkKeys": [
+        "date_key"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/02_dim_date.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 3,
+      "object": "V50_dim_year",
+      "sourceFile": "dim_year.xlsx",
+      "viewId": "85842b02beebefbdb4d41fbd94b2d78e",
+      "physical": "dim_year_dpkgi0c35120bf6b27000",
+      "pkKeys": [
+        "year_key"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/03_dim_year.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 4,
+      "object": "V50_dim_company",
+      "sourceFile": "dim_company.xlsx",
+      "viewId": "ff85ac8c4b3c0a398c8b2971f2562b1a",
+      "physical": "dim_company",
+      "pkKeys": [
+        "company_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/04_dim_company.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 5,
+      "object": "V50_dim_asset",
+      "sourceFile": "dim_asset.xlsx",
+      "viewId": "e6da16d73828c70fbfdbab17dd45cfb9",
+      "physical": "dim_asset",
+      "pkKeys": [
+        "asset_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/05_dim_asset.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 6,
+      "object": "V50_dim_event",
+      "sourceFile": "dim_event.xlsx",
+      "viewId": "072a4db8c60f293af035d279d4bf4448",
+      "physical": "dim_event_pkgi0c35127cfcb27000",
+      "pkKeys": [
+        "event_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/06_dim_event.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 7,
+      "object": "V50_country_exposure",
+      "sourceFile": "country_exposure.xlsx",
+      "viewId": "3770cce69eb2c4f884ea002fdb08ca15",
+      "physical": "v50_country_exposure",
+      "pkKeys": [
+        "iso3",
+        "year"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/07_country_exposure.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 8,
+      "object": "V50_country_monthly_risk",
+      "sourceFile": "country_monthly_risk.xlsx",
+      "viewId": "aeff8422c42966f645693674f870bc27",
+      "physical": "v50_country_monthly_risk",
+      "pkKeys": [
+        "iso3",
+        "month_end"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/08_country_monthly_risk.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 9,
+      "object": "V50_country_policy_year",
+      "sourceFile": "country_policy_year.xlsx",
+      "viewId": "88800280ab4aa140a7e85b9d66fc0da6",
+      "physical": "v50_country_policy_year",
+      "pkKeys": [
+        "iso3",
+        "year",
+        "policy_code"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/09_country_policy_year.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 10,
+      "object": "V50_country_event",
+      "sourceFile": "country_event.xlsx",
+      "viewId": "1cb95d4a21515ebd3d6c43f81b748106",
+      "physical": "v50_country_event",
+      "pkKeys": [
+        "event_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/10_country_event.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 11,
+      "object": "V50_global_cycle_month",
+      "sourceFile": "global_cycle_month.xlsx",
+      "viewId": "03fb992d101252c5b8d56732220f9a3f",
+      "physical": "v50_global_cycle_month",
+      "pkKeys": [
+        "scope_id",
+        "month_end"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/11_global_cycle_month.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 12,
+      "object": "V50_historical_crisis_event",
+      "sourceFile": "historical_crisis_event.xlsx",
+      "viewId": "e5bd96ffab73a17bbbf758a1f626ed05",
+      "physical": "v50_historical_crisis_event",
+      "pkKeys": [
+        "historical_event_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/12_historical_crisis_event.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 13,
+      "object": "V50_company_overseas_exposure",
+      "sourceFile": "company_overseas_exposure.xlsx",
+      "viewId": "233b3c02c299884015129a5a734e184c",
+      "physical": "v50_company_overseas_exposure",
+      "pkKeys": [
+        "company_id",
+        "fiscal_year",
+        "geography_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/13_company_overseas_exposure.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 14,
+      "object": "V50_bridge_company_geography",
+      "sourceFile": "bridge_company_geography.xlsx",
+      "viewId": "5ae71346b655c10cd8253db940a171a6",
+      "physical": "v50_bridge_company_geography",
+      "pkKeys": [
+        "bridge_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/14_bridge_company_geography.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 15,
+      "object": "V50_asset_monthly_return",
+      "sourceFile": "asset_monthly_return.xlsx",
+      "viewId": "69754157860e2559b25e01897dc68f32",
+      "physical": "v50_asset_monthly_return",
+      "pkKeys": [
+        "iso3",
+        "month_end",
+        "asset_id",
+        "currency_basis"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/15_asset_monthly_return.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 16,
+      "object": "V50_portfolio_scenario",
+      "sourceFile": "portfolio_scenario.xlsx",
+      "viewId": "04a0898cf3eb6489360902ae6dead2e5",
+      "physical": "v50_portfolio_scenario",
+      "pkKeys": [
+        "scenario_id",
+        "strategy_id",
+        "iso3",
+        "window_end",
+        "horizon",
+        "run_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/16_portfolio_scenario.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 17,
+      "object": "V50_case_evidence",
+      "sourceFile": "case_evidence.xlsx",
+      "viewId": "62a3e34546b3b7aa29662db8ba4312a7",
+      "physical": "v50_case_evidence",
+      "pkKeys": [
+        "case_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/17_case_evidence.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 18,
+      "object": "V50_source_registry",
+      "sourceFile": "source_registry.xlsx",
+      "viewId": "32c5d093a87bcab12a03f50f3184edb1",
+      "physical": "v50_source_registry",
+      "pkKeys": [
+        "source_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/18_source_registry.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 19,
+      "object": "V50_MVP_country_latest",
+      "sourceFile": "MVP_country_latest.xlsx",
+      "viewId": "91f6d79291afd0cc0cc5f64966b2276a",
+      "physical": "v50_mvp_country_latest",
+      "pkKeys": [
+        "iso3"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/19_MVP_country_latest.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 20,
+      "object": "V50_MVP_company_data_status",
+      "sourceFile": "MVP_company_data_status.xlsx",
+      "viewId": "b99e55abd8d5d2f001bed4f461f98148",
+      "physical": "mvp_company_data_status",
+      "pkKeys": [
+        "company_id"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/20_MVP_company_data_status.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    },
+    {
+      "order": 21,
+      "object": "V50_MVP_cycle_state",
+      "sourceFile": "MVP_cycle_state.xlsx",
+      "viewId": "8e26c7f37ab772967d49fc7a4b20e349",
+      "physical": "v50_mvp_cycle_state",
+      "pkKeys": [
+        "scope_id",
+        "month_end"
+      ],
+      "modelAliasMatchCount": 1,
+      "physicalMatchesPkTarget": true,
+      "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）",
+      "historicalCreatedBy": "执行者A",
+      "historicalRecordedTime": "2026-08-24 02:00:07 +0800",
+      "historicalNote": "证据：逐表截图/21_MVP_cycle_state.png；未显示创建时间/所有者，禁止倒填“上传前无同名”"
+    }
+  ],
+  "extraModelViews": [
+    {
+      "id": "791f03b9fecd15dd0d126afb72cbd78f",
+      "name": "v50_monthly_risk",
+      "alias": "V50_monthly_risk"
+    }
+  ],
+  "historicalPreImportAbsenceProven": false,
+  "liveCatalogueUniquenessChecked": false,
+  "oldPackagesModelsEqual": true,
+  "packages": [
+    {
+      "path": "A_数据平台/04_XML恢复/A07_PAGES_DB01_DB02_DB04_WITH_MODEL_20260831.xml",
+      "sha256": "e013a0695e0b97fd558bd90f870661bd6da2f2592b993226d4a177a54c0463c5",
+      "bytes": 878820,
+      "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+      "modelAlias": "MDL_XH202612_V50_COUNTRY_RESERVE",
+      "modelLastModified": "2026-08-31 13:23:03",
+      "modelCanonicalXmlSha256": "479d7f15b91a0b2376c3a911993da2d48a417c8c5d494061fbb129bc3bdb89f8",
+      "defineCanonicalJsonSha256": "a7e6b6d402e3963645ae4d2a0ddfee6512bbd56cb041201db9553a223c489f80",
+      "viewCount": 22,
+      "publishedFieldCount": 460,
+      "relationCount": 19,
+      "filterDirections": {
+        "SINGLE": 18,
+        "BOTH": 1
+      },
+      "pages": [
+        {
+          "id": "161b2c84aa6c738645e7256f75d2dc00",
+          "name": "DB01_XH202612_V50_RISK_OVERVIEW",
+          "alias": "DB01_XH202612_V50_RISK_OVERVIEW",
+          "lastModified": "2026-08-27 23:10:44"
+        },
+        {
+          "id": "12cbefc293d1f1cd6c76771772ede621",
+          "name": "DB02_XH202612_V50_COUNTRY_DRILL",
+          "alias": "DB02_XH202612_V50_COUNTRY_DRILL",
+          "lastModified": "2026-08-29 20:45:33"
+        },
+        {
+          "id": "2f546d06e3f70f0956ea8d5740e26a83",
+          "name": "DB04_XH202612_V50_LIQUIDITY_LAB",
+          "alias": "DB04_XH202612_V50_LIQUIDITY_LAB",
+          "lastModified": "2026-08-30 23:18:03"
+        }
+      ],
+      "comparisonToSeptember4Snapshot": {
+        "exactCanonicalModelEqual": false,
+        "defineJsonEqual": true,
+        "viewIdentityEqual": true,
+        "relationsEqualIgnoringOrder": true,
+        "viewChanges": [],
+        "publishedFields": {
+          "added": [],
+          "removed": [],
+          "changed": [
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-odi_stock_usd",
+              "name": "odi_stock_usd",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "odi_stock_usd",
+                  "new": "odi_stock_usd_capped_raw"
+                },
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "BIGINT"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-quality_flag",
+              "name": "quality_flag2",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "quality_flag",
+                  "new": "exposure_quality_flag"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-source_id",
+              "name": "source_id4",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "exposure_source_id"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-year",
+              "name": "year",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "year",
+                  "new": "exposure_odi_stock_year"
+                },
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "STRING"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                },
+                "dataFormat": {
+                  "old": "<整型-默认值>",
+                  "new": "<字符串-默认值>"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-is_proxy",
+              "name": "is_proxy",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "is_proxy",
+                  "new": "risk_is_proxy"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-iso3",
+              "name": "iso3",
+              "safeAttributeChanges": {
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "STRING"
+                },
+                "dataFormat": {
+                  "old": "<整型-默认值>",
+                  "new": "<字符串-默认值>"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-source_id",
+              "name": "source_id",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "risk_source_id"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-cpi_yoy",
+              "name": "cpi_yoy",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "cpi_yoy",
+                  "new": "mvp_cpi_yoy"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-crisis_event_count",
+              "name": "crisis_event_count",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "crisis_event_count",
+                  "new": "mvp_crisis_event_count"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-fx_12m_depr",
+              "name": "fx_12m_depr",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "fx_12m_depr",
+                  "new": "mvp_fx_12m_depr"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-iso3",
+              "name": "iso37",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "iso3",
+                  "new": "mvp_iso3"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-latest_odi_stock_usd",
+              "name": "latest_odi_stock_usd",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "latest_odi_stock_usd",
+                  "new": "exposure_odi_stock_usd_exact"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-latest_odi_stock_year",
+              "name": "latest_odi_stock_year",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "latest_odi_stock_year",
+                  "new": "odi_stock_year"
+                },
+                "valueType": {
+                  "old": "DATE",
+                  "new": "INTEGER"
+                },
+                "dataFormat": {
+                  "old": "<日期-默认值>",
+                  "new": "<整型-默认值>"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-source_id",
+              "name": "source_id6",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "mvp_source_id_composite"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-trigger_label",
+              "name": "trigger_label",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "trigger_label",
+                  "new": "mvp_trigger_label"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_portfolio_scenario-gold_weight",
+              "name": "gold_weight",
+              "safeAttributeChanges": {
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "DOUBLE"
+                },
+                "dataFormat": {
+                  "old": "<整型-默认值>",
+                  "new": "浮点型-3位小数"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_source_registry-is_proxy",
+              "name": "is_proxy4",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "is_proxy",
+                  "new": "registry_is_proxy"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_source_registry-source_id",
+              "name": "source_id10",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "registry_source_id"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            }
+          ]
+        },
+        "changedModelChildTags": [
+          "KNOWLEDGE_GRAPH",
+          "fields",
+          "measures",
+          "nodes"
+        ]
+      },
+      "status": "HISTORICAL_SNAPSHOT_NOT_CURRENT_FINAL_RESTORE"
+    },
+    {
+      "path": "A_数据平台/04_XML恢复/A07_PAGES_DB03_DB05_DB06_WITH_MODEL_20260831.xml",
+      "sha256": "5b77efb3f93af4c6dbd3061261c221347bcb92761da577f1de3427c2ac5404a3",
+      "bytes": 871374,
+      "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+      "modelAlias": "MDL_XH202612_V50_COUNTRY_RESERVE",
+      "modelLastModified": "2026-08-31 13:23:03",
+      "modelCanonicalXmlSha256": "479d7f15b91a0b2376c3a911993da2d48a417c8c5d494061fbb129bc3bdb89f8",
+      "defineCanonicalJsonSha256": "a7e6b6d402e3963645ae4d2a0ddfee6512bbd56cb041201db9553a223c489f80",
+      "viewCount": 22,
+      "publishedFieldCount": 460,
+      "relationCount": 19,
+      "filterDirections": {
+        "SINGLE": 18,
+        "BOTH": 1
+      },
+      "pages": [
+        {
+          "id": "96d3a52a55f6e16edb602fc2f6d13010",
+          "name": "DB03_XH202612_V50_COMPANY_BOUNDARY",
+          "alias": "DB03_XH202612_V50_COMPANY_BOUNDARY",
+          "lastModified": "2026-08-31 10:42:31"
+        },
+        {
+          "id": "0e8d39f578a43c473088b8f7042e8331",
+          "name": "DB05_XH202612_V50_EVIDENCE_CENTER",
+          "alias": "DB05_XH202612_V50_EVIDENCE_CENTER",
+          "lastModified": "2026-08-29 23:06:59"
+        },
+        {
+          "id": "684ef06176737964de2551a03de747e8",
+          "name": "DB06_XH202612_V50_CYCLE_CONTEXT",
+          "alias": "DB06_XH202612_V50_CYCLE_CONTEXT",
+          "lastModified": "2026-08-30 15:55:18"
+        }
+      ],
+      "comparisonToSeptember4Snapshot": {
+        "exactCanonicalModelEqual": false,
+        "defineJsonEqual": true,
+        "viewIdentityEqual": true,
+        "relationsEqualIgnoringOrder": true,
+        "viewChanges": [],
+        "publishedFields": {
+          "added": [],
+          "removed": [],
+          "changed": [
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-odi_stock_usd",
+              "name": "odi_stock_usd",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "odi_stock_usd",
+                  "new": "odi_stock_usd_capped_raw"
+                },
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "BIGINT"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-quality_flag",
+              "name": "quality_flag2",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "quality_flag",
+                  "new": "exposure_quality_flag"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-source_id",
+              "name": "source_id4",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "exposure_source_id"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_exposure-year",
+              "name": "year",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "year",
+                  "new": "exposure_odi_stock_year"
+                },
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "STRING"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                },
+                "dataFormat": {
+                  "old": "<整型-默认值>",
+                  "new": "<字符串-默认值>"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-is_proxy",
+              "name": "is_proxy",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "is_proxy",
+                  "new": "risk_is_proxy"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-iso3",
+              "name": "iso3",
+              "safeAttributeChanges": {
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "STRING"
+                },
+                "dataFormat": {
+                  "old": "<整型-默认值>",
+                  "new": "<字符串-默认值>"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-source_id",
+              "name": "source_id",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "risk_source_id"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-cpi_yoy",
+              "name": "cpi_yoy",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "cpi_yoy",
+                  "new": "mvp_cpi_yoy"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-crisis_event_count",
+              "name": "crisis_event_count",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "crisis_event_count",
+                  "new": "mvp_crisis_event_count"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-fx_12m_depr",
+              "name": "fx_12m_depr",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "fx_12m_depr",
+                  "new": "mvp_fx_12m_depr"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-iso3",
+              "name": "iso37",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "iso3",
+                  "new": "mvp_iso3"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-latest_odi_stock_usd",
+              "name": "latest_odi_stock_usd",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "latest_odi_stock_usd",
+                  "new": "exposure_odi_stock_usd_exact"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-latest_odi_stock_year",
+              "name": "latest_odi_stock_year",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "latest_odi_stock_year",
+                  "new": "odi_stock_year"
+                },
+                "valueType": {
+                  "old": "DATE",
+                  "new": "INTEGER"
+                },
+                "dataFormat": {
+                  "old": "<日期-默认值>",
+                  "new": "<整型-默认值>"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-source_id",
+              "name": "source_id6",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "mvp_source_id_composite"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_mvp_country_latest-trigger_label",
+              "name": "trigger_label",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "trigger_label",
+                  "new": "mvp_trigger_label"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_portfolio_scenario-gold_weight",
+              "name": "gold_weight",
+              "safeAttributeChanges": {
+                "valueType": {
+                  "old": "INTEGER",
+                  "new": "DOUBLE"
+                },
+                "dataFormat": {
+                  "old": "<整型-默认值>",
+                  "new": "浮点型-3位小数"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_source_registry-is_proxy",
+              "name": "is_proxy4",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "is_proxy",
+                  "new": "registry_is_proxy"
+                },
+                "visible": {
+                  "old": "0",
+                  "new": "1"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            },
+            {
+              "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_source_registry-source_id",
+              "name": "source_id10",
+              "safeAttributeChanges": {
+                "alias": {
+                  "old": "source_id",
+                  "new": "registry_source_id"
+                }
+              },
+              "otherChangedAttributeNames": [],
+              "childContentChanged": false
+            }
+          ]
+        },
+        "changedModelChildTags": [
+          "KNOWLEDGE_GRAPH",
+          "fields",
+          "measures",
+          "nodes"
+        ]
+      },
+      "status": "HISTORICAL_SNAPSHOT_NOT_CURRENT_FINAL_RESTORE"
+    }
+  ],
+  "independentRestoreExecuted": false
+}

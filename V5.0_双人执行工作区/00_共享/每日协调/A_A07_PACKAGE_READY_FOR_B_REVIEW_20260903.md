@@ -1,5 +1,7 @@
 # A→B｜A07 可复核交付包（2026-09-03）
 
+> 2026-09-04版本复核补记：本单保留9月3日交付事实和签署。两个8月31日XML的哈希/安全结论仍有效，但其模型与9月4日所持较新快照存在18项字段属性及度量/节点/知识图谱差异，不能据此签最新完整恢复包PASS。当前为`PACKAGE_REFRESH_REQUIRED`；执行下述恢复动作前须先原生重新导出六页+同一模型分包并核验。详见 `A_RESOURCE_PACKAGE_RECONCILIATION_20260904.md`。
+
 ## 当前结论
 
 A侧状态：DB04_PAGE_PASS_B_REVIEW / PERFORMANCE_A_PASS / PAGE_MODEL_XML_READY / KB_NATIVE_BACKUP_READY / CLEAN_TARGET_RECOVERY_BLOCKED / FORMAL_AI_19_OF_25。
