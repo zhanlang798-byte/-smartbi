@@ -1,0 +1,301 @@
+{
+  "date": "2026-09-04",
+  "scope": "Platform full-table primary-key checks only; A03 overall remains pending",
+  "sqlSha256": "6f44c28c0cf0cdd59aecd081be125f142336c9fbd8ce93eab525f41423fada15",
+  "changes": [
+    {
+      "row": 2,
+      "object": "V50_dim_country",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 3,
+      "object": "V50_dim_date",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 4,
+      "object": "V50_dim_year",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 5,
+      "object": "V50_dim_company",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 6,
+      "object": "V50_dim_asset",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 7,
+      "object": "V50_dim_event",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 8,
+      "object": "V50_country_exposure",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 9,
+      "object": "V50_country_monthly_risk",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 10,
+      "object": "V50_country_policy_year",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 11,
+      "object": "V50_country_event",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 12,
+      "object": "V50_global_cycle_month",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 13,
+      "object": "V50_historical_crisis_event",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 14,
+      "object": "V50_company_overseas_exposure",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 15,
+      "object": "V50_bridge_company_geography",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 16,
+      "object": "V50_asset_monthly_return",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 17,
+      "object": "V50_portfolio_scenario",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 18,
+      "object": "V50_case_evidence",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 19,
+      "object": "V50_source_registry",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 20,
+      "object": "V50_MVP_country_latest",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 21,
+      "object": "V50_MVP_company_data_status",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    },
+    {
+      "row": 22,
+      "object": "V50_MVP_cycle_state",
+      "before": [
+        "0（源端审计+A报告；平台未查询）",
+        "0（源端审计+A报告；平台未查询）",
+        "BLOCKED（行数已证；主键/类型缺平台证据）"
+      ],
+      "after": [
+        0,
+        0,
+        "BLOCKED（主键平台实测PASS；类型/资源锁待核）。证据：A03_PK_AUDIT_20260904/README.md"
+      ]
+    }
+  ]
+}

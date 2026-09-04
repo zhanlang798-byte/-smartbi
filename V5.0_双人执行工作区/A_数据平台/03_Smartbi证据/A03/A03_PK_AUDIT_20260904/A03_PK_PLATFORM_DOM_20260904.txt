@@ -1,0 +1,357 @@
+- tablist:
+  - tab "数据模型":
+    - generic: 数据模型
+  - tab "SQL查询" [selected]:
+    - generic: SQL查询
+    - text: 
+- text: 
+- generic: 
+- text:                                                                                                                                                                                                                                                                                                                
+- tabpanel "SQL查询":
+  - iframe [active]:
+    - table:
+      - rowgroup:
+        - row:
+          - cell:
+            - table:
+              - rowgroup:
+                - row:
+                  - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                    - table:
+                      - rowgroup:
+                        - row "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                          - cell "数据源 可导入数据库 显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表  ":
+                            - table:
+                              - rowgroup:
+                                - row "数据源 可导入数据库":
+                                  - cell "数据源"
+                                  - cell "可导入数据库":
+                                    - textbox "请选择"
+                                    - button
+                                    - text:                  
+                                  - cell: 
+                                - row "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                  - cell "显示名称 显示名称 显示别名 显示别名   可导入数据库   input   用户属性   函数列表":
+                                    - radio "显示名称" [checked]
+                                    - text: 显示名称
+                                    - radio "显示别名"
+                                    - text: 显示别名
+                                    - generic "名称：input 别名：可导入数据库":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 可导入数据库
+                                      - text: 
+                                    - generic "名称：input 别名：input":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: input
+                                      - text: 
+                                    - generic "名称：USER_PROPERTIES 别名：用户属性 描述：用户属性":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 用户属性
+                                      - text: 
+                                    - generic "名称：FUNCTIONS 别名：函数列表 描述：函数列表":
+                                      - generic: 
+                                      - generic: 
+                                      - generic: 函数列表
+                                      - text: 
+                                - row " ":
+                                  - cell " ":
+                                    - generic "搜索":
+                                      - generic: 
+                                    - textbox "搜索资源"
+                                    - text:  
+                                    - generic: 
+                                    - text:   
+                  - cell
+                  - cell:
+                    - text: 
+                    - generic: 执行
+                    - generic: 
+                    - text:  
+                    - text: 
+                    - generic: 保存
+                    - text: 
+                    - text: 
+                    - generic: 格式化SQL
+                    - text: 
+                    - generic: 复制SQL
+                    - text: 
+                    - generic: 回到模型
+                    - textbox
+                    - generic: "162"
+                    - generic: "163"
+                    - generic: "164"
+                    - generic: "165"
+                    - generic: "166"
+                    - generic: "167"
+                    - generic: "168"
+                    - generic: "169"
+                    - generic: COALESCE(SUM(n),0) AS total_rows, COUNT(*) AS key_groups,
+                    - generic: COALESCE(SUM(CASE WHEN n > 1 THEN 1 ELSE 0 END),0) AS duplicate_key_groups,
+                    - generic: COALESCE(SUM(n - 1),0) AS duplicate_extra_rows,
+                    - generic: COALESCE(SUM(CASE WHEN scope_id IS NULL OR month_end IS NULL THEN n ELSE 0 END),0) AS null_key_rows,
+                    - generic: COALESCE(SUM(CASE WHEN TRIM(CAST(scope_id AS CHAR)) = '' OR TRIM(CAST(month_end AS CHAR)) = '' THEN n ELSE 0 END),0) AS blank_key_rows
+                    - generic: FROM (SELECT scope_id, month_end, COUNT(*) AS n FROM input.v50_mvp_cycle_state GROUP BY scope_id, month_end) AS pk_groups
+                    - generic: ORDER BY audit_order
+                    - generic "参数设置"
+                    - generic "数据预览"
+                    - generic: 
+                    - text: 
+                    - table:
+                      - rowgroup:
+                        - text:               
+                        - row:
+                          - cell:
+                            - table:
+                              - rowgroup:
+                                - row:
+                                  - cell
+                                - row:
+                                  - cell:
+                                    - table:
+                                      - rowgroup:
+                                        - row:
+                                          - cell
+                                        - row "共 21 行每页 50 行   1 / 1   刷新":
+                                          - cell "共 21 行每页 50 行   1 / 1   刷新":
+                                            - table:
+                                              - rowgroup:
+                                                - row "共 21 行每页 50 行   1 / 1   刷新":
+                                                  - cell "共 21 行每页 50 行   1 / 1   刷新":
+                                                    - generic: 共 21 行
+                                                    - text: 每页
+                                                    - textbox [active]
+                                                    - text: 行
+                                                    - generic "首页":
+                                                      - generic: 
+                                                    - generic "上页":
+                                                      - generic: 
+                                                    - textbox
+                                                    - generic: /
+                                                    - generic: "1"
+                                                    - generic "下页":
+                                                      - generic: 
+                                                    - generic "尾页":
+                                                      - generic: 
+                                                    - generic: 刷新
+                                        - row:
+                                          - cell
+                                        - row:
+                                          - cell:
+                                            - table:
+                                              - rowgroup:
+                                                - row "1 V50_dim_country 130 130 0 0 0 0":
+                                                  - cell "1"
+                                                  - cell "V50_dim_country"
+                                                  - cell "130"
+                                                  - cell "130"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "2 V50_dim_date 660 660 0 0 0 0":
+                                                  - cell "2"
+                                                  - cell "V50_dim_date"
+                                                  - cell "660"
+                                                  - cell "660"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "3 V50_dim_year 16 16 0 0 0 0":
+                                                  - cell "3"
+                                                  - cell "V50_dim_year"
+                                                  - cell "16"
+                                                  - cell "16"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "4 V50_dim_company 20 20 0 0 0 0":
+                                                  - cell "4"
+                                                  - cell "V50_dim_company"
+                                                  - cell "20"
+                                                  - cell "20"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "5 V50_dim_asset 10 10 0 0 0 0":
+                                                  - cell "5"
+                                                  - cell "V50_dim_asset"
+                                                  - cell "10"
+                                                  - cell "10"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "6 V50_dim_event 60 60 0 0 0 0":
+                                                  - cell "6"
+                                                  - cell "V50_dim_event"
+                                                  - cell "60"
+                                                  - cell "60"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "7 V50_country_exposure 1,170 1,170 0 0 0 0":
+                                                  - cell "7"
+                                                  - cell "V50_country_exposure"
+                                                  - cell "1,170"
+                                                  - cell "1,170"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "8 V50_country_monthly_risk 7,680 7,680 0 0 0 0":
+                                                  - cell "8"
+                                                  - cell "V50_country_monthly_risk"
+                                                  - cell "7,680"
+                                                  - cell "7,680"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "9 V50_country_policy_year 2,744 2,744 0 0 0 0":
+                                                  - cell "9"
+                                                  - cell "V50_country_policy_year"
+                                                  - cell "2,744"
+                                                  - cell "2,744"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "10 V50_country_event 23 23 0 0 0 0":
+                                                  - cell "10"
+                                                  - cell "V50_country_event"
+                                                  - cell "23"
+                                                  - cell "23"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "11 V50_global_cycle_month 660 660 0 0 0 0":
+                                                  - cell "11"
+                                                  - cell "V50_global_cycle_month"
+                                                  - cell "660"
+                                                  - cell "660"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "12 V50_historical_crisis_event 18 18 0 0 0 0":
+                                                  - cell "12"
+                                                  - cell "V50_historical_crisis_event"
+                                                  - cell "18"
+                                                  - cell "18"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "13 V50_company_overseas_exposure 168 168 0 0 0 0":
+                                                  - cell "13"
+                                                  - cell "V50_company_overseas_exposure"
+                                                  - cell "168"
+                                                  - cell "168"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "14 V50_bridge_company_geography 8 8 0 0 0 0":
+                                                  - cell "14"
+                                                  - cell "V50_bridge_company_geography"
+                                                  - cell "8"
+                                                  - cell "8"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "15 V50_asset_monthly_return 91,727 91,727 0 0 0 0":
+                                                  - cell "15"
+                                                  - cell "V50_asset_monthly_return"
+                                                  - cell "91,727"
+                                                  - cell "91,727"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "16 V50_portfolio_scenario 207,720 207,720 0 0 0 0":
+                                                  - cell "16"
+                                                  - cell "V50_portfolio_scenario"
+                                                  - cell "207,720"
+                                                  - cell "207,720"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "17 V50_case_evidence 45 45 0 0 0 0":
+                                                  - cell "17"
+                                                  - cell "V50_case_evidence"
+                                                  - cell "45"
+                                                  - cell "45"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "18 V50_source_registry 734 734 0 0 0 0":
+                                                  - cell "18"
+                                                  - cell "V50_source_registry"
+                                                  - cell "734"
+                                                  - cell "734"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "19 V50_MVP_country_latest 40 40 0 0 0 0":
+                                                  - cell "19"
+                                                  - cell "V50_MVP_country_latest"
+                                                  - cell "40"
+                                                  - cell "40"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "20 V50_MVP_company_data_status 20 20 0 0 0 0":
+                                                  - cell "20"
+                                                  - cell "V50_MVP_company_data_status"
+                                                  - cell "20"
+                                                  - cell "20"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                - row "21 V50_MVP_cycle_state 660 660 0 0 0 0":
+                                                  - cell "21"
+                                                  - cell "V50_MVP_cycle_state"
+                                                  - cell "660"
+                                                  - cell "660"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                                  - cell "0"
+                                            - table:
+                                              - rowgroup:
+                                                - row "audit_order object_name total_rows key_groups duplicate_key_groups duplicate_extra_rows null_key_rows blank_key_rows":
+                                                  - cell "audit_order":
+                                                    - generic: audit_order
+                                                  - cell "object_name":
+                                                    - generic: object_name
+                                                  - cell "total_rows":
+                                                    - generic: total_rows
+                                                  - cell "key_groups":
+                                                    - generic: key_groups
+                                                  - cell "duplicate_key_groups":
+                                                    - generic: duplicate_key_groups
+                                                  - cell "duplicate_extra_rows":
+                                                    - generic: duplicate_extra_rows
+                                                  - cell "null_key_rows":
+                                                    - generic: null_key_rows
+                                                  - cell "blank_key_rows":
+                                                    - generic: blank_key_rows
+                                        - row:
+                                          - cell
+  - generic: 
+- generic: 
+- text:                                 
