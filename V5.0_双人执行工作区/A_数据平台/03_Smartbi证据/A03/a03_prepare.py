@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 # A03 前置：资源锁表 + 逐表对账基准 + 字段级类型审计（源端扫描实测） + 执行日志
 import os, sys, json, datetime
+
+# 2026-09-04：初建草稿生成器退役。直接运行会覆盖后续平台读数与历史证据。
+# 日常只读核验入口：A03_RECHECK_20260904/a03_preflight.mjs。
+# 此开关仅供明确的历史草稿重建，不得把生成结果用作新的平台实测证据。
+if os.environ.get('A03_ALLOW_ARCHIVE_REBUILD') != '1':
+    raise SystemExit('ARCHIVED_GENERATOR_BLOCKED: use A03_RECHECK_20260904/a03_preflight.mjs for read-only validation')
+
 sys.path.insert(0, r"C:\Users\33625\Desktop\数据创新平台-张奥\V5.0_双人执行工作区\A_数据平台\03_Smartbi证据\A00")
 sys.path.insert(0, r"C:\Users\33625\Desktop\数据创新平台-张奥\V5.0_双人执行工作区\A_数据平台\03_Smartbi证据\A01")
 from xlsx_min import Xlsx
@@ -11,7 +18,7 @@ AUX = r"C:\Users\33625\Desktop\数据创新平台-张奥\V5.0_双人执行工作
 OUT = r"C:\Users\33625\Desktop\数据创新平台-张奥\V5.0_双人执行工作区\A_数据平台\03_Smartbi证据\A03"
 os.makedirs(OUT, exist_ok=True)
 NOW = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S +0800')
-PFX = 'TB_XH202612_V50_'
+PFX = 'V50_'
 
 res = json.load(open(os.path.join(OUT, '..', 'A00', 'A00_step45_results.json'), encoding='utf-8'))
 formal = res['formal']  # order/file/exp_rows/exp_cols/exp_pk
@@ -113,7 +120,7 @@ log = f"""A03 全量导入 执行日志 V5.0
 3. 3张辅助表在位（02_MVP辅助表，A01产物）✓
 4. P0门证据齐备（P0_ACCEPTANCE.txt=PASS）→ 满足"无P0证据不得全量导入"前置 ✓
 5. 源文件日期列为真Excel日期格式（dim_date/country_monthly_risk实测styles含日期格式）✓
-6. 对象前缀：TB_XH202612_V50_；P0别名冲突已于8/24清除（截图证据）✓
+6. 对象前缀：{PFX}；平台30字符限制适配，批准及历史证据见现行交接记录。
 
 步骤1 资源锁：已生成21个目标对象锁（SMARTBI_RESOURCE_LOCK_V50.xlsx），
   平台同名检查列待A在Smartbi搜索确认后填写。→ AI侧完成，平台侧待A

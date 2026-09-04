@@ -1,0 +1,824 @@
+{
+  "inspectedAt": "2026-09-04T05:35:51.296Z",
+  "scope": "Existing workbook records only; not a live Smartbi query",
+  "headers": {
+    "SMARTBI_IMPORT_RECONCILIATION_V50.xlsx": [
+      "顺序",
+      "源文件",
+      "平台对象名",
+      "源行数(控制清单)",
+      "源列数",
+      "主键",
+      "平台行数(待填)",
+      "行数一致?",
+      "主键重复(待填)",
+      "空主键(待填)",
+      "判定(待填)"
+    ],
+    "SMARTBI_RESOURCE_LOCK_V50.xlsx": [
+      "序号",
+      "目标对象名",
+      "对应源文件",
+      "平台是否已存在同名(待填)",
+      "锁建立人",
+      "锁建立时间",
+      "备注"
+    ],
+    "SMARTBI_TYPE_AUDIT_V50.xlsx": [
+      "表",
+      "字段",
+      "期望类型(源端实测)",
+      "平台类型(XML实测)",
+      "判定(XML/合同)",
+      "备注"
+    ]
+  },
+  "objectCount": 21,
+  "formalExpectedRows": 313593,
+  "auxiliaryExpectedRows": [
+    40,
+    20,
+    660
+  ],
+  "namingMismatches": 0,
+  "typeCount": 442,
+  "typeRecordedStatusCounts": {
+    "PASS": 383,
+    "FAIL": 59
+  },
+  "typeRecordedExceptions": [
+    {
+      "table": "country_monthly_risk.xlsx",
+      "field": "cpi_index",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "unemployment_rate",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "cpi_index",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "equity_index",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "vix_level",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "oil_price_usd",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "broad_dollar_index",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "tbill_3m",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "broad_dollar_1973",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "industrial_production_yoy",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "cpi_yoy",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "real_policy_rate",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "yield_spread_10y_3m",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "sahm_realtime_value",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "nfci_expanding_percentile",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "equity_drawdown",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "hy_oas_12m_change_bps",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "global_cycle_month.xlsx",
+      "field": "property_release_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "company_overseas_exposure.xlsx",
+      "field": "fiscal_year",
+      "expected": "整数",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同整数，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "company_overseas_exposure.xlsx",
+      "field": "report_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "company_overseas_exposure.xlsx",
+      "field": "fx_gain_loss",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "company_overseas_exposure.xlsx",
+      "field": "foreign_currency_assets",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "company_overseas_exposure.xlsx",
+      "field": "foreign_currency_liabilities",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "company_overseas_exposure.xlsx",
+      "field": "hedge_notional",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "company_overseas_exposure.xlsx",
+      "field": "committed_credit_line",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "bridge_company_geography.xlsx",
+      "field": "fiscal_year",
+      "expected": "整数",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同整数，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "portfolio_scenario.xlsx",
+      "field": "max_drawdown",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "case_evidence.xlsx",
+      "field": "start_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "case_evidence.xlsx",
+      "field": "end_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "source_registry.xlsx",
+      "field": "coverage_start",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "source_registry.xlsx",
+      "field": "coverage_end",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "source_registry.xlsx",
+      "field": "publication_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "source_registry.xlsx",
+      "field": "file_size_bytes",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "source_registry.xlsx",
+      "field": "earliest_backtest_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_fx_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_cpi_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_reserve_usd",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_reserve_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_reserve_import_months_date",
+      "expected": "日期",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同日期，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "fx_12m_depr",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "fx_threshold_multiple",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_odi_stock_usd",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_country_latest.xlsx",
+      "field": "latest_odi_stock_year",
+      "expected": "整数",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同整数，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "cpi_yoy",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "industrial_production_yoy",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "sahm_realtime_value",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "nfci_expanding_percentile",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "equity_drawdown",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "policy_rate_12m_change_bps",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "real_policy_rate_12m_change_bps",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "hy_oas_12m_change_bps",
+      "expected": "数值",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同数值，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_asset_bust",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_recession",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_deflation",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_stagflation",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_aggressive_tightening",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_inflation_overheating",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "trig_recovery_reflation",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    },
+    {
+      "table": "MVP_cycle_state.xlsx",
+      "field": "compound_global_crisis",
+      "expected": "三态",
+      "recordedPlatformType": "字符串",
+      "recordedStatus": "FAIL",
+      "note": "辅助表(A01生成)；XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同三态1/0/空，平台STRING；须由A在Smartbi人工改型并重新导出复核"
+    }
+  ],
+  "objectChecks": [
+    {
+      "order": 1,
+      "source": "dim_country.xlsx",
+      "object": "V50_dim_country",
+      "expectedRows": "130",
+      "key": "iso3",
+      "recordedPlatformRows": 130,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 2,
+      "source": "dim_date.xlsx",
+      "object": "V50_dim_date",
+      "expectedRows": "660",
+      "key": "date_key",
+      "recordedPlatformRows": 660,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 3,
+      "source": "dim_year.xlsx",
+      "object": "V50_dim_year",
+      "expectedRows": "16",
+      "key": "year_key",
+      "recordedPlatformRows": 16,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 4,
+      "source": "dim_company.xlsx",
+      "object": "V50_dim_company",
+      "expectedRows": "20",
+      "key": "company_id",
+      "recordedPlatformRows": 20,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 5,
+      "source": "dim_asset.xlsx",
+      "object": "V50_dim_asset",
+      "expectedRows": "10",
+      "key": "asset_id",
+      "recordedPlatformRows": 10,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 6,
+      "source": "dim_event.xlsx",
+      "object": "V50_dim_event",
+      "expectedRows": "60",
+      "key": "event_id",
+      "recordedPlatformRows": 60,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 7,
+      "source": "country_exposure.xlsx",
+      "object": "V50_country_exposure",
+      "expectedRows": "1170",
+      "key": "iso3+year",
+      "recordedPlatformRows": 1170,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 8,
+      "source": "country_monthly_risk.xlsx",
+      "object": "V50_country_monthly_risk",
+      "expectedRows": "7680",
+      "key": "iso3+month_end",
+      "recordedPlatformRows": 7680,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 9,
+      "source": "country_policy_year.xlsx",
+      "object": "V50_country_policy_year",
+      "expectedRows": "2744",
+      "key": "iso3+year+policy_code",
+      "recordedPlatformRows": 2744,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 10,
+      "source": "country_event.xlsx",
+      "object": "V50_country_event",
+      "expectedRows": "23",
+      "key": "event_id",
+      "recordedPlatformRows": 23,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 11,
+      "source": "global_cycle_month.xlsx",
+      "object": "V50_global_cycle_month",
+      "expectedRows": "660",
+      "key": "scope_id+month_end",
+      "recordedPlatformRows": 660,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 12,
+      "source": "historical_crisis_event.xlsx",
+      "object": "V50_historical_crisis_event",
+      "expectedRows": "18",
+      "key": "historical_event_id",
+      "recordedPlatformRows": 18,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 13,
+      "source": "company_overseas_exposure.xlsx",
+      "object": "V50_company_overseas_exposure",
+      "expectedRows": "168",
+      "key": "company_id+fiscal_year+geography_id",
+      "recordedPlatformRows": 168,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 14,
+      "source": "bridge_company_geography.xlsx",
+      "object": "V50_bridge_company_geography",
+      "expectedRows": "8",
+      "key": "bridge_id",
+      "recordedPlatformRows": 8,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 15,
+      "source": "asset_monthly_return.xlsx",
+      "object": "V50_asset_monthly_return",
+      "expectedRows": "91727",
+      "key": "iso3+month_end+asset_id+currency_basis",
+      "recordedPlatformRows": 91727,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 16,
+      "source": "portfolio_scenario.xlsx",
+      "object": "V50_portfolio_scenario",
+      "expectedRows": "207720",
+      "key": "scenario_id+strategy_id+iso3+window_end+horizon+run_id",
+      "recordedPlatformRows": 207720,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 17,
+      "source": "case_evidence.xlsx",
+      "object": "V50_case_evidence",
+      "expectedRows": "45",
+      "key": "case_id",
+      "recordedPlatformRows": 45,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 18,
+      "source": "source_registry.xlsx",
+      "object": "V50_source_registry",
+      "expectedRows": "734",
+      "key": "source_id",
+      "recordedPlatformRows": 734,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 19,
+      "source": "MVP_country_latest.xlsx",
+      "object": "V50_MVP_country_latest",
+      "expectedRows": "40",
+      "key": "iso3",
+      "recordedPlatformRows": 40,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 20,
+      "source": "MVP_company_data_status.xlsx",
+      "object": "V50_MVP_company_data_status",
+      "expectedRows": "20",
+      "key": "company_id",
+      "recordedPlatformRows": 20,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    },
+    {
+      "order": 21,
+      "source": "MVP_cycle_state.xlsx",
+      "object": "V50_MVP_cycle_state",
+      "expectedRows": "660",
+      "key": "scope_id+month_end",
+      "recordedPlatformRows": 660,
+      "recordedDuplicates": "0（源端审计+A报告；平台未查询）",
+      "recordedNullKeys": "0（源端审计+A报告；平台未查询）",
+      "recordedResult": "BLOCKED（行数已证；主键/类型缺平台证据）",
+      "prefixMatches": true,
+      "lockNameMatches": true,
+      "historicalNameCheck": "无法追溯（截图仅证当前对象存在）"
+    }
+  ],
+  "warnings": [
+    "Historical same-name absence cannot be proven by a current resource listing.",
+    "Do not translate source-side primary-key counts into platform results.",
+    "Do not automatically mark type exceptions PASS without current evidence."
+  ]
+}

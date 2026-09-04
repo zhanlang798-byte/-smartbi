@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-04",
+  "scope": "Existing documented boolean exceptions only; no new platform type change",
+  "evidenceHash": "75ce129572ac215881c1a8278519629fe00b96c515ae40a5b2480b80015abddf",
+  "counts": {
+    "PASS": 383,
+    "FAIL": 59
+  },
+  "audit": [
+    {
+      "row": 96,
+      "table": "country_monthly_risk.xlsx",
+      "field": "is_proxy",
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "beforeNote": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同布尔，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "afterNote": "2026-09-04回写既有平台限制放行：平台无布尔型，保留true/false字符串，不转1/0。依据A03_EXECUTION_LOG_V50.txt及字段类型截图/A03_平台无布尔类型_20260826.png。PASS为例外放行，并非XML改型；原记录和证据哈希见A03_RECHECK_20260904/A03_TYPE_WAIVER_CHANGELOG_20260904.json。",
+      "exception": "DOCUMENTED_PLATFORM_BOOLEAN_LIMIT"
+    },
+    {
+      "row": 97,
+      "table": "country_monthly_risk.xlsx",
+      "field": "is_imputed",
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "beforeNote": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同布尔，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "afterNote": "2026-09-04回写既有平台限制放行：平台无布尔型，保留true/false字符串，不转1/0。依据A03_EXECUTION_LOG_V50.txt及字段类型截图/A03_平台无布尔类型_20260826.png。PASS为例外放行，并非XML改型；原记录和证据哈希见A03_RECHECK_20260904/A03_TYPE_WAIVER_CHANGELOG_20260904.json。",
+      "exception": "DOCUMENTED_PLATFORM_BOOLEAN_LIMIT"
+    },
+    {
+      "row": 136,
+      "table": "country_event.xlsx",
+      "field": "known_at_decision_time",
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "beforeNote": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同布尔，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "afterNote": "2026-09-04回写既有平台限制放行：平台无布尔型，保留true/false字符串，不转1/0。依据A03_EXECUTION_LOG_V50.txt及字段类型截图/A03_平台无布尔类型_20260826.png。PASS为例外放行，并非XML改型；原记录和证据哈希见A03_RECHECK_20260904/A03_TYPE_WAIVER_CHANGELOG_20260904.json。",
+      "exception": "DOCUMENTED_PLATFORM_BOOLEAN_LIMIT"
+    },
+    {
+      "row": 179,
+      "table": "global_cycle_month.xlsx",
+      "field": "vintage_reconstructed",
+      "beforeStatus": "FAIL",
+      "afterStatus": "PASS",
+      "beforeNote": "XML证据：XML元数据/A03_METADATA_EXPORT_V50_20260825.xml；类型偏差：合同布尔，平台STRING；须由A在Smartbi人工改型并重新导出复核",
+      "afterNote": "2026-09-04回写既有平台限制放行：平台无布尔型，保留true/false字符串，不转1/0。依据A03_EXECUTION_LOG_V50.txt及字段类型截图/A03_平台无布尔类型_20260826.png。PASS为例外放行，并非XML改型；原记录和证据哈希见A03_RECHECK_20260904/A03_TYPE_WAIVER_CHANGELOG_20260904.json。",
+      "exception": "DOCUMENTED_PLATFORM_BOOLEAN_LIMIT"
+    }
+  ]
+}
