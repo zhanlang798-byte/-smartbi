@@ -1,4 +1,5 @@
 A07 XML 最终安全复核（执行者A）
+现行补记：2026-09-04当前整包完成静态扫描，见文末；以下8月31日签署仅适用于旧两包。
 复核时间：2026-08-31 13:50:00 +08:00
 
 复核对象：
@@ -26,3 +27,12 @@ A07 XML 最终安全复核（执行者A）
 
 A侧签署：执行者A（仅对上述两份页面/模型 XML 的扫描事实和受控内部使用结论负责）
 日期：2026-08-31
+
+2026-09-04当前整包安全补记（不覆盖历史签署）：
+- 文件：A07_PAGES_DB01_DB06_WITH_MODEL_20260904.xml；1036630字节。
+- SHA-256：C5B2CFBF2BCBEF8AA277A1D0A5AB6F94DFF07BEF27168D00205D054D137BA51D。
+- 明示模式扫描：password/passwd/pwd、access/refresh token、Bearer、paramsTicket、opLogHeadersTicket、client secret/API key/secret key、Cookie、私钥头均0；不宣称穷尽所有潜在秘密。
+- JDBC引用22处、数据库user键22处；没有独立DATASOURCE顶层对象，但连接元数据仍在。未导出资源权限或行权限。
+- 分类：CONTROLLED_INTERNAL_ONLY_NOT_PUBLIC_SAFE。原件被.gitignore排除，不上传公开仓库；目标另行配置数据源映射、源数据和凭据。
+- A执行记录：用户授权，Codex协助原生导出和静态核验；仅证明本轮扫描与受控交付结论，不代签B，不签恢复或最终冻结。
+- 可复现证据：A07_CURRENT_EXPORT_20260904/audit_export.py及EXPORT_AUDIT.json。

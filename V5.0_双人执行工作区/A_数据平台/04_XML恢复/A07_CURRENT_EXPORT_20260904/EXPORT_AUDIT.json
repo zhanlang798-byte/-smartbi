@@ -1,0 +1,158 @@
+{
+  "auditDate": "2026-09-04",
+  "nativeDownloadLocalTime": "2026-09-04 17:33:13 +08:00",
+  "status": "NATIVE_PACKAGE_REFRESHED_STATIC_AUDIT_PASS_NOT_RESTORE_PASS",
+  "package": {
+    "path": "A_数据平台/04_XML恢复/A07_PAGES_DB01_DB06_WITH_MODEL_20260904.xml",
+    "bytes": 1036630,
+    "sha256": "c5b2cfbf2bcbef8aa277a1d0a5ab6f94dff07bef27168d00205d054d137ba51d",
+    "topLevelTypes": {
+      "SMARTBIX_PAGE": 6,
+      "AUGMENTED_DATASET": 1,
+      "CUSTOM_ICONS": 1
+    }
+  },
+  "model": {
+    "id": "6b5dff57a4093ba3db07d2903905fe40",
+    "alias": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "lastModified": "2026-09-02 23:44:40",
+    "viewCount": 22,
+    "publishedFieldCount": 460,
+    "relationCount": 19,
+    "filterDirections": {
+      "SINGLE": 18,
+      "BOTH": 1
+    },
+    "canonicalXmlSha256": "c19533c42b1fa5376c5790aeffe0eb9ea9366299695dd17ef5026ca46693a7ea",
+    "defineJsonSha256": "a7e6b6d402e3963645ae4d2a0ddfee6512bbd56cb041201db9553a223c489f80",
+    "exactlyMatchesSeptember4HeldSnapshot": true,
+    "heldSnapshotSha256": "688622fb50d69f04556685e060346964177402e1a15f7e95b2bf5348cd3c87eb"
+  },
+  "pages": [
+    {
+      "page": "DB01",
+      "id": "161b2c84aa6c738645e7256f75d2dc00",
+      "alias": "DB01_XH202612_V50_RISK_OVERVIEW",
+      "lastModified": "2026-08-27 23:10:44",
+      "canonicalXmlSha256": "e016aaed0125ed622b48f6d276dba1e3c69efea33f9b05392e6c0f167eb53c2b",
+      "defineJsonSha256": "72c9a4858cb4e7344e58b73fa8306e25ca0970eb14f912de17c8fe57c8d9da1e",
+      "oldLastModified": "2026-08-27 23:10:44",
+      "sameXmlAsAugust31": true,
+      "sameDefineAsAugust31": true,
+      "formalModelIdReferenced": true,
+      "otherPageIdsInDefinition": [
+        "DB02"
+      ]
+    },
+    {
+      "page": "DB02",
+      "id": "12cbefc293d1f1cd6c76771772ede621",
+      "alias": "DB02_XH202612_V50_COUNTRY_DRILL",
+      "lastModified": "2026-08-29 20:45:33",
+      "canonicalXmlSha256": "0aae2e4789bd8ed4c541ae524d724ddc1c71af4ed067109d77e13cdaff2faba6",
+      "defineJsonSha256": "82e06693bbca2b2ed289deeb64bd25fccb94e61ef413d3e50a69c6d69a2ed1e6",
+      "oldLastModified": "2026-08-29 20:45:33",
+      "sameXmlAsAugust31": true,
+      "sameDefineAsAugust31": true,
+      "formalModelIdReferenced": true,
+      "otherPageIdsInDefinition": [
+        "DB04"
+      ]
+    },
+    {
+      "page": "DB03",
+      "id": "96d3a52a55f6e16edb602fc2f6d13010",
+      "alias": "DB03_XH202612_V50_COMPANY_BOUNDARY",
+      "lastModified": "2026-09-01 21:57:39",
+      "canonicalXmlSha256": "e4f91094350e25c606394de07924a17530bb9b00ceee90ac60a4575ebc92cd0d",
+      "defineJsonSha256": "ed70b333405e8acb458af2af0d9915c2677d80d28353d070b20254cd1e189d80",
+      "oldLastModified": "2026-08-31 10:42:31",
+      "sameXmlAsAugust31": false,
+      "sameDefineAsAugust31": false,
+      "formalModelIdReferenced": true,
+      "otherPageIdsInDefinition": []
+    },
+    {
+      "page": "DB04",
+      "id": "2f546d06e3f70f0956ea8d5740e26a83",
+      "alias": "DB04_XH202612_V50_LIQUIDITY_LAB",
+      "lastModified": "2026-09-02 00:19:36",
+      "canonicalXmlSha256": "2281c750701f2b0a2ac4fbde40488bb23bc359585add99d10b52208b54b972e2",
+      "defineJsonSha256": "7d3799d5fcc8215dbbed8751bccb7bb07d23005c5817db1a6fab9fb2403912bc",
+      "oldLastModified": "2026-08-30 23:18:03",
+      "sameXmlAsAugust31": false,
+      "sameDefineAsAugust31": false,
+      "formalModelIdReferenced": true,
+      "otherPageIdsInDefinition": []
+    },
+    {
+      "page": "DB05",
+      "id": "0e8d39f578a43c473088b8f7042e8331",
+      "alias": "DB05_XH202612_V50_EVIDENCE_CENTER",
+      "lastModified": "2026-09-01 22:27:01",
+      "canonicalXmlSha256": "87329b91add954b5bb0e21d4451cd88c004bdaf60a3d260cdff794d7413d39eb",
+      "defineJsonSha256": "bb654bdba839a067f83a84c7017c1651467505e02d7ab8bc80a3aaa9dccedbd8",
+      "oldLastModified": "2026-08-29 23:06:59",
+      "sameXmlAsAugust31": false,
+      "sameDefineAsAugust31": false,
+      "formalModelIdReferenced": true,
+      "otherPageIdsInDefinition": []
+    },
+    {
+      "page": "DB06",
+      "id": "684ef06176737964de2551a03de747e8",
+      "alias": "DB06_XH202612_V50_CYCLE_CONTEXT",
+      "lastModified": "2026-08-30 15:55:18",
+      "canonicalXmlSha256": "dc60eb8a93231da420c81fb29aee607aa9c1b77dad76d21fe45b94c2b3832af0",
+      "defineJsonSha256": "c5f7527dcb707b26dcb61ade0334bbd8862834e7bd1b85cca65e89858ce81e75",
+      "oldLastModified": "2026-08-30 15:55:18",
+      "sameXmlAsAugust31": true,
+      "sameDefineAsAugust31": true,
+      "formalModelIdReferenced": true,
+      "otherPageIdsInDefinition": []
+    }
+  ],
+  "db04SavedRepairMarkersPresent": {
+    "期限": true,
+    "策略": true,
+    "窗口截止日": true,
+    "周期状态": true,
+    "黄金权重": true,
+    "scenario_id": true,
+    "grid_g0.000": true,
+    "grid_g0.025": true,
+    "grid_g0.050": true,
+    "grid_g0.075": true,
+    "grid_g0.100": true,
+    "grid_g0.150": true,
+    "grid_g0.200": true,
+    "weight_sum": true,
+    "全量": true
+  },
+  "security": {
+    "lexicalSensitivePatternCounts": {
+      "password_passwd_pwd": 0,
+      "token_bearer_tickets": 0,
+      "secret_api_key": 0,
+      "cookie": 0,
+      "private_key_header": 0
+    },
+    "jdbcReferenceCount": 22,
+    "databaseAccountKeyCounts": {
+      "user": 22
+    },
+    "exportedStandaloneDataSourceObjects": 0,
+    "classification": "CONTROLLED_INTERNAL_ONLY_NOT_PUBLIC_SAFE",
+    "targetDataSourceMappingAndCredentialsRequired": true
+  },
+  "boundaries": {
+    "cpiRepairOrRetest": false,
+    "skippedAiQuestionsRetested": false,
+    "sourceDataChanged": false,
+    "modelSavedOrPublished": false,
+    "liveFunctionalityRetested": false,
+    "independentRestoreExecuted": false,
+    "finalFreezeCreated": false,
+    "bSignoffAdded": false
+  }
+}
