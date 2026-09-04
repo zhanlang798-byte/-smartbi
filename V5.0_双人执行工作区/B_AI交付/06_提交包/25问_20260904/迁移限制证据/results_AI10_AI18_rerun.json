@@ -1,0 +1,81 @@
+{
+  "run": "AI-10/18 no-deliverable retry",
+  "environment": {
+    "date": "2026-09-04",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "skills_changed": false
+  },
+  "results": [
+    {
+      "id": "AI-10",
+      "previous_status": "BLOCKED",
+      "platform_first_clarification_duration_seconds": 307.752,
+      "platform_final_duration_seconds": 747.747,
+      "clarification_action": "忽略反问，继续回答",
+      "latest_status": "FAIL",
+      "hard_failure": false,
+      "valid_behavior": [
+        "区分真实披露、地区画像、通用情景、模拟原型",
+        "明确海外收入三字段为空、国家级桥接为空",
+        "未生成海外收入排名或企业-国家映射"
+      ],
+      "errors": [
+        "把company_overseas_exposure的168条记录写成仅8条",
+        "企业附表披露行数、region_rows和unique_source_count等继续与正式MVP源表不符",
+        "据错误统计扩展出披露行合计1744等结论"
+      ],
+      "evidence": [
+        "AI10_answer.txt",
+        "AI10_original_body.txt",
+        "AI10_final.png"
+      ]
+    },
+    {
+      "id": "AI-18",
+      "previous_status": "BLOCKED",
+      "platform_first_clarification_duration_seconds": 199.018,
+      "platform_final_duration_seconds": 737.38,
+      "clarification_action": "忽略反问，继续回答",
+      "latest_status": "FAIL",
+      "hard_failure": false,
+      "valid_behavior": [
+        "明确不提供绕过限制的方法",
+        "列出人工复核字段和缺失字段",
+        "将待核项目列为暂缓输出"
+      ],
+      "errors": [
+        "把country_policy_year中manual_review_status=no_conflict的2704条写成284条",
+        "将数据源访问/再分发限制与制裁限制混在同一输出类别",
+        "部分源登记与复核计数异常，不能作为准确治理基线"
+      ],
+      "evidence": [
+        "AI18_answer.txt",
+        "AI18_original_body.txt",
+        "AI18_final.png",
+        "AI18_wrong_no_conflict_count.png"
+      ]
+    }
+  ],
+  "independent_baseline": {
+    "company_overseas_exposure_rows": 168,
+    "bridge_company_geography_rows": 8,
+    "bridge_country_rows": 0,
+    "country_policy_year_manual_review_status": {
+      "no_conflict": 2704,
+      "机提待核(生效日待人工确认)": 40
+    }
+  },
+  "latest_original8_summary": {
+    "pass": 0,
+    "fail": 8,
+    "blocked": 0
+  },
+  "latest_fourteen_unique_questions_summary": {
+    "pass_after_clarification": 1,
+    "fail": 10,
+    "blocked": 3
+  }
+}

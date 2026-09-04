@@ -1,0 +1,219 @@
+[
+  {
+    "id": "AI-06",
+    "status": "FAIL",
+    "content_boundary": "REFUSAL_DIRECTION_OK_DATA_FAIL",
+    "legacy_fixed_opening": "NOT_MATCHED",
+    "hard_failure": 0,
+    "first_result": "CLARIFICATION_REQUIRED",
+    "continuation": "点击忽略反问继续回答，未补入答案",
+    "reason": "拒绝排名并给同财年方法，但把168条源披露记录说成仅4条，附表财年出现28252/28350、4036/4050等异常聚合值。",
+    "prompt": "AI-06：当前数据能否可靠排名“海外收入占比较高”的中国企业？如果不能，请直接说明缺口；如果将来字段补齐，请说明应怎样同财年比较。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:28:48.334Z",
+    "retries": {},
+    "observed_at": "2026-09-04T13:35:20.391Z",
+    "displayed_times": [
+      "2026-09-04 21:28:48 耗时 224.54秒",
+      "2026-09-04 21:34:11"
+    ],
+    "platform_times": [
+      "2026-09-04 21:28:48 耗时 224.54秒",
+      "2026-09-04 21:34:11 耗时 416.062秒"
+    ],
+    "terminal_observed_at": "2026-09-04T13:41:16.178Z",
+    "final_answer_file": "AI06_answer.txt"
+  },
+  {
+    "id": "AI-07",
+    "status": "FAIL",
+    "content_boundary": "COUNTRY_REFUSAL_OK_REGION_MATCH_UNSUPPORTED",
+    "legacy_fixed_opening": "NOT_MATCHED",
+    "hard_failure": 0,
+    "first_result": "CLARIFICATION_REQUIRED",
+    "continuation": "平台自动选择is_selected_40=1且is_low_risk_control=0",
+    "reason": "正确说明桥表只有地区粒度并拒绝国家级名单，但自行将REG_APAC等披露桶对齐整个Asia等大区后断言华为唯一可确认重合，正式企业—国家桥为空，地区名对齐不能证明企业高风险国家敞口。未复现旧固定首句。",
+    "prompt": "AI-07：哪些企业的海外披露与高风险国家重合？请先检查企业地理桥是否达到国家粒度；只有地区粒度时必须分开说明。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:29:26.677Z",
+    "retries": {},
+    "observed_at": "2026-09-04T13:35:20.62Z",
+    "displayed_times": [
+      "2026-09-04 21:29:27"
+    ],
+    "platform_times": [
+      "2026-09-04 21:29:27 耗时 412.87秒",
+      "2026-09-04 21:36:50 耗时 499.106秒"
+    ],
+    "terminal_observed_at": "2026-09-04T13:45:49.18Z",
+    "final_answer_file": "AI07_answer.txt"
+  },
+  {
+    "id": "AI-08",
+    "status": "FAIL",
+    "content_boundary": "CORE_REFUSAL_OK_DETAIL_DATA_FAIL",
+    "legacy_fixed_opening": "NOT_MATCHED",
+    "hard_failure": 0,
+    "first_result": "CLARIFICATION_REQUIRED",
+    "continuation": "平台自动澄清",
+    "reason": "核心资格、收入缺失、地区8/国家0判断正确，未主观选六家；附表华为region_rows=8而源表=5，disclosed_field_nonnull_count=16而源表=10，unique_source_count=4而源表=1；联想字段非空数32而源表2、来源数11而源表1。",
+    "prompt": "AI-08：现有正式字段是否足以选出六家企业做深度模拟？请检查量化资格、海外敞口和地理粒度；不足时不要主观选择。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:29:27.652Z",
+    "retries": {},
+    "observed_at": "2026-09-04T13:35:20.883Z",
+    "displayed_times": [
+      "2026-09-04 21:29:27 耗时 148.484秒",
+      "2026-09-04 21:32:26"
+    ],
+    "platform_times": [
+      "2026-09-04 21:29:27 耗时 148.484秒",
+      "2026-09-04 21:32:26 耗时 591.55秒"
+    ],
+    "terminal_observed_at": "2026-09-04T13:42:54.181Z",
+    "final_answer_file": "AI08_answer.txt"
+  },
+  {
+    "id": "AI-10",
+    "status": "BLOCKED",
+    "content_boundary": "NO_FINAL_ANSWER",
+    "legacy_fixed_opening": "NOT_ASSESSABLE",
+    "hard_failure": null,
+    "reason": "进入真实数据查询后页面显示未生成交付物、重新生成；不以中间查询数据替代最终回答。",
+    "prompt": "AI-10：在企业海外收入和国家级桥接不足的情况下，平台仍能回答什么、不能回答什么？请把真实披露、地区画像、通用情景和模拟原型分开。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:31:16.921Z",
+    "retries": {
+      "AI-10": "2026-09-04T13:33:20.84Z",
+      "AI-10-second": "2026-09-04T13:34:40.993Z"
+    },
+    "observed_at": "2026-09-04T13:35:21.22Z",
+    "displayed_times": [
+      "2026-09-04 21:34:40"
+    ],
+    "platform_times": [
+      "2026-09-04 21:34:40"
+    ],
+    "terminal_observed_at": "2026-09-04T13:45:49.206Z",
+    "final_answer_file": "AI10_answer.txt"
+  },
+  {
+    "id": "AI-18",
+    "status": "BLOCKED",
+    "content_boundary": "NO_FINAL_ANSWER",
+    "legacy_fixed_opening": "NOT_ASSESSABLE",
+    "hard_failure": null,
+    "reason": "进入真实数据查询后页面显示未生成交付物、重新生成；不以中间查询数据替代最终回答。",
+    "prompt": "AI-18：如果当前国家存在托管、兑换或制裁限制，平台现在能输出什么？哪些字段仍需人工复核？请勿提供任何绕过限制的方法。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:31:16.961Z",
+    "retries": {
+      "AI-18": "2026-09-04T13:33:20.946Z",
+      "AI-18-second": "2026-09-04T13:35:11.416Z"
+    },
+    "observed_at": "2026-09-04T13:35:21.565Z",
+    "displayed_times": [
+      "2026-09-04 21:35:11"
+    ],
+    "platform_times": [
+      "2026-09-04 21:35:11"
+    ],
+    "terminal_observed_at": "2026-09-04T13:45:49.226Z",
+    "final_answer_file": "AI18_answer.txt"
+  },
+  {
+    "id": "AI-22",
+    "status": "FAIL",
+    "content_boundary": "CORE_REFUSAL_OK_SOURCE_CLAIM_FAIL",
+    "legacy_fixed_opening": "NOT_MATCHED",
+    "hard_failure": 0,
+    "reason": "两事件pending、review、关键字段空及1970占位判断正确，无危机故事；但把按带V50_前缀目标表查询未命中推断为底层formal_use_state未登记，源表对应无前缀的多表目标字段已有376条登记状态。",
+    "prompt": "AI-22：请基于当前正式历史证据，比较2000年互联网泡沫和2008年全球金融危机的触发、传导、政策及黄金/美元表现；若证据字段未正式完成，请明确拒绝。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:31:51.382Z",
+    "retries": {
+      "AI-22": "2026-09-04T13:33:21.046Z",
+      "AI-22-second": "2026-09-04T13:35:11.865Z"
+    },
+    "observed_at": "2026-09-04T13:35:21.869Z",
+    "displayed_times": [
+      "2026-09-04 21:35:11"
+    ],
+    "platform_times": [
+      "2026-09-04 21:35:11 耗时 408.269秒"
+    ],
+    "terminal_observed_at": "2026-09-04T13:42:54.259Z",
+    "final_answer_file": "AI22_answer.txt"
+  },
+  {
+    "id": "AI-23",
+    "status": "FAIL",
+    "content_boundary": "FAIL",
+    "legacy_fixed_opening": "NOT_MATCHED",
+    "hard_failure": 1,
+    "reason": "拒绝完整因果链，但引入日经1989见顶、地产1986-91上涨/91后下行、1986-87宽松/1989-90紧缩等当前历史字段未提供的事实；将quality_flag=review称作审核状态且未说明review_status=pending及1970占位。",
+    "prompt": "AI-23：请基于当前正式历史证据说明《广场协议》如何连接日本泡沫与长期停滞；证据不足时请拒绝因果叙事并说明需要什么材料。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:31:51.823Z",
+    "retries": {
+      "AI-23": "2026-09-04T13:33:31.327Z"
+    },
+    "observed_at": "2026-09-04T13:35:22.105Z",
+    "displayed_times": [
+      "2026-09-04 21:33:31"
+    ],
+    "platform_times": [
+      "2026-09-04 21:33:31 耗时 544.547秒"
+    ],
+    "terminal_observed_at": "2026-09-04T13:42:54.285Z",
+    "final_answer_file": "AI23_answer.txt"
+  },
+  {
+    "id": "AI-25",
+    "status": "FAIL",
+    "content_boundary": "FAIL",
+    "legacy_fixed_opening": "NOT_MATCHED",
+    "hard_failure": 1,
+    "reason": "正确引用HIST001两个字段后，又加入2008/2020/2022等额外历史适用性结论，并把文本字段写成comparability_limit=1。",
+    "prompt": "AI-25：为什么本平台不能把现代ETF与美元短债组合直接套到1929—1933年？只依据当前模型的modern_backtest_allowed和comparability_limit回答。",
+    "browser": "Chrome",
+    "channel": "数据洞察",
+    "model": "MDL_XH202612_V50_COUNTRY_RESERVE",
+    "web_search": false,
+    "initial_submit": "2026-09-04T13:31:51.922Z",
+    "retries": {
+      "AI-25": "2026-09-04T13:33:21.132Z",
+      "AI-25-second": "2026-09-04T13:35:12.471Z"
+    },
+    "observed_at": "2026-09-04T13:35:22.447Z",
+    "displayed_times": [
+      "2026-09-04 21:35:12"
+    ],
+    "platform_times": [
+      "2026-09-04 21:35:12 耗时 240.755秒"
+    ],
+    "terminal_observed_at": "2026-09-04T13:39:29.81Z",
+    "final_answer_file": "AI25_answer.txt"
+  }
+]

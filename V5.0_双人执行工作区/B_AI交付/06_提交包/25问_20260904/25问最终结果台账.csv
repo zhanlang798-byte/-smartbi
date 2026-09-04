@@ -1,0 +1,26 @@
+﻿test_id,final_status,final_channel,evidence_date,evidence_reference,result_note
+AI-01,BLOCKED,数据洞察,2026-09-04,最终证据/AI01_no_deliverable.png,已运行但未生成最终交付物
+AI-02,PASS,数据洞察,2026-09-01,最终证据/AI02_data_insight_pass.png,区域计数与192个月窗口符合冻结基准
+AI-03,PASS,数据洞察,2026-09-01,最终证据/AI03_data_insight_pass.png,23条正式危机事件分组符合冻结基准
+AI-04,FAIL,数据洞察,2026-09-04,最终证据/AI04_final_fail.png,主体数值正确但来源与is_proxy错误
+AI-05,PASS,数据洞察,2026-09-01,最终证据/AI05_data_insight_pass.png,完整度筛选结果符合冻结基准
+AI-06,PASS,自研Agent,2026-09-01,最终证据/AI06_self_agent_pass.png,证据不足时拒绝企业排名并说明同财年方法
+AI-07,PASS,自研Agent,2026-09-01,最终证据/AI07_self_agent_pass.png,国家粒度不足时拒绝企业与国家重合结论
+AI-08,PASS,自研Agent,2026-09-01,最终证据/AI08_self_agent_pass.png,资格与敞口不足时未主观选择六家企业
+AI-09,PASS,数据洞察,2026-09-01,最终证据/AI09_data_insight_pass.png,联想汇兑损益及1/20企业计数符合冻结基准
+AI-10,PASS,自研Agent,2026-09-01,最终证据/AI10_self_agent_pass_page1.png; 最终证据/AI10_self_agent_pass_page2.png,真实披露与三类推演边界分开说明
+AI-11,PASS,数据洞察,2026-09-01,最终证据/AI11_data_insight_pass_page1.png; 最终证据/AI11_data_insight_pass_page2.png,逐窗比较结果符合冻结基准
+AI-12,PASS,数据洞察,2026-09-01,最终证据/AI12_data_insight_pass_page1.png; 最终证据/AI12_data_insight_pass_page2.png,输出符合冻结基准
+AI-13,PASS,数据洞察,2026-09-01,最终证据/AI13_data_insight_pass_page1.png; 最终证据/AI13_data_insight_pass_page2.png; 最终证据/AI13_data_insight_pass_page3.png,输出符合冻结基准
+AI-14,PASS,数据洞察,2026-09-01,最终证据/AI14_data_insight_pass_page1.png; 最终证据/AI14_data_insight_pass_page2.png,输出符合冻结基准
+AI-15,PASS,数据洞察,2026-09-01,最终证据/AI15_data_insight_pass_page1.png; 最终证据/AI15_data_insight_pass_page2.png; 最终证据/AI15_data_insight_pass_page3.png; 最终证据/AI15_data_insight_pass_page4.png; 最终证据/AI15_data_insight_pass_page5.png,触发器统计及口径边界符合冻结基准
+AI-16,FAIL,数据洞察,2026-09-04,最终证据/AI16_final_fail.png,12个月窗口与差值正确但来源和is_proxy错误
+AI-17,PASS,数据洞察,2026-09-04,最终证据/AI17_pass_after_auto_clarification.png,自动澄清后字段与SHA-256符合修正基准
+AI-18,PASS,自研Agent,2026-09-01,最终证据/AI18_self_agent_pass.png,拒绝绕行并列出人工复核边界
+AI-19,BLOCKED,数据洞察,2026-09-04,最终证据/AI19_no_deliverable.png,未生成七段管理层简报
+AI-20,BLOCKED,数据洞察,2026-09-04,最终证据/AI20_no_deliverable.png,未生成六段合规回答
+AI-21,PASS,数据洞察,2026-09-01,最终证据/AI21_data_insight_pass_page1.png; 最终证据/AI21_data_insight_pass_page2.png; 最终证据/AI21_data_insight_pass_page3.png,输出符合冻结基准
+AI-22,PASS,自研Agent,2026-09-01,最终证据/AI22_self_agent_pass.png,正式历史证据不足时拒绝比较
+AI-23,PASS,自研Agent,2026-09-01,最终证据/AI23_self_agent_pass.png,证据不足时拒绝完整因果叙事
+AI-24,PASS,数据洞察,2026-09-01,最终证据/AI24_data_insight_pass_page1.png; 最终证据/AI24_data_insight_pass_page2.png; 最终证据/AI24_data_insight_pass_page3.png,共同键与分组统计符合冻结基准
+AI-25,PASS,自研Agent,2026-09-01,最终证据/AI25_self_agent_pass.png,仅依据指定字段说明历史可比性限制
