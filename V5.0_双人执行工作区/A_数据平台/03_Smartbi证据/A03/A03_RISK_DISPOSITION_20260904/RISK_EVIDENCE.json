@@ -1,0 +1,376 @@
+{
+  "date": "2026-09-04",
+  "scope": "A_DISPOSITION_EVIDENCE_ONLY_NOT_FINAL_RISK_ACCEPTANCE",
+  "sourceWorkbooks": {
+    "lock": {
+      "path": "A_数据平台/03_Smartbi证据/A03/SMARTBI_RESOURCE_LOCK_V50.xlsx",
+      "sha256": "79f0f5a2bce965f15f09fb6559407d48ebb7141e2454a2151011d218ac9bb205",
+      "sheet": "资源锁",
+      "rowCount": 21
+    },
+    "auditA": {
+      "path": "A_数据平台/03_Smartbi证据/模型/RELATIONSHIP_AUDIT_V50.xlsx",
+      "sha256": "d448d17f24dcbfd0e0e1dc1171179b4af79644e888b60b23887d4343a5402c26",
+      "sheet": "关系审计",
+      "rowCount": 19
+    },
+    "auditShared": {
+      "path": "00_共享/模型交接/RELATIONSHIP_AUDIT_V50.xlsx",
+      "sha256": "a997376d94bf20d78647ffc1161b775d6d47b6e2930ea71f9cc48d57e8f2f39d",
+      "sheet": "关系审计",
+      "rowCount": 19
+    },
+    "policy": {
+      "path": "A_数据平台/01_输入只读镜像/D0-D12_数据交付_V4.2/data/smartbi/country_policy_year.xlsx",
+      "sha256": "b2b773d363967ecec470c57e111e27cd4d835dcb2f9d6dbd4fa752a86cabedfd",
+      "sheet": "data",
+      "rowCount": 2744
+    },
+    "years": {
+      "path": "A_数据平台/01_输入只读镜像/D0-D12_数据交付_V4.2/data/smartbi/dim_year.xlsx",
+      "sha256": "c5e52389428ca3cce4cf10f20627dfeede9db7a413071ff0fbc2d2b88c709ffd",
+      "sheet": "data",
+      "rowCount": 16
+    }
+  },
+  "documentSources": {
+    "importExecutionLog": {
+      "path": "A_数据平台/03_Smartbi证据/A03/A03_EXECUTION_LOG_V50.txt",
+      "sha256": "fe93685f52d63d370324a1bf280fd8fd3ad3ec222e350583d3706e5744ada37a"
+    },
+    "signedG2StartDecision": {
+      "path": "00_共享/每日协调/G2_START_RELEASE_20260828.md",
+      "sha256": "2ce0236157b3e65d711ca014dd77b9509cc3bbb912a842b391b06d075abc6256"
+    },
+    "historicalBReview": {
+      "path": "00_共享/每日协调/B_REVIEW_A03_A04_20260827.md",
+      "sha256": "27170aaacfc1b0d8aaabe9f6e249ad5a1046bc4782fb2335007faee5ee091878"
+    },
+    "currentModelIdentityAudit": {
+      "path": "A_数据平台/03_Smartbi证据/A03/A03_RESOURCE_RECONCILIATION_20260904/RESOURCE_AND_PACKAGE_RECONCILIATION.json",
+      "sha256": "9a1088bd6ca62e823bfddb72872001b82235c60cd98217eb8d294a09774ccda3"
+    },
+    "currentPackageAudit": {
+      "path": "A_数据平台/04_XML恢复/A07_CURRENT_EXPORT_20260904/EXPORT_AUDIT.json",
+      "sha256": "f8fdfdcd606f5bd2478e83583c4c720de9cce7639e88c2d4882d181b656de176"
+    },
+    "archiveGenerator": {
+      "path": "A_数据平台/03_Smartbi证据/A03/a03_prepare.py",
+      "sha256": "86bb0c84bfb44bde58021c265e6d127ab7ea27f700eaf5496c9b1dbf6128c2f2"
+    },
+    "readOnlyLedgerEntry": {
+      "path": "A_数据平台/03_Smartbi证据/A03/A03_RECHECK_20260904/a03_preflight.mjs",
+      "sha256": "6b160e541d521490dcb4843e8416e4423dc44c6d3eda8b69d76eea52a2b62684"
+    }
+  },
+  "resourceHistory": {
+    "targetCount": 21,
+    "historicallyUntraceable": 21,
+    "currentSnapshotIdentityMatches": 21,
+    "preImportNoOverwriteProven": false,
+    "wholeTenantUniquenessProven": false,
+    "originalLockWorkbookModified": false
+  },
+  "naming": {
+    "specifiedPrefix": "TB_XH202612_V50_",
+    "specifiedPrefixLength": 16,
+    "actualPrefix": "V50_",
+    "actualPrefixLength": 4,
+    "historicallyReportedLengthLimit": 30,
+    "platformLimitRetestedToday": false,
+    "specifiedOver30": 13,
+    "actualOver30": 0,
+    "maximumSpecifiedLength": 41,
+    "maximumActualLength": 29,
+    "archiveGeneratorGuardStaticallyPresent": true,
+    "generatorExecuted": false,
+    "readOnlyEntryExists": true,
+    "mapping": [
+      {
+        "order": 1,
+        "sourceFile": "dim_country.xlsx",
+        "specifiedName": "TB_XH202612_V50_dim_country",
+        "actualAlias": "V50_dim_country",
+        "specifiedLength": 27,
+        "actualLength": 15,
+        "viewId": "3ebf4ae635c6d364a734cbc07a0710df",
+        "physical": "dim_country_gi0c3510b657b27001",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 2,
+        "sourceFile": "dim_date.xlsx",
+        "specifiedName": "TB_XH202612_V50_dim_date",
+        "actualAlias": "V50_dim_date",
+        "specifiedLength": 24,
+        "actualLength": 12,
+        "viewId": "a9de04e81cb73cae3f61e20cdd572e73",
+        "physical": "dim_date_dpkgi0c3510fdb4327001",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 3,
+        "sourceFile": "dim_year.xlsx",
+        "specifiedName": "TB_XH202612_V50_dim_year",
+        "actualAlias": "V50_dim_year",
+        "specifiedLength": 24,
+        "actualLength": 12,
+        "viewId": "85842b02beebefbdb4d41fbd94b2d78e",
+        "physical": "dim_year_dpkgi0c35120bf6b27000",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 4,
+        "sourceFile": "dim_company.xlsx",
+        "specifiedName": "TB_XH202612_V50_dim_company",
+        "actualAlias": "V50_dim_company",
+        "specifiedLength": 27,
+        "actualLength": 15,
+        "viewId": "ff85ac8c4b3c0a398c8b2971f2562b1a",
+        "physical": "dim_company",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 5,
+        "sourceFile": "dim_asset.xlsx",
+        "specifiedName": "TB_XH202612_V50_dim_asset",
+        "actualAlias": "V50_dim_asset",
+        "specifiedLength": 25,
+        "actualLength": 13,
+        "viewId": "e6da16d73828c70fbfdbab17dd45cfb9",
+        "physical": "dim_asset",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 6,
+        "sourceFile": "dim_event.xlsx",
+        "specifiedName": "TB_XH202612_V50_dim_event",
+        "actualAlias": "V50_dim_event",
+        "specifiedLength": 25,
+        "actualLength": 13,
+        "viewId": "072a4db8c60f293af035d279d4bf4448",
+        "physical": "dim_event_pkgi0c35127cfcb27000",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 7,
+        "sourceFile": "country_exposure.xlsx",
+        "specifiedName": "TB_XH202612_V50_country_exposure",
+        "actualAlias": "V50_country_exposure",
+        "specifiedLength": 32,
+        "actualLength": 20,
+        "viewId": "3770cce69eb2c4f884ea002fdb08ca15",
+        "physical": "v50_country_exposure",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 8,
+        "sourceFile": "country_monthly_risk.xlsx",
+        "specifiedName": "TB_XH202612_V50_country_monthly_risk",
+        "actualAlias": "V50_country_monthly_risk",
+        "specifiedLength": 36,
+        "actualLength": 24,
+        "viewId": "aeff8422c42966f645693674f870bc27",
+        "physical": "v50_country_monthly_risk",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 9,
+        "sourceFile": "country_policy_year.xlsx",
+        "specifiedName": "TB_XH202612_V50_country_policy_year",
+        "actualAlias": "V50_country_policy_year",
+        "specifiedLength": 35,
+        "actualLength": 23,
+        "viewId": "88800280ab4aa140a7e85b9d66fc0da6",
+        "physical": "v50_country_policy_year",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 10,
+        "sourceFile": "country_event.xlsx",
+        "specifiedName": "TB_XH202612_V50_country_event",
+        "actualAlias": "V50_country_event",
+        "specifiedLength": 29,
+        "actualLength": 17,
+        "viewId": "1cb95d4a21515ebd3d6c43f81b748106",
+        "physical": "v50_country_event",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 11,
+        "sourceFile": "global_cycle_month.xlsx",
+        "specifiedName": "TB_XH202612_V50_global_cycle_month",
+        "actualAlias": "V50_global_cycle_month",
+        "specifiedLength": 34,
+        "actualLength": 22,
+        "viewId": "03fb992d101252c5b8d56732220f9a3f",
+        "physical": "v50_global_cycle_month",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 12,
+        "sourceFile": "historical_crisis_event.xlsx",
+        "specifiedName": "TB_XH202612_V50_historical_crisis_event",
+        "actualAlias": "V50_historical_crisis_event",
+        "specifiedLength": 39,
+        "actualLength": 27,
+        "viewId": "e5bd96ffab73a17bbbf758a1f626ed05",
+        "physical": "v50_historical_crisis_event",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 13,
+        "sourceFile": "company_overseas_exposure.xlsx",
+        "specifiedName": "TB_XH202612_V50_company_overseas_exposure",
+        "actualAlias": "V50_company_overseas_exposure",
+        "specifiedLength": 41,
+        "actualLength": 29,
+        "viewId": "233b3c02c299884015129a5a734e184c",
+        "physical": "v50_company_overseas_exposure",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 14,
+        "sourceFile": "bridge_company_geography.xlsx",
+        "specifiedName": "TB_XH202612_V50_bridge_company_geography",
+        "actualAlias": "V50_bridge_company_geography",
+        "specifiedLength": 40,
+        "actualLength": 28,
+        "viewId": "5ae71346b655c10cd8253db940a171a6",
+        "physical": "v50_bridge_company_geography",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 15,
+        "sourceFile": "asset_monthly_return.xlsx",
+        "specifiedName": "TB_XH202612_V50_asset_monthly_return",
+        "actualAlias": "V50_asset_monthly_return",
+        "specifiedLength": 36,
+        "actualLength": 24,
+        "viewId": "69754157860e2559b25e01897dc68f32",
+        "physical": "v50_asset_monthly_return",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 16,
+        "sourceFile": "portfolio_scenario.xlsx",
+        "specifiedName": "TB_XH202612_V50_portfolio_scenario",
+        "actualAlias": "V50_portfolio_scenario",
+        "specifiedLength": 34,
+        "actualLength": 22,
+        "viewId": "04a0898cf3eb6489360902ae6dead2e5",
+        "physical": "v50_portfolio_scenario",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 17,
+        "sourceFile": "case_evidence.xlsx",
+        "specifiedName": "TB_XH202612_V50_case_evidence",
+        "actualAlias": "V50_case_evidence",
+        "specifiedLength": 29,
+        "actualLength": 17,
+        "viewId": "62a3e34546b3b7aa29662db8ba4312a7",
+        "physical": "v50_case_evidence",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 18,
+        "sourceFile": "source_registry.xlsx",
+        "specifiedName": "TB_XH202612_V50_source_registry",
+        "actualAlias": "V50_source_registry",
+        "specifiedLength": 31,
+        "actualLength": 19,
+        "viewId": "32c5d093a87bcab12a03f50f3184edb1",
+        "physical": "v50_source_registry",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 19,
+        "sourceFile": "MVP_country_latest.xlsx",
+        "specifiedName": "TB_XH202612_V50_MVP_country_latest",
+        "actualAlias": "V50_MVP_country_latest",
+        "specifiedLength": 34,
+        "actualLength": 22,
+        "viewId": "91f6d79291afd0cc0cc5f64966b2276a",
+        "physical": "v50_mvp_country_latest",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 20,
+        "sourceFile": "MVP_company_data_status.xlsx",
+        "specifiedName": "TB_XH202612_V50_MVP_company_data_status",
+        "actualAlias": "V50_MVP_company_data_status",
+        "specifiedLength": 39,
+        "actualLength": 27,
+        "viewId": "b99e55abd8d5d2f001bed4f461f98148",
+        "physical": "mvp_company_data_status",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      },
+      {
+        "order": 21,
+        "sourceFile": "MVP_cycle_state.xlsx",
+        "specifiedName": "TB_XH202612_V50_MVP_cycle_state",
+        "actualAlias": "V50_MVP_cycle_state",
+        "specifiedLength": 31,
+        "actualLength": 19,
+        "viewId": "8e26c7f37ab772967d49fc7a4b20e349",
+        "physical": "v50_mvp_cycle_state",
+        "historicalSameNameStatus": "无法追溯（截图仅证当前对象存在）"
+      }
+    ]
+  },
+  "relation14": {
+    "factRows": 2744,
+    "factGrain": [
+      "iso3",
+      "year",
+      "policy_code"
+    ],
+    "dimensionRows": 16,
+    "dimensionYearMin": 2010,
+    "dimensionYearMax": 2025,
+    "sourceInnerJoinRows": 2704,
+    "sourceLeftJoinRows": 2744,
+    "sourceJoinInflation": 0,
+    "unmatchedRows": 40,
+    "unmatchedFractionOfAllFactRows": 0.014577259475218658,
+    "unmatchedFractionOf2026Rows": 1.0,
+    "unmatchedDistinctCountries": 40,
+    "unmatchedYears": {
+      "2026": 40
+    },
+    "unmatchedPolicyCodes": {
+      "SANCTIONS_OFAC_PROGRAM": 40
+    },
+    "unmatchedQualityFlags": {
+      "review": 40
+    },
+    "unmatchedReviewStatus": {
+      "机提待核(生效日待人工确认)": 40
+    },
+    "unmatchedValueNullCount": 0,
+    "historicalAuditCellRange": "关系审计!A15:H15",
+    "historicalAuditRow": [
+      14,
+      "V50_dim_year → V50_country_policy_year [year_key = year]",
+      "V50_country_policy_year",
+      2744,
+      2704,
+      "40(已核验)",
+      "无",
+      "PASS"
+    ],
+    "historicalPassDoesNotProveNoOmission": true,
+    "liveJoinRetestedToday": false,
+    "sourceOrRelationshipModified": false
+  },
+  "boundaries": {
+    "aEvidenceStatementPrepared": true,
+    "bSigned": false,
+    "finalWaiverGranted": false,
+    "finalFreezeCreated": false,
+    "independentRestoreExecuted": false,
+    "cpiRepairOrRetest": false,
+    "skippedAiRetested": false
+  }
+}
