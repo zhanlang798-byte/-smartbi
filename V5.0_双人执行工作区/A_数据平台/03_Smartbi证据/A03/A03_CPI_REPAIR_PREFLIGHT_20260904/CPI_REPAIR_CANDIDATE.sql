@@ -1,0 +1,22 @@
+-- Candidate only. Not applied to the formal model or source table.
+-- Preserve all 18 columns and NULLs. No filter/join/deduplication.
+-- Apply only after a current recoverable backup and reference check.
+SELECT iso3,
+       month_end,
+       fx_avg_lcu_per_usd,
+       CAST(NULLIF(TRIM(cpi_index), '') AS DECIMAL(30,12)) AS cpi_index,
+       fx_reserves_usd,
+       reserve_import_months,
+       imports_usd,
+       source_id,
+       source_frequency,
+       fetch_date,
+       data_version,
+       is_proxy,
+       is_imputed,
+       run_id,
+       fx_eom_lcu_per_usd,
+       fx_eom_source,
+       fx_avg_source,
+       cpi_source
+FROM input.v50_country_monthly_risk

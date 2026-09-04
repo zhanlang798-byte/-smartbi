@@ -1,0 +1,133 @@
+{
+  "capturedAt": "2026-09-04T07:55:03.284Z",
+  "source": "Smartbi 数据连接表字段编辑 UI（只读，未保存）",
+  "table": "input.v50_country_monthly_risk",
+  "fields": [
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.iso3",
+      "name": "iso3",
+      "alias": "iso3",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.month_end",
+      "name": "month_end",
+      "alias": "month_end",
+      "type": "DATE",
+      "format": "<日期-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.fx_avg_lcu_per_usd",
+      "name": "fx_avg_lcu_per_usd",
+      "alias": "fx_avg_lcu_per_usd",
+      "type": "DOUBLE",
+      "format": "<浮点型-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.cpi_index",
+      "name": "cpi_index",
+      "alias": "cpi_index",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.fx_reserves_usd",
+      "name": "fx_reserves_usd",
+      "alias": "fx_reserves_usd",
+      "type": "DOUBLE",
+      "format": "<浮点型-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.reserve_import_months",
+      "name": "reserve_import_months",
+      "alias": "reserve_import_months",
+      "type": "DOUBLE",
+      "format": "<浮点型-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.imports_usd",
+      "name": "imports_usd",
+      "alias": "imports_usd",
+      "type": "DOUBLE",
+      "format": "<浮点型-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.source_id",
+      "name": "source_id",
+      "alias": "source_id",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.source_frequency",
+      "name": "source_frequency",
+      "alias": "source_frequency",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.fetch_date",
+      "name": "fetch_date",
+      "alias": "fetch_date",
+      "type": "DATETIME",
+      "format": "<日期时间-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.data_version",
+      "name": "data_version",
+      "alias": "data_version",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.is_proxy",
+      "name": "is_proxy",
+      "alias": "is_proxy",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.is_imputed",
+      "name": "is_imputed",
+      "alias": "is_imputed",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.run_id",
+      "name": "run_id",
+      "alias": "run_id",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.fx_eom_lcu_per_usd",
+      "name": "fx_eom_lcu_per_usd",
+      "alias": "fx_eom_lcu_per_usd",
+      "type": "DOUBLE",
+      "format": "<浮点型-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.fx_eom_source",
+      "name": "fx_eom_source",
+      "alias": "fx_eom_source",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.fx_avg_source",
+      "name": "fx_avg_source",
+      "alias": "fx_avg_source",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    },
+    {
+      "id": "FIELD.input.input.null.v50_country_monthly_risk.cpi_source",
+      "name": "cpi_source",
+      "alias": "cpi_source",
+      "type": "STRING",
+      "format": "<字符串-默认值>"
+    }
+  ]
+}

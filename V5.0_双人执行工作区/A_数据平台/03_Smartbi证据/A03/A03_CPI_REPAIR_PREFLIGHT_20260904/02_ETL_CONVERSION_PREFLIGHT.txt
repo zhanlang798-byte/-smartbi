@@ -1,0 +1,87 @@
+- tablist:
+  - tab "数据模型":
+    - generic: 数据模型
+  - tab "SQL查询":
+    - generic: SQL查询
+    - text: 
+  - tab "V50_country_monthly_risk" [selected]:
+    - generic: V50_country_monthly_risk
+    - text: 
+- text: 
+- generic: 
+- text:                                                                                                                                                                                                                                                                                                                                       
+- tabpanel "V50_country_monthly_risk":
+  - generic: 
+  - generic:  
+  - generic:  
+  - generic: 
+  - generic: 添加节点
+  - generic: 
+  - generic: 撤销
+  - generic: 
+  - generic: 重做
+  - generic: 
+  - generic: 保存
+  - generic: 
+  - generic: 运行
+  - generic: 
+  - generic: 全量
+  - switch:
+    - checkbox
+  - generic: 小批量
+  - generic: 
+  - generic:                                                                                              
+  - generic: 
+  - generic: V50_country_monthly_risk
+  - text:  
+  - generic: 
+  - generic: 输出到MPP
+  - text:  
+  - generic:  
+  - generic:  
+  - generic:  
+  - text:    
+  - generic: 数据
+  - generic: 状态：初始化
+  - generic: 
+  - generic: 100%
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 暂无数据
+  - text:   
+  - generic: 设置
+  - text: 
+  - textbox "搜索属性"
+  - generic: 
+  - text: 
+  - button: 
+  - tablist:
+    - tab " 缓存策略":
+      - button " 缓存策略":
+        - generic: 
+        - generic: 缓存策略
+    - tab " 节点自动连线":
+      - button " 节点自动连线":
+        - generic: 
+        - generic: 节点自动连线
+    - tab " 属性":
+      - button " 属性":
+        - generic: 
+        - generic: 属性
+    - text:  
+  - text: 
+  - generic: 设置
+  - generic: 数据
+  - generic: 
+  - button "确定":
+    - generic: 确定
+  - button "取消":
+    - generic: 取消
+- generic: 
+- text:                                            

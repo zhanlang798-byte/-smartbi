@@ -1,0 +1,42 @@
+e
+        - text: 
+      - treeitem "  V50_dim_year":
+        - generic: 
+        - generic: 
+        - generic: V50_dim_year
+        - text: 
+      - treeitem "  V50_global_cycle_month":
+        - generic: 
+        - generic: 
+        - generic: V50_global_cycle_month
+        - text: 
+    - generic: 
+  - generic: 
+- generic: 
+- text:                                            
+- generic: 同步
+- generic "关闭": 
+- generic: 请确认，在同步数据源表"V50_country_monthly_risk"时，是否保留模型中已设置的信息？如选择不保留，则同步时会直接覆盖数据模型中该项内容。
+- generic: 同步时保留：
+- checkbox "表别名" [checked]:
+  - checkbox "表别名" [checked]
+  - generic: 表别名
+- checkbox "字段别名" [checked]:
+  - checkbox "字段别名" [checked]
+  - generic: 字段别名
+- checkbox "字段描述" [checked]:
+  - checkbox "字段描述" [checked]
+  - generic: 字段描述
+- checkbox "数据类型" [checked]:
+  - checkbox "数据类型" [checked]
+  - generic: 数据类型
+- checkbox "数据格式" [checked]:
+  - checkbox "数据格式" [checked]
+  - generic: 数据格式
+- checkbox "分区设置" [checked]:
+  - checkbox "分区设置" [checked]
+  - generic: 分区设置
+- button "确定":
+  - generic: 确定
+- button "取消":
+  - generic: 取消

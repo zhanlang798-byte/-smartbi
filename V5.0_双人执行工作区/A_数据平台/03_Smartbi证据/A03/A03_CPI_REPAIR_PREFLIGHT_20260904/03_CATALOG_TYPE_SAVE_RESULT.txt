@@ -1,0 +1,24 @@
+ text: 
+- text:  
+- list:
+  - listitem "数据门户":
+    - generic: 数据门户
+  - generic: 数据连接
+  - listitem "数据准备":
+    - generic: 数据准备
+  - listitem "分析展现":
+    - generic: 分析展现
+  - listitem "AIChat":
+    - generic: AIChat
+  - listitem "Agent":
+    - generic: Agent
+  - listitem "数据挖掘":
+    - generic: 数据挖掘
+  - listitem "运维设置":
+    - generic: 运维设置
+- generic: 
+- text:            
+- generic: 提示
+- generic: 保存成功！
+- generic "关闭": 
+- generic: 确定(O)

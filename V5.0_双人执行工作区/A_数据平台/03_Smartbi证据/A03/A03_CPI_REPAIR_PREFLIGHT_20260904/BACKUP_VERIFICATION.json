@@ -1,0 +1,121 @@
+{
+  "file": "migrate_CPI_PRE_REPAIR_20260904.xml",
+  "bytes": 721318,
+  "sha256": "7cde968407b7cb9ab56df1f2121e2c1673ff617db1f1ac71ae76f5306e005b3f",
+  "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+  "modelLastModified": "2026-09-02 23:44:40",
+  "viewCount": 22,
+  "sourceView": {
+    "id": "aeff8422c42966f645693674f870bc27",
+    "name": "v50_country_monthly_risk",
+    "alias": "V50_country_monthly_risk",
+    "type": "BASIC_TABLE"
+  },
+  "sourceFields": [
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-iso3",
+      "name": "iso3",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-month_end",
+      "name": "month_end",
+      "valueType": "DATE"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_avg_lcu_per_usd",
+      "name": "fx_avg_lcu_per_usd",
+      "valueType": "DOUBLE"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-cpi_index",
+      "name": "cpi_index",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_reserves_usd",
+      "name": "fx_reserves_usd",
+      "valueType": "DOUBLE"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-reserve_import_months",
+      "name": "reserve_import_months",
+      "valueType": "DOUBLE"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-imports_usd",
+      "name": "imports_usd",
+      "valueType": "DOUBLE"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-source_id",
+      "name": "source_id",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-source_frequency",
+      "name": "source_frequency",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fetch_date",
+      "name": "fetch_date",
+      "valueType": "DATETIME"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-data_version",
+      "name": "data_version",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-is_proxy",
+      "name": "is_proxy",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-is_imputed",
+      "name": "is_imputed",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-run_id",
+      "name": "run_id",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_eom_lcu_per_usd",
+      "name": "fx_eom_lcu_per_usd",
+      "valueType": "DOUBLE"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_eom_source",
+      "name": "fx_eom_source",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-fx_avg_source",
+      "name": "fx_avg_source",
+      "valueType": "STRING"
+    },
+    {
+      "id": "Field-input-input-null-v50_country_monthly_risk-cpi_source",
+      "name": "cpi_source",
+      "valueType": "STRING"
+    }
+  ],
+  "publishedCpiFields": [
+    {
+      "id": "AUGMENTED_DATASET_FIELD.6b5dff57a4093ba3db07d2903905fe40.Field-input-input-null-v50_country_monthly_risk-cpi_index",
+      "name": "cpi_index",
+      "valueType": "BIGDECIMAL",
+      "expression": null,
+      "referenceFieldId": "Field-input-input-null-v50_country_monthly_risk-cpi_index",
+      "viewId": "aeff8422c42966f645693674f870bc27"
+    }
+  ],
+  "xmlElementTypes": [
+    "AUGMENTED_DATASET",
+    "CUSTOM_ICONS"
+  ],
+  "restoreTest": "NOT_PERFORMED"
+}

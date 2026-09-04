@@ -1,0 +1,38 @@
+{
+  "modelId": "6b5dff57a4093ba3db07d2903905fe40",
+  "formalModelSubtreeUnchanged": true,
+  "differentModelTags": [],
+  "modelLastModified": "2026-09-02 23:44:40",
+  "sourceCatalogFieldCount": 18,
+  "trialChanges": [
+    [
+      "cpi_index",
+      [
+        "STRING",
+        "<字符串-默认值>"
+      ],
+      [
+        "BIGDECIMAL",
+        "<浮点型-默认值>"
+      ]
+    ]
+  ],
+  "sourceCatalogRollbackMatchesOriginal": true,
+  "freshModelSessionCpiType": "长浮点型",
+  "nativeMaxAfterCatalogTrial": "993.56",
+  "expectedNumericMaxDisplay": "47954.24",
+  "acceptance": "FAIL_MAX_PENDING_REPAIR",
+  "restoreTest": "NOT_PERFORMED",
+  "exports": [
+    {
+      "file": "migrate_CPI_PRE_REPAIR_20260904.xml",
+      "bytes": 721318,
+      "sha256": "7cde968407b7cb9ab56df1f2121e2c1673ff617db1f1ac71ae76f5306e005b3f"
+    },
+    {
+      "file": "migrate_CPI_AFTER_TRIAL_20260904.xml",
+      "bytes": 721318,
+      "sha256": "688622fb50d69f04556685e060346964177402e1a15f7e95b2bf5348cd3c87eb"
+    }
+  ]
+}
